@@ -1,30 +1,58 @@
-import { Logo, Instagram, Menu } from "./components/icons";
+"use client";
+import { useState } from "react";
+import { Logo, Instagram, Menu } from "../lib/icons";
 import Link from "next/link";
+import Script from "next/script";
+import Nav from "./nav";
 
 const header = () => {
+  const [menu, setMenu] = useState(false);
+
+  const openMenu = () => {
+    setMenu(!menu);
+  };
+
   return (
-    <header className="sticky flex items-center gap-x-4 pb-4">
-      <div>
-        <button className="hover:text-primary">
-          <Menu />
-        </button>
-      </div>
-      <div className="flex-1 flex justify-center text-primary">
-        <Link href="/" className="hover:scale-105 transition-transform">
-          <Logo />
-        </Link>
-      </div>
-      <div>
-        <a
-          href="https://www.instagram.com/imltenis/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-primary"
-        >
-          <Instagram />
-        </a>
-      </div>
-    </header>
+    <>
+      <header className="sticky top-0 flex items-center gap-x-4 px-4 py-2 z-50">
+        <Script id="inline-script" strategy="lazyOnload">
+          {`
+         const logo = document.querySelector(".logo");
+
+          window.onscroll = () => {
+            if (window.scrollY > 0) {
+              logo.classList.add("text-xs");  
+            } else {
+              logo.classList.remove("text-xs");
+            }
+          };
+        `}
+        </Script>
+
+        <div>
+          <button className="hover:text-primary" onClick={openMenu}>
+            <Menu />
+          </button>
+        </div>
+        <div className="flex-1 flex justify-center text-primary logo transition-all">
+          <Link href="/">
+            <Logo />
+          </Link>
+        </div>
+        <div>
+          <a
+            href="https://www.instagram.com/imltenis/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-primary"
+          >
+            <Instagram />
+          </a>
+        </div>
+      </header>
+
+      {menu && <Nav setMenu={setMenu} />}
+    </>
   );
 };
 
