@@ -1,4 +1,4 @@
-import { Whatsapp } from "../lib/icons";
+import { WhatsApp } from "../lib/icons";
 
 const footer = () => {
   const year = new Date().getFullYear();
@@ -51,7 +51,7 @@ const footer = () => {
             href="https://wa.me/5491130171475"
             className="hover:text-primary flex items-center gap-x-1"
           >
-            <Whatsapp />
+            <WhatsApp />
             11 3017 1475
           </a>
           <span>&bull;</span>

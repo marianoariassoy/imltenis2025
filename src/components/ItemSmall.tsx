@@ -2,18 +2,15 @@ import Link from "next/link";
 import Image from "next/image";
 
 interface Item {
-  num?: number;
   image: string;
   title: string;
   link: string;
 }
 
-const TitleRow = ({ num, image, title, link }: Item) => {
+const TitleRow = ({ image, title, link }: Item) => {
   return (
     <div className="flex items-center gap-x-3 text-sm">
-      {num && <div className="font-semibold">{num}</div>}
-
-      <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10 shadow-lg">
+      <div className="w-10 h-10 rounded-full overflow-hidden">
         {image ? (
           <Link href={link} className="hover:opacity-70 transition-opacity">
             <Image
@@ -21,16 +18,12 @@ const TitleRow = ({ num, image, title, link }: Item) => {
               alt={title}
               width={120}
               height={120}
-              className="w-full h-full object-cover"
+              className="object-cover h-full w-full"
             />
           </Link>
         ) : null}
       </div>
-
-      <Link
-        href={link}
-        className="hover:text-primary font-semibold text-nowrap pr-3"
-      >
+      <Link href={link} className="hover:text-primary font-semibold pr-3">
         {title}
       </Link>
     </div>

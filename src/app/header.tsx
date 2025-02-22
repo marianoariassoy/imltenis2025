@@ -2,10 +2,10 @@
 import { useState } from "react";
 import { Logo, Instagram, Menu } from "../lib/icons";
 import Link from "next/link";
-import Script from "next/script";
+// import Script from "next/script";
 import Nav from "./nav";
 
-const header = () => {
+const Header = () => {
   const [menu, setMenu] = useState(false);
 
   const openMenu = () => {
@@ -14,8 +14,8 @@ const header = () => {
 
   return (
     <>
-      <header className="sticky top-0 flex items-center gap-x-4 px-4 py-2 z-50">
-        <Script id="inline-script" strategy="lazyOnload">
+      <header className="flex items-center gap-x-4 px-4 py-2 z-50 mb-3">
+        {/* <Script id="inline-script" strategy="lazyOnload">
           {`
          const logo = document.querySelector(".logo");
 
@@ -27,14 +27,14 @@ const header = () => {
             }
           };
         `}
-        </Script>
+        </Script> */}
 
         <div>
           <button className="hover:text-primary" onClick={openMenu}>
             <Menu />
           </button>
         </div>
-        <div className="flex-1 flex justify-center text-primary logo transition-all">
+        <div className="flex-1 flex justify-center text-primary transition-all">
           <Link href="/">
             <Logo />
           </Link>
@@ -56,4 +56,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
