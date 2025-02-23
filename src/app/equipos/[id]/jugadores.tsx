@@ -1,5 +1,5 @@
 import Item from "@/components/Item";
-import { Player } from "@/types";
+import { Player } from "../../../types";
 import Labels from "@/components/Labels";
 
 const Jugadores = async ({

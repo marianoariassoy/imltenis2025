@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Single } from "@/types";
+import { Single } from "../../../types";
 
 const JugadoresSingles = async ({ id }: { id: string }) => {
   const response = await fetch(

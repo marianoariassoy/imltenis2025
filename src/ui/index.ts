@@ -3,4 +3,4 @@ import Input from "./Input";
 // import Textarea from "./Textarea";
 // import Button from "./Button";
 
-export { Input, Select, Textarea, Button };
+export { Input };

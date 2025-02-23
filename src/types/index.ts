@@ -76,3 +76,16 @@ export interface Double {
   tournament_id: string;
   tournament_name: string;
 }
+
+export interface Club {
+  club_id: string;
+  name: string;
+  image: string;
+  location: string;
+  phone: string;
+  googlemaps: string;
+  whatsapp: string;
+  instagram: string;
+  facebook: string;
+  web: string;
+}

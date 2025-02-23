@@ -6,6 +6,8 @@ const Page = async () => {
   );
   const data = await response.json();
 
+  console.log(data);
+
   return (
     <section className="fade-in flex flex-col gap-y-6">
       <Title title="Segunda Libre Clausura 2024" emoji="🏆" />

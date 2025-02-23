@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Item from "@/components/Item";
-import { Player } from "@/types";
+import { Player } from "../../types";
 
 const Filter = ({ data }: { data: Player[] }) => {
   const [filter, setFilter] = useState("");

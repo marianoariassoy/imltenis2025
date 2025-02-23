@@ -32,13 +32,7 @@ const footer = () => {
       <div className="gap-x-8 gap-y-6 flex items-center justify-center flex-wrap">
         {sponsors.map((logo, index) => (
           <div key={index} className="flex justify-center">
-            <a href={logo.url} target="_blank" rel="noopener noreferrer">
-              <img
-                src={logo.image}
-                alt={logo.alt}
-                className="opacity-20 hover:opacity-60 scale-125"
-              />
-            </a>
+            <a href={logo.url} target="_blank" rel="noopener noreferrer"></a>
           </div>
         ))}
       </div>

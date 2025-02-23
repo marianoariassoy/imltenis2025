@@ -1,42 +1,53 @@
 import Image from "next/image";
 import Link from "next/link";
 import Equipos from "./equipos";
+import { Club } from "@/types";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/clubes/${id}`
   );
-  const data = await response.json();
-  if (!data) return null;
+  const data = (await response.json()) as Club[];
+  if (!data) return {};
 
   return {
-    title: `${data.name}`,
-    description: `Perfil del club ${data.name} de la liga de clubes IML Tenis`,
+    title: `${data[0].name}`,
+    description: `Perfil del club ${data[0].name} de la liga de clubes IML Tenis`,
     openGraph: {
       type: "website",
       locale: "es_AR",
-      url: `https://imltenis.com.ar/clubes/${id}`,
-      title: `${data.name}`,
-      description: `Perfil del club ${data.name} de la liga de clubes IML Tenis`,
+      url: `https://imltenis.com.ar/clubes/${data[0].club_id}`,
+      title: `${data[0].name}`,
+      description: `Perfil del club ${data[0].name} de la liga de clubes IML Tenis`,
       images: [
         {
-          url: `https://imltenis.com.ar/images/${data.image}`,
+          url: `https://imltenis.com.ar/images/${data[0].image}`,
           width: 500,
           height: 500,
-          alt: `${data.name}`,
+          alt: `${data[0].name}`,
         },
       ],
     },
   };
 }
 
-const Page = async ({ params }: { params: { id: string } }) => {
-  const { id } = await params;
+async function getServerSideProps(id: string) {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/clubes/${id}`
   );
   const data = await response.json();
+  if (!data) return null;
+  return data;
+}
+
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const data = (await getServerSideProps(id)) as Club[];
   if (!data) return null;
 
   return (

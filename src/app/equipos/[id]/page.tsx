@@ -4,7 +4,11 @@ import { WhatsApp, Pin } from "@/lib/icons";
 import Jugadores from "./jugadores";
 import Fixture from "./fixtures";
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
   const { id } = await params;
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/teams/${id}`
@@ -33,12 +37,18 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
   };
 }
 
-const Page = async ({ params }: { params: { id: string } }) => {
-  const { id } = await params;
+async function getServerSideProps(id: string) {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/teams/${id}`
   );
   const data = await response.json();
+  if (!data) return null;
+  return data;
+}
+
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
+  const data = await getServerSideProps(id);
   if (!data) return null;
 
   return (

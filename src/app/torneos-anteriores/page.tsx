@@ -1,6 +1,6 @@
 import Title from "@/components/Title";
 import Link from "next/link";
-import { Tournament } from "@/types";
+import { Tournament } from "../../types";
 
 export const metadata = {
   title: "Torneos anteriores",

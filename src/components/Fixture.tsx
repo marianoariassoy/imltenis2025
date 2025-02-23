@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Bull } from "@/lib/icons";
 import ItemSmall from "@/components/ItemSmall";
-import { Serie } from "@/types";
+import { Serie } from "../types";
 
 const FixtureMain = ({ data, type }: { data: Serie[]; type: number }) => {
   return (
