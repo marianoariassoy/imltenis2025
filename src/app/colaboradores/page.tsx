@@ -28,19 +28,6 @@ const page = async () => {
           <Item key={index} item={item} />
         ))}
       </div>
-      {/* 
-      <div className="text-sm text-center mt-3">
-        📢 Comunicate al{" "}
-        <a
-          href="https://wa.me/5491130171475"
-          className="underline hover:text-primary"
-          target="_blank"
-        >
-          {" "}
-          +54 9 11 3017-1475
-        </a>{" "}
-        para anunciar
-      </div> */}
     </section>
   );
 };

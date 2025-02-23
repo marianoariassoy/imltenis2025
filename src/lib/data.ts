@@ -16,9 +16,9 @@ export const categories = [
 
 export const menu = [
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },
-  { name: "Ranking Jugadores", url: "/ranking/jugadores" },
-  { name: "Ranking de Clubes", url: "/ranking/clubes" },
-  { name: "Ranking de Campeones", url: "/ranking/campeones" },
+  { name: "Ranking Jugadores", url: "/rankings/jugadores" },
+  { name: "Ranking de Clubes", url: "/rankings/clubes" },
+  { name: "Ranking de Campeones", url: "/rankings/campeones" },
   { name: "Orden de juego", url: "/orden-de-juego" },
   { name: "Reglamento", url: "/reglamento" },
   { name: "Jugadores", url: "/jugadores" },

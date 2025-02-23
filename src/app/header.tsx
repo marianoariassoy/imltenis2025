@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex items-center gap-x-4 px-4 py-2 z-50 mb-3">
+      <header className="flex items-center gap-x-4 px-4 py-2 z-50">
         {/* <Script id="inline-script" strategy="lazyOnload">
           {`
          const logo = document.querySelector(".logo");

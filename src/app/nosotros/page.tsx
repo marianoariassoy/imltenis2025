@@ -6,15 +6,15 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="fade-in flex flex-col gap-y-3">
       <Title title="¡Hola!" emoji="👋" />
 
-      <div className="flex flex-col gap-y-6 text-sm px-6 text-center max-w-2xl mx-auto">
+      <div className="flex flex-col gap-y-6 px-6 text-center max-w-2xl mx-auto">
         <div>
           IML Tenis nació en marzo de 2023 con la misión de crear un espacio
-          competitivo, accesible y apasionante para el tenis de clubes.
+          competitivo, accesible y apasionante para el tenis.
         </div>
-        <div className="[&>span]:font-bold [&>span]:text-primary">
+        <div className="[&>span]:font-bold [&>span]:text-primary text-sm lg:text-base">
           <span>Director:</span> Luis Armando Pujol <br />
           <span>Coordinadores:</span> Mariano Arias, Emiliano Carro, Carmelo
           Grieco. <br />
@@ -51,7 +51,7 @@ const page = () => {
           </a>
           <br />
         </div>
-        <div className="[&>span]:font-bold [&>span]:text-primary">
+        <div className="[&>span]:font-bold [&>span]:text-primary text-sm lg:text-base">
           <span>IML Juniors:</span> Marcos Velazquez
         </div>
       </div>
