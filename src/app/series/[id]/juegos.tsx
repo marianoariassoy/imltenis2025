@@ -26,28 +26,28 @@ const Juegos = async ({ id }: { id: string }) => {
           <tbody>
             {data.map((item) => (
               <tr key={item.id}>
-                <td className="flex gap-x-1">
+                <td className="">
                   <Link
                     href={`/jugadores/${item.playerhome1_id}`}
                     className="text-primary hover:underline font-semibold"
                   >
                     {item.playerhome1_name}
                   </Link>
-                  {item.playerhome2_id > 0 && <span>y</span>}
+                  {item.playerhome2_id > 0 && <span> y </span>}
                   <Link
                     href={`/jugadores/${item.playerhome2_id}`}
                     className="text-primary hover:underline font-semibold"
                   >
                     {item.playerhome2_name}
                   </Link>
-                  <span>vs</span>
+                  <span> vs </span>
                   <Link
                     href={`/jugadores/${item.playeraway1_id}`}
                     className="text-primary hover:underline font-semibold"
                   >
                     {item.playeraway1_name}
                   </Link>
-                  {item.playeraway2_id > 0 && <span>y</span>}
+                  {item.playeraway2_id > 0 && <span> y </span>}
                   <Link
                     href={`/jugadores/${item.playeraway2_id}`}
                     className="text-primary hover:underline font-semibold"

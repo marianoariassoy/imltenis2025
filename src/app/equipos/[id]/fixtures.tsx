@@ -7,7 +7,7 @@ const FixtureEquipos = async ({ id }: { id: string }) => {
   const data = await response.json();
   if (!data) return null;
 
-  return <Fixture data={data} type={2} />;
+  return <Fixture data={data} title={true} />;
 };
 
 export default FixtureEquipos;

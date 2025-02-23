@@ -19,6 +19,7 @@ export interface Serie {
   score_away: number;
   winner: boolean;
   status: number;
+  group_id: string;
 }
 
 export interface Juego {
@@ -88,4 +89,27 @@ export interface Club {
   instagram: string;
   facebook: string;
   web: string;
+}
+
+export interface Group {
+  id: string;
+  name: string;
+  type: number;
+  winner: boolean;
+  status: number;
+  winners: number;
+  tournament_description: string;
+}
+
+export interface Table {
+  id: string;
+  name: string;
+  image: string;
+  club_image: string;
+  match_won: number;
+  series_won: number;
+  sets: number;
+  games: number;
+  series_total: number;
+  series: boolean[];
 }

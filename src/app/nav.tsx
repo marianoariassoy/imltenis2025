@@ -2,6 +2,7 @@
 
 import { menu, categories } from "../lib/data";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Menu = ({
   setMenu,
@@ -11,6 +12,8 @@ const Menu = ({
   const openMenu = () => {
     setMenu(false);
   };
+
+  const pathname = usePathname();
 
   return (
     <nav
@@ -22,7 +25,9 @@ const Menu = ({
           <li key={index}>
             <Link
               href={item.url}
-              className="text-primary italic font-black hover:underline text-[1.1rem]"
+              className={`text-primary italic font-black text-[1.1rem] ${
+                pathname === item.url ? "underline" : "hover:underline"
+              }`}
             >
               {item.name}
             </Link>
@@ -32,7 +37,12 @@ const Menu = ({
       <ul className="text-white/70 flex flex-col font-medium lg:text-base">
         {menu.map((item, index) => (
           <li key={index + 12}>
-            <Link href={item.url} className="hover:underline">
+            <Link
+              href={item.url}
+              className={
+                pathname === item.url ? "text-primary" : "hover:underline"
+              }
+            >
               {item.name}
             </Link>
           </li>

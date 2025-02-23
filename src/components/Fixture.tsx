@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Bull } from "@/lib/icons";
 import ItemSmall from "@/components/ItemSmall";
-import { Serie } from "../types";
+import { Serie } from "@/types";
 
-const FixtureMain = ({ data, type }: { data: Serie[]; type: number }) => {
+const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   return (
     <section className="fade-in flex flex-col gap-y-6">
-      {type !== 1 && (
+      {title && (
         <div>
           <h1 className="italic font-black text-primary text-center">
             Fixture

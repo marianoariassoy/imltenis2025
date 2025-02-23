@@ -61,7 +61,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           image={data.home_image}
           subtitle="Local"
         />
-        <div className="flex items-center justify-center font-semibold text-xl pt-8">
+        <div className="flex items-center justify-center font-semibold text-2xl pt-8 text-primary">
           {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>}
         </div>
         <Item
