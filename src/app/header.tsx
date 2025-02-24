@@ -13,7 +13,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 flex items-center gap-x-4 px-4 py-2 z-50 bg-header">
+      <header className="flex items-center gap-x-4 px-4 py-2 z-50">
         <div>
           <button className="hover:text-primary" onClick={openMenu}>
             <Menu />
