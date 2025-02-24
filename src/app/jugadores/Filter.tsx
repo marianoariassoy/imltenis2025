@@ -1,11 +1,15 @@
 "use client";
-
 import { useState } from "react";
 import Item from "@/components/Item";
-import { Player } from "../../types";
+import { Player } from "@/types";
 
 const Filter = ({ data }: { data: Player[] }) => {
   const [filter, setFilter] = useState("");
+  const removeAccents = (str: string) =>
+    str
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase();
 
   const handleFilter = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFilter(e.target.value);
@@ -13,7 +17,7 @@ const Filter = ({ data }: { data: Player[] }) => {
 
   const filteredData = filter
     ? data.filter((item) =>
-        item.name.toLowerCase().includes(filter.toLowerCase())
+        removeAccents(item.name).includes(removeAccents(filter))
       )
     : [];
 
