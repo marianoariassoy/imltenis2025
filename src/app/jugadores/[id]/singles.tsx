@@ -8,8 +8,6 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
   const data = (await response.json()) as Single[];
   if (!data) return null;
 
-  console.log(data);
-
   const labels = [
     {
       name: "G/P",

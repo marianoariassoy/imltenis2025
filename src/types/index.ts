@@ -96,6 +96,7 @@ export interface Club {
 export interface Group {
   id: string;
   name: string;
+  title: string;
   type: number;
   winner: boolean;
   status: number;

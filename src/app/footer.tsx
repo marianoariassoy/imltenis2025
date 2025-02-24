@@ -1,4 +1,5 @@
-import { WhatsApp } from "../lib/icons";
+import { WhatsApp } from "@/lib/icons";
+import { Mito, TYP, Yuka, Vinica } from "@/lib/logos";
 
 const footer = () => {
   const year = new Date().getFullYear();
@@ -6,33 +7,40 @@ const footer = () => {
     {
       alt: "Logo de Yuka",
       url: "https://www.instagram.com/yuka_ant/",
-      image: "/sponsors/yuka.svg",
+      image: <Yuka />,
     },
 
     {
       alt: "Logo Mito Gafas",
       url: "https://www.instagram.com/mitogafas/",
-      image: "/sponsors/mito.svg",
+      image: <Mito />,
     },
 
     {
       alt: "Logo de TYP",
       url: "https://www.instagram.com/typdeportes/",
-      image: "/sponsors/typ.svg",
+      image: <TYP />,
     },
     {
       alt: "Logo de Tienda Vinica",
       url: "https://www.instagram.com/tiendavinica/",
-      image: "/sponsors/vinica.svg",
+      image: <Vinica />,
     },
   ];
 
   return (
-    <footer className="flex flex-col gap-y-4 px-4 py-4 mt-6">
-      <div className="gap-x-8 gap-y-6 flex items-center justify-center flex-wrap">
+    <footer className="flex flex-col gap-y-6 px-4 py-4 mt-6">
+      <div className="gap-x-8  flex items-center justify-center flex-wrap text-secondary">
         {sponsors.map((logo, index) => (
           <div key={index} className="flex justify-center">
-            <a href={logo.url} target="_blank" rel="noopener noreferrer"></a>
+            <a
+              href={logo.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-primary"
+            >
+              {logo.image}
+            </a>
           </div>
         ))}
       </div>

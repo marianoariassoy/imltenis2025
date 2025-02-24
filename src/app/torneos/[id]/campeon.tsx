@@ -1,8 +1,6 @@
-"use client";
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import confetti from "canvas-confetti";
+import Confetti from "@/components/confetti";
 
 interface Props {
   team_champion_image: string;
@@ -11,16 +9,9 @@ interface Props {
 }
 
 const TornamentsChampion = ({ data }: { data: Props }) => {
-  useEffect(() => {
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-    });
-  }, []);
-
   return (
     <div className="flex flex-col gap-y-2 items-center text-center">
+      <Confetti />
       <Link href={`/equipos/${data.team_champion_id}`} className="">
         <div className="w-20 h-20 overflow-hidden rounded-full hover:opacity-70 transition-opacity">
           <Image
