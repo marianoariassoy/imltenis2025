@@ -47,6 +47,12 @@ const Menu = ({
             </Link>
           </li>
         ))}
+
+        <li>
+          <a href="#" className="hover:underline">
+            Registro de jugadores
+          </a>
+        </li>
         <li>
           <a
             href="https://capitanes.imltenis.com.ar/"

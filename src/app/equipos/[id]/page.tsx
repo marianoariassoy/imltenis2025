@@ -3,6 +3,8 @@ import Link from "next/link";
 import { WhatsApp, Pin } from "@/lib/icons";
 import Jugadores from "./jugadores";
 import Fixture from "./fixtures";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 
 export async function generateMetadata({
   params,
@@ -97,8 +99,13 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </a>
       </div>
 
-      <Jugadores id={id} captain_name={data.captain_name} />
-      <Fixture id={id} />
+      <Suspense fallback={<Loader />}>
+        <Jugadores id={id} captain_name={data.captain_name} />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <Fixture id={id} />
+      </Suspense>
     </section>
   );
 };

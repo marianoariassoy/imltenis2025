@@ -20,6 +20,8 @@ export interface Serie {
   winner: boolean;
   status: number;
   group_id: string;
+  tournament_id: string;
+  tournament_name: string;
 }
 
 export interface Juego {

@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Equipos from "./equipos";
 import { Club } from "@/types";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 
 export async function generateMetadata({
   params,
@@ -125,7 +127,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
       </header>
 
-      <Equipos id={id} />
+      <Suspense fallback={<Loader />}>
+        <Equipos id={id} />
+      </Suspense>
     </section>
   );
 };

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Logo, Instagram, Menu } from "../lib/icons";
 import Link from "next/link";
-// import Script from "next/script";
+import Script from "next/script";
 import Nav from "./nav";
 
 const Header = () => {
@@ -14,27 +14,27 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex items-center gap-x-4 px-4 py-2 z-50">
-        {/* <Script id="inline-script" strategy="lazyOnload">
+      <header className="sticky top-0 flex items-center gap-x-4 px-4 py-2 z-50 header-main">
+        <Script id="inline-script" strategy="lazyOnload">
           {`
-         const logo = document.querySelector(".logo");
+         const header = document.querySelector(".header-main");
 
           window.onscroll = () => {
             if (window.scrollY > 0) {
-              logo.classList.add("text-xs");  
+              header.classList.add("header_small");  
             } else {
-              logo.classList.remove("text-xs");
+              header.classList.remove("header_small");
             }
           };
         `}
-        </Script> */}
+        </Script>
 
         <div>
           <button className="hover:text-primary" onClick={openMenu}>
             <Menu />
           </button>
         </div>
-        <div className="flex-1 flex justify-center text-primary transition-all">
+        <div className="flex-1 flex justify-center text-primary transition-all logo">
           <Link href="/">
             <Logo />
           </Link>

@@ -13,7 +13,7 @@ const Header = ({ title, subtitle, description, emoji }: HeaderProps) => {
         <h1 className="font-bold">{title}</h1>
         {subtitle && <h2 className="font-medium">{subtitle}</h2>}
       </div>
-      <div className="font-medium text-sm mt-2">{description}</div>
+      <div className="font-medium">{description}</div>
     </header>
   );
 };

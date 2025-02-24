@@ -1,6 +1,8 @@
 import Title from "@/components/Title";
 import Campeon from "./campeon";
 import Groups from "./groups";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 
 export async function generateMetadata({
   params,
@@ -47,7 +49,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
       {data[0].team_champion_id && <Campeon data={data[0]} />}
 
-      <Groups id_tournament={id} />
+      <Suspense fallback={<Loader />}>
+        <Groups id_tournament={id} />
+      </Suspense>
     </section>
   );
 };

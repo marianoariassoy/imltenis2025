@@ -14,6 +14,7 @@ interface Data {
 const page = async () => {
   const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/partners");
   const data = (await response.json()) as Data[];
+  if (!data) return null;
 
   return (
     <section className="fade-in flex flex-col gap-y-6 max-w-2xl mx-auto">

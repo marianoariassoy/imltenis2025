@@ -60,7 +60,7 @@ const footer = () => {
             </a>
           </span>
           <span>&bull;</span>
-          <span>Hecho con ❤︎ en {year}</span>
+          <span>Hecho con ❤︎ en {year} v 3.0</span>
         </div>
       </div>
     </footer>

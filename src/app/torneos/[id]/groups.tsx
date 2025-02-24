@@ -1,6 +1,8 @@
 import Fixture from "./fixture";
 import { Group } from "@/types";
 import Table from "./table";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 
 const groups = async ({ id_tournament }: { id_tournament: string }) => {
   const response = await fetch(
@@ -15,18 +17,22 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
         {item.name}
       </h1>
 
-      {+item.type === 1 && <Fixture id_group={item.id} title={false} />}
+      {+item.type === 1 && (
+        <Suspense fallback={<Loader />}>
+          <Fixture id_group={item.id} title={false} />
+        </Suspense>
+      )}
       {+item.type === 3 && (
-        <>
+        <Suspense fallback={<Loader />}>
           <Table group={item} type={3} />
           <Fixture id_group={item.id} title={true} />
-        </>
+        </Suspense>
       )}
       {+item.type === 0 && (
-        <>
+        <Suspense fallback={<Loader />}>
           <Table group={item} type={0} />
           <Fixture id_group={item.id} title={true} />
-        </>
+        </Suspense>
       )}
     </div>
   ));

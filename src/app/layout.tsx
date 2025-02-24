@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     default: "IML Tenis Liga de Clubes",
     template: "%s - IML Tenis",
   },
+  themeColor: "#252525",
   description:
     "La liga de clubes IML Tenis es una de las ligas más importantes de clubes en Argentina, con más de 140  equipos de zona norte y oeste de Buenos Aires.",
   icons: {
