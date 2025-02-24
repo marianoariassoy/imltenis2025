@@ -17,10 +17,10 @@ const Menu = ({
 
   return (
     <nav
-      className="fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center backdrop-blur-md z-50"
+      className="fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center backdrop-blur-md z-50 hover:cursor-pointer"
       onClick={openMenu}
     >
-      <ul className="text-white/70 italic">
+      <ul>
         {categories.map((item, index) => (
           <li key={index}>
             <Link
@@ -34,20 +34,21 @@ const Menu = ({
           </li>
         ))}
       </ul>
-      <ul className="text-white/70 flex flex-col font-medium lg:text-base">
+      <ul className="flex flex-col font-medium lg:text-base">
         {menu.map((item, index) => (
           <li key={index + 12}>
             <Link
               href={item.url}
               className={
-                pathname === item.url ? "text-primary" : "hover:underline"
+                pathname === item.url
+                  ? "text-primary"
+                  : "hover:underline text-white/70"
               }
             >
               {item.name}
             </Link>
           </li>
         ))}
-
         <li>
           <a href="#" className="hover:underline">
             Registro de jugadores

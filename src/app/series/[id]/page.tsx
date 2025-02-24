@@ -16,14 +16,22 @@ export async function generateMetadata({
   if (!data) return null;
 
   return {
-    title: `Serie entre ${data.home_name} y ${data.away_name} del ${data.date}`,
-    description: `Serie entre ${data.home_name} y ${data.away_name} del ${data.date} ${data.hour} de la liga de clubes IML Tenis`,
+    title: `${data.home_name} y ${data.away_name} del ${data.date}`,
+    description: `Resultados de la serie disputada el ${data.date} ${data.hour} de la liga de clubes IML Tenis entre ${data.home_name} y ${data.away_name}`,
     openGraph: {
       type: "website",
       locale: "es_AR",
       url: `https://imltenis.com.ar/series/${id}`,
-      title: `Serie entre ${data.home_name} y ${data.away_name} del ${data.date}`,
-      description: `Serie entre ${data.home_name} y ${data.away_name} del ${data.date} ${data.hour} de la liga de clubes IML Tenis`,
+      title: `${data.home_name} y ${data.away_name} del ${data.date}`,
+      description: `Resultados de la serie disputada el ${data.date} ${data.hour} de la liga de clubes IML Tenis entre ${data.home_name} y ${data.away_name}`,
+      images: [
+        {
+          url: `./imltenis.jpg`,
+          width: 500,
+          height: 500,
+          alt: `IML Tenis`,
+        },
+      ],
     },
   };
 }

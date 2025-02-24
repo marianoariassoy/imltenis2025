@@ -71,7 +71,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                 </td>
                 <td>
                   <ItemSmall
-                    link={`/equipos/${item.home_id}`}
+                    link={`/equipos/${item.away_id}`}
                     title={item.away_name}
                     image={item.away_image}
                   />

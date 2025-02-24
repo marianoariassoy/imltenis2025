@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: `Perfil del jugador ${data[0].name} de la liga de clubes IML Tenis`,
       images: [
         {
-          url: `https://imltenis.com.ar/images/${data[0].image}`,
+          url: `${data[0].image}`,
           width: 500,
           height: 500,
           alt: `${data[0].name}`,
@@ -65,7 +65,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
         <div className="text-center">
           <h1 className="font-semibold text-primary">{data[0].name}</h1>
-          <h2 className="text-secondary">{data[0].age ? data[0].age : null}</h2>
+          <h2 className="text-secondary text-sm">
+            {data[0].age ? data[0].age : null}
+          </h2>
         </div>
       </header>
 

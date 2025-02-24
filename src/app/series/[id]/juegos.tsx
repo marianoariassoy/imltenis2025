@@ -8,8 +8,6 @@ const Juegos = async ({ id }: { id: string }) => {
   const data = (await response.json()) as Juego[];
   if (!data) return null;
 
-  console.log(data);
-
   return (
     <section className="fade-in">
       <div className="overflow-x-auto text-sm whitespace-nowrap">

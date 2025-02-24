@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Single } from "../../../types";
+import { Single } from "@/types";
+import { Bull } from "@/lib/icons";
 
 const JugadoresSingles = async ({ id }: { id: string }) => {
   const response = await fetch(
@@ -45,9 +46,13 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
             {data.map((item) => (
               <tr key={item.id}>
                 <td>
-                  <span className="h-8 w-8 rounded-full flex justify-center items-center border text-primary border-primary">
-                    {item.result}
-                  </span>
+                  <div
+                    className={
+                      item.result === "G" ? "text-primary" : "text-secondary"
+                    }
+                  >
+                    <Bull />
+                  </div>
                 </td>
                 <td className="text-secondary font-medium">{item.date}</td>
                 <td>

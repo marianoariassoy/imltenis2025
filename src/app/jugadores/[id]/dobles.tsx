@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Double } from "../../../types";
+import { Double } from "@/types";
+import { Bull } from "@/lib/icons";
 
 const JugadoresDobles = async ({ id }: { id: string }) => {
   const response = await fetch(
@@ -48,8 +49,12 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
             {data.map((item) => (
               <tr key={item.id}>
                 <td>
-                  <div className="h-8 w-8 rounded-full flex justify-center items-center border text-primary border-primary">
-                    {item.result}
+                  <div
+                    className={
+                      item.result === "G" ? "text-primary" : "text-secondary"
+                    }
+                  >
+                    <Bull />
                   </div>
                 </td>
                 <td className="text-secondary font-medium">{item.date}</td>

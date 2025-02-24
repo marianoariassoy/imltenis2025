@@ -48,6 +48,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="h-full">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#252525" />
+      </head>
       <body
         className="bg-background text-foreground flex flex-col h-full"
         style={{ fontFamily: montserrat.style.fontFamily }}

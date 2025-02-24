@@ -29,8 +29,8 @@ const footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col gap-y-6 px-4 py-4 mt-6">
-      <div className="gap-x-8  flex items-center justify-center flex-wrap text-secondary">
+    <footer className="flex flex-col px-4 py-4 mt-6">
+      <div className="gap-x-8 flex items-center justify-center flex-wrap text-secondary text-xs lg:text-base">
         {sponsors.map((logo, index) => (
           <div key={index} className="flex justify-center">
             <a
@@ -44,7 +44,6 @@ const footer = () => {
           </div>
         ))}
       </div>
-
       <div className="text-center flex flex-col text-secondary text-sm">
         <span className="font-bold">Liga de clubes IML Tenis</span>
 
