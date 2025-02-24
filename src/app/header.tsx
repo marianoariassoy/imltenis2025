@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
-import { Logo, Instagram, Menu } from "../lib/icons";
+import { Logo, Instagram, Menu } from "@/lib/icons";
 import Link from "next/link";
-import Script from "next/script";
 import Nav from "./nav";
 
 const Header = () => {
@@ -14,27 +13,13 @@ const Header = () => {
 
   return (
     <>
-      <header className="sticky top-0 flex items-center gap-x-4 px-4 py-2 z-50 header-main">
-        <Script id="inline-script" strategy="lazyOnload">
-          {`
-         const header = document.querySelector(".header-main");
-
-          window.onscroll = () => {
-            if (window.scrollY > 0) {
-              header.classList.add("header_small");  
-            } else {
-              header.classList.remove("header_small");
-            }
-          };
-        `}
-        </Script>
-
+      <header className="sticky top-0 flex items-center gap-x-4 px-4 py-2 z-50 bg-header">
         <div>
           <button className="hover:text-primary" onClick={openMenu}>
             <Menu />
           </button>
         </div>
-        <div className="flex-1 flex justify-center text-primary transition-all logo">
+        <div className="flex-1 flex justify-center text-primary transition-all logo-main">
           <Link href="/">
             <Logo />
           </Link>

@@ -30,7 +30,7 @@ const footer = () => {
 
   return (
     <footer className="flex flex-col px-4 py-4 mt-6">
-      <div className="gap-x-8 flex items-center justify-center flex-wrap text-secondary text-xs lg:text-base">
+      <div className="gap-x-8 flex items-center justify-center flex-wrap text-secondary text-sm lg:text-base">
         {sponsors.map((logo, index) => (
           <div key={index} className="flex justify-center">
             <a
