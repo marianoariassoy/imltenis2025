@@ -51,8 +51,6 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const data = await getServerSideProps(id);
   if (!data) return null;
 
-  console.log(data);
-
   return (
     <section className="fade-in flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">

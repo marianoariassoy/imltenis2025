@@ -37,7 +37,7 @@ const footer = () => {
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-primary"
+              className="hover:text-foreground"
             >
               {logo.image}
             </a>
