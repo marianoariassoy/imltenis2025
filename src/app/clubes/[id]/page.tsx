@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Equipos from "./equipos";
 import { Club } from "@/types";
 import { Suspense } from "react";
