@@ -20,7 +20,7 @@ interface data {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/clubes/ranking/2024"
+    process.env.NEXT_PUBLIC_API_URL + "/clubes/ranking/2025"
   );
   const data = (await response.json()) as data[];
 
@@ -45,7 +45,7 @@ const page = async () => {
 
   return (
     <section className="fade-in flex flex-col gap-y-6">
-      <Title title="Ranking de Clubes 2024" emoji="🥇" />
+      <Title title="Ranking de Clubes 2025" emoji="🥇" />
 
       <div className="overflow-x-auto text-sm">
         <table className="table w-full mb-3">

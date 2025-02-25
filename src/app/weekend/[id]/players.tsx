@@ -14,16 +14,21 @@ const Item = ({ item }: { item: Props }) => {
   return (
     <div className="flex items-center flex-row gap-y-2 gap-x-3 lg:gap-x-5">
       <article className="flex items-center gap-x-2">
-        <div className="w-12 h-12 rounded-full overflow-hidden hover:opacity-70">
-          <Link href={`/jugadores/${item.player1_id}`}>
-            <Image
-              src={item.player1_image}
-              alt={item.player1_name}
-              width={48}
-              height={48}
-              className="object-cover w-full h-full"
-            />
-          </Link>
+        <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10">
+          {item.player1_image ? (
+            <Link
+              href={`/jugadores/${item.player1_id}`}
+              className="hover:opacity-70"
+            >
+              <Image
+                src={item.player1_image}
+                alt={item.player1_name}
+                width={48}
+                height={48}
+                className="object-cover w-full h-full"
+              />
+            </Link>
+          ) : null}
         </div>
         <Link
           href={`/jugadores/${item.player1_id}`}
@@ -33,16 +38,21 @@ const Item = ({ item }: { item: Props }) => {
         </Link>
       </article>
       <article className="flex items-center gap-x-2">
-        <div className="w-12 h-12 rounded-full overflow-hidden hover:opacity-70">
-          <Link href={`/jugadores/${item.player2_id}`}>
-            <Image
-              src={item.player2_image}
-              alt={item.player2_name}
-              width={48}
-              height={48}
-              className="object-cover w-full h-full"
-            />
-          </Link>
+        <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10">
+          {item.player2_image ? (
+            <Link
+              href={`/jugadores/${item.player2_id}`}
+              className=" hover:opacity-70"
+            >
+              <Image
+                src={item.player2_image}
+                alt={item.player2_name}
+                width={48}
+                height={48}
+                className="object-cover w-full h-full"
+              />
+            </Link>
+          ) : null}
         </div>
         <Link
           href={`/jugadores/${item.player2_id}`}

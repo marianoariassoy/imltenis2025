@@ -20,7 +20,7 @@ export const categories = [
   { name: "Mixto Tercera ", url: "/torneos/55", slug: "mixto-tercera", id: 12 },
   { name: "Cuarta Libre", url: "/torneos/49", slug: "cuarta-libre", id: 4 },
   { name: "Damas Cuarta ", url: "/torneos/54", slug: "damas-cuarta", id: 8 },
-  { name: "Quinta Libre", url: "/torneos/48", slug: "quinta-libre", id: 5 },
+  { name: "Quinta Libre", url: "/torneos/50", slug: "quinta-libre", id: 5 },
   { name: "Sexta Libre", url: "/torneos/51", slug: "sexta-libre", id: 13 },
 ];
 

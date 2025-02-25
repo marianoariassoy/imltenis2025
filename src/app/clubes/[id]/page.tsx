@@ -61,7 +61,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             alt={data[0].name}
             width={80}
             height={80}
-            className="object-cover h-full w-full hover:opacity-80 transition-opacity"
+            className="object-cover h-full w-full"
           />
         </div>
         <h1 className="font-semibold text-base text-primary">{data[0].name}</h1>

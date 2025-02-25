@@ -14,23 +14,27 @@ const Champion = async ({ id }: { id: string }) => {
       <Confetti />
       <h1 className="italic font-black text-primary">Campeones</h1>
       <div className="flex gap-4">
-        <div className="w-16 h-16 rounded-full overflow-hidden">
-          <Image
-            src={data.player1_image}
-            alt={data.player1_name}
-            width={64}
-            height={64}
-            className="object-cover w-full h-full"
-          />
+        <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10">
+          {data.player1_image ? (
+            <Image
+              src={data.player1_image}
+              alt={data.player1_name}
+              width={64}
+              height={64}
+              className="object-cover w-full h-full"
+            />
+          ) : null}
         </div>
-        <div className="w-16 h-16 rounded-full overflow-hidden">
-          <Image
-            src={data.player2_image}
-            alt={data.player2_name}
-            width={64}
-            height={64}
-            className="object-cover w-full h-full"
-          />
+        <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10">
+          {data.player2_image ? (
+            <Image
+              src={data.player2_image}
+              alt={data.player2_name}
+              width={64}
+              height={64}
+              className="object-cover w-full h-full"
+            />
+          ) : null}
         </div>
       </div>
       <div className="flex gap-1 items-center font-medium text-sm">

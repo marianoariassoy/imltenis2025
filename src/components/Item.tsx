@@ -13,7 +13,7 @@ const TitleRow = ({ num, image, title, link }: Item) => {
     <div className="flex items-center gap-x-3 text-sm">
       {num && <div className="font-semibold">{num}</div>}
 
-      <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10 shadow-lg">
+      <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10">
         {image ? (
           <Link href={link} className="hover:opacity-70 transition-opacity">
             <Image

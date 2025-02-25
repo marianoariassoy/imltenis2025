@@ -63,9 +63,7 @@ const Tabla = async ({ group, type }: { group: Group; type: number }) => {
                 <td>
                   <Item
                     num={index + 1}
-                    image={`https://imltenis.com.ar/images/${
-                      item.image ? item.image : item.club_image
-                    }`}
+                    image={item.image}
                     title={item.name}
                     link={`/equipos/${item.id}`}
                   />

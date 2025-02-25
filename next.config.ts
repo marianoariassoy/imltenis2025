@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "imltenis.com.ar",
+        hostname: "backend.imltenis.com.ar",
         port: "",
         pathname: "/**",
       },

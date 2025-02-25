@@ -54,14 +54,16 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <section className="fade-in flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
-        <div className="w-28 h-28 rounded-full overflow-hidden">
-          <Image
-            src={data[0].image}
-            alt={data[0].name}
-            width={112}
-            height={112}
-            className="object-cover h-full w-full"
-          />
+        <div className="w-28 h-28 rounded-full overflow-hidden bg-white/10">
+          {data[0].image && (
+            <Image
+              src={data[0].image}
+              alt={data[0].name}
+              width={112}
+              height={112}
+              className="object-cover h-full w-full"
+            />
+          )}
         </div>
         <div className="text-center">
           <h1 className="font-semibold text-primary">{data[0].name}</h1>
