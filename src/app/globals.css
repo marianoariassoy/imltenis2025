@@ -9,17 +9,19 @@
   --background: rgb(37, 37, 37);
 }
 
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  min-height: 100vh;
+@supports (animation-timeline: scroll()) {
+  .logo-animation {
+    animation: logo forwards;
+    animation-timeline: scroll();
+    animation-range: 0 50px;
+  }
+  .header-animation {
+    animation: stick forwards;
+    animation-timeline: scroll();
+    animation-range: 0 50px;
+  }
 }
 
-.header-animation {
-  animation: stick forwards;
-  animation-timeline: scroll();
-  animation-range: 0 50px;
-}
 @keyframes stick {
   from {
     background-color: transparent;
@@ -29,11 +31,6 @@ body {
     background-color: rgba(37, 37, 37, 0.8);
     backdrop-filter: blur(10px);
   }
-}
-.logo-animation {
-  animation: logo forwards;
-  animation-timeline: scroll();
-  animation-range: 0 50px;
 }
 @keyframes logo {
   from {
@@ -59,7 +56,6 @@ body {
 .fade-in {
   animation: fade-in 0.3s ease-in-out;
 }
-
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -72,7 +68,6 @@ body {
 .blur-out {
   animation: blur-out 1s ease-in-out forwards;
 }
-
 @keyframes blur-out {
   0% {
     filter: blur(15px);
@@ -85,7 +80,6 @@ body {
 .animate-fade-in-out {
   animation: fade-in-out 0.8s infinite;
 }
-
 @keyframes fade-in-out {
   0% {
     opacity: 0;

@@ -50,11 +50,11 @@ export default function RootLayout({
     <html lang="es">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#252525" />
       </head>
       <body
-        className="bg-background text-foreground"
+        className="bg-background text-foreground min-h-screen flex flex-col"
         style={{ fontFamily: montserrat.style.fontFamily }}
       >
         <Header />

@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <section className="h-full flex items-center justify-center">
-      <h1 className="fade-in font-black text-center text-[3.9rem] leading-none lg:text-8xl text-primary flex flex-col">
+    <section>
+      <h1 className="fade-in font-black text-center text-[3.9rem] leading-none lg:text-8xl text-primary flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -mt-6">
         <span>Torneo</span>
         <span>Apertura</span>
         <span>
@@ -11,12 +11,14 @@ export default function Home() {
       <div className="blur-out fixed h-screen w-screen left-0 top-0 -z-10">
         <video
           autoPlay
-          playsInline
-          muted
           loop
+          muted
+          playsInline
+          preload="auto"
           className="opacity-40 h-full w-full object-cover"
         >
-          <source src="./video.webm" type="video/webm" />
+          <source src="./videos/video.webm" type="video/webm" />
+          <source src="./videos/video.mp4" type="video/mp4" />
         </video>
       </div>
     </section>

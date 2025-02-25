@@ -46,7 +46,7 @@ const Tabla = async ({ group, type }: { group: Group; type: number }) => {
   return (
     <section className="flex flex-col gap-y-3">
       <div className="overflow-x-auto text-sm">
-        <table className="table w-full mb-3">
+        <table className="w-full table mb-3">
           <thead>
             <tr>
               {labels.map((item, index) => (

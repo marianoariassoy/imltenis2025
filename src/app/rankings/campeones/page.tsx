@@ -51,7 +51,7 @@ const page = async () => {
     <section className="fade-in flex flex-col gap-y-6">
       <Title title="Ranking de Campeones" emoji="👑" />
 
-      <div className="overflow-x-auto text-sm">
+      <div className="w-full overflow-x-auto text-sm">
         <table className="table w-full mb-3">
           <thead>
             <tr>
