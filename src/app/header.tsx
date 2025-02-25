@@ -13,13 +13,13 @@ const Header = () => {
 
   return (
     <>
-      <header className="flex items-center gap-x-4 px-4 py-2 z-50">
+      <header className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50 transition-all header-animation">
         <div>
           <button className="hover:text-primary" onClick={openMenu}>
             <Menu />
           </button>
         </div>
-        <div className="flex-1 flex justify-center text-primary transition-all logo-main">
+        <div className="flex-1 flex justify-center text-primary transition-all logo-animation">
           <Link href="/">
             <Logo />
           </Link>

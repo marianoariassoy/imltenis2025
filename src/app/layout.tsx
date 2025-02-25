@@ -47,14 +47,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="h-full">
+    <html lang="es">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#252525" />
       </head>
       <body
-        className="bg-background text-foreground flex flex-col h-full"
+        className="bg-background text-foreground"
         style={{ fontFamily: montserrat.style.fontFamily }}
       >
         <Header />

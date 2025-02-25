@@ -9,9 +9,39 @@
   --background: rgb(37, 37, 37);
 }
 
-.bg-header {
-  background-color: rgba(37, 37, 37, 0.8);
-  backdrop-filter: blur(10px);
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.header-animation {
+  animation: stick forwards;
+  animation-timeline: scroll();
+  animation-range: 0 50px;
+}
+@keyframes stick {
+  from {
+    background-color: transparent;
+    backdrop-filter: blur(0);
+  }
+  to {
+    background-color: rgba(37, 37, 37, 0.8);
+    backdrop-filter: blur(10px);
+  }
+}
+.logo-animation {
+  animation: logo forwards;
+  animation-timeline: scroll();
+  animation-range: 0 50px;
+}
+@keyframes logo {
+  from {
+    font-size: 1rem;
+  }
+  to {
+    font-size: 0.8rem;
+  }
 }
 
 .table thead tr th {

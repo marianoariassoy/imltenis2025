@@ -214,11 +214,7 @@ const page = () => {
 
   return (
     <section className="fade-in flex flex-col gap-y-6">
-      <Title
-        title="Reglamento IML Tenis"
-        emoji="📝"
-        description="Ultima actualización 21 de Febrero 2025."
-      />
+      <Title title="Reglamento IML Tenis" emoji="🤝" description="" />
 
       <Filter data={data} />
     </section>
