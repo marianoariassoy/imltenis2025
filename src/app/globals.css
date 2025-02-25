@@ -24,10 +24,12 @@
 
 @keyframes stick {
   from {
+    position: sticky;
     background-color: transparent;
     backdrop-filter: blur(0);
   }
   to {
+    position: sticky;
     background-color: rgba(37, 37, 37, 0.8);
     backdrop-filter: blur(10px);
   }
