@@ -17,8 +17,8 @@ export default function Home() {
           preload="auto"
           className="opacity-40 h-full w-full object-cover"
         >
-          <source src="./videos/video.webm" type="video/webm" />
-          <source src="./videos/video.mp4" type="video/mp4" />
+          <source src="/videos/video.webm" type="video/webm" />
+          <source src="/videos/video.mp4" type="video/mp4" />
         </video>
       </div>
     </section>

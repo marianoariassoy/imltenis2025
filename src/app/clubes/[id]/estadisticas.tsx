@@ -1,3 +1,5 @@
+import { Info } from "@/lib/icons";
+
 interface data {
   id: number;
   image: string;
@@ -23,41 +25,46 @@ const estadisticas = async ({ id }: { id: string }) => {
       stadistics[0].silver ||
       stadistics[0].supercopa ||
       stadistics[0].finals) && (
-      <div className="text-center text-sm">
-        🔥 El club
-        {stadistics[0].gold ||
-        stadistics[0].silver ||
-        stadistics[0].supercopa ? (
-          <span> ha obtenido </span>
-        ) : null}
-        {stadistics[0].gold ? (
-          <>
-            {stadistics[0].gold}
-            {stadistics[0].gold > 1 ? " campeonatos" : " campeonato"}
-          </>
-        ) : null}
-        {stadistics[0].silver ? (
-          <>
-            {stadistics[0].gold && ", "}
-            {stadistics[0].silver}
-            {stadistics[0].silver > 1 ? " copas plata" : " copa plata"}
-          </>
-        ) : null}
-        {stadistics[0].supercopa ? (
-          <>
-            {(stadistics[0].gold || stadistics[0].silver > 0) && ", "}
-            {stadistics[0].supercopa}
-            {stadistics[0].supercopa > 1 ? " supercopas" : " supercopa"}
-          </>
-        ) : null}
-        {stadistics[0].finals ? (
-          <>
-            {(stadistics[0].gold || stadistics[0].silver > 0) && " y "}
-            <span> ha disputado {stadistics[0].finals} </span>
-            {stadistics[0].finals > 1 ? " finales" : " final"}
-          </>
-        ) : null}
-        .
+      <div className="flex gap-x-2 justify-center items-center text-center text-sm">
+        <span className="text-primary">
+          <Info />
+        </span>
+        <span>
+          A lo largo de los torneos el club
+          {stadistics[0].gold ||
+          stadistics[0].silver ||
+          stadistics[0].supercopa ? (
+            <span> ha obtenido </span>
+          ) : null}
+          {stadistics[0].gold ? (
+            <>
+              {stadistics[0].gold}
+              {stadistics[0].gold > 1 ? " campeonatos" : " campeonato"}
+            </>
+          ) : null}
+          {stadistics[0].silver ? (
+            <>
+              {stadistics[0].gold && ", "}
+              {stadistics[0].silver}
+              {stadistics[0].silver > 1 ? " copas plata" : " copa plata"}
+            </>
+          ) : null}
+          {stadistics[0].supercopa ? (
+            <>
+              {(stadistics[0].gold || stadistics[0].silver > 0) && ", "}
+              {stadistics[0].supercopa}
+              {stadistics[0].supercopa > 1 ? " supercopas" : " supercopa"}
+            </>
+          ) : null}
+          {stadistics[0].finals ? (
+            <>
+              {(stadistics[0].gold || stadistics[0].silver > 0) && " y "}
+              <span> ha disputado {stadistics[0].finals} </span>
+              {stadistics[0].finals > 1 ? " finales" : " final"}
+            </>
+          ) : null}
+          .
+        </span>
       </div>
     )
   );

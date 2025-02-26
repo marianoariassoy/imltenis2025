@@ -34,6 +34,7 @@ const Header = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-primary"
+            aria-label="Instagram"
           >
             <Instagram />
           </a>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { WhatsApp, Pin } from "@/lib/icons";
+import { WhatsApp, Info } from "@/lib/icons";
 import Jugadores from "./jugadores";
 import Fixture from "./fixtures";
 import { Suspense } from "react";
@@ -78,13 +78,23 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             </Link>
           </h2>
         </div>
-        <div className="flex justify-center gap-x-3 items-center text-sm">
+
+        <div className="flex justify-center gap-x-4 items-center text-sm">
           <Link
             href={`/clubes/${data.club_id}`}
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
+            <Info />
             Info del club
           </Link>
+          <a
+            href={`https://wa.me/${data.captain_phone}`}
+            target="_blank"
+            className="flex gap-x-1 font-medium items-center text-primary hover:underline"
+          >
+            <WhatsApp />
+            WhatsApp
+          </a>
         </div>
       </header>
 

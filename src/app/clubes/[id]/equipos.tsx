@@ -43,7 +43,9 @@ const Equipos = async ({ id }: { id: string }) => {
 
   return (
     <section className="fade-in flex flex-col gap-y-6">
-      <h1 className="font-semibold text-primary text-center">Equipos</h1>
+      <h1 className="font-semibold text-primary text-center">
+        Equipos ({data.length})
+      </h1>
 
       <div className="overflow-x-auto text-sm whitespace-nowrap">
         <table className="table w-full mb-3">
