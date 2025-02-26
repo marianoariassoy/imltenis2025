@@ -87,6 +87,7 @@ export interface Club {
   location: string;
   phone: string;
   googlemaps: string;
+  googlemapslink: string;
   whatsapp: string;
   instagram: string;
   facebook: string;

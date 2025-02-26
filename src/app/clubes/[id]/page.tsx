@@ -22,7 +22,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: "es_AR",
-      url: `https://imltenis.com.ar/clubes/${data[0].club_id}`,
+      url: `https://imltenis.com.ar/clubes/${id}`,
       title: data[0].name,
       description: `Perfil del club ${data[0].name} de la liga de clubes IML Tenis`,
       images: [
@@ -70,10 +70,17 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           {data[0].phone && <span>Tel. {data[0].phone}</span>}
         </div>
 
+        {data[0].googlemaps && (
+          <div
+            className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-64"
+            dangerouslySetInnerHTML={{ __html: data[0].googlemaps }}
+          />
+        )}
+
         <div className="flex flex-col items-center font-medium text-sm">
-          {data[0].googlemaps && (
+          {data[0].googlemapslink && (
             <a
-              href={data[0].googlemaps}
+              href={data[0].googlemapslink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
