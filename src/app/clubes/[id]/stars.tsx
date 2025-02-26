@@ -14,7 +14,7 @@ const estadisticas = async ({ id }: { id: string }) => {
 
   return (
     stadistics[0].gold && (
-      <div className="flex item-center gap-x-2 justify-center text-xl">
+      <div className="flex gap-x-1 justify-center">
         {[...Array(+stadistics[0].gold)].map((_, index) => (
           <span key={index}>⭐️</span>
         ))}
