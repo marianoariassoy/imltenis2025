@@ -3,6 +3,8 @@ import Equipos from "./equipos";
 import { Club } from "@/types";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
+import Estadisticas from "./estadisticas";
+import Stars from "./stars";
 
 export async function generateMetadata({
   params,
@@ -63,11 +65,17 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             className="object-cover h-full w-full"
           />
         </div>
-        <h1 className="font-semibold text-base text-primary">{data[0].name}</h1>
+        <div className="text-center">
+          <h1 className="font-semibold text-base text-primary">
+            {data[0].name}
+          </h1>
+          <Suspense fallback={<Loader />}>
+            <Stars id={id} />
+          </Suspense>
+        </div>
 
-        <div className="text-sm text-center font-medium flex flex-col items-center">
-          <span>{data[0].location}</span>
-          {data[0].phone && <span>Tel. {data[0].phone}</span>}
+        <div className="text-sm text-center font-medium">
+          {data[0].location}
         </div>
 
         {data[0].googlemaps && (
@@ -77,7 +85,8 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           />
         )}
 
-        <div className="flex flex-col items-center font-medium text-sm">
+        <div className="flex flex-wrap gap-3 items-center justify-center font-medium text-sm text-primary">
+          {data[0].phone && <span>Tel. {data[0].phone}</span>}
           {data[0].googlemapslink && (
             <a
               href={data[0].googlemapslink}
@@ -130,6 +139,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           )}
         </div>
       </header>
+
+      <Suspense fallback={<Loader />}>
+        <Estadisticas id={id} />
+      </Suspense>
 
       <Suspense fallback={<Loader />}>
         <Equipos id={id} />

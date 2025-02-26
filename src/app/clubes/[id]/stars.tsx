@@ -1,0 +1,25 @@
+interface data {
+  club_id: number;
+  gold: number;
+}
+
+const estadisticas = async ({ id }: { id: string }) => {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/clubes/champions`
+  );
+  const data = (await response.json()) as data[];
+  if (!data) return null;
+  const stadistics = data.filter((x) => x.club_id === +id);
+
+  return (
+    stadistics[0].gold > 0 && (
+      <div className="flex item-center gap-x-2 justify-center text-xl">
+        {[...Array(+stadistics[0].gold)].map((_, index) => (
+          <span key={index}>⭐️</span>
+        ))}
+      </div>
+    )
+  );
+};
+
+export default estadisticas;
