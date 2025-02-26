@@ -10,9 +10,10 @@ const estadisticas = async ({ id }: { id: string }) => {
   const data = (await response.json()) as data[];
   if (!data) return null;
   const stadistics = data.filter((x) => x.club_id === +id);
+  if (stadistics.length === 0) return null;
 
   return (
-    stadistics[0].gold > 0 && (
+    stadistics[0].gold && (
       <div className="flex item-center gap-x-2 justify-center text-xl">
         {[...Array(+stadistics[0].gold)].map((_, index) => (
           <span key={index}>⭐️</span>

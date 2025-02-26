@@ -16,6 +16,7 @@ const estadisticas = async ({ id }: { id: string }) => {
   const data = (await response.json()) as data[];
   if (!data) return null;
   const stadistics = data.filter((x) => x.club_id === +id);
+  if (stadistics.length === 0) return null;
 
   return (
     (stadistics[0].gold ||

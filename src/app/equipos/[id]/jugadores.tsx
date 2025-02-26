@@ -42,9 +42,7 @@ const Jugadores = async ({
     <section className="fade-in flex flex-col gap-y-6">
       <div className="text-center">
         <h1 className="text-primary font-semibold">🔥 Lista de buena fe</h1>
-        <h2>
-          <span className="font-medium">{captain_name} (Capitán)</span>
-        </h2>
+        <h2 className="text-sm font-medium">{captain_name} (Capitán)</h2>
       </div>
 
       <div className="overflow-x-auto text-sm whitespace-nowrap">

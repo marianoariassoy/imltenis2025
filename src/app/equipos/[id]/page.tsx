@@ -79,22 +79,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           </h2>
         </div>
         <div className="flex justify-center gap-x-3 items-center text-sm">
-          <a
-            href={data.googlemaplink}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href={`/clubes/${data.club_id}`}
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
-            <Pin /> Ubicación del club
-          </a>
-          <a
-            href={`https://wa.me/${data.captain_phone}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex gap-x-1 font-medium items-center text-primary hover:underline"
-          >
-            <WhatsApp /> WhatsApp
-          </a>
+            Info del club
+          </Link>
         </div>
       </header>
 
