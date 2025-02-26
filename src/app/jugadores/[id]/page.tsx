@@ -17,20 +17,20 @@ export async function generateMetadata({
   if (!data) return null;
 
   return {
-    title: `${data[0].name}`,
+    title: data[0].name,
     description: `Perfil del jugador ${data[0].name} de la liga de clubes IML Tenis`,
     openGraph: {
       type: "website",
       locale: "es_AR",
       url: `https://imltenis.com.ar/jugadores/${id}`,
-      title: `${data[0].name}`,
+      title: data[0].name,
       description: `Perfil del jugador ${data[0].name} de la liga de clubes IML Tenis`,
       images: [
         {
-          url: `${data[0].image}`,
+          url: data[0].image,
           width: 500,
           height: 500,
-          alt: `${data[0].name}`,
+          alt: data[0].name,
         },
       ],
     },

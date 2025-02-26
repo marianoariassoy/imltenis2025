@@ -5,6 +5,21 @@ import Labels from "@/components/Labels";
 export const metadata = {
   title: "Ranking de Campeones",
   description: "Ranking de campeones de la liga de clubes IML Tenis",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://imltenis.com.ar/rankings/campeones",
+    title: "Ranking de Campeones",
+    description: "Ranking de campeones de la liga de clubes IML Tenis",
+    images: [
+      {
+        url: "/assets/imltenis.jpg",
+        width: 500,
+        height: 500,
+        alt: "IML Tenis Liga de clubes de Buenos Aires",
+      },
+    ],
+  },
 };
 
 interface data {
