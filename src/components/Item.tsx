@@ -15,13 +15,13 @@ const TitleRow = ({ num, image, title, link }: Item) => {
 
       <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10">
         {image ? (
-          <Link href={link} className="hover:opacity-70 transition-opacity">
+          <Link href={link}>
             <Image
               src={image}
               alt={title}
               width={120}
               height={120}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hover:opacity-70 transition-opacity"
             />
           </Link>
         ) : null}
