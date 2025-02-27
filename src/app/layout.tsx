@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import ReactGA from "react-ga4";
 import "./globals.css";
 import Header from "./header";
 import Footer from "./footer";
@@ -46,6 +47,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  ReactGA.initialize("G-G1DBH0K86R");
+
   return (
     <html lang="es">
       <head>

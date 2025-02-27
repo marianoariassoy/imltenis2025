@@ -12,15 +12,13 @@ const estadisticas = async ({ id }: { id: string }) => {
   const stadistics = data.filter((x) => x.club_id === +id);
   if (stadistics.length === 0) return null;
 
-  return (
-    stadistics[0].gold && (
-      <div className="flex gap-x-1 justify-center">
-        {[...Array(+stadistics[0].gold)].map((_, index) => (
-          <span key={index}>⭐️</span>
-        ))}
-      </div>
-    )
-  );
+  return stadistics[0].gold ? (
+    <div className="flex gap-x-1 justify-center">
+      {[...Array(+stadistics[0].gold)].map((_, index) => (
+        <span key={index}>⭐️</span>
+      ))}
+    </div>
+  ) : null;
 };
 
 export default estadisticas;

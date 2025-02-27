@@ -1,4 +1,4 @@
-import { Info } from "@/lib/icons";
+import { Cup } from "@/lib/icons";
 
 interface data {
   id: number;
@@ -25,17 +25,11 @@ const estadisticas = async ({ id }: { id: string }) => {
       stadistics[0].silver ||
       stadistics[0].supercopa ||
       stadistics[0].finals) && (
-      <div className="flex gap-x-2 text-sm p-4 lg:p-6 bg-black/10 rounded-xl">
+      <div className="flex justify-center items-center gap-x-3 text-sm p-4 lg:p-6 bg-black/10 rounded-xl">
         <span className="text-primary">
-          <Info />
+          <Cup />
         </span>
         <span>
-          El club
-          {stadistics[0].gold ||
-          stadistics[0].silver ||
-          stadistics[0].supercopa ? (
-            <span> ha obtenido </span>
-          ) : null}
           {stadistics[0].gold ? (
             <>
               {stadistics[0].gold}
@@ -46,7 +40,7 @@ const estadisticas = async ({ id }: { id: string }) => {
             <>
               {stadistics[0].gold && ", "}
               {stadistics[0].silver}
-              {stadistics[0].silver > 1 ? " copas plata" : " copa plata"}
+              {stadistics[0].silver > 1 ? " copas de plata" : " copa de plata"}
             </>
           ) : null}
           {stadistics[0].supercopa ? (
@@ -59,8 +53,10 @@ const estadisticas = async ({ id }: { id: string }) => {
           {stadistics[0].finals ? (
             <>
               {(stadistics[0].gold || stadistics[0].silver > 0) && " y "}
-              <span> ha disputado {stadistics[0].finals} </span>
-              {stadistics[0].finals > 1 ? " finales" : " final"}
+              {stadistics[0].finals}
+              {stadistics[0].finals > 1
+                ? " finales disputadas"
+                : " final disputada"}
             </>
           ) : null}
           .
