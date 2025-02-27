@@ -1,6 +1,6 @@
 import Labels from "@/components/Labels";
 import Item from "@/components/Item";
-import { Bull } from "@/lib/icons";
+import { Bull, Info } from "@/lib/icons";
 import { Group, Table } from "@/types";
 
 const Tabla = async ({ group, type }: { group: Group; type: number }) => {
@@ -100,8 +100,10 @@ const Tabla = async ({ group, type }: { group: Group; type: number }) => {
 
       <Labels labels={labels} />
 
-      <div className="text-center text-sm">
-        🔥{" "}
+      <div className="flex gap-x-4 items-center text-sm p-3 lg:p-6 bg-black/10 rounded-xl">
+        <span className="text-primary">
+          <Info />
+        </span>
         <span className="text-secondary whitespace-break-spaces">
           {group.tournament_description}
         </span>
