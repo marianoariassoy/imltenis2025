@@ -25,15 +25,17 @@ const estadisticas = async ({ id }: { id: string }) => {
       stadistics[0].silver ||
       stadistics[0].supercopa ||
       stadistics[0].finals) && (
-      <div className="flex justify-center items-center gap-x-3 text-sm p-4 lg:p-6 bg-black/10 rounded-xl">
-        <span className="text-primary">
+      <div className="flex justify-center gap-x-2 text-sm p-4 lg:p-6 bg-black/10 rounded-xl">
+        <span className="text-primary mt-1 lg:mt-0">
           <Cup />
         </span>
         <span>
           {stadistics[0].gold ? (
             <>
               {stadistics[0].gold}
-              {stadistics[0].gold > 1 ? " campeonatos" : " campeonato"}
+              {stadistics[0].gold > 1
+                ? " campeonatos ganados"
+                : " campeonato ganado"}
             </>
           ) : null}
           {stadistics[0].silver ? (

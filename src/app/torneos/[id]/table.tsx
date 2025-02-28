@@ -100,8 +100,8 @@ const Tabla = async ({ group, type }: { group: Group; type: number }) => {
 
       <Labels labels={labels} />
 
-      <div className="flex gap-x-4 items-center text-sm p-3 lg:p-6 bg-black/10 rounded-xl">
-        <span className="text-primary">
+      <div className="flex gap-x-2 text-sm p-3 lg:p-6 bg-black/10 rounded-xl">
+        <span className="text-primary mt-1">
           <Info />
         </span>
         <span className="text-secondary whitespace-break-spaces">

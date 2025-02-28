@@ -79,13 +79,13 @@ const page = async () => {
 
       <Labels labels={labels} />
 
-      <div className="flex gap-x-4 items-center text-sm p-3 lg:p-6 bg-black/10 rounded-xl">
-        <span className="text-primary">
+      <div className="flex gap-x-2 text-sm p-3 lg:p-6 bg-black/10 rounded-xl">
+        <span className="text-primary mt-1 lg:mt-0">
           <Info />
         </span>
         <span className="text-secondary whitespace-break-spaces">
-          Al final de la temporada anual los 4 clubes mejores clasificados
-          disputarán los playoffs finales.
+          Al final de la temporada anual los 4 clubes mejor ubicados disputarán
+          los playoffs finales.
         </span>
       </div>
     </section>

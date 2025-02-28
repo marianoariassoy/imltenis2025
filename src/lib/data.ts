@@ -7,7 +7,7 @@ export const categories = [
     slug: "segunda-35",
     id: 10,
   },
-  { name: "Damas Segunda", url: "/torneos/52", slug: "damas-segunda", id: 9 },
+  // { name: "Damas Segunda", url: "/torneos/52", slug: "damas-segunda", id: 9 },
   // { name: "Mixto Segunda ", url: "/soon", slug: "mixto-segunda", id: 11 },
   { name: "Tercera Libre", url: "/torneos/46", slug: "tercera-libre", id: 3 },
   {
