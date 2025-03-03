@@ -13,7 +13,15 @@ const page = async () => {
     process.env.NEXT_PUBLIC_API_URL + "/series/upcoming"
   );
   const data = (await response.json()) as Serie[];
-  if (!data) return <Messages text="No hay series por jugar" />;
+  if (!data)
+    return (
+      <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full fade-in flex flex-col items-center justify-center">
+        <h1 className="text-3xl mb-1">🙈</h1>
+        <span className="text-primary text-center text-sm font-semibold">
+          No hay series por disputar
+        </span>
+      </div>
+    );
 
   return (
     <section className="fade-in flex flex-col gap-y-6">

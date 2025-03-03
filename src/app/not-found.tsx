@@ -1,9 +1,9 @@
 const error = () => {
   return (
-    <div className="flex flex-col items-center text-center">
-      <span className="text-2xl">😢</span>
-      <span className="text-primary text-sm font-medium">
-        No hay nada por acá
+    <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full fade-in flex flex-col items-center justify-center">
+      <h1 className="text-3xl mb-1">😢</h1>
+      <span className="text-primary text-center text-sm font-semibold">
+        No hay nada por acá...
       </span>
     </div>
   );

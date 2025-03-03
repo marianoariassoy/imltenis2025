@@ -50,9 +50,14 @@ const Menu = ({
           </li>
         ))}
         <li>
-          <a href="#" className="hover:underline">
+          <Link
+            href="/bienvenido"
+            className={
+              pathname === "/bienvenido" ? "text-primary" : "hover:underline"
+            }
+          >
             Registro de jugadores
-          </a>
+          </Link>
         </li>
         <li>
           <a

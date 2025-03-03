@@ -85,7 +85,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
             <Info />
-            Info del club
+            Info de la sede
           </Link>
           <a
             href={`https://wa.me/${data.captain_phone}`}

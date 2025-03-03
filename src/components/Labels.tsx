@@ -5,7 +5,7 @@ interface Label {
 
 const Labels = ({ labels }: { labels: Label[] }) => {
   return (
-    <ul className="flex gap-x-3 justify-center text-secondary flex-wrap text-sm">
+    <ul className="flex gap-x-3 justify-center text-secondary flex-wrap text-sm mb-3">
       {labels
         .filter((item) => item.value)
         .map((item, index) => (
