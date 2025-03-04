@@ -1,5 +1,4 @@
 import Title from "@/components/Title";
-import Messages from "@/components/Messages";
 import Link from "next/link";
 import Item from "@/components/ItemSmall";
 import { Serie } from "@/types/";

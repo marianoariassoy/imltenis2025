@@ -1,8 +1,10 @@
+import { UseFormRegisterReturn } from "react-hook-form";
+
 interface Input {
   type: string;
   title: string;
   placeholder: string;
-  register: any;
+  register: UseFormRegisterReturn;
 }
 
 const Input = ({ type, title, placeholder, register }: Input) => {
