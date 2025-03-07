@@ -26,10 +26,10 @@ export async function generateMetadata({
       description: `Resultados de la serie disputada el ${data.date} ${data.hour} de la liga de clubes IML Tenis entre ${data.home_name} y ${data.away_name}`,
       images: [
         {
-          url: `./imltenis.jpg`,
+          url: "/assets/imltenis.jpg",
           width: 500,
           height: 500,
-          alt: `IML Tenis`,
+          alt: "IML Tenis Liga de clubes de Buenos Aires",
         },
       ],
     },

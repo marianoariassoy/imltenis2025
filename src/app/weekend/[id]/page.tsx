@@ -25,6 +25,14 @@ export async function generateMetadata({
       url: `https://imltenis.com.ar/weekend/${id}`,
       title: `${data.title}`,
       description: `Torneo ${data.title} de IML Weekend`,
+      images: [
+        {
+          url: "/assets/imltenis.jpg",
+          width: 500,
+          height: 500,
+          alt: "IML Tenis Liga de clubes de Buenos Aires",
+        },
+      ],
     },
   };
 }
