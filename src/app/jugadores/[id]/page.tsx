@@ -79,7 +79,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <Doubles id={id} />
       <Equipos id={id} />
 
-      <Aviso text="En caso de error en la información o cambio de foto de perfil, envianos un correo a hola@imltenis.com.ar" />
+      <Aviso text="En caso de existir algún error en la información o necesitar cambio de foto de perfil, envianos un correo a hola@imltenis.com.ar" />
     </section>
   );
 };

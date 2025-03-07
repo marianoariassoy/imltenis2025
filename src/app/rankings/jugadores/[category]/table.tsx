@@ -1,27 +1,29 @@
 import Link from "next/link";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
+import { categories } from "@/lib/data";
+import Messages from "@/components/Messages";
 
 interface data {
   id: string;
-  image: string;
-  name: string;
+  player_id: string;
+  player_image: string;
+  player_name: string;
   team_id: string;
   matches_won: string;
-  sets: string;
-  games: string;
-  matches_total: string;
+  ds: string;
+  dg: string;
+  matches: string;
   team_name: string;
+  category: string;
 }
 
 const table = async ({ category }: { category: string }) => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/players/ranking/4"
+    process.env.NEXT_PUBLIC_API_URL + "/rankings/players"
   );
   const data = (await response.json()) as data[];
   if (!data) return null;
-
-  console.log(category);
 
   const labels = [
     {
@@ -51,6 +53,14 @@ const table = async ({ category }: { category: string }) => {
     },
   ];
 
+  const category_id = categories.filter((item) => item.slug === category);
+  const dataFiltered = data.filter(
+    (item) => +item.category === category_id[0].id
+  );
+
+  if (dataFiltered.length === 0)
+    return <Messages text="No hay datos disponibles" />;
+
   return (
     <>
       <div className="overflow-x-auto text-sm whitespace-nowrap">
@@ -63,14 +73,14 @@ const table = async ({ category }: { category: string }) => {
             </tr>
           </thead>
           <tbody>
-            {data.slice(0, 30).map((item, index) => (
+            {dataFiltered.slice(0, 50).map((item, index) => (
               <tr key={item.id} className={`${index === 0 && "text-primary"}`}>
                 <td>
                   <Item
                     num={index + 1}
-                    image={item.image}
-                    title={item.name}
-                    link={`/jugadores/${item.id}`}
+                    image={item.player_image}
+                    title={item.player_name}
+                    link={`/jugadores/${item.player_id}`}
                   />
                 </td>
                 <td>
@@ -84,9 +94,9 @@ const table = async ({ category }: { category: string }) => {
                 <td>
                   <span className="font-bold">{item.matches_won}</span>
                 </td>
-                <td>{item.sets}</td>
-                <td>{item.games}</td>
-                <td>{item.matches_total}</td>
+                <td>{item.ds}</td>
+                <td>{item.dg}</td>
+                <td>{item.matches}</td>
               </tr>
             ))}
           </tbody>

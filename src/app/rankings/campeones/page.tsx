@@ -35,7 +35,7 @@ interface data {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/clubes/champions"
+    process.env.NEXT_PUBLIC_API_URL + "/rankings/champions"
   );
   const data = (await response.json()) as data[];
 

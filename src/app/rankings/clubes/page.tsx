@@ -21,7 +21,7 @@ interface data {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/clubes/ranking/2025"
+    process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes"
   );
   const data = (await response.json()) as data[];
 

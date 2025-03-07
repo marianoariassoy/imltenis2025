@@ -1,7 +1,7 @@
 import Title from "@/components/Title";
-// import { Suspense } from "react";
-// import Loader from "@/components/Loader";
-// import Table from "./table";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
+import Table from "./table";
 import Filter from "./filter";
 
 export const metadata = {
@@ -14,15 +14,13 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
 
   return (
     <section className="fade-in flex flex-col gap-y-6">
-      <Title title="Ranking de Jugadores" description="Clausura 2024" />
+      <Title title="Ranking de Jugadores" description="Apertura 2025" />
 
       <Filter category={category} />
 
-      <div>Muy pronto</div>
-
-      {/* <Suspense fallback={<Loader />}>
+      <Suspense fallback={<Loader />}>
         <Table category={category} />
-      </Suspense> */}
+      </Suspense>
     </section>
   );
 };

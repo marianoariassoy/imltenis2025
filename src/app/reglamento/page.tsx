@@ -13,10 +13,13 @@ const page = () => {
     },
     {
       title: "Modalidad de juego",
-      text: `En todas las categorías se jugará 1 single y 2 dobles.
-      Todos los partidos se disputarán al mejor de 3 sets con tie break. El tercer set será supertie break a 10
-      puntos con diferencia de dos.
-      Los 3 encuentros deberán disputarse en simultaneo comenzando al mismo tiempo, salvo clubes con 2 canchas (ver el reglamento). `,
+      text: `En las categorías Damas, Libres y +35 se jugará 1 single y 2 dobles.
+      Todos los partidos se disputarán al mejor de 3 sets con tie break. El tercer set será supertie break a 10 puntos con diferencia de dos.
+      Los 3 encuentros deberán disputarse en simultaneo comenzando al mismo tiempo, salvo clubes con 2 canchas (ver el reglamento).
+
+      En las categorías Mixtas se jugará 2 dobles mixtos y simultaneos. Las series podrán quedar empatadas en la primera fase, se sumará 1 punto para cada equipo.
+En playoffs, en caso de empate se disputará un tercer punto, con duración de un set, conformado por los jugadores que cada capitán convoque, pudiendo incluir a jugadores que hayan disputado los 2 puntos anteriores, siempre respetando que la integración sea mixta.
+      `,
     },
     {
       title: "Puntuación",
