@@ -4,7 +4,8 @@ import Item from "@/components/ItemSmall";
 import { Serie } from "@/types/";
 
 export const metadata = {
-  title: "Orde de juego",
+  title: "Orden de juego",
+  description: "Orden de juego de la liga de clubes IML Tenis",
 };
 
 const page = async () => {
