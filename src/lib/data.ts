@@ -14,9 +14,9 @@ export const categories = [
     slug: "tercera-35",
     id: 7,
   },
-  { name: "Damas Tercera ", url: "/torneos/53", slug: "damas-tercera", id: 6 },
+  { name: "Damas Tercera", url: "/torneos/53", slug: "damas-tercera", id: 6 },
   {
-    name: "Mixto Libre Tercera ",
+    name: "Mixto Tercera",
     url: "/torneos/55",
     slug: "mixto-tercera",
     id: 12,
