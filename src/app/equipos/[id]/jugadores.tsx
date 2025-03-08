@@ -1,4 +1,4 @@
-import Item from "@/components/ItemSmall";
+import Item from "@/components/ItemMedium";
 import { Player } from "../../../types";
 import Labels from "@/components/Labels";
 
