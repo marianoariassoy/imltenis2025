@@ -9,8 +9,8 @@ interface Item {
 
 const TitleRow = ({ image, title, link }: Item) => {
   return (
-    <div className="flex items-center gap-x-3 text-sm">
-      <div className="w-10 h-10 rounded-full overflow-hidden">
+    <div className="flex items-center gap-x-2 text-sm">
+      <div className="w-10 h-10 rounded-full overflow-hidden bg-white/10">
         {image ? (
           <Link href={link}>
             <img
