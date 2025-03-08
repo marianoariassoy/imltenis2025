@@ -25,15 +25,15 @@ export async function generateMetadata({
       url: `https://imltenis.com.ar/torneos/${id}`,
       title: `${data[0].name} ${data[0].season}`,
       description: `Torneo ${data[0].name} ${data[0].season} de la liga de clubes IML Tenis`,
+      images: [
+        {
+          url: "/assets/imltenis.jpg",
+          width: 500,
+          height: 500,
+          alt: "IML Tenis Liga de clubes de Buenos Aires",
+        },
+      ],
     },
-    images: [
-      {
-        url: "/assets/imltenis.jpg",
-        width: 500,
-        height: 500,
-        alt: "IML Tenis Liga de clubes de Buenos Aires",
-      },
-    ],
   };
 }
 
