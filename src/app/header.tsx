@@ -3,10 +3,23 @@ import { useEffect } from "react";
 import { Logo, Instagram, Menu } from "@/lib/icons";
 import Link from "next/link";
 import Nav from "./nav";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
   useEffect(() => {
     const logo = document.querySelector(".logo-main") as HTMLElement;
+    const header = document.querySelector("#header") as HTMLElement;
+
+    if (pathname === "/") {
+      header.classList.remove("backdrop-blur");
+      header.classList.remove("bg-header");
+    } else {
+      header.classList.add("backdrop-blur");
+      header.classList.add("bg-header");
+    }
+
     window.onscroll = () => {
       if (window.scrollY > 0) {
         logo.classList.add("text-xs");
@@ -14,7 +27,16 @@ const Header = () => {
         logo.classList.remove("text-xs");
       }
     };
-  }, []);
+  }, [pathname]);
+
+  // useEffect(() => {
+  //   header.classList.remove("backdrop-blur");
+  //   header.classList.remove("bg-header");
+  //   return () => {
+  //     header.classList.add("backdrop-blur");
+  //     header.classList.add("bg-header");
+  //   };
+  // }, []);
 
   const handleMenu = () => {
     const nav = document.querySelector("#menu") as HTMLElement;
@@ -24,7 +46,7 @@ const Header = () => {
   return (
     <>
       <header
-        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50 transition-all backdrop-blur bg-header"
+        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50"
         id="header"
       >
         <div>
