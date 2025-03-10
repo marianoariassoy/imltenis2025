@@ -9,38 +9,8 @@
   --background: rgb(37, 37, 37);
 }
 
-@supports (animation-timeline: scroll()) {
-  .logo-animation {
-    animation: logo forwards;
-    animation-timeline: scroll();
-    animation-range: 0 50px;
-  }
-  .header-animation {
-    animation: stick forwards;
-    animation-timeline: scroll();
-    animation-range: 0 50px;
-  }
-}
-
-@keyframes stick {
-  from {
-    position: sticky;
-    background-color: transparent;
-    backdrop-filter: blur(0);
-  }
-  to {
-    position: sticky;
-    background-color: rgba(37, 37, 37, 0.8);
-    backdrop-filter: blur(10px);
-  }
-}
-@keyframes logo {
-  from {
-    font-size: 1rem;
-  }
-  to {
-    font-size: 0.8rem;
-  }
+.bg-header {
+  background-color: rgba(37, 37, 37, 0.8);
 }
 
 .table thead tr th {
@@ -54,7 +24,6 @@
   padding-top: 1rem;
   padding-right: 1rem;
 }
-
 .fade-in {
   animation: fade-in 0.3s ease-in-out;
 }
@@ -66,7 +35,6 @@
     opacity: 1;
   }
 }
-
 .blur-out {
   animation: blur-out 1s ease-in-out forwards;
 }
@@ -78,7 +46,6 @@
     filter: blur(5px);
   }
 }
-
 .animate-fade-in-out {
   animation: fade-in-out 0.8s infinite;
 }

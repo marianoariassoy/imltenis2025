@@ -4,21 +4,19 @@ import { menu, categories } from "../lib/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Menu = ({
-  setMenu,
-}: {
-  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
-}) => {
-  const openMenu = () => {
-    setMenu(false);
-  };
-
+const Menu = () => {
   const pathname = usePathname();
+
+  const handleMenu = () => {
+    const nav = document.querySelector("#menu") as HTMLElement;
+    nav.classList.toggle("hidden");
+  };
 
   return (
     <nav
-      className="fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center backdrop-blur-md z-50 hover:cursor-pointer"
-      onClick={openMenu}
+      className="fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
+      id="menu"
+      onClick={handleMenu}
     >
       <ul>
         {categories.map((item, index) => (
