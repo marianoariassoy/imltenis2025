@@ -14,7 +14,7 @@ const Menu = () => {
 
   return (
     <nav
-      className="fade-in fixed top-0 left-0 w-full bg-black/20 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
+      className="fade-in fixed top-0 left-0 w-full bg-black/30 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
       id="menu"
       onClick={handleMenu}
     >
