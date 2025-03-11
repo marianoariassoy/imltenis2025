@@ -5,7 +5,7 @@ interface data {
 
 const estadisticas = async ({ id }: { id: string }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/clubes/champions`
+    `${process.env.NEXT_PUBLIC_API_URL}/rankings/champions`
   );
   const data = (await response.json()) as data[];
   if (!data) return null;

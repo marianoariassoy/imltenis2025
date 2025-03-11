@@ -25,7 +25,7 @@ const page = async () => {
 
   return (
     <section className="fade-in flex flex-col gap-y-6">
-      <Title title={`Orden de juego (${data.length})`} emoji="📅" />
+      <Title title={`Orden de juego (${data.length} series)`} emoji="📅" />
 
       <div className="overflow-x-auto text-sm whitespace-nowrap">
         <table className="table w-full mb-3">

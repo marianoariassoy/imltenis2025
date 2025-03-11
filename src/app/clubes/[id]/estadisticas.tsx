@@ -13,7 +13,7 @@ interface data {
 
 const estadisticas = async ({ id }: { id: string }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/clubes/champions`
+    `${process.env.NEXT_PUBLIC_API_URL}/rankings/champions`
   );
   const data = (await response.json()) as data[];
   if (!data) return null;
@@ -25,8 +25,8 @@ const estadisticas = async ({ id }: { id: string }) => {
       stadistics[0].silver ||
       stadistics[0].supercopa ||
       stadistics[0].finals) && (
-      <div className="flex justify-center gap-x-2 text-sm p-4 lg:p-6 bg-black/10 rounded-xl">
-        <span className="text-primary mt-1 lg:mt-0">
+      <div className="flex justify-center items-center gap-x-2 text-sm p-4 lg:p-6 bg-black/10 rounded-xl">
+        <span className="text-primary">
           <Cup />
         </span>
         <span>

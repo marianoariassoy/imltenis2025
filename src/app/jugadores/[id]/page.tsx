@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Estadisticas from "./estadisticas";
 import Singles from "./singles";
 import Doubles from "./dobles";
@@ -57,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <header className="items-center flex flex-col gap-y-2">
         <div className="w-28 h-28 rounded-full overflow-hidden bg-white/10">
           {data[0].image && (
-            <Image
+            <img
               src={data[0].image}
               alt={data[0].name}
               width={112}
