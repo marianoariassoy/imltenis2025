@@ -24,6 +24,7 @@ const page = async () => {
     process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes"
   );
   const data = (await response.json()) as data[];
+  if (!data) return;
 
   const labels = [
     {
