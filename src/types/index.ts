@@ -22,6 +22,7 @@ export interface Serie {
   group_id: string;
   tournament_id: string;
   tournament_name: string;
+  top: boolean;
 }
 
 export interface Juego {
