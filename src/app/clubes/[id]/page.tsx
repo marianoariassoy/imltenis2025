@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Equipos from "./equipos";
 import { Club } from "@/types";
 import { Suspense } from "react";
@@ -57,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     <section className="fade-in flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
         <div className="w-20 h-20 rounded-full overflow-hidden">
-          <Image
+          <img
             src={data[0].image}
             alt={data[0].name}
             width={80}
