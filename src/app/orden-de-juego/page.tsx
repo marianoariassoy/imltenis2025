@@ -42,7 +42,7 @@ const page = async () => {
             {data.map((item) => (
               <tr key={item.id}>
                 <td>
-                  {item.top ? <span className="mr-1 text-xl">🥇</span> : null}
+                  {item.top ? <span className="mr-1 text-xl">⭐️</span> : null}
                   <span className="font-semibold">{item.date}</span>
                 </td>
                 <td>{item.hour}</td>
@@ -75,7 +75,7 @@ const page = async () => {
       </div>
 
       <div className="text-secondary text-center text-sm font-medium">
-        <span className="mr-1 text-xl">🥇</span>
+        <span className="mr-1 text-xl">⭐️</span>
         Serie a otorgarse el premio Jugador Destacado Yuka de la fecha.
       </div>
     </section>
