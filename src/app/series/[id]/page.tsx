@@ -16,14 +16,14 @@ export async function generateMetadata({
   if (!data) return null;
 
   return {
-    title: `${data.home_name} y ${data.away_name} del ${data.date}`,
-    description: `Resultados de la serie disputada el ${data.date} ${data.hour} de la liga de clubes IML Tenis entre ${data.home_name} y ${data.away_name}`,
+    title: `Encuentro entre ${data.home_name} y ${data.away_name} del día ${data.date}`,
+    description: `Encuentro entre ${data.home_name} y ${data.away_name} del día ${data.date} ${data.hour} de la liga de clubes IML Tenis`,
     openGraph: {
       type: "website",
       locale: "es_AR",
       url: `https://imltenis.com.ar/series/${id}`,
       title: `${data.home_name} y ${data.away_name} del ${data.date}`,
-      description: `Resultados de la serie disputada el ${data.date} ${data.hour} de la liga de clubes IML Tenis entre ${data.home_name} y ${data.away_name}`,
+      description: `Encuentro entre ${data.home_name} y ${data.away_name} del día ${data.date} ${data.hour} de la liga de clubes IML Tenis`,
       images: [
         {
           url: "/assets/imltenis.jpg",
@@ -80,7 +80,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         />
       </div>
 
-      <Juegos id={id} />
+      {data.winner > 0 ? <Juegos id={id} /> : null}
     </section>
   );
 };
