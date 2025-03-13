@@ -39,7 +39,7 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     },
     {
       title: "Formación Incompleta",
-      text: `Si el equipo completo o algún jugador no se presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 48 hs. al capitán rival por escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al equipo local, como ser alquiler de canchas. 
+      text: `Si el equipo completo o algún jugador no se presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 24 hs. al capitán rival por escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al equipo local, como ser alquiler de canchas. 
       Se podrá presentar WO tanto de single y/o de doble 2, pudiéndose disputar el resto de el o los parciales.`,
     },
     {
@@ -138,7 +138,7 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
       text: `La presente es una liga que reúne a la mayoría de clubes deportivos cuyos ingresos provienen del
       cobro por el uso de dichos espacios. Cada jugador debe abonar cuando le toca jugar ya sea de local o de
       visitante una suma fijada por la organización. Ese dinero se abona en el club donde se desarrolla la serie.
-      Aquel equipo que presente formación incompleta sin haber avisado con el mínimo de 48hs en el chat de capitanes, deberá abonar igualmente el costo completo en concepto de alquiler de cancha. Aquellos emprendimientos urbanísticos que no acostumbran a cobrar el alquiler por el uso de las canchas en razón que los propietarios la sostienen mediante el pago de las expensas, tienen el mismo derecho a cobrarlas y utilizar el dinero recaudado en las localias para afrontar el costo de su participación cuando jueguen de visitantes. Queda igualmente a criterio de los mismos el cobro a los equipos visitantes. La única manera de evitar el pago del alquiler de las canchas es avisando 48hs antes de la ausencia, en cuyo caso el club que será local tiene el tiempo suficiente de disponer de la misma para alquilarla a terceros.
+      Aquel equipo que presente formación incompleta sin haber avisado con el mínimo de 24hs en el chat de capitanes, deberá abonar igualmente el costo completo en concepto de alquiler de cancha. Aquellos emprendimientos urbanísticos que no acostumbran a cobrar el alquiler por el uso de las canchas en razón que los propietarios la sostienen mediante el pago de las expensas, tienen el mismo derecho a cobrarlas y utilizar el dinero recaudado en las localias para afrontar el costo de su participación cuando jueguen de visitantes. Queda igualmente a criterio de los mismos el cobro a los equipos visitantes. La única manera de evitar el pago del alquiler de las canchas es avisando 24hs antes de la ausencia, en cuyo caso el club que será local tiene el tiempo suficiente de disponer de la misma para alquilarla a terceros.
       El costo fijado en concepto de alquiler de cancha será actualizado periódicamente por esta organización con el fin de mantenerlo acorde a la necesidad de los clubes.`,
     },
     {
@@ -203,7 +203,7 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
     },
     {
       title: "Límite temporal de reclamos",
-      text: `Cualquier reclamo que verse sobre cualquier situación que pueda darse desde el comienzo de la competición y hasta su finalización, y que a criterio de alguna de las partes considerase que infringe este reglamento, dicho reclamo deberá ser expresado a la organización dentro de las 48horas de haberse jugado la serie en cuestión.
+      text: `Cualquier reclamo que verse sobre cualquier situación que pueda darse desde el comienzo de la competición y hasta su finalización, y que a criterio de alguna de las partes considerase que infringe este reglamento, dicho reclamo deberá ser expresado a la organización dentro de las 48 hs. de haberse jugado la serie en cuestión.
       Luego de ese tiempo y sin excepción, cualquier reclamo quedará sin efecto.`,
     },
     {
