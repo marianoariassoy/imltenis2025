@@ -49,38 +49,37 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     {
       title: "Días y Horarios",
       text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 13 y las 17 hs. y los domingos entre las 9 y las 17 hs.
-      La categoría tercera +45 jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 13 y las 17 hs. 
+      La categoría Caballeros Segunda +35, Caballeros Tercera +35 y Mixto Tercera, jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 13 y las 17 hs. 
       El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 17 hs.
 
       Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 17:00 hs. del miércoles de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`,
     },
     {
       title: "Lista de buena fe",
-      text: `Deben ser enviadas por el capitán de cada equipo a la organización antes de la fecha informada de su cierre. Pasada dicha fecha, no se podrá realizar incorporación cambio alguno.
-      El mejor jugador del equipo deberá ir primero en la lista, siguiendo este criterio para el resto de la lista, siendo el último jugador el de más bajo nivel.
-      Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que consideren correcta antes del comienzo del torneo.  En la categoría con límite de edad, tercera +45, se considerará que el jugador está dentro de la categoría, al cumplir años dentro del año calendario de inicio del torneo.`,
+      text: `El mejor jugador del equipo deberá ir primero en la lista, siguiendo este criterio para el resto de la lista, siendo el último jugador el de más bajo nivel.
+      Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que consideren correcta antes del comienzo del torneo. En las categorías con límite de edad, tercera y segunda +35, se considerará que el jugador está dentro de la categoría, al cumplir años dentro del año calendario de inicio del torneo.`,
     },
     {
       title: "Cantidad de jugadores por equipo",
-      text: `El límite de integrantes de la lista de buena fe es de 18 jugadores.`,
+      text: `El límite de integrantes de la lista de buena fe es de 20 jugadores.`,
     },
     {
       title: "Equivalencias de niveles en otros torneos",
       text: `Quinta Libre y Cuarta Damas: Jugadores categoría 125, C. 
-      Cuarta Libre, Tercera +45, 
+      Cuarta Libre, Tercera +35, 
       Tercera Damas: Jugadores categoría 250 a 500, B2, B-. 
-      Tercera Libre, Segunda Damas: Jugadores categoría 500 a 750, B1 
+      Tercera Libre: Jugadores categoría 500 a 750, B1 
       Segunda Libre: Jugadores categoría 750 a 1000, A1, A2 
       Primera Libre: Jugadores categoría 1000, Super A.
-      
-      Aquellos jugadores/as que participaron durante el torneo apertura 2024 en categoría primera o intermedia en cualquier otra liga, deben obligadamente jugar en Segunda Damas, Segunda Caballeros +35, o Segunda Libre.`,
+      `,
     },
     {
       title: "Resultados y Formación",
-      text: `Es obligatorio el envío de la planilla de
-      resultados o los resultados y formaciones al chat de capitanes de WhatsApp por parte del capitan del equipo
-      ganador en el transcurso de las 48 hs. del horario en que se haya disputado la serie, de lo contrario se
-      procedera a anular la serie.`,
+      text: `El capitán del equipo ganador será el encargado de cargar el resultado de la serie en capitanes.imltenis.com.ar antes del Martes a las 12:00 hs. de cada semana. Una vez realizada la carga, deberá compartir el enlace generado por el sistema en el grupo de WhatsApp de capitanes, indicando la serie correspondiente.  
+
+Además, será obligatorio conservar la planilla en papel firmada por ambos capitanes, ya que en caso de cualquier reclamo, hasta 48 hs. desde el inicio de la serie, esta será el único documento válido para verificar la información.  
+
+El incumplimiento de la carga por parte del capitán del equipo ganador de la serie resultará en la anulación de los puntos obtenidos por su equipo, mientras que el equipo rival mantendrá los puntos ganados en cancha. No habrá posibilidad de reclamo una vez aplicada la sanción.`,
     },
     {
       title: "Instalaciones necesarias",

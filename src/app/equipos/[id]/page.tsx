@@ -19,14 +19,14 @@ export async function generateMetadata({
   if (!data) return null;
 
   return {
-    title: data.name,
-    description: `Perfil del equipo ${data.name} de la liga de clubes IML Tenis`,
+    title: data.name + " " + data.tournament_name,
+    description: `Perfil del equipo ${data.name} ${data.tournament_name} de la liga de clubes IML Tenis`,
     openGraph: {
       type: "website",
       locale: "es_AR",
       url: `https://imltenis.com.ar/equipos/${id}`,
       title: data.name,
-      description: `Perfil del equipo ${data.name} de la liga de clubes IML Tenis`,
+      description: `Perfil del equipo ${data.name} ${data.tournament_name} de la liga de clubes IML Tenis`,
       images: [
         {
           url: data.image,
