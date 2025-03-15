@@ -16,13 +16,13 @@ export async function generateMetadata({
   if (!data) return null;
 
   return {
-    title: `Encuentro entre ${data.home_name} y ${data.away_name} del día ${data.date}`,
+    title: `${data.home_name} y ${data.away_name} ${data.date} ${data.hour}`,
     description: `Encuentro entre ${data.home_name} y ${data.away_name} del día ${data.date} ${data.hour} de la liga de clubes IML Tenis`,
     openGraph: {
       type: "website",
       locale: "es_AR",
       url: `https://imltenis.com.ar/series/${id}`,
-      title: `${data.home_name} y ${data.away_name} del ${data.date}`,
+      title: `${data.home_name} y ${data.away_name} ${data.date} {data.hour}`,
       description: `Encuentro entre ${data.home_name} y ${data.away_name} del día ${data.date} ${data.hour} de la liga de clubes IML Tenis`,
       images: [
         {
