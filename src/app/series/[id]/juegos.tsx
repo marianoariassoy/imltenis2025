@@ -38,7 +38,11 @@ const Juegos = async ({ id }: { id: string }) => {
                   >
                     {item.playerhome2_name}
                   </Link>
-                  <span> vs </span>
+                  {item.playerhome2_id > 0 ? (
+                    <span> vs </span>
+                  ) : (
+                    <span>Sin disputar</span>
+                  )}
                   <Link
                     href={`/jugadores/${item.playeraway1_id}`}
                     className="text-primary hover:underline font-semibold"
