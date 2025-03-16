@@ -38,7 +38,7 @@ const Juegos = async ({ id }: { id: string }) => {
                   >
                     {item.playerhome2_name}
                   </Link>
-                  {item.playerhome2_id > 0 ? (
+                  {item.playerhome1_id > 0 ? (
                     <span> vs </span>
                   ) : (
                     <span>Sin disputar</span>
