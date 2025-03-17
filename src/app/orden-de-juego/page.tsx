@@ -10,7 +10,10 @@ export const metadata = {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/series/upcoming"
+    process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
+    {
+      cache: "no-store",
+    }
   );
   const data = (await response.json()) as Serie[];
   if (!data)

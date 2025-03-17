@@ -21,7 +21,10 @@ interface data {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes"
+    process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes",
+    {
+      cache: "no-store",
+    }
   );
   const data = (await response.json()) as data[];
   if (!data) return;
@@ -60,7 +63,7 @@ const page = async () => {
           </thead>
           <tbody>
             {data
-              .filter((item) => item.matches_won > 0)
+              .filter((item) => +item.matches_won > 0)
               .map((item, index) => (
                 <tr
                   key={item.id}

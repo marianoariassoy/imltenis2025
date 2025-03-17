@@ -20,7 +20,10 @@ interface data {
 
 const table = async ({ category }: { category: string }) => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/rankings/players"
+    process.env.NEXT_PUBLIC_API_URL + "/rankings/players",
+    {
+      cache: "no-store",
+    }
   );
   const data = (await response.json()) as data[];
   if (!data) return null;
