@@ -91,15 +91,15 @@ const Tabla = async ({ group, type }: { group: Group; type: number }) => {
                         )}
                       </span>
                     ))}
-                    {item.series.length === 0 ? (
-                      <span className="text-white/30 flex gap-x-2">
-                        <Bull />
-                        <Bull />
-                        <Bull />
-                        <Bull />
-                        <Bull />
-                      </span>
-                    ) : null}
+                    {Array(5 - item.series.length)
+                      .fill(0)
+                      .map((_, index) => (
+                        <span key={index}>
+                          <span className="text-white/10">
+                            <Bull />
+                          </span>
+                        </span>
+                      ))}
                   </div>
                 </td>
               </tr>
