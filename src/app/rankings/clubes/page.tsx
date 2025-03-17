@@ -59,21 +59,26 @@ const page = async () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, index) => (
-              <tr key={item.id} className={`${index === 0 && "text-primary"}`}>
-                <td>
-                  <Item
-                    num={index + 1}
-                    image={item.image}
-                    title={item.name}
-                    link={`/clubes/${item.id}`}
-                  />
-                </td>
-                <td className="font-bold">{item.matches_won}</td>
-                <td>{item.series_won}</td>
-                <td>{item.series_total}</td>
-              </tr>
-            ))}
+            {data
+              .filter((item) => item.matches_won > 0)
+              .map((item, index) => (
+                <tr
+                  key={item.id}
+                  className={`${index === 0 && "text-primary"}`}
+                >
+                  <td>
+                    <Item
+                      num={index + 1}
+                      image={item.image}
+                      title={item.name}
+                      link={`/clubes/${item.id}`}
+                    />
+                  </td>
+                  <td className="font-bold">{item.matches_won}</td>
+                  <td>{item.series_won}</td>
+                  <td>{item.series_total}</td>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
