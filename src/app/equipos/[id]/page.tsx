@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { WhatsApp, Info } from "@/lib/icons";
 import Jugadores from "./jugadores";
@@ -58,7 +57,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <header className="items-center flex flex-col gap-y-2">
         <Link href={`/clubes/${data.club_id}`}>
           <div className="w-20 h-20 rounded-full overflow-hidden">
-            <Image
+            <img
               src={data.image}
               alt={data.name}
               width={80}

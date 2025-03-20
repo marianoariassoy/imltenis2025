@@ -29,15 +29,6 @@ const Header = () => {
     };
   }, [pathname]);
 
-  // useEffect(() => {
-  //   header.classList.remove("backdrop-blur");
-  //   header.classList.remove("bg-header");
-  //   return () => {
-  //     header.classList.add("backdrop-blur");
-  //     header.classList.add("bg-header");
-  //   };
-  // }, []);
-
   const handleMenu = () => {
     const nav = document.querySelector("#menu") as HTMLElement;
     nav.classList.toggle("hidden");
