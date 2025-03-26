@@ -4,6 +4,7 @@ import Jugadores from "./jugadores";
 import Fixture from "./fixtures";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
+import Image from "next/image";
 
 export async function generateMetadata({
   params,
@@ -57,7 +58,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <header className="items-center flex flex-col gap-y-2">
         <Link href={`/clubes/${data.club_id}`}>
           <div className="w-20 h-20 rounded-full overflow-hidden">
-            <img
+            <Image
               src={data.image}
               alt={data.name}
               width={80}

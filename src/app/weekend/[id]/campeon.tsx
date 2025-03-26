@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Confetti from "@/components/confetti";
+import Image from "next/image";
 
 const Champion = async ({ id }: { id: string }) => {
   const response = await fetch(
@@ -15,7 +16,7 @@ const Champion = async ({ id }: { id: string }) => {
       <div className="flex gap-4">
         <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10">
           {data.player1_image ? (
-            <img
+            <Image
               src={data.player1_image}
               alt={data.player1_name}
               width={64}
@@ -26,7 +27,7 @@ const Champion = async ({ id }: { id: string }) => {
         </div>
         <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10">
           {data.player2_image ? (
-            <img
+            <Image
               src={data.player2_image}
               alt={data.player2_name}
               width={64}
