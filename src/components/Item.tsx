@@ -1,5 +1,5 @@
 import Link from "next/link";
-// import Image from "next/image";
+import Image from "next/image";
 
 interface Item {
   num?: number;
@@ -16,7 +16,7 @@ const TitleRow = ({ num, image, title, link }: Item) => {
       <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10">
         {image ? (
           <Link href={link}>
-            <img
+            <Image
               src={image}
               alt={title}
               width={56}
