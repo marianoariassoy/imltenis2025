@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 interface Item {
   link: string;
@@ -9,10 +10,10 @@ interface Item {
 
 const TeamItem = ({ link, title, subtitle, image }: Item) => {
   return (
-    <div className="flex flex-col gap-y-3 items-center w-32">
+    <div className="flex flex-col gap-y-3 items-center w-24">
       <Link href={link} className="hover:opacity-70 transition-opacity">
         <div className="w-20 h-20 rounded-full overflow-hidden">
-          <img
+          <Image
             src={image}
             width="80"
             height="80"

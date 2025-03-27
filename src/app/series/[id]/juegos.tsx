@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Juego } from "../../../types";
+import { Juego } from "@/types";
+import Item from "@/components/ItemExtraSmall";
 
 const Juegos = async ({ id }: { id: string }) => {
   const response = await fetch(
@@ -24,38 +25,74 @@ const Juegos = async ({ id }: { id: string }) => {
           <tbody>
             {data.map((item) => (
               <tr key={item.id}>
-                <td className="">
-                  <Link
-                    href={`/jugadores/${item.playerhome1_id}`}
-                    className="text-primary hover:underline font-semibold"
-                  >
-                    {item.playerhome1_name}
-                  </Link>
-                  {item.playerhome2_id > 0 && <span> y </span>}
-                  <Link
-                    href={`/jugadores/${item.playerhome2_id}`}
-                    className="text-primary hover:underline font-semibold"
-                  >
-                    {item.playerhome2_name}
-                  </Link>
+                <td className="flex items-center gap-x-2">
+                  <span className="flex items-center gap-x-2">
+                    <Item
+                      title={item.playerhome1_name}
+                      image={item.playerhome1_image}
+                    />
+                    <Link
+                      href={`/jugadores/${item.playerhome1_id}`}
+                      className="text-primary hover:underline font-semibold"
+                    >
+                      {item.playerhome1_name}
+                    </Link>
+                  </span>
+
+                  {item.playerhome2_id > 0 && (
+                    <>
+                      {/* <span>y</span> */}
+                      <span className="flex items-center gap-x-2">
+                        <Item
+                          title={item.playerhome2_name}
+                          image={item.playerhome2_image}
+                        />
+                        <Link
+                          href={`/jugadores/${item.playerhome2_id}`}
+                          className="text-primary hover:underline font-semibold"
+                        >
+                          {item.playerhome2_name}
+                        </Link>
+                      </span>
+                    </>
+                  )}
+
                   {item.playerhome1_id > 0 ? (
                     <span> vs </span>
                   ) : (
                     <span>Sin disputar</span>
                   )}
-                  <Link
-                    href={`/jugadores/${item.playeraway1_id}`}
-                    className="text-primary hover:underline font-semibold"
-                  >
-                    {item.playeraway1_name}
-                  </Link>
-                  {item.playeraway2_id > 0 && <span> y </span>}
-                  <Link
-                    href={`/jugadores/${item.playeraway2_id}`}
-                    className="text-primary hover:underline font-semibold"
-                  >
-                    {item.playeraway2_name}
-                  </Link>
+
+                  <span className="flex items-center gap-x-2">
+                    <Item
+                      title={item.playeraway1_name}
+                      image={item.playeraway1_image}
+                    />
+                    <Link
+                      href={`/jugadores/${item.playeraway1_id}`}
+                      className="text-primary hover:underline font-semibold"
+                    >
+                      {item.playeraway1_name}
+                    </Link>
+                  </span>
+
+                  {item.playeraway2_id > 0 && (
+                    <>
+                      {/* <span>y</span> */}
+                      <span className="flex items-center gap-x-2">
+                        <Item
+                          title={item.playeraway2_name}
+                          image={item.playeraway2_image}
+                        />
+                        <Link
+                          href={`/jugadores/${item.playeraway2_id}`}
+                          className="text-primary hover:underline font-semibold"
+                        >
+                          {item.playeraway2_name}
+                        </Link>
+                      </span>
+                    </>
+                  )}
                 </td>
                 <td>{item.type}</td>
                 <td>{item.score}</td>
