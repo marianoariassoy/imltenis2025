@@ -26,18 +26,20 @@ const Juegos = async ({ id }: { id: string }) => {
             {data.map((item) => (
               <tr key={item.id}>
                 <td className="flex items-center gap-x-2">
-                  <span className="flex items-center gap-x-2">
-                    <Item
-                      title={item.playerhome1_name}
-                      image={item.playerhome1_image}
-                    />
-                    <Link
-                      href={`/jugadores/${item.playerhome1_id}`}
-                      className="text-primary hover:underline font-semibold"
-                    >
-                      {item.playerhome1_name}
-                    </Link>
-                  </span>
+                  {item.playerhome1_id > 0 && (
+                    <span className="flex items-center gap-x-2">
+                      <Item
+                        title={item.playerhome1_name}
+                        image={item.playerhome1_image}
+                      />
+                      <Link
+                        href={`/jugadores/${item.playerhome1_id}`}
+                        className="text-primary hover:underline font-semibold"
+                      >
+                        {item.playerhome1_name}
+                      </Link>
+                    </span>
+                  )}
 
                   {item.playerhome2_id > 0 && (
                     <>
@@ -63,18 +65,20 @@ const Juegos = async ({ id }: { id: string }) => {
                     <span>Sin disputar</span>
                   )}
 
-                  <span className="flex items-center gap-x-2">
-                    <Item
-                      title={item.playeraway1_name}
-                      image={item.playeraway1_image}
-                    />
-                    <Link
-                      href={`/jugadores/${item.playeraway1_id}`}
-                      className="text-primary hover:underline font-semibold"
-                    >
-                      {item.playeraway1_name}
-                    </Link>
-                  </span>
+                  {item.playeraway1_id > 0 && (
+                    <span className="flex items-center gap-x-2">
+                      <Item
+                        title={item.playeraway1_name}
+                        image={item.playeraway1_image}
+                      />
+                      <Link
+                        href={`/jugadores/${item.playeraway1_id}`}
+                        className="text-primary hover:underline font-semibold"
+                      >
+                        {item.playeraway1_name}
+                      </Link>
+                    </span>
+                  )}
 
                   {item.playeraway2_id > 0 && (
                     <>

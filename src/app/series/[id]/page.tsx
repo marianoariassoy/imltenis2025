@@ -29,7 +29,7 @@ export async function generateMetadata({
           url: "/assets/imltenis.jpg",
           width: 500,
           height: 500,
-          alt: "IML Tenis Liga de clubes de Buenos Aires",
+          alt: "Logo IML Tenis",
         },
       ],
     },
