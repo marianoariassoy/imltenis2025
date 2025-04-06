@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.imltenis.com.ar/</loc>
+    <lastmod>2025-04-06</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://imltenis.com.ar/rankings/jugadores/damas-tercera</loc>
+    <lastmod>2025-04-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imltenis.com.ar/rankings/clubes</loc>
+    <lastmod>2025-04-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imltenis.com.ar/rankings/campeones</loc>
+    <lastmod>2025-04-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.imltenis.com.ar/reglamento</loc>
+    <lastmod>2025-04-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.imltenis.com.ar/jugadores</loc>
+    <lastmod>2025-04-06</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://imltenis.com.ar/torneos-anteriores</loc>
+    <lastmod>2025-04-06</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <!-- Agrega aquí el resto de las URLs de tu sitio -->
+</urlset>
