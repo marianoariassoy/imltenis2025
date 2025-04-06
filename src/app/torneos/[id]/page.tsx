@@ -1,6 +1,7 @@
 import Title from "@/components/Title";
 import Campeon from "./campeon";
 import Groups from "./groups";
+import Fixture from "./fixture";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 
@@ -59,6 +60,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
       <Suspense fallback={<Loader />}>
         <Groups id_tournament={id} />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <Fixture title={true} id_tournament={id} />
       </Suspense>
     </section>
   );

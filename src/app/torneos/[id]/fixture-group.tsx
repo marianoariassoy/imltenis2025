@@ -2,14 +2,14 @@ import { Serie } from "@/types";
 import Fixture from "@/components/Fixture";
 
 const fixture = async ({
-  id_tournament,
+  id_group,
   title,
 }: {
-  id_tournament: string;
+  id_group: string;
   title: boolean;
 }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournament/${id_tournament}/series`
+    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/groups/${id_group}/series`
   );
   const data = (await response.json()) as Serie[];
   if (!data) return null;

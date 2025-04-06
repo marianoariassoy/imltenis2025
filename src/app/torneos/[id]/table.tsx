@@ -1,10 +1,21 @@
-import Labels from "@/components/Labels";
 import Item from "@/components/Item";
 import { Bull } from "@/lib/icons";
 import { Group, Table } from "@/types";
-import Info from "./info";
 
-const Tabla = async ({ group, type }: { group: Group; type: number }) => {
+interface Labels {
+  name: string;
+  value: string;
+}
+
+const Tabla = async ({
+  group,
+  type,
+  labels,
+}: {
+  group: Group;
+  type: number;
+  labels: Labels[];
+}) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/${
       type === 3 ? "groups-stage2" : "groups"
@@ -12,37 +23,6 @@ const Tabla = async ({ group, type }: { group: Group; type: number }) => {
   );
   const data = (await response.json()) as Table[];
   if (!data) return null;
-
-  const labels = [
-    {
-      name: "Equipo",
-      value: "",
-    },
-    {
-      name: "Pts.",
-      value: "Puntos (parciales)",
-    },
-    {
-      name: "SG",
-      value: "Series ganadas",
-    },
-    {
-      name: "DS",
-      value: "Diferencia de sets",
-    },
-    {
-      name: "DG",
-      value: "Diferencia de games",
-    },
-    {
-      name: "SJ",
-      value: "Series jugadas",
-    },
-    {
-      name: "Ult. 5 series",
-      value: "",
-    },
-  ];
 
   return (
     <section className="flex flex-col gap-y-3 text-sm">
@@ -107,12 +87,6 @@ const Tabla = async ({ group, type }: { group: Group; type: number }) => {
           </tbody>
         </table>
       </div>
-
-      <Labels labels={labels} />
-
-      {group.tournament_description && (
-        <Info text={group.tournament_description} />
-      )}
     </section>
   );
 };
