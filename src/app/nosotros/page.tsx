@@ -12,7 +12,9 @@ const page = () => {
       <div className="flex flex-col gap-y-6 px-6 text-center max-w-2xl mx-auto">
         <div>
           IML Tenis nació en marzo de 2023 con la misión de crear un espacio
-          competitivo, accesible y apasionante para el tenis.
+          competitivo, accesible y apasionante para los clubes de tenis. Hoy
+          contamos con más de 120 equipos de diferentes clubes y más de 2500
+          jugadores compitiendo en 11 categorías.
         </div>
         <div className="[&>span]:font-bold [&>span]:text-primary">
           <span>Director:</span> Luis Armando Pujol <br />
@@ -50,9 +52,7 @@ const page = () => {
             Nicolas Barraza
           </a>
           <br />
-        </div>
-        <div className="[&>span]:font-bold [&>span]:text-primary ">
-          <span>IML Juniors:</span> Marcos Velazquez
+          <span>IML Weekend: </span> Marcos Velazquez
         </div>
       </div>
     </section>
