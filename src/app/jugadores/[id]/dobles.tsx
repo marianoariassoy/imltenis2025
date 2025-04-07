@@ -31,7 +31,7 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
   ];
 
   return (
-    <section className="fade-in flex flex-col gap-y-3">
+    <section className="flex flex-col gap-y-3">
       <h1 className="text-center text-sm text-primary font-semibold">
         Dobles disputados
       </h1>

@@ -51,7 +51,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <header className="flex flex-col items-center">
         <Title title={`${data.date} ${data.hour}`} />
         <Link
@@ -62,14 +62,14 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </Link>
       </header>
 
-      <div className="flex justify-center items-start gap-x-4 text-center">
+      <div className="flex justify-center items-start gap-x-4 text-center max-w-xs mx-auto ">
         <Item
           link={`/equipos/${data.home_id}`}
           title={data.home_name}
           image={data.home_image}
           subtitle="Local"
         />
-        <div className="flex items-center justify-center font-semibold text-2xl pt-8 text-primary">
+        <div className="flex w-16 items-center justify-center font-semibold text-3xl pt-8 text-primary">
           {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>}
         </div>
         <Item

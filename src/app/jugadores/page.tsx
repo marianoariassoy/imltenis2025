@@ -10,7 +10,7 @@ const Page = async () => {
   const data = await response.json();
 
   return (
-    <section className="fade-in flex flex-col gap-y-6 max-w-md mx-auto">
+    <section className="flex flex-col gap-y-6 max-w-md mx-auto">
       <Title title="Jugadores" emoji="🧑👩" />
       <Filter data={data} />
     </section>

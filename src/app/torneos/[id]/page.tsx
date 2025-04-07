@@ -53,7 +53,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <Title title={data[0].name + " " + data[0].season} emoji="🏆" />
 
       {data[0].team_champion_id && <Campeon data={data[0]} />}

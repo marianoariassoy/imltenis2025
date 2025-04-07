@@ -19,7 +19,7 @@ const page = async () => {
   const data = (await response.json()) as Props[];
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <Title title="IML Weekend" emoji="🏆" />
 
       <div className="flex flex-col gap-y-3 items-center text-sm">

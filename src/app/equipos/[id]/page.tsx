@@ -54,7 +54,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
         <Link href={`/clubes/${data.club_id}`}>
           <div className="w-20 h-20 rounded-full overflow-hidden">

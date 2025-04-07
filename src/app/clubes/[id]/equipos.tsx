@@ -42,7 +42,7 @@ const Equipos = async ({ id }: { id: string }) => {
   ];
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <h1 className="font-semibold text-primary text-center">
         Equipos ({data.length})
       </h1>

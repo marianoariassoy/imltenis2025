@@ -16,7 +16,7 @@ export const metadata = {
         url: "/assets/imltenis.jpg",
         width: 500,
         height: 500,
-        alt: "IML Tenis Liga de clubes de Buenos Aires",
+        alt: "IML Tenis",
       },
     ],
   },
@@ -63,7 +63,7 @@ const page = async () => {
   ];
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <Title title="Ranking de Campeones" emoji="👑" />
 
       <div className="w-full overflow-x-auto text-sm">

@@ -10,13 +10,13 @@ const Juegos = async ({ id }: { id: string }) => {
   if (!data) return null;
 
   return (
-    <section className="fade-in">
+    <section>
       <div className="overflow-x-auto text-sm whitespace-nowrap">
         <table className="table w-full mb-3">
           <thead>
             <tr>
               <th>Enfrentamientos</th>
-              <th>Partido</th>
+              <th>Parciales</th>
               <th>Score</th>
               <th>L/V</th>
               <th>Estado</th>
@@ -43,7 +43,6 @@ const Juegos = async ({ id }: { id: string }) => {
 
                   {item.playerhome2_id > 0 && (
                     <>
-                      {/* <span>y</span> */}
                       <span className="flex items-center gap-x-2">
                         <Item
                           title={item.playerhome2_name}
@@ -82,7 +81,6 @@ const Juegos = async ({ id }: { id: string }) => {
 
                   {item.playeraway2_id > 0 && (
                     <>
-                      {/* <span>y</span> */}
                       <span className="flex items-center gap-x-2">
                         <Item
                           title={item.playeraway2_name}
@@ -101,7 +99,7 @@ const Juegos = async ({ id }: { id: string }) => {
                 <td>{item.type}</td>
                 <td>{item.score}</td>
                 <td>
-                  <div className="h-8 w-8 rounded-full flex justify-center items-center border border-primary text-primary">
+                  <div className="h-8 w-8 rounded-full flex justify-center items-center border border-primary text-primary font-semibold">
                     {item.result}
                   </div>
                 </td>

@@ -53,7 +53,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
         <div className="w-28 h-28 rounded-full overflow-hidden bg-white/10">
           {data[0].image && (

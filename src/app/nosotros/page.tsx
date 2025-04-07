@@ -6,7 +6,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className="fade-in flex flex-col gap-y-3 text-sm">
+    <section className="flex flex-col gap-y-3 text-sm">
       <Title title="¡Hola!" emoji="👋" />
 
       <div className="flex flex-col gap-y-6 px-6 text-center max-w-2xl mx-auto">

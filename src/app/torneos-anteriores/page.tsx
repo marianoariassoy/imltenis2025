@@ -13,7 +13,7 @@ const page = async () => {
   const data = (await response.json()) as Tournament[];
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <Title title="Torneos Anteriores" emoji="👴" />
 
       <div className="flex flex-col gap-y-1 items-center font-medium text-sm">

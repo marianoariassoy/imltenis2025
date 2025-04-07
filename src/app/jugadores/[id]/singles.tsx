@@ -28,7 +28,7 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
   ];
 
   return (
-    <section className="fade-in flex flex-col gap-y-3">
+    <section className="flex flex-col gap-y-3">
       <h1 className="text-center text-sm font-semibold text-primary">
         Singles disputados
       </h1>

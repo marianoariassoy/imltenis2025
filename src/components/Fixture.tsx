@@ -5,7 +5,7 @@ import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       {title && (
         <div>
           <h1 className="italic font-black text-primary text-center text-xl">

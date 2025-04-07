@@ -5,7 +5,22 @@ import { Info } from "@/lib/icons";
 
 export const metadata = {
   title: "Ranking de Clubes",
-  description: "Ranking de clubes de la liga de clubes IML Tenis",
+  description: "Ranking de Clubes de la liga de clubes IML Tenis",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://imltenis.com.ar/rankings/clubes",
+    title: "Ranking de Clubes",
+    description: "Ranking de Clubes de la liga de clubes IML Tenis",
+    images: [
+      {
+        url: "/assets/imltenis.jpg",
+        width: 500,
+        height: 500,
+        alt: "IML Tenis",
+      },
+    ],
+  },
 };
 
 interface data {
@@ -49,7 +64,7 @@ const page = async () => {
   ];
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <Title title="Ranking de Clubes 2025" emoji="🥇" />
 
       <div className="overflow-x-auto text-sm">
@@ -94,7 +109,7 @@ const page = async () => {
         </span>
         <span className="text-secondary whitespace-break-spaces">
           Al final de la temporada anual los 4 clubes mejor ubicados disputarán
-          los playoffs finales.
+          las super finales.
         </span>
       </div>
     </section>

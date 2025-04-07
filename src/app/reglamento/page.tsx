@@ -215,7 +215,7 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
   ];
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-6">
       <Title title="Reglamento IML Tenis" emoji="🤝" description="" />
 
       <Filter data={data} />
