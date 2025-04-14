@@ -29,15 +29,15 @@ const footer = () => {
   ];
 
   return (
-    <footer className="flex flex-col px-4 py-2 pb-4">
-      <div className="gap-x-8 flex items-center justify-center flex-wrap text-secondary text-sm lg:text-base">
+    <footer className="flex flex-col px-4 py-2 pb-4 mt-3">
+      <div className="gap-x-8 flex items-center justify-center flex-wrap  text-sm lg:text-base">
         {sponsors.map((logo, index) => (
           <div key={index} className="flex justify-center">
             <a
               href={logo.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-foreground"
+              className="hover:text-primary"
               aria-label={logo.alt}
             >
               {logo.image}
@@ -45,7 +45,7 @@ const footer = () => {
           </div>
         ))}
       </div>
-      <div className="text-center flex flex-col text-secondary text-sm">
+      <div className="text-center flex flex-col text-sm">
         <span className="font-bold">Liga de clubes IML Tenis</span>
 
         <div className="flex items-center flex-wrap justify-center gap-x-1 pb-2">

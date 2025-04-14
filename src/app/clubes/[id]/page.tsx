@@ -56,12 +56,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
-        <div className="w-20 h-20 rounded-full overflow-hidden">
+        <div className="w-28 h-28 rounded-full overflow-hidden shadow-lg">
           <Image
             src={data[0].image}
             alt={data[0].name}
-            width={80}
-            height={80}
+            width={112}
+            height={112}
             className="object-cover h-full w-full"
           />
         </div>

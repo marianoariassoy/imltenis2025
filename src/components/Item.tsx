@@ -6,21 +6,26 @@ interface Item {
   image: string;
   title: string;
   link: string;
+  active: boolean;
 }
 
-const TitleRow = ({ num, image, title, link }: Item) => {
+const TitleRow = ({ num, image, title, link, active }: Item) => {
   return (
     <div className="flex items-center gap-x-3 text-sm">
-      {num && <div className="font-semibold">{num}</div>}
+      {num && (
+        <div className={`font-semibold ${active ? "text-primary" : ""}`}>
+          {num}
+        </div>
+      )}
 
-      <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10">
+      <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10 dark:bg-black/10 shadow">
         {image ? (
           <Link href={link}>
             <Image
               src={image}
               alt={title}
-              width={56}
-              height={56}
+              width={64}
+              height={64}
               className="w-full h-full object-cover hover:opacity-70 transition-opacity"
             />
           </Link>

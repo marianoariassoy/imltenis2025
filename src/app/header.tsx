@@ -4,6 +4,7 @@ import { Logo, Instagram, Menu } from "@/lib/icons";
 import Link from "next/link";
 import Nav from "./nav";
 import { usePathname } from "next/navigation";
+import Theme from "./theme";
 
 const Header = () => {
   const pathname = usePathname();
@@ -14,10 +15,8 @@ const Header = () => {
 
     if (pathname === "/") {
       header.classList.remove("backdrop-blur");
-      header.classList.remove("bg-header");
     } else {
       header.classList.add("backdrop-blur");
-      header.classList.add("bg-header");
     }
 
     window.onscroll = () => {
@@ -37,10 +36,10 @@ const Header = () => {
   return (
     <>
       <header
-        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50"
+        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50 mb-2"
         id="header"
       >
-        <div>
+        <div className="flex-1">
           <button
             className="hover:text-primary"
             onClick={handleMenu}
@@ -49,12 +48,14 @@ const Header = () => {
             <Menu />
           </button>
         </div>
-        <div className="flex-1 flex justify-center text-primary logo-main transition-all">
+        <div className=" flex justify-center text-primary logo-main transition-all">
           <Link href="/" aria-label="Logo">
             <Logo />
           </Link>
         </div>
-        <div>
+        <div className="flex items-center justify-end gap-x-4 flex-1">
+          <Theme />
+
           <a
             href="https://www.instagram.com/imltenis/"
             target="_blank"

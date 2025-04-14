@@ -7,7 +7,7 @@ interface Item {
 
 const TitleRow = ({ image, title }: Item) => {
   return (
-    <div className="w-8 h-8 rounded-full overflow-hidden bg-white/10">
+    <div className="w-8 h-8 rounded-full overflow-hidden bg-white/10 shadow">
       {image ? (
         <Image
           src={image}

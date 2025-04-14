@@ -18,14 +18,14 @@ export default function Home() {
           Yuka <span className="block lg:inline">2025</span>
         </span>
       </h1>
-      <div className="blur-out fixed h-screen w-screen left-0 top-0 -z-10">
+      <div className="fade-in blur-sm fixed h-screen w-screen left-0 top-0 -z-10">
         <video
           autoPlay
           loop
           muted
           playsInline
           preload="auto"
-          className="opacity-40 h-full w-full object-cover"
+          className="opacity-50 h-full w-full object-cover"
         >
           <source src="/videos/video.webm" type="video/webm" />
           <source src="/videos/video.mp4" type="video/mp4" />

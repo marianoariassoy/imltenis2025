@@ -9,10 +9,6 @@
   --background: rgb(37, 37, 37);
 }
 
-.bg-header {
-  background-color: rgba(37, 37, 37, 0.8);
-}
-
 .table thead tr th {
   text-align: left;
   color: var(--secondary);

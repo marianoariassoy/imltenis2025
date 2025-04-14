@@ -28,7 +28,7 @@ export const categories = [
 ];
 
 export const menu = [
-  { name: "Ranking Jugadores", url: "/rankings/jugadores/damas-tercera" },
+  { name: "Ranking de Jugadores", url: "/rankings/jugadores/damas-tercera" },
   { name: "Ranking de Clubes", url: "/rankings/clubes" },
   { name: "Ranking de Campeones", url: "/rankings/campeones" },
   { name: "Orden de juego", url: "/orden-de-juego" },

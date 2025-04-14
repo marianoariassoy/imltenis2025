@@ -14,7 +14,7 @@ const Menu = () => {
 
   return (
     <nav
-      className="fade-in fixed top-0 left-0 w-full bg-black/30 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
+      className="fade-in fixed top-0 left-0 w-full bg-black/40 dark:bg-white/60 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
       id="menu"
       onClick={handleMenu}
     >
@@ -40,7 +40,7 @@ const Menu = () => {
               className={
                 pathname === item.url
                   ? "text-primary"
-                  : "hover:underline text-white/70"
+                  : "hover:underline text-white/70 dark:text-black/70"
               }
             >
               {item.name}

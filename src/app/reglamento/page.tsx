@@ -82,11 +82,12 @@ Además, será obligatorio conservar la planilla en papel firmada por ambos capi
 El incumplimiento de la carga por parte del capitán del equipo ganador de la serie resultará en la anulación de los puntos obtenidos por su equipo, mientras que el equipo rival mantendrá los puntos ganados en cancha. No habrá posibilidad de reclamo una vez aplicada la sanción.`,
     },
     {
-      title: "Instalaciones necesarias",
-      text: `El club deberá poder ofrecer para jugar un partido completo un mínimo de 2 canchas reglamentarias de tenis, vestuarios con comodidades suficientes.
-      Dichas canchas deberán ser de un mismo tipo de superficie, las que serán previamente aprobadas por esta asociación. 
-      Los 3 encuentros deberán disputarse en el mismo horario, con excepción de clubes con 2 canchas, ver apartado`,
+      title: "Retiro",
+      text: `En caso de que un partido se viera interrumpido por el retiro de uno de los jugadores, el resultado se complementará a favor del ganador con todos los games que correspondan para llegar al resultado final 
+Ejemplo Si al momento de la interrupción el resultado parcial es 63 21, el resultado final será 63 61
+Este último resultado es el que se deberá tomarse en cuenta en la confección de un desempate por porcentajes de set o games.`,
     },
+
     {
       title: "Tercer tiempo",
       text: `Queda a voluntad del equipo local. Por parte de la organización recomendamos en lo posible llevarlo a cabo compartiendo los gastos del mismo, de esta manera fomentando la camaraderia entre los jugadores y equipos.`,
@@ -95,6 +96,10 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
       title: "Coaching",
       text: `Los capitanes pueden intercambiar pareceres, comentarios
       y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el capitán no estuviere dentro de la cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún jugador rival. Cuando el capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función de coaching en otra persona. Y responderá en todo por ella.`,
+    },
+    {
+      title: "Capitanía",
+      text: ` La organización se reserva el derecho a solicitar cambio de capitanía en caso de considerarlo necesario o bien de solicitar la incorporación de un subcapitan al chat de capitanes en reemplazo del capitán, a efectos de facilitar la comunicación y gestionar de manera más diligente las cuestiones administrativas referentes a la organización de cada serie a desarrollarse. Este sub capitán/a deberá ser un jugador/a integrante del plantel.`,
     },
     {
       title: "Feriados largos",
@@ -142,6 +147,27 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
       El costo fijado en concepto de alquiler de cancha será actualizado periódicamente por esta organización con el fin de mantenerlo acorde a la necesidad de los clubes.`,
     },
     {
+      title: "Instalaciones necesarias",
+      text: `El club deberá poder ofrecer para jugar un partido completo un mínimo de 2 canchas reglamentarias de tenis, vestuarios con comodidades suficientes.
+      Dichas canchas deberán ser de un mismo tipo de superficie, las que serán previamente aprobadas por esta asociación. 
+      Los 3 encuentros deberán disputarse en el mismo horario, con excepción de clubes con 2 canchas, ver apartado`,
+    },
+    {
+      title: "Clubes con 2 canchas",
+      text: `En caso de disputarse una serie en un club con  dos canchas, cada jugador solo podrá disputar un encuentro en una misma serie. La serie se desarrollará en dos tandas que deben jugarse una a continuación de la otra, sin excepcion. La segunda tanda deberá comenzar no despues de las 17hs.
+
+      Siempre debe programarse la serie evitando disputar en primer turno el doble 2 sin estar acompañado del doble 1, de esta manera evitando posibles WO de doble 1 de ultimo momento, que de esa manera anularía la serie. `,
+    },
+    {
+      title: "Excepciones a la programación",
+      text: `Cuando por coincidencia de fechas con
+      la realización del circuito de tenis algún club tenga compromisos asumidos con anterioridad, podrá solicitar a  esta asociación, a considerar, la no programación de partidos, la misma deberá ser presentada con anterioridad a  la realización de la programación oficial e indicará fechas ciertas de los compromisos asumidos.
+      Esta posibilidad solo podrá ser concedida por una vez, por torneo, y de manera excepcional. 
+      Se hace saber que NO  es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. 
+      En caso que algún club no haya hecho uso de dicha posibilidad dentro de un campeonato, pero que la organización encuentre dificultades para otorgarles dicha excepción habida cuenta de retrasos que complican el normal  desarrollo del torneo, la organización podrá negar dicha posibilidad mediante una simple notificación por razones organizativas, la cual será inapelable.`,
+    },
+
+    {
       title: "Auditoria de lista de buena fe rivales",
       text: `Cada capitán podrá objetar la ubicación de algún jugador rival en la lista de algún equipo rival. Para tal fin deberá informarlo por mail a hola@imltenis.com.ar, mencionando equipo, ubicación objetada, motivos y ubicación que considera correcta. No se tomarán reclamos por teléfono o WhatsApp. Tal objeción, será tomada de forma anónima.`,
     },
@@ -153,20 +179,7 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
       title: "Dos o más equipos por división",
       text: `Cuando un club tenga dos o más equipos en la misma categoría, éstos se considerarán como equipos distintos, los jugadores de estos equipos no podrán jugar en ningún otro equipo de la misma categoría a la que pertenezcan.`,
     },
-    {
-      title: "Excepciones a la programación",
-      text: `Cuando por coincidencia de fechas con
-      la realización del circuito de tenis algún club tenga compromisos asumidos con anterioridad, podrá solicitar a  esta asociación, a considerar, la no programación de partidos, la misma deberá ser presentada con anterioridad a  la realización de la programación oficial e indicará fechas ciertas de los compromisos asumidos.
-      Esta posibilidad solo podrá ser concedida por una vez, por torneo, y de manera excepcional. 
-      Se hace saber que NO  es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. 
-      En caso que algún club no haya hecho uso de dicha posibilidad dentro de un campeonato, pero que la organización encuentre dificultades para otorgarles dicha excepción habida cuenta de retrasos que complican el normal  desarrollo del torneo, la organización podrá negar dicha posibilidad mediante una simple notificación por razones organizativas, la cual será inapelable.`,
-    },
-    {
-      title: "Clubes con 2 canchas",
-      text: `En caso de disputarse una serie en un club con  dos canchas, cada jugador solo podrá disputar un encuentro en una misma serie. La serie se desarrollará en dos tandas que deben jugarse una a continuación de la otra, sin excepcion. La segunda tanda deberá comenzar no despues de las 17hs.
 
-      Siempre debe programarse la serie evitando disputar en primer turno el doble 2 sin estar acompañado del doble 1, de esta manera evitando posibles WO de doble 1 de ultimo momento, que de esa manera anularía la serie. `,
-    },
     {
       title: "Ascenso de equipos",
       text: `El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando las necesidades únicas de cada categoría y promoviendo un ambiente competitivo saludable para todos.
@@ -197,10 +210,7 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
       inconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no
       lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre los participante involucrados.`,
     },
-    {
-      title: "Capitanía",
-      text: ` La organización se reserva el derecho a solicitar cambio de capitanía en caso de considerarlo necesario o bien de solicitar la incorporación de un subcapitan al chat de capitanes en reemplazo del capitán, a efectos de facilitar la comunicación y gestionar de manera más diligente las cuestiones administrativas referentes a la organización de cada serie a desarrollarse. Este sub capitán/a deberá ser un jugador/a integrante del plantel.`,
-    },
+
     {
       title: "Límite temporal de reclamos",
       text: `Cualquier reclamo que verse sobre cualquier situación que pueda darse desde el comienzo de la competición y hasta su finalización, y que a criterio de alguna de las partes considerase que infringe este reglamento, dicho reclamo deberá ser expresado a la organización dentro de las 48 hs. de haberse jugado la serie en cuestión.
@@ -211,6 +221,10 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
       text: `La organización se reserva el derecho a modificar el presente reglamento cuando sea imperioso establecer, regular o fijar conductas o acciones que puedan generar conflictos o diversas interpretaciones con el objeto de conducir a un mejor desenvolvimiento de las diversas competiciones.
       Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta
       organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.`,
+    },
+    {
+      title: "",
+      text: `Ultima actualización: 2025-04-14`,
     },
   ];
 

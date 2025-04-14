@@ -14,7 +14,7 @@ const Champion = async ({ id }: { id: string }) => {
       <Confetti />
       <h1 className="italic font-black text-primary">Campeones</h1>
       <div className="flex gap-4">
-        <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10">
+        <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10 dark:bg-black/10">
           {data.player1_image ? (
             <Image
               src={data.player1_image}
@@ -25,7 +25,7 @@ const Champion = async ({ id }: { id: string }) => {
             />
           ) : null}
         </div>
-        <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10">
+        <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10 dark:bg-black/10">
           {data.player2_image ? (
             <Image
               src={data.player2_image}

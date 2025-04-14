@@ -37,20 +37,18 @@ const Tabla = async ({
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr
-                key={item.id}
-                className={`${index < group.winners ? "text-primary" : ""}`}
-              >
+              <tr key={item.id}>
                 <td>
                   <Item
                     num={index + 1}
                     image={item.image}
                     title={item.name}
                     link={`/equipos/${item.id}`}
+                    active={index < group.winners}
                   />
                 </td>
                 <td>
-                  <span className="font-smibold">{item.match_won}</span>
+                  <span className="font-semibold">{item.match_won}</span>
                 </td>
                 <td>{item.series_won}</td>
                 <td>{item.sets}</td>
@@ -65,7 +63,7 @@ const Tabla = async ({
                             <Bull />
                           </span>
                         ) : (
-                          <span className="text-white/30">
+                          <span className="text-white/30 dark:text-black/30">
                             <Bull />
                           </span>
                         )}
@@ -75,7 +73,7 @@ const Tabla = async ({
                       .fill(0)
                       .map((_, index) => (
                         <span key={index}>
-                          <span className="text-white/10">
+                          <span className="text-white/10 dark:text-black/10">
                             <Bull />
                           </span>
                         </span>
