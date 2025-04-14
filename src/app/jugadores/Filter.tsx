@@ -38,6 +38,7 @@ const Filter = ({ data }: { data: Player[] }) => {
               image={item.image}
               title={item.name}
               link={`/jugadores/${item.id}`}
+              active={false}
             />
           </div>
         ))}

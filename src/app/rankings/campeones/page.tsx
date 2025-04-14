@@ -77,13 +77,14 @@ const page = async () => {
           </thead>
           <tbody>
             {data.map((item, index) => (
-              <tr key={item.id} className={`${index === 0 && "text-primary"}`}>
+              <tr key={item.id}>
                 <td>
                   <Item
                     num={index + 1}
                     image={item.image}
                     title={item.name}
                     link={`/clubes/${item.club_id}`}
+                    active={index === 0}
                   />
                 </td>
                 <td className="font-bold">{item.gold}</td>

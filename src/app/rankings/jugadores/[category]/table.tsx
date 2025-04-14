@@ -77,13 +77,14 @@ const table = async ({ category }: { category: string }) => {
           </thead>
           <tbody>
             {dataFiltered.slice(0, 50).map((item, index) => (
-              <tr key={item.id} className={`${index === 0 && "text-primary"}`}>
+              <tr key={item.id}>
                 <td>
                   <Item
                     num={index + 1}
                     image={item.player_image}
                     title={item.player_name}
                     link={`/jugadores/${item.player_id}`}
+                    active={index === 0}
                   />
                 </td>
                 <td>
