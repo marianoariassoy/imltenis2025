@@ -90,7 +90,7 @@ const page = async () => {
                       active={index < 4}
                     />
                   </td>
-                  <td className="font-bold">{item.matches_won}</td>
+                  <td className="font-semibold">{item.matches_won}</td>
                   <td>{item.series_won}</td>
                   <td>{item.series_total}</td>
                 </tr>

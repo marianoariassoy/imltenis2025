@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Item from "@/components/Item";
+import Item from "@/components/ItemMedium";
 import Labels from "@/components/Labels";
 import { categories } from "@/lib/data";
 import Messages from "@/components/Messages";
@@ -78,25 +78,31 @@ const table = async ({ category }: { category: string }) => {
           <tbody>
             {dataFiltered.slice(0, 50).map((item, index) => (
               <tr key={item.id}>
-                <td>
+                <td className="flex gap-x-2 items-center">
+                  <span
+                    className={`font-medium ${
+                      index === 0 ? "text-primary" : ""
+                    }`}
+                  >
+                    {index + 1}
+                  </span>
                   <Item
-                    num={index + 1}
                     image={item.player_image}
                     title={item.player_name}
-                    link={`/jugadores/${item.player_id}`}
-                    active={index === 0}
+                    link={`/jugadores/${item.id}`}
                   />
                 </td>
+
                 <td>
                   <Link
                     href={`/equipos/${item.team_id}`}
-                    className="hover:text-primary font-bold"
+                    className="hover:text-primary font-medium"
                   >
                     {item.team_name}
                   </Link>
                 </td>
                 <td>
-                  <span className="font-bold">{item.matches_won}</span>
+                  <span className="font-semibold">{item.matches_won}</span>
                 </td>
                 <td>{item.ds}</td>
                 <td>{item.dg}</td>

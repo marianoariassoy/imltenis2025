@@ -87,7 +87,7 @@ const page = async () => {
                     active={index === 0}
                   />
                 </td>
-                <td className="font-bold">{item.gold}</td>
+                <td className="font-semibold">{item.gold}</td>
                 <td>{item.silver}</td>
                 <td>{item.supercopa}</td>
                 <td>{item.finals}</td>

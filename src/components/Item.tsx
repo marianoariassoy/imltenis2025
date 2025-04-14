@@ -13,7 +13,7 @@ const TitleRow = ({ num, image, title, link, active }: Item) => {
   return (
     <div className="flex items-center gap-x-3 text-sm">
       {num && (
-        <div className={`font-semibold ${active ? "text-primary" : ""}`}>
+        <div className={`font-medium ${active ? "text-primary" : ""}`}>
           {num}
         </div>
       )}

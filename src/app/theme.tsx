@@ -33,8 +33,8 @@ const Theme = () => {
 
   return (
     <button
-      className={`cursor-pointer hover:text-primary hover:opacity-100 transition-opacity ${
-        darkMode ? "opacity-40" : "opacity-100"
+      className={`cursor-pointer transition-opacity ${
+        darkMode ? "opacity-30" : "opacity-100"
       }`}
       aria-label="Moon"
       onClick={() => setDarkMode(!darkMode)}
