@@ -9,9 +9,15 @@ const Theme = () => {
     if (darkMode) {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
+      document
+        .querySelector("meta[name=theme-color]")
+        ?.setAttribute("content", "#f3f3f3");
     } else {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
+      document
+        .querySelector("meta[name=theme-color]")
+        ?.setAttribute("content", "#252525");
     }
   }, [darkMode]);
 
@@ -19,6 +25,9 @@ const Theme = () => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme === "dark") {
       setDarkMode(true);
+      document
+        .querySelector("meta[name=theme-color]")
+        ?.setAttribute("content", "#f3f3f3");
     }
   }, []);
 

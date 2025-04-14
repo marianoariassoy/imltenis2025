@@ -57,12 +57,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
         <Link href={`/clubes/${data.club_id}`}>
-          <div className="w-28 h-28 rounded-full overflow-hidden shadow-lg">
+          <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
             <Image
               src={data.image}
               alt={data.name}
-              width={112}
-              height={112}
+              width={96}
+              height={96}
               className="object-cover h-full w-full hover:opacity-80 transition-opacity"
             />
           </div>
