@@ -4,9 +4,9 @@
 
 :root {
   --primary: rgb(248, 62, 62);
-  --foreground: rgb(132, 132, 132);
-  --secondary: rgb(101, 101, 101);
-  --background: rgb(37, 37, 37);
+  --foreground: #999999;
+  --secondary: #737272;
+  --background: #262626;
 }
 
 .table thead tr th {
