@@ -86,7 +86,7 @@ const table = async ({ category }: { category: string }) => {
                   <Item
                     image={item.player_image}
                     title={item.player_name}
-                    link={`/jugadores/${item.id}`}
+                    link={`/jugadores/${item.player_id}`}
                   />
                 </td>
 

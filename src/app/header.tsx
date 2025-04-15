@@ -5,6 +5,7 @@ import Link from "next/link";
 import Nav from "./nav";
 import { usePathname } from "next/navigation";
 import Theme from "./theme";
+import ReactGA from "react-ga4";
 
 const Header = () => {
   const pathname = usePathname();
@@ -27,6 +28,10 @@ const Header = () => {
       }
     };
   }, [pathname]);
+
+  useEffect(() => {
+    ReactGA.initialize("G-G1DBH0K86R");
+  }, []);
 
   const handleMenu = () => {
     const nav = document.querySelector("#menu") as HTMLElement;
