@@ -50,9 +50,13 @@ const Menu = () => {
         <li>
           <Link
             href="/bienvenido"
-            className={
-              pathname === "/bienvenido" ? "text-primary" : "hover:underline"
-            }
+            className={`opacity-70 
+              ${
+                pathname === "/bienvenido"
+                  ? "text-primary opacity-100"
+                  : "hover:underline"
+              }
+           `}
           >
             Registro de jugadores
           </Link>
@@ -62,7 +66,7 @@ const Menu = () => {
             href="https://capitanes.imltenis.com.ar/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:underline"
+            className="hover:underline opacity-70"
           >
             Capitanes
           </a>

@@ -80,14 +80,17 @@ const page = async () => {
             {data
               .filter((item) => +item.matches_won > 0)
               .map((item, index) => (
-                <tr key={item.id}>
+                <tr
+                  key={item.id}
+                  className={`${index === 0 ? "text-primary" : ""}`}
+                >
                   <td>
                     <Item
                       num={index + 1}
                       image={item.image}
                       title={item.name}
                       link={`/clubes/${item.id}`}
-                      active={index < 4}
+                      active={false}
                     />
                   </td>
                   <td className="font-semibold">{item.matches_won}</td>
