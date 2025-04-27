@@ -18,20 +18,20 @@ export async function generateMetadata({
   if (!data) return null;
 
   return {
-    title: data[0].name,
-    description: `Perfil del jugador ${data[0].name} de la liga de clubes IML Tenis`,
+    title: data.name,
+    description: `Perfil del jugador ${data.name} de la liga de clubes IML Tenis`,
     openGraph: {
       type: "website",
       locale: "es_AR",
       url: `https://imltenis.com.ar/jugadores/${id}`,
-      title: data[0].name,
-      description: `Perfil del jugador ${data[0].name} de la liga de clubes IML Tenis`,
+      title: data.name,
+      description: `Perfil del jugador ${data.name} de la liga de clubes IML Tenis`,
       images: [
         {
-          url: data[0].image,
+          url: data.image,
           width: 500,
           height: 500,
-          alt: data[0].name,
+          alt: data.name,
         },
       ],
     },
@@ -56,10 +56,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
         <div className="w-24 h-24 rounded-full overflow-hidden bg-white/10 dark:bg-black/10 shadow-lg">
-          {data[0].image && (
+          {data.image && (
             <Image
-              src={data[0].image}
-              alt={data[0].name}
+              src={data.image}
+              alt={data.name}
               width={96}
               height={96}
               className="object-cover h-full w-full"
@@ -67,9 +67,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           )}
         </div>
         <div className="text-center">
-          <h1 className="font-semibold text-primary">{data[0].name}</h1>
+          <h1 className="font-semibold text-primary">{data.name}</h1>
           <h2 className="text-secondary text-sm">
-            {data[0].age ? data[0].age : null}
+            {data.age ? data.age : null}
           </h2>
         </div>
       </header>

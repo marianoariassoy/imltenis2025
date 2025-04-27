@@ -15,24 +15,24 @@ export async function generateMetadata({
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/clubes/${id}`
   );
-  const data = (await response.json()) as Club[];
+  const data = (await response.json()) as Club;
   if (!data) return {};
 
   return {
-    title: data[0].name,
-    description: `Perfil del club ${data[0].name} de la liga de clubes IML Tenis`,
+    title: data.name,
+    description: `Perfil del club ${data.name} de la liga de clubes IML Tenis`,
     openGraph: {
       type: "website",
       locale: "es_AR",
       url: `https://imltenis.com.ar/clubes/${id}`,
-      title: data[0].name,
-      description: `Perfil del club ${data[0].name} de la liga de clubes IML Tenis`,
+      title: data.name,
+      description: `Perfil del club ${data.name} de la liga de clubes IML Tenis`,
       images: [
         {
-          url: data[0].image,
+          url: data.image,
           width: 500,
           height: 500,
-          alt: data[0].name,
+          alt: data.name,
         },
       ],
     },
@@ -50,7 +50,7 @@ async function getServerSideProps(id: string) {
 
 const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
-  const data = (await getServerSideProps(id)) as Club[];
+  const data = (await getServerSideProps(id)) as Club;
   if (!data) return null;
 
   return (
@@ -58,38 +58,34 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <header className="items-center flex flex-col gap-y-2">
         <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
           <Image
-            src={data[0].image}
-            alt={data[0].name}
+            src={data.image}
+            alt={data.name}
             width={96}
             height={96}
             className="object-cover h-full w-full"
           />
         </div>
         <div className="text-center">
-          <h1 className="font-semibold text-base text-primary">
-            {data[0].name}
-          </h1>
+          <h1 className="font-semibold text-base text-primary">{data.name}</h1>
           <Suspense fallback={<Loader />}>
             <Stars id={id} />
           </Suspense>
         </div>
 
-        <div className="text-sm text-center font-medium">
-          {data[0].location}
-        </div>
+        <div className="text-sm text-center font-medium">{data.location}</div>
 
-        {data[0].googlemaps && (
+        {data.googlemaps && (
           <div
             className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-64"
-            dangerouslySetInnerHTML={{ __html: data[0].googlemaps }}
+            dangerouslySetInnerHTML={{ __html: data.googlemaps }}
           />
         )}
 
         <div className="flex flex-wrap gap-3 items-center justify-center font-medium text-sm text-primary">
-          {data[0].phone && <span>Tel. {data[0].phone}</span>}
-          {data[0].googlemapslink && (
+          {data.phone && <span>Tel. {data.phone}</span>}
+          {data.googlemapslink && (
             <a
-              href={data[0].googlemapslink}
+              href={data.googlemapslink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
@@ -97,9 +93,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               Google Map
             </a>
           )}
-          {data[0].whatsapp && (
+          {data.whatsapp && (
             <a
-              href={`https://wa.me/${data[0].whatsapp}`}
+              href={`https://wa.me/${data.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
@@ -107,9 +103,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               WhatsApp
             </a>
           )}
-          {data[0].instagram && (
+          {data.instagram && (
             <a
-              href={data[0].instagram}
+              href={data.instagram}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
@@ -117,9 +113,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               Instagram
             </a>
           )}
-          {data[0].facebook && (
+          {data.facebook && (
             <a
-              href={data[0].facebook}
+              href={data.facebook}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
@@ -127,9 +123,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               Facebook
             </a>
           )}
-          {data[0].web && (
+          {data.web && (
             <a
-              href={data[0].web}
+              href={data.web}
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:underline"
