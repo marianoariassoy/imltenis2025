@@ -201,7 +201,7 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
     },
     {
       title: "Playoffs",
-      text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente en el actual torneo, a excepción de la categoría Primera Libre, donde esta regla no se aplicará.`,
+      text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente en el actual torneo.`,
     },
     {
       title: "Penalizaciones",

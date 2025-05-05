@@ -53,7 +53,7 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
           </h1>
 
           <Suspense fallback={<Loader />}>
-            <Table group={item} labels={labels} type={item.type} />
+            <Table group={item} labels={labels} type={+item.type} />
           </Suspense>
 
           {+item.type === 1 && <Fixture id_group={item.id} title={false} />}
