@@ -90,7 +90,10 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
 
     {
       title: "Tercer tiempo",
-      text: `Queda a voluntad del equipo local. Por parte de la organización recomendamos en lo posible llevarlo a cabo compartiendo los gastos del mismo, de esta manera fomentando la camaraderia entre los jugadores y equipos.`,
+      text: `Si bien no son obligatorios, desde la organización lo alentamos y valoramos profundamente cuando se realizan. Creemos que son una parte fundamental del espíritu del torneo, ya que brindan un espacio para compartir entre jugadores, más allá del resultado deportivo.
+Estos momentos ayudan a fortalecer los lazos entre clubes, fomentan el respeto, la camaradería y crean un ambiente mucho más cálido y humano en la competencia.
+Por eso, seguimos promoviendo los terceros tiempos como un componente esencial de cada jornada, y alentamos a los equipos locales a organizar algo simple pero significativo para recibir a sus visitantes, compartiendo los gastos. Un pequeño gesto puede dejar una gran impresión, especialmente en fechas donde algunos equipos deben hacer largos viajes.
+.`,
     },
     {
       title: "Coaching",
@@ -200,7 +203,7 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
       text: `La organización ostenta el legítimo derecho de ascender a cualquier jugador cuyo nivel sobrepase ampliamente la categoría correspondiente, así como a aquellos que posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores en el tiempo reciente, hasta dos años, con la posible quita de puntos de la serie en reclamo.`,
     },
     {
-      title: "Playoffs",
+      title: "Fases de elimanación directa",
       text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente en el actual torneo.`,
     },
     {

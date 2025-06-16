@@ -23,7 +23,7 @@ const Menu = () => {
           <li key={index}>
             <Link
               href={item.url}
-              className={`text-primary italic font-black text-[1.1rem] ${
+              className={`text-primary italic font-black text-[1.1rem] leading-3 ${
                 pathname === item.url ? "underline" : "hover:underline"
               }`}
             >

@@ -18,8 +18,6 @@ interface User {
   location: string;
   email: string;
   dni: string;
-  password: string;
-  confirmPassword: string;
   birthday: string;
 }
 
@@ -32,7 +30,6 @@ const Page = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<User>();
 
@@ -69,8 +66,6 @@ const Page = () => {
       setSending(false);
     }
   };
-
-  const password = watch("password", "");
 
   const getFile = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0] || null;
@@ -181,33 +176,6 @@ const Page = () => {
                   })}
                 />
                 <Error error={errors.dni} />
-              </div>
-              <div className="form-control">
-                <Input
-                  type="password"
-                  title="Contraseña"
-                  placeholder="contraseña"
-                  register={register("password", {
-                    required: errorMessage,
-                    validate: (value) =>
-                      value.length > 4 ||
-                      "La longitud debe ser mayor a 4 caracteres",
-                  })}
-                />
-                <Error error={errors.password} />
-              </div>
-              <div className="form-control">
-                <Input
-                  type="password"
-                  title="Repetir contraseña"
-                  placeholder="contraseña"
-                  register={register("confirmPassword", {
-                    required: errorMessage,
-                    validate: (value) =>
-                      value === password || "Las contraseñas no coinciden",
-                  })}
-                />
-                <Error error={errors.confirmPassword} />
               </div>
               <div className="form-control">
                 <label className="text-sm mb-2 block">

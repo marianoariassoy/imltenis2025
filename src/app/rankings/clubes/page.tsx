@@ -14,7 +14,7 @@ export const metadata = {
     description: "Ranking de Clubes de la liga de clubes IML Tenis",
     images: [
       {
-        url: "/assets/imltenis.jpg",
+        url: "https://imltenis.com.ar/assets/imltenis.jpg",
         width: 500,
         height: 500,
         alt: "IML Tenis",

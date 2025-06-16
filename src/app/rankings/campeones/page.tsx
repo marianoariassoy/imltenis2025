@@ -13,7 +13,7 @@ export const metadata = {
     description: "Ranking de campeones de la liga de clubes IML Tenis",
     images: [
       {
-        url: "/assets/imltenis.jpg",
+        url: "https://imltenis.com.ar/assets/imltenis.jpg",
         width: 500,
         height: 500,
         alt: "IML Tenis",
@@ -35,7 +35,10 @@ interface data {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/rankings/champions"
+    process.env.NEXT_PUBLIC_API_URL + "/rankings/champions",
+    {
+      cache: "no-store",
+    }
   );
   const data = (await response.json()) as data[];
 
