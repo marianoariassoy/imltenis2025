@@ -69,14 +69,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </Link>
         <div className="text-center">
           <h1 className="font-semibold text-primary">{data.name}</h1>
-          <h2>
-            <Link
-              href={`/torneos/${data.tournament_id}`}
-              className="font-medium hover:underline"
-            >
-              {data.tournament_name}
-            </Link>
-          </h2>
+          <Link
+            href={`/torneos/${data.tournament_id}`}
+            className="font-medium hover:underline text-sm"
+          >
+            {data.tournament_name}
+          </Link>
         </div>
 
         <div className="flex justify-center gap-x-4 items-center text-sm">

@@ -70,9 +70,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           <Suspense fallback={<Loader />}>
             <Stars id={id} />
           </Suspense>
+          <span className="text-sm text-center font-medium">
+            {data.location}
+          </span>
         </div>
-
-        <div className="text-sm text-center font-medium">{data.location}</div>
 
         {data.googlemaps && (
           <div

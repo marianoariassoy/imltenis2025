@@ -3,14 +3,16 @@ import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
 
 export const metadata = {
-  title: "Presentación",
-  description: "Presentación de la liga de clubes IML Tenis",
+  title: "Presentación Torneo Clausura 2025",
+  description:
+    "Presentación Torneo Clausura 2025 de la liga de clubes IML Tenis",
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: "https://imltenis.com.ar/presentacion",
     title: "Presentación",
-    description: "Presentación de la liga de clubes IML Tenis",
+    description:
+      "Presentación Torneo Clausura 2025 de la liga de clubes IML Tenis",
     images: [
       {
         url: "https://imltenis.com.ar/assets/imltenis.jpg",
@@ -105,7 +107,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
     <section className="fade-in flex flex-col gap-y-6 text-sm max-w-2xl m-auto">
       <div className="flex flex-col gap-y-3">
         <div className="text-center flex flex-col items-center">
-          <h1 className="font-bold text-primary text-lg">
+          <h1 className="font-black text-primary text-lg">
             Torneo Clausura 2025
           </h1>
           <div className="text-2xl text-center">🏆</div>
@@ -114,12 +116,12 @@ CUIT/CUIL: 27397070811 <br/><br/>
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
           <img
             src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExODQ2dTV0Y2w3dzl4cWZvcXBwemgwcTJsajlrajl0MmsweDh5Z2lxeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kSADP5pTBqGb0RAHJv/giphy.gif"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-top"
           />
         </div>
       </div>
 
-      <div className="[&>span]:font-medium [&>span]:text-primary">
+      <div className="[&>span]:font-semibold [&>span]:text-primary">
         <span>¡Llega el Torneo Clausura 2025!</span> Sumate a uno de los
         interclubes de tenis más importantes del país, con más de 150 equipos y
         12 categorías, viví una experiencia única junto a tu grupo de amigos.
@@ -127,17 +129,14 @@ CUIT/CUIL: 27397070811 <br/><br/>
         nuevas sedes y rivales cada semana. Todos los resultados y rankings se
         actualizan online, para que sigas el torneo en tiempo real.
         <br />
-        <br />
         Premios, reconocimientos y mucho más Podés ser elegido como{" "}
         <span>el jugador destacado de la fecha</span>, liderar el ranking
         individual y recibir importantes premios al final de la temporada.
         Además, cada punto que sumes ayuda a tu club a escalar posiciones en el{" "}
         <span>ranking anual de clubes.</span>
-        <br />
         <br />Y eso no es todo...Celebramos lo mejor de nuestra comunidad con
         propuestas como <span>La Batalla de Clubes</span>, la elección de los
         mejores capitanes y los esperados <span>IML Awards.</span>
-        <br />
         <br />
         El torneo culmina con una gran final junto a todas las categorías, en un
         evento de cierre con premiación, sorteos y muchas sorpresas más.

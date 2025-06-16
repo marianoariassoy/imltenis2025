@@ -8,7 +8,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
     <section className="flex flex-col gap-y-6">
       {title && (
         <div>
-          <h1 className="italic font-black text-primary text-center text-xl">
+          <h1 className="italic font-bold text-primary text-center text-xl">
             Fixture
           </h1>
         </div>
