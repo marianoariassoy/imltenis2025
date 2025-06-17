@@ -48,7 +48,13 @@ const Tabla = async ({
                   />
                 </td>
                 <td>
-                  <span className="font-semibold">{item.match_won}</span>
+                  <span
+                    className={`font-semibold ${
+                      index < group.winners && "text-primary"
+                    } `}
+                  >
+                    {item.match_won}
+                  </span>
                 </td>
                 <td>{item.series_won}</td>
                 <td>{item.sets}</td>
