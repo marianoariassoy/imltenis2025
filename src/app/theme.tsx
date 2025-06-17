@@ -33,7 +33,7 @@ const Theme = () => {
 
   return (
     <button
-      className={`cursor-pointer transition-opacity -rotate-12 ${
+      className={`cursor-pointer transition-opacity -rotate-[20deg] ${
         darkMode ? "opacity-30" : "opacity-100"
       }`}
       aria-label="Moon"

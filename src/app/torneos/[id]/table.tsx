@@ -27,7 +27,7 @@ const Tabla = async ({
   return (
     <section className="flex flex-col gap-y-3 text-sm">
       <div className="overflow-x-auto text-sm whitespace-nowrap">
-        <table className="w-full table mb-3">
+        <table className="w-full table table-auto mb-3">
           <thead>
             <tr>
               {labels.map((item, index) => (
@@ -38,7 +38,7 @@ const Tabla = async ({
           <tbody>
             {data.map((item, index) => (
               <tr key={item.id}>
-                <td>
+                <td className="w-full">
                   <Item
                     num={index + 1}
                     image={item.image}
