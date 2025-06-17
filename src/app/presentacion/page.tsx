@@ -10,7 +10,7 @@ export const metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://imltenis.com.ar/presentacion",
-    title: "Presentación",
+    title: "Presentación Torneo Clausura 2025",
     description:
       "Presentación Torneo Clausura 2025 de la liga de clubes IML Tenis",
     images: [
@@ -64,7 +64,7 @@ Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
     },
     {
       title: "🕛 ¿Qué día y horario se juega por categoría?",
-      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>13 a 17 hs.</strong> <br/><br/>
+      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>13 a 17 hs.</strong> <br/> 
       Cada equipo puede elegir el horario cuando actúa de local.`,
     },
     {
@@ -104,13 +104,13 @@ CUIT/CUIL: 27397070811 <br/><br/>
     },
   ];
   return (
-    <section className="fade-in flex flex-col gap-y-6 text-sm max-w-2xl m-auto">
+    <section className="flex flex-col gap-y-6 text-sm max-w-2xl m-auto">
       <div className="flex flex-col gap-y-3">
-        <div className="text-center flex flex-col items-center">
-          <h1 className="font-black text-primary text-lg">
+        <div className="text-center flex flex-col items-center mb-3">
+          <div className="text-2xl text-center">🏆</div>
+          <h1 className="font-extrabold text-primary text-lg">
             Torneo Clausura 2025
           </h1>
-          <div className="text-2xl text-center">🏆</div>
         </div>
 
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">

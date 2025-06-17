@@ -1,4 +1,5 @@
 "use client";
+import Notice from "@/components/Notice";
 
 export default function Home() {
   const handleMenu = () => {
@@ -31,6 +32,8 @@ export default function Home() {
           <source src="/videos/video.mp4" type="video/mp4" />
         </video>
       </div>
+
+      <Notice />
     </section>
   );
 }
