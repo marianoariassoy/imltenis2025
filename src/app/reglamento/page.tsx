@@ -48,8 +48,8 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     },
     {
       title: "Días y Horarios",
-      text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 13 y las 17 hs. y los domingos entre las 9 y las 17 hs.
-      La categoría Caballeros Segunda +35, Caballeros Tercera +35 y Mixto Tercera, jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 13 y las 17 hs. 
+      text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 12 y las 17 hs. y los domingos entre las 9 y las 17 hs.
+      La categoría Caballeros Segunda +35, Caballeros Tercera +35 y Mixto Tercera, jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 12 y las 17 hs. 
       El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 17 hs.
 
       Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 17:00 hs. del miércoles de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`,

@@ -37,21 +37,21 @@ Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
     },
     {
       title: "🏆 ¿Cómo es el formato de juego y del torneo?",
-      text: `En todas las categorías con exepción de las categorías Mixtas se disputarán <strong >1 single y 2 dobles.</strong> En las categorías Mixtas se disputarán 2 dobles.<br/>
+      text: `En todas las categorías con exepción de las categorías Mixtas se disputarán <strong >1 single y 2 dobles.</strong> En las categorías Mixtas se disputarán <strong>2 dobles.</strong><br/>
       Todos los partidos se disputarán al mejor de 3 sets, con tie break. El tercer set será Super Tie break a 10 puntos con diferencia de dos.<br/>
       Todos los resultados y el reglamento general podrán ser vistos en este sitio web.`,
     },
     {
       title: "⭐ ¿En qué categorías puedo inscribirme?",
-      text: `<strong>Los Domingos:</strong> Primera Libre, Segunda Libre, Tercera Libre, Cuarta Libre, Quinta Libre, Sexta Libre (con admisión). <br/> 
+      text: `<strong>Domingos:</strong> Primera Libre, Segunda Libre, Tercera Libre, Cuarta Libre, Quinta Libre, Sexta Libre (con admisión). <br/> 
       <strong>Sábados y Domingos:</strong> Damas Segunda, Damas Tercera, Damas Cuarta. <br/> 
-      <strong>Sábados:</strong> Mixto Mixto 3ra/4ta, Caballeros Segunda +35, Caballeros Tercera +35.`,
+      <strong>Sábados:</strong> Mixto Mixto Tercera/Cuarta, Caballeros Segunda +35, Caballeros Tercera +35.`,
     },
     {
       title: "📈 ¿Cómo se a que categoría corresponde mi equipo?",
       text: `<strong>Niveles orientativos: </strong>
-        Quinta: Jugadores categoría 125, C. Cuarta: Jugadores categoría 250, B2, B-. Tercera: Jugadores categoría 500,
-        B1 Segunda: Jugadores categoría 750, A1, A2 Primera: Jugadores categoría 1000, Super A.`,
+        Quinta: Jugadores categoría 125, C. <br/> Cuarta: Jugadores categoría 250, B2, B-. <br/>Tercera: Jugadores categoría 500,
+        B1 <br/>Segunda: Jugadores categoría 750, A1, A2 <br/>Primera: Jugadores categoría 1000, Super A.`,
     },
     {
       title: "🔞 ¿Hay restricciones por edad?",
@@ -59,17 +59,17 @@ Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
     },
     {
       title: "🌍 ¿Dónde se juega?",
-      text: `Cada equipo <strong >representa a un club o barrio</strong> que jugará de local reservando o alquilando cancha según corresponda.<br/>
-      Zonas de juego: Zona Norte y Zona Oeste de Buenos Aires.`,
+      text: `Cada equipo <strong>representa a un club o barrio</strong> que jugará de local reservando o alquilando cancha según corresponda.<br/>
+      Zonas de juego: <strong>Zona Norte y Zona Oeste de Buenos Aires.</strong>`,
     },
     {
       title: "🕛 ¿Qué día y horario se juega por categoría?",
-      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>13 a 17 hs.</strong> <br/> 
+      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>12 a 17 hs.</strong> <br/> 
       Cada equipo puede elegir el horario cuando actúa de local.`,
     },
     {
       title: "🤔 ¿Hay un mínimo de encuentros o series a disputar?",
-      text: `No podemos saber con exactitud cuantas series se disputarán pero pretendemos 8 o más series por equipo.`,
+      text: `No podemos saber con exactitud cuantas series se disputarán hasta no tener cerradas las categorías, pretendemos que se disputen desde 8 series por equipo.`,
     },
     {
       title: "🎾 Pelotas",
@@ -96,7 +96,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
     },
     {
       title: "💵 ¿Cuál es el valor a abonar cada partido?",
-      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será definido antes del comienzo del torneo.`,
+      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será definido en la comisión de clubes a la brevedad.`,
     },
     {
       title: "😀 ¿Cómo llevo adelante la inscripción?",
@@ -123,11 +123,11 @@ CUIT/CUIL: 27397070811 <br/><br/>
 
       <div className="[&>span]:font-semibold [&>span]:text-primary">
         <span>¡Llega el Torneo Clausura 2025!</span> Sumate a uno de los
-        interclubes de tenis más importantes del país, con más de 150 equipos y
-        12 categorías, viví una experiencia única junto a tu grupo de amigos.
-        Representá a tu club o barrio, jugá de local en tus canchas y descubrí
-        nuevas sedes y rivales cada semana. Todos los resultados y rankings se
-        actualizan online, para que sigas el torneo en tiempo real.
+        interclubes de tenis más importantes de la región, con más de 150
+        equipos y 12 categorías, viví una experiencia única junto a tu grupo de
+        amigos. Representá a tu club o barrio, jugá de local en tus canchas y
+        descubrí nuevas sedes y rivales cada semana. Todos los resultados y
+        rankings se actualizan online, para que sigas el torneo en tiempo real.
         <br />
         Premios, reconocimientos y mucho más Podés ser elegido como{" "}
         <span>el jugador destacado de la fecha</span>, liderar el ranking
