@@ -5,7 +5,7 @@ const Notice = () => {
     <div className="absolute left-4 top-20 lg:left-20">
       <Link
         href="/presentacion"
-        className="w-32 h-32 bg-black text-white flex flex-col items-center justify-center rounded-full text-center font-medium leading-4 text-sm hover:bg-primary shadow-lg"
+        className="w-32 h-32 bg-black text-white flex flex-col items-center justify-center rounded-full text-center font-medium leading-4 text-sm hover:bg-primary"
       >
         <span>Torneo</span>
         <span>Clausura</span>

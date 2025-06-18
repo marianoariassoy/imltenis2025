@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <section>
       <h1
-        className="fade-in font-black text-center text-[3.9rem] leading-none lg:text-8xl text-primary flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+        className="fade-in font-black text-center text-[3.9rem] leading-none lg:text-8xl text-primary flex flex-col absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer lg:hover:text-white/50 transition-colors"
         onClick={handleMenu}
       >
         <span>Torneo</span>

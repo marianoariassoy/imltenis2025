@@ -54,7 +54,11 @@ const Header = () => {
           </button>
         </div>
         <div className=" flex justify-center text-primary logo-main transition-all">
-          <Link href="/" aria-label="Logo">
+          <Link
+            href="/"
+            aria-label="Logo"
+            className="lg:hover:text-white/50 transition-colors"
+          >
             <Logo />
           </Link>
         </div>
