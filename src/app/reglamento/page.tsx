@@ -87,7 +87,6 @@ El incumplimiento de la carga por parte del capitán del equipo ganador de la se
 Ejemplo Si al momento de la interrupción el resultado parcial es 63 21, el resultado final será 63 61
 Este último resultado es el que se deberá tomarse en cuenta en la confección de un desempate por porcentajes de set o games.`,
     },
-
     {
       title: "Tercer tiempo",
       text: `Si bien no son obligatorios, desde la organización lo alentamos y valoramos profundamente cuando se realizan. Creemos que son una parte fundamental del espíritu del torneo, ya que brindan un espacio para compartir entre jugadores, más allá del resultado deportivo.
@@ -204,7 +203,7 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
     },
     {
       title: "Fases de elimanación directa",
-      text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente en el actual torneo.`,
+      text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente o inferior en el actual torneo.`,
     },
     {
       title: "Penalizaciones",
@@ -213,7 +212,6 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
       inconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no
       lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre los participante involucrados.`,
     },
-
     {
       title: "Límite temporal de reclamos",
       text: `Cualquier reclamo que verse sobre cualquier situación que pueda darse desde el comienzo de la competición y hasta su finalización, y que a criterio de alguna de las partes considerase que infringe este reglamento, dicho reclamo deberá ser expresado a la organización dentro de las 48 hs. de haberse jugado la serie en cuestión.
@@ -227,7 +225,7 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
     },
     {
       title: "",
-      text: `Ultima actualización: 2025-04-14`,
+      text: `Ultima actualización: 2025-05-14`,
     },
   ];
 
