@@ -186,12 +186,12 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
       title: "Ascenso de equipos",
       text: `El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando las necesidades únicas de cada categoría y promoviendo un ambiente competitivo saludable para todos.
 
-      Los equipos ascendidos se requerirá la participación de todos los jugadores con excepción de los jugadores que no hayan aportado ningún punto, para estos el ascenso será optativo.
+      Los equipos ascendidos se requerirá la participación de todos los jugadores que hayan aportado al menos un punto, con excepción de los jugadores que presenten diferencia negativa entre partidos ganados y perdidos, para estos el ascenso será optativo.
     `,
     },
     {
       title: "Descenso de equipos",
-      text: `Los equipos que hayan terminado en ultimo lugar en sus respectivos grupos tendrán derecho de descender a una categoría inmediatamente inferior con todos sus jugadores, con excepción de los jugadores  que hayan finalizado el torneo con una diferencia de partidos ganados +5 o superior.`,
+      text: `Los equipos que hayan terminado en ultimo lugar en sus respectivos grupos tendrán derecho de descender a una categoría inmediatamente inferior con todos sus jugadores, con excepción de los jugadores que hayan finalizado el torneo con una diferencia de partidos ganados +5 o superior.`,
     },
     {
       title: "Descenso de jugadores",
