@@ -36,7 +36,7 @@ const Juegos = async ({ id }: { id: string }) => {
                         href={`/jugadores/${item.playerhome1_id}`}
                         className="text-primary hover:underline font-semibold"
                       >
-                        {item.playerhome1_name}
+                        {item.playerhome1_name} ({+item.playerhome1_top + 1})
                       </Link>
                     </span>
                   )}
@@ -52,7 +52,7 @@ const Juegos = async ({ id }: { id: string }) => {
                           href={`/jugadores/${item.playerhome2_id}`}
                           className="text-primary hover:underline font-semibold"
                         >
-                          {item.playerhome2_name}
+                          {item.playerhome2_name} ({+item.playerhome2_top + 1})
                         </Link>
                       </span>
                     </>
@@ -74,7 +74,7 @@ const Juegos = async ({ id }: { id: string }) => {
                         href={`/jugadores/${item.playeraway1_id}`}
                         className="text-primary hover:underline font-semibold"
                       >
-                        {item.playeraway1_name}
+                        {item.playeraway1_name} ({+item.playeraway1_top + 1})
                       </Link>
                     </span>
                   )}
@@ -90,7 +90,7 @@ const Juegos = async ({ id }: { id: string }) => {
                           href={`/jugadores/${item.playeraway2_id}`}
                           className="text-primary hover:underline font-semibold"
                         >
-                          {item.playeraway2_name}
+                          {item.playeraway2_name} ({+item.playeraway2_top + 1})
                         </Link>
                       </span>
                     </>

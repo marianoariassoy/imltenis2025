@@ -29,16 +29,23 @@ export interface Juego {
   id: number;
   playerhome1_id: number;
   playerhome1_image: string;
+  playerhome1_name: string;
+  playerhome1_top: string;
+
   playerhome2_id: number;
   playerhome2_image: string;
-  playerhome1_name: string;
   playerhome2_name: string;
+  playerhome2_top: string;
+
   playeraway1_id: number;
   playeraway1_image: string;
+  playeraway1_name: string;
+  playeraway1_top: string;
+
   playeraway2_id: number;
   playeraway2_image: string;
-  playeraway1_name: string;
   playeraway2_name: string;
+  playeraway2_top: string;
 
   type: string;
   score: string;
