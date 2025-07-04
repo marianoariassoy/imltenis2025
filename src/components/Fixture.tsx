@@ -35,21 +35,21 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                   item.winner || item.status === 2 ? "opacity-50 grayscale" : ""
                 }
               >
-                <td>
+                <td className="w-[5%]">
                   <div className="flex gap-x-2 items-center">
                     {item.winner || item.status === 2 ? <Bull /> : null}
                     <span className="font-semibold">{item.date}</span>
                   </div>
                 </td>
-                <td>{item.hour}</td>
-                <td className="w-1/2">
+                <td className="w-[5%]">{item.hour}</td>
+                <td className="w-[34%]">
                   <ItemSmall
                     link={`/equipos/${item.home_id}`}
                     title={item.home_name}
                     image={item.home_image}
                   />
                 </td>
-                <td>
+                <td className="w-[10%]">
                   {item.winner ? (
                     <Link
                       href={`/series/${item.id}`}
@@ -69,14 +69,14 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                     "-"
                   )}
                 </td>
-                <td className="w-1/2">
+                <td className="w-[30%]">
                   <ItemSmall
                     link={`/equipos/${item.away_id}`}
                     title={item.away_name}
                     image={item.away_image}
                   />
                 </td>
-                <td>
+                <td className="w-[10%]">
                   <Link
                     href={`/series/${item.id}`}
                     className="hover:text-primary"

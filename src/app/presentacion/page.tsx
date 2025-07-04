@@ -55,7 +55,7 @@ Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
     },
     {
       title: "🔞 ¿Hay restricciones por edad?",
-      text: `Caballeros Segunda +35 y Caballeros Tercera +35, el resto de las categorías serán +14.`,
+      text: `Caballeros Segunda +35 y Caballeros Tercera +35, el resto de las categorías serán +16 años.`,
     },
     {
       title: "🌍 ¿Dónde se juega?",
