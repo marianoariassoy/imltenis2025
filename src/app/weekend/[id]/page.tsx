@@ -39,7 +39,10 @@ export async function generateMetadata({
 
 async function getServerSideProps(id: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/weekend/tournaments/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/weekend/tournaments/${id}`,
+    {
+      cache: "no-store",
+    }
   );
   const data = await response.json();
   if (!data) return null;

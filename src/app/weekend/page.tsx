@@ -14,7 +14,10 @@ interface Props {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/weekend/tournaments"
+    process.env.NEXT_PUBLIC_API_URL + "/weekend/tournaments",
+    {
+      cache: "no-store",
+    }
   );
   const data = (await response.json()) as Props[];
 
