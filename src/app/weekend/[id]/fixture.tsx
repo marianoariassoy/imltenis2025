@@ -38,9 +38,7 @@ const fixture = async ({
   return (
     <section className="fade-in flex flex-col gap-y-6">
       {type !== 2 && (
-        <h1 className="italic font-black text-primary text-center">
-          Orden de juego
-        </h1>
+        <h1 className="font-bold text-primary text-center">Orden de juego</h1>
       )}
 
       <div className="w-full overflow-x-auto mt-3 flex flex-col mb-3 gap-y-3">

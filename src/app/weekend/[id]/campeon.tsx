@@ -12,7 +12,7 @@ const Champion = async ({ id }: { id: string }) => {
   return (
     <div className="flex flex-col items-center gap-y-3">
       <Confetti />
-      <h1 className="italic font-black text-primary">Campeones</h1>
+      <h1 className="font-bold text-primary">Campeones</h1>
       <div className="flex gap-4">
         <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10 dark:bg-black/10">
           {data.player1_image ? (

@@ -91,8 +91,7 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
       title: "Tercer tiempo",
       text: `Si bien no son obligatorios, desde la organización lo alentamos y valoramos profundamente cuando se realizan. Creemos que son una parte fundamental del espíritu del torneo, ya que brindan un espacio para compartir entre jugadores, más allá del resultado deportivo.
 Estos momentos ayudan a fortalecer los lazos entre clubes, fomentan el respeto, la camaradería y crean un ambiente mucho más cálido y humano en la competencia.
-Por eso, seguimos promoviendo los terceros tiempos como un componente esencial de cada jornada, y alentamos a los equipos locales a organizar algo simple pero significativo para recibir a sus visitantes, compartiendo los gastos. Un pequeño gesto puede dejar una gran impresión, especialmente en fechas donde algunos equipos deben hacer largos viajes.
-.`,
+Por eso, seguimos promoviendo los terceros tiempos como un componente esencial de cada jornada, y alentamos a los equipos locales a organizar algo simple pero significativo para recibir a sus visitantes, compartiendo los gastos. Un pequeño gesto puede dejar una gran impresión, especialmente en fechas donde algunos equipos deben hacer largos viajes.`,
     },
     {
       title: "Coaching",
@@ -191,7 +190,7 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
     },
     {
       title: "Descenso de equipos",
-      text: `Los equipos que hayan terminado en ultimo lugar en sus respectivos grupos tendrán derecho de descender a una categoría inmediatamente inferior con todos sus jugadores, con excepción de los jugadores que hayan finalizado el torneo con una diferencia de partidos ganados +5 o superior.`,
+      text: `Los equipos que sean afectados por un descenso deberán participar en una categoría inmediatamente inferior con todos sus jugadores, con excepción de los jugadores que hayan finalizado el torneo con una diferencia de partidos ganados +3 o superior.`,
     },
     {
       title: "Descenso de jugadores",
@@ -225,7 +224,7 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
     },
     {
       title: "",
-      text: `Ultima actualización: 2025-05-14`,
+      text: `Ultima actualización: Julio 2025`,
     },
   ];
 

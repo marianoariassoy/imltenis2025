@@ -22,7 +22,7 @@ const table = async ({
           .filter((item) => item.type === 2)
           .map((item) => (
             <div className="flex flex-col gap-y-3" key={item.id}>
-              <h1 className="italic font-black text-primary text-center">
+              <h1 className="font-bold text-primary text-center">
                 {item.title}
               </h1>
               <Fixture group_id={item.id} type={item.type} />
@@ -35,7 +35,7 @@ const table = async ({
           .filter((item) => item.type === 1)
           .map((item, index) => (
             <div key={index} className="flex flex-col gap-y-6">
-              <h1 className="italic font-black text-primary text-center">
+              <h1 className=" font-bold text-primary text-center">
                 {item.title}
               </h1>
               <Table group={item} />
@@ -44,19 +44,19 @@ const table = async ({
           ))}
       </div>
 
-      {description && (
+      {description ? (
         <div className="text-center">
           <span className="text-secondary text-sm">{description}</span>
         </div>
-      )}
-      {data.length < 1 && (
+      ) : null}
+      {data.length < 1 ? (
         <div className="text-center py-3 flex flex-col items-center">
           <span className="text-2xl">🚀</span>
           <span className="text-primary font-bold">
             ¡Inscripciones abiertas!
           </span>
         </div>
-      )}
+      ) : null}
     </section>
   );
 };

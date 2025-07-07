@@ -27,7 +27,7 @@ export async function generateMetadata({
       description: `Torneo ${data.title} de IML Weekend`,
       images: [
         {
-          url: "/assets/imltenis.jpg",
+          url: "https://imltenis.com.ar/assets/imltenis.jpg",
           width: 500,
           height: 500,
           alt: "IML Tenis Liga de clubes de Buenos Aires",
@@ -55,11 +55,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
     <section className="flex flex-col gap-y-6">
       <Title title={data.title} description={`${data.date} ${data.hour}`} />
 
-      {data.champion && (
+      {data.champion ? (
         <Suspense fallback={<Loader />}>
           <Campeon id={data.champion} />
         </Suspense>
-      )}
+      ) : null}
 
       <Suspense fallback={<Loader />}>
         <Torneo id_tournament={id} description={data.description} />
