@@ -36,5 +36,5 @@ export const menu = [
   { name: "Jugadores", url: "/jugadores" },
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },
   { name: "IML Weekend", url: "/weekend" },
-  // { name: "Nosotros", url: "/nosotros" },
+  { name: "Nosotros", url: "/nosotros" },
 ];

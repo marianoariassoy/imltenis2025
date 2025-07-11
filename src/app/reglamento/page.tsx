@@ -9,7 +9,8 @@ const page = () => {
   const data = [
     {
       title: "",
-      text: `La presente liga de clubes se desarrolla desde el mes de marzo hasta el mes de diciembre en 2 torneos a jugarse los días sábados y domingos, según corresponda. Disputando en cada fecha 3 encuentros entre 2 equipos representantes de un club de tenis.`,
+      text: `La presente liga de clubes se desarrolla desde el mes de marzo hasta diciembre, en dos torneos (Apertura y Clausura), que se disputan los días sábados y domingos, según corresponda. Está dirigida a jugadores y jugadoras amateurs, a partir de los 15 años cumplidos.
+En cada fecha se disputarán tres encuentros entre dos equipos representantes de distintos clubes de tenis.`,
     },
     {
       title: "Modalidad de juego",
@@ -167,7 +168,6 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
       Se hace saber que NO  es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. 
       En caso que algún club no haya hecho uso de dicha posibilidad dentro de un campeonato, pero que la organización encuentre dificultades para otorgarles dicha excepción habida cuenta de retrasos que complican el normal  desarrollo del torneo, la organización podrá negar dicha posibilidad mediante una simple notificación por razones organizativas, la cual será inapelable.`,
     },
-
     {
       title: "Auditoria de lista de buena fe rivales",
       text: `Cada capitán podrá objetar la ubicación de algún jugador rival en la lista de algún equipo rival. Para tal fin deberá informarlo por mail a hola@imltenis.com.ar, mencionando equipo, ubicación objetada, motivos y ubicación que considera correcta. No se tomarán reclamos por teléfono o WhatsApp. Tal objeción, será tomada de forma anónima.`,
@@ -230,8 +230,11 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title title="Reglamento IML Tenis" emoji="🤝" description="" />
-
+      <Title
+        title="Reglamento IML Tenis Clausura 2025"
+        emoji="🤝"
+        description=""
+      />
       <Filter data={data} />
     </section>
   );

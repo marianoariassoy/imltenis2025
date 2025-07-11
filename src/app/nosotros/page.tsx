@@ -11,10 +11,15 @@ const page = () => {
 
       <div className="flex flex-col gap-y-6 px-6 text-center max-w-2xl mx-auto">
         <div>
-          IML Tenis nació en marzo de 2023 con la misión de crear un espacio
-          competitivo, accesible y apasionante para los clubes de tenis. Hoy
-          contamos con más de 120 equipos de diferentes clubes y más de 2500
-          jugadores compitiendo en 11 categorías.
+          La Liga de Clubes IML Tenis es una de las competencias interclubes más
+          importantes de Argentina, con la participación de más de 140 equipos
+          provenientes de las zonas norte y oeste del Gran Buenos Aires. Cada
+          temporada convoca a cientos de jugadores y jugadoras amateurs, mayores
+          de 15 años, que representan a sus clubes en un ambiente competitivo,
+          organizado y con gran espíritu deportivo. Con torneos Apertura y
+          Clausura que se disputan de marzo a diciembre, la liga ofrece una
+          experiencia única que combina deporte, integración y pasión por el
+          tenis en equipo.
         </div>
         <div></div>
       </div>
