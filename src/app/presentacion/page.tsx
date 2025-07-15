@@ -44,8 +44,8 @@ Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
     {
       title: "⭐ ¿En qué categorías puedo inscribirme?",
       text: `<strong>Domingos:</strong> Primera Libre, Segunda Libre, Tercera Libre, Cuarta Libre, Quinta Libre, Sexta Libre (con admisión). <br/> 
-      <strong>Sábados y Domingos:</strong> Damas Segunda, Damas Tercera, Damas Cuarta. <br/> 
-      <strong>Sábados:</strong> Mixto Mixto Tercera/Cuarta, Caballeros Segunda +35, Caballeros Tercera +35.`,
+      <strong>Sábados y Domingos:</strong> Damas Tercera, Damas Cuarta y Damas Quinta. <br/> 
+      <strong>Sábados:</strong> Mixto Tercera.`,
     },
     {
       title: "📈 ¿Cómo se a que categoría corresponde mi equipo?",
@@ -55,7 +55,7 @@ Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
     },
     {
       title: "🔞 ¿Hay restricciones por edad?",
-      text: `Caballeros Segunda +35 y Caballeros Tercera +35, el resto de las categorías serán +16 años.`,
+      text: `Sí. La edad mínima para participar en las categorías Libres y Damas es de 15 años cumplidos.`,
     },
     {
       title: "🌍 ¿Dónde se juega?",
@@ -96,7 +96,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
     },
     {
       title: "💵 ¿Cuál es el valor a abonar cada partido?",
-      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será definido en la comisión de clubes a la brevedad.`,
+      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será de $10 mil pesos.`,
     },
     {
       title: "😀 ¿Cómo llevo adelante la inscripción?",
