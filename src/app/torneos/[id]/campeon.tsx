@@ -24,9 +24,7 @@ const TornamentsChampion = ({ data }: { data: Props }) => {
         </div>
       </Link>
 
-      <h1 className="font-semibold text-primary text-sm lg:text-base">
-        {data.team_champion} ⭐
-      </h1>
+      <h1 className="font-bold">{data.team_champion} ⭐</h1>
     </div>
   );
 };

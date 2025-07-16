@@ -14,7 +14,7 @@ const Menu = () => {
 
   return (
     <nav
-      className="fade-in fixed top-0 left-0 w-full bg-black/40 dark:bg-white/60 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
+      className="fade-in fixed top-0 left-0 w-full bg-[#262626]/80 dark:bg-white/60 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
       id="menu"
       onClick={handleMenu}
     >
@@ -23,7 +23,7 @@ const Menu = () => {
           <li key={index}>
             <Link
               href={item.url}
-              className={`text-primary italic font-black text-[1.1rem] lg:leading-3 ${
+              className={`text-primary italic font-black ${
                 pathname === item.url ? "underline" : "hover:underline"
               }`}
             >
