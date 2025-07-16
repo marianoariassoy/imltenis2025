@@ -25,7 +25,7 @@ const page = () => {
   const data = [
     {
       title: "",
-      text: `La presente liga de clubes se desarrolla desde el mes de marzo hasta diciembre, en dos torneos (Apertura y Clausura), que se disputan los días sábados y domingos, según corresponda. Está dirigida a jugadores y jugadoras amateurs, a partir de los 15 años cumplidos.
+      text: `La presente liga de clubes se desarrolla desde el mes de marzo hasta diciembre, en dos torneos (Apertura y Clausura), que se disputan los días sábados y domingos, según corresponda. Está dirigida a jugadores y jugadoras amateurs, a partir de los 15 años.
 En cada fecha se disputarán tres encuentros entre dos equipos representantes de distintos clubes de tenis.`,
     },
     {
