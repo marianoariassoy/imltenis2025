@@ -6,7 +6,9 @@ export const metadata = {
 };
 
 const Page = async () => {
-  const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/players");
+  const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/players", {
+    cache: "no-store",
+  });
   const data = await response.json();
 
   return (
