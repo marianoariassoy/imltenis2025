@@ -2,7 +2,23 @@ import Title from "@/components/Title";
 import Filter from "./Filter";
 
 export const metadata = {
-  title: "Reglamento",
+  title: "Reglamento IML Tenis",
+  description: "Reglamento IML Tenis Clausura 2025",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://imltenis.com.ar/rankings/campeones",
+    title: "Reglamento IML Tenis",
+    description: "Reglamento IML Tenis Clausura 2025",
+    images: [
+      {
+        url: "https://imltenis.com.ar/assets/imltenis.jpg",
+        width: 500,
+        height: 500,
+        alt: "IML Tenis",
+      },
+    ],
+  },
 };
 
 const page = () => {
@@ -25,7 +41,7 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     {
       title: "Puntuación",
       text: `Cada encuentro ganado sumará un punto, es decir, ganando los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo vencedor y 1 punto al equipo rival, por lo que ahora todos los encuentros ganados suman puntos.
-      En caso de empate por puntos se desempatará por mayor cantidad de series ganadas, de persistir el empate, se desempatará por diferencia de sets y en el último caso diferencia de games. 
+      En caso de empate por puntos se desempatará por mayor cantidad de series ganadas, de persistir el empate, se desempatará por doble 1 ganados, siguiendo la diferencia de sets y en el último caso diferencia de games. 
       Todos los resultados podrán ser vistos en este sitio web.`,
     },
     {
@@ -210,6 +226,10 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
       advertir a cualquier jugador que agreda física o verbalmente a cualquier miembro de la liga. B. Cualquier
       inconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no
       lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre los participante involucrados.`,
+    },
+    {
+      title: "Walk Overs",
+      text: `El equipo que registre tres (3) walk overs en series completas quedará automáticamente descalificado de la competencia por decisión de la organización.`,
     },
     {
       title: "Límite temporal de reclamos",
