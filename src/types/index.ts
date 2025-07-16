@@ -125,6 +125,7 @@ export interface Table {
   club_image: string;
   match_won: number;
   series_won: number;
+  d1_won: number;
   sets: number;
   games: number;
   series_total: number;

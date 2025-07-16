@@ -27,6 +27,10 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
       value: "Series ganadas",
     },
     {
+      name: "D1",
+      value: "Doble 1 ganadoos",
+    },
+    {
       name: "DS",
       value: "Diferencia de sets",
     },
