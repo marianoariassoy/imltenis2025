@@ -16,7 +16,7 @@ const page = async () => {
     <section className="flex flex-col gap-y-6">
       <Title title="Torneos Anteriores" emoji="👴" />
 
-      <div className="m-auto grid text-center lg:text-left grid-cols-1 lg:grid-cols-2 gap-x-8 items-center justify-center font-medium text-sm">
+      <div className="flex flex-col text-center items-center font-medium text-sm">
         {data &&
           data
             .filter((item) => item.season !== 6)

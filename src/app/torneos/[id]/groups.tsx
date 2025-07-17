@@ -38,9 +38,14 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
       name: "DG",
       value: "Diferencia de games",
     },
+
     {
       name: "SJ",
       value: "Series jugadas",
+    },
+    {
+      name: "WO",
+      value: "Walkovers",
     },
     {
       name: "Ult. 5 series",

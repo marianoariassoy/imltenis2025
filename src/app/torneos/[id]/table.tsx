@@ -47,14 +47,13 @@ const Tabla = async ({
                     active={index < group.winners}
                   />
                 </td>
-                <td>
-                  <span className="font-bold">{item.match_won}</span>
-                </td>
+                <td className="font-bold">{item.match_won}</td>
                 <td>{item.series_won}</td>
                 <td>{item.d1_won}</td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>{item.series_total}</td>
+                <td>{item.wo}</td>
                 <td>
                   <div className="flex gap-x-2">
                     {item.series.map((item, index) => (

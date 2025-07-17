@@ -2,11 +2,11 @@ import { Info } from "../lib/icons";
 
 const Aviso = ({ text }: { text: string }) => {
   return (
-    <div className="text-secondary text-sm flex gap-x-2 mx-auto">
+    <div className="text-secondary text-sm flex gap-x-3 mx-auto">
       <span className="text-primary mt-1">
         <Info />
       </span>
-      <span> {text}</span>
+      <span>{text}</span>
     </div>
   );
 };

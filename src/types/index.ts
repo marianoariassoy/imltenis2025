@@ -126,6 +126,7 @@ export interface Table {
   match_won: number;
   series_won: number;
   d1_won: number;
+  wo: number;
   sets: number;
   games: number;
   series_total: number;
