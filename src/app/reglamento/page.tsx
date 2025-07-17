@@ -250,11 +250,7 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title
-        title="Reglamento IML Tenis Clausura 2025"
-        emoji="🤝"
-        description=""
-      />
+      <Title title="Reglamento Clausura 2025" emoji="🤝" description="" />
       <Filter data={data} />
     </section>
   );

@@ -49,7 +49,7 @@ const page = async () => {
     },
     {
       name: "Oro",
-      value: "Copas de oro",
+      value: "Campeonatos",
     },
     {
       name: "Plata",

@@ -1,7 +1,6 @@
 import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
-import { Info } from "@/lib/icons";
 
 export const metadata = {
   title: "Ranking de Clubes",
@@ -103,16 +102,6 @@ const page = async () => {
       </div>
 
       <Labels labels={labels} />
-
-      <div className="flex gap-x-2 text-sm p-3 lg:p-6 bg-black/10 rounded-xl">
-        <span className="text-primary mt-1 lg:mt-0">
-          <Info />
-        </span>
-        <span className="text-secondary whitespace-break-spaces">
-          Al final de la temporada anual los 4 clubes mejor ubicados disputarán
-          las super finales.
-        </span>
-      </div>
     </section>
   );
 };
