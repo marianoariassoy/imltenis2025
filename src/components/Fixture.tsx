@@ -6,13 +6,7 @@ import { Serie } from "@/types";
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   return (
     <section className="flex flex-col gap-y-6">
-      {title && (
-        <div>
-          <h1 className="font-bold text-primary text-center text-lg">
-            Fixture
-          </h1>
-        </div>
-      )}
+      {title && <h1 className="font-bold text-primary text-center">Fixture</h1>}
       <div className="overflow-x-auto text-sm whitespace-nowrap">
         <table className="table w-full table-auto mb-3">
           {data.length > 0 && (
