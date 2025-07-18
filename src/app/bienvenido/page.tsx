@@ -197,7 +197,7 @@ const Page = () => {
               <div className="form-control">
                 <label className="text-sm mb-2 block">
                   <span className="text-primary font-medium">
-                    Foto de perfil (sugerido)
+                    Foto de perfil (Requerido)
                   </span>
                 </label>
                 <input
