@@ -22,7 +22,6 @@ const JugadoresEquipos = async ({ id }: { id: string }) => {
   return (
     <section className="fade-in flex flex-col gap-y-3">
       <div className="flex flex-col justify-center items-center gap-x-1">
-        <span className="text-3xl">🫶🏻</span>
         <h1 className="font-semibold text-primary ">Equipos ({data.length})</h1>
       </div>
 

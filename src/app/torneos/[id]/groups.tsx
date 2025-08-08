@@ -61,7 +61,9 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
     <section className="flex flex-col gap-y-3">
       {data.map((item) => (
         <div key={item.id} className="flex flex-col gap-y-6">
-          <h1 className="font-bold text-center text-primary">{item.name}</h1>
+          <h1 className="font-bold text-center text-primary text-lg">
+            {item.name}
+          </h1>
 
           <Suspense fallback={<Loader />}>
             <Table group={item} labels={labels} type={+item.type} />
