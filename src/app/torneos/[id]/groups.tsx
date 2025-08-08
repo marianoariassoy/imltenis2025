@@ -44,6 +44,10 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
       value: "Series jugadas",
     },
     {
+      name: "FP",
+      value: "Fair Play",
+    },
+    {
       name: "WO",
       value: "Walkovers",
     },

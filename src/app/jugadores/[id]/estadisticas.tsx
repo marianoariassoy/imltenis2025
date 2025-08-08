@@ -1,3 +1,5 @@
+import Count from "./count";
+
 const estadisticas = async ({ id }: { id: string }) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/users/stats/${id}`
@@ -20,43 +22,35 @@ const estadisticas = async ({ id }: { id: string }) => {
   const percent = calcularPorcentaje(data.matches_won, data.matches_total);
 
   return (
-    <div className="w-full text-sm p-4 lg:p-6 bg-black/10 rounded-xl">
+    <div className="w-full text-sm p-4 lg:p-6 bg-black/10 rounded-xl shadow-lg">
       <table className="w-full">
         <tbody>
           <tr>
-            <td colSpan={3} className="py-2 font-semibold text-primary">
-              Efectividad {percent.toFixed(0)}%
-            </td>
-          </tr>
-          <tr>
-            <td className="py-2">
+            <td className="py-1">
               <div>Partidos jugados</div>
-              <div className="text-primary">{data.matches_total}</div>
+              <Count end={data.matches_total} duration={2} />
             </td>
             <td>
               <div>Partidos ganados</div>
-              <div className="text-primary">{data.matches_won}</div>
-            </td>
-            <td>
-              <div>Partidos perdidos</div>
-              <div className="text-primary">
-                {data.matches_total - data.matches_won}
-              </div>
+              <Count end={data.matches_won} duration={4} />
             </td>
           </tr>
           <tr>
-            <td className="py-2">
+            <td className="py-1">
               <div>Set jugados</div>
-              <div className="text-primary">{data.sets_total}</div>
+              <Count end={data.sets_total} duration={2} />
             </td>
             <td>
               <div>Set ganados</div>
-              <div className="text-primary">{data.sets_won}</div>
+              <Count end={data.sets_won} duration={4} />
             </td>
-            <td>
-              <div>Set perdidos</div>
-              <div className="text-primary">
-                {data.sets_total - data.sets_won}
+          </tr>
+          <tr>
+            <td colSpan={2} className="py-1">
+              <div>Efectividad</div>
+              <div className="font-semibold text-primary flex">
+                <Count end={+percent.toFixed(0)} duration={4} />
+                <span className="text-primary text-lg font-bold">%</span>
               </div>
             </td>
           </tr>

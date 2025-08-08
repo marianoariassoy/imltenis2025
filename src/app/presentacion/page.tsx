@@ -32,8 +32,8 @@ const Presentacion = () => {
     },
     {
       title: "📅 Fechas",
-      text: `Inicio del torneo: <strong>Sábado 16 y Domingo 17 de Agosto.</strong><br />
-Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
+      text: `Inicio del torneo: <strong>Sábado 23 y Domingo 24 de Agosto.</strong><br />
+Cierre de Inscripción: <strong>9 de Agosto.</strong>`,
     },
     {
       title: "🏆 ¿Cómo es el formato de juego y del torneo?",

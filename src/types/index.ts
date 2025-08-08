@@ -127,6 +127,7 @@ export interface Table {
   series_won: number;
   d1_won: number;
   wo: number;
+  fairplay: number;
   sets: number;
   games: number;
   series_total: number;

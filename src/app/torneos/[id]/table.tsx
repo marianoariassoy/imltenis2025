@@ -53,6 +53,7 @@ const Tabla = async ({
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>{item.series_total}</td>
+                <td>{item.fairplay}</td>
                 <td>{item.wo}</td>
                 <td>
                   <div className="flex gap-x-2">

@@ -11,6 +11,28 @@ import Button from "@/components/Button";
 import Loader from "@/components/Loader2";
 import Error from "./Error";
 
+export const metadata = {
+  title: "Bienvenido a IML Tenis",
+  description:
+    "Presentación Torneo Clausura 2025 de la liga de clubes IML Tenis",
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: "https://imltenis.com.ar/bienvenido",
+    title: "Bienvenido a IML Tenis",
+    description:
+      "Formulario de registro de jugadores de la liga de clubes IML Tenis",
+    images: [
+      {
+        url: "https://imltenis.com.ar/assets/imltenis.jpg",
+        width: 500,
+        height: 500,
+        alt: "IML Tenis",
+      },
+    ],
+  },
+};
+
 interface User {
   name: string;
   lastname: string;
