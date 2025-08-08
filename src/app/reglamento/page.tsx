@@ -46,7 +46,8 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     },
     {
       title: "Formación",
-      text: `En las categorías en las cuales se disputen 1 partido de single y 2 partidos de dobles, de los 4 doblistas convocados para la serie el de mejor ranking deberá ser asignado obligatoriamente para jugar el doble 1.`,
+      text: `De los cuatro doblistas convocados para la serie, el jugador con mejor ranking deberá ser asignado obligatoriamente al Doble 1.
+En la categoría Mixto Tercera, el Doble 1 deberá ser disputado por el jugador y la jugadora con mejor ranking de los jugadores convocados.`,
     },
     {
       title: "Pelotas",
