@@ -99,13 +99,15 @@ const Juegos = async ({ id }: { id: string }) => {
                 <td>{item.type}</td>
                 <td>{item.score}</td>
                 <td>
-                  <div className="h-8 w-8 rounded-full flex justify-center items-center border border-primary text-primary font-semibold">
-                    {item.result}
-                  </div>
+                  {item.playerhome1_id > 0 && item.playeraway1_id > 0 ? (
+                    <div className="h-8 w-8 rounded-full flex justify-center items-center border border-primary text-primary font-semibold">
+                      Empate
+                    </div>
+                  ) : (
+                    "- -"
+                  )}
                 </td>
-                <td>
-                  <div>{item.status}</div>
-                </td>
+                <td>{item.status}</td>
               </tr>
             ))}
           </tbody>

@@ -38,18 +38,17 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
       name: "DG",
       value: "Diferencia de games",
     },
-
     {
       name: "SJ",
       value: "Series jugadas",
     },
     {
       name: "FP",
-      value: "Fair Play",
+      value: "Puntos Fair Play",
     },
     {
       name: "WO",
-      value: "Walkovers",
+      value: "Walkovers (series)",
     },
     {
       name: "Ult. 5 series",

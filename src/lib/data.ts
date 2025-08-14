@@ -8,12 +8,18 @@ export const categories = [
     slug: "mixto-tercera",
     id: 12,
   },
-  { name: "Primera Libre", url: "/torneos/67", slug: "primera-libre", id: 1 },
-  { name: "Segunda Libre", url: "/torneos/66", slug: "segunda-libre", id: 2 },
-  { name: "Tercera Libre", url: "/torneos/65", slug: "tercera-libre", id: 3 },
-  { name: "Cuarta Libre", url: "/torneos/64", slug: "cuarta-libre", id: 4 },
-  { name: "Quinta Libre", url: "/torneos/63", slug: "quinta-libre", id: 5 },
-  { name: "Sexta Libre", url: "/torneos/62", slug: "sexta-libre", id: 11 },
+  { name: "Primera Libre", url: "/soon", slug: "primera-libre", id: 1 },
+  { name: "Segunda Libre", url: "/soon", slug: "segunda-libre", id: 2 },
+  { name: "Tercera Libre", url: "/soon", slug: "tercera-libre", id: 3 },
+  { name: "Cuarta Libre", url: "/soon", slug: "cuarta-libre", id: 4 },
+  { name: "Quinta Libre", url: "/soon", slug: "quinta-libre", id: 5 },
+  { name: "Sexta Libre", url: "/soon", slug: "sexta-libre", id: 11 },
+  // { name: "Primera Libre", url: "/torneos/67", slug: "primera-libre", id: 1 },
+  // { name: "Segunda Libre", url: "/torneos/66", slug: "segunda-libre", id: 2 },
+  // { name: "Tercera Libre", url: "/torneos/65", slug: "tercera-libre", id: 3 },
+  // { name: "Cuarta Libre", url: "/torneos/64", slug: "cuarta-libre", id: 4 },
+  // { name: "Quinta Libre", url: "/torneos/63", slug: "quinta-libre", id: 5 },
+  // { name: "Sexta Libre", url: "/torneos/62", slug: "sexta-libre", id: 11 },
 ];
 
 export const menu = [
@@ -25,5 +31,5 @@ export const menu = [
   { name: "Jugadores", url: "/jugadores" },
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },
   { name: "IML Weekend", url: "/weekend" },
-  { name: "Nosotros", url: "/nosotros" },
+  // { name: "Nosotros", url: "/nosotros" },
 ];

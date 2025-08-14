@@ -70,7 +70,8 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           subtitle="Local"
         />
         <div className="flex w-16 items-center justify-center font-semibold text-3xl pt-8 text-primary">
-          {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>}
+          <span>{data.score}</span>
+          {/* {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>} */}
         </div>
         <Item
           link={`/equipos/${data.away_id}`}
@@ -80,7 +81,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         />
       </div>
 
-      {data.winner > 0 ? <Juegos id={id} /> : null}
+      <Juegos id={id} />
     </section>
   );
 };
