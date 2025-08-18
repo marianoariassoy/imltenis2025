@@ -46,8 +46,7 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     },
     {
       title: "Formación",
-      text: `De los cuatro doblistas convocados para la serie, el jugador con mejor ranking deberá ser asignado obligatoriamente al Doble 1.
-En la categoría Mixto Tercera, el Doble 1 deberá ser disputado por el jugador y la jugadora con mejor ranking de los jugadores convocados.`,
+      text: `De los cuatro doblistas convocados para la serie, el jugador con mejor ranking deberá ser asignado obligatoriamente al Doble 1.`,
     },
     {
       title: "Pelotas",
@@ -145,7 +144,7 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
       text: `Los partidos suspendidos por razones climáticas, y/o algún otro motivo, ya iniciados, serán reprogramados por esta asociación, con los parciales y los jugadores participantes. En caso de no presentase alguno de los jugadores en la fecha reprogramada, el parcial en disputa será considerado perdido por abandono, debiendo continuar los demás que faltasen terminar.`,
     },
     {
-      title: "Inpuntualidad de jugadores",
+      title: "Impuntualidad de jugadores",
       text: `El máximo de tolerenacia será de 15 minutos, pasados los cuales se considerará como abandono del partido. El equipo que abandone un partido, deberá avisar a la organización por escrito al chat de capitanes de WhatsApp, y deberá correr con los gastos que correspondan al equipo rival, como ser alquiler de canchas.`,
     },
     {
