@@ -53,6 +53,15 @@ const Tabla = async ({
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>{item.series_total}</td>
+                <td>
+                  {item.series_total > 0
+                    ? (
+                        (Number(item.match_won) /
+                          (Number(item.series_total) * 3)) *
+                        100
+                      ).toFixed(2)
+                    : 0}
+                </td>
                 <td>{item.fairplay}</td>
                 <td>{item.wo}</td>
                 <td>

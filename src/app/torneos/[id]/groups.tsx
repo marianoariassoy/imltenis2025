@@ -43,6 +43,10 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
       value: "Series jugadas",
     },
     {
+      name: "PR",
+      value: "Promedio (porcentaje)",
+    },
+    {
       name: "FP",
       value: "Puntos Fair Play",
     },
