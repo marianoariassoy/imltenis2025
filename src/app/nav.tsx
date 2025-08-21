@@ -23,7 +23,7 @@ const Menu = () => {
           <li key={index}>
             <Link
               href={item.url}
-              className={`text-primary italic font-black ${
+              className={`text-primary italic font-black lg:text-lg ${
                 pathname === item.url ? "underline" : "hover:underline"
               }`}
             >
@@ -32,9 +32,9 @@ const Menu = () => {
           </li>
         ))}
       </ul>
-      <ul className="flex flex-col font-medium lg:text-base">
+      <ul className="flex flex-col font-medium text-sm lg:text-base">
         {menu.map((item, index) => (
-          <li key={index + 12}>
+          <li key={index + 20}>
             <Link
               href={item.url}
               className={

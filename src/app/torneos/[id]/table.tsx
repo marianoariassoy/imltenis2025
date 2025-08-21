@@ -47,7 +47,13 @@ const Tabla = async ({
                     active={index < group.winners}
                   />
                 </td>
-                <td className="font-bold">{item.match_won}</td>
+                <td
+                  className={`font-bold ${
+                    index < group.winners ? "text-primary" : null
+                  }`}
+                >
+                  {item.match_won}
+                </td>
                 <td>{item.series_won}</td>
                 <td>{item.d1_won}</td>
                 <td>{item.sets}</td>
@@ -59,7 +65,7 @@ const Tabla = async ({
                         (Number(item.match_won) /
                           (Number(item.series_total) * 3)) *
                         100
-                      ).toFixed(2)
+                      ).toFixed(0)
                     : 0}
                 </td>
                 <td>{item.fairplay}</td>
