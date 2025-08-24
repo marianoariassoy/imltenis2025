@@ -6,7 +6,13 @@ import Labels from "@/components/Labels";
 import Info from "./info";
 import Fixture from "./fixture-group";
 
-const groups = async ({ id_tournament }: { id_tournament: string }) => {
+const groups = async ({
+  id_tournament,
+  mixto,
+}: {
+  id_tournament: string;
+  mixto: boolean;
+}) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id_tournament}/groups`
   );
@@ -60,6 +66,46 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
     },
   ];
 
+  const labelsMxto = [
+    {
+      name: "Equipo",
+      value: "",
+    },
+    {
+      name: "Pts.",
+      value: "Puntos (parciales)",
+    },
+    {
+      name: "D1",
+      value: "Doble 1 ganadoos",
+    },
+    {
+      name: "DS",
+      value: "Diferencia de sets",
+    },
+    {
+      name: "DG",
+      value: "Diferencia de games",
+    },
+    {
+      name: "SJ",
+      value: "Series jugadas",
+    },
+
+    {
+      name: "FP",
+      value: "Puntos Fair Play",
+    },
+    {
+      name: "WO",
+      value: "Walkovers (series)",
+    },
+    {
+      name: "Ult. 5 series",
+      value: "",
+    },
+  ];
+
   return (
     <section className="flex flex-col gap-y-3">
       {data.map((item) => (
@@ -69,7 +115,11 @@ const groups = async ({ id_tournament }: { id_tournament: string }) => {
           </h1>
 
           <Suspense fallback={<Loader />}>
-            <Table group={item} labels={labels} type={+item.type} />
+            <Table
+              group={item}
+              labels={mixto ? labelsMxto : labels}
+              type={+item.type}
+            />
           </Suspense>
 
           {+item.type === 1 && <Fixture id_group={item.id} title={false} />}

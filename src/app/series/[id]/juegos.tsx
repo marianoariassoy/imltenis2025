@@ -101,7 +101,7 @@ const Juegos = async ({ id }: { id: string }) => {
                 <td>
                   {item.playerhome1_id > 0 && item.playeraway1_id > 0 ? (
                     <div className="h-8 w-8 rounded-full flex justify-center items-center border border-primary text-primary font-semibold">
-                      Empate
+                      {item.result}
                     </div>
                   ) : (
                     "- -"

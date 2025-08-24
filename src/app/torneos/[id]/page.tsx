@@ -51,7 +51,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   const { id } = await params;
   const data = await getServerSideProps(id);
   if (!data) return null;
-
+  console.log(data);
   return (
     <section className="flex flex-col gap-y-6">
       <Title title={data.name + " " + data.season} emoji="🏆" />
@@ -59,7 +59,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       {data.team_champion_id && <Campeon data={data} />}
 
       <Suspense fallback={<Loader />}>
-        <Groups id_tournament={id} />
+        <Groups id_tournament={id} mixto={+data.mode === 3 ? true : false} />
       </Suspense>
 
       <Suspense fallback={<Loader />}>
