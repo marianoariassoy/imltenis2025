@@ -55,40 +55,12 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
       pelota completa.`,
     },
     {
-      title: "Formación Incompleta",
-      text: `Si el equipo completo o algún jugador no se presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 24 hs. al capitán rival por escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al equipo local, como ser alquiler de canchas. 
-      Se podrá presentar WO tanto de single y/o de doble 2, pudiéndose disputar el resto de el o los parciales.`,
-    },
-    {
-      title: "Mala formación",
-      text: `En caso de incurrir en una mala formación de las parejas de dobles, los puntos perdidos serán exclusivamente los de los paciales involucrados (doble 1 y doble 2). El partido de single no se verá afectado por esta sanción, por lo que se mantendrá el resultado jugado en cancha.`,
-    },
-    {
       title: "Días y Horarios",
       text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 12 y las 17 hs. y los domingos entre las 9 y las 17 hs.
       La categoría Caballeros Segunda +35, Caballeros Tercera +35 y Mixto Tercera, jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 12 y las 17 hs. 
       El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 17 hs.
 
       Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 17:00 hs. del miércoles de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`,
-    },
-    {
-      title: "Lista de buena fe",
-      text: `El mejor jugador del equipo deberá ir primero en la lista, siguiendo este criterio para el resto de la lista, siendo el último jugador el de más bajo nivel.
-      Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que consideren correcta antes del comienzo del torneo. En las categorías con límite de edad, tercera y segunda +35, se considerará que el jugador está dentro de la categoría, al cumplir años dentro del año calendario de inicio del torneo.`,
-    },
-    {
-      title: "Cantidad de jugadores por equipo",
-      text: `El límite de integrantes de la lista de buena fe es de 20 jugadores.`,
-    },
-    {
-      title: "Equivalencias de niveles en otros torneos",
-      text: `Quinta Libre y Cuarta Damas: Jugadores categoría 125, C. 
-      Cuarta Libre, Tercera +35, 
-      Tercera Damas: Jugadores categoría 250 a 500, B2, B-. 
-      Tercera Libre: Jugadores categoría 500 a 750, B1 
-      Segunda Libre: Jugadores categoría 750 a 1000, A1, A2 
-      Primera Libre: Jugadores categoría 1000, Super A.
-      `,
     },
     {
       title: "Planillas",
@@ -105,12 +77,21 @@ Además, será obligatorio conservar la planilla en papel firmada por ambos capi
 
 El incumplimiento de la carga por parte del capitán del equipo ganador de la serie resultará en la anulación de los puntos obtenidos por su equipo, mientras que el equipo rival mantendrá los puntos ganados en cancha. No habrá posibilidad de reclamo una vez aplicada la sanción.`,
     },
-
     {
       title: "Tercer tiempo",
       text: `Si bien no son obligatorios, desde la organización lo alentamos y valoramos profundamente cuando se realizan. Creemos que son una parte fundamental del espíritu del torneo, ya que brindan un espacio para compartir entre jugadores, más allá del resultado deportivo.
 Estos momentos ayudan a fortalecer los lazos entre clubes, fomentan el respeto, la camaradería y crean un ambiente mucho más cálido y humano en la competencia.
 Por eso, seguimos promoviendo los terceros tiempos como un componente esencial de cada jornada, y alentamos a los equipos locales a organizar algo simple pero significativo para recibir a sus visitantes, compartiendo los gastos. Un pequeño gesto puede dejar una gran impresión, especialmente en fechas donde algunos equipos deben hacer largos viajes.`,
+    },
+    {
+      title: "Formación Incompleta",
+      text: `Si el equipo completo o algún jugador no se presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 24 hs. al capitán rival por escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al equipo local, como ser alquiler de canchas. 
+      Se podrá presentar WO tanto de single y/o de doble 2, pudiéndose disputar el resto de el o los parciales.`,
+    },
+    {
+      title: "Coaching",
+      text: `Los capitanes pueden intercambiar pareceres, comentarios
+      y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el capitán no estuviere dentro de la cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún jugador rival. Cuando el capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función de coaching en otra persona. Y responderá en todo por ella.`,
     },
     {
       title: "Retiro",
@@ -119,18 +100,10 @@ Ejemplo Si al momento de la interrupción el resultado parcial es 63 21, el resu
 Este último resultado es el que se deberá tomarse en cuenta en la confección de un desempate por porcentajes de set o games.`,
     },
     {
-      title: "Coaching",
-      text: `Los capitanes pueden intercambiar pareceres, comentarios
-      y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el capitán no estuviere dentro de la cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún jugador rival. Cuando el capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función de coaching en otra persona. Y responderá en todo por ella.`,
-    },
-    {
       title: "Capitanía",
-      text: ` La organización se reserva el derecho a solicitar cambio de capitanía en caso de considerarlo necesario o bien de solicitar la incorporación de un subcapitan al chat de capitanes en reemplazo del capitán, a efectos de facilitar la comunicación y gestionar de manera más diligente las cuestiones administrativas referentes a la organización de cada serie a desarrollarse. Este sub capitán/a deberá ser un jugador/a integrante del plantel.`,
+      text: `La organización se reserva el derecho a solicitar cambio de capitanía en caso de considerarlo necesario o bien de solicitar la incorporación de un subcapitan al chat de capitanes en reemplazo del capitán, a efectos de facilitar la comunicación y gestionar de manera más diligente las cuestiones administrativas referentes a la organización de cada serie a desarrollarse. Este sub capitán/a deberá ser un jugador/a integrante del plantel.`,
     },
-    {
-      title: "Feriados largos",
-      text: `Queda a criterio de la organización la programación de partidos en dichos días.`,
-    },
+
     {
       title: "En caso de lluvia",
       text: `El equipo local deberá avisar como mínimo dos horas antes del horario del partido al chat de capitanes de WhatsApp que sus canchas están en condiciones para jugar. Pasado este límite, el equipo visitante no está en la obligación de aceptar ir a jugar.
@@ -165,6 +138,10 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
       final.`,
     },
     {
+      title: "Feriados largos",
+      text: `Queda a criterio de la organización la programación de partidos en dichos días.`,
+    },
+    {
       title: "Alquiler de canchas",
       text: `La presente es una liga que reúne a la mayoría de clubes deportivos cuyos ingresos provienen del
       cobro por el uso de dichos espacios. Cada jugador debe abonar cuando le toca jugar ya sea de local o de
@@ -191,6 +168,25 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
       Esta posibilidad solo podrá ser concedida por una vez, por torneo, y de manera excepcional. 
       Se hace saber que NO  es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. 
       En caso que algún club no haya hecho uso de dicha posibilidad dentro de un campeonato, pero que la organización encuentre dificultades para otorgarles dicha excepción habida cuenta de retrasos que complican el normal  desarrollo del torneo, la organización podrá negar dicha posibilidad mediante una simple notificación por razones organizativas, la cual será inapelable.`,
+    },
+    {
+      title: "Lista de buena fe",
+      text: `El mejor jugador del equipo deberá ir primero en la lista, siguiendo este criterio para el resto de la lista, siendo el último jugador el de más bajo nivel.
+      Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que consideren correcta antes del comienzo del torneo. En las categorías con límite de edad, tercera y segunda +35, se considerará que el jugador está dentro de la categoría, al cumplir años dentro del año calendario de inicio del torneo.`,
+    },
+    {
+      title: "Cantidad de jugadores por equipo",
+      text: `El límite de integrantes de la lista de buena fe es de 20 jugadores.`,
+    },
+    {
+      title: "Equivalencias de niveles en otros torneos",
+      text: `Quinta Libre y Cuarta Damas: Jugadores categoría 125, C. 
+      Cuarta Libre, Tercera +35, 
+      Tercera Damas: Jugadores categoría 250 a 500, B2, B-. 
+      Tercera Libre: Jugadores categoría 500 a 750, B1 
+      Segunda Libre: Jugadores categoría 750 a 1000, A1, A2 
+      Primera Libre: Jugadores categoría 1000, Super A.
+      `,
     },
     {
       title: "Auditoria de lista de buena fe rivales",
@@ -229,6 +225,11 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
       text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente o inferior en el actual torneo.`,
     },
     {
+      title: "Mala formación",
+      text: `En caso de incurrir en una mala formación de las parejas de dobles, los puntos perdidos serán exclusivamente los de los paciales involucrados (doble 1 y doble 2). El partido de single no se verá afectado por esta sanción, por lo que se mantendrá el resultado jugado en cancha.`,
+    },
+
+    {
       title: "Penalizaciones",
       text: `A. La organización se reserva el derecho de sancionar y/o
       advertir a cualquier jugador que agreda física o verbalmente a cualquier miembro de la liga. B. Cualquier
@@ -252,7 +253,7 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
     },
     {
       title: "",
-      text: `Ultima actualización: Julio 2025`,
+      text: `Ultima actualización: Agosto 2025`,
     },
   ];
 
