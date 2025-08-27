@@ -91,24 +91,32 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
       `,
     },
     {
-      title: "Resultados y Formación",
+      title: "Planillas",
+      text: `La confección de la planilla estará a cargo del capitán del equipo local y deberá ser completada conjuntamente por ambos equipos antes del inicio de la serie.
+Como buena práctica, se recomienda doblar la hoja de la planilla a la mitad, de modo que en cada lado quede visible la formación de cada equipo.
+Al finalizar los encuentros, deberán registrarse los resultados correspondientes y la planilla deberá ser firmada por ambos capitanes.
+La ausencia de la planilla o la falta de algún dato requerido podrá dar lugar a la posible nulidad de los partidos disputados en caso de presentarse un incidente entre los equipos.`,
+    },
+    {
+      title: "Carga de resultados",
       text: `El capitán del equipo ganador será el encargado de cargar el resultado de la serie en capitanes.imltenis.com.ar antes del Martes a las 12:00 hs. de cada semana. Una vez realizada la carga, deberá compartir el enlace generado por el sistema en el grupo de WhatsApp de capitanes, indicando la serie correspondiente.  
 
 Además, será obligatorio conservar la planilla en papel firmada por ambos capitanes, ya que en caso de cualquier reclamo, hasta 48 hs. desde el inicio de la serie, esta será el único documento válido para verificar la información.  
 
 El incumplimiento de la carga por parte del capitán del equipo ganador de la serie resultará en la anulación de los puntos obtenidos por su equipo, mientras que el equipo rival mantendrá los puntos ganados en cancha. No habrá posibilidad de reclamo una vez aplicada la sanción.`,
     },
-    {
-      title: "Retiro",
-      text: `En caso de que un partido se viera interrumpido por el retiro de uno de los jugadores, el resultado se complementará a favor del ganador con todos los games que correspondan para llegar al resultado final 
-Ejemplo Si al momento de la interrupción el resultado parcial es 63 21, el resultado final será 63 61
-Este último resultado es el que se deberá tomarse en cuenta en la confección de un desempate por porcentajes de set o games.`,
-    },
+
     {
       title: "Tercer tiempo",
       text: `Si bien no son obligatorios, desde la organización lo alentamos y valoramos profundamente cuando se realizan. Creemos que son una parte fundamental del espíritu del torneo, ya que brindan un espacio para compartir entre jugadores, más allá del resultado deportivo.
 Estos momentos ayudan a fortalecer los lazos entre clubes, fomentan el respeto, la camaradería y crean un ambiente mucho más cálido y humano en la competencia.
 Por eso, seguimos promoviendo los terceros tiempos como un componente esencial de cada jornada, y alentamos a los equipos locales a organizar algo simple pero significativo para recibir a sus visitantes, compartiendo los gastos. Un pequeño gesto puede dejar una gran impresión, especialmente en fechas donde algunos equipos deben hacer largos viajes.`,
+    },
+    {
+      title: "Retiro",
+      text: `En caso de que un partido se viera interrumpido por el retiro de uno de los jugadores, el resultado se complementará a favor del ganador con todos los games que correspondan para llegar al resultado final 
+Ejemplo Si al momento de la interrupción el resultado parcial es 63 21, el resultado final será 63 61
+Este último resultado es el que se deberá tomarse en cuenta en la confección de un desempate por porcentajes de set o games.`,
     },
     {
       title: "Coaching",
