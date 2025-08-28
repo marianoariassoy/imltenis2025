@@ -89,21 +89,20 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
       Se podrá presentar WO tanto de single y/o de doble 2, pudiéndose disputar el resto de el o los parciales.`,
     },
     {
-      title: "Coaching",
-      text: `Los capitanes pueden intercambiar pareceres, comentarios
-      y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el capitán no estuviere dentro de la cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún jugador rival. Cuando el capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función de coaching en otra persona. Y responderá en todo por ella.`,
-    },
-    {
       title: "Retiro",
       text: `En caso de que un partido se viera interrumpido por el retiro de uno de los jugadores, el resultado se complementará a favor del ganador con todos los games que correspondan para llegar al resultado final 
 Ejemplo Si al momento de la interrupción el resultado parcial es 63 21, el resultado final será 63 61
 Este último resultado es el que se deberá tomarse en cuenta en la confección de un desempate por porcentajes de set o games.`,
     },
     {
+      title: "Coaching",
+      text: `Los capitanes pueden intercambiar pareceres, comentarios
+      y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el capitán no estuviere dentro de la cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún jugador rival. Cuando el capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función de coaching en otra persona. Y responderá en todo por ella.`,
+    },
+    {
       title: "Capitanía",
       text: `La organización se reserva el derecho a solicitar cambio de capitanía en caso de considerarlo necesario o bien de solicitar la incorporación de un subcapitan al chat de capitanes en reemplazo del capitán, a efectos de facilitar la comunicación y gestionar de manera más diligente las cuestiones administrativas referentes a la organización de cada serie a desarrollarse. Este sub capitán/a deberá ser un jugador/a integrante del plantel.`,
     },
-
     {
       title: "En caso de lluvia",
       text: `El equipo local deberá avisar como mínimo dos horas antes del horario del partido al chat de capitanes de WhatsApp que sus canchas están en condiciones para jugar. Pasado este límite, el equipo visitante no está en la obligación de aceptar ir a jugar.
@@ -136,6 +135,11 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
       Transcurrido dicho límite temporal, y no habiendo posibilidades de comenzar la serie, los jugadores visitantes podrán anoticiar a su capitán de dicha circunstancia y éste último en caso de existir algún impedimento de sus jugadores para iniciar la serie con posterioridad a dicho horario, deberá informar del hecho en el chat de capitanes. Informada dicha circunstancia, la organización podrá comunicarse con el responsable del equipo local y evaluar si la demora obedece a un motivo atendible para exceptuar (espera de ambulancia por alguna afectación sufrida por algún jugador, lluvia o chaparrón que obligó a demorar la serie previa, o similares) y en caso contrario podrá el equipo visitante reclamar el punto, o los puntos que no comenzaron en tiempo y forma.
       La organización siempre evaluará la circunstancia de atraso en el inicio de la serie y tendrá la decisión
       final.`,
+    },
+    {
+      title: "Dobles invertidos",
+      text: `En caso de disputarse una serie con los dobles invertidos (Doble 1 vs. Doble 2 de ambos equipos), prevalecerá la designación de cancha consignada en la planilla oficial, siempre que esta haya sido completada y firmada por ambos capitanes antes del inicio de los partidos.
+Si no existiera dicha indicación previa, ambos partidos de dobles deberán repetirse durante la misma fase del torneo, manteniendo idéntica formación en cada pareja, en la misma sede. En caso de no cumplirse esta condición, los resultados de ambos partidos quedarán anulados.`,
     },
     {
       title: "Feriados largos",
