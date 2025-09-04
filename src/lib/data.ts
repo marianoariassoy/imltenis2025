@@ -24,6 +24,6 @@ export const menu = [
   { name: "Reglamento", url: "/reglamento" },
   { name: "Jugadores", url: "/jugadores" },
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },
-  { name: "IML Weekend", url: "/weekend" },
-  // { name: "Nosotros", url: "/nosotros" },
+  // { name: "IML Weekend", url: "/weekend" },
+  { name: "Nosotros", url: "/nosotros" },
 ];

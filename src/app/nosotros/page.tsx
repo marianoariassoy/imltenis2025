@@ -11,14 +11,30 @@ const page = () => {
 
       <div className="flex flex-col gap-y-6 px-6 text-center max-w-2xl mx-auto">
         <div>
-          La Liga de Clubes IML Tenis es una de las competencias interclubes más
-          importantes de Argentina, con la participación de una gran cantidad de
-          equipos provenientes de las zonas norte y oeste del Gran Buenos Aires.
-          Cada temporada convoca a cientos de jugadores y jugadoras amateurs,
-          que representan a sus clubes en un ambiente competitivo organizado y
-          con gran espíritu deportivo. Con torneos Apertura y Clausura que se
-          disputan de marzo a diciembre, la liga ofrece una experiencia única
-          que combina deporte, integración y pasión por el tenis en equipo.
+          En Argentina, el deporte ocupa un lugar central en la vida
+          comunitaria, y los clubes constituyen una de las instituciones
+          sociales más representativas. <br />
+          <br />
+          Un club no se limita a la práctica deportiva: es un{" "}
+          <strong>espacio de encuentro, integración y pertenencia </strong> que
+          transmite valores, fortalece vínculos y genera identidad colectiva.{" "}
+          <br />
+          <br />
+          En este contexto, el tenis —tradicionalmente concebido como un deporte
+          individual— adquiere una nueva dimensión a través de la competencia
+          interclubes. Representar a una institución implica no solo competir,
+          sino también{" "}
+          <strong>
+            vivir una experiencia compartida que combina deporte, compromiso y
+            sentido de comunidad.
+          </strong>
+          <br />
+          <br />
+          <strong>IML Tenis</strong> se propone promover y consolidar estos
+          valores, ofreciendo un marco competitivo que, más allá de los
+          resultados deportivos, brinde a cada jugador, capitán y equipo una
+          experiencia enriquecedora, sustentada en la pasión, el respeto y la
+          pertenencia.
         </div>
       </div>
     </section>
