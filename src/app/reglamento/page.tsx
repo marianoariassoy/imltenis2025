@@ -147,11 +147,8 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
     },
     {
       title: "Alquiler de canchas",
-      text: `La presente es una liga que reúne a la mayoría de clubes deportivos cuyos ingresos provienen del
-      cobro por el uso de dichos espacios. Cada jugador debe abonar cuando le toca jugar ya sea de local o de
-      visitante una suma fijada por la organización. Ese dinero se abona en el club donde se desarrolla la serie.
-      Aquel equipo que presente formación incompleta sin haber avisado con el mínimo de 24hs en el chat de capitanes, deberá abonar igualmente el costo completo en concepto de alquiler de cancha. Aquellos emprendimientos urbanísticos que no acostumbran a cobrar el alquiler por el uso de las canchas en razón que los propietarios la sostienen mediante el pago de las expensas, tienen el mismo derecho a cobrarlas y utilizar el dinero recaudado en las localias para afrontar el costo de su participación cuando jueguen de visitantes. Queda igualmente a criterio de los mismos el cobro a los equipos visitantes. La única manera de evitar el pago del alquiler de las canchas es avisando 24hs antes de la ausencia, en cuyo caso el club que será local tiene el tiempo suficiente de disponer de la misma para alquilarla a terceros.
-      El costo fijado en concepto de alquiler de cancha será actualizado periódicamente por esta organización con el fin de mantenerlo acorde a la necesidad de los clubes.`,
+      text: `La presente es una liga que reúne a la mayoría de clubes deportivos cuyos ingresos provienen del cobro por el uso de dichos espacios. Cada jugador debe abonar cuando le toca jugar ya sea de local o devisitante una suma fijada por la organización. Ese dinero se abona en el club donde se desarrolla la serie.
+      Aquel equipo que presente formación incompleta sin haber avisado con el mínimo de 24hs en el chat de capitanes, deberá abonar igualmente el costo correspondiente en concepto de alquiler de cancha. Aquellos emprendimientos urbanísticos que no acostumbran a cobrar el alquiler por el uso de las canchas en razón que los propietarios la sostienen mediante el pago de las expensas, tienen el mismo derecho a cobrarlas y utilizar el dinero recaudado en las localias para afrontar el costo de su participación cuando jueguen de visitantes. Queda igualmente a criterio de los mismos el cobro a los equipos visitantes. La única manera de evitar el pago del alquiler de las canchas es avisando 24hs antes de la ausencia, en cuyo caso el club que será local tiene el tiempo suficiente de disponer de la misma para alquilarla a terceros.`,
     },
     {
       title: "Instalaciones necesarias",
