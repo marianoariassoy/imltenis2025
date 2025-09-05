@@ -25,8 +25,8 @@ const page = () => {
   const data = [
     {
       title: "",
-      text: `La presente liga de clubes se desarrolla desde el mes de marzo hasta diciembre, en dos torneos (Apertura y Clausura), que se disputan los días sábados y domingos, según corresponda. Está dirigida a jugadores y jugadoras amateurs, a partir de los 15 años.
-En cada fecha se disputarán tres encuentros entre dos equipos representantes de distintos clubes de tenis.`,
+      text: `La presente liga de clubes se desarrolla desde el mes de marzo hasta diciembre, en dos torneos (Apertura y Clausura), que se disputan los días sábados y domingos, según corresponda. Está dirigida a jugadores y jugadoras amateurs.
+En cada fecha se disputarán tres o dos encuentros entre dos equipos representantes de distintos clubes de tenis.`,
     },
     {
       title: "Modalidad de juego",
@@ -161,17 +161,15 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
     },
     {
       title: "Clubes con 2 canchas",
-      text: `En caso de disputarse una serie en un club con  dos canchas, cada jugador solo podrá disputar un encuentro en una misma serie. La serie se desarrollará en dos tandas que deben jugarse una a continuación de la otra, sin excepcion. La segunda tanda deberá comenzar no despues de las 17hs.
+      text: `En caso de disputarse una serie en un club con dos canchas, cada jugador podrá participar en un único encuentro dentro de la misma serie. La serie deberá desarrollarse en dos tandas consecutivas, sin excepción, iniciándose la segunda tanda no más tarde de las 17:00 horas.
 
-      Siempre debe programarse la serie evitando disputar en primer turno el doble 2 sin estar acompañado del doble 1, de esta manera evitando posibles WO de doble 1 de ultimo momento, que de esa manera anularía la serie. `,
+Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute en el primer turno sin estar acompañado por el Doble 1, a fin de prevenir posibles walkovers (WO) de último momento en el Doble 1, lo que provocaría la anulación de la serie. `,
     },
     {
       title: "Excepciones a la programación",
-      text: `Cuando por coincidencia de fechas con
-      la realización del circuito de tenis algún club tenga compromisos asumidos con anterioridad, podrá solicitar a  esta asociación, a considerar, la no programación de partidos, la misma deberá ser presentada con anterioridad a  la realización de la programación oficial e indicará fechas ciertas de los compromisos asumidos.
+      text: `Cuando por coincidencia de fechas con la realización del circuito de tenis algún club tenga compromisos asumidos con anterioridad, podrá solicitar a esta asociación, a considerar, la no programación de partidos, la misma deberá ser presentada con anterioridad a la realización de la programación oficial e indicará fechas ciertas de los compromisos asumidos.
       Esta posibilidad solo podrá ser concedida por una vez, por torneo, y de manera excepcional. 
-      Se hace saber que NO  es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. 
-      En caso que algún club no haya hecho uso de dicha posibilidad dentro de un campeonato, pero que la organización encuentre dificultades para otorgarles dicha excepción habida cuenta de retrasos que complican el normal  desarrollo del torneo, la organización podrá negar dicha posibilidad mediante una simple notificación por razones organizativas, la cual será inapelable.`,
+      Se hace saber que NO es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. `,
     },
     {
       title: "Lista de buena fe",
@@ -180,7 +178,7 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
     },
     {
       title: "Cantidad de jugadores por equipo",
-      text: `El límite de integrantes de la lista de buena fe es de 20 jugadores.`,
+      text: `El límite de integrantes de la lista de buena fe es de 6 a 20 jugadores.`,
     },
     {
       title: "Equivalencias de niveles en otros torneos",
@@ -204,7 +202,6 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
       title: "Dos o más equipos por división",
       text: `Cuando un club tenga dos o más equipos en la misma categoría, éstos se considerarán como equipos distintos, los jugadores de estos equipos no podrán jugar en ningún otro equipo de la misma categoría a la que pertenezcan.`,
     },
-
     {
       title: "Ascenso de equipos",
       text: `El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando las necesidades únicas de cada categoría y promoviendo un ambiente competitivo saludable para todos.
@@ -214,11 +211,11 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
     },
     {
       title: "Descenso de equipos",
-      text: `Los equipos que sean afectados por un descenso deberán participar en una categoría inmediatamente inferior con todos sus jugadores, con excepción de los jugadores que hayan finalizado el torneo con una diferencia de partidos ganados +3 o superior.`,
+      text: `Los equipos que desciendan deberán participar en la categoría inmediatamente inferior con la totalidad de sus jugadores, a excepción de aquellos que hayan finalizado el torneo con un balance positivo de +3 o superior en partidos ganados.`,
     },
     {
       title: "Descenso de jugadores",
-      text: `Un jugador podrá descender a una categoría inmediatamente inferior de forma voluntaria al inicio del torneo cuando su diferencia de partidos ganados sea -3 o inferior`,
+      text: `Un jugador podrá descender voluntariamente a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que su balance de partidos ganados y perdidos en la categoría actual sea de -3 o inferior.`,
     },
     {
       title: "Ascensos de jugadores",
@@ -232,7 +229,6 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
       title: "Mala formación",
       text: `En caso de incurrir en una mala formación de las parejas de dobles, los puntos perdidos serán exclusivamente los de los paciales involucrados (doble 1 y doble 2). El partido de single no se verá afectado por esta sanción, por lo que se mantendrá el resultado jugado en cancha.`,
     },
-
     {
       title: "Penalizaciones",
       text: `A. La organización se reserva el derecho de sancionar y/o
@@ -241,8 +237,8 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
       lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre los participante involucrados.`,
     },
     {
-      title: "Walk Overs",
-      text: `El equipo que registre tres (3) walk overs en series completas quedará automáticamente descalificado de la competencia por decisión de la organización.`,
+      title: "Walkovers",
+      text: `El equipo que registre tres (3) walkovers en series completas quedará automáticamente descalificado de la competencia por decisión de la organización.`,
     },
     {
       title: "Límite temporal de reclamos",
@@ -252,8 +248,7 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
     {
       title: "Otras cuestiones",
       text: `La organización se reserva el derecho a modificar el presente reglamento cuando sea imperioso establecer, regular o fijar conductas o acciones que puedan generar conflictos o diversas interpretaciones con el objeto de conducir a un mejor desenvolvimiento de las diversas competiciones.
-      Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta
-      organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.`,
+      Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.`,
     },
     {
       title: "",
