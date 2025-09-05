@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Item from "@/components/Item";
+import Item from "@/components/ItemSmall";
 import { Player } from "@/types";
 
 const Filter = ({ data }: { data: Player[] }) => {
@@ -38,7 +38,6 @@ const Filter = ({ data }: { data: Player[] }) => {
               image={item.image}
               title={item.name}
               link={`/jugadores/${item.id}`}
-              active={false}
             />
           </div>
         ))}

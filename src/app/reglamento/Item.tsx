@@ -12,6 +12,16 @@ const Item = ({ data }: { data: data }) => {
         </h2>
       )}
       <span className="text-balance whitespace-pre-line">{data.text}</span>
+      {data.title === "Planillas" && (
+        <a
+          href="https://www.imltenis.com.ar/docs/planilla-carga-imltenis.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary underline hover:text-white block"
+        >
+          Descargar planilla de resultados
+        </a>
+      )}
     </article>
   );
 };

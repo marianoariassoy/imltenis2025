@@ -98,7 +98,7 @@ const Page = () => {
       <div className="flex flex-col gap-y-6 max-w-md m-auto lg:max-w-none">
         <Title
           title="¡Bienvenido!"
-          emoji="👋"
+          emoji="🚀"
           description="Completá el formulario con tus datos y se parte de nuestra liga."
         />
 

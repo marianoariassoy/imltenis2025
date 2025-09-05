@@ -33,8 +33,8 @@ const page = () => {
           <strong>IML Tenis</strong> se propone promover y consolidar estos
           valores, ofreciendo un marco competitivo que, más allá de los
           resultados deportivos, brinde a cada jugador, capitán y equipo una
-          experiencia enriquecedora, sustentada en la pasión, el respeto y la
-          pertenencia.
+          experiencia enriquecedora, sustentada en{" "}
+          <strong>la pasión, el respeto y la pertenencia.</strong>
         </div>
       </div>
     </section>

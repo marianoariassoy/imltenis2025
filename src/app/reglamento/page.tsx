@@ -67,7 +67,7 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
       text: `La confección de la planilla estará a cargo del capitán del equipo local y deberá ser completada conjuntamente por ambos equipos antes del inicio de la serie.
 Como buena práctica, se recomienda doblar la hoja de la planilla a la mitad, de modo que en cada lado quede visible la formación de cada equipo.
 Al finalizar los encuentros, deberán registrarse los resultados correspondientes y la planilla deberá ser firmada por ambos capitanes.
-La ausencia de la planilla o la falta de algún dato requerido podrá dar lugar a la posible nulidad de los partidos disputados en caso de presentarse un incidente entre los equipos.`,
+La ausencia de la planilla o la falta de algún dato requerido podrá dar lugar a la posible nulidad de los partidos disputados en caso de presentarse un incidente entre los equipos. `,
     },
     {
       title: "Carga de resultados",
