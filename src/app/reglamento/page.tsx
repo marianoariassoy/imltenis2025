@@ -96,8 +96,7 @@ Este resultado será el que se tome en cuenta para la confección de desempates 
     },
     {
       title: "Coaching",
-      text: `Los capitanes pueden intercambiar pareceres, comentarios
-      y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el capitán no estuviere dentro de la cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún jugador rival. Cuando el capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función de coaching en otra persona. Y responderá en todo por ella.`,
+      text: `Los capitanes pueden intercambiar pareceres, comentarios y/o efectuar directivas a sus jugadores, sobre el partido o cualquier otro tema que tenga interés. Si el capitán no estuviere dentro de la cancha acompañando a sus jugadores podrá ingresar en el momento de algún cambio de lado. Todos los comentarios deberán ser efectuados en un nivel de tono, forma y contenido que no moleste a ningún jugador rival. Cuando el capitán fuera jugador y se encontrará disputando un partido, podrá delegar esta función de coaching en otra persona. Y responderá en todo por ella.`,
     },
     {
       title: "Capitanía",
@@ -111,9 +110,7 @@ Este resultado será el que se tome en cuenta para la confección de desempates 
     },
     {
       title: "Reinicio de serie reprogramada",
-      text: `Al reprogramarse una serie que no ha comenzado, por razones climáticas, y/o algún otro motivo, esta se
-      considerará como una serie nueva en todos los aspectos. Esto incluye la anulación de cualquier configuración
-      previa, tales como formaciones de equipos, selección de jugadores, y el orden de los partidos.`,
+      text: `Al reprogramarse una serie que no ha comenzado, por razones climáticas, y/o algún otro motivo, esta se considerará como una serie nueva en todos los aspectos. Esto incluye la anulación de cualquier configuración previa, tales como formaciones de equipos, selección de jugadores, y el orden de los partidos.`,
     },
     {
       title: "Suspensión de un partido por falta de tiempo",
@@ -147,8 +144,10 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
     },
     {
       title: "Alquiler de canchas",
-      text: `La presente es una liga que reúne a la mayoría de clubes deportivos cuyos ingresos provienen del cobro por el uso de dichos espacios. Cada jugador debe abonar cuando le toca jugar ya sea de local o devisitante una suma fijada por la organización. Ese dinero se abona en el club donde se desarrolla la serie.
-      Aquel equipo que presente formación incompleta sin haber avisado con el mínimo de 24hs en el chat de capitanes, deberá abonar igualmente el costo correspondiente en concepto de alquiler de cancha. Aquellos emprendimientos urbanísticos que no acostumbran a cobrar el alquiler por el uso de las canchas en razón que los propietarios la sostienen mediante el pago de las expensas, tienen el mismo derecho a cobrarlas y utilizar el dinero recaudado en las localias para afrontar el costo de su participación cuando jueguen de visitantes. Queda igualmente a criterio de los mismos el cobro a los equipos visitantes. La única manera de evitar el pago del alquiler de las canchas es avisando 24hs antes de la ausencia, en cuyo caso el club que será local tiene el tiempo suficiente de disponer de la misma para alquilarla a terceros.`,
+      text: `La liga reúne a clubes cuya principal fuente de ingresos proviene del alquiler de canchas. Cada jugador debe abonar, como local o visitante, la suma fijada por la organización en el club donde se dispute la serie.
+El equipo que presente formación incompleta sin aviso previo de al menos 24 horas en el chat de capitanes deberá abonar igualmente el costo correspondiente al alquiler de la cancha.
+Los emprendimientos urbanísticos que no cobran alquiler por el uso de canchas, por estar cubierto con expensas, podrán hacerlo en condición de local y destinar lo recaudado a cubrir gastos de participación como visitantes, quedando a su criterio el cobro a los equipos visitantes.
+La única forma de evitar el pago del alquiler es informar la ausencia con 24 horas de anticipación, lo que permite al club local disponer de la cancha para alquilarla a terceros.`,
     },
     {
       title: "Instalaciones necesarias",
@@ -232,8 +231,7 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     },
     {
       title: "Penalizaciones",
-      text: `A. La organización se reserva el derecho de sancionar y/o
-      advertir a cualquier jugador que agreda física o verbalmente a cualquier miembro de la liga. 
+      text: `A. La organización se reserva el derecho de sancionar y/o advertir a cualquier jugador que agreda física o verbalmente a cualquier miembro de la liga. 
       B. Cualquierinconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre los participante involucrados.`,
     },
     {

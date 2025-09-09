@@ -91,7 +91,10 @@ const groups = async ({
       name: "SJ",
       value: "Series jugadas",
     },
-
+    {
+      name: "PR",
+      value: "Promedio (porcentaje)",
+    },
     {
       name: "FP",
       value: "Puntos Fair Play",
