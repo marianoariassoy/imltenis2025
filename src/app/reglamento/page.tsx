@@ -40,7 +40,8 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     },
     {
       title: "Puntuación",
-      text: `Cada encuentro ganado sumará un punto, es decir, ganando los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo vencedor y 1 punto al equipo rival, por lo que ahora todos los encuentros ganados suman puntos.
+      text: `Cada encuentro ganado sumará un punto, es decir, ganando los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo vencedor y 1 punto al equipo rival, por lo que todos los encuentros ganados suman puntos.
+      
       En caso de empate por puntos se desempatará por mayor cantidad de series ganadas, de persistir el empate, se desempatará por doble 1 ganados, siguiendo la diferencia de sets y en el último caso diferencia de games. 
       Todos los resultados podrán ser vistos en este sitio web.`,
     },
@@ -51,13 +52,12 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     {
       title: "Pelotas",
       text: `El equipo local será el encargado de proveer las pelotas para el encuentro. Se podrán usar tubos o pelotas sueltas hasta con un uso, de lo contrario el equipo rival podrá pedir cambio de pelotas o pedir WO. 
-      Las pelotas "con un uso" deben tener presión de pelota nueva y en cuanto a la felpa debe verse la marca de la
-      pelota completa.`,
+      Las pelotas "con un uso" deben tener presión de pelota nueva y en cuanto a la felpa debe verse la marca de la pelota completa.`,
     },
     {
       title: "Días y Horarios",
       text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 12 y las 17 hs. y los domingos entre las 9 y las 17 hs.
-      La categoría Caballeros Segunda +35, Caballeros Tercera +35 y Mixto Tercera, jugarán los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 12 y las 17 hs. 
+      La categoría Mixto Tercera, jugará los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 12 y las 17 hs. 
       El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 17 hs.
 
       Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 17:00 hs. del miércoles de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`,
@@ -90,9 +90,9 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
     },
     {
       title: "Retiro",
-      text: `En caso de que un partido se viera interrumpido por el retiro de uno de los jugadores, el resultado se complementará a favor del ganador con todos los games que correspondan para llegar al resultado final 
-Ejemplo Si al momento de la interrupción el resultado parcial es 63 21, el resultado final será 63 61
-Este último resultado es el que se deberá tomarse en cuenta en la confección de un desempate por porcentajes de set o games.`,
+      text: `En caso de que un partido se interrumpa por el retiro de un jugador, el resultado se completará a favor del oponente adjudicándole los games necesarios para alcanzar un marcador válido.
+Ejemplo: si al momento de la interrupción el resultado parcial es 6-3, 2-1, el resultado final será 6-3, 6-1.
+Este resultado será el que se tome en cuenta para la confección de desempates por porcentajes de sets o games.`,
     },
     {
       title: "Coaching",
@@ -125,16 +125,16 @@ Este último resultado es el que se deberá tomarse en cuenta en la confección 
     },
     {
       title: "Impuntualidad de jugadores",
-      text: `El máximo de tolerenacia será de 15 minutos, pasados los cuales se considerará como abandono del partido. El equipo que abandone un partido, deberá avisar a la organización por escrito al chat de capitanes de WhatsApp, y deberá correr con los gastos que correspondan al equipo rival, como ser alquiler de canchas.`,
+      text: `El tiempo máximo de tolerancia será de 15 minutos. Superado este plazo, se considerará abandono del partido. El equipo que abandone deberá notificarlo por escrito en el chat de capitanes de WhatsApp y hacerse cargo de los gastos correspondientes al equipo rival (ej. alquiler de cancha).`,
     },
     {
       title:
         "Impuntualidad en el inicio de algún encuentro por falta de disponibilidad de cancha",
-      text: `Se sugiere a los clubes locales, establecer horarios entre series separados con un mínimo de dos horas entre una y otra. 
-      El horario fijado por el club local para la iniciación de la serie debe ser respetado. El tiempo detolerancia por parte de los jugadores visitantes para el inicio de la serie es de un máximo de media hora a partir del horario establecido. 
-      Transcurrido dicho límite temporal, y no habiendo posibilidades de comenzar la serie, los jugadores visitantes podrán anoticiar a su capitán de dicha circunstancia y éste último en caso de existir algún impedimento de sus jugadores para iniciar la serie con posterioridad a dicho horario, deberá informar del hecho en el chat de capitanes. Informada dicha circunstancia, la organización podrá comunicarse con el responsable del equipo local y evaluar si la demora obedece a un motivo atendible para exceptuar (espera de ambulancia por alguna afectación sufrida por algún jugador, lluvia o chaparrón que obligó a demorar la serie previa, o similares) y en caso contrario podrá el equipo visitante reclamar el punto, o los puntos que no comenzaron en tiempo y forma.
-      La organización siempre evaluará la circunstancia de atraso en el inicio de la serie y tendrá la decisión
-      final.`,
+      text: `Se sugiere a los clubes locales establecer al menos dos horas de diferencia entre series. El horario fijado para el inicio debe respetarse, con un máximo de 30 minutos de tolerancia para los jugadores visitantes. Superado ese plazo, el capitán visitante deberá informar la situación en el chat de capitanes. La organización evaluará si la demora responde a una causa justificada (ej. espera de ambulancia, lluvia u otra circunstancia excepcional). En caso contrario, el equipo visitante podrá reclamar los puntos no iniciados en tiempo y forma. La decisión final quedará siempre a cargo de la organización.`,
+    },
+    {
+      title: "Mala formación",
+      text: `En caso de incurrir en una mala conformación de las parejas de dobles, la sanción implicará la pérdida exclusiva de los parciales correspondientes a los dobles involucrados (Doble 1 y Doble 2). El partido de singles no se verá afectado, por lo que se conservará el resultado obtenido en cancha.`,
     },
     {
       title: "Dobles invertidos",
@@ -212,26 +212,29 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     },
     {
       title: "Descenso de jugadores",
-      text: `Un jugador podrá descender voluntariamente a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que su balance de partidos ganados y perdidos en la categoría actual sea de -3 o inferior.`,
+      text: `Un jugador podrá solicitar el descenso voluntario a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que el balance total de partidos ganados y perdidos en dicha categoría sea de –3 o inferior en todas sus participaciones.`,
     },
     {
       title: "Ascensos de jugadores",
-      text: `La organización ostenta el legítimo derecho de ascender a cualquier jugador cuyo nivel sobrepase ampliamente la categoría correspondiente, así como a aquellos que posean registros de haber participado y/o ganado torneos en categorías considerablemente superiores en el tiempo reciente, hasta dos años, con la posible quita de puntos de la serie en reclamo.`,
+      text: `La organización se reserva el derecho de ascender a cualquier jugador cuyo nivel supere ampliamente el de su categoría actual. Asimismo, podrá aplicar este criterio a jugadores que registren participaciones y/o triunfos en torneos de categorías significativamente superiores en un plazo reciente de hasta dos años. En caso de reclamo, la organización podrá disponer la quita de puntos de la serie involucrada.`,
+    },
+    {
+      title: "Excepciones",
+      text: `Además de los parámetros objetivos establecidos en este reglamento para los ascensos y descensos de jugadores, la organización se reserva el derecho de realizar excepciones. De manera excepcional, y ante un pedido especial debidamente fundamentado por la parte interesada, la organización podrá autorizar el ascenso o descenso de un jugador que no cumpla con dichos parámetros, siempre que así lo considere pertinente.`,
     },
     {
       title: "Fases de elimanación directa",
-      text: `En estas estapas solo podrán participar los jugadores que hayan disputado al menos una serie en instancias previas en la categoría corresponiente o inferior en el actual torneo.`,
+      text: `En estas etapas solo podrán participar aquellos jugadores que hayan disputado, al menos, una serie en instancias previas de la categoría correspondiente o de una inferior dentro del torneo en curso.`,
     },
     {
       title: "Mala formación",
-      text: `En caso de incurrir en una mala formación de las parejas de dobles, los puntos perdidos serán exclusivamente los de los paciales involucrados (doble 1 y doble 2). El partido de single no se verá afectado por esta sanción, por lo que se mantendrá el resultado jugado en cancha.`,
+      text: `En caso de incurrir en una mala conformación de las parejas de dobles, la sanción implicará la pérdida exclusiva de los parciales correspondientes a los dobles involucrados (Doble 1 y Doble 2). El partido de singles no se verá afectado, por lo que se conservará el resultado obtenido en cancha.`,
     },
     {
       title: "Penalizaciones",
       text: `A. La organización se reserva el derecho de sancionar y/o
-      advertir a cualquier jugador que agreda física o verbalmente a cualquier miembro de la liga. B. Cualquier
-      inconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no
-      lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre los participante involucrados.`,
+      advertir a cualquier jugador que agreda física o verbalmente a cualquier miembro de la liga. 
+      B. Cualquierinconveniente surgido durante el partido deberá ser resuelto por los participantes del mismo, y en caso de no lograr una solución, se permitirá la intervención de terceros, siempre y cuando exista un acuerdo previo entre los participante involucrados.`,
     },
     {
       title: "Walkovers",
@@ -249,7 +252,7 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     },
     {
       title: "",
-      text: `Ultima actualización: Agosto 2025`,
+      text: `Ultima actualización: Septiembre 2025`,
     },
   ];
 
