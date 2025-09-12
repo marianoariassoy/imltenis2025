@@ -46,12 +46,19 @@ const estadisticas = async ({ id }: { id: string }) => {
             </td>
           </tr>
           <tr>
-            <td colSpan={2} className="py-1">
+            <td className="py-1">
               <div>Efectividad</div>
               <div className="font-semibold text-primary flex">
                 <Count end={+percent.toFixed(0)} duration={4} />
                 <span className="text-primary text-lg font-bold">%</span>
               </div>
+            </td>
+            <td>
+              <div>ID Jugador</div>
+              <span className="text-primary text-lg font-bold">
+                {" "}
+                {+id + 1000}
+              </span>
             </td>
           </tr>
         </tbody>

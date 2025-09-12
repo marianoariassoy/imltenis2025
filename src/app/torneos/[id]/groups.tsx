@@ -26,7 +26,7 @@ const groups = async ({
     },
     {
       name: "Pts.",
-      value: "Puntos (parciales)",
+      value: "Puntos (partidos ganados)",
     },
     {
       name: "SG",
@@ -73,11 +73,11 @@ const groups = async ({
     },
     {
       name: "Pts.",
-      value: "Puntos (parciales)",
+      value: "Puntos (partidos ganados)",
     },
     {
       name: "D1",
-      value: "Doble 1 ganadoos",
+      value: "Doble 1 ganados",
     },
     {
       name: "DS",

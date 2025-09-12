@@ -68,6 +68,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
         <div className="text-center">
           <h1 className="font-semibold text-primary">{data.name}</h1>
+
           <h2 className="text-secondary text-sm">
             {data.age ? data.age : null}
           </h2>
