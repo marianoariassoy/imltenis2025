@@ -51,8 +51,16 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
     },
     {
       title: "Pelotas",
-      text: `El equipo local será el encargado de proveer las pelotas para el encuentro. Se podrán usar tubos o pelotas sueltas hasta con un uso, de lo contrario el equipo rival podrá pedir cambio de pelotas o pedir WO. 
-      Las pelotas "con un uso" deben tener presión de pelota nueva y en cuanto a la felpa debe verse la marca de la pelota completa.`,
+      text: `El equipo local es responsable de proveer las pelotas para el encuentro.
+
+Se podrán utilizar pelotas nuevas o con un solo uso previo (máximo).
+
+En caso de que el equipo visitante objete el estado de las pelotas, el local deberá contar con tubos nuevos disponibles.
+
+Si el local no dispone de tubos nuevos, el visitante podrá aportar pelotas nuevas, y el costo será abonado por el equipo local.
+
+En caso de que el equipo local se niegue a utilizar pelotas nuevas o a abonar el costo correspondiente, el encuentro se dará por perdido al equipo local por W.O. general, registrándose la serie con un resultado de triple 6-0 6-0 a favor del visitante. 
+       `,
     },
     {
       title: "Días y Horarios",
