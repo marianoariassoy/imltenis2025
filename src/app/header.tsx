@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <>
       <header
-        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50 mb-2"
+        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50 pb-2"
         id="header"
       >
         <div className="flex-1">

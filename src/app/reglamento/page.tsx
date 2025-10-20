@@ -35,7 +35,7 @@ En cada fecha se disputarán tres o dos encuentros entre dos equipos representan
       Los 3 encuentros deberán disputarse en simultaneo comenzando al mismo tiempo, salvo clubes con 2 canchas (ver el reglamento).
 
       En las categorías Mixtas se jugará 2 dobles mixtos y simultaneos. Las series podrán quedar empatadas en la primera fase, se sumará 1 punto para cada equipo.
-En playoffs, en caso de empate se disputará un tercer punto, con duración de un set, conformado por los jugadores que cada capitán convoque, pudiendo incluir a jugadores que hayan disputado los 2 puntos anteriores, siempre respetando que la integración sea mixta.
+En playoffs, en caso de empate se disputará un tercer punto, con duración de un set, conformado por una tercera pareja, conformada por jugsadores que no hayan disputado los 2 puntos anteriores.
       `,
     },
     {
@@ -250,6 +250,9 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     {
       title: "Otras cuestiones",
       text: `La organización se reserva el derecho a modificar el presente reglamento cuando sea imperioso establecer, regular o fijar conductas o acciones que puedan generar conflictos o diversas interpretaciones con el objeto de conducir a un mejor desenvolvimiento de las diversas competiciones.
+
+      La organización podrá disponer de fechas de juego en días originariamente no asignados a la categoría, así como también modificar el sistema de clasificación, cuando circunstancias ajenas a la misma (el clima por ejemplo) no permitan concluir el calendario en la manera en que estaba asignado desde un principio
+      
       Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.`,
     },
     {
