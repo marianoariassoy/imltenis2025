@@ -35,7 +35,7 @@ En cada fecha se disputarán tres o dos encuentros entre dos equipos representan
       Los 3 encuentros deberán disputarse en simultaneo comenzando al mismo tiempo, salvo clubes con 2 canchas (ver el reglamento).
 
       En las categorías Mixtas se jugará 2 dobles mixtos y simultaneos. Las series podrán quedar empatadas en la primera fase, se sumará 1 punto para cada equipo.
-En playoffs, en caso de empate se disputará un tercer punto, con duración de un set, conformado por una tercera pareja, conformada por jugsadores que no hayan disputado los 2 puntos anteriores.
+En playoffs, en caso de empate se disputará un tercer punto, con duración de un set, conformado por una tercera pareja, incluyendo jugadores que no hayan disputado los 2 puntos anteriores.
       `,
     },
     {
