@@ -35,7 +35,7 @@ En cada fecha se disputarán tres o dos encuentros entre dos equipos representan
       Los 3 encuentros deberán disputarse en simultaneo comenzando al mismo tiempo, salvo clubes con 2 canchas (ver el reglamento).
 
       En las categorías Mixtas se jugará 2 dobles mixtos y simultaneos. Las series podrán quedar empatadas en la primera fase, se sumará 1 punto para cada equipo.
-En playoffs, en caso de empate se disputará un tercer punto, con duración de un set, conformado por una tercera pareja, incluyendo jugadores que no hayan disputado los 2 puntos anteriores.
+En playoffs, se disputarán 3 dobles mixtos y simultaneos.
       `,
     },
     {
@@ -55,8 +55,7 @@ En playoffs, en caso de empate se disputará un tercer punto, con duración de u
 Se podrán utilizar pelotas nuevas o con un solo uso previo (máximo).
 En caso de que el equipo visitante objete el estado de las pelotas, el local deberá contar con tubos nuevos disponibles.
 Si el local no dispone de tubos nuevos, el visitante podrá aportar pelotas nuevas, y el costo será abonado por el equipo local.
-En caso de que el equipo local se niegue a utilizar pelotas nuevas o a abonar el costo correspondiente, el encuentro se dará por perdido al equipo local por W.O. general. 
-       `,
+En caso de que el equipo local se niegue a utilizar pelotas nuevas o a abonar el costo correspondiente, el encuentro se dará por perdido al equipo local por W.O. general.`,
     },
     {
       title: "Días y Horarios",
@@ -89,8 +88,9 @@ Por eso, seguimos promoviendo los terceros tiempos como un componente esencial d
     },
     {
       title: "Formación Incompleta",
-      text: `Si el equipo completo o algún jugador no se presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 24 hs. al capitán rival por escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al equipo local, como ser alquiler de canchas. 
-      Se podrá presentar WO tanto de single y/o de doble 2, pudiéndose disputar el resto de el o los parciales.`,
+      text: `Si el equipo completo o algún jugador no se presentara a jugar la fecha correspondiente (WO) deberá avisar con un mínimo de 24 hs. al capitán rival por escrito al chat de capitanes de WhatsApp, de lo contrario deberá correr con los gastos que correspondan al equipo visitante, como ser alquiler de canchas. 
+      Se podrá presentar WO tanto de single y/o de doble 2, pudiéndose disputar el resto de el o los parciales.
+      Aclaración: NO se produce la nulidad de el/los WO en caso de reprogramación de fecha. `,
     },
     {
       title: "Retiro",
@@ -215,7 +215,7 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     },
     {
       title: "Descenso de jugadores",
-      text: `Un jugador podrá solicitar el descenso voluntario a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que el balance total de partidos ganados y perdidos en dicha categoría sea de –3 o inferior en todas sus participaciones.`,
+      text: `Un jugador podrá solicitar el descenso voluntario a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que el balance total de partidos ganados y perdidos en dicha categoría sea de -3 o inferior en todas sus participaciones.`,
     },
     {
       title: "Ascensos de jugadores",
@@ -240,7 +240,9 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     },
     {
       title: "Walkovers",
-      text: `El equipo que registre tres (3) walkovers en series completas quedará automáticamente descalificado de la competencia por decisión de la organización.`,
+      text: `El equipo que registre tres (3) walkovers en series completas quedará automáticamente descalificado de la competencia por decisión de la organización.
+      Quedando sin efecto todos los resultados que haya obtenido. 
+      `,
     },
     {
       title: "Límite temporal de reclamos",
