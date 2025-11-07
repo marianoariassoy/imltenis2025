@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Bull } from "@/lib/icons";
 import ItemSmall from "@/components/ItemSmall";
+import Item from "@/components/Item";
 import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
@@ -39,11 +40,20 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                 </td>
                 <td className="w-[5%]">{item.hour}</td>
                 <td className="w-[34%]">
-                  <ItemSmall
-                    link={`/equipos/${item.home_id}`}
-                    title={item.home_name}
-                    image={item.home_image}
-                  />
+                  {title ? (
+                    <ItemSmall
+                      link={`/equipos/${item.home_id}`}
+                      title={item.home_name}
+                      image={item.home_image}
+                    />
+                  ) : (
+                    <Item
+                      link={`/equipos/${item.home_id}`}
+                      title={item.home_name}
+                      image={item.home_image}
+                      active={false}
+                    />
+                  )}
                 </td>
                 <td className="w-[10%]">
                   {item.winner ? (
@@ -66,11 +76,20 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                   )}
                 </td>
                 <td className="w-[40%]">
-                  <ItemSmall
-                    link={`/equipos/${item.away_id}`}
-                    title={item.away_name}
-                    image={item.away_image}
-                  />
+                  {title ? (
+                    <ItemSmall
+                      link={`/equipos/${item.away_id}`}
+                      title={item.away_name}
+                      image={item.away_image}
+                    />
+                  ) : (
+                    <Item
+                      link={`/equipos/${item.away_id}`}
+                      title={item.away_name}
+                      image={item.away_image}
+                      active={false}
+                    />
+                  )}
                 </td>
                 <td className="w-[10%]">
                   <Link
