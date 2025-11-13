@@ -4,7 +4,6 @@ import { Logo, Instagram, Menu } from "@/lib/icons";
 import Link from "next/link";
 import Nav from "./nav";
 import { usePathname } from "next/navigation";
-import Theme from "./theme";
 import ReactGA from "react-ga4";
 
 const Header = () => {
@@ -63,8 +62,6 @@ const Header = () => {
           </Link>
         </div>
         <div className="flex items-center justify-end gap-x-5 flex-1">
-          <Theme />
-
           <a
             href="https://www.instagram.com/imltenis/"
             target="_blank"

@@ -56,10 +56,7 @@ const groups = async ({
       name: "FP",
       value: "Puntos Fair Play",
     },
-    {
-      name: "WO",
-      value: "Walkovers (series)",
-    },
+
     {
       name: "Ult. 5 series",
       value: "",
@@ -99,10 +96,7 @@ const groups = async ({
       name: "FP",
       value: "Puntos Fair Play",
     },
-    {
-      name: "WO",
-      value: "Walkovers (series)",
-    },
+
     {
       name: "Ult. 5 series",
       value: "",

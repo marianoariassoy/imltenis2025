@@ -54,7 +54,7 @@ const Tabla = async ({
                 >
                   {item.match_won}
                 </td>
-                {labels.length > 10 && <td>{item.series_won}</td>}
+                {labels.length > 9 && <td>{item.series_won}</td>}
                 <td>{item.d1_won}</td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
@@ -64,13 +64,12 @@ const Tabla = async ({
                     ? (
                         (Number(item.match_won) /
                           (Number(item.series_total) *
-                            (labels.length > 10 ? 3 : 2))) *
+                            (labels.length > 9 ? 3 : 2))) *
                         100
                       ).toFixed(0)
                     : 0}
                 </td>
                 <td>{item.fairplay}</td>
-                <td>{item.wo}</td>
                 <td>
                   <div className="flex gap-x-2">
                     {item.series.map((item, index) => (
