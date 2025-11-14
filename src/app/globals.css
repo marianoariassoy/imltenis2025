@@ -4,9 +4,9 @@
 
 :root {
   --primary: #f34643;
-  --foreground: #999999;
+  --foreground: #a4a4a4;
   --secondary: #737272;
-  --background: #262626;
+  --background: #242424;
 }
 
 .table thead tr th {
