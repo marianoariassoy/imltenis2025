@@ -1,29 +1,20 @@
-"use client";
+// "use client";
 
-import { useState } from "react";
+// import { useState } from "react";
 import { Info } from "@/lib/icons";
 
 const InfoShow = ({ text }: { text: string }) => {
-  const [show, setShow] = useState(false);
+  // const [show, setShow] = useState(false);
 
-  const handleClick = () => {
-    setShow(!show);
-  };
+  // const handleClick = () => {
+  //   setShow(!show);
+  // };
   return (
-    <div
-      className="flex gap-x-3  text-sm p-3 bg-white/5 transition-colors rounded-xl mb-3 cursor-pointer"
-      onClick={handleClick}
-    >
-      <span className="text-primary">
+    <div className="flex gap-x-3 text-sm p-4 bg-white/5 transition-colors rounded-xl ">
+      <span className="text-primary mt-1">
         <Info />
       </span>
-      {show ? (
-        <span className="whitespace-break-spaces">{text}</span>
-      ) : (
-        <span className="text-secondary font-medium">
-          Información del torneo
-        </span>
-      )}
+      <span className="whitespace-break-spaces">{text}</span>
     </div>
   );
 };
