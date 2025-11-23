@@ -42,6 +42,7 @@ const Menu = () => {
                   ? "text-primary"
                   : "hover:underline text-white/70 dark:text-black/70"
               }
+              onClick={handleMenu}
             >
               {item.name}
             </Link>
