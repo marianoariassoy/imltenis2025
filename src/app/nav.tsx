@@ -14,9 +14,8 @@ const Menu = () => {
 
   return (
     <nav
-      className="fade-in fixed top-0 left-0 w-full bg-[#262626]/80 dark:bg-white/60 h-screen content-center text-center backdrop-blur z-50 hover:cursor-pointer hidden"
+      className="fade-in fixed top-0 left-0 w-full bg-[#262626]/80 dark:bg-white/60 h-screen content-center text-center backdrop-blur z-50 hidden"
       id="menu"
-      onClick={handleMenu}
     >
       <ul>
         {categories.map((item, index) => (
@@ -26,6 +25,7 @@ const Menu = () => {
               className={`text-primary italic font-black lg:text-lg ${
                 pathname === item.url ? "underline" : "hover:underline"
               }`}
+              onClick={handleMenu}
             >
               {item.name}
             </Link>
@@ -72,6 +72,25 @@ const Menu = () => {
           </a>
         </li>
       </ul>
+      <button
+        className="absolute top-6 right-0 p-3 z-50 hover:text-primary cursor-pointer"
+        onClick={handleMenu}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
     </nav>
   );
 };
