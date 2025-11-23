@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Info } from "@/lib/icons";
 
-const info = ({ text }: { text: string }) => {
+const InfoShow = ({ text }: { text: string }) => {
   const [show, setShow] = useState(false);
 
   const handleClick = () => {
@@ -28,4 +28,4 @@ const info = ({ text }: { text: string }) => {
   );
 };
 
-export default info;
+export default InfoShow;
