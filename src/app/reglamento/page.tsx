@@ -1,5 +1,6 @@
 import Title from "@/components/Title";
 import Filter from "./Filter";
+import { title } from "process";
 
 export const metadata = {
   title: "Reglamento IML Tenis",
@@ -201,6 +202,27 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     {
       title: "Dos o más equipos por división",
       text: `Cuando un club tenga dos o más equipos en la misma categoría, éstos se considerarán como equipos distintos, los jugadores de estos equipos no podrán jugar en ningún otro equipo de la misma categoría a la que pertenezcan.`,
+    },
+    {
+      title: "Inscripciones",
+      text: `1. Obligación de pago
+Todos los equipos participantes deberán abonar el monto total de la inscripción del torneo antes o hasta la tercera fecha del campeonato, inclusive.
+
+2. Incumplimiento del plazo
+Vencido dicho plazo, cualquier equipo que no haya completado el pago quedará automáticamente en situación de incumplimiento reglamentario.
+
+3. Walkover automático
+Mientras persista dicha situación, el equipo infractor recibirá walkover en todos los encuentros que dispute a partir de la cuarta fecha, sin excepción, hasta regularizar el pago.
+Una vez regularizada la inscripción, el equipo volverá a sumar puntos con normalidad; sin embargo, los walkovers ya aplicados no serán modificados ni revertidos, permaneciendo inalterables.
+
+4. Regularización del pago
+Para regularizar su situación, el equipo deberá abonar:
+a) El monto total de la inscripción.
+b) Los intereses correspondientes, calculados según el criterio definido por la organización.
+Hasta que ambos conceptos se acrediten correctamente, el equipo continuará recibiendo walkover.
+
+5. Carácter inapelable
+Las sanciones y medidas aquí detalladas serán de aplicación automática e inapelable. La organización queda facultada para adoptar todas las acciones necesarias para garantizar el cumplimiento del presente artículo.`,
     },
     {
       title: "Ascenso de equipos",
