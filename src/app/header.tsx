@@ -45,7 +45,7 @@ const Header = () => {
       >
         <div className="flex-1">
           <button
-            className="hover:text-primary"
+            className="text-primary hover:text-foreground"
             onClick={handleMenu}
             aria-label="Menu"
           >
@@ -66,7 +66,7 @@ const Header = () => {
             href="https://www.instagram.com/imltenis/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary"
+            className="text-primary hover:text-foreground"
             aria-label="Instagram"
           >
             <Instagram />

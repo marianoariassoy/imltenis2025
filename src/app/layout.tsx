@@ -51,14 +51,14 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#252525" />
+        <meta name="theme-color" content="#1e1d1d" />
       </head>
       <body
         className="bg-background text-foreground min-h-screen flex flex-col transition-colors"
         style={{ fontFamily: montserrat.style.fontFamily }}
       >
         <Header />
-        <main className="flex-1 w-full max-w-4xl mx-auto px-4">{children}</main>
+        <main className="flex-1 w-full max-w-5xl mx-auto px-4">{children}</main>
         <Footer />
       </body>
     </html>

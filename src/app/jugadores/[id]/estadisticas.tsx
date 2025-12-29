@@ -22,43 +22,40 @@ const estadisticas = async ({ id }: { id: string }) => {
   const percent = calcularPorcentaje(data.matches_won, data.matches_total);
 
   return (
-    <div className="w-full text-sm p-4 lg:p-6 bg-black/10 rounded-xl shadow-lg">
+    <div className="w-full p-4 lg:p-6 border border-primary rounded-xl">
       <table className="w-full">
         <tbody>
           <tr>
             <td className="py-1">
-              <div>Partidos jugados</div>
+              <div className="text-primary font-semibold">Partidos jugados</div>
               <Count end={data.matches_total} duration={2} />
             </td>
             <td>
-              <div>Partidos ganados</div>
+              <div className="text-primary font-semibold">Partidos ganados</div>
               <Count end={data.matches_won} duration={4} />
             </td>
           </tr>
           <tr>
             <td className="py-1">
-              <div>Set jugados</div>
+              <div className="text-primary font-semibold">Set jugados</div>
               <Count end={data.sets_total} duration={2} />
             </td>
             <td>
-              <div>Set ganados</div>
+              <div className="text-primary font-semibold">Set ganados</div>
               <Count end={data.sets_won} duration={4} />
             </td>
           </tr>
           <tr>
             <td className="py-1">
-              <div>Efectividad</div>
-              <div className="font-semibold text-primary flex">
+              <div className="text-primary font-semibold">Efectividad</div>
+              <div className="font-medium flex">
                 <Count end={+percent.toFixed(0)} duration={4} />
-                <span className="text-primary text-lg font-bold">%</span>
+                <span className="text-lg font-medium">%</span>
               </div>
             </td>
             <td>
-              <div>ID Jugador</div>
-              <span className="text-primary text-lg font-bold">
-                {" "}
-                {+id + 1000}
-              </span>
+              <div className="text-primary font-semibold">ID Jugador</div>
+              <span className="text-lg font-medium"> {+id + 1000}</span>
             </td>
           </tr>
         </tbody>

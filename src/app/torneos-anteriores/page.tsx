@@ -14,12 +14,12 @@ const page = async () => {
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title title="Torneos Anteriores" emoji="👴" />
+      <Title title="Torneos Anteriores (2023-2025)" emoji="👴" />
 
-      <div className="flex flex-col text-center items-center font-medium text-sm">
+      <div className="flex flex-col text-center items-center font-medium">
         {data &&
           data
-            .filter((item) => item.season !== 6)
+            .filter((item) => item.season !== 7)
             .map((item) => (
               <Link
                 key={item.id}

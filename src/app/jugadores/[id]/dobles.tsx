@@ -34,12 +34,12 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
     return (
       <section className="flex flex-col gap-y-3">
         <div className="flex flex-col justify-center items-center gap-x-1">
-          <h1 className="font-semibold text-primary">
+          <h1 className="font-semibold text-primary text-lg">
             Dobles disputados ({data.length})
           </h1>
         </div>
 
-        <div className="overflow-x-auto text-sm whitespace-nowrap">
+        <div className="overflow-x-auto whitespace-nowrap">
           <table className="table w-full mb-3">
             <thead>
               <tr>

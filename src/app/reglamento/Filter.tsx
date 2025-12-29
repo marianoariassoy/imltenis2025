@@ -25,7 +25,7 @@ const Filter = ({ data }: { data: data[] }) => {
     <div className="flex flex-col gap-y-6">
       <Search filterText={filterText} handleFilterChange={handleFilterChange} />
 
-      <div className="md:columns-2 gap-8 text-sm">
+      <div className="md:columns-2 gap-8">
         {dataFiltered.map((item, index) => (
           <Item key={index} data={item} />
         ))}

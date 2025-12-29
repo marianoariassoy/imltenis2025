@@ -66,11 +66,11 @@ const page = async () => {
   ];
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-8">
       <Title title="Ranking de Campeones" emoji="👑" />
 
-      <div className="w-full overflow-x-auto text-sm">
-        <table className="table w-full mb-3">
+      <div className="w-full overflow-x-auto">
+        <table className="table w-full mb-2">
           <thead>
             <tr>
               {labels.map((item, index) => (

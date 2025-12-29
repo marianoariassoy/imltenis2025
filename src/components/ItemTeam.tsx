@@ -22,7 +22,7 @@ const TeamItem = ({ link, title, subtitle, image }: Item) => {
           />
         </div>
       </Link>
-      <div className="px-3 flex flex-col text-sm">
+      <div className="px-3 flex flex-col">
         <Link
           href={link}
           className="hover:underline text-primary font-semibold"

@@ -42,13 +42,13 @@ const Equipos = async ({ id }: { id: string }) => {
   ];
 
   return (
-    <section className="flex flex-col gap-y-6">
-      <h1 className="font-semibold text-primary text-center">
+    <section className="flex flex-col gap-y-8">
+      <h1 className="font-semibold text-primary text-center text-lg">
         Equipos ({data.length})
       </h1>
 
-      <div className="overflow-x-auto text-sm whitespace-nowrap">
-        <table className="table w-full mb-3">
+      <div className="overflow-x-auto whitespace-nowrap">
+        <table className="table w-full mb-2">
           <thead>
             <tr>
               {labels.map((item, index) => (

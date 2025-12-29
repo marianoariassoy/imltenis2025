@@ -5,7 +5,7 @@ interface data {
 
 const Item = ({ data }: { data: data }) => {
   return (
-    <article className="mb-6">
+    <article className="mb-6 text-sm">
       {data.title && (
         <h2 className="font-bold text-primary inline-block mr-2">
           {data.title}:

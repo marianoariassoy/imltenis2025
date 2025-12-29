@@ -62,7 +62,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </Link>
       </header>
 
-      <div className="flex justify-center items-start gap-x-4 text-center max-w-xs mx-auto ">
+      <div className="flex justify-center items-start gap-x-4 text-center max-w-xs mx-auto">
         <Item
           link={`/equipos/${data.home_id}`}
           title={data.home_name}

@@ -45,7 +45,7 @@ const footer = () => {
           </div>
         ))}
       </div> */}
-      <div className="text-center flex flex-col text-sm">
+      <div className="text-center flex flex-col">
         <span className="font-bold">Liga de clubes IML Tenis</span>
 
         <div className="flex items-center flex-wrap justify-center gap-x-1 pb-2">

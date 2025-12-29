@@ -55,7 +55,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
-        <div className="w-24 h-24 rounded-full overflow-hidden bg-white/10 dark:bg-black/10 shadow-lg">
+        <div className="w-24 h-24 rounded-full overflow-hidden bg-white/10 dark:bg-black/10">
           {data.image && (
             <Image
               src={data.image}
@@ -67,11 +67,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           )}
         </div>
         <div className="text-center">
-          <h1 className="font-semibold text-primary">{data.name}</h1>
+          <h1 className="font-semibold text-primary text-lg">{data.name}</h1>
 
-          <h2 className="text-secondary text-sm">
-            {data.age ? data.age : null}
-          </h2>
+          <h2 className="text-secondary">{data.age ? data.age : null}</h2>
         </div>
       </header>
 

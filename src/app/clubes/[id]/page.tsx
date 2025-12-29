@@ -3,7 +3,6 @@ import { Club } from "@/types";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Estadisticas from "./estadisticas";
-import Stars from "./stars";
 import Image from "next/image";
 
 export async function generateMetadata({
@@ -56,7 +55,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
-        <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
+        <div className="w-24 h-24 rounded-full overflow-hidden">
           <Image
             src={data.image}
             alt={data.name}
@@ -66,13 +65,9 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           />
         </div>
         <div className="text-center">
-          <h1 className="font-semibold text-base text-primary">{data.name}</h1>
-          <Suspense fallback={<Loader />}>
-            <Stars id={id} />
-          </Suspense>
-          <span className="text-sm text-center font-medium">
-            {data.location}
-          </span>
+          <h1 className="font-semibold text-primary">{data.name}</h1>
+
+          <span className="text-center font-medium">{data.location}</span>
         </div>
 
         {data.googlemaps && (
@@ -82,14 +77,14 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           />
         )}
 
-        <div className="flex flex-wrap gap-3 items-center justify-center font-medium text-sm text-primary">
+        <div className="flex flex-wrap gap-3 items-center justify-center font-medium">
           {data.phone && <span>Tel. {data.phone}</span>}
           {data.googlemapslink && (
             <a
               href={data.googlemapslink}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="hover:underline"
             >
               Google Map
             </a>
@@ -99,7 +94,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               href={`https://wa.me/${data.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="hover:underline"
             >
               WhatsApp
             </a>
@@ -109,7 +104,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               href={data.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="hover:underline"
             >
               Instagram
             </a>
@@ -119,7 +114,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               href={data.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="hover:underline"
             >
               Facebook
             </a>
@@ -129,7 +124,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
               href={data.web}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:underline"
+              className="hover:underline"
             >
               Web
             </a>

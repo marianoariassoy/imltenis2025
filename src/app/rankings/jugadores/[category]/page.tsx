@@ -28,7 +28,7 @@ const page = async ({ params }: { params: Promise<{ category: string }> }) => {
   const { category } = await params;
 
   return (
-    <section className="flex flex-col gap-y-3">
+    <section className="flex flex-col gap-y-4">
       <Title title="Ranking de Jugadores Mito Gafas" emoji="💪🏻" />
 
       <Filter category={category} />

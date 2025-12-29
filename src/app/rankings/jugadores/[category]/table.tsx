@@ -66,7 +66,7 @@ const table = async ({ category }: { category: string }) => {
 
   return (
     <>
-      <div className="overflow-x-auto text-sm whitespace-nowrap">
+      <div className="overflow-x-auto whitespace-nowrap">
         <table className="table w-full mb-3">
           <thead>
             <tr>

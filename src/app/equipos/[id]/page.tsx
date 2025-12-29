@@ -71,13 +71,13 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           <h1 className="font-semibold text-primary">{data.name}</h1>
           <Link
             href={`/torneos/${data.tournament_id}`}
-            className="font-medium hover:underline text-sm"
+            className="font-medium hover:underline"
           >
             {data.tournament_name}
           </Link>
         </div>
 
-        <div className="flex justify-center gap-x-4 items-center text-sm">
+        <div className="flex justify-center gap-x-4 items-center">
           <Link
             href={`/clubes/${data.club_id}`}
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"

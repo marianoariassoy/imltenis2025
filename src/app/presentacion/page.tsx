@@ -3,16 +3,16 @@ import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
 
 export const metadata = {
-  title: "Presentación Torneo Clausura 2025",
+  title: "Presentación Torneo Apertura 2026",
   description:
-    "Presentación Torneo Clausura 2025 de la liga de clubes IML Tenis",
+    "Presentación Torneo Apertura 2026 de la liga de clubes IML Tenis",
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: "https://imltenis.com.ar/presentacion",
-    title: "Presentación Torneo Clausura 2025",
+    title: "Presentación Torneo Apertura 2026",
     description:
-      "Presentación Torneo Clausura 2025 de la liga de clubes IML Tenis",
+      "Presentación Torneo Apertura 2026 de la liga de clubes IML Tenis",
     images: [
       {
         url: "https://imltenis.com.ar/assets/imltenis.jpg",
@@ -28,24 +28,47 @@ const Presentacion = () => {
   const data = [
     {
       title: "🤔 ¿Qué necesito para realizar la inscripción?",
-      text: `Para inscribirte necesitás leer la información completa de cómo se lleva adelante el torneo y armar tu equipo con un mínimo de 6 participantes en la lista de buena fe y un máximo de 20 jugadores. Tener o alquilar 3 canchas de tenis de la misma superficie para poder hacer de local, aceptamos clubes con 2 canchas.`,
+      text: `Para inscribirte necesitás leer la información completa de cómo se lleva adelante el torneo y armar tu equipo con un mínimo de 8 participantes en la lista de buena fe y un máximo de 20 jugadores. Tener o alquilar 3 canchas de tenis de la misma superficie para poder hacer de local, aceptamos clubes con 2 canchas.`,
     },
     {
       title: "📅 Fechas",
-      text: `Inicio del torneo: <strong>Sábado 23 y Domingo 24 de Agosto.</strong><br />
-Cierre de Inscripción: <strong>9 de Agosto.</strong>`,
+      text: `Inicio del torneo: <strong>Sábado 21 de Marzo.</strong><br />
+Cierre de Inscripción: <strong>7 de Marzo.</strong>`,
     },
     {
       title: "🏆 ¿Cómo es el formato de juego y del torneo?",
-      text: `En todas las categorías con exepción de las categorías Mixtas se disputarán <strong >1 single y 2 dobles.</strong> En las categorías Mixtas se disputarán <strong>2 dobles.</strong><br/>
-      Todos los partidos se disputarán al mejor de 3 sets, con tie break. El tercer set será Super Tie break a 10 puntos con diferencia de dos.<br/>
+      text: `Dependiendo la categoría se disputarán <strong>1 single y 2 dobles.</strong> o <strong>2 dobles.</strong><br/>
+      Todos los partidos se disputarán al mejor de 3 sets, con tie break. El tercer set será Super tiebreak a 10 puntos con diferencia de dos.<br/>
       Todos los resultados y el reglamento general podrán ser vistos en este sitio web.`,
     },
     {
       title: "⭐ ¿En qué categorías puedo inscribirme?",
-      text: `<strong>Domingos:</strong> Primera Libre, Segunda Libre, Tercera Libre, Cuarta Libre, Quinta Libre, Sexta Libre (con admisión). <br/> 
-      <strong>Sábados y Domingos:</strong> Damas Tercera, Damas Cuarta y Damas Quinta. <br/> 
-      <strong>Sábados:</strong> Mixto Tercera.`,
+      text: `<strong>Damas Sábados de 13 a 17 hs.:</strong><br/>
+      Intermedia +30 (2 dobles)<br/>
+      Tercera +40 (2 dobles)<br/>
+      Cuarta +40 (2 dobles)<br/><br/>
+      
+      <strong>Damas Domingos de 9 a 17hs.:</strong>  <br/> 
+      Tercera Libre (1 single, 2 dobles)  <br/> 
+      Cuarta Libre (1 single, 2 dobles)  <br/> 
+      Quinta Libre (1 single, 2 dobles) <br/> <br/> 
+    
+      <strong>Caballeros Sábados de 13 a 17 hs.:</strong><br/>
+      Cuarta +40 (2 dobles)<br/>
+      Quinta +40 (2 dobles)<br/><br/> 
+      
+      <strong>Caballeros Domingos de 9 a 17hs.:</strong> <br/> 
+      Primera Libre (1 single, 2 dobles) <br/> 
+      Intermedia Libre (1 single, 2 dobles) <br/> 
+      Tercera Libre (1 single, 2 dobles) <br/> 
+      Cuarta Libre (1 single, 2 dobles) <br/> 
+      Quinta Libre (1 single, 2 dobles) <br/> 
+      Sexta Libre (1 single, 2 dobles)  <br/>  <br/> 
+
+      <strong>Mixtos Sábados de 13 a 17 hs.:</strong><br/>
+      Mixto Tercera (2 dobles)<br/>
+      Mixto Libre. (1 doble)
+      `,
     },
     {
       title: "📈 ¿Cómo se a que categoría corresponde mi equipo?",
@@ -54,8 +77,8 @@ Cierre de Inscripción: <strong>9 de Agosto.</strong>`,
         B1 <br/>Segunda: Jugadores categoría 750, A1, A2 <br/>Primera: Jugadores categoría 1000, Super A.`,
     },
     {
-      title: "🔞 ¿Hay restricciones por edad?",
-      text: `Sí. La edad mínima para participar en las categorías Libres y Damas es de 15 años cumplidos.`,
+      title: "🔞 ¿Hay restricciones por edad en las categorías libres?",
+      text: `Sí. La edad mínima para participar en estas categorías es de 14 años cumplidos.`,
     },
     {
       title: "🌍 ¿Dónde se juega?",
@@ -64,7 +87,7 @@ Cierre de Inscripción: <strong>9 de Agosto.</strong>`,
     },
     {
       title: "🕛 ¿Qué día y horario se juega por categoría?",
-      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>12 a 17 hs.</strong> <br/> 
+      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>13 a 17 hs.</strong> <br/> 
       Cada equipo puede elegir el horario cuando actúa de local.`,
     },
     {
@@ -79,9 +102,9 @@ Cierre de Inscripción: <strong>9 de Agosto.</strong>`,
       title:
         "💵 ¿Cuál es el valor y como abonar la inscripción por cada equipo?",
       text: `
-      <strong>Durante Junio $200.000.- </strong><br/>
-      <strong>Durante Julio $240.000.- </strong><br/> 
-      <strong>Durante Agosto $280.000.- </strong><br/><br/>
+      <strong>Durante Enero $280.000.- </strong><br/>
+      <strong>Durante Febero $310.000.- </strong><br/> 
+      <strong>Durante Marzo $340.000.- </strong><br/><br/>
       Podes realizar una transferencia del valor de la inscripción a la siguiente cuenta: <br/>
       Alias: iml.tenis <br/>
       Banco Supervielle <br/>
@@ -104,12 +127,12 @@ CUIT/CUIL: 27397070811 <br/><br/>
     },
   ];
   return (
-    <section className="flex flex-col gap-y-6 text-sm max-w-2xl m-auto">
-      <div className="flex flex-col gap-y-3">
-        <div className="text-center flex flex-col items-center mb-3">
+    <section className="flex flex-col gap-y-8 m-auto max-w-4xl">
+      <div className="flex flex-col gap-y-4">
+        <div className="text-center flex flex-col items-center mb-4">
           <div className="text-2xl text-center">🏆</div>
-          <h1 className="font-extrabold text-primary text-lg">
-            Torneo Clausura 2025
+          <h1 className="font-extrabold text-primary text-xl">
+            Torneo Apertura 2026
           </h1>
         </div>
 
@@ -122,19 +145,21 @@ CUIT/CUIL: 27397070811 <br/><br/>
       </div>
 
       <div className="[&>span]:font-semibold [&>span]:text-primary">
-        <span>¡Llega el Torneo Clausura 2025!</span> Sumate a uno de los
-        interclubes de tenis más importantes de la región, con más de 150
-        equipos y 12 categorías, viví una experiencia única junto a tu grupo de
-        amigos. Representá a tu club o barrio, jugá de local en tus canchas y
-        descubrí nuevas sedes y rivales cada semana. Todos los resultados y
-        rankings se actualizan online, para que sigas el torneo en tiempo real.
+        <span className="font-bold">¡Llega el Torneo Apertura 2026!</span>{" "}
+        Sumate a uno de los interclubes de tenis más importantes de la región,
+        con más de 150 equipos y 16 categorías, viví una experiencia única junto
+        a tu grupo de amigos. Representá a tu club o barrio, jugá de local en
+        tus canchas y descubrí nuevas sedes y rivales cada semana. Todos los
+        resultados y rankings se actualizan online, para que sigas el torneo en
+        tiempo real.
+        <br />
         <br />
         Premios, reconocimientos y mucho más Podés ser elegido como{" "}
         <span>el jugador destacado de la fecha</span>, liderar el ranking
         individual y recibir importantes premios al final de la temporada.
         Además, cada punto que sumes ayuda a tu club a escalar posiciones en el{" "}
-        <span>ranking anual de clubes.</span>
-        <br />Y eso no es todo...Celebramos lo mejor de nuestra comunidad con
+        <span>ranking anual de clubes.</span> <br />
+        <br />Y eso no es todo... Celebramos lo mejor de nuestra comunidad con
         propuestas como <span>La Batalla de Clubes</span>, la elección de los
         mejores capitanes y los esperados <span>IML Awards.</span>
         <br />

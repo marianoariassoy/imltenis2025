@@ -1,6 +1,5 @@
 import Title from "@/components/Title";
 import Filter from "./Filter";
-import { title } from "process";
 
 export const metadata = {
   title: "Reglamento IML Tenis",
@@ -175,7 +174,13 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     {
       title: "Lista de buena fe",
       text: `El mejor jugador del equipo deberá ir primero en la lista, siguiendo este criterio para el resto de la lista, siendo el último jugador el de más bajo nivel.
-      Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que consideren correcta antes del comienzo del torneo. En las categorías con límite de edad, tercera y segunda +35, se considerará que el jugador está dentro de la categoría, al cumplir años dentro del año calendario de inicio del torneo.`,
+      Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que consideren correcta antes del comienzo del torneo. En las categorías con límite de edad, se considerará que el jugador está dentro de la categoría, al cumplir años dentro del año calendario de inicio del torneo.`,
+    },
+    {
+      title: "Exepciones",
+      text: `En las categorías etarias se autoriza la inclusión en la lista de buena fe de jugadores cuya edad sea de hasta cinco (5) años inferior al límite establecido para la categoría correspondiente.
+      Por ejemplo, en las categorías +40 se podrán incluir jugadores +35 en la lista de buena fe.
+En ningún caso podrá incluirse más de un (1) jugador bajo esta excepción por cada serie a disputar.`,
     },
     {
       title: "Cantidad de jugadores por equipo",
@@ -184,7 +189,7 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
     {
       title: "Equivalencias de niveles en otros torneos",
       text: `Quinta Libre y Cuarta Damas: Jugadores categoría 125, C. 
-      Cuarta Libre, Tercera +35, 
+      Cuarta Libre, 
       Tercera Damas: Jugadores categoría 250 a 500, B2, B-. 
       Tercera Libre: Jugadores categoría 500 a 750, B1 
       Segunda Libre: Jugadores categoría 750 a 1000, A1, A2 
@@ -242,6 +247,15 @@ Las sanciones y medidas aquí detalladas serán de aplicación automática e ina
     {
       title: "Ascensos de jugadores",
       text: `La organización se reserva el derecho de ascender a cualquier jugador cuyo nivel supere ampliamente el de su categoría actual. Asimismo, podrá aplicar este criterio a jugadores que registren participaciones y/o triunfos en torneos de categorías significativamente superiores en un plazo reciente de hasta dos años. En caso de reclamo, la organización podrá disponer la quita de puntos de la serie involucrada.`,
+    },
+    {
+      title: "Equivalencias entre categorías (libres y etareas)",
+      text: `Aquellos jugadores que compitan en ambas especialidades: libres y etareas, deben respetar los siguientes lineamientos:
+— la categoría libre marca el límite inferior de la categoría etarea. 
+Ejemplos: un jugador de Quinta Libre puede jugar las categoría etareas de Quinta para arriba pero nunca Sexta +40. 
+Un jugador de Cuarta Libre puede jugar Cuarta +40 y superiores también, pero no puede jugar Quinta +40, ni Sexta +40 tampoco. 
+
+Las especialidades mixtos siguen otros parámetros en cuanto se refiere a damas o caballeros`,
     },
     {
       title: "Excepciones",

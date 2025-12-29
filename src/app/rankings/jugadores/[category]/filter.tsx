@@ -5,7 +5,7 @@ import Link from "next/link";
 const Filter = ({ category }: { category: string }) => {
   return (
     <div
-      className="flex justify-center gap-y-2 gap-x-2 text-sm flex-wrap max-w-2xl m-auto
+      className="flex justify-center gap-y-2 gap-x-2 flex-wrap max-w-2xl m-auto
      [&>span:last-child>span]:hidden font-medium"
     >
       {categories.map((item) => (

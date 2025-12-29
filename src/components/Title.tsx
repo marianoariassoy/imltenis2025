@@ -9,11 +9,11 @@ const Header = ({ title, subtitle, description, emoji }: HeaderProps) => {
   return (
     <header className="flex flex-col text-center px-4">
       {emoji && <div className="text-2xl">{emoji}</div>}
-      <div className="text-lg text-primary">
+      <div className="text-xl text-primary">
         <h1 className="font-extrabold px-4">{title}</h1>
         {subtitle && <h2 className="font-medium">{subtitle}</h2>}
       </div>
-      <div className="font-medium text-sm">{description}</div>
+      <div className="font-medium">{description}</div>
     </header>
   );
 };

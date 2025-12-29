@@ -104,10 +104,10 @@ const groups = async ({
   ];
 
   return (
-    <section className="flex flex-col gap-y-3">
+    <section className="flex flex-col gap-y-8">
       {data.map((item) => (
-        <div key={item.id} className="flex flex-col gap-y-6">
-          <h1 className="font-bold text-center text-primary text-lg">
+        <div key={item.id} className="flex flex-col gap-y-8">
+          <h1 className="font-bold text-center text-primary text-xl">
             {item.name}
           </h1>
 

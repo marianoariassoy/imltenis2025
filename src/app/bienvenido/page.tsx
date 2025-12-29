@@ -177,7 +177,7 @@ const Page = () => {
                 <Error error={errors.dni} />
               </div>
               <div className="form-control">
-                <label className="text-sm mb-2 block">
+                <label className="mb-2 block">
                   <span className="text-primary font-medium">
                     Fecha de nacimiento
                   </span>
@@ -187,14 +187,14 @@ const Page = () => {
                     type="date"
                     defaultValue="1986-06-03"
                     id="date"
-                    className="w-full h-12 border-primary border bg-transparent px-4 text-sm focus:outline-none focus:ring-0 placeholder:text-secondary rounded-lg mb-2"
+                    className="w-full h-12 border-primary border bg-transparent px-4 focus:outline-none focus:ring-0 placeholder:text-secondary rounded-lg mb-2"
                     {...register("birthday", { required: errorMessage })}
                   />
                 </div>
                 <Error error={errors.birthday} />
               </div>
               <div className="form-control">
-                <label className="text-sm mb-2 block">
+                <label className="mb-2 block">
                   <span className="text-primary font-medium">
                     Foto de perfil (Requerido)
                   </span>

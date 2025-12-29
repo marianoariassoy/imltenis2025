@@ -4,20 +4,21 @@
 
 :root {
   --primary: #f34643;
-  --foreground: #a4a4a4;
-  --secondary: #737272;
-  --background: #262626;
+  --foreground: #c8c7c7;
+  /* --foreground: #a4a4a4; */
+  --secondary: #666;
+  --background: #1e1d1d;
 }
 
 .table thead tr th {
   text-align: left;
   color: var(--secondary);
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding-right: 1rem;
 }
 .table tr td {
-  padding-top: 0.6rem;
+  padding-top: 0.75rem;
   padding-right: 1rem;
 }
 .fade-in {

@@ -6,10 +6,10 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className="flex flex-col gap-y-3 text-sm">
+    <section className="flex flex-col gap-y-3">
       <Title title="¡Hola!" emoji="👋" />
 
-      <div className="flex flex-col gap-y-6 px-6 text-center max-w-2xl mx-auto">
+      <div className="flex flex-col gap-y-6 px-6 text-center max-w-3xl mx-auto">
         <div>
           En Argentina, el deporte ocupa un lugar central en la vida
           comunitaria, y los clubes constituyen una de las instituciones
