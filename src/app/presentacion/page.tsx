@@ -28,7 +28,9 @@ const Presentacion = () => {
   const data = [
     {
       title: "🤔 ¿Qué necesito para realizar la inscripción?",
-      text: `Para inscribirte necesitás leer la información completa de cómo se lleva adelante el torneo y armar tu equipo con un mínimo de 8 participantes en la lista de buena fe y un máximo de 20 jugadores. Tener o alquilar 3 canchas de tenis de la misma superficie para poder hacer de local, aceptamos clubes con 2 canchas.`,
+      text: `Para inscribirte, necesitás leer la información completa sobre cómo se desarrolla el torneo y armar tu equipo con un mínimo de 8 participantes en la lista de buena fe y un máximo de 20 jugadores.
+
+Además, el equipo deberá contar con 3 canchas de tenis de la misma superficie para hacer de local. También se aceptan clubes con 2 canchas.`,
     },
     {
       title: "📅 Fechas",
@@ -37,27 +39,29 @@ Cierre de Inscripción: <strong>7 de Marzo.</strong>`,
     },
     {
       title: "🏆 ¿Cómo es el formato de juego y del torneo?",
-      text: `Dependiendo la categoría se disputarán <strong>1 single y 2 dobles.</strong> o <strong>2 dobles.</strong><br/>
-      Todos los partidos se disputarán al mejor de 3 sets, con tie break. El tercer set será Super tiebreak a 10 puntos con diferencia de dos.<br/>
-      Todos los resultados y el reglamento general podrán ser vistos en este sitio web.`,
+      text: `Según la categoría, se disputará 1 single y 2 dobles, o bien 2 partidos de dobles.
+<br /> 
+Todos los partidos se jugarán al mejor de 3 sets, con tie-break. En caso de tercer set, se disputará un super tie-break a 10 puntos, con diferencia de dos.
+<br /> 
+Todos los resultados y el reglamento general pueden consultarse en este sitio web.`,
     },
     {
       title: "⭐ ¿En qué categorías puedo inscribirme?",
-      text: `<strong>Damas Sábados de 13 a 17 hs.:</strong><br/>
+      text: `<strong>Damas sábados de 13 a 17 hs.:</strong><br/>
       Intermedia +30 (2 dobles)<br/>
       Tercera +40 (2 dobles)<br/>
       Cuarta +40 (2 dobles)<br/><br/>
       
-      <strong>Damas Domingos de 9 a 17hs.:</strong>  <br/> 
+      <strong>Damas domingos de 9 a 17hs.:</strong>  <br/> 
       Tercera Libre (1 single, 2 dobles)  <br/> 
       Cuarta Libre (1 single, 2 dobles)  <br/> 
       Quinta Libre (1 single, 2 dobles) <br/> <br/> 
     
-      <strong>Caballeros Sábados de 13 a 17 hs.:</strong><br/>
+      <strong>Caballeros sábados de 13 a 17 hs.:</strong><br/>
       Cuarta +40 (2 dobles)<br/>
       Quinta +40 (2 dobles)<br/><br/> 
       
-      <strong>Caballeros Domingos de 9 a 17hs.:</strong> <br/> 
+      <strong>Caballeros domingos de 9 a 17hs.:</strong> <br/> 
       Primera Libre (1 single, 2 dobles) <br/> 
       Intermedia Libre (1 single, 2 dobles) <br/> 
       Tercera Libre (1 single, 2 dobles) <br/> 
@@ -65,7 +69,7 @@ Cierre de Inscripción: <strong>7 de Marzo.</strong>`,
       Quinta Libre (1 single, 2 dobles) <br/> 
       Sexta Libre (1 single, 2 dobles)  <br/>  <br/> 
 
-      <strong>Mixtos Sábados de 13 a 17 hs.:</strong><br/>
+      <strong>Mixtos sábados de 13 a 17 hs.:</strong><br/>
       Mixto Tercera (2 dobles)<br/>
       Mixto Libre. (1 doble)
       `,
@@ -87,12 +91,12 @@ Cierre de Inscripción: <strong>7 de Marzo.</strong>`,
     },
     {
       title: "🕛 ¿Qué día y horario se juega por categoría?",
-      text: `Las categorías de los Domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los Sábados de <strong>13 a 17 hs.</strong> <br/> 
-      Cada equipo puede elegir el horario cuando actúa de local.`,
+      text: `Las categorías de los domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los sábados de <strong>13 a 17 hs.</strong> <br/> 
+      Cada equipo puede elegir el horario cuando actúa de local dentro de esas franjas.`,
     },
     {
       title: "🤔 ¿Hay un mínimo de encuentros o series a disputar?",
-      text: `No podemos saber con exactitud cuantas series se disputarán hasta no tener cerradas las categorías, pretendemos que se disputen desde 8 series por equipo.`,
+      text: `No es posible determinar con exactitud la cantidad de series que se disputarán hasta que las categorías estén cerradas. No obstante, se prevé que cada equipo dispute al menos 8 series a lo largo del torneo.`,
     },
     {
       title: "🎾 Pelotas",
@@ -119,21 +123,32 @@ CUIT/CUIL: 27397070811 <br/><br/>
     },
     {
       title: "💵 ¿Cuál es el valor a abonar cada partido?",
-      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será de $10 mil pesos.`,
+      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será de $10 mil pesos (el costo puede variar).`,
     },
     {
       title: "😀 ¿Cómo llevo adelante la inscripción?",
-      text: `Cada equipo deberá tener un capitán responsable, quien será el encargado de realizar la inscripción y de enviar la lista de buena fe de su equipo hasta la fecha indicada. `,
+      text: `Cada equipo deberá tener un capitán responsable, quien será el encargado de realizar la inscripción y de cargar la lista de buena fe de su equipo hasta la fecha indicada. `,
     },
   ];
   return (
     <section className="flex flex-col gap-y-8 m-auto max-w-4xl">
       <div className="flex flex-col gap-y-4">
-        <div className="text-center flex flex-col items-center mb-4">
+        <div className="text-center flex flex-col items-center">
           <div className="text-2xl text-center">🏆</div>
           <h1 className="font-extrabold text-primary text-xl">
             Torneo Apertura 2026
           </h1>
+        </div>
+
+        <div className="[&>span]:font-semibold [&>span]:text-primary mb-2">
+          Sumate a uno de los interclubes de tenis más importantes de la zona ,
+          con casi <span>200 equipos y 16 categorías</span> de diferentes
+          niveles de juego. Viví una experiencia única junto a tu grupo de
+          amigos: representá a tu club o barrio, jugá en tus propias canchas y
+          descubrí nuevas sedes y rivales cada semana. <br />
+          <br />
+          Todos los <span> resultados, estadísticas y rankings </span>se
+          actualizan online para que sigas el torneo en tiempo real.
         </div>
 
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
@@ -145,26 +160,20 @@ CUIT/CUIL: 27397070811 <br/><br/>
       </div>
 
       <div className="[&>span]:font-semibold [&>span]:text-primary">
-        <span className="font-bold">¡Llega el Torneo Apertura 2026!</span>{" "}
-        Sumate a uno de los interclubes de tenis más importantes de la región,
-        con más de 150 equipos y 16 categorías, viví una experiencia única junto
-        a tu grupo de amigos. Representá a tu club o barrio, jugá de local en
-        tus canchas y descubrí nuevas sedes y rivales cada semana. Todos los
-        resultados y rankings se actualizan online, para que sigas el torneo en
-        tiempo real.
+        <span>Recibí premios, reconocimientos y mucho más.</span>
         <br />
+        Podés ser elegido como <span>Jugador Destacado de la Fecha</span>,
+        liderar el ranking individual y acceder a importantes premios al final
+        de la temporada. Además, cada punto que sumes impulsa a tu equipo y a tu
+        club a escalar posiciones en el <span>ranking anual de clubes</span>.
         <br />
-        Premios, reconocimientos y mucho más Podés ser elegido como{" "}
-        <span>el jugador destacado de la fecha</span>, liderar el ranking
-        individual y recibir importantes premios al final de la temporada.
-        Además, cada punto que sumes ayuda a tu club a escalar posiciones en el{" "}
-        <span>ranking anual de clubes.</span> <br />
-        <br />Y eso no es todo... Celebramos lo mejor de nuestra comunidad con
-        propuestas como <span>La Batalla de Clubes</span>, la elección de los
-        mejores capitanes y los esperados <span>IML Awards.</span>
+        <br />Y eso no es todo… Celebramos lo mejor de nuestra comunidad con
+        propuestas especiales como <span>La Batalla de Clubes</span>, la
+        elección de los mejores capitanes y los esperados{" "}
+        <span>IML Awards</span>.
         <br />
-        El torneo culmina con una gran final junto a todas las categorías, en un
-        evento de cierre con premiación, sorteos y muchas sorpresas más.
+        La temporada culmina con una gran final junto a todas las categorías, en
+        un evento de cierre con premiación, sorteos y muchas sorpresas más.
       </div>
 
       {data.map((item, index) => (

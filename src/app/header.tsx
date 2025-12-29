@@ -40,12 +40,12 @@ const Header = () => {
   return (
     <>
       <header
-        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50 pb-2"
+        className="sticky top-0 flex w-full items-center gap-x-4 px-3 py-2 z-50 pb-4"
         id="header"
       >
         <div className="flex-1">
           <button
-            className="text-primary hover:text-foreground"
+            className="text-primary hover:text-foreground -ml-1"
             onClick={handleMenu}
             aria-label="Menu"
           >
