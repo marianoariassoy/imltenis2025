@@ -1,6 +1,7 @@
 import { WhatsApp } from "@/lib/icons";
 import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
+import Image from "next/image";
 
 export const metadata = {
   title: "Presentación Torneo Apertura 2026",
@@ -152,9 +153,12 @@ CUIT/CUIL: 27397070811 <br/><br/>
         </div>
 
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
-          <img
-            src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExODQ2dTV0Y2w3dzl4cWZvcXBwemgwcTJsajlrajl0MmsweDh5Z2lxeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/kSADP5pTBqGb0RAHJv/giphy.gif"
+          <Image
+            src="/images/1.png"
             className="w-full h-full object-cover object-top"
+            width={1200}
+            height={1200}
+            alt="Portada"
           />
         </div>
       </div>
@@ -194,9 +198,12 @@ CUIT/CUIL: 27397070811 <br/><br/>
       </div>
 
       <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
-        <img
-          src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm4xeWwwM3FidG82dmNyNTc4dzVjdzdlYXlxbWRkdjB2Y2puZWZ5MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ddx6LRVa19X5J6piFt/giphy.gif"
+        <Image
+          src="/images/2.png"
           className="w-full h-full object-cover object-center"
+          width={1200}
+          height={1200}
+          alt="Portada 2"
         />
       </div>
 
