@@ -132,7 +132,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
     },
   ];
   return (
-    <section className="flex flex-col gap-y-4 m-auto max-w-4xl">
+    <section className="flex flex-col gap-y-4 m-auto">
       <div className="flex flex-col gap-y-4">
         <div className="text-center flex flex-col items-center">
           <div className="text-2xl text-center">🏆</div>
