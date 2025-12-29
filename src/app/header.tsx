@@ -45,14 +45,14 @@ const Header = () => {
       >
         <div className="flex-1">
           <button
-            className="text-primary hover:text-foreground -ml-1"
+            className="hover:text-primary -ml-1"
             onClick={handleMenu}
             aria-label="Menu"
           >
             <Menu />
           </button>
         </div>
-        <div className=" flex justify-center text-primary logo-main transition-all">
+        <div className="flex justify-center text-primary logo-main transition-all">
           <Link
             href="/"
             aria-label="Logo"
@@ -66,7 +66,7 @@ const Header = () => {
             href="https://www.instagram.com/imltenis/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-foreground"
+            className="hover:text-primary"
             aria-label="Instagram"
           >
             <Instagram />

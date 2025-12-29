@@ -14,7 +14,7 @@ const InfoShow = ({ text }: { text: string }) => {
       <span className="text-primary mt-1">
         <Info />
       </span>
-      <span className="whitespace-break-spaces opacity-80">{text}</span>
+      <span className="whitespace-break-spaces opacity-70">{text}</span>
     </div>
   );
 };

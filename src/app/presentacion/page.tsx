@@ -38,7 +38,7 @@ Además, el equipo deberá contar con 3 canchas de tenis de la misma superficie 
 Cierre de Inscripción: <strong>7 de Marzo.</strong>`,
     },
     {
-      title: "🏆 ¿Cómo es el formato de juego y del torneo?",
+      title: "🔥 ¿Cómo es el formato de juego y del torneo?",
       text: `Según la categoría, se disputará 1 single y 2 dobles, o bien 2 partidos de dobles.
 <br /> 
 Todos los partidos se jugarán al mejor de 3 sets, con tie-break. En caso de tercer set, se disputará un super tie-break a 10 puntos, con diferencia de dos.
@@ -46,7 +46,7 @@ Todos los partidos se jugarán al mejor de 3 sets, con tie-break. En caso de ter
 Todos los resultados y el reglamento general pueden consultarse en este sitio web.`,
     },
     {
-      title: "⭐ ¿En qué categorías puedo inscribirme?",
+      title: "🚀 ¿En qué categorías puedo inscribirme?",
       text: `<strong>Damas sábados de 13 a 17 hs.:</strong><br/>
       Intermedia +30 (2 dobles)<br/>
       Tercera +40 (2 dobles)<br/>
@@ -78,7 +78,7 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       title: "📈 ¿Cómo se a que categoría corresponde mi equipo?",
       text: `<strong>Niveles orientativos: </strong>
         Quinta: Jugadores categoría 125, C. <br/> Cuarta: Jugadores categoría 250, B2, B-. <br/>Tercera: Jugadores categoría 500,
-        B1 <br/>Segunda: Jugadores categoría 750, A1, A2 <br/>Primera: Jugadores categoría 1000, Super A.`,
+        B1 <br/>Intermedia: Jugadores categoría 750, A1, A2 <br/>Primera: Jugadores categoría 1000, Super A.`,
     },
     {
       title: "🔞 ¿Hay restricciones por edad en las categorías libres?",
@@ -95,7 +95,7 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       Cada equipo puede elegir el horario cuando actúa de local dentro de esas franjas.`,
     },
     {
-      title: "🤔 ¿Hay un mínimo de encuentros o series a disputar?",
+      title: "💪🏻 ¿Hay un mínimo de encuentros o series a disputar?",
       text: `No es posible determinar con exactitud la cantidad de series que se disputarán hasta que las categorías estén cerradas. No obstante, se prevé que cada equipo dispute al menos 8 series a lo largo del torneo.`,
     },
     {
@@ -122,11 +122,11 @@ CUIT/CUIL: 27397070811 <br/><br/>
       Consultá descuentos para tu club por cantidad de equipos.`,
     },
     {
-      title: "💵 ¿Cuál es el valor a abonar cada partido?",
+      title: "🙌🏻 ¿Cuál es el valor a abonar cada partido?",
       text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será de $10 mil pesos (el costo puede variar).`,
     },
     {
-      title: "😀 ¿Cómo llevo adelante la inscripción?",
+      title: "😎 ¿Cómo llevo adelante la inscripción?",
       text: `Cada equipo deberá tener un capitán responsable, quien será el encargado de realizar la inscripción y de cargar la lista de buena fe de su equipo hasta la fecha indicada. `,
     },
   ];
@@ -186,7 +186,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
           className="hover:underline flex items-center gap-x-1 flex-wrap text-primary"
           target="_blank"
         >
-          <span>Ante cualquier duda contactate por</span>
+          <span>Contactate por</span>
           <span className="flex items-center gap-x-1">
             <WhatsApp /> WhatsApp haciendo click acá
           </span>
