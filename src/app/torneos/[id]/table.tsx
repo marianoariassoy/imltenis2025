@@ -27,7 +27,7 @@ const Tabla = async ({
   return (
     <section className="flex flex-col gap-y-3">
       <div className="overflow-x-auto whitespace-nowrap">
-        <table className="w-full table table-auto mb-3">
+        <table className="w-full table table-auto mb-2">
           <thead>
             <tr>
               {labels.map((item, index) => (

@@ -13,7 +13,7 @@ const page = () => {
       <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
         <Image
           src="/images/3.png"
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-center"
           width={1200}
           height={1200}
           alt="Portada"

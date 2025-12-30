@@ -39,14 +39,14 @@ const Jugadores = async ({
   ];
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-4">
       <div className="text-center">
         <h1 className="text-primary font-semibold">🔥 Lista de buena fe</h1>
         <h2 className="font-medium">{captain_name} (Capitán)</h2>
       </div>
 
       <div className="overflow-x-auto whitespace-nowrap">
-        <table className="table w-full mb-3">
+        <table className="table w-full">
           <thead>
             <tr>
               {labels.map((item, index) => (
