@@ -74,7 +74,7 @@ const Menu = () => {
         </li>
       </ul>
       <button
-        className="absolute top-6 right-0 p-3 z-50 hover:text-primary cursor-pointer"
+        className="absolute top-6 left-0 p-3 z-50 hover:text-primary cursor-pointer"
         onClick={handleMenu}
       >
         <svg

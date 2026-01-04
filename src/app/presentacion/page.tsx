@@ -142,14 +142,18 @@ CUIT/CUIL: 27397070811 <br/><br/>
         </div>
 
         <div className="[&>span]:font-semibold [&>span]:text-primary mb-2">
-          Sumate a uno de los interclubes de tenis más importantes de la zona ,
-          con casi <span>200 equipos y 16 categorías</span> de diferentes
-          niveles de juego. Viví una experiencia única junto a tu grupo de
-          amigos: representá a tu club o barrio, jugá en tus propias canchas y
-          descubrí nuevas sedes y rivales cada semana. <br />
+          Sumate a uno de los interclubes de tenis más importantes de la zona,
+          con más de <span>200 equipos y 16 categorías</span> que abarcan
+          distintos niveles de juego. Viví una experiencia única junto a tu
+          grupo de amigos: representá a tu club o barrio, jugá en tus propias
+          canchas y descubrí nuevas sedes y rivales cada semana. <br />
           <br />
-          Todos los <span> resultados, estadísticas y rankings </span>se
-          actualizan online para que sigas el torneo en tiempo real.
+          Todos los{" "}
+          <span>
+            resultados, las estadísticas de tu equipo y personales, así como
+            también los rankings{" "}
+          </span>
+          se actualizan online para que sigas el torneo en tiempo real.
         </div>
 
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
@@ -164,12 +168,11 @@ CUIT/CUIL: 27397070811 <br/><br/>
       </div>
 
       <div className="[&>span]:font-semibold [&>span]:text-primary">
-        <span>Recibí premios, reconocimientos y mucho más.</span>
-        <br />
-        Podés ser elegido como <span>Jugador Destacado de la Fecha</span>,
-        liderar el ranking individual y acceder a importantes premios al final
-        de la temporada. Además, cada punto que sumes impulsa a tu equipo y a tu
-        club a escalar posiciones en el <span>ranking anual de clubes</span>.
+        Recibí premios, reconocimientos y mucho más. Podés ser elegido como{" "}
+        <span>Jugador Destacado de la Fecha</span>, liderar el ranking
+        individual y acceder a importantes premios al final de la temporada.
+        Además, cada punto que sumes impulsa a tu equipo y a tu club a escalar
+        posiciones en el <span>ranking anual de clubes</span>.
         <br />
         <br />Y eso no es todo… Celebramos lo mejor de nuestra comunidad con
         propuestas especiales como <span>La Batalla de Clubes</span>, la

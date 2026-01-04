@@ -242,7 +242,10 @@ Las sanciones y medidas aquí detalladas serán de aplicación automática e ina
     },
     {
       title: "Descenso de jugadores",
-      text: `Un jugador podrá solicitar el descenso voluntario a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que el balance total de partidos ganados y perdidos en dicha categoría sea de -3 o inferior en todas sus participaciones.`,
+      text: `Un jugador podrá solicitar el descenso a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que registre, en la categoría actual, un balance acumulado de partidos ganados y perdidos igual o inferior a –3 en sus últimos diez (10) encuentros disputados.
+
+La organización se reserva el derecho de disponer el descenso de un jugador cuando, tras un análisis pormenorizado de su desempeño y situación deportiva, considere que dicha medida resulta pertinente, aun cuando no se alcance el coeficiente establecido en el párrafo precedente.
+      `,
     },
     {
       title: "Ascensos de jugadores",
