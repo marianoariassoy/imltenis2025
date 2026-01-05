@@ -71,7 +71,7 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       Sexta Libre (1 single, 2 dobles)  <br/>  <br/> 
 
       <strong>Mixtos sábados de 13 a 17 hs.:</strong><br/>
-      Mixto Tercera (2 dobles)<br/>
+      Mixto 3D/4C (2 dobles)<br/>
       Mixto Libre. (1 doble)
       `,
     },
