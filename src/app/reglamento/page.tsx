@@ -30,13 +30,13 @@ En cada fecha se disputarán tres o dos encuentros entre dos equipos representan
     },
     {
       title: "Modalidad de juego",
-      text: `En las categorías Damas, Libres y +35 se jugará 1 single y 2 dobles.
-      Todos los partidos se disputarán al mejor de 3 sets con tie break. El tercer set será supertie break a 10 puntos con diferencia de dos.
-      Los 3 encuentros deberán disputarse en simultaneo comenzando al mismo tiempo, salvo clubes con 2 canchas (ver el reglamento).
+      text: `En las categorías Damas y Caballeros Libres se disputará una serie compuesta por 1 single y 2 dobles.
 
-      En las categorías Mixtas se jugará 2 dobles mixtos y simultaneos. Las series podrán quedar empatadas en la primera fase, se sumará 1 punto para cada equipo.
-En playoffs, se disputarán 3 dobles mixtos y simultaneos.
-      `,
+En las categorías Damas y Caballeros +30, +40 y Mixto se jugarán 2 partidos de dobles. En la fase regular, las series podrán finalizar empatadas, otorgándose 1 punto a cada equipo. En instancias de playoffs, se disputarán 3 dobles mixtos para definir la serie.
+
+Todos los partidos se jugarán al mejor de tres sets con tie break. El tercer set se disputará en modalidad supertie break a 10 puntos, con una diferencia mínima de dos puntos.
+
+Los tres encuentros deberán disputarse en simultáneo, comenzando al mismo horario, salvo en el caso de clubes que cuenten con dos canchas disponibles (ver reglamento).`,
     },
     {
       title: "Puntuación",
@@ -59,11 +59,11 @@ En caso de que el equipo local se niegue a utilizar pelotas nuevas o a abonar el
     },
     {
       title: "Días y Horarios",
-      text: `Las categorías de Damas jugarán los días sábados y domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser los sábados entre las 12 y las 17 hs. y los domingos entre las 9 y las 17 hs.
-      La categoría Mixto Tercera, jugará los días sábados en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 12 y las 17 hs. 
-      El resto de las categorías jugarán los días domingos en un horario a determinar por el equipo local en cada oportunidad, que deberá ser entre las 9 y las 17 hs.
+      text: `Las categorías Damas Intermedia +30, Damas Tercera +40, Damas Cuarta +40, Mixto Libre, Mixto Tercera, Mixto Quinta, Caballeros Cuarta +40 y Caballeros Quinta +40 se disputarán los días sábados, en un horario a definir por el equipo local en cada encuentro, el cual deberá encontrarse entre las 13:00 y las 17:00 hs.
 
-      Los horarios deben informarse por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 17:00 hs. del miércoles de la semana correspondiente, de lo contrario se procederá a la quita de 1 punto de la serie al equipo local, sumándose 1 punto por cada día de atraso.`,
+Las categorías Caballeros Primera Libre, Caballeros Intermedia Libre, Caballeros Tercera Libre, Caballeros Cuarta Libre, Caballeros Quinta Libre y Caballeros Sexta Libre se jugarán los días domingos, en un horario a determinar por el equipo local, que deberá ubicarse entre las 9:00 y las 17:00 hs.
+
+Los horarios deberán ser informados por el capitán del equipo local en el chat de capitanes de WhatsApp antes de las 17:00 hs del miércoles de la semana correspondiente. En caso de incumplimiento, se aplicará una quita de 1 punto en la serie al equipo local, adicionándose 1 punto más por cada día de atraso.`,
     },
     {
       title: "Planillas",
@@ -253,12 +253,9 @@ La organización se reserva el derecho de disponer el descenso de un jugador cua
     },
     {
       title: "Equivalencias entre categorías (libres y etareas)",
-      text: `Aquellos jugadores que compitan en ambas especialidades: libres y etareas, deben respetar los siguientes lineamientos:
-— la categoría libre marca el límite inferior de la categoría etarea. 
-Ejemplos: un jugador de Quinta Libre puede jugar las categoría etareas de Quinta para arriba pero nunca Sexta +40. 
-Un jugador de Cuarta Libre puede jugar Cuarta +40 y superiores también, pero no puede jugar Quinta +40, ni Sexta +40 tampoco. 
+      text: `Aquellos jugadores que participen en ambas especialidades, Libres y Etarias, deberán respetar los siguientes lineamientos. La categoría Libre establece el límite inferior de la categoría Etaria en la que el jugador podrá competir. Por ejemplo, un jugador de Quinta Libre podrá participar en categorías Etarias de Quinta en adelante, pero no estará habilitado para jugar Sexta +40. Del mismo modo, un jugador de Cuarta Libre podrá competir en Cuarta +40 y categorías superiores, pero no podrá hacerlo en Quinta +40.
 
-Las especialidades mixtos siguen otros parámetros en cuanto se refiere a damas o caballeros`,
+Las categorías Mixtas se rigen por criterios específicos distintos a los aplicables a Damas y Caballeros.`,
     },
     {
       title: "Excepciones",
@@ -298,13 +295,13 @@ Las especialidades mixtos siguen otros parámetros en cuanto se refiere a damas 
     },
     {
       title: "",
-      text: `Ultima actualización: Septiembre 2025`,
+      text: `Ultima actualización: Enero 2026`,
     },
   ];
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title title="Reglamento Clausura 2025" emoji="🤝" description="" />
+      <Title title="Reglamento Clausura 2026" emoji="🤝" description="" />
       <Filter data={data} />
     </section>
   );
