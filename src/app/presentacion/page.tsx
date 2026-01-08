@@ -29,9 +29,9 @@ const Presentacion = () => {
   const data = [
     {
       title: "🤔 ¿Qué necesito para realizar la inscripción?",
-      text: `Para inscribirte, necesitás leer la información completa sobre cómo se desarrolla el torneo y armar tu equipo con un mínimo de 8 participantes en la lista de buena fe y un máximo de 20 jugadores.
+      text: `Para inscribirte, es requisito leer la información completa sobre el desarrollo del torneo y conformar un equipo con un mínimo de 8 jugadores/as en la lista de buena fe y un máximo de 20.
 
-Además, el equipo deberá contar con 3 canchas de tenis de la misma superficie para hacer de local. También se aceptan clubes con 2 canchas.`,
+Además, el equipo deberá disponer de 3 canchas de tenis de la misma superficie para actuar como local. De manera excepcional, también se aceptarán clubes que cuenten con 2 canchas.`,
     },
     {
       title: "📅 Fechas",
@@ -68,17 +68,17 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       Tercera Libre (1 single, 2 dobles) <br/> 
       Cuarta Libre (1 single, 2 dobles) <br/> 
       Quinta Libre (1 single, 2 dobles) <br/> 
-      Sexta Libre (1 single, 2 dobles)  <br/>  <br/> 
+      Sexta Libre (1 single, 2 dobles)  <br/> <br/> 
 
       <strong>Mixtos sábados de 13 a 17 hs.:</strong><br/>
-      Mixto Libre. (1 doble)
-      Mixto 3D/4C (damas Tercera/Cuarta, caballeros Cuarta) (2 dobles)<br/>
-      Mixto 5D/5C (damas Quinta, caballeros Quinta/Sexta) (2 dobles)<br/>
+      Mixto Libre. (1 doble)<br/> 
+      Mixto 3D/4C (Damas Tercera/Cuarta, Caballeros Cuarta) (2 dobles)<br/>
+      Mixto 5D/5C (Damas Quinta, Caballeros Quinta/Sexta) (2 dobles)<br/>
       `,
     },
     {
       title: "📈 ¿Cómo se a que categoría corresponde mi equipo?",
-      text: `<strong>Niveles orientativos: </strong>
+      text: `<strong>Niveles orientativos: </strong> <br/> 
         Quinta: Jugadores categoría 125, C. <br/> Cuarta: Jugadores categoría 250, B2, B-. <br/>Tercera: Jugadores categoría 500,
         B1 <br/>Intermedia: Jugadores categoría 750, A1, A2 <br/>Primera: Jugadores categoría 1000, Super A.`,
     },
@@ -94,11 +94,11 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
     {
       title: "🕛 ¿Qué día y horario se juega por categoría?",
       text: `Las categorías de los domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los sábados de <strong>13 a 17 hs.</strong> <br/> 
-      Cada equipo puede elegir el horario cuando actúa de local dentro de esas franjas.`,
+      Cada equipo puede elegir el horario cuando sea local dentro de esas franjas.`,
     },
     {
       title: "💪🏻 ¿Hay un mínimo de encuentros o series a disputar?",
-      text: `No es posible determinar con exactitud la cantidad de series que se disputarán hasta que las categorías estén cerradas. No obstante, se prevé que cada equipo dispute al menos 8 series a lo largo del torneo.`,
+      text: `A lo largo del torneo, cada equipo tendrá garantizada la disputa de al menos 8 series.`,
     },
     {
       title: "🎾 Pelotas",
@@ -149,11 +149,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
           grupo de amigos: representá a tu club o barrio, jugá en tus propias
           canchas y descubrí nuevas sedes y rivales cada semana. <br />
           <br />
-          Todos los{" "}
-          <span>
-            resultados, las estadísticas de tu equipo y personales, así como
-            también los rankings{" "}
-          </span>
+          Todos los <span>resultados, estadísticas y rankings </span>
           se actualizan online para que sigas el torneo en tiempo real.
         </div>
 

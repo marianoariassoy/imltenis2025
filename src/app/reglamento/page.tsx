@@ -32,17 +32,17 @@ En cada fecha se disputarán tres o dos encuentros entre dos equipos representan
       title: "Modalidad de juego",
       text: `En las categorías Damas y Caballeros Libres se disputará una serie compuesta por 1 single y 2 dobles.
 
-En las categorías Damas y Caballeros +30, +40 y Mixto se jugarán 2 partidos de dobles. En la fase regular, las series podrán finalizar empatadas, otorgándose 1 punto a cada equipo. En instancias de playoffs, se disputarán 3 dobles mixtos para definir la serie.
+En las categorías Damas y Caballeros +30, +40 y Mixto se disputarán 2 encuentros de dobles. En la fase regular, las series podrán finalizar empatadas, otorgándose 1 punto a cada equipo. En instancias de playoffs, se disputarán 3 dobles para definir la serie.
 
 Todos los partidos se jugarán al mejor de tres sets con tie break. El tercer set se disputará en modalidad supertie break a 10 puntos, con una diferencia mínima de dos puntos.
 
-Los tres encuentros deberán disputarse en simultáneo, comenzando al mismo horario, salvo en el caso de clubes que cuenten con dos canchas disponibles (ver reglamento).`,
+Los tres encuentros deberán disputarse en simultáneo, comenzando al mismo horario, salvo en el caso de clubes que cuenten con dos canchas disponibles (ver apartado).`,
     },
     {
       title: "Puntuación",
       text: `Cada encuentro ganado sumará un punto, es decir, ganando los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo vencedor y 1 punto al equipo rival, por lo que todos los encuentros ganados suman puntos.
       
-      En caso de empate por puntos se desempatará por mayor cantidad de series ganadas, de persistir el empate, se desempatará por doble 1 ganados, siguiendo la diferencia de sets y en el último caso diferencia de games. 
+      En caso de empate por puntos se desempatará por mayor cantidad de series ganadas, de persistir el empate, se desempatará por dobles 1 ganados, siguiendo la diferencia de sets, games y en el último caso cantidad de puntos Fair Play. 
       Todos los resultados podrán ser vistos en este sitio web.`,
     },
     {
@@ -177,23 +177,22 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
       Es responsabilidad de los capitanes chequear que estén todos sus jugadores y colocados en la posición que consideren correcta antes del comienzo del torneo. En las categorías con límite de edad, se considerará que el jugador está dentro de la categoría, al cumplir años dentro del año calendario de inicio del torneo.`,
     },
     {
-      title: "Exepciones",
+      title: "Exepciones en la lista de buena fe",
       text: `En las categorías etarias se autoriza la inclusión en la lista de buena fe de jugadores cuya edad sea de hasta cinco (5) años inferior al límite establecido para la categoría correspondiente.
       Por ejemplo, en las categorías +40 se podrán incluir jugadores +35 en la lista de buena fe.
 En ningún caso podrá incluirse más de un (1) jugador bajo esta excepción por cada serie a disputar.`,
     },
     {
       title: "Cantidad de jugadores por equipo",
-      text: `El límite de integrantes de la lista de buena fe es de 6 a 20 jugadores.`,
+      text: `El límite de integrantes de la lista de buena fe es de 8 a 20 jugadores.`,
     },
     {
-      title: "Equivalencias de niveles en otros torneos",
-      text: `Quinta Libre y Cuarta Damas: Jugadores categoría 125, C. 
-      Cuarta Libre, 
-      Tercera Damas: Jugadores categoría 250 a 500, B2, B-. 
-      Tercera Libre: Jugadores categoría 500 a 750, B1 
-      Segunda Libre: Jugadores categoría 750 a 1000, A1, A2 
-      Primera Libre: Jugadores categoría 1000, Super A.
+      title: "Equivalencias orientativas de nivel",
+      text: `Quinta: Jugadores categoría 125, C. 
+      Cuarta: Jugadores categoría 250 a 500, B2, B-. 
+      Tercera: Jugadores categoría 500 a 750, B1 
+      Segunda: Jugadores categoría 750 a 1000, A1, A2 
+      Primera: Jugadores categoría 1000, Super A.
       `,
     },
     {
@@ -210,23 +209,23 @@ En ningún caso podrá incluirse más de un (1) jugador bajo esta excepción por
     },
     {
       title: "Inscripciones",
-      text: `1. Obligación de pago
+      text: `1. Obligación de pago <br/>
 Todos los equipos participantes deberán abonar el monto total de la inscripción del torneo antes o hasta la tercera fecha del campeonato, inclusive.
 
-2. Incumplimiento del plazo
+2. Incumplimiento del plazo <br/>
 Vencido dicho plazo, cualquier equipo que no haya completado el pago quedará automáticamente en situación de incumplimiento reglamentario.
 
-3. Walkover automático
+3. Walkover automático <br/>
 Mientras persista dicha situación, el equipo infractor recibirá walkover en todos los encuentros que dispute a partir de la cuarta fecha, sin excepción, hasta regularizar el pago.
 Una vez regularizada la inscripción, el equipo volverá a sumar puntos con normalidad; sin embargo, los walkovers ya aplicados no serán modificados ni revertidos, permaneciendo inalterables.
 
-4. Regularización del pago
+4. Regularización del pago <br/>
 Para regularizar su situación, el equipo deberá abonar:
 a) El monto total de la inscripción.
 b) Los intereses correspondientes, calculados según el criterio definido por la organización.
 Hasta que ambos conceptos se acrediten correctamente, el equipo continuará recibiendo walkover.
 
-5. Carácter inapelable
+5. Carácter inapelable <br/>
 Las sanciones y medidas aquí detalladas serán de aplicación automática e inapelable. La organización queda facultada para adoptar todas las acciones necesarias para garantizar el cumplimiento del presente artículo.`,
     },
     {
