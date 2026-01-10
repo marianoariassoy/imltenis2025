@@ -71,9 +71,10 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       Sexta Libre (1 single, 2 dobles)  <br/> <br/> 
 
       <strong>Mixtos sábados de 13 a 17 hs.:</strong><br/>
-      Mixto Libre. (1 doble)<br/> 
-      Mixto 3D/4C (Damas Tercera/Cuarta, Caballeros Cuarta) (2 dobles)<br/>
-      Mixto 5D/5C (Damas Quinta, Caballeros Quinta/Sexta) (2 dobles)<br/>
+      Mixto Libre (Caballeros y Damas nivel libre) <br/> 
+      Mixto A (Caballeros hasta Tercera / Damas hasta Intermedia) <br/>
+      Mixto B (Caballeros hasta Cuarta / Damas hasta Tercera)<br/>
+      Mixto C (Caballeros hasta Quinta / Damas hasta Cuarta)
       `,
     },
     {
@@ -112,16 +113,12 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       <strong>Durante Febero $310.000.- </strong><br/> 
       <strong>Durante Marzo $340.000.- </strong><br/><br/>
       Podes realizar una transferencia del valor de la inscripción a la siguiente cuenta: <br/>
-      Alias: iml.tenis <br/>
-      Banco Supervielle <br/>
-Daiana Elizabeth Soto <br/>
-CTA: CA ARS 257-3229751-4 <br/>
-CBU: 0270257720032297510041 <br/>
-CUIT/CUIL: 27397070811 <br/><br/>
-    
-      Enviar comprobante al área administrativa +54 9 11 3017-1475 
-      <br/> 
-      Consultá descuentos para tu club por cantidad de equipos.`,
+      Alias: imltenis.pagos <br/>
+Titular: Irma Petrona Arias <br/>
+CTA: CA $ 19426210999068 <br/>
+CBU: 0110621930062109990683 <br/>
+CUIL: 27050108347 <br/><br/>
+      Enviar comprobante al área administrativa +54 9 11 3017-1475 `,
     },
     {
       title: "🙌🏻 ¿Cuál es el valor a abonar cada partido?",
