@@ -7,6 +7,7 @@ import Messages from "@/components/Messages";
 interface data {
   id: string;
   player_id: string;
+  player_slug: string;
   player_image: string;
   player_name: string;
   team_id: string;
@@ -81,15 +82,14 @@ const table = async ({ category }: { category: string }) => {
                 key={item.id}
                 className={`${index === 0 ? "text-primary" : ""}`}
               >
-                <td className="flex gap-x-2 items-center">
+                <td className="flex gap-x-3 items-center">
                   <span className="font-medium">{index + 1}</span>
                   <Item
                     image={item.player_image}
                     title={item.player_name}
-                    link={`/jugadores/${item.player_id}`}
+                    link={`/jugadores/${item.player_slug}`}
                   />
                 </td>
-
                 <td>
                   <Link
                     href={`/equipos/${item.team_id}`}
@@ -99,7 +99,9 @@ const table = async ({ category }: { category: string }) => {
                   </Link>
                 </td>
                 <td>
-                  <span className="font-semibold">{item.matches_won}</span>
+                  <span className="w-8 h-8 rounded-full bg-white/10 font-semibold flex items-center justify-center">
+                    {item.matches_won}
+                  </span>
                 </td>
                 <td>{item.ds}</td>
                 <td>{item.dg}</td>

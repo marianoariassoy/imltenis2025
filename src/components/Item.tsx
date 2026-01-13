@@ -11,9 +11,9 @@ interface Item {
 
 const TitleRow = ({ num, image, title, link, active }: Item) => {
   return (
-    <div className="flex items-center gap-x-3">
+    <div className="flex items-center gap-x-2">
       {num && (
-        <div className={`font-medium ${active ? "text-primary" : null}`}>
+        <div className={`font-medium mr-1 ${active ? "text-primary" : null}`}>
           {num}
         </div>
       )}

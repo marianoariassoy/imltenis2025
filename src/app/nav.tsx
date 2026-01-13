@@ -51,6 +51,7 @@ const Menu = () => {
         <li>
           <Link
             href="/bienvenido"
+            onClick={handleMenu}
             className={`opacity-70 
               ${
                 pathname === "/bienvenido"
@@ -68,6 +69,7 @@ const Menu = () => {
             target="_blank"
             rel="noopener noreferrer"
             className="hover:underline opacity-70"
+            onClick={handleMenu}
           >
             Capitanes
           </a>

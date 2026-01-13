@@ -7,6 +7,7 @@ export interface Tournament {
 
 export interface Serie {
   id: number;
+  slug: string;
   date: string;
   hour: string;
   home_id: number;
@@ -58,9 +59,11 @@ export interface Player {
   name: string;
   image: string;
   series_total: number;
-  series_won_total: number;
+  series_won: number;
+  series_lost: number;
   series_dif: number;
   age: number;
+  slug: string;
 }
 
 export interface Single {
@@ -68,11 +71,13 @@ export interface Single {
   result: string;
   date: string;
   oponent_id: string;
+  oponent_slug: string;
   oponent_name: string;
   team_oponent_id: string;
   team_oponent_name: string;
   score: string;
   tournament_id: string;
+  tournament_slug: string;
   tournament_name: string;
 }
 
@@ -81,20 +86,24 @@ export interface Double {
   result: string;
   date: string;
   oponent1_id: string;
-  oponent2_id: string;
   oponent1_name: string;
+  oponent1_slug: string;
+  oponent2_id: string;
+  oponent2_slug: string;
   oponent2_name: string;
   partner_id: string;
+  partner_slug: string;
   partner_name: string;
   team_oponent_id: string;
   team_oponent_name: string;
   score: string;
   tournament_id: string;
+  tournament_slug: string;
   tournament_name: string;
 }
 
 export interface Club {
-  club_id: string;
+  id: string;
   name: string;
   image: string;
   location: string;

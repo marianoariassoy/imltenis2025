@@ -8,11 +8,11 @@ import Image from "next/image";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
+  const { slug } = await params;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/players/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/players/${slug}`
   );
   const data = await response.json();
   if (!data) return null;
@@ -23,7 +23,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: "es_AR",
-      url: `https://imltenis.com.ar/jugadores/${id}`,
+      url: `https://imltenis.com.ar/jugadores/${slug}`,
       title: data.name,
       description: `Perfil del jugador ${data.name} de la liga de clubes IML Tenis`,
       images: [
@@ -38,18 +38,18 @@ export async function generateMetadata({
   };
 }
 
-async function getServerSideProps(id: string) {
+async function getServerSideProps(slug: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/players/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/players/${slug}`
   );
   const data = await response.json();
   if (!data) return null;
   return data;
 }
 
-const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
-  const { id } = await params;
-  const data = await getServerSideProps(id);
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const data = await getServerSideProps(slug);
   if (!data) return null;
 
   return (
@@ -73,10 +73,10 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
       </header>
 
-      <Estadisticas id={id} />
-      <Singles id={id} />
-      <Doubles id={id} />
-      <Equipos id={id} />
+      <Estadisticas id={data.id} />
+      <Singles id={data.id} />
+      <Doubles id={data.id} />
+      <Equipos id={data.id} />
 
       <Aviso text="En caso de existir algún error en la información o queres agregar o cambiar tu foto de perfil, envianos un correo a hola@imltenis.com.ar" />
     </section>

@@ -10,26 +10,25 @@ const page = () => {
     <section className="flex flex-col gap-y-8">
       <Title title="¡Hola!" emoji="👋" />
 
-      <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
-        <Image
-          src="/images/2.png"
-          className="w-full h-full object-cover object-center"
-          width={1200}
-          height={1200}
-          alt="Portada"
-        />
-      </div>
-
       <div className="flex flex-col gap-y-6 text-center max-w-3xl mx-auto">
+        <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
+          <Image
+            src="/images/2.png"
+            className="w-full h-full object-cover object-center"
+            width={1200}
+            height={1200}
+            alt="Portada"
+          />
+        </div>
         <div>
           En Argentina, el deporte ocupa un lugar central en la vida
           comunitaria, y los clubes constituyen una de las instituciones
           sociales más representativas. <br />
           <br />
           Un club no se limita a la práctica deportiva: es un{" "}
-          <strong className="text-primary">
+          <span className="text-primary">
             espacio de encuentro, integración y pertenencia{" "}
-          </strong>{" "}
+          </span>{" "}
           que transmite valores, fortalece vínculos y genera identidad
           colectiva. <br />
           <br />
@@ -37,19 +36,19 @@ const page = () => {
           individual— adquiere una nueva dimensión a través de la competencia
           interclubes. Representar a una institución implica no solo competir,
           sino también{" "}
-          <strong className="text-primary">
+          <span className="text-primary">
             vivir una experiencia compartida que combina deporte, compromiso y
             sentido de comunidad.
-          </strong>
+          </span>
           <br />
           <br />
-          <strong className="text-primary">IML Tenis</strong> se propone
-          promover y consolidar estos valores, ofreciendo un marco competitivo
-          que, más allá de los resultados deportivos, brinde a cada jugador,
-          capitán y equipo una experiencia enriquecedora, sustentada en{" "}
-          <strong className="text-primary">
+          <span className="text-primary">IML Tenis</span> se propone promover y
+          consolidar estos valores, ofreciendo un marco competitivo que, más
+          allá de los resultados deportivos, brinde a cada jugador, capitán y
+          equipo una experiencia enriquecedora, sustentada en{" "}
+          <span className="text-primary">
             la pasión, el respeto y la pertenencia.
-          </strong>
+          </span>
         </div>
       </div>
     </section>

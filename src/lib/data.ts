@@ -1,19 +1,64 @@
 export const categories = [
-  { name: "Damas Tercera", url: "/torneos/60", slug: "damas-tercera", id: 6 },
-  { name: "Damas Cuarta ", url: "/torneos/59", slug: "damas-cuarta", id: 8 },
-  { name: "Damas Quinta", url: "/torneos/58", slug: "damas-quinta", id: 14 },
+  {
+    name: "Damas Tercera",
+    url: "/torneos/damas-tercera-clausura-2025",
+    slug: "damas-tercera",
+    id: 6,
+  },
+  {
+    name: "Damas Cuarta ",
+    url: "/torneos/damas-cuarta-clausura-2025",
+    slug: "damas-cuarta",
+    id: 8,
+  },
+  {
+    name: "Damas Quinta",
+    url: "/torneos/damas-quinta-clausura-2025",
+    slug: "damas-quinta",
+    id: 14,
+  },
   {
     name: "Mixto Tercera",
-    url: "/torneos/61",
+    url: "/torneos/mixto-tercera-clausura-2025",
     slug: "mixto-tercera",
     id: 12,
   },
-  { name: "Primera Libre", url: "/torneos/67", slug: "primera-libre", id: 1 },
-  { name: "Segunda Libre", url: "/torneos/66", slug: "segunda-libre", id: 2 },
-  { name: "Tercera Libre", url: "/torneos/65", slug: "tercera-libre", id: 3 },
-  { name: "Cuarta Libre", url: "/torneos/64", slug: "cuarta-libre", id: 4 },
-  { name: "Quinta Libre", url: "/torneos/63", slug: "quinta-libre", id: 5 },
-  { name: "Sexta Libre", url: "/torneos/62", slug: "sexta-libre", id: 11 },
+  {
+    name: "Primera Libre",
+    url: "/torneos/primera-libre-clausura-2025",
+    slug: "primera-libre",
+    id: 1,
+  },
+  {
+    name: "Intermedia Libre",
+    url: "/torneos/intermedia-libre-clausura-2025",
+    slug: "segunda-libre",
+    id: 2,
+  },
+  {
+    name: "Tercera Libre",
+    url: "/torneos/tercera-libre-clausura-2025",
+    slug: "tercera-libre",
+    id: 3,
+  },
+  {
+    name: "Cuarta Libre",
+    url: "/torneos/cuarta-libre-clausura-2025",
+    slug: "cuarta-libre",
+    id: 4,
+  },
+  {
+    name: "Quinta Libre",
+    url: "/torneos/quinta-libre-clausura-2025",
+    slug: "quinta-libre",
+    id: 5,
+  },
+  {
+    name: "Sexta Libre",
+    url: "/torneos/sexta-libre-clausura-2025",
+    slug: "sexta-libre",
+    id: 11,
+  },
 ];
 
 export const menu = [

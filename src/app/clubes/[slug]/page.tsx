@@ -8,11 +8,11 @@ import Image from "next/image";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
+  const { slug } = await params;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/clubes/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/clubes/${slug}`
   );
   const data = (await response.json()) as Club;
   if (!data) return {};
@@ -23,7 +23,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: "es_AR",
-      url: `https://imltenis.com.ar/clubes/${id}`,
+      url: `https://imltenis.com.ar/clubes/${slug}`,
       title: data.name,
       description: `Perfil del club ${data.name} de la liga de clubes IML Tenis`,
       images: [
@@ -38,18 +38,18 @@ export async function generateMetadata({
   };
 }
 
-async function getServerSideProps(id: string) {
+async function getServerSideProps(slug: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/clubes/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/clubes/${slug}`
   );
   const data = await response.json();
   if (!data) return null;
   return data;
 }
 
-const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
-  const { id } = await params;
-  const data = (await getServerSideProps(id)) as Club;
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const data = (await getServerSideProps(slug)) as Club;
   if (!data) return null;
 
   return (
@@ -66,13 +66,12 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </div>
         <div className="text-center">
           <h1 className="font-semibold text-primary">{data.name}</h1>
-
           <span className="text-center font-medium">{data.location}</span>
         </div>
 
         {data.googlemaps && (
           <div
-            className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-64"
+            className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-64 [&>iframe]:rounded-xl"
             dangerouslySetInnerHTML={{ __html: data.googlemaps }}
           />
         )}
@@ -133,11 +132,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       </header>
 
       <Suspense fallback={<Loader />}>
-        <Estadisticas id={id} />
+        <Estadisticas id={data.id} />
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <Equipos id={id} />
+        <Equipos id={data.id} />
       </Suspense>
     </section>
   );

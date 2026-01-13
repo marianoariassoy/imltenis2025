@@ -56,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   return (
     <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
-        <Link href={`/clubes/${data.club_id}`}>
+        <Link href={`/clubes/${data.club_slug}`}>
           <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
             <Image
               src={data.image}
@@ -70,7 +70,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <div className="text-center">
           <h1 className="font-semibold text-primary">{data.name}</h1>
           <Link
-            href={`/torneos/${data.tournament_id}`}
+            href={`/torneos/${data.tournament_slug}`}
             className="font-medium hover:underline"
           >
             {data.tournament_name}
@@ -79,7 +79,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
         <div className="flex justify-center gap-x-4 items-center">
           <Link
-            href={`/clubes/${data.club_id}`}
+            href={`/clubes/${data.club_slug}`}
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
             <Info />

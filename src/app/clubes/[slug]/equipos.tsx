@@ -5,6 +5,7 @@ interface data {
   id: string;
   name: string;
   tournament_id: string;
+  tournament_slug: string;
   tournament_name: string;
   series_total: number;
   series_won: number;
@@ -69,7 +70,7 @@ const Equipos = async ({ id }: { id: string }) => {
                 </td>
                 <td>
                   <Link
-                    href={`/torneos/${item.tournament_id}`}
+                    href={`/torneos/${item.tournament_slug}`}
                     className="hover:text-primary"
                   >
                     {item.tournament_name}

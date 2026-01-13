@@ -21,6 +21,9 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
         name: "Oponentes",
       },
       {
+        name: "Equipo rival",
+      },
+      {
         name: "Pareja",
       },
       {
@@ -60,43 +63,44 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
                       <Bull />
                     </div>
                   </td>
-                  <td className="text-secondary font-medium">{item.date}</td>
+                  <td className="font-medium">{item.date}</td>
                   <td>
                     <div className="flex gap-x-1">
                       <Link
-                        href={`/jugadores/${item.oponent1_id}`}
+                        href={`/jugadores/${item.oponent1_slug}`}
                         className="hover:underline text-primary font-medium"
                       >
                         {item.oponent1_name}
                       </Link>
                       <span>y</span>
                       <Link
-                        href={`/jugadores/${item.oponent2_id}`}
+                        href={`/jugadores/${item.oponent2_slug}`}
                         className="hover:underline text-primary font-medium"
                       >
                         {item.oponent2_name}
-                      </Link>
-                      <Link
-                        href={`/equipos/${item.team_oponent_id}`}
-                        className="hover:underline text-secondary"
-                      >
-                        ({item.team_oponent_name})
                       </Link>
                     </div>
                   </td>
                   <td>
                     <Link
-                      href={`/jugadores/${item.partner_id}`}
+                      href={`/equipos/${item.team_oponent_id}`}
+                      className="hover:underline"
+                    >
+                      {item.team_oponent_name}
+                    </Link>
+                  </td>
+                  <td>
+                    <Link
+                      href={`/jugadores/${item.partner_slug}`}
                       className="hover:underline text-primary font-medium"
                     >
                       {item.partner_name}
                     </Link>
                   </td>
                   <td>{item.score}</td>
-
                   <td>
                     <Link
-                      href={`/torneos/${item.tournament_id}`}
+                      href={`/torneos/${item.tournament_slug}`}
                       className="hover:underline text-primary"
                     >
                       {item.tournament_name}

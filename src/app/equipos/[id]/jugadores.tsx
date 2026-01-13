@@ -17,7 +17,7 @@ const Jugadores = async ({
 
   const labels = [
     {
-      name: "Nombre",
+      name: "Jugador",
       value: "",
     },
     {
@@ -27,6 +27,10 @@ const Jugadores = async ({
     {
       name: "PG",
       value: "Parciales ganados",
+    },
+    {
+      name: "PP",
+      value: "Parciales perdidos",
     },
     {
       name: "Dif.",
@@ -62,11 +66,12 @@ const Jugadores = async ({
                   <Item
                     image={item.image}
                     title={item.name}
-                    link={`/jugadores/${item.id}`}
+                    link={`/jugadores/${item.slug}`}
                   />
                 </td>
                 <td>{item.series_total}</td>
-                <td>{item.series_won_total}</td>
+                <td>{item.series_won}</td>
+                <td>{item.series_lost}</td>
                 <td>{item.series_dif}</td>
                 <td>{item.age > 1 ? item.age : null}</td>
               </tr>

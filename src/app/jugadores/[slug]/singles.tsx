@@ -20,6 +20,9 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
       name: "Oponente",
     },
     {
+      name: "Equipo rival",
+    },
+    {
       name: "Score",
     },
     {
@@ -36,7 +39,7 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
       </div>
 
       <div className="overflow-x-auto whitespace-nowrap">
-        <table className="table w-full mb-3">
+        <table className="table w-full mb-4">
           <thead>
             <tr>
               {labels.map((label, index) => (
@@ -56,22 +59,24 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
                     <Bull />
                   </div>
                 </td>
-                <td className="text-secondary font-medium">{item.date}</td>
+                <td className="font-medium">{item.date}</td>
                 <td>
                   <div className="flex gap-x-1">
                     <Link
-                      href={`/jugadores/${item.oponent_id}`}
+                      href={`/jugadores/${item.oponent_slug}`}
                       className="hover:underline text-primary font-medium"
                     >
                       {item.oponent_name}
                     </Link>
-                    <Link
-                      href={`/equipos/${item.team_oponent_id}`}
-                      className="hover:underline text-secondary"
-                    >
-                      ({item.team_oponent_name} )
-                    </Link>
                   </div>
+                </td>
+                <td>
+                  <Link
+                    href={`/equipos/${item.team_oponent_id}`}
+                    className="hover:underline"
+                  >
+                    {item.team_oponent_name}
+                  </Link>
                 </td>
                 <td>
                   <span className="font-medium">{item.score}</span>
@@ -79,7 +84,7 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
 
                 <td>
                   <Link
-                    href={`/torneos/${item.tournament_id}`}
+                    href={`/torneos/${item.tournament_slug}`}
                     className="hover:underline text-primary"
                   >
                     {item.tournament_name}

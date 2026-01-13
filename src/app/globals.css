@@ -8,9 +8,6 @@
   --secondary: #666;
   --background: #242424;
 }
-body {
-  font-size: 0.9rem;
-}
 
 .table thead tr th {
   text-align: left;

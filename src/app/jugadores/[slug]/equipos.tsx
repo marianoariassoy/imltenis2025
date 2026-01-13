@@ -4,10 +4,13 @@ import ItemSmall from "@/components/ItemSmall";
 interface Item {
   id: string;
   team_id: string;
+  team_slug: string;
   team_name: string;
   club_id: string;
+  club_slug: string;
   club_name: string;
   tournament_id: string;
+  tournament_slug: string;
   tournament_name: string;
   image: string;
 }
@@ -41,14 +44,14 @@ const JugadoresEquipos = async ({ id }: { id: string }) => {
               <tr key={index}>
                 <td className="pl-0">
                   <ItemSmall
-                    link={`/equipos/${item.team_id}`}
+                    link={`/equipos/${item.team_slug}`}
                     title={item.team_name}
                     image={item.image}
                   />
                 </td>
                 <td>
                   <Link
-                    href={`/clubes/${item.club_id}`}
+                    href={`/clubes/${item.club_slug}`}
                     className="hover:text-primary"
                   >
                     {item.club_name}
@@ -56,7 +59,7 @@ const JugadoresEquipos = async ({ id }: { id: string }) => {
                 </td>
                 <td>
                   <Link
-                    href={`/torneos/${item.tournament_id}`}
+                    href={`/torneos/${item.tournament_slug}`}
                     className="hover:underline text-primary"
                   >
                     {item.tournament_name}

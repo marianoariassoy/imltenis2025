@@ -37,7 +37,7 @@ const Filter = ({ data }: { data: Player[] }) => {
             <Item
               image={item.image}
               title={item.name}
-              link={`/jugadores/${item.id}`}
+              link={`/jugadores/${item.slug}`}
             />
           </div>
         ))}

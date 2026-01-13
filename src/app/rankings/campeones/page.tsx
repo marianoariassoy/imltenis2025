@@ -23,10 +23,10 @@ export const metadata = {
 };
 
 interface data {
-  id: string;
   image: string;
   name: string;
   club_id: string;
+  club_slug: string;
   gold: string;
   silver: string;
   supercopa: string;
@@ -81,7 +81,7 @@ const page = async () => {
           <tbody>
             {data.map((item, index) => (
               <tr
-                key={item.id}
+                key={index}
                 className={`${index === 0 ? "text-primary" : ""}`}
               >
                 <td>
@@ -89,11 +89,15 @@ const page = async () => {
                     num={index + 1}
                     image={item.image}
                     title={item.name}
-                    link={`/clubes/${item.club_id}`}
+                    link={`/clubes/${item.club_slug}`}
                     active={false}
                   />
                 </td>
-                <td className="font-semibold">{item.gold}</td>
+                <td>
+                  <span className="w-8 h-8 rounded-full bg-white/10 font-semibold flex items-center justify-center">
+                    {item.gold}
+                  </span>
+                </td>
                 <td>{item.silver}</td>
                 <td>{item.supercopa}</td>
                 <td>{item.finals}</td>

@@ -23,7 +23,7 @@ const page = async () => {
             .map((item) => (
               <Link
                 key={item.id}
-                href={`/torneos/${item.id}`}
+                href={`/torneos/${item.slug}`}
                 className="hover:text-primary"
               >
                 <span>{item.name}</span> {item.season_name}

@@ -23,10 +23,10 @@ export const metadata = {
 };
 
 interface data {
-  id: string;
   image: string;
   name: string;
   club_id: string;
+  club_slug: string;
   matches_won: string;
   series_won: string;
   series_total: string;
@@ -80,7 +80,7 @@ const page = async () => {
               .filter((item) => +item.matches_won > 0)
               .map((item, index) => (
                 <tr
-                  key={item.id}
+                  key={index}
                   className={`${index === 0 ? "text-primary" : ""}`}
                 >
                   <td>
@@ -88,7 +88,7 @@ const page = async () => {
                       num={index + 1}
                       image={item.image}
                       title={item.name}
-                      link={`/clubes/${item.id}`}
+                      link={`/clubes/${item.club_slug}`}
                       active={false}
                     />
                   </td>

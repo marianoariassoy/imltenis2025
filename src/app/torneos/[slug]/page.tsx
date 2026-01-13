@@ -38,18 +38,18 @@ export async function generateMetadata({
   };
 }
 
-async function getServerSideProps(id: string) {
+async function getServerSideProps(slug: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${slug}`
   );
   const data = await response.json();
   if (!data) return null;
   return data;
 }
 
-const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
-  const { id } = await params;
-  const data = await getServerSideProps(id);
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const data = await getServerSideProps(slug);
   if (!data) return null;
 
   return (
@@ -59,11 +59,14 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       {data.team_champion_id && <Campeon data={data} />}
 
       <Suspense fallback={<Loader />}>
-        <Groups id_tournament={id} mixto={+data.mode === 3 ? true : false} />
+        <Groups
+          id_tournament={data.id}
+          mixto={+data.mode === 3 ? true : false}
+        />
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <Fixture title={true} id_tournament={id} />
+        <Fixture title={true} id_tournament={data.id} />
       </Suspense>
     </section>
   );
