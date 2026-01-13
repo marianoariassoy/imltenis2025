@@ -1,5 +1,6 @@
 export interface Tournament {
   id: number;
+  slug: string;
   name: string;
   season: number;
   season_name: string;
