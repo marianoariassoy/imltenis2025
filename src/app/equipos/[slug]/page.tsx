@@ -9,11 +9,11 @@ import Image from "next/image";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
+  const { slug } = await params;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/teams/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/teams/${slug}`
   );
   const data = await response.json();
   if (!data) return null;
@@ -24,7 +24,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: "es_AR",
-      url: `https://imltenis.com.ar/equipos/${id}`,
+      url: `https://imltenis.com.ar/equipos/${slug}`,
       title: data.name,
       description: `Perfil del equipo ${data.name} ${data.tournament_name} de la liga de clubes IML Tenis`,
       images: [
@@ -39,18 +39,18 @@ export async function generateMetadata({
   };
 }
 
-async function getServerSideProps(id: string) {
+async function getServerSideProps(slug: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/teams/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/teams/${slug}`
   );
   const data = await response.json();
   if (!data) return null;
   return data;
 }
 
-const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
-  const { id } = await params;
-  const data = await getServerSideProps(id);
+const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
+  const { slug } = await params;
+  const data = await getServerSideProps(slug);
   if (!data) return null;
 
   return (
@@ -97,11 +97,11 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       </header>
 
       <Suspense fallback={<Loader />}>
-        <Jugadores id={id} captain_name={data.captain_name} />
+        <Jugadores id={data.id} captain_name={data.captain_name} />
       </Suspense>
 
       <Suspense fallback={<Loader />}>
-        <Fixture id={id} />
+        <Fixture id={data.id} />
       </Suspense>
     </section>
   );

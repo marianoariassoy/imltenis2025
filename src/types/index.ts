@@ -12,9 +12,11 @@ export interface Serie {
   date: string;
   hour: string;
   home_id: number;
+  home_slug: string;
   home_name: string;
   home_image: string;
   away_id: number;
+  away_slug: string;
   away_name: string;
   away_image: string;
   score_home: number;
@@ -30,21 +32,25 @@ export interface Serie {
 export interface Juego {
   id: number;
   playerhome1_id: number;
+  playerhome1_slug: string;
   playerhome1_image: string;
   playerhome1_name: string;
   playerhome1_top: string;
 
   playerhome2_id: number;
+  playerhome2_slug: string;
   playerhome2_image: string;
   playerhome2_name: string;
   playerhome2_top: string;
 
   playeraway1_id: number;
+  playeraway1_slug: string;
   playeraway1_image: string;
   playeraway1_name: string;
   playeraway1_top: string;
 
   playeraway2_id: number;
+  playeraway2_slug: string;
   playeraway2_image: string;
   playeraway2_name: string;
   playeraway2_top: string;
@@ -75,6 +81,7 @@ export interface Single {
   oponent_slug: string;
   oponent_name: string;
   team_oponent_id: string;
+  team_oponent_slug: string;
   team_oponent_name: string;
   score: string;
   tournament_id: string;
@@ -96,6 +103,7 @@ export interface Double {
   partner_slug: string;
   partner_name: string;
   team_oponent_id: string;
+  team_oponent_slug: string;
   team_oponent_name: string;
   score: string;
   tournament_id: string;
@@ -130,6 +138,7 @@ export interface Group {
 
 export interface Table {
   id: string;
+  slug: string;
   name: string;
   image: string;
   club_image: string;

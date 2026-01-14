@@ -43,7 +43,7 @@ const Tabla = async ({
                     num={index + 1}
                     image={item.image}
                     title={item.name}
-                    link={`/equipos/${item.id}`}
+                    link={`/equipos/${item.slug}`}
                     active={index < group.winners}
                   />
                 </td>

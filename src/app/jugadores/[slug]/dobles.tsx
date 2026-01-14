@@ -83,7 +83,7 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
                   </td>
                   <td>
                     <Link
-                      href={`/equipos/${item.team_oponent_id}`}
+                      href={`/equipos/${item.team_oponent_slug}`}
                       className="hover:underline"
                     >
                       {item.team_oponent_name}

@@ -3,6 +3,7 @@ import Labels from "@/components/Labels";
 
 interface data {
   id: string;
+  slug: string;
   name: string;
   tournament_id: string;
   tournament_slug: string;
@@ -47,7 +48,6 @@ const Equipos = async ({ id }: { id: string }) => {
       <h1 className="font-semibold text-primary text-center text-lg">
         Equipos ({data.length})
       </h1>
-
       <div className="overflow-x-auto whitespace-nowrap">
         <table className="table w-full mb-2">
           <thead>
@@ -62,7 +62,7 @@ const Equipos = async ({ id }: { id: string }) => {
               <tr key={item.id}>
                 <td>
                   <Link
-                    href={`/equipos/${item.id}`}
+                    href={`/equipos/${item.slug}`}
                     className="hover:underline text-primary font-medium"
                   >
                     {item.name}

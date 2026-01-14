@@ -42,13 +42,13 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                 <td className="w-[34%]">
                   {title ? (
                     <ItemSmall
-                      link={`/equipos/${item.home_id}`}
+                      link={`/equipos/${item.home_slug}`}
                       title={item.home_name}
                       image={item.home_image}
                     />
                   ) : (
                     <Item
-                      link={`/equipos/${item.home_id}`}
+                      link={`/equipos/${item.home_slug}`}
                       title={item.home_name}
                       image={item.home_image}
                       active={false}
@@ -78,13 +78,13 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                 <td className="w-[40%]">
                   {title ? (
                     <ItemSmall
-                      link={`/equipos/${item.away_id}`}
+                      link={`/equipos/${item.away_slug}`}
                       title={item.away_name}
                       image={item.away_image}
                     />
                   ) : (
                     <Item
-                      link={`/equipos/${item.away_id}`}
+                      link={`/equipos/${item.away_slug}`}
                       title={item.away_name}
                       image={item.away_image}
                       active={false}

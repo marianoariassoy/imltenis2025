@@ -16,7 +16,7 @@ const Juegos = async ({ id }: { id: string }) => {
           <thead>
             <tr>
               <th>Enfrentamientos</th>
-              <th>Parciales</th>
+              <th>Tipo</th>
               <th>Score</th>
               <th>L/V</th>
               <th>Estado</th>
@@ -33,7 +33,7 @@ const Juegos = async ({ id }: { id: string }) => {
                         image={item.playerhome1_image}
                       />
                       <Link
-                        href={`/jugadores/${item.playerhome1_id}`}
+                        href={`/jugadores/${item.playerhome1_slug}`}
                         className="text-primary hover:underline font-semibold"
                       >
                         {item.playerhome1_name} ({+item.playerhome1_top + 1})
@@ -49,7 +49,7 @@ const Juegos = async ({ id }: { id: string }) => {
                           image={item.playerhome2_image}
                         />
                         <Link
-                          href={`/jugadores/${item.playerhome2_id}`}
+                          href={`/jugadores/${item.playerhome2_slug}`}
                           className="text-primary hover:underline font-semibold"
                         >
                           {item.playerhome2_name} ({+item.playerhome2_top + 1})
@@ -71,7 +71,7 @@ const Juegos = async ({ id }: { id: string }) => {
                         image={item.playeraway1_image}
                       />
                       <Link
-                        href={`/jugadores/${item.playeraway1_id}`}
+                        href={`/jugadores/${item.playeraway1_slug}`}
                         className="text-primary hover:underline font-semibold"
                       >
                         {item.playeraway1_name} ({+item.playeraway1_top + 1})
@@ -87,7 +87,7 @@ const Juegos = async ({ id }: { id: string }) => {
                           image={item.playeraway2_image}
                         />
                         <Link
-                          href={`/jugadores/${item.playeraway2_id}`}
+                          href={`/jugadores/${item.playeraway2_slug}`}
                           className="text-primary hover:underline font-semibold"
                         >
                           {item.playeraway2_name} ({+item.playeraway2_top + 1})

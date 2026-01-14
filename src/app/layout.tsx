@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   description:
     "La Liga de Clubes IML Tenis es una de las competencias interclubes más importantes de Argentina, con la participación de cientos de equipos provenientes de las zonas norte y oeste del Gran Buenos Aires. Cada temporada convoca a miles de jugadores y jugadoras amateurs que representan a sus clubes en un ambiente competitivo, organizado y con gran espíritu deportivo.",
   icons: {
-    icon: "/assets/favicon.png",
-    shortcut: "/assets/favicon.png",
-    apple: "/assets/favicon.png",
+    icon: "https://imltenis.com.ar/assets/favicon.png",
+    shortcut: "https://imltenis.com.ar/assets/favicon.png",
+    apple: "https://imltenis.com.ar/assets/favicon.png",
   },
   generator: "marianoarias.soy",
   openGraph: {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
       "La Liga de Clubes IML Tenis es una de las competencias interclubes más importantes de la región, con la participación de cientos de equipos provenientes de las zonas norte y oeste del Gran Buenos Aires. Cada temporada convoca a miles de jugadores y jugadoras amateurs que representan a sus clubes en un ambiente competitivo, organizado y con gran espíritu deportivo.",
     images: [
       {
-        url: "/assets/imltenis.jpg",
+        url: "https://imltenis.com.ar/assets/imltenis.jpg",
         width: 500,
         height: 500,
         alt: "IML Tenis Liga de clubes de Buenos Aires",

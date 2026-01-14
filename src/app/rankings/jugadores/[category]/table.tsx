@@ -11,11 +11,12 @@ interface data {
   player_image: string;
   player_name: string;
   team_id: string;
+  team_slug: string;
+  team_name: string;
   matches_won: string;
   ds: string;
   dg: string;
   matches: string;
-  team_name: string;
   category: string;
 }
 
@@ -92,7 +93,7 @@ const table = async ({ category }: { category: string }) => {
                 </td>
                 <td>
                   <Link
-                    href={`/equipos/${item.team_id}`}
+                    href={`/equipos/${item.team_slug}`}
                     className="hover:text-primary font-medium"
                   >
                     {item.team_name}

@@ -55,8 +55,8 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <header className="flex flex-col items-center">
         <Title title={`${data.date} ${data.hour}`} />
         <Link
-          href={`/torneos/${data.tournament_id}`}
-          className="hover:underline font-medium"
+          href={`/torneos/${data.tournament_slug}`}
+          className="hover:underline font-medium text-lg"
         >
           {data.tournament_name}
         </Link>
@@ -64,7 +64,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
       <div className="flex justify-center items-start gap-x-4 text-center max-w-xs mx-auto">
         <Item
-          link={`/equipos/${data.home_id}`}
+          link={`/equipos/${data.home_slug}`}
           title={data.home_name}
           image={data.home_image}
           subtitle="Local"
@@ -74,7 +74,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           {/* {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>} */}
         </div>
         <Item
-          link={`/equipos/${data.away_id}`}
+          link={`/equipos/${data.away_slug}`}
           title={data.away_name}
           image={data.away_image}
           subtitle="Visitante"
