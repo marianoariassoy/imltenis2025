@@ -1,12 +1,13 @@
 "use client";
 import { useState } from "react";
-import { nav, menu } from "../lib/data";
+import { nav, menu } from "@/lib/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Close } from "@/lib/icons";
 
 const Menu = () => {
   const pathname = usePathname();
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState("Damas");
 
   const handleMenu = () => {
     const nav = document.querySelector("#menu") as HTMLElement;
@@ -18,12 +19,14 @@ const Menu = () => {
       className="fade-in fixed top-0 left-0 w-full bg-[#262626]/80 h-screen content-center text-center backdrop-blur z-50 hidden"
       id="menu"
     >
-      <ul className="flex flex-col gap-y-0">
+      <ul className="flex flex-col">
         {nav.map((item, index) => (
           <li key={index}>
             <button
               className="italic text-primary font-black text-xl lg:text-2xl hover:underline"
-              onClick={() => setCategory(item.name)}
+              onClick={() =>
+                setCategory(category === item.name ? "" : item.name)
+              }
             >
               {item.name}
             </button>
@@ -91,23 +94,10 @@ const Menu = () => {
         </li>
       </ul>
       <button
-        className="absolute top-6 left-0 p-3 z-50 hover:text-primary cursor-pointer"
+        className="absolute top-6 left-0 p-3 z-50 hover:text-primary cursor-pointer text-base"
         onClick={handleMenu}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-8 w-8"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          strokeWidth={2}
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
+        <Close />
       </button>
     </nav>
   );

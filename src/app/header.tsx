@@ -45,7 +45,7 @@ const Header = () => {
       >
         <div className="flex-1">
           <button
-            className="hover:text-primary -ml-1"
+            className="hover:text-primary text-base"
             onClick={handleMenu}
             aria-label="Menu"
           >
