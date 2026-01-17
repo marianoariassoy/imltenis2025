@@ -10,7 +10,7 @@ const page = async () => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/tournaments",
     {
-      cache: "no-cache",
+      cache: "no-store",
     },
   );
   const data = (await response.json()) as Tournament[];
