@@ -1,11 +1,12 @@
 "use client";
-
-import { menu, categories } from "../lib/data";
+import { useState } from "react";
+import { nav, menu } from "../lib/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Menu = () => {
   const pathname = usePathname();
+  const [category, setCategory] = useState("");
 
   const handleMenu = () => {
     const nav = document.querySelector("#menu") as HTMLElement;
@@ -17,18 +18,32 @@ const Menu = () => {
       className="fade-in fixed top-0 left-0 w-full bg-[#262626]/80 h-screen content-center text-center backdrop-blur z-50 hidden"
       id="menu"
     >
-      <ul>
-        {categories.map((item, index) => (
+      <ul className="flex flex-col gap-y-0">
+        {nav.map((item, index) => (
           <li key={index}>
-            <Link
-              href={item.url}
-              className={`text-primary italic font-black text-lg ${
-                pathname === item.url ? "underline" : "hover:underline"
-              }`}
-              onClick={handleMenu}
+            <button
+              className="italic text-primary font-black text-xl lg:text-2xl hover:underline"
+              onClick={() => setCategory(item.name)}
             >
               {item.name}
-            </Link>
+            </button>
+            {category === item.name && (
+              <ul className="mb-2">
+                {item.categories.map((item, index) => (
+                  <li key={index}>
+                    <Link
+                      href={item.url}
+                      className={`text-lg font-medium ${
+                        pathname === item.url ? "underline" : "hover:underline"
+                      }`}
+                      onClick={handleMenu}
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </li>
         ))}
       </ul>
@@ -81,7 +96,7 @@ const Menu = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="h-8 w-8"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

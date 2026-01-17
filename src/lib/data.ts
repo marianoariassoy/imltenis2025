@@ -1,3 +1,93 @@
+export const nav = [
+  {
+    name: "Damas",
+    categories: [
+      {
+        name: "Intermedia +30",
+        url: "/soon",
+      },
+      {
+        name: "Tercera Libre",
+        url: "/soon",
+      },
+      {
+        name: "Tercera +40",
+        url: "/soon",
+      },
+      {
+        name: "Cuarta Libre",
+        url: "/soon",
+      },
+      {
+        name: "Cuarta +40",
+        url: "/soon",
+      },
+      {
+        name: "Quinta Libre",
+        url: "/soon",
+      },
+    ],
+  },
+  {
+    name: "Caballeros",
+    categories: [
+      {
+        name: "Primera Libre",
+        url: "/soon",
+      },
+      {
+        name: "Intermedia Libre",
+        url: "/soon",
+      },
+      {
+        name: "Tercera Libre",
+        url: "/soon",
+      },
+      {
+        name: "Cuarta Libre",
+        url: "/soon",
+      },
+      {
+        name: "Cuarta +40",
+        url: "/soon",
+      },
+      {
+        name: "Quinta Libre",
+        url: "/soon",
+      },
+      {
+        name: "Quinta +40",
+        url: "/soon",
+      },
+      {
+        name: "Sexta Libre",
+        url: "/soon",
+      },
+    ],
+  },
+  {
+    name: "Mixto",
+    categories: [
+      {
+        name: "Mixto Libre",
+        url: "/soon",
+      },
+      {
+        name: "Mixto A",
+        url: "/soon",
+      },
+      {
+        name: "Mixto B",
+        url: "/soon",
+      },
+      {
+        name: "Mixto C",
+        url: "/soon",
+      },
+    ],
+  },
+];
+
 export const categories = [
   {
     name: "Damas Tercera",
