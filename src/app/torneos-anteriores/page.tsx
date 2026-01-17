@@ -8,7 +8,10 @@ export const metadata = {
 
 const page = async () => {
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/tournaments"
+    process.env.NEXT_PUBLIC_API_URL + "/tournaments",
+    {
+      cache: "no-cache",
+    },
   );
   const data = (await response.json()) as Tournament[];
 
