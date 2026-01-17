@@ -49,14 +49,14 @@ export const Menu = () => {
   return (
     <svg
       height="1em"
-      viewBox="0 0 40 16"
+      viewBox="0 0 28 16"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <line
         x1="0"
         y1="2"
-        x2="30"
+        x2="28"
         y2="2"
         stroke="currentColor"
         strokeWidth={2}
@@ -65,7 +65,7 @@ export const Menu = () => {
       <line
         x1="0"
         y1="12"
-        x2="30"
+        x2="28"
         y2="12"
         stroke="currentColor"
         strokeWidth={2}
@@ -89,7 +89,7 @@ export const Close = () => {
         x2="27"
         y2="27"
         stroke="currentColor"
-        strokeWidth={2}
+        strokeWidth={3}
         strokeLinecap="round"
       />
       <line
@@ -98,7 +98,7 @@ export const Close = () => {
         x2="3"
         y2="27"
         stroke="currentColor"
-        strokeWidth={2}
+        strokeWidth={3}
         strokeLinecap="round"
       />
     </svg>
