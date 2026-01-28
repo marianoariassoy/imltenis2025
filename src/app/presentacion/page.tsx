@@ -142,9 +142,10 @@ CUIL: 27050108347 <br/><br/>
         <div className="[&>span]:font-semibold [&>span]:text-primary mb-2">
           Sumate a uno de los interclubes de tenis más importantes de la zona,
           con más de <span>200 equipos y 16 categorías</span> que abarcan
-          distintos niveles de juego. Viví una experiencia única junto a tu
-          grupo de amigos: representá a tu club o barrio, jugá en tus propias
-          canchas y descubrí nuevas sedes y rivales cada semana. <br />
+          distintos niveles de juego en damas, caballeros y mixtos. Viví una
+          experiencia única junto a tu grupo de amigos: representá a tu club o
+          barrio, jugá en tus propias canchas y descubrí nuevas sedes y rivales
+          cada semana. <br />
           <br />
           Todos los <span>resultados, estadísticas y rankings </span>
           se actualizan online para que sigas el torneo en tiempo real.
@@ -152,8 +153,8 @@ CUIL: 27050108347 <br/><br/>
 
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
           <Image
-            src="/images/1.png"
-            className="w-full h-full object-cover object-top"
+            src="/images/2026.png"
+            className="w-full h-full object-cover object-center"
             width={1200}
             height={1200}
             alt="Portada"

@@ -13,7 +13,7 @@ const page = () => {
       <div className="flex flex-col gap-y-6 max-w-3xl mx-auto">
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
           <Image
-            src="/images/2026.png"
+            src="/images/nosotros.png"
             className="w-full h-full object-cover object-center"
             width={1200}
             height={1200}

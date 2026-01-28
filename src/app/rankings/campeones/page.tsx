@@ -38,7 +38,7 @@ const page = async () => {
     process.env.NEXT_PUBLIC_API_URL + "/rankings/champions",
     {
       cache: "no-store",
-    }
+    },
   );
   const data = (await response.json()) as data[];
 
@@ -48,16 +48,12 @@ const page = async () => {
       value: "",
     },
     {
-      name: "Oro",
+      name: "Camp.",
       value: "Campeonatos",
     },
     {
       name: "Plata",
-      value: "Copas de plata",
-    },
-    {
-      name: "SC",
-      value: "Supercopas",
+      value: "Copas Plata",
     },
     {
       name: "Finales",
@@ -68,8 +64,7 @@ const page = async () => {
   return (
     <section className="flex flex-col gap-y-8">
       <Title title="Ranking de Campeones" emoji="👑" />
-
-      <div className="w-full overflow-x-auto">
+      <div className="overflow-x-auto">
         <table className="table w-full mb-2">
           <thead>
             <tr>
@@ -84,7 +79,7 @@ const page = async () => {
                 key={index}
                 className={`${index === 0 ? "text-primary" : ""}`}
               >
-                <td>
+                <td className="w-4/5">
                   <Item
                     num={index + 1}
                     image={item.image}
@@ -93,13 +88,8 @@ const page = async () => {
                     active={false}
                   />
                 </td>
-                <td>
-                  <span className="w-8 h-8 rounded-full bg-white/10 font-semibold flex items-center justify-center">
-                    {item.gold}
-                  </span>
-                </td>
+                <td className="font-bold">{item.gold}</td>
                 <td>{item.silver}</td>
-                <td>{item.supercopa}</td>
                 <td>{item.finals}</td>
               </tr>
             ))}

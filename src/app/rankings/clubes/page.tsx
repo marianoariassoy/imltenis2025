@@ -38,7 +38,7 @@ const page = async () => {
     process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes",
     {
       cache: "no-store",
-    }
+    },
   );
   const data = (await response.json()) as data[];
   if (!data) return;
@@ -65,7 +65,6 @@ const page = async () => {
   return (
     <section className="flex flex-col gap-y-8">
       <Title title="Ranking de Clubes 2025" emoji="🥇" />
-
       <div className="overflow-x-auto">
         <table className="table w-full mb-2">
           <thead>
@@ -83,7 +82,7 @@ const page = async () => {
                   key={index}
                   className={`${index === 0 ? "text-primary" : ""}`}
                 >
-                  <td>
+                  <td className="w-4/5">
                     <Item
                       num={index + 1}
                       image={item.image}
@@ -92,7 +91,7 @@ const page = async () => {
                       active={false}
                     />
                   </td>
-                  <td className="font-semibold">{item.matches_won}</td>
+                  <td className="font-bold pr-8">{item.matches_won}</td>
                   <td>{item.series_won}</td>
                   <td>{item.series_total}</td>
                 </tr>
