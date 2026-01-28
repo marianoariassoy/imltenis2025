@@ -10,7 +10,7 @@ const page = () => {
     <section className="flex flex-col gap-y-8">
       <Title title="¡Hola!" emoji="👋" />
 
-      <div className="flex flex-col gap-y-6 text-center max-w-3xl mx-auto">
+      <div className="flex flex-col gap-y-6 max-w-3xl mx-auto">
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
           <Image
             src="/images/2.png"

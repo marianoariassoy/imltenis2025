@@ -1,4 +1,4 @@
-export const nav = [
+export const tournaments = [
   {
     name: "Damas",
     categories: [
@@ -156,9 +156,16 @@ export const menu = [
   { name: "Ranking de Clubes", url: "/rankings/clubes" },
   { name: "Ranking de Campeones", url: "/rankings/campeones" },
   { name: "Orden de juego", url: "/orden-de-juego" },
-  { name: "Reglamento", url: "/reglamento" },
   { name: "Jugadores", url: "/jugadores" },
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },
-  // { name: "IML Weekend", url: "/weekend" },
+];
+
+export const extra = [
+  { name: "Reglamento", url: "/reglamento" },
+  // { name: "Planillas", url: "/soon" },
+  { name: "Capitanes", url: "https://capitanes.imltenis.com.ar/" },
+  { name: "IML Weekend", url: "/weekend" },
+  { name: "Registro de jugadores", url: "/bienvenido" },
+  { name: "Tienda", url: "/soon" },
   { name: "Nosotros", url: "/nosotros" },
 ];
