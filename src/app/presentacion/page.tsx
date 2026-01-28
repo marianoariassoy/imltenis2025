@@ -147,7 +147,10 @@ CUIL: 27050108347 <br/><br/>
           barrio, jugá en tus propias canchas y descubrí nuevas sedes y rivales
           cada semana. <br />
           <br />
-          Todos los <span>resultados, estadísticas y rankings </span>
+          Todos los{" "}
+          <span>
+            resultados, estadísticas y rankings grupales e individuales{" "}
+          </span>
           se actualizan online para que sigas el torneo en tiempo real.
         </div>
 
