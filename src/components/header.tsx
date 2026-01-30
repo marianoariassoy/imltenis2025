@@ -1,13 +1,14 @@
 "use client";
-import { useEffect } from "react";
-import { Logo, Instagram, Menu } from "@/lib/icons";
+import { useEffect, useState } from "react";
+import { Logo, Instagram } from "@/lib/icons";
 import Link from "next/link";
-import Nav from "./nav";
+import Nav from "../app/nav";
 import { usePathname } from "next/navigation";
-import ReactGA from "react-ga4";
+import HamburgerButton from "@/components/HamburgerButton";
 
 const Header = () => {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const logo = document.querySelector(".logo-main") as HTMLElement;
@@ -28,31 +29,20 @@ const Header = () => {
     };
   }, [pathname]);
 
-  useEffect(() => {
-    ReactGA.initialize("G-G1DBH0K86R");
-  }, []);
-
   const handleMenu = () => {
-    const nav = document.querySelector("#menu") as HTMLElement;
-    nav.classList.toggle("hidden");
+    setIsOpen(!isOpen);
   };
 
   return (
     <>
       <header
-        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-50"
+        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-40"
         id="header"
       >
-        <div className="flex-1">
-          <button
-            className="hover:text-primary text-base"
-            onClick={handleMenu}
-            aria-label="Menu"
-          >
-            <Menu />
-          </button>
+        <div className="flex-1 z-40">
+          <HamburgerButton onClick={handleMenu} isOpen={isOpen} />
         </div>
-        <div className="flex justify-center text-primary logo-main transition-all">
+        <div className="flex justify-center text-primary logo-main transition-all z-50">
           <Link
             href="/"
             aria-label="Logo"
@@ -73,8 +63,7 @@ const Header = () => {
           </a>
         </div>
       </header>
-
-      <Nav />
+      <Nav onClick={handleMenu} isOpen={isOpen} />
     </>
   );
 };
