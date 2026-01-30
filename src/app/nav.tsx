@@ -16,10 +16,10 @@ const Menu = ({
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/90   backdrop-blur z-30 ${isOpen ? "block" : "hidden"}`}
+      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/90   backdrop-blur z-30 text-base ${isOpen ? "block" : "hidden"}`}
     >
       <div
-        className={`w-full h-full content-center text-center  ${isOpen ? "fade-in" : "hidden"}`}
+        className={`w-full h-full content-center text-center ${isOpen ? "fade-in" : "hidden"}`}
       >
         <ul className="flex flex-col">
           {tournaments.map((item, index) => (
@@ -54,7 +54,7 @@ const Menu = ({
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col font-medium mt-2 text-base">
+        <ul className="flex flex-col font-medium mt-2">
           {menu.map((item, index) => (
             <li key={index + 20}>
               <Link
@@ -71,7 +71,7 @@ const Menu = ({
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col font-medium mt-2 text-base">
+        <ul className="flex flex-col font-medium mt-2">
           {extra.map((item, index) => (
             <li key={index + 20}>
               <Link
