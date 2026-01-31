@@ -55,7 +55,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#242424" />
       </head>
       <body
-        className="bg-background text-foreground min-h-screen flex flex-col transition-colors"
+        className="bg-background text-foreground min-h-screen flex flex-col"
         style={{ fontFamily: montserrat.style.fontFamily }}
       >
         <Header />

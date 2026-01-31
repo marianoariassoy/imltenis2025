@@ -154,7 +154,7 @@ CUIL: 27050108347 <br/><br/>
           se actualizan online para que sigas el torneo en tiempo real.
         </div>
 
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
+        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
           <Image
             src="/images/2026.png"
             className="w-full h-full object-cover object-center"
@@ -198,7 +198,7 @@ CUIL: 27050108347 <br/><br/>
         </a>
       </div>
 
-      <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
+      <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
         <Image
           src="/images/2.png"
           className="w-full h-full object-cover object-center"

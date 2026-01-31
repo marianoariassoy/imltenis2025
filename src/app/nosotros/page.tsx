@@ -11,7 +11,7 @@ const page = () => {
       <Title title="¡Hola!" emoji="👋" />
 
       <div className="flex flex-col gap-y-6 max-w-3xl mx-auto">
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-xl">
+        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
           <Image
             src="/images/nosotros.png"
             className="w-full h-full object-cover object-center"

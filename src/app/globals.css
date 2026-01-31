@@ -49,18 +49,12 @@ body {
     filter: blur(5px);
   }
 }
-.animate-fade-in-out {
-  animation: fade-in-out 0.8s infinite;
+
+*:focus {
+  outline: none;
 }
 
-@keyframes fade-in-out {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+*:focus-visible {
+  outline: none;
+  box-shadow: none;
 }
