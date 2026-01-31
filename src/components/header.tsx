@@ -9,25 +9,29 @@ import HamburgerButton from "@/components/HamburgerButton";
 const Header = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const logo = document.querySelector(".logo-main") as HTMLElement;
     const header = document.querySelector("#header") as HTMLElement;
-
     if (pathname === "/") {
-      header.classList.remove("backdrop-blur");
+      header.classList.remove("bg-gradient-to-b");
     } else {
-      header.classList.add("backdrop-blur");
+      header.classList.add("bg-gradient-to-b");
     }
-
-    window.onscroll = () => {
-      if (window.scrollY > 0) {
-        logo.classList.add("text-xs");
-      } else {
-        logo.classList.remove("text-xs");
-      }
-    };
   }, [pathname]);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const next = window.scrollY > 10;
+      setScrolled((prev) => {
+        if (prev === next) return prev;
+        return next;
+      });
+    };
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleMenu = () => {
     setIsOpen(!isOpen);
@@ -36,13 +40,15 @@ const Header = () => {
   return (
     <>
       <header
-        className="sticky top-0 flex w-full items-center gap-x-4 px-4 py-2 z-40"
+        className={`sticky top-0 flex w-full items-center gap-x-4 px-4 py-2   z-40 bg-gradient-to-b from-[#262626] via-[#262626]/70 to-transparent`}
         id="header"
       >
         <div className="flex-1 z-40">
           <HamburgerButton onClick={handleMenu} isOpen={isOpen} />
         </div>
-        <div className="flex justify-center text-primary logo-main transition-all z-50">
+        <div
+          className={`flex justify-center text-primary transition-all z-50 ${scrolled ? "text-[0.6rem]" : ""}`}
+        >
           <Link
             href="/"
             aria-label="Logo"
@@ -51,7 +57,7 @@ const Header = () => {
             <Logo />
           </Link>
         </div>
-        <div className="flex items-center justify-end gap-x-5 flex-1">
+        <div className="flex items-center justify-end flex-1">
           <a
             href="https://www.instagram.com/imltenis/"
             target="_blank"

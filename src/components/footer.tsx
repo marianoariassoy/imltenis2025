@@ -29,7 +29,7 @@ const footer = () => {
   // ];
 
   return (
-    <footer className="flex flex-col px-4 py-2 pb-4 mt-6 text-secondary dark:text-[#999999]">
+    <footer className="flex flex-col px-4 py-2 pb-6 mt-12 text-secondary dark:text-[#999999]">
       {/* <div className="gap-x-8 flex items-center justify-center flex-wrap text-sm lg:text-base">
         {sponsors.map((logo, index) => (
           <div key={index} className="flex justify-center">
@@ -47,8 +47,7 @@ const footer = () => {
       </div> */}
       <div className="text-center flex flex-col">
         <span className="font-bold">Liga de clubes IML Tenis</span>
-
-        <div className="flex items-center flex-wrap justify-center gap-x-1 pb-2">
+        <div className="flex items-center flex-wrap justify-center gap-x-2 pb-2">
           <a
             href="https://wa.me/5491130171475"
             className="hover:text-primary flex items-center gap-x-1"
