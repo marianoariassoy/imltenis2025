@@ -17,7 +17,6 @@ const Menu = ({
   return (
     <nav
       className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/90   backdrop-blur z-30 text-base ${isOpen ? "block" : "hidden"}`}
-      onClick={onClick}
     >
       <div
         className={`w-full h-full content-center text-center ${isOpen ? "fade-in" : "hidden"}`}
@@ -41,7 +40,7 @@ const Menu = ({
                         href={item.url}
                         className={`font-medium ${
                           pathname === item.url
-                            ? "underline"
+                            ? "text-primary"
                             : "hover:underline"
                         }`}
                         onClick={onClick}

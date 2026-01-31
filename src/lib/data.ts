@@ -3,28 +3,28 @@ export const tournaments = [
     name: "Damas",
     categories: [
       {
-        name: "Intermedia +30",
+        name: "Intermedia +30 🆕",
         url: "/soon",
       },
       {
         name: "Tercera Libre",
-        url: "/soon",
+        url: "/torneos/damas-tercera-clausura-2025",
       },
       {
-        name: "Tercera +40",
+        name: "Tercera +40 🆕",
         url: "/soon",
       },
       {
         name: "Cuarta Libre",
-        url: "/soon",
+        url: "/torneos/damas-cuarta-clausura-2025",
       },
       {
-        name: "Cuarta +40",
+        name: "Cuarta +40 🆕",
         url: "/soon",
       },
       {
         name: "Quinta Libre",
-        url: "/soon",
+        url: "/toneos/damas-quinta-clausura-2025",
       },
     ],
   },
@@ -33,19 +33,19 @@ export const tournaments = [
     categories: [
       {
         name: "Primera Libre",
-        url: "/soon",
+        url: "/torneos/primera-libre-clausura-2025",
       },
       {
         name: "Intermedia Libre",
-        url: "/soon",
+        url: "/torneos/intermedia-libre-clausura-2025",
       },
       {
         name: "Tercera Libre",
-        url: "/soon",
+        url: "/torneos/tercera-libre-clausura-2025",
       },
       {
         name: "Cuarta Libre",
-        url: "/soon",
+        url: "/torneos/cuarta-libre-clausura-2025",
       },
       {
         name: "Cuarta +40",
@@ -53,7 +53,7 @@ export const tournaments = [
       },
       {
         name: "Quinta Libre",
-        url: "/soon",
+        url: "/torneos/quinta-libre-clausura-2025",
       },
       {
         name: "Quinta +40",
@@ -61,7 +61,7 @@ export const tournaments = [
       },
       {
         name: "Sexta Libre",
-        url: "/soon",
+        url: "/torneos/sexta-libre-clausura-2025",
       },
     ],
   },
@@ -69,19 +69,19 @@ export const tournaments = [
     name: "Mixto",
     categories: [
       {
-        name: "Mixto Libre",
+        name: "Mixto Libre 🆕",
         url: "/soon",
       },
       {
-        name: "Mixto A",
+        name: "Mixto A 🆕",
         url: "/soon",
       },
       {
         name: "Mixto B",
-        url: "/soon",
+        url: "/torneos/mixto-tercera-clausura-2025",
       },
       {
-        name: "Mixto C",
+        name: "Mixto C 🆕",
         url: "/soon",
       },
     ],
@@ -162,9 +162,8 @@ export const menu = [
 
 export const extra = [
   { name: "Reglamento", url: "/reglamento" },
-  // { name: "Planillas", url: "/soon" },
   { name: "Capitanes", url: "https://capitanes.imltenis.com.ar/" },
-  { name: "IML Weekend", url: "/weekend" },
+  // { name: "IML Weekend", url: "/weekend" },
   { name: "Registro de jugadores", url: "/bienvenido" },
   { name: "Tienda", url: "/soon" },
   { name: "Nosotros", url: "/nosotros" },
