@@ -5,23 +5,33 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Menu = ({
-  onClick,
+  setIsOpen,
   isOpen,
 }: {
-  onClick: () => void;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
   isOpen: boolean;
 }) => {
   const pathname = usePathname();
   const [category, setCategory] = useState("Damas");
 
+  const handleBackgroundClick = () => {
+    setIsOpen(false);
+  };
+
+  const handleNavClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
+
   return (
-    <nav
-      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/90   backdrop-blur z-30 text-base ${isOpen ? "block" : "hidden"}`}
+    <div
+      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/90 backdrop-blur z-30 text-base flex items-center justify-center ${isOpen ? "block" : "hidden"}`}
+      onClick={handleBackgroundClick}
     >
-      <div
-        className={`w-full h-full content-center text-center ${isOpen ? "fade-in" : "hidden"}`}
+      <nav
+        className={`text-center ${isOpen ? "fade-in" : "hidden"}`}
+        onClick={handleNavClick}
       >
-        <ul className="flex flex-col">
+        <ul>
           {tournaments.map((item, index) => (
             <li key={index}>
               <button
@@ -43,7 +53,7 @@ const Menu = ({
                             ? "text-primary"
                             : "hover:underline"
                         }`}
-                        onClick={onClick}
+                        onClick={() => setIsOpen(false)}
                       >
                         {item.name}
                       </Link>
@@ -64,7 +74,7 @@ const Menu = ({
                     ? "text-primary"
                     : "hover:underline text-white/70"
                 }
-                onClick={onClick}
+                onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
@@ -81,15 +91,15 @@ const Menu = ({
                     ? "text-primary"
                     : "hover:underline text-white/50"
                 }
-                onClick={onClick}
+                onClick={() => setIsOpen(false)}
               >
                 {item.name}
               </Link>
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 };
 

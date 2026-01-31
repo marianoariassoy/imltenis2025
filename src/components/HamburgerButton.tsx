@@ -1,15 +1,15 @@
 type HamburgerButtonProps = {
   isOpen: boolean;
-  onClick: () => void;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export default function HamburgerButton({
   isOpen,
-  onClick,
+  setIsOpen,
 }: HamburgerButtonProps) {
   return (
     <button
-      onClick={onClick}
+      onClick={() => setIsOpen(!isOpen)}
       aria-label="Toggle menu"
       className="cursor-pointer relative w-6 h-6 flex items-center justify-start [&>span]:hover:bg-primary focus:outline-none"
     >

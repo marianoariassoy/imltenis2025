@@ -33,10 +33,6 @@ const Header = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <>
       <header
@@ -44,7 +40,7 @@ const Header = () => {
         id="header"
       >
         <div className="flex-1 z-40">
-          <HamburgerButton onClick={handleMenu} isOpen={isOpen} />
+          <HamburgerButton setIsOpen={setIsOpen} isOpen={isOpen} />
         </div>
         <div
           className={`flex justify-center text-primary transition-all z-50 ${scrolled ? "text-[0.6rem]" : ""}`}
@@ -69,7 +65,7 @@ const Header = () => {
           </a>
         </div>
       </header>
-      <Nav onClick={handleMenu} isOpen={isOpen} />
+      <Nav setIsOpen={setIsOpen} isOpen={isOpen} />
     </>
   );
 };
