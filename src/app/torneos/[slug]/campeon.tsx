@@ -12,13 +12,13 @@ const TornamentsChampion = ({ data }: { data: Props }) => {
   return (
     <div className="flex flex-col gap-y-2 items-center text-center">
       <Confetti />
-      <Link href={`/equipos/${data.team_champion_id}`} className="">
-        <div className="w-20 h-20 overflow-hidden rounded-full hover:opacity-70 transition-opacity">
+      <Link href={`/equipos/${data.team_champion_id}`}>
+        <div className="w-24 h-24 overflow-hidden rounded-full hover:opacity-70 transition-opacity">
           <Image
             src={data.team_champion_image}
             alt={data.team_champion}
-            width={80}
-            height={80}
+            width={96}
+            height={96}
             className="object-cover h-full w-full"
           />
         </div>

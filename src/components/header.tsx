@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`sticky top-0 flex w-full items-center gap-x-4 px-4 py-2   z-40 bg-gradient-to-b from-[#262626] via-[#262626]/70 to-transparent`}
+        className={`fixed top-0 flex w-full items-center gap-x-4 px-4 py-2   z-40 bg-gradient-to-b from-[#262626] via-[#262626]/70 to-transparent`}
         id="header"
       >
         <div className="flex-1 z-40">

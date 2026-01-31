@@ -59,7 +59,9 @@ export default function RootLayout({
         style={{ fontFamily: montserrat.style.fontFamily }}
       >
         <Header />
-        <main className="flex-1 w-full max-w-4xl mx-auto px-4">{children}</main>
+        <main className="flex-1 w-full max-w-4xl mx-auto px-4 pt-[7.5rem]">
+          {children}
+        </main>
         <Footer />
         <AnalyticsProvider />
       </body>
