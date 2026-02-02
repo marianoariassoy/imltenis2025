@@ -140,9 +140,9 @@ CUIL: 27050108347 <br/><br/>
         </div>
 
         <div className="[&>span]:font-semibold [&>span]:text-primary mb-2">
-          Sumate a uno de los interclubes de tenis más importantes de la zona,
-          con más de <span>200 equipos y 16 categorías</span> que abarcan
-          distintos niveles de juego en damas, caballeros y mixtos. Viví una
+          Viví uno de los interclubes de tenis amateur más importantes de la
+          zona, con más de <span>200 equipos y 16 categorías</span> que abarcan
+          distintos niveles de juego en damas, caballeros y mixtos. Compartí una
           experiencia única junto a tu grupo de amigos: representá a tu club o
           barrio, jugá en tus propias canchas y descubrí nuevas sedes y rivales
           cada semana. <br />
