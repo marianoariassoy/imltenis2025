@@ -40,7 +40,6 @@ body {
 .blur-out {
   animation: blur-out 1s ease-in-out forwards;
 }
-
 @keyframes blur-out {
   0% {
     filter: blur(15px);

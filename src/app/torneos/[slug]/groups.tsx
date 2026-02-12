@@ -14,7 +14,7 @@ const groups = async ({
   mixto: boolean;
 }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id_tournament}/groups`
+    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id_tournament}/groups`,
   );
   const data = (await response.json()) as Group[];
   if (!data) return null;
@@ -110,7 +110,6 @@ const groups = async ({
           <h1 className="font-bold text-center text-primary text-lg">
             {item.name}
           </h1>
-
           <Suspense fallback={<Loader />}>
             <Table
               group={item}

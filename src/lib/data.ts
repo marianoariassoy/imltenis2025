@@ -165,6 +165,6 @@ export const extra = [
   { name: "Capitanes", url: "https://capitanes.imltenis.com.ar/" },
   // { name: "IML Weekend", url: "/weekend" },
   { name: "Registro de jugadores", url: "/bienvenido" },
-  { name: "Tienda", url: "/soon" },
+  // { name: "Tienda", url: "/soon" },
   { name: "Nosotros", url: "/nosotros" },
 ];

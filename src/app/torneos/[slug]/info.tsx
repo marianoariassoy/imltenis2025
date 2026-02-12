@@ -1,20 +1,28 @@
-// "use client";
+"use client";
 
-// import { useState } from "react";
+import { useState } from "react";
 import { Info } from "@/lib/icons";
 
 const InfoShow = ({ text }: { text: string }) => {
-  // const [show, setShow] = useState(false);
+  const [show, setShow] = useState(false);
 
-  // const handleClick = () => {
-  //   setShow(!show);
-  // };
   return (
-    <div className="flex gap-x-3 p-3 border-2 border-primary text-primary rounded-xl mb-2">
+    <div
+      className="flex gap-x-3 px-4 py-4 border-2 border-primary text-primary rounded-xl mb-2 cursor-pointer"
+      onClick={() => setShow(!show)}
+    >
       <span className="text-primary mt-1">
         <Info />
       </span>
-      <span className="whitespace-break-spaces opacity-70">{text}</span>
+      <span
+        className={`leading-tight transition-all ${
+          show
+            ? "whitespace-break-spaces"
+            : "line-clamp-2 whitespace-break-spaces"
+        }`}
+      >
+        {text}
+      </span>
     </div>
   );
 };
