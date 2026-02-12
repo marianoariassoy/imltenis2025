@@ -12,7 +12,7 @@ export async function generateMetadata({
 }) {
   const { slug } = await params;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/players/${slug}`
+    `${process.env.NEXT_PUBLIC_API_URL}/players/${slug}`,
   );
   const data = await response.json();
   if (!data) return null;
@@ -40,7 +40,7 @@ export async function generateMetadata({
 
 async function getServerSideProps(slug: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/players/${slug}`
+    `${process.env.NEXT_PUBLIC_API_URL}/players/${slug}`,
   );
   const data = await response.json();
   if (!data) return null;
@@ -78,7 +78,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Doubles id={data.id} />
       <Equipos id={data.id} />
 
-      <Aviso text="En caso de existir algún error en la información o queres agregar o cambiar tu foto de perfil, envianos un correo a hola@imltenis.com.ar" />
+      <Aviso text="En caso de existir algún error en la información o querer modificar la foto de perfil, envianos un correo a hola@imltenis.com.ar" />
     </section>
   );
 };
