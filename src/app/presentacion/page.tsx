@@ -134,7 +134,7 @@ CUIL: 27050108347 <br/><br/>
       <div className="flex flex-col gap-y-4">
         <div className="text-center flex flex-col items-center">
           <div className="text-2xl text-center">🏆</div>
-          <h1 className="font-extrabold text-primary text-xl">
+          <h1 className="font-spartan font-extrabold text-primary text-2xl">
             Torneo Apertura 2026
           </h1>
         </div>

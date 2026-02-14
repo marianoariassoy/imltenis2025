@@ -4,7 +4,7 @@ export const tournaments = [
     categories: [
       {
         name: "Intermedia +30 🆕",
-        url: "/soon",
+        url: "/torneos/intermedia-damas-apertura-2026",
       },
       {
         name: "Tercera Libre",
@@ -48,7 +48,7 @@ export const tournaments = [
         url: "/torneos/cuarta-libre-clausura-2025",
       },
       {
-        name: "Cuarta +40",
+        name: "Cuarta +40 🆕",
         url: "/soon",
       },
       {
@@ -56,12 +56,12 @@ export const tournaments = [
         url: "/torneos/quinta-libre-clausura-2025",
       },
       {
-        name: "Quinta +40",
-        url: "/soon",
+        name: "Quinta +40 🆕",
+        url: "/torneos/caballeros-quinta-40-apertura-2026",
       },
       {
         name: "Sexta Libre",
-        url: "/torneos/sexta-libre-clausura-2025",
+        url: "/torneos/caballeros-sexta-libre-apertura-2026",
       },
     ],
   },

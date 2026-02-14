@@ -10,13 +10,13 @@ const Header = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isHome, setIsHome] = useState(true);
 
   useEffect(() => {
-    const header = document.querySelector("#header") as HTMLElement;
     if (pathname === "/") {
-      header.classList.remove("bg-gradient-to-b");
+      setIsHome(true);
     } else {
-      header.classList.add("bg-gradient-to-b");
+      setIsHome(false);
     }
   }, [pathname]);
 
@@ -36,14 +36,13 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 flex w-full items-center gap-x-4 px-4 py-2   z-40 bg-gradient-to-b from-[#262626] via-[#262626]/70 to-transparent`}
-        id="header"
+        className={`fixed top-0 flex w-screen items-center text-secondary gap-x-4 px-4 z-50 from-[#262626] via-[#262626]/70 to-transparent transition-all ${isHome ? "" : "bg-gradient-to-b"} ${scrolled ? "py-2" : "py-4"}`}
       >
         <div className="flex-1 z-40">
           <HamburgerButton setIsOpen={setIsOpen} isOpen={isOpen} />
         </div>
         <div
-          className={`flex justify-center text-primary transition-all z-50 ${scrolled ? "text-[0.6rem]" : ""}`}
+          className={`text-primary flex justify-center transition-all z-50 ${scrolled ? "text-[0.6rem]" : ""} ${isHome ? "text-[#e4e3e3]" : ""}`}
         >
           <Link
             href="/"

@@ -7,8 +7,10 @@ import AnalyticsProvider from "@/components/AnalyticsProvider";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  // weight: ["400", "500", "600", "700", "800", "900", "100"],
   display: "swap",
+
+  variable: "--font-montserrat",
 });
 
 export const metadata: Metadata = {
@@ -55,7 +57,7 @@ export default function RootLayout({
         <meta name="theme-color" content="#242424" />
       </head>
       <body
-        className="bg-background text-foreground min-h-screen flex flex-col"
+        className={`bg-background text-foreground min-h-screen flex flex-col`}
         style={{ fontFamily: montserrat.style.fontFamily }}
       >
         <Header />

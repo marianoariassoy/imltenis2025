@@ -241,7 +241,7 @@ Las sanciones y medidas aquí detalladas serán de aplicación automática e ina
     },
     {
       title: "Descenso de jugadores",
-      text: `Un jugador podrá solicitar el descenso a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que registre, en la categoría actual, un balance acumulado de partidos ganados y perdidos igual o inferior a –3 en sus últimos diez (10) encuentros disputados.
+      text: `Un jugador podrá solicitar el descenso a la categoría inmediatamente inferior únicamente al inicio de un nuevo torneo, siempre que registre, en la categoría actual, un balance acumulado de partidos ganados y perdidos igual o inferior a -3 en sus últimos diez (10) encuentros disputados.
 
 La organización se reserva el derecho de disponer el descenso de un jugador cuando, tras un análisis pormenorizado de su desempeño y situación deportiva, considere que dicha medida resulta pertinente, aun cuando no se alcance el coeficiente establecido en el párrafo precedente.
       `,
@@ -266,7 +266,18 @@ Las categorías Mixtas se rigen por criterios específicos distintos a los aplic
     },
     {
       title: "Mala formación",
-      text: `En caso de incurrir en una mala conformación de las parejas de dobles, la sanción implicará la pérdida exclusiva de los parciales correspondientes a los dobles involucrados (Doble 1 y Doble 2). El partido de singles no se verá afectado, por lo que se conservará el resultado obtenido en cancha.`,
+      text: `En caso de incurrir en una mala conformación de las parejas de dobles, la sanción implicará la pérdida exclusiva de los parciales correspondientes a los dobles involucrados (Doble 1 y Doble 2). El partido de singles, de existir, no se verá afectado, por lo que se conservará el resultado obtenido en cancha.`,
+    },
+    {
+      title: "Mala inclusión",
+      text: `En caso de verificarse la indebida inclusión de uno o más jugadores en una serie, el equipo infractor será sancionado con la pérdida total de la misma, adjudicándose todos los parciales al equipo rival con el resultado de 6-0 / 6-0.
+
+Se considerará indebida inclusión, sin carácter taxativo, en los siguientes supuestos:
+a) Participación de un jugador que no se encuentre debidamente inscripto en la lista de buena fe.
+b) Participación de un jugador incorrectamente categorizado.
+c) Participación de un jugador que no cumpla con los requisitos de edad establecidos para la categoría.
+d) Participación de un jugador que no reúna las condiciones reglamentarias para actuar como suplente natural.
+e) Participación de un jugador inscripto simultáneamente en dos o más equipos de la misma categoría.`,
     },
     {
       title: "Penalizaciones",

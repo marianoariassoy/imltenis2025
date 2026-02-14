@@ -24,18 +24,18 @@ const Menu = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/90 backdrop-blur z-30 text-base flex items-center justify-center ${isOpen ? "block" : "hidden"}`}
+      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/70 backdrop-blur z-40 text-base flex items-center justify-center ${isOpen ? "block" : "hidden"}`}
       onClick={handleBackgroundClick}
     >
       <nav
         className={`text-center ${isOpen ? "fade-in" : "hidden"}`}
         onClick={handleNavClick}
       >
-        <ul>
+        <ul className="font-medium">
           {tournaments.map((item, index) => (
             <li key={index}>
               <button
-                className="italic text-primary font-black text-xl lg:text-2xl hover:underline"
+                className="text-primary italic font-black text-2xl hover:underline "
                 onClick={() =>
                   setCategory(category === item.name ? "" : item.name)
                 }
@@ -43,12 +43,12 @@ const Menu = ({
                 {item.name}
               </button>
               {category === item.name && (
-                <ul className="my-2">
+                <ul className="my-1">
                   {item.categories.map((item, index) => (
                     <li key={index}>
                       <Link
                         href={item.url}
-                        className={`font-medium ${
+                        className={`${
                           pathname === item.url
                             ? "text-primary"
                             : "hover:underline"
