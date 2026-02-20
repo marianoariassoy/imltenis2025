@@ -3,20 +3,12 @@ import { useState } from "react";
 import { tournaments, menu, extra } from "@/lib/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useMenu } from "@/context/menu-context";
 
-const Menu = ({
-  setIsOpen,
-  isOpen,
-}: {
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-  isOpen: boolean;
-}) => {
+const Menu = () => {
+  const { open, setOpen } = useMenu();
   const pathname = usePathname();
   const [category, setCategory] = useState("Damas");
-
-  const handleBackgroundClick = () => {
-    setIsOpen(false);
-  };
 
   const handleNavClick = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -24,18 +16,18 @@ const Menu = ({
 
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/70 backdrop-blur z-40 text-base flex items-center justify-center ${isOpen ? "block" : "hidden"}`}
-      onClick={handleBackgroundClick}
+      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/70 backdrop-blur z-40 text-base flex items-center justify-center ${open ? "block" : "hidden"}`}
+      onClick={() => setOpen(false)}
     >
       <nav
-        className={`text-center ${isOpen ? "fade-in" : "hidden"}`}
+        className={`text-center ${open ? "fade-in" : "hidden"}`}
         onClick={handleNavClick}
       >
         <ul className="font-medium">
           {tournaments.map((item, index) => (
             <li key={index}>
               <button
-                className="text-primary italic font-black text-2xl hover:underline "
+                className="text-primary italic font-black text-xl hover:underline "
                 onClick={() =>
                   setCategory(category === item.name ? "" : item.name)
                 }
@@ -51,9 +43,9 @@ const Menu = ({
                         className={`${
                           pathname === item.url
                             ? "text-primary"
-                            : "hover:underline"
+                            : "hover:text-primary"
                         }`}
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => setOpen(false)}
                       >
                         {item.name}
                       </Link>
@@ -72,9 +64,9 @@ const Menu = ({
                 className={
                   pathname === item.url
                     ? "text-primary"
-                    : "hover:underline text-white/70"
+                    : "hover:text-primary text-white/70"
                 }
-                onClick={() => setIsOpen(false)}
+                onClick={() => setOpen(false)}
               >
                 {item.name}
               </Link>
@@ -89,9 +81,9 @@ const Menu = ({
                 className={
                   pathname === item.url
                     ? "text-primary"
-                    : "hover:underline text-white/50"
+                    : "hover:text-primary text-white/50"
                 }
-                onClick={() => setIsOpen(false)}
+                onClick={() => setOpen(false)}
               >
                 {item.name}
               </Link>

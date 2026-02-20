@@ -1,6 +1,7 @@
 import Item from "@/components/ItemMedium";
 import { Player } from "../../../types";
 import Labels from "@/components/Labels";
+import Barra from "@/components/Barra";
 
 const Jugadores = async ({
   id,
@@ -10,7 +11,7 @@ const Jugadores = async ({
   captain_name: string;
 }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/teams/${id}/players`
+    `${process.env.NEXT_PUBLIC_API_URL}/teams/${id}/players`,
   );
   const data = (await response.json()) as Player[];
   if (!data) return null;
@@ -18,6 +19,10 @@ const Jugadores = async ({
   const labels = [
     {
       name: "Jugador",
+      value: "",
+    },
+    {
+      name: "Edad",
       value: "",
     },
     {
@@ -37,16 +42,18 @@ const Jugadores = async ({
       value: "Diferencia de puntos",
     },
     {
-      name: "Edad",
-      value: "",
+      name: " ",
+      value: " ",
     },
   ];
 
   return (
     <section className="flex flex-col gap-y-4">
       <div className="text-center">
-        <h1 className="text-primary font-semibold">🔥 Lista de buena fe</h1>
-        <h2 className="font-medium">{captain_name} (Capitán)</h2>
+        <h1 className="text-primary text-lg font-semibold">
+          🔥 Lista de buena fe
+        </h1>
+        <h2 className="font-medium text-secondary">{captain_name} (Capitán)</h2>
       </div>
 
       <div className="overflow-x-auto whitespace-nowrap">
@@ -69,11 +76,15 @@ const Jugadores = async ({
                     link={`/jugadores/${item.slug}`}
                   />
                 </td>
+                <td>{item.age > 1 ? item.age : null}</td>
+
                 <td>{item.series_total}</td>
                 <td>{item.series_won}</td>
                 <td>{item.series_lost}</td>
                 <td>{item.series_dif}</td>
-                <td>{item.age > 1 ? item.age : null}</td>
+                <td className="w-40">
+                  <Barra end={(item.series_won / item.series_total) * 100} />
+                </td>
               </tr>
             ))}
           </tbody>

@@ -31,11 +31,8 @@ En cada fecha se disputarán tres o dos encuentros entre dos equipos representan
     {
       title: "Modalidad de juego",
       text: `En las categorías Damas y Caballeros Libres se disputará una serie compuesta por 1 single y 2 dobles.
-
 En las categorías Damas y Caballeros +30, +40 y Mixto se disputarán 2 encuentros de dobles. En la fase regular, las series podrán finalizar empatadas, otorgándose 1 punto a cada equipo. En instancias de playoffs, se disputarán 3 dobles para definir la serie.
-
 Todos los partidos se jugarán al mejor de tres sets con tie break. El tercer set se disputará en modalidad supertie break a 10 puntos, con una diferencia mínima de dos puntos.
-
 Los tres encuentros deberán disputarse en simultáneo, comenzando al mismo horario, salvo en el caso de clubes que cuenten con dos canchas disponibles (ver apartado).`,
     },
     {

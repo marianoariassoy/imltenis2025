@@ -33,14 +33,14 @@ const Filter = ({ category }: { category: string }) => {
       >
         <span>{active?.name ?? "Seleccionar categoría"}</span>
         <span
-          className={`transition-transform z-50 ${open ? "rotate-180" : ""}`}
+          className={`transition-transform z-30 ${open ? "rotate-180" : ""}`}
         >
           <ChevronDown />
         </span>
       </button>
 
       {open && (
-        <div className="absolute z-40 px-4 py-2 w-full   rounded-lg bg-background border border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+        <div className="absolute z-20 px-4 py-2 w-full rounded-lg bg-background border border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
           {categories.map((item) => {
             const isActive = category === item.slug;
 

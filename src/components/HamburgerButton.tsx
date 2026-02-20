@@ -1,34 +1,30 @@
-type HamburgerButtonProps = {
-  isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
-};
+import { useMenu } from "@/context/menu-context";
 
-export default function HamburgerButton({
-  isOpen,
-  setIsOpen,
-}: HamburgerButtonProps) {
+export default function HamburgerButton() {
+  const { open, setOpen } = useMenu();
+
   return (
     <button
-      onClick={() => setIsOpen(!isOpen)}
+      onClick={() => setOpen(!open)}
       aria-label="Toggle menu"
-      className="cursor-pointer relative w-6 h-6 flex items-center justify-start [&>span]:hover:bg-primary focus:outline-none"
+      className="cursor-pointer relative w-6 h-6 flex items-center justify-start [&>span]:lg:hover:bg-primary focus:outline-none"
     >
       <span
         className={`
           absolute h-0.5 w-full bg-current transition-all duration-300 ease-in-out
-          ${isOpen ? "rotate-45 translate-y-0" : "-translate-y-2"}
+          ${open ? "rotate-45 translate-y-0" : "-translate-y-2"}
         `}
       />
       <span
         className={`
           absolute h-0.5 w-full bg-current transition-all duration-300 ease-in-out
-          ${isOpen ? "-rotate-45 translate-y-0 w-full" : ""}
+          ${open ? "-rotate-45 translate-y-0 w-full" : ""}
         `}
       />
       <span
         className={`
           absolute h-0.5 w-1/2 bg-current transition-all duration-300 ease-in-out
-          ${isOpen ? "opacity-0" : "opacity-100 translate-y-2"}
+          ${open ? "opacity-0" : "opacity-100 translate-y-2"}
         `}
       />
     </button>

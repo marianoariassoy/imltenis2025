@@ -12,7 +12,7 @@ export async function generateMetadata({
 }) {
   const { id } = await params;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id}`,
   );
   const data = await response.json();
   if (!data) return null;
@@ -40,7 +40,7 @@ export async function generateMetadata({
 
 async function getServerSideProps(slug: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${slug}`
+    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${slug}`,
   );
   const data = await response.json();
   if (!data) return null;
@@ -54,7 +54,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title title={data.name + " " + data.season} emoji="🏆" />
+      <Title title={data.name + " " + data.season} />
 
       {data.team_champion_id && <Campeon data={data} />}
 

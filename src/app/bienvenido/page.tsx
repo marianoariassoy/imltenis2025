@@ -46,7 +46,7 @@ const Page = () => {
           headers: {
             "Content-Type": "multipart/form-data",
           },
-        }
+        },
       );
       if (response?.data?.error) {
         setError(response.data.message);
@@ -88,7 +88,7 @@ const Page = () => {
       <Title
         title="¡Gracias!"
         emoji="🙏"
-        description="¡Tu registro fue realizado con éxito!"
+        description="¡El registro fue realizado con éxito!"
       />
     );
 
@@ -98,7 +98,7 @@ const Page = () => {
         <Title
           title="¡Bienvenido!"
           emoji="🚀"
-          description="Completá el formulario con tus datos y se parte de nuestra liga."
+          description="Completá el formulario con tus datos y se parte de del  interclubes."
         />
 
         <div className="w-full m-auto">

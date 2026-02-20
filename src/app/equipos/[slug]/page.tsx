@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { WhatsApp, Info } from "@/lib/icons";
+import { Info } from "@/lib/icons";
 import Jugadores from "./jugadores";
 import Fixture from "./fixtures";
 import { Suspense } from "react";
@@ -87,14 +87,14 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <Info />
             Info de la sede
           </Link>
-          <a
+          {/* <a
             href={`https://wa.me/${data.captain_phone}`}
             target="_blank"
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
             <WhatsApp />
             WhatsApp
-          </a>
+          </a> */}
         </div>
       </header>
 

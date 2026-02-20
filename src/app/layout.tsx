@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
+import { MenuProvider } from "@/context/menu-context";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -15,7 +16,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: "IML Tenis Liga de Clubes",
+    default: "IML Tenis Interclubes",
     template: "%s - IML Tenis",
   },
   description:
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://imltenis.com.ar",
-    title: "IML Tenis Liga de clubes de Buenos Aires",
+    title: "IML Tenis Interclubes Buenos Aires",
     description:
       "La liga de clubes IML Tenis es una de las competencias interclubes más importantes de Argentina, con la participación de cientos de equipos provenientes principalemente de las zonas norte y oeste del Gran Buenos Aires. Cada temporada convoca a miles de jugadores y jugadoras amateurs que representan a sus clubes en un ambiente competitivo, organizado y con gran espíritu deportivo.",
     images: [
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
         url: "https://imltenis.com.ar/assets/imltenis.jpg",
         width: 500,
         height: 500,
-        alt: "IML Tenis Liga de clubes de Buenos Aires",
+        alt: "IML Tenis Interclubes Buenos Aires",
       },
     ],
   },
@@ -60,11 +61,13 @@ export default function RootLayout({
         className={`bg-background text-foreground min-h-screen flex flex-col`}
         style={{ fontFamily: montserrat.style.fontFamily }}
       >
-        <Header />
-        <main className="flex-1 w-full max-w-4xl mx-auto px-4 pt-[7rem]">
-          {children}
-        </main>
-        <Footer />
+        <MenuProvider>
+          <Header />
+          <main className="flex-1 w-full max-w-4xl mx-auto px-4 pt-[7rem]">
+            {children}
+          </main>
+          <Footer />
+        </MenuProvider>
         <AnalyticsProvider />
       </body>
     </html>

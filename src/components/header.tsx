@@ -8,7 +8,6 @@ import HamburgerButton from "@/components/HamburgerButton";
 
 const Header = () => {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isHome, setIsHome] = useState(true);
 
@@ -39,7 +38,7 @@ const Header = () => {
         className={`fixed top-0 flex w-screen items-center text-secondary gap-x-4 px-4 z-50 from-[#262626] via-[#262626]/70 to-transparent transition-all ${isHome ? "" : "bg-gradient-to-b"} py-4`}
       >
         <div className="flex-1 z-40">
-          <HamburgerButton setIsOpen={setIsOpen} isOpen={isOpen} />
+          <HamburgerButton />
         </div>
         <div
           className={`text-primary flex justify-center transition-all z-50 ${scrolled ? "text-[0.6rem]" : ""} ${isHome ? "text-[#e4e3e3]" : ""}`}
@@ -64,7 +63,7 @@ const Header = () => {
           </a>
         </div>
       </header>
-      <Nav setIsOpen={setIsOpen} isOpen={isOpen} />
+      <Nav />
     </>
   );
 };

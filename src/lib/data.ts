@@ -3,28 +3,28 @@ export const tournaments = [
     name: "Damas",
     categories: [
       {
-        name: "Intermedia +30 🆕",
-        url: "/torneos/intermedia-damas-apertura-2026",
+        name: "Intermedia +30",
+        url: "/torneos/damas-intermedia-30-apertura-2026",
       },
       {
         name: "Tercera Libre",
-        url: "/torneos/damas-tercera-clausura-2025",
+        url: "/torneos/damas-tercera-libre-apertura-2026",
       },
       {
-        name: "Tercera +40 🆕",
-        url: "/soon",
+        name: "Tercera +40",
+        url: "/torneos/damas-tercera-40-apertura-2026",
       },
       {
         name: "Cuarta Libre",
-        url: "/torneos/damas-cuarta-clausura-2025",
+        url: "/torneos/damas-cuarta-libre-apertura-2026",
       },
       {
-        name: "Cuarta +40 🆕",
-        url: "/soon",
+        name: "Cuarta +40",
+        url: "/torneos/damas-cuarta-40-apertura-2026",
       },
       {
         name: "Quinta Libre",
-        url: "/toneos/damas-quinta-clausura-2025",
+        url: "/torneos/damas-quinta-libre-apertura-2026",
       },
     ],
   },
@@ -33,30 +33,30 @@ export const tournaments = [
     categories: [
       {
         name: "Primera Libre",
-        url: "/torneos/primera-libre-clausura-2025",
+        url: "/torneos/caballeros-primera-libre-apertura-2026",
       },
       {
         name: "Intermedia Libre",
-        url: "/torneos/intermedia-libre-clausura-2025",
+        url: "/torneos/caballeros-intermedia-libre-apertura-2026",
       },
       {
         name: "Tercera Libre",
-        url: "/torneos/tercera-libre-clausura-2025",
+        url: "/torneos/caballeros-tercera-libre-apertura-2026",
       },
       {
         name: "Cuarta Libre",
-        url: "/torneos/cuarta-libre-clausura-2025",
+        url: "/torneos/caballeros-cuarta-libre-apertura-2026",
       },
       {
-        name: "Cuarta +40 🆕",
-        url: "/soon",
+        name: "Cuarta +40 ",
+        url: "/caballeros-cuarta-40-apertura-2026",
       },
       {
         name: "Quinta Libre",
-        url: "/torneos/quinta-libre-clausura-2025",
+        url: "/torneos/caballeros-quinta-libre-apertura-2026",
       },
       {
-        name: "Quinta +40 🆕",
+        name: "Quinta +40 ",
         url: "/torneos/caballeros-quinta-40-apertura-2026",
       },
       {
@@ -69,20 +69,20 @@ export const tournaments = [
     name: "Mixto",
     categories: [
       {
-        name: "Mixto Libre 🆕",
-        url: "/soon",
+        name: "Mixto Libre ",
+        url: "/torneos/mixto-libre-apertura-2026",
       },
       {
-        name: "Mixto A 🆕",
-        url: "/soon",
+        name: "Mixto A ",
+        url: "/torneos/mixto-a-apertura-2026",
       },
       {
         name: "Mixto B",
-        url: "/torneos/mixto-tercera-clausura-2025",
+        url: "/torneos/mixto-b-apertura-2026",
       },
       {
-        name: "Mixto C 🆕",
-        url: "/soon",
+        name: "Mixto C",
+        url: "/torneos/mixto-c-apertura-2026",
       },
     ],
   },
