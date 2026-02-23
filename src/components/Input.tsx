@@ -15,7 +15,7 @@ const Input = ({ type, title, placeholder, register }: Input) => {
       </label>
       <input
         type={type}
-        className="w-full h-12 border border-primary rounded-lg bg-transparent px-4 focus:outline-none focus:ring-0 placeholder:text-secondary mb-2"
+        className="w-full text-sm h-12 border border-primary rounded-lg bg-transparent px-4 focus:outline-none focus:ring-0 placeholder:text-secondary mb-2"
         placeholder={placeholder}
         {...register}
       />

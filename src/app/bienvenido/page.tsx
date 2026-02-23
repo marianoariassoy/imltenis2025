@@ -9,6 +9,7 @@ import Input from "@/components/Input";
 import Button from "@/components/Button";
 import Loader from "@/components/Loader2";
 import Error from "./Error";
+import Aviso from "@/components/Aviso";
 
 interface User {
   name: string;
@@ -223,13 +224,7 @@ const Page = () => {
               {sending ? <Loader /> : <Button>Registrate</Button>}
             </div>
             <div className="my-6">
-              <p className="text-sm text-secondary text-center">
-                En nuestro sitio web solo se mostrarán tu nombre, apellido y
-                foto de perfil.
-                <br />
-                El resto de los datos se encuentran protegidos y nadie por fuera
-                de la organiazación tiene acceso a ellos.
-              </p>
+              <Aviso text="Solo se mostrarán tu nombre, apellido, edad y foto de perfil. El resto de los datos se encuentran protegidos y nadie por fuera de la organiazación tiene acceso a ellos." />
             </div>
           </form>
         </div>
