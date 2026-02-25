@@ -77,7 +77,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       </header>
       {data.image === null && (
         <Aviso
-          text="Enviar foto de perfil del jugador a hola@imltenis.com.ar"
+          text="Enviar foto de perfil a hola@imltenis.com.ar"
           type="atention"
         />
       )}

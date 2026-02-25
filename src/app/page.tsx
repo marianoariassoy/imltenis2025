@@ -17,9 +17,9 @@ export default function Home() {
   return (
     <section>
       <Notice />
-      <div className="absolute top-1/2 left-1/2 fade-in-slow text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30 opacity-0 cursor-pointer">
+      <div className="absolute top-1/2 left-1/2 fade-in-slow text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30 opacity-0">
         <h1
-          className="text-[3.2rem] md:text-[5.5rem] font-black text-primary leading-none tracking-tight flex flex-col lg:hover:brightness-125 transition-all"
+          className="text-[3.2rem] md:text-[5.5rem] font-black text-primary leading-none tracking-tight flex flex-col lg:hover:brightness-125 transition-all cursor-pointer"
           onClick={() => setOpen(!open)}
         >
           <span>Torneo</span>
