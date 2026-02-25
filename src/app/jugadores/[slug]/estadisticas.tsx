@@ -52,7 +52,7 @@ const estadisticas = async ({ id }: { id: string }) => {
         </div>
         <div>
           <div>ID de jugador</div>
-          <span className="text-primary text-2xl font-semibold">
+          <span className="text-primary text-xl font-semibold">
             {+id + 1000}
           </span>
         </div>

@@ -67,7 +67,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
         <div className="text-center">
-          <h1 className="font-semibold text-primary text-lg">{data.name}</h1>
+          <h1 className="font-semibold text-primary text-base">{data.name}</h1>
           <div className="flex gap-x-2 items-center justify-center text-secondary">
             {data.age ? data.age : null}
             <span>—</span>

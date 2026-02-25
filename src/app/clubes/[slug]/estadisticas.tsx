@@ -28,7 +28,7 @@ const estadisticas = async ({ id }: { id: string }) => {
       stadistics[0].finals) && (
       <div className="flex justify-center items-center gap-x-2 px-4 py-4 border border-primary rounded-xl text-primary">
         <span>
-          <FontAwesomeIcon icon={faTrophy} size="lg" />
+          <FontAwesomeIcon icon={faTrophy} size="lg" width={18} />
         </span>
         <span>
           {stadistics[0].gold ? (

@@ -11,7 +11,7 @@ const count = ({
   percent: boolean;
 }) => {
   return (
-    <div className="text-2xl text-primary font-semibold flex items-center gap-x-1">
+    <div className="text-xl text-primary font-semibold flex items-center gap-x-1">
       <CountUp end={end} duration={duration} />
       {percent && <span>%</span>}
     </div>
