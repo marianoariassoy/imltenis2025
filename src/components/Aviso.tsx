@@ -1,12 +1,18 @@
-import { Info } from "../lib/icons";
+import { Info, Atention } from "../lib/icons";
 
-const Aviso = ({ text }: { text: string }) => {
+const Aviso = ({
+  text,
+  type,
+}: {
+  text: string;
+  type?: "info" | "atention";
+}) => {
   return (
-    <div className="text-secondary flex gap-x-3 mx-auto">
-      <span className="text-primary mt-1">
-        <Info />
+    <div className="text-secondary flex gap-x-1 mx-auto">
+      <span className="text-primary">
+        {type === "info" ? <Info /> : <Atention />}
       </span>
-      <span>{text}</span>
+      <span className="leading-snug">{text}</span>
     </div>
   );
 };

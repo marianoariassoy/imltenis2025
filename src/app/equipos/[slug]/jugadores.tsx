@@ -2,6 +2,7 @@ import Item from "@/components/ItemMedium";
 import { Player } from "../../../types";
 import Labels from "@/components/Labels";
 import Barra from "@/components/Barra";
+import Aviso from "@/components/Aviso";
 
 const Jugadores = async ({
   id,
@@ -47,6 +48,8 @@ const Jugadores = async ({
     },
   ];
 
+  const withoutImage = data.some((item) => item.image === null);
+
   return (
     <section className="flex flex-col gap-y-4">
       <div className="text-center">
@@ -55,7 +58,12 @@ const Jugadores = async ({
         </h1>
         <h2 className="font-medium text-secondary">{captain_name} (Capitán)</h2>
       </div>
-
+      {withoutImage && (
+        <Aviso
+          text="Enviar las fotos de perfil de los jugadores que aún faltan a hola@imltenis.com.ar"
+          type="atention"
+        />
+      )}
       <div className="overflow-x-auto whitespace-nowrap">
         <table className="table w-full">
           <thead>
@@ -91,7 +99,7 @@ const Jugadores = async ({
         </table>
       </div>
 
-      <Labels labels={labels.slice(1, labels.length)} />
+      <Labels labels={labels.slice(1, labels.length - 1)} />
     </section>
   );
 };

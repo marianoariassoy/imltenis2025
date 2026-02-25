@@ -5,7 +5,7 @@ import { Bull } from "@/lib/icons";
 const JugadoresDobles = async ({ id }: { id: string }) => {
   try {
     const response = await fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/players/${id}/doubles`
+      `${process.env.NEXT_PUBLIC_API_URL}/players/${id}/doubles`,
     );
     const data = (await response.json()) as Double[];
     if (!data) return null;
@@ -35,13 +35,12 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
     ];
 
     return (
-      <section className="flex flex-col gap-y-3">
+      <section className="flex flex-col gap-y-6">
         <div className="flex flex-col justify-center items-center gap-x-1">
           <h1 className="font-semibold text-primary text-lg">
-            Dobles disputados ({data.length})
+            Dobles jugados ({data.length})
           </h1>
         </div>
-
         <div className="overflow-x-auto whitespace-nowrap">
           <table className="table w-full mb-3">
             <thead>

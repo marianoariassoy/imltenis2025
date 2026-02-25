@@ -78,7 +78,6 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             {data.tournament_name}
           </Link>
         </div>
-
         <div className="flex justify-center gap-x-4 items-center">
           <Link
             href={`/clubes/${data.club_slug}`}

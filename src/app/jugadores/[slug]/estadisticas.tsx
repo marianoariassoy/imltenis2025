@@ -26,7 +26,7 @@ const estadisticas = async ({ id }: { id: string }) => {
     <div className="w-full p-6 rounded-2xl mb-2 bg-black/15 shadow-md">
       <div className="w-full grid grid-cols-2 items-center gap-y-2 gap-x-4">
         <div>
-          <div>Partidos disputados</div>
+          <div>Partidos jugados</div>
           <Count end={data.matches_total} duration={2} percent={false} />
         </div>
         <div>
@@ -35,11 +35,11 @@ const estadisticas = async ({ id }: { id: string }) => {
         </div>
 
         <div>
-          <div>Set disputados</div>
+          <div>Sets jugados</div>
           <Count end={data.sets_total} duration={2} percent={false} />
         </div>
         <div>
-          <div>Set ganados</div>
+          <div>Sets ganados</div>
           <Count end={data.sets_won} duration={4} percent={false} />
         </div>
 
@@ -51,7 +51,7 @@ const estadisticas = async ({ id }: { id: string }) => {
           </div>
         </div>
         <div>
-          <div>ID Jugador</div>
+          <div>ID de jugador</div>
           <span className="text-primary text-2xl font-semibold">
             {+id + 1000}
           </span>

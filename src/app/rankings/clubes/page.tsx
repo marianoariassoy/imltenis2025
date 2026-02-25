@@ -64,7 +64,11 @@ const page = async () => {
 
   return (
     <section className="flex flex-col gap-y-8">
-      <Title title="Ranking de Clubes 2025" emoji="🥇" />
+      <Title
+        title="Ranking de Clubes 2026"
+        emoji="👑"
+        description="Los cuatro mejores clubes competirán en las finales de interclubes al cierre de la temporada 2026"
+      />
       <div className="overflow-x-auto">
         <table className="table w-full mb-2">
           <thead>
@@ -76,11 +80,11 @@ const page = async () => {
           </thead>
           <tbody>
             {data
-              .filter((item) => +item.matches_won > 0)
+              // .filter((item) => +item.matches_won > 0)
               .map((item, index) => (
                 <tr
                   key={index}
-                  className={`${index === 0 ? "text-primary" : ""}`}
+                  className={`${index < 4 ? "text-primary" : ""}`}
                 >
                   <td className="w-4/5">
                     <Item

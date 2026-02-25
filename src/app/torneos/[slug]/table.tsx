@@ -19,7 +19,7 @@ const Tabla = async ({
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/${
       type === 3 ? "groups-stage2" : "groups"
-    }/teams/${group.id}`
+    }/teams/${group.id}`,
   );
   const data = (await response.json()) as Table[];
   if (!data) return null;
@@ -59,6 +59,7 @@ const Tabla = async ({
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>{item.series_total}</td>
+                <td>{item.fairplay}</td>
                 <td>
                   {item.series_total > 0
                     ? (
@@ -69,7 +70,6 @@ const Tabla = async ({
                       ).toFixed(0)
                     : 0}
                 </td>
-                <td>{item.fairplay}</td>
                 <td>
                   <div className="flex gap-x-2">
                     {item.series.map((item, index) => (

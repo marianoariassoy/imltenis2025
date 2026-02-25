@@ -4,27 +4,27 @@ export const tournaments = [
     categories: [
       {
         name: "Intermedia +30",
-        url: "/torneos/damas-intermedia-30-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Tercera Libre",
-        url: "/torneos/damas-tercera-libre-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Tercera +40",
-        url: "/torneos/damas-tercera-40-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Cuarta Libre",
-        url: "/torneos/damas-cuarta-libre-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Cuarta +40",
-        url: "/torneos/damas-cuarta-40-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Quinta Libre",
-        url: "/torneos/damas-quinta-libre-apertura-2026",
+        url: "/soon",
       },
     ],
   },
@@ -33,35 +33,35 @@ export const tournaments = [
     categories: [
       {
         name: "Primera Libre",
-        url: "/torneos/caballeros-primera-libre-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Intermedia Libre",
-        url: "/torneos/caballeros-intermedia-libre-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Tercera Libre",
-        url: "/torneos/caballeros-tercera-libre-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Cuarta Libre",
-        url: "/torneos/caballeros-cuarta-libre-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Cuarta +40 ",
-        url: "/caballeros-cuarta-40-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Quinta Libre",
-        url: "/torneos/caballeros-quinta-libre-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Quinta +40 ",
-        url: "/torneos/caballeros-quinta-40-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Sexta Libre",
-        url: "/torneos/caballeros-sexta-libre-apertura-2026",
+        url: "/soon",
       },
     ],
   },
@@ -70,20 +70,106 @@ export const tournaments = [
     categories: [
       {
         name: "Mixto Libre ",
-        url: "/torneos/mixto-libre-apertura-2026",
+        url: "/soon",
       },
-
       {
         name: "Mixto B",
-        url: "/torneos/mixto-b-apertura-2026",
+        url: "/soon",
       },
       {
         name: "Mixto C",
-        url: "/torneos/mixto-c-apertura-2026",
+        url: "/soon",
       },
     ],
   },
 ];
+
+// export const tournaments = [
+//   {
+//     name: "Damas",
+//     categories: [
+//       {
+//         name: "Intermedia +30",
+//         url: "/torneos/damas-intermedia-30-apertura-2026",
+//       },
+//       {
+//         name: "Tercera Libre",
+//         url: "/torneos/damas-tercera-libre-apertura-2026",
+//       },
+//       {
+//         name: "Tercera +40",
+//         url: "/torneos/damas-tercera-40-apertura-2026",
+//       },
+//       {
+//         name: "Cuarta Libre",
+//         url: "/torneos/damas-cuarta-libre-apertura-2026",
+//       },
+//       {
+//         name: "Cuarta +40",
+//         url: "/torneos/damas-cuarta-40-apertura-2026",
+//       },
+//       {
+//         name: "Quinta Libre",
+//         url: "/torneos/damas-quinta-libre-apertura-2026",
+//       },
+//     ],
+//   },
+//   {
+//     name: "Caballeros",
+//     categories: [
+//       {
+//         name: "Primera Libre",
+//         url: "/torneos/caballeros-primera-libre-apertura-2026",
+//       },
+//       {
+//         name: "Intermedia Libre",
+//         url: "/torneos/caballeros-intermedia-libre-apertura-2026",
+//       },
+//       {
+//         name: "Tercera Libre",
+//         url: "/torneos/caballeros-tercera-libre-apertura-2026",
+//       },
+//       {
+//         name: "Cuarta Libre",
+//         url: "/torneos/caballeros-cuarta-libre-apertura-2026",
+//       },
+//       {
+//         name: "Cuarta +40 ",
+//         url: "/caballeros-cuarta-40-apertura-2026",
+//       },
+//       {
+//         name: "Quinta Libre",
+//         url: "/torneos/caballeros-quinta-libre-apertura-2026",
+//       },
+//       {
+//         name: "Quinta +40 ",
+//         url: "/torneos/caballeros-quinta-40-apertura-2026",
+//       },
+//       {
+//         name: "Sexta Libre",
+//         url: "/torneos/caballeros-sexta-libre-apertura-2026",
+//       },
+//     ],
+//   },
+//   {
+//     name: "Mixto",
+//     categories: [
+//       {
+//         name: "Mixto Libre ",
+//         url: "/torneos/mixto-libre-apertura-2026",
+//       },
+
+//       {
+//         name: "Mixto B",
+//         url: "/torneos/mixto-b-apertura-2026",
+//       },
+//       {
+//         name: "Mixto C",
+//         url: "/torneos/mixto-c-apertura-2026",
+//       },
+//     ],
+//   },
+// ];
 
 export const categories = [
   {

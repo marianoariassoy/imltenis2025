@@ -16,7 +16,7 @@ const Menu = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/70 backdrop-blur z-40 text-base flex items-center justify-center ${open ? "block" : "hidden"}`}
+      className={`fixed top-0 left-0 w-screen h-screen bg-[#262626]/80 backdrop-blur z-40 text-base flex items-center justify-center ${open ? "block" : "hidden"}`}
       onClick={() => setOpen(false)}
     >
       <nav

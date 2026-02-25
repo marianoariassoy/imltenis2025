@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Estadisticas from "./estadisticas";
 import Image from "next/image";
+import Fixture from "./fixture";
 
 export async function generateMetadata({
   params,
@@ -73,68 +74,92 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
         {data.googlemaps && (
           <div
-            className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-64 [&>iframe]:rounded-xl"
+            className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-70 [&>iframe]:rounded-xl"
             dangerouslySetInnerHTML={{ __html: data.googlemaps }}
           />
         )}
 
-        <div className="flex flex-wrap gap-3 items-center justify-center font-medium">
-          {data.phone && <span>Tel. {data.phone}</span>}
+        <div className="flex flex-wrap gap-2 items-center justify-center font-medium [&>.slash:last-child]:hidden">
+          {data.phone && (
+            <>
+              <span>Tel. {data.phone}</span>
+              <span className="slash text-primary">—</span>
+            </>
+          )}
           {data.googlemapslink && (
-            <a
-              href={data.googlemapslink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              Google Map
-            </a>
+            <>
+              <a
+                href={data.googlemapslink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Google Map
+              </a>
+              <span className="slash text-primary">—</span>
+            </>
           )}
           {data.whatsapp && (
-            <a
-              href={`https://wa.me/${data.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              WhatsApp
-            </a>
+            <>
+              <a
+                href={`https://wa.me/${data.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                WhatsApp
+              </a>
+              <span className="slash text-primary">—</span>
+            </>
           )}
           {data.instagram && (
-            <a
-              href={data.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              Instagram
-            </a>
+            <>
+              <a
+                href={data.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Instagram
+              </a>
+              <span className="slash text-primary">—</span>
+            </>
           )}
           {data.facebook && (
-            <a
-              href={data.facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              Facebook
-            </a>
+            <>
+              <a
+                href={data.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Facebook
+              </a>
+              <span className="slash text-primary">—</span>
+            </>
           )}
           {data.web && (
-            <a
-              href={data.web}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-            >
-              Web
-            </a>
+            <>
+              <a
+                href={data.web}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline"
+              >
+                Web
+              </a>
+              <span className="slash text-primary">—</span>
+            </>
           )}
         </div>
       </header>
 
       <Suspense fallback={<Loader />}>
         <Estadisticas id={data.id} />
+      </Suspense>
+
+      <Suspense fallback={<Loader />}>
+        <Fixture id={data.id} />
       </Suspense>
 
       <Suspense fallback={<Loader />}>
