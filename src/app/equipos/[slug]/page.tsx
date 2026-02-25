@@ -87,14 +87,6 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <FontAwesomeIcon icon={faCircleInfo} size="lg" width={20} />
             Info de la sede
           </Link>
-          {/* <a
-            href={`https://wa.me/${data.captain_phone}`}
-            target="_blank"
-            className="flex gap-x-1 font-medium items-center text-primary hover:underline"
-          >
-            <WhatsApp />
-            WhatsApp
-          </a> */}
         </div>
       </header>
 
