@@ -8,7 +8,7 @@ const Aviso = ({
   type?: "info" | "atention";
 }) => {
   return (
-    <div className="text-secondary flex gap-x-2 mx-auto">
+    <div className="text-secondary flex gap-x-1 items-center mx-auto">
       <span className="text-primary">
         {type === "atention" ? <Atention /> : <Info />}
       </span>

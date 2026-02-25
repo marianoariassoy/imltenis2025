@@ -64,7 +64,7 @@ const Jugadores = async ({
           type="atention"
         />
       )}
-      <div className="overflow-x-auto whitespace-nowrap">
+      <div className="overflow-x-auto whitespace-nowrap mt-2">
         <table className="table w-full">
           <thead>
             <tr>

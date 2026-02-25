@@ -24,6 +24,7 @@ body {
   font-weight: 600;
   font-size: 0.9rem;
   padding-right: 1rem;
+  padding-bottom: 0.3rem;
 }
 .table tr td {
   padding-top: 0.75rem;

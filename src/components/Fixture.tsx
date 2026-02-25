@@ -14,7 +14,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
       )}
       {data.length === 0 && (
         <div className="text-center text-secondary">
-          No hay series a disputar. 🫣
+          No hay series a disputar 😢
         </div>
       )}
       {data.length > 0 && (
