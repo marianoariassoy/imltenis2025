@@ -1,4 +1,5 @@
-import { Cup } from "@/lib/icons";
+import { faTrophy } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 interface data {
   id: number;
@@ -27,7 +28,7 @@ const estadisticas = async ({ id }: { id: string }) => {
       stadistics[0].finals) && (
       <div className="flex justify-center items-center gap-x-2 px-4 py-4 border border-primary rounded-xl text-primary">
         <span>
-          <Cup />
+          <FontAwesomeIcon icon={faTrophy} size="lg" />
         </span>
         <span>
           {stadistics[0].gold ? (

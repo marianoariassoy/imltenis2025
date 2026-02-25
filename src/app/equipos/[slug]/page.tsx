@@ -1,10 +1,11 @@
 import Link from "next/link";
-import { Info } from "@/lib/icons";
 import Jugadores from "./jugadores";
 import Fixture from "./fixtures";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Image from "next/image";
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export async function generateMetadata({
   params,
@@ -83,7 +84,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             href={`/clubes/${data.club_slug}`}
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
-            <Info />
+            <FontAwesomeIcon icon={faCircleInfo} size="lg" width={20} />
             Info de la sede
           </Link>
           {/* <a

@@ -1,4 +1,8 @@
-import { Info, Atention } from "../lib/icons";
+import {
+  faCircleExclamation,
+  faCircleInfo,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Aviso = ({
   text,
@@ -8,11 +12,15 @@ const Aviso = ({
   type?: "info" | "atention";
 }) => {
   return (
-    <div className="text-secondary flex gap-x-1 items-center mx-auto">
-      <span className="text-primary">
-        {type === "atention" ? <Atention /> : <Info />}
-      </span>
-      <span className="leading-snug">{text}</span>
+    <div className="flex gap-x-2 items-center mx-auto text-primary">
+      <div>
+        {type === "atention" ? (
+          <FontAwesomeIcon icon={faCircleExclamation} size="lg" width={20} />
+        ) : (
+          <FontAwesomeIcon icon={faCircleInfo} size="lg" width={20} />
+        )}
+      </div>
+      <span className="leading-snug text-secondary">{text}</span>
     </div>
   );
 };

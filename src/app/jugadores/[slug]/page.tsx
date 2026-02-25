@@ -75,7 +75,12 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           </div>
         </div>
       </header>
-
+      {data.image === null && (
+        <Aviso
+          text="Enviar foto de perfil del jugador a hola@imltenis.com.ar"
+          type="atention"
+        />
+      )}
       <Estadisticas id={data.id} />
       <Singles id={data.id} />
       <Doubles id={data.id} />

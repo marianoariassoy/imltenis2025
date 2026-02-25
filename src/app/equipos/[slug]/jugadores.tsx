@@ -3,6 +3,8 @@ import { Player } from "../../../types";
 import Labels from "@/components/Labels";
 import Barra from "@/components/Barra";
 import Aviso from "@/components/Aviso";
+import { faCertificate } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Jugadores = async ({
   id,
@@ -56,7 +58,16 @@ const Jugadores = async ({
         <h1 className="text-primary text-lg font-semibold">
           🔥 Lista de buena fe
         </h1>
-        <h2 className="font-medium text-secondary">{captain_name} (Capitán)</h2>
+        <div className="flex items-center justify-center gap-x-1">
+          {!withoutImage && (
+            <span className="text-primary">
+              <FontAwesomeIcon icon={faCertificate} size="lg" width={20} />
+            </span>
+          )}
+          <h2 className="font-medium text-secondary">
+            {captain_name} (Capitán)
+          </h2>
+        </div>
       </div>
       {withoutImage && (
         <Aviso
