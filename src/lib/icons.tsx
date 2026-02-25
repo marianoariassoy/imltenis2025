@@ -148,7 +148,7 @@ export const Atention = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      height="1.5em"
+      height="1.8em"
       fill="currentColor"
       viewBox="0 0 640 640"
     >

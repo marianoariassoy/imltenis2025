@@ -32,7 +32,7 @@ const table = async ({ category }: { category: string }) => {
 
   const labels = [
     {
-      name: "Nombre",
+      name: "Jugador",
       value: "",
     },
     {

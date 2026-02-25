@@ -1,6 +1,7 @@
 import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
+import Aviso from "@/components/Aviso";
 
 export const metadata = {
   title: "Ranking de Clubes",
@@ -64,11 +65,10 @@ const page = async () => {
 
   return (
     <section className="flex flex-col gap-y-8">
-      <Title
-        title="Ranking de Clubes 2026"
-        emoji="👑"
-        description="Los cuatro mejores clubes competirán en las finales de interclubes al cierre de la temporada 2026"
-      />
+      <div className="flex flex-col gap-y-4 justify-center">
+        <Title title="Ranking de Clubes 2026" emoji="👑" />
+        <Aviso text="Los cuatro clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026" />
+      </div>
       <div className="overflow-x-auto">
         <table className="table w-full mb-2">
           <thead>
