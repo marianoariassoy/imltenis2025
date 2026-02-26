@@ -10,19 +10,19 @@ const table = async ({
   description: string;
 }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/weekend/tournaments/${id_tournament}/groups`
+    `${process.env.NEXT_PUBLIC_API_URL}/weekend/tournaments/${id_tournament}/groups`,
   );
   const data = (await response.json()) as Group[];
   if (!data) return null;
 
   return (
-    <section className="flex flex-col gap-y-6">
-      <div className="flex flex-col gap-y-3">
+    <section className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-2">
         {data
           .filter((item) => item.type === 2)
           .map((item) => (
             <div className="flex flex-col gap-y-3" key={item.id}>
-              <h1 className="font-bold text-primary text-center">
+              <h1 className="font-semibold text-base text-primary text-center">
                 {item.title}
               </h1>
               <Fixture group_id={item.id} type={item.type} />
@@ -35,7 +35,7 @@ const table = async ({
           .filter((item) => item.type === 1)
           .map((item, index) => (
             <div key={index} className="flex flex-col gap-y-6">
-              <h1 className=" font-bold text-primary text-center">
+              <h1 className="font-semibold text-primary text-center text-base">
                 {item.title}
               </h1>
               <Table group={item} />

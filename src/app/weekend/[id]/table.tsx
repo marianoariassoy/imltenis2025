@@ -20,14 +20,14 @@ interface Props {
 
 const tabla = async ({ group }: { group: Group }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/weekend/tournaments/groups/${group.id}/teams`
+    `${process.env.NEXT_PUBLIC_API_URL}/weekend/tournaments/groups/${group.id}/teams`,
   );
   const data = (await response.json()) as Props[];
   if (!data) return null;
 
   const labels = [
     {
-      name: "Posición y jugadores",
+      name: "Jugadores",
       value: "",
     },
     {

@@ -7,7 +7,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className="flex flex-col gap-y-8">
+    <section className="flex flex-col gap-y-6">
       <Title title="¡Hola!" emoji="👋" />
 
       <div className="flex flex-col gap-y-6 max-w-3xl mx-auto">

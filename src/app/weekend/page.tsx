@@ -17,13 +17,13 @@ const page = async () => {
     process.env.NEXT_PUBLIC_API_URL + "/weekend/tournaments",
     {
       cache: "no-store",
-    }
+    },
   );
   const data = (await response.json()) as Props[];
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title title="IML Weekend" emoji="🏆" />
+      <Title title="IML Weekend" emoji="😎" />
 
       <div className="flex flex-col gap-y-3 items-center text-sm">
         {data.map((item) => (

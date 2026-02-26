@@ -13,7 +13,7 @@ const TornamentsChampion = ({ data }: { data: Props }) => {
     <div className="flex flex-col gap-y-2 items-center text-center">
       <Confetti />
       <Link href={`/equipos/${data.team_champion_id}`}>
-        <div className="w-24 h-24 overflow-hidden rounded-full hover:opacity-70 transition-opacity">
+        <div className="w-20 h-20 lg:w-24 lg:h-24 overflow-hidden rounded-full hover:opacity-70 transition-opacity">
           <Image
             src={data.team_champion_image}
             alt={data.team_champion}
@@ -24,7 +24,7 @@ const TornamentsChampion = ({ data }: { data: Props }) => {
         </div>
       </Link>
 
-      <h1 className="font-semibold text-base leading-5">
+      <h1 className="font-semibold leading-5">
         Campeón
         <br />
         {data.team_champion} ⭐

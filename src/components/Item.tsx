@@ -18,14 +18,14 @@ const TitleRow = ({ num, image, title, link, active }: Item) => {
         </div>
       )}
 
-      <div className="w-[3.7rem] h-[3.7rem] rounded-full overflow-hidden bg-white/10">
+      <div className="w-[3rem] h-[3rem] lg:w-14  lg:h-14 rounded-full overflow-hidden bg-white/10">
         {image ? (
           <Link href={link}>
             <Image
               src={image}
               alt={title}
-              width={64}
-              height={64}
+              width={48}
+              height={48}
               className="w-full h-full object-cover hover:opacity-70 transition-opacity"
             />
           </Link>
@@ -34,7 +34,7 @@ const TitleRow = ({ num, image, title, link, active }: Item) => {
 
       <Link
         href={link}
-        className="hover:text-primary font-semibold text-nowrap pr-3"
+        className="hover:text-primary text-nowrap font-medium pr-3"
       >
         {title}
       </Link>

@@ -301,8 +301,22 @@ e) Participación de un jugador inscripto simultáneamente en dos o más equipos
       Para el supuesto caso que pudiera darse una laguna en la normativa o posible doble interpretación, esta organización resolverá puntualmente la cuestión en conflicto de acuerdo a su leal saber y entender, notificando a las partes que pudieran estar involucradas. La decisión será inapelable por las partes que pudieran estar involucradas y generará un precedente que será utilizado para aclaración de las posibles normas en conflicto.`,
     },
     {
+      title: "Definición anual Interclubes",
+      text: `Participarán en la Final Interclubes los cuatro (4) clubes mejor ubicados en el ranking de clubes durante la temporada 2026.
+La disposición de los enfrentamientos será la siguiente: 1º vs. 4º y 2º vs. 3º, siendo local en cada instancia el club mejor posicionado en el ranking.
+
+Se disputarán cinco (5) partidos de dobles, otorgando cada uno un (1) punto:
+* Doble A Damas (hasta Intermedia +30)
+* Doble A Caballeros (hasta Primera Libre)
+* Doble B Damas (hasta Cuarta Libre y +40)
+* Doble B Caballeros (hasta Cuarta Libre y +40)
+* Doble Mixto Libre
+
+Solo podrán participar jugadores que hayan disputado al menos un (1) encuentro durante la temporada.`,
+    },
+    {
       title: "",
-      text: `Ultima actualización: Enero 2026`,
+      text: `Ultima actualización: Febrero 2026`,
     },
   ];
 
