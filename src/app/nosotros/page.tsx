@@ -13,7 +13,7 @@ const page = () => {
       <div className="flex flex-col gap-y-6 max-w-3xl mx-auto">
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
           <Image
-            src="/images/nosotros.png"
+            src="/images/2026.png"
             className="w-full h-full object-cover object-center"
             width={1200}
             height={1200}
@@ -50,6 +50,31 @@ const page = () => {
             la pasión, el respeto y la pertenencia.
           </span>
         </div>
+
+        <p>
+          Desde su nacimiento, en 2023 IML Tenis ha experimentado un crecimiento
+          sostenido, consolidándose rápidamente como una de las competencias
+          interclubes más convocantes del tenis amateur.
+          <br />
+          <br />
+          Actualmente, IML Tenis reúne:{" "}
+          <span className="text-primary">
+            Casi 200 equipos en competencia, más de 60 clubes participantes y
+            más de 3000 jugadores activos.
+          </span>
+          <br /> <br />
+          La liga se desarrolla principalmente en la{" "}
+          <span className="text-primary">
+            zona norte y oeste del Gran Buenos Aires
+          </span>{" "}
+          , integrando clubes, barrios privados, countries y complejos
+          deportivos que comparten la pasión por el tenis y el espíritu de
+          equipo.
+        </p>
+        <p className="text-primary font-semibold">
+          IML Tenis, donde el tenis se vive, se comparte y se convierte en
+          historia.
+        </p>
       </div>
     </section>
   );

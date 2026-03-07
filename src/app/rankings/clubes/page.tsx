@@ -67,10 +67,9 @@ const page = async () => {
     <section className="flex flex-col gap-y-8">
       <div className="flex flex-col gap-y-4 justify-center">
         <Title title="Ranking de Clubes 2026" emoji="👑" />
-        <Aviso text="Los cuatro clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026" />
       </div>
       <div className="overflow-x-auto">
-        <table className="table w-full mb-2">
+        <table className="table w-full">
           <thead>
             <tr>
               {labels.map((item, index) => (
@@ -103,8 +102,15 @@ const page = async () => {
           </tbody>
         </table>
       </div>
-
       <Labels labels={labels} />
+
+      <Aviso text="Los cuatro clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026" />
+
+      <div className="flex flex-col justify-center items-center gap-y-1 bg-black/15 p-4 rounded-2xl text-primary">
+        <span> Caza y Pesca Campeón Interclubes 2025 ⭐️</span>
+        <span>SAG Campeón Interclubes 2024 ⭐️</span>
+        <span> San Miguel Campeón Interclubes 2023 ⭐️</span>
+      </div>
     </section>
   );
 };
