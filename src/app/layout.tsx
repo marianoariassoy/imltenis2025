@@ -5,12 +5,12 @@ import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import { MenuProvider } from "@/context/menu-context";
+import Maintenance from "@/components/Maintenance";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   // weight: ["400", "500", "600", "700", "800", "900", "100"],
   display: "swap",
-
   variable: "--font-montserrat",
 });
 
@@ -50,6 +50,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  if (process.env.NEXT_PUBLIC_MAINTENANCE === "true") {
+    return (
+      <html lang="es">
+        <head>
+          <meta charSet="utf-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <meta name="theme-color" content="#242424" />
+        </head>
+        <body
+          className={`bg-background text-foreground min-h-screen`}
+          style={{ fontFamily: montserrat.style.fontFamily }}
+        >
+          <Maintenance />
+        </body>
+      </html>
+    );
+  }
+
   return (
     <html lang="es">
       <head>
