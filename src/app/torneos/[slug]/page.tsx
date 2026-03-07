@@ -4,6 +4,7 @@ import Groups from "./groups";
 import Fixture from "./fixture";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
+import Maintenance from "@/components/Maintenance";
 
 export async function generateMetadata({
   params,
@@ -51,6 +52,15 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
   const data = await getServerSideProps(slug);
   if (!data) return null;
+
+  if (process.env.NEXT_PUBLIC_MAINTENANCE === "true") {
+    return (
+      <section className="flex flex-col gap-y-6">
+        <Title title={data.name + " " + data.season} />
+        <Maintenance />
+      </section>
+    );
+  }
 
   return (
     <section className="flex flex-col gap-y-6">
