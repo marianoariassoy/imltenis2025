@@ -8,6 +8,7 @@ import { MenuProvider } from "@/context/menu-context";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "900"],
   display: "swap",
   variable: "--font-montserrat",
 });

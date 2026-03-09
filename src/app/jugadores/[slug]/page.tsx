@@ -4,6 +4,7 @@ import Doubles from "./dobles";
 import Equipos from "./equipos";
 import Aviso from "@/components/Aviso";
 import Image from "next/image";
+import { Verified } from "@/lib/icons";
 
 export async function generateMetadata({
   params,
@@ -67,7 +68,16 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
         <div className="text-center">
-          <h1 className="font-semibold text-primary text-base">{data.name}</h1>
+          <div className="flex items-center gap-x-1">
+            <h1 className="font-semibold text-primary text-base">
+              {data.name}
+            </h1>
+            {data.image !== null && (
+              <span className="text-primary">
+                <Verified />
+              </span>
+            )}
+          </div>
           <div className="flex gap-x-2 items-center justify-center text-secondary">
             {data.age ? data.age : null}
             <span>—</span>
