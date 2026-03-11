@@ -104,9 +104,9 @@ const page = async () => {
       </div>
       <Labels labels={labels} />
 
-      <Aviso text="Los cuatro clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026" />
+      <Aviso text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
 
-      <div className="flex flex-col justify-center items-center gap-y-1 bg-black/15 p-4 rounded-2xl text-primary">
+      <div className="flex flex-col justify-center items-center gap-y-1 p-4 rounded-2xl text-primary border border-primary">
         <span> Caza y Pesca Campeón Interclubes 2025 ⭐️</span>
         <span>SAG Campeón Interclubes 2024 ⭐️</span>
         <span> San Miguel Campeón Interclubes 2023 ⭐️</span>

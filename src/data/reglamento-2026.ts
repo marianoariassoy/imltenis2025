@@ -7,16 +7,17 @@ En cada fecha se disputarán tres o dos encuentros entre dos equipos representan
   {
     title: "Modalidad de juego",
     text: `En las categorías Damas y Caballeros Libres se disputará una serie compuesta por 1 single y 2 dobles.
-En las categorías Damas y Caballeros +30, +40 y Mixto se disputarán 2 encuentros de dobles. En la fase regular, las series podrán finalizar empatadas, otorgándose 1 punto a cada equipo. En instancias de playoffs, se disputarán 3 dobles para definir la serie.
+En las categorías Damas +40, Caballeros +40 y Mixto se disputarán 2 encuentros de dobles. En la fase regular, las series podrán finalizar empatadas, otorgándose 1 punto a cada equipo. En instancias de playoffs, se disputarán 3 dobles para definir la serie.
+
 Todos los partidos se jugarán al mejor de tres sets con tie break. El tercer set se disputará en modalidad supertie break a 10 puntos, con una diferencia mínima de dos puntos.
 Los tres encuentros deberán disputarse en simultáneo, comenzando al mismo horario, salvo en el caso de clubes que cuenten con dos canchas disponibles (ver apartado).`,
   },
   {
     title: "Puntuación",
     text: `Cada encuentro ganado sumará un punto, es decir, ganando los 3 encuentros de la serie se sumarán 3 puntos al equipo vencedor, ganando 2 a 1 se sumarán 2 puntos al equipo vencedor y 1 punto al equipo rival, por lo que todos los encuentros ganados suman puntos.
-      
-      En caso de empate por puntos se desempatará por mayor cantidad de series ganadas, de persistir el empate, se desempatará por dobles 1 ganados, siguiendo la diferencia de sets, games y en el último caso cantidad de puntos Fair Play. 
-      Todos los resultados podrán ser vistos en este sitio web.`,
+    
+    En caso de empate por puntos se desempatará por mayor cantidad de series ganadas, de persistir el empate, se desempatará por dobles 1 ganados, siguiendo la diferencia de sets, games y en el último caso cantidad de puntos Fair Play. 
+    Todos los resultados podrán ser vistos en este sitio web.`,
   },
   {
     title: "Formación",
@@ -32,7 +33,7 @@ En caso de que el equipo local se niegue a utilizar pelotas nuevas o a abonar el
   },
   {
     title: "Días y Horarios",
-    text: `Las categorías Damas Intermedia +30, Damas Tercera +40, Damas Cuarta +40, Mixto Libre, Mixto Tercera, Mixto Quinta, Caballeros Cuarta +40 y Caballeros Quinta +40 se disputarán los días sábados, en un horario a definir por el equipo local en cada encuentro, el cual deberá encontrarse entre las 13:00 y las 17:00 hs.
+    text: `Las categorías Damas Intermedia +30, Damas Tercera +40, Damas Cuarta +40, Mixto Libre, Mixto B/C, Caballeros Cuarta +40 y Caballeros Quinta +40 se disputarán los días sábados, en un horario a definir por el equipo local en cada encuentro, el cual deberá encontrarse entre las 13:00 y las 17:00 hs.
 
 Las categorías Caballeros Primera Libre, Caballeros Intermedia Libre, Caballeros Tercera Libre, Caballeros Cuarta Libre, Caballeros Quinta Libre y Caballeros Sexta Libre se jugarán los días domingos, en un horario a determinar por el equipo local, que deberá ubicarse entre las 9:00 y las 17:00 hs.
 
@@ -82,8 +83,7 @@ Este resultado será el que se tome en cuenta para la confección de desempates 
   {
     title: "En caso de lluvia",
     text: `El equipo local deberá avisar como mínimo dos horas antes del horario del partido al chat de capitanes de WhatsApp que sus canchas están en condiciones para jugar. Pasado este límite, el equipo visitante no está en la obligación de aceptar ir a jugar.
-      La reprogramación se pasará para el final del torneo, salvo que los equipos involucrados acuerden y
-      decidan jugar antes, informando previamente a esta organización.`,
+    La reprogramación se pasará para el final del torneo, salvo que los equipos involucrados acuerden y decidan jugar antes, informando previamente a esta organización.`,
   },
   {
     title: "Reinicio de serie reprogramada",
@@ -117,7 +117,8 @@ Si no existiera dicha indicación previa, ambos partidos de dobles deberán repe
   },
   {
     title: "Feriados largos",
-    text: `Queda a criterio de la organización la programación de partidos en dichos días.`,
+    text: `Se programarán fechas durante los fines de semana largos. La disputa de estas series será optativa, quedando a criterio de cada equipo jugar en la fecha asignada.
+En caso de no poder disputarla, el equipo deberá informarlo en el grupo de WhatsApp de capitanes antes del miércoles a las 17:00 hs., a fin de coordinar su reprogramación.`,
   },
   {
     title: "Alquiler de canchas",
@@ -141,8 +142,7 @@ Asimismo, la programación de la serie deberá evitar que el Doble 2 se dispute 
   {
     title: "Excepciones a la programación",
     text: `Cuando por coincidencia de fechas con la realización del circuito de tenis algún club tenga compromisos asumidos con anterioridad, podrá solicitar a esta asociación, a considerar, la no programación de partidos, la misma deberá ser presentada con anterioridad a la realización de la programación oficial e indicará fechas ciertas de los compromisos asumidos.
-      Esta posibilidad solo podrá ser concedida por una vez, por torneo, y de manera excepcional. 
-      Se hace saber que NO es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. `,
+      Esta posibilidad solo podrá ser concedida por una vez, por torneo, y de manera excepcional. Se hace saber que NO es obligatorio para la organización el otorgar dicha excepción pudiendo siempre la organización no hacer lugar al pedido. `,
   },
   {
     title: "Lista de buena fe",
@@ -204,8 +204,8 @@ Las sanciones y medidas aquí detalladas serán de aplicación automática e ina
   {
     title: "Ascenso de equipos",
     text: `El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando las necesidades únicas de cada categoría y promoviendo un ambiente competitivo saludable para todos.
-
-      Los equipos ascendidos se requerirá la participación de todos los jugadores que hayan aportado al menos un punto, con excepción de los jugadores que presenten diferencia negativa entre partidos ganados y perdidos, para estos el ascenso será optativo.
+    
+    Los equipos ascendidos se requerirá la participación de todos los jugadores que hayan aportado al menos tres (3) puntos, para el resto de los jugadores, el ascenso será optativo.
     `,
   },
   {
