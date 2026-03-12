@@ -9,11 +9,11 @@ import Maintenance from "@/components/Maintenance";
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ id: string }>;
+  params: Promise<{ slug: string }>;
 }) {
-  const { id } = await params;
+  const { slug } = await params;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id}`,
+    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${slug}`,
   );
   const data = await response.json();
   if (!data) return null;
@@ -24,7 +24,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: "es_AR",
-      url: `https://imltenis.com.ar/torneos/${id}`,
+      url: `https://imltenis.com.ar/torneos/${slug}`,
       title: `${data.name} ${data.season}`,
       description: `Torneo ${data.name} ${data.season} de la liga de clubes IML Tenis`,
       images: [

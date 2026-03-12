@@ -58,8 +58,8 @@ const Tabla = async ({
                 <td>{item.d1_won}</td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
-                <td>{item.series_total}</td>
                 <td>{item.fairplay}</td>
+                <td>{item.series_total}</td>
                 <td>
                   {item.series_total > 0
                     ? (

@@ -45,12 +45,12 @@ const groups = async ({
       value: "Diferencia de games",
     },
     {
-      name: "SJ",
-      value: "Series jugadas",
-    },
-    {
       name: "FP",
       value: "Puntos Fair Play",
+    },
+    {
+      name: "SJ",
+      value: "Series jugadas",
     },
     {
       name: "PR",
@@ -84,12 +84,12 @@ const groups = async ({
       value: "Diferencia de games",
     },
     {
-      name: "SJ",
-      value: "Series jugadas",
-    },
-    {
       name: "FP",
       value: "Puntos Fair Play",
+    },
+    {
+      name: "SJ",
+      value: "Series jugadas",
     },
     {
       name: "PR",

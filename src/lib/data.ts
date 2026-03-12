@@ -74,7 +74,7 @@ export const tournaments = [
       },
       {
         name: "Mixto B/C",
-        url: "/torneos/mixto-b-apertura-2026",
+        url: "/torneos/mixto-bc-apertura-2026",
       },
     ],
   },
