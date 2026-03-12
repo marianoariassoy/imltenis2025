@@ -17,7 +17,7 @@ const FixtureMain = ({
     <section className="flex flex-col gap-y-6">
       {title && (
         <h1 className="font-bold text-primary text-center text-lg">
-          Fixture ({data.length})
+          Próximas series ({data.length})
         </h1>
       )}
       {data.length === 0 && (
