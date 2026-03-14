@@ -53,7 +53,19 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const data = await getServerSideProps(slug);
   if (!data) return null;
 
-  if (process.env.NEXT_PUBLIC_MAINTENANCE === "true") {
+  const slugsProhibited = [
+    "caballeros-primera-libre-apertura-2026",
+    "caballeros-intermedia-libre-apertura-2026",
+    "caballeros-tercera-libre-apertura-2026",
+    "caballeros-cuarta-libre-apertura-2026",
+    "caballeros-quinta-libre-apertura-2026",
+    "caballeros-sexta-libre-apertura-2026",
+  ];
+
+  if (
+    slugsProhibited.includes(slug) &&
+    process.env.NEXT_PUBLIC_MAINTENANCE === "true"
+  ) {
     return (
       <section className="flex flex-col gap-y-6">
         <Title title={data.name + " " + data.season} />

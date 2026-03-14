@@ -92,7 +92,7 @@ const FixtureMain = ({
                   </td>
                   <td>
                     <Link
-                      href={`/tournaments/${item.tournament_slug}`}
+                      href={`/torneos/${item.tournament_slug}`}
                       className="hover:underline text-primary"
                     >
                       {item.tournament_name}
