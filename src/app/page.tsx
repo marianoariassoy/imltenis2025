@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { useMenu } from "@/context/menu-context";
-import Link from "next/link";
+// import Link from "next/link";
 
 export default function Home() {
   const { open, setOpen } = useMenu();
@@ -25,9 +25,9 @@ export default function Home() {
           <span>Apertura</span>
           <span>Yuka 2026</span>
         </h1>
-        <Link href="/nosotros" className="font-medium mt-4 hover:underline">
+        {/* <Link href="/nosotros" className="font-medium mt-4 hover:underline">
           Ver información →
-        </Link>
+        </Link> */}
       </div>
       <div className="fade-in fixed h-screen w-screen left-0 top-0 -z-10 bg-black/60 blur-sm">
         <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-black/40 via-black/0 to-black/40 z-20"></div>
