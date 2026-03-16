@@ -210,7 +210,7 @@ Las sanciones y medidas aquí detalladas serán de aplicación automática e ina
   },
   {
     title: "Descenso de equipos",
-    text: `Los equipos que desciendan deberán participar en la categoría inmediatamente inferior con la totalidad de sus jugadores, a excepción de aquellos que hayan finalizado el torneo con un balance positivo de +3 o superior en partidos ganados.`,
+    text: `Los equipos que desciendan deberán participar en la categoría inmediatamente inferior`,
   },
   {
     title: "Descenso de jugadores",

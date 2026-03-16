@@ -4,7 +4,6 @@ import Groups from "./groups";
 import Fixture from "./fixture";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
-import Maintenance from "@/components/Maintenance";
 
 export async function generateMetadata({
   params,
