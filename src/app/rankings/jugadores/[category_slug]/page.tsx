@@ -24,15 +24,23 @@ export const metadata = {
   },
 };
 
-const page = async ({ params }: { params: Promise<{ category: string }> }) => {
-  const { category } = await params;
+const page = async ({
+  params,
+}: {
+  params: Promise<{ category_slug: string }>;
+}) => {
+  const { category_slug } = await params;
 
   return (
     <section className="flex flex-col gap-y-4">
-      <Title title="Ranking de Jugadores Mito Gafas" emoji="😎" />
-      <Filter category={category} />
+      <Title
+        title="Ranking de Jugadores"
+        emoji="😎"
+        description="Mito Gafas Top 50"
+      />
+      <Filter category_slug={category_slug} />
       <Suspense fallback={<Loader />}>
-        <Table category={category} />
+        <Table category_slug={category_slug} />
       </Suspense>
     </section>
   );

@@ -1,15 +1,14 @@
 "use client";
-
 import { categories } from "@/lib/data";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown } from "@/lib/icons";
 
-const Filter = ({ category }: { category: string }) => {
+const Filter = ({ category_slug }: { category_slug: string }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
-  const active = categories.find((c) => c.slug === category);
+  const active = categories.find((c) => c.slug === category_slug);
 
   // Cerrar al clickear afuera
   useEffect(() => {
@@ -25,13 +24,15 @@ const Filter = ({ category }: { category: string }) => {
   return (
     <div
       ref={ref}
-      className="relative w-full max-w-xl mx-auto flex justify-center font-medium text-secondary mb-4"
+      className="relative w-full flex justify-center font-medium text-secondary mb-4"
     >
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between gap-2 px-4 py-3 border rounded-lg border-primary text-primary transition w-full"
+        className="flex items-center justify-between gap-2 px-4 py-3 border rounded-lg border-primary text-primary transition w-full "
       >
-        <span>{active?.name ?? "Seleccionar categoría"}</span>
+        <span className="text-secondary text-sm">
+          {active?.name ?? "Seleccionar categoría"}
+        </span>
         <span
           className={`transition-transform z-30 ${open ? "rotate-180" : ""}`}
         >
@@ -40,17 +41,17 @@ const Filter = ({ category }: { category: string }) => {
       </button>
 
       {open && (
-        <div className="absolute z-20 px-4 py-2 w-full rounded-lg bg-background border border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+        <div className="absolute z-20 px-4 py-2 w-full rounded-lg bg-background border border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-3 text-sm">
           {categories.map((item) => {
-            const isActive = category === item.slug;
+            const isActive = category_slug === item.slug;
 
             return (
               <Link
-                key={item.id}
+                key={item.slug}
                 href={`/rankings/jugadores/${item.slug}`}
                 onClick={() => setOpen(false)}
                 className={`block py-1 transition  hover:text-primary ${
-                  isActive ? "text-primary font-semibold" : ""
+                  isActive ? "text-primary" : ""
                 }`}
               >
                 {item.name}

@@ -20,7 +20,7 @@ interface data {
   category: string;
 }
 
-const table = async ({ category }: { category: string }) => {
+const table = async ({ category_slug }: { category_slug: string }) => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/players",
     {
@@ -58,9 +58,9 @@ const table = async ({ category }: { category: string }) => {
     },
   ];
 
-  const category_id = categories.filter((item) => item.slug === category);
+  const category = categories.filter((item) => item.slug === category_slug);
   const dataFiltered = data.filter(
-    (item) => +item.category === category_id[0].id,
+    (item) => item.category === category[0].slug,
   );
 
   if (dataFiltered.length === 0)
