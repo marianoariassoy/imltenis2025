@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Table from "./table";
 import Filter from "./filter";
+import Aviso from "@/components/Aviso";
 
 export const metadata = {
   title: "Ranking de Jugadores Mito Gafas",
@@ -42,6 +43,14 @@ const page = async ({
       <Suspense fallback={<Loader />}>
         <Table category_slug={category_slug} />
       </Suspense>
+      <Aviso
+        type="info"
+        text="Al final del torneo el ganador o la ganadora de cada categoría recibirá un obsequio, gentileza de Mito Gafas 🕶️"
+      />
+      <Aviso
+        type="atention"
+        text="Los datos se actualizan los días martes de cada semana"
+      />
     </section>
   );
 };
