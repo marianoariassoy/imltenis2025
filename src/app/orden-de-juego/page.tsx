@@ -28,9 +28,15 @@ const page = async () => {
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title title={`Orden de juego (${data.length} series)`} emoji="📅" />
+      <Title
+        title={`Orden de juego de la fecha`}
+        description={
+          data.length + " series a disputar / " + data.length * 3 + " partidos"
+        }
+        emoji="📅"
+      />
 
-      <div className="overflow-x-auto text-sm whitespace-nowrap">
+      <div className="overflow-x-auto whitespace-nowrap">
         <table className="table w-full mb-3">
           <thead>
             <tr>
@@ -46,9 +52,9 @@ const page = async () => {
               <tr key={item.id}>
                 <td>
                   {item.top ? <span className="mr-1 text-xl">⭐️</span> : null}
-                  <span className="font-semibold">{item.date}</span>
+                  <span>{item.date}</span>
                 </td>
-                <td>{item.hour}</td>
+                <td>{item.hour ? <span>{item.hour}</span> : "-"}</td>
                 <td>
                   <Item
                     link={`/equipos/${item.home_id}`}
@@ -66,7 +72,7 @@ const page = async () => {
                 <td>
                   <Link
                     href={`/torneos/${item.tournament_id}`}
-                    className="hover:text-primary"
+                    className="hover:underline text-primary"
                   >
                     {item.tournament_name}
                   </Link>
