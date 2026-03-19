@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 import Title from "@/components/Title";
 import Input from "@/components/Input";
 import Button from "@/components/Button";
-import Loader from "@/components/Loader2";
+import Loader from "@/components/Loader";
 import Error from "./Error";
 import Aviso from "@/components/Aviso";
 
@@ -84,13 +84,19 @@ const Page = () => {
     }
   }, [error]);
 
-  if (sended)
+  if (!sended)
     return (
-      <Title
-        title="¡Gracias!"
-        emoji="🙏"
-        description="¡El registro fue realizado con éxito!"
-      />
+      <div className="flex flex-col gap-y-8 text-center">
+        <Title
+          title="¡Vamos!"
+          emoji="💪🏻"
+          description="¡Tu registro fue realizado con éxito!"
+        />
+        <p>
+          Ya podes contactarte con tu capitán para pueda agregarte a su lista de
+          buena fe 🚀
+        </p>
+      </div>
     );
 
   return (
@@ -99,7 +105,7 @@ const Page = () => {
         <Title
           title="¡Bienvenido!"
           emoji="🚀"
-          description="Completá el formulario con tus datos y se parte de del  interclubes."
+          description="Completá el formulario con tus datos y se parte de del interclubes."
         />
 
         <div className="w-full m-auto">

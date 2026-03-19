@@ -17,7 +17,7 @@ const page = async () => {
 
   return (
     <section className="flex flex-col gap-y-6">
-      <Title title="Torneos Anteriores (2023-2025)" emoji="👴" />
+      <Title title="Torneos Anteriores" emoji="👴" description="2023-2025" />
 
       <div className="flex flex-col text-center items-center font-medium">
         {data &&
@@ -29,7 +29,7 @@ const page = async () => {
                 href={`/torneos/${item.slug}`}
                 className="hover:text-primary"
               >
-                <span>{item.name}</span> {item.season_name}
+                {item.name} {item.season_name}
               </Link>
             ))}
       </div>

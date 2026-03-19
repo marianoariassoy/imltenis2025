@@ -29,7 +29,7 @@ const page = async () => {
   return (
     <section className="flex flex-col gap-y-6">
       <Title
-        title={`Orden de juego de la fecha`}
+        title={`Orden de juego`}
         description={
           data.length + " series a disputar / " + data.length * 3 + " partidos"
         }

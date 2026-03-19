@@ -228,6 +228,13 @@ La organización se reserva el derecho de disponer el descenso de un jugador cua
     text: `Además de los parámetros objetivos establecidos en este reglamento para los ascensos y descensos de jugadores, la organización se reserva el derecho de realizar excepciones. De manera excepcional, y ante un pedido especial debidamente fundamentado por la parte interesada, la organización podrá autorizar el ascenso o descenso de un jugador que no cumpla con dichos parámetros, siempre que así lo considere pertinente.`,
   },
   {
+    title: "Participación en categorías libres y etarias",
+    text: `Un jugador que participe en una categoría etaria podrá competir también en categorías libres de la misma nomenclatura o de una inferior. Por ejemplo: Tercera +40 puede jugar simultáneamente en Tercera Libre o Cuarta Libre.
+
+Asimismo, cada jugador podrá integrar un solo equipo en categorías etarias y un solo equipo en categorías libres.
+`,
+  },
+  {
     title: "Fases de elimanación directa",
     text: `En estas etapas solo podrán participar aquellos jugadores que hayan disputado, al menos, una serie en instancias previas de la categoría correspondiente o de una inferior dentro del torneo en curso.`,
   },
