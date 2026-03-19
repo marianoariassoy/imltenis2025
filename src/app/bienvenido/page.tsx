@@ -84,7 +84,7 @@ const Page = () => {
     }
   }, [error]);
 
-  if (!sended)
+  if (sended)
     return (
       <div className="flex flex-col gap-y-8 text-center">
         <Title
