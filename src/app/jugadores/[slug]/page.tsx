@@ -68,7 +68,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
         <div className="text-center">
-          <div className="flex items-center gap-x-1">
+          <div className="flex items-center justify-center gap-x-1">
             <h1 className="font-semibold text-primary text-base">
               {data.name}
             </h1>
