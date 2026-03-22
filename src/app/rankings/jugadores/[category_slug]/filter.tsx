@@ -24,7 +24,7 @@ const Filter = ({ category_slug }: { category_slug: string }) => {
   return (
     <div
       ref={ref}
-      className="relative w-full flex justify-center font-medium text-secondary mb-4"
+      className={`relative transition-all w-full mx-auto flex justify-center font-medium text-secondary mb-4 ${open ? "max-w-full" : "max-w-md"}`}
     >
       <button
         onClick={() => setOpen(!open)}
