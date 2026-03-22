@@ -2,6 +2,7 @@ import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import Aviso from "@/components/Aviso";
+import Barra from "@/components/Barra";
 
 export const metadata = {
   title: "Ranking de Clubes",
@@ -61,6 +62,10 @@ const page = async () => {
       name: "SJ",
       value: "Series jugadas",
     },
+    {
+      name: "",
+      value: "",
+    },
   ];
 
   return (
@@ -85,7 +90,7 @@ const page = async () => {
                   key={index}
                   className={`${index < 4 ? "text-primary" : ""}`}
                 >
-                  <td className="w-4/5">
+                  <td>
                     <Item
                       num={index + 1}
                       image={item.image}
@@ -94,9 +99,14 @@ const page = async () => {
                       active={false}
                     />
                   </td>
-                  <td className="font-bold pr-8">{item.matches_won}</td>
+                  <td className="font-bold">{item.matches_won}</td>
                   <td>{item.series_won}</td>
                   <td>{item.series_total}</td>
+                  <td>
+                    <Barra
+                      end={(+item.matches_won / (+item.series_total * 3)) * 100}
+                    />
+                  </td>
                 </tr>
               ))}
           </tbody>

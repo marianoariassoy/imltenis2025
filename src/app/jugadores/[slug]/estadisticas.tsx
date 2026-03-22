@@ -45,9 +45,9 @@ const estadisticas = async ({ id }: { id: string }) => {
 
         <div>
           <div>Efectividad</div>
-          <div className="flex flex-col gap-y-2">
+          <div className="flex flex-col gap-y-2 ">
             <Count end={+percent.toFixed(0)} duration={4} percent={true} />
-            <Barra end={+percent.toFixed(0)} />
+            <Barra end={+percent.toFixed(0)} className="w-3/4" />
           </div>
         </div>
         <div>
