@@ -4,7 +4,7 @@ import Item from "@/components/ItemExtraSmall";
 
 const Juegos = async ({ id }: { id: string }) => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/series/${id}/matches`
+    `${process.env.NEXT_PUBLIC_API_URL}/series/${id}/matches`,
   );
   const data = (await response.json()) as Juego[];
   if (!data) return null;
@@ -61,7 +61,7 @@ const Juegos = async ({ id }: { id: string }) => {
                   {item.playerhome1_id > 0 ? (
                     <span> vs </span>
                   ) : (
-                    <span>Sin disputar</span>
+                    <span> — </span>
                   )}
 
                   {item.playeraway1_id > 0 && (
@@ -104,7 +104,7 @@ const Juegos = async ({ id }: { id: string }) => {
                       {item.result}
                     </div>
                   ) : (
-                    "- -"
+                    "—"
                   )}
                 </td>
                 <td>{item.status}</td>

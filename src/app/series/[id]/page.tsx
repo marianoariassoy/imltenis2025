@@ -10,7 +10,7 @@ export async function generateMetadata({
 }) {
   const { id } = await params;
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/series/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/series/${id}`,
   );
   const data = await response.json();
   if (!data) return null;
@@ -38,7 +38,7 @@ export async function generateMetadata({
 
 async function getServerSideProps(id: string) {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/series/${id}`
+    `${process.env.NEXT_PUBLIC_API_URL}/series/${id}`,
   );
   const data = await response.json();
   if (!data) return null;
@@ -70,8 +70,8 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           subtitle="Local"
         />
         <div className="flex w-16 items-center justify-center font-semibold text-3xl pt-8 text-primary">
-          <span>{data.score}</span>
-          {/* {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>} */}
+          {/* <span>{data.score}</span> */}
+          {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>}
         </div>
         <Item
           link={`/equipos/${data.away_slug}`}
