@@ -52,7 +52,7 @@ const page = async () => {
     },
     {
       name: "Pts.",
-      value: "Puntos (Parciales ganados)",
+      value: "Puntos (Partidos ganados)",
     },
     {
       name: "SG",
@@ -69,10 +69,11 @@ const page = async () => {
   ];
 
   return (
-    <section className="flex flex-col gap-y-8">
+    <section className="flex flex-col gap-y-6">
       <div className="flex flex-col gap-y-4 justify-center">
         <Title title="Ranking de Clubes 2026" emoji="👑" />
       </div>
+      <Aviso text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -114,12 +115,11 @@ const page = async () => {
       </div>
       <Labels labels={labels} />
 
-      <Aviso text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
-
-      <div className="flex flex-col justify-center items-center gap-y-1 p-4 rounded-2xl text-primary border border-primary">
-        <span> Caza y Pesca Campeón Interclubes 2025 ⭐️</span>
-        <span>SAG Campeón Interclubes 2024 ⭐️</span>
-        <span> San Miguel Campeón Interclubes 2023 ⭐️</span>
+      <div className="flex flex-col justify-center items-center gap-y-1 p-4 rounded-2xl border border-primary">
+        <h2 className="mb-2 font-bold text-primary ">Campeones Interclubes</h2>
+        <span>⭐️ Caza y Pesca 2025 </span>
+        <span>⭐️ SAG 2024 ⭐️</span>
+        <span>⭐️ San Miguel 2023</span>
       </div>
     </section>
   );

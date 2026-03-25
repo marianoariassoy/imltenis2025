@@ -56,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         <Title title={`${data.date} ${data.hour}`} />
         <Link
           href={`/torneos/${data.tournament_slug}`}
-          className="hover:underline font-medium text-lg"
+          className="hover:underline font-medium"
         >
           {data.tournament_name}
         </Link>
@@ -69,7 +69,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           image={data.home_image}
           subtitle="Local"
         />
-        <div className="flex w-16 items-center justify-center font-semibold text-3xl pt-8 text-primary">
+        <div className="flex w-16 items-center justify-center font-bold text-3xl pt-8 text-primary">
           {/* <span>{data.score}</span> */}
           {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>}
         </div>
