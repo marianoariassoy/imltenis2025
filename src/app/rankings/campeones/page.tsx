@@ -63,7 +63,7 @@ const page = async () => {
 
   return (
     <section className="flex flex-col gap-y-8">
-      <Title title="Ranking de Campeones" emoji="🥇" />
+      <Title title="Ranking de Campeones" emoji="👑" />
       <div className="overflow-x-auto">
         <table className="table w-full mb-2">
           <thead>
