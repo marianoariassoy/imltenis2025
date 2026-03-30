@@ -8,7 +8,7 @@ const InfoShow = ({ text }: { text: string }) => {
 
   return (
     <div
-      className="flex gap-x-2 px-4 py-4 border-2 border-primary text-primary rounded-xl mb-2 cursor-pointer"
+      className="flex gap-x-2 px-4 py-4 border-2 border-primary text-primary rounded-xl mb-2 cursor-pointer text-sm"
       onClick={() => setShow(!show)}
     >
       <span className="text-primary text-base">

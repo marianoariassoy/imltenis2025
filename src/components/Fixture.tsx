@@ -5,12 +5,21 @@ import Item from "@/components/Item";
 import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
+  if (!data) return null;
+
+  const dataFiltered = data.filter((item) => item.winner === true);
   return (
     <section className="flex flex-col gap-y-6">
       {title && (
-        <h1 className="font-extrabold text-primary text-center text-xl italic">
-          Fixture ({data.length})
-        </h1>
+        <div className="flex flex-col items-center justify-center">
+          <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic mb-2">
+            Fixture
+          </h1>
+          <h2 className="text-secondary text-sm">
+            {dataFiltered.length} series disputadas de {data.length} ({" "}
+            {Math.round((dataFiltered.length / data.length) * 100)}% )
+          </h2>
+        </div>
       )}
       {data.length === 0 && (
         <div className="text-center text-secondary">

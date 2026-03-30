@@ -35,7 +35,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 flex w-screen items-center text-secondary gap-x-4 px-4 z-50 from-[#262626] via-[#262626]/70 to-transparent transition-all ${isHome ? "" : "bg-gradient-to-b"} py-4`}
+        className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 z-50 from-[#262626] via-[#262626]/70 to-transparent transition-all ${isHome ? "" : "bg-gradient-to-b"} py-4`}
       >
         <div className="flex-1 z-40">
           <HamburgerButton />
