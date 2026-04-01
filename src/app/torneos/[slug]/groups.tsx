@@ -3,7 +3,7 @@ import Table from "./table";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Labels from "@/components/Labels";
-import Info from "./info";
+import Info from "@/components/Info";
 import Fixture from "./fixture-group";
 
 const groups = async ({

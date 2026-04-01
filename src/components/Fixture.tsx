@@ -15,9 +15,9 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
           <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic mb-2">
             Fixture
           </h1>
-          <h2 className="text-secondary text-sm">
-            {dataFiltered.length} series disputadas de {data.length} ({" "}
-            {Math.round((dataFiltered.length / data.length) * 100)}% )
+          <h2 className="text-secondary">
+            {dataFiltered.length} series disputadas de {data.length} (
+            {Math.round((dataFiltered.length / data.length) * 100)}%)
           </h2>
         </div>
       )}

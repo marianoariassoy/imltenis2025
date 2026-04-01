@@ -3,15 +3,21 @@ import { useState } from "react";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const InfoShow = ({ text }: { text: string }) => {
+const InfoShow = ({
+  text,
+  color = "primary",
+}: {
+  text: string;
+  color?: string;
+}) => {
   const [show, setShow] = useState(false);
 
   return (
     <div
-      className="flex gap-x-2 px-4 py-4 border-2 border-primary text-primary rounded-xl mb-2 cursor-pointer text-sm"
+      className={`flex gap-x-2 px-4 py-4 border-2 rounded-xl cursor-pointer ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
       onClick={() => setShow(!show)}
     >
-      <span className="text-primary text-base">
+      <span className="text-base">
         <FontAwesomeIcon icon={faCircleInfo} size="lg" width={20} />
       </span>
       <span

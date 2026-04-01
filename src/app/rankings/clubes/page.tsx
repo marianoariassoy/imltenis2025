@@ -1,7 +1,7 @@
 import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
-import Aviso from "@/components/Aviso";
+import Info from "@/components/Info";
 import Barra from "@/components/Barra";
 
 export const metadata = {
@@ -73,7 +73,10 @@ const page = async () => {
       <div className="flex flex-col gap-y-4 justify-center">
         <Title title="Ranking de Clubes 2026" emoji="🏆" />
       </div>
-      <Aviso text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
+      <Info
+        text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026."
+        color="secondary"
+      />
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
