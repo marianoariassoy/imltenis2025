@@ -14,7 +14,7 @@ const InfoShow = ({
 
   return (
     <div
-      className={`flex gap-x-2 px-4 py-4 border-2 rounded-xl cursor-pointer ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
+      className={`flex gap-x-1 p-2 lg:p-4 border-2 rounded-xl cursor-pointer ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
       onClick={() => setShow(!show)}
     >
       <span className="text-base">
