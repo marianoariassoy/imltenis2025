@@ -56,8 +56,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <section className="flex flex-col gap-y-6">
       <header className="items-center flex flex-col gap-y-2">
-        <div className="w-24 h-24 rounded-full overflow-hidden bg-white/10 dark:bg-black/10">
-          {data.image && (
+        <div className="w-24 h-24 rounded-full overflow-hidden bg-white/10 dark:bg-black/10 flex items-center justify-center">
+          {data.image ? (
             <Image
               src={data.image}
               alt={data.name}
@@ -65,6 +65,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               height={96}
               className="object-cover h-full w-full"
             />
+          ) : (
+            <span className="text-2xl">🙈</span>
           )}
         </div>
         <div className="text-center">
