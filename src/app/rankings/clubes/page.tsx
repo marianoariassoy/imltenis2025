@@ -118,11 +118,24 @@ const page = async () => {
       </div>
       <Labels labels={labels} />
 
-      <div className="flex flex-col justify-center items-center gap-y-1 p-4 rounded-2xl border border-primary">
-        <h2 className="mb-2 font-bold text-primary ">Campeones Interclubes</h2>
-        <span>⭐️ Caza y Pesca 2025 </span>
-        <span>⭐️ SAG 2024 ⭐️</span>
-        <span>⭐️ San Miguel 2023</span>
+      <div className="p-6 rounded-2xl bg-black/10">
+        <h2 className="font-bold text-primary text-center mb-4">
+          Campeones Interclubes
+        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-center">
+          <div>
+            <h2 className="font-bold text-primary">2025</h2>
+            <span className="font-semibold">⭐️ Caza y Pesca</span>
+          </div>
+          <div>
+            <h2 className="font-bold text-primary">2024</h2>
+            <span className="font-semibold">⭐️ SAG</span>
+          </div>
+          <div>
+            <h2 className="font-bold text-primary">2023</h2>
+            <span className="font-semibold">⭐️ San Miguel</span>
+          </div>
+        </div>
       </div>
     </section>
   );
