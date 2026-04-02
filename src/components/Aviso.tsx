@@ -12,7 +12,7 @@ const Aviso = ({
   type?: "info" | "atention";
 }) => {
   return (
-    <div className="flex gap-x-2 items-center mx-auto text-primary text-sm">
+    <div className="flex gap-x-1 items-center mx-auto text-primary">
       <div>
         {type === "atention" ? (
           <FontAwesomeIcon icon={faCircleExclamation} size="lg" width={20} />

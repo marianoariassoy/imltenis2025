@@ -75,7 +75,7 @@ const page = async () => {
       </div>
       <Info
         text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026."
-        color="secondary"
+        color="primary"
       />
       <div className="overflow-x-auto">
         <table className="table w-full">

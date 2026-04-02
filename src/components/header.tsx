@@ -41,7 +41,7 @@ const Header = () => {
           <HamburgerButton />
         </div>
         <div
-          className={`text-primary flex justify-center transition-all z-50 ${scrolled ? "text-[0.6rem]" : ""} ${isHome ? "text-[#e4e3e3]" : ""}`}
+          className={`text-primary flex justify-center transition-all z-50 ${scrolled ? "text-[0.7rem]" : ""} ${isHome ? "text-[#e4e3e3]" : ""}`}
         >
           <Link
             href="/"
