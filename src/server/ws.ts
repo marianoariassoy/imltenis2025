@@ -1,5 +1,5 @@
 import { WebSocketServer, WebSocket } from "ws";
-import { chatEngine } from "@/lib/chatEngine";
+import { chatEngine } from "@/lib/chat/chatEngine";
 
 type ChatEngineResponse = {
   respuesta: string;

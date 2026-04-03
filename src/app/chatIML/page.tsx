@@ -66,7 +66,10 @@ export default function TestPage() {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ mensaje: msg }),
+      body: JSON.stringify({
+        mensaje: msg,
+        historial: messages,
+      }),
     });
 
     const data = await res.json();
