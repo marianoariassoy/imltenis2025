@@ -53,6 +53,16 @@ function buscarPorIntencion(mensaje: string) {
   return null;
 }
 
+function limpiarRespuesta(texto: string) {
+  return texto
+    .replace(/^\s+/, "")
+    .replace(/\u200B/g, "")
+    .replace(/(solucion|respuesta)/gi, "")
+    .replace(/\n+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 // 🔹 Buscar regla
 function buscarRegla(reglamento: ReglamentoItem[], mensaje: string) {
   const msg = normalizar(mensaje);
@@ -184,12 +194,7 @@ ${mensaje}
 
   const data = await res.json();
 
-  let respuesta = data.response || regla.text;
-
-  respuesta = respuesta
-    .replace(/(solucion|respuesta)/gi, "")
-    .replace(/\n+/g, " ")
-    .trim();
+  const respuesta = limpiarRespuesta(data.response || regla.text);
 
   return {
     respuesta,

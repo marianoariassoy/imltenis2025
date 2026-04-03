@@ -5,6 +5,7 @@ import Link from "next/link";
 import Nav from "./Nav";
 import { usePathname } from "next/navigation";
 import HamburgerButton from "@/components/HamburgerButton";
+import { ChevronDown } from "@/lib/icons";
 
 const Header = () => {
   const pathname = usePathname();
@@ -79,13 +80,15 @@ const Header = () => {
 
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-4 z-50 bg-primary text-background p-3 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-all duration-300 text-xl ${
+        className={`fixed bottom-6 right-4 z-50 bg-primary text-background p-3 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-all duration-300 ${
           showTopButton
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4 pointer-events-none"
         }`}
       >
-        ↑
+        <span className="rotate-180 text-xl">
+          <ChevronDown />
+        </span>
       </button>
     </>
   );
