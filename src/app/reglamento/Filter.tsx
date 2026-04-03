@@ -2,13 +2,9 @@
 import { useState } from "react";
 import Item from "./Item";
 import Search from "./Search";
+import type { ReglamentoItem } from "@/types";
 
-interface data {
-  title: string;
-  text: string;
-}
-
-const Filter = ({ data }: { data: data[] }) => {
+const Filter = ({ data }: { data: ReglamentoItem[] }) => {
   const [filterText, setFilterText] = useState("");
 
   const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,7 +13,7 @@ const Filter = ({ data }: { data: data[] }) => {
 
   const dataFiltered = filterText
     ? data.filter((item) =>
-        item.text.toLowerCase().includes(filterText.toLowerCase())
+        item.text.toLowerCase().includes(filterText.toLowerCase()),
       )
     : data;
 

@@ -156,3 +156,8 @@ export interface Table {
   series_total: number;
   series: boolean[];
 }
+
+export interface ReglamentoItem {
+  title: string;
+  text: string;
+}
