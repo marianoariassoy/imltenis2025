@@ -103,7 +103,6 @@ export async function POST(req: Request) {
       return Response.json({
         respuesta: egg,
         titulo: "Chat IML 🤖",
-        sugerencias: getSugerencias(),
       });
     }
 
@@ -150,7 +149,6 @@ Respuesta:
           data.response ||
           "Soy el asistente de la liga. Podés consultarme sobre el reglamento.",
         titulo: "Asistente",
-        sugerencias: getSugerencias(),
       });
     }
 
@@ -214,7 +212,6 @@ Respuesta:
       respuesta,
       titulo: regla.title,
       texto_original: regla.text,
-      sugerencias: getSugerencias(),
     });
   } catch (error) {
     console.error("ERROR EN API:", error);
