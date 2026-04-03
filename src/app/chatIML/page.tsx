@@ -87,10 +87,43 @@ export default function TestPage() {
 
   return (
     <div className="flex flex-col gap-y-10 lg:gap-y-20 relative">
-      <Title title="Chat IML" emoji="🤖" description="1.0.0" />
+      <Title
+        title="Chat IML"
+        emoji="🤖"
+        description="Impulsado por inteligencia artificial v1.0.0"
+      />
 
       {/* 💬 CHAT AREA */}
       <div className="flex flex-col gap-4 w-full">
+        {/* 💡 SUGERENCIAS */}
+        {!iniciado && (
+          <div className="text-center">
+            <p className="mb-2">
+              <strong>Podes probar con:</strong>
+            </p>
+            <ul className="text-secondary">
+              <li
+                onClick={() => enviar("¿Qué pasa si llueve?")}
+                className="hover:text-primary cursor-pointer"
+              >
+                ¿Qué pasa si llueve?
+              </li>
+              <li
+                onClick={() => enviar("¿Qué horarios se juegan?")}
+                className="hover:text-primary cursor-pointer"
+              >
+                ¿Qué horarios se juegan?
+              </li>
+              <li
+                onClick={() => enviar("¿Cómo se cargan los resultados?")}
+                className="hover:text-primary cursor-pointer"
+              >
+                ¿Cómo se cargan los resultados?
+              </li>
+            </ul>
+          </div>
+        )}
+
         {messages.map((m, i) => (
           <div
             key={i}
@@ -153,35 +186,6 @@ export default function TestPage() {
           </button>
         </div>
       </div>
-
-      {/* 💡 SUGERENCIAS */}
-      {!iniciado && (
-        <div className="text-center">
-          <p className="mb-2">
-            <strong>Podes probar con:</strong>
-          </p>
-          <ul className="text-secondary">
-            <li
-              onClick={() => enviar("¿Qué pasa si llueve?")}
-              className="hover:text-primary cursor-pointer"
-            >
-              ¿Qué pasa si llueve?
-            </li>
-            <li
-              onClick={() => enviar("¿Qué horarios se juegan?")}
-              className="hover:text-primary cursor-pointer"
-            >
-              ¿Qué horarios se juegan?
-            </li>
-            <li
-              onClick={() => enviar("¿Cómo se cargan los resultados?")}
-              className="hover:text-primary cursor-pointer"
-            >
-              ¿Cómo se cargan los resultados?
-            </li>
-          </ul>
-        </div>
-      )}
     </div>
   );
 }
