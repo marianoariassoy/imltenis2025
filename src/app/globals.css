@@ -31,11 +31,11 @@ body {
 }
 
 .fade-in {
-  animation: fade-in 0.3s ease-in-out;
+  animation: fade-in 0.3s ease-in-out forwards;
 }
 
 .fade-in-slow {
-  animation: fade-in 0.8s ease-in-out;
+  animation: fade-in 0.8s ease-in-out forwards;
 }
 
 @keyframes fade-in {
