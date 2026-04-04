@@ -5,6 +5,16 @@
     "keywords": ["significado", "torneo", "siglas"]
   },
   {
+    "title": "Creación de IML Tenis",
+    "content": "Esta liga de tenis fue creada en 2023",
+    "keywords": ["creacion", "fundacion", "nacimiento"]
+  },
+  {
+    "title": "Cantidad de jugadores en IML Tenis",
+    "content": "3330",
+    "keywords": ["cantidad", "equipos"]
+  },
+  {
     "title": "Duración del torneo",
     "content": "La liga se juega de marzo a diciembre en dos torneos: Apertura y Clausura.",
     "keywords": [
@@ -87,7 +97,7 @@
   },
   {
     "title": "Categorías",
-    "content": "Existen categorías de caballeros, damas y mixto en distintos niveles.",
+    "content": "Existen categorías de caballeros, damas y mixto en distintos niveles, en total 16 categorías.",
     "keywords": ["categorias", "niveles", "divisiones"]
   },
   {
@@ -97,7 +107,7 @@
   },
   {
     "title": "Cantidad de equipos",
-    "content": "Actualmente participan alrededor de 180 equipos.",
+    "content": "Actualmente participan alrededor de 190 equipos.",
     "keywords": ["equipos", "cantidad", "liga"]
   },
   {
