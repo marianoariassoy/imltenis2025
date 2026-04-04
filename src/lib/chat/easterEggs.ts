@@ -3,7 +3,7 @@ import { normalizar } from "./utils";
 
 const EASTER_EGGS: Record<string, string> = {
   // 👋 básicos
-  hola: "Me llaman IML Chat. puedo ayudarte... o juzgar tus preguntas 😄",
+  hola: "Me llaman Chat IML. puedo ayudarte... o juzgar tus preguntas 😄",
   "quien sos": "Soy la inteligencia artificial de IML Tenis 🤖.",
   "que haces":
     "Analizo reglamento, respondo dudas... y veo tenis imaginario en segundo plano 🎾",

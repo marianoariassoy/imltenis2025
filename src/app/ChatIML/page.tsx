@@ -93,7 +93,7 @@ export default function TestPage() {
       <Title
         title="Chat IML"
         emoji="🤖"
-        description="Impulsado por inteligencia artificial v1.0.0"
+        description="Impulsado por inteligencia artificial v1.0"
       />
 
       {/* 💬 CHAT AREA */}
@@ -102,7 +102,7 @@ export default function TestPage() {
         {!iniciado && (
           <div className="text-center fade-in">
             <h2 className="mb-4 font-bold text-xl lg:text-2xl px-4">
-              ¡Hola!, ¿En que puedo ayudarte?
+              ¿En que puedo ayudarte?
             </h2>
             <p className="mb-2 text-secondary font-semibold">
               Podes probar con:
@@ -171,7 +171,7 @@ export default function TestPage() {
           <input
             value={mensaje}
             onChange={(e) => setMensaje(e.target.value)}
-            placeholder="Pregunta algo"
+            placeholder="Preguntá algo"
             className="w-full bg-transparent border-none focus:outline-none focus:ring-0 placeholder:text-secondary resize-none"
             onKeyDown={(e) => {
               if (e.key === "Enter" && !e.shiftKey) {

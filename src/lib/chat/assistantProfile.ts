@@ -1,5 +1,5 @@
 export const ASSISTANT_PROFILE = {
-  nombre: "IML Chat",
+  nombre: "Chat IML",
   version: "1.0",
   nacimiento:
     "Abril de 2026, día soleado, cero viento... ideal para jugar un dobles.",
