@@ -100,9 +100,12 @@ export default function TestPage() {
       <div className="flex flex-col gap-4 w-full">
         {/* 💡 SUGERENCIAS */}
         {!iniciado && (
-          <div className="text-center">
-            <p className="mb-2">
-              <strong>Podes probar con:</strong>
+          <div className="text-center fade-in">
+            <h2 className="mb-4 font-bold text-xl lg:text-2xl px-4">
+              ¡Hola!, ¿En que puedo ayudarte?
+            </h2>
+            <p className="mb-2 text-secondary font-semibold">
+              Podes probar con:
             </p>
             <ul className="text-secondary">
               <li

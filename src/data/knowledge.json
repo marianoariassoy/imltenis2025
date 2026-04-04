@@ -1,0 +1,143 @@
+[
+  {
+    "title": "Significado siglas IML",
+    "content": "Interclubes Master League",
+    "keywords": ["significado", "torneo", "siglas"]
+  },
+  {
+    "title": "Duración del torneo",
+    "content": "La liga se juega de marzo a diciembre en dos torneos: Apertura y Clausura.",
+    "keywords": [
+      "duracion",
+      "cuando empieza",
+      "cuando termina",
+      "meses",
+      "torneo"
+    ]
+  },
+  {
+    "title": "Días de juego",
+    "content": "Los partidos se disputan sábados o domingos según la categoría.",
+    "keywords": ["dias", "cuando se juega", "sabado", "domingo"]
+  },
+  {
+    "title": "Formato de juego",
+    "content": "Según la categoría, se juega 1 single y 2 dobles o bien 2 partidos de dobles.",
+    "keywords": ["formato", "partidos", "series", "single", "dobles"]
+  },
+  {
+    "title": "Sistema de sets",
+    "content": "Todos los partidos se juegan al mejor de 3 sets con tie-break. El tercer set es un super tie-break a 10 puntos con diferencia de dos.",
+    "keywords": ["sets", "tie break", "super tie break", "reglas partido"]
+  },
+  {
+    "title": "Puntuación",
+    "content": "Cada partido ganado suma 1 punto. El equipo suma tantos puntos como partidos gane en la serie.",
+    "keywords": ["puntos", "puntaje", "como suma", "tabla"]
+  },
+  {
+    "title": "Empate en fase regular",
+    "content": "Las series pueden terminar empatadas y cada equipo suma 1 punto.",
+    "keywords": ["empate", "igual", "puntos empate"]
+  },
+  {
+    "title": "Desempates",
+    "content": "Se define por series ganadas, dobles 1 ganados, sets, games y fair play.",
+    "keywords": ["desempate", "tabla", "criterios"]
+  },
+  {
+    "title": "Pelotas",
+    "content": "El equipo local debe proveer pelotas nuevas o con poco uso. Si el visitante objeta, el local debe cambiarlas o abonarlas.",
+    "keywords": ["pelotas", "quien pone pelotas", "material"]
+  },
+  {
+    "title": "Horarios de juego",
+    "content": "Sábados entre 13:00 y 17:00 hs. Domingos entre 9:00 y 17:00 hs. El equipo local define el horario.",
+    "keywords": ["horarios", "hora", "cuando se juega"]
+  },
+  {
+    "title": "Carga de resultados",
+    "content": "El capitán del equipo ganador debe cargar el resultado antes del martes a las 12 hs.",
+    "keywords": ["cargar resultados", "resultado", "quien carga"]
+  },
+  {
+    "title": "Walkover (WO)",
+    "content": "Se da WO cuando un equipo no se presenta o no cumple requisitos. Puede ser total o parcial.",
+    "keywords": ["wo", "walkover", "no se presenta", "ausencia"]
+  },
+  {
+    "title": "Aviso de ausencia",
+    "content": "Debe avisarse con al menos 24 horas de anticipación para evitar sanciones.",
+    "keywords": ["avisar", "ausencia", "wo aviso"]
+  },
+  {
+    "title": "Lluvia y suspensión",
+    "content": "El equipo local debe avisar al menos 2 horas antes si se juega. Si se suspende, se reprograma.",
+    "keywords": ["lluvia", "clima", "suspension", "reprogramacion"]
+  },
+  {
+    "title": "Impuntualidad",
+    "content": "Hay 15 minutos de tolerancia. Luego se considera abandono.",
+    "keywords": ["llegar tarde", "impuntualidad", "tolerancia"]
+  },
+  {
+    "title": "Lista de buena fe",
+    "content": "Cada equipo debe tener entre 8 y 20 jugadores ordenados por nivel.",
+    "keywords": ["lista", "jugadores", "equipo"]
+  },
+  {
+    "title": "Categorías",
+    "content": "Existen categorías de caballeros, damas y mixto en distintos niveles.",
+    "keywords": ["categorias", "niveles", "divisiones"]
+  },
+  {
+    "title": "Edad mínima",
+    "content": "La edad mínima para participar es de 14 años.",
+    "keywords": ["edad", "minima", "participar"]
+  },
+  {
+    "title": "Cantidad de equipos",
+    "content": "Actualmente participan alrededor de 180 equipos.",
+    "keywords": ["equipos", "cantidad", "liga"]
+  },
+  {
+    "title": "Ubicación",
+    "content": "Los partidos se juegan en clubes de Zona Norte y Oeste de Buenos Aires.",
+    "keywords": ["donde se juega", "ubicacion", "zona"]
+  },
+  {
+    "title": "Costo de inscripción",
+    "content": "El valor de inscripción es de $340.000 por equipo.",
+    "keywords": ["precio", "inscripcion", "costo"]
+  },
+  {
+    "title": "Costo por partido",
+    "content": "El valor por partido es de $12.000 por jugador.",
+    "keywords": ["precio partido", "costo cancha"]
+  },
+  {
+    "title": "Objetivo del torneo",
+    "content": "Fomentar la competencia, el deporte y la comunidad entre clubes.",
+    "keywords": ["objetivo", "que es iml", "liga"]
+  },
+  {
+    "title": "Capitán",
+    "content": "El capitán es responsable de organizar el equipo, cargar resultados y gestionar la comunicación.",
+    "keywords": ["capitan", "responsable", "equipo"]
+  },
+  {
+    "title": "Playoffs",
+    "content": "Para jugar playoffs hay que haber disputado al menos una serie previa.",
+    "keywords": ["playoffs", "clasificacion"]
+  },
+  {
+    "title": "Ascensos y descensos",
+    "content": "Los equipos ascienden o descienden según rendimiento y criterio de la organización.",
+    "keywords": ["ascenso", "descenso", "categoria"]
+  },
+  {
+    "title": "Espíritu del torneo",
+    "content": "Se promueve la competencia sana, el respeto y el tercer tiempo entre equipos.",
+    "keywords": ["espiritu", "valores", "tercer tiempo"]
+  }
+]

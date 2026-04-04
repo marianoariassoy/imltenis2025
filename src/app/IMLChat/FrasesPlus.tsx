@@ -8,9 +8,8 @@ const FrasesPlys = () => {
     "tampoco para tanto 😄",
     "soy una IA, no magia 🧠",
     "esto es un chat, no Wimbledon 🏆",
-    "respirá… es solo tecnología 😌",
+    "no soy Chat GPT",
     "no era necesario hacer click en eso 😂",
-    "te juzgo un poquito… pero con cariño 🤖",
   ];
 
   function getRandomFrase() {

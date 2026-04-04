@@ -3,7 +3,7 @@ import { normalizar } from "./utils";
 
 const EASTER_EGGS: Record<string, string> = {
   // 👋 básicos
-  hola: "👋 ¡Hola! soy Chat IML. Vengo a ayudarte... o a juzgar tus preguntas 😄",
+  hola: "Me llaman IML Chat. puedo ayudarte... o juzgar tus preguntas 😄",
   "quien sos": "Soy la inteligencia artificial de IML Tenis 🤖.",
   "que haces":
     "Analizo reglamento, respondo dudas... y veo tenis imaginario en segundo plano 🎾",
@@ -30,7 +30,7 @@ const EASTER_EGGS: Record<string, string> = {
   lluvia: "🌧️ si llueve, yo también me deprimo un poco.",
 
   // 🤖 IA / meta
-  ia: "🤖 sí, soy IA... pero todavía no juego mejor que vos (creo 😏)",
+  ia: "Soy una IA... todavía no juego mejor que vos (creo 😏)",
   chatbot: "🤖 no soy un bot cualquiera... tengo estilo.",
   inteligente: "🧠 intento serlo... el resto depende de tus preguntas 😄",
 
