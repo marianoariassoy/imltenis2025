@@ -1,0 +1,144 @@
+[
+  {
+    "title": "Categorías del torneo",
+    "content": "El torneo cuenta con 16 categorías divididas por sexo, edad y nivel.",
+    "keywords": ["categorias", "niveles", "division", "torneo"],
+    "type": "categorias",
+    "data": {
+      "cantidad": 16,
+      "sexo": ["damas", "caballeros", "mixto"],
+      "edad": ["libre", "+30", "+40"],
+      "categorias": {
+        "damas": [
+          {
+            "nombre": "Damas Intermedia +30",
+            "edad": "+30",
+            "dia": "sabado",
+            "horario": "13-17",
+            "formato": "dobles"
+          },
+          {
+            "nombre": "Damas Tercera Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          },
+          {
+            "nombre": "Damas Tercera +40",
+            "edad": "+40",
+            "dia": "sabado",
+            "horario": "13-17",
+            "formato": "dobles"
+          },
+          {
+            "nombre": "Damas Cuarta Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          },
+          {
+            "nombre": "Damas Cuarta +40",
+            "edad": "+40",
+            "dia": "sabado",
+            "horario": "13-17",
+            "formato": "dobles"
+          },
+          {
+            "nombre": "Damas Quinta Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          }
+        ],
+        "caballeros": [
+          {
+            "nombre": "Caballeros Primera Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          },
+          {
+            "nombre": "Caballeros Intermedia Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          },
+          {
+            "nombre": "Caballeros Tercera Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          },
+          {
+            "nombre": "Caballeros Cuarta Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          },
+          {
+            "nombre": "Caballeros Cuarta +40",
+            "edad": "+40",
+            "dia": "sabado",
+            "horario": "13-17",
+            "formato": "dobles"
+          },
+          {
+            "nombre": "Caballeros Quinta Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          },
+          {
+            "nombre": "Caballeros Quinta +40",
+            "edad": "+40",
+            "dia": "sabado",
+            "horario": "13-17",
+            "formato": "dobles"
+          },
+          {
+            "nombre": "Caballeros Sexta Libre",
+            "edad": "libre",
+            "dia": "domingo",
+            "horario": "9-17",
+            "formato": "single + dobles"
+          }
+        ],
+
+        "mixto": [
+          {
+            "nombre": "Mixto Libre",
+            "edad": "libre",
+            "dia": "sabado",
+            "horario": "13-17",
+            "formato": "dobles"
+          },
+          {
+            "nombre": "Mixto B/C",
+            "edad": "libre",
+            "dia": "sabado",
+            "horario": "13-17",
+            "formato": "dobles"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "title": "Resumen de categorías",
+    "content": "Hay 16 categorías divididas en damas, caballeros y mixto. Se organizan por edad (libre, +30, +40) y nivel. Los sábados se juegan mayormente categorías +40 y mixtos, mientras que los domingos se juegan las categorías libres.",
+    "keywords": [
+      "categorias resumen",
+      "como funciona",
+      "explicacion categorias"
+    ],
+    "type": "categorias"
+  }
+]

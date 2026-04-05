@@ -1,9 +1,11 @@
 import { chatEngine } from "@/lib/chat/chatEngine";
 
 export async function POST(req: Request) {
-  const { mensaje } = await req.json();
+  const body = await req.json();
 
-  const result = await chatEngine(mensaje);
+  const { mensaje, historial } = body;
 
-  return Response.json(result);
+  const respuesta = await chatEngine(mensaje, historial);
+
+  return Response.json(respuesta);
 }

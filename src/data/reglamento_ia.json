@@ -1,0 +1,145 @@
+[
+  {
+    "title": "Puntuación por serie",
+    "content": "Cada partido ganado suma 1 punto. El equipo acumula tantos puntos como partidos gane dentro de la serie.",
+    "keywords": [
+      "puntos",
+      "puntaje",
+      "como suma puntos",
+      "como se suman los puntos",
+      "tabla puntos",
+      "puntaje serie"
+    ]
+  },
+  {
+    "title": "Empate en fase regular",
+    "content": "Las series pueden terminar empatadas y en ese caso cada equipo suma 1 punto.",
+    "keywords": [
+      "empate",
+      "igual",
+      "empatar serie",
+      "que pasa si empatan",
+      "puntos empate"
+    ]
+  },
+  {
+    "title": "Sistema de desempate",
+    "content": "En caso de igualdad en la tabla, se define por: series ganadas, dobles 1 ganados, sets, games y fair play, en ese orden.",
+    "keywords": [
+      "desempate",
+      "como se desempata",
+      "criterios de desempate",
+      "tabla empate",
+      "orden desempate"
+    ]
+  },
+  {
+    "title": "Pelotas de juego",
+    "content": "El equipo local debe proveer pelotas nuevas o con poco uso. Si el equipo visitante las objeta, el local debe cambiarlas o hacerse cargo del costo.",
+    "keywords": [
+      "pelotas",
+      "quien pone pelotas",
+      "material de juego",
+      "pelotas nuevas",
+      "pelotas quien paga"
+    ]
+  },
+  {
+    "title": "Carga de resultados",
+    "content": "El capitán del equipo ganador debe cargar el resultado antes del martes a las 12 hs.",
+    "keywords": [
+      "cargar resultados",
+      "quien carga resultado",
+      "cuando cargar resultado",
+      "subir resultado",
+      "resultados sistema"
+    ]
+  },
+  {
+    "title": "Walkover (WO)",
+    "content": "Se considera walkover cuando un equipo no se presenta o no cumple con los requisitos mínimos para disputar la serie. Puede ser total o parcial.",
+    "keywords": [
+      "wo",
+      "walkover",
+      "no se presenta",
+      "ausencia equipo",
+      "pierde por wo"
+    ]
+  },
+  {
+    "title": "Aviso de ausencia",
+    "content": "Si un equipo no puede presentarse, debe avisar con al menos 24 horas de anticipación para evitar sanciones.",
+    "keywords": [
+      "avisar ausencia",
+      "no puedo jugar",
+      "cancelar partido",
+      "aviso wo",
+      "faltazo equipo"
+    ]
+  },
+  {
+    "title": "Suspensión por lluvia",
+    "content": "El equipo local debe avisar al menos 2 horas antes si la serie se juega o se suspende. En caso de suspensión, se reprograma.",
+    "keywords": [
+      "lluvia",
+      "clima",
+      "suspension partido",
+      "reprogramacion",
+      "si llueve"
+    ]
+  },
+  {
+    "title": "Impuntualidad",
+    "content": "Existe una tolerancia de 15 minutos. Pasado ese tiempo, el equipo o jugador ausente pierde por abandono.",
+    "keywords": [
+      "llegar tarde",
+      "impuntualidad",
+      "tolerancia",
+      "retraso",
+      "espera partido"
+    ]
+  },
+  {
+    "title": "Lista de buena fe",
+    "content": "Cada equipo debe presentar una lista de entre 8 y 20 jugadores, ordenados de mayor a menor nivel.",
+    "keywords": [
+      "lista buena fe",
+      "jugadores equipo",
+      "cuantos jugadores",
+      "armar equipo",
+      "lista jugadores"
+    ]
+  },
+  {
+    "title": "Rol del capitán",
+    "content": "El capitán es responsable de organizar el equipo, coordinar los partidos, cargar resultados y mantener la comunicación con la organización.",
+    "keywords": [
+      "capitan",
+      "responsable equipo",
+      "funcion capitan",
+      "rol capitan",
+      "que hace el capitan"
+    ]
+  },
+  {
+    "title": "Playoffs",
+    "content": "Para poder disputar los playoffs, un jugador debe haber participado al menos en una serie durante la fase regular.",
+    "keywords": [
+      "playoffs",
+      "clasificacion",
+      "requisitos playoffs",
+      "quien puede jugar playoffs"
+    ]
+  },
+  {
+    "title": "Ascensos y descensos",
+    "content": "Los equipos ascienden o descienden de categoría según su rendimiento y el criterio de la organización.",
+    "keywords": [
+      "ascenso",
+      "descenso",
+      "subir categoria",
+      "bajar categoria",
+      "cambio de categoria"
+    ]
+  }
+]
