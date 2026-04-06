@@ -6,10 +6,10 @@ const FrasesPlys = () => {
 
   const frasesPlus = [
     "tampoco para tanto 😄",
-    "soy una IA, no magia 🧠",
-    "esto es un chat, no Wimbledon 🏆",
-    "no soy Chat GPT",
+    "¡Foot fault! 😂",
+    "no soy Chat GPT 😳",
     "no era necesario hacer click en eso 😂",
+    "Esa pelota fue larga 🙈",
   ];
 
   function getRandomFrase() {

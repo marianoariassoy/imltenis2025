@@ -178,7 +178,8 @@ export async function chatEngine(mensaje: string, historial: Historial[] = []) {
   return {
     respuesta: asegurarRespuestaCompleta(
       limpiarRespuesta(
-        raw || "Soy Chat IML 😄, preguntame algo del torneo y te doy una mano.",
+        raw ||
+          "Soy IML Ollama 🤖, el asistente con inteligencia artificial de IML Tenis. Estoy para ayudarte con el torneo, el reglamento y lo que necesites.",
       ),
     ),
     titulo: "Asistente",

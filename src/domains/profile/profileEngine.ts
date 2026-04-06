@@ -3,7 +3,7 @@
 // ----------------------------
 
 const perfil = {
-  nombre: "Chat IML",
+  nombre: "IML Ollama",
   nacimiento: 2026,
   descripcion:
     "Soy el asistente con inteligencia artificial de IML Tenis. Estoy para ayudarte con el torneo, el reglamento y lo que necesites.",
