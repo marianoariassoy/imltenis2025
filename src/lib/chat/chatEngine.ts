@@ -179,7 +179,7 @@ export async function chatEngine(mensaje: string, historial: Historial[] = []) {
     respuesta: asegurarRespuestaCompleta(
       limpiarRespuesta(
         raw ||
-          "Soy IML Ollama 🤖, el asistente con inteligencia artificial de IML Tenis. Estoy para ayudarte con el torneo, el reglamento y lo que necesites.",
+          "Soy Gran Capitán 🤖, el asistente con inteligencia artificial de IML Tenis. Estoy para ayudarte con el torneo, el reglamento y lo que necesites.",
       ),
     ),
     titulo: "Asistente",

@@ -1,37 +1,139 @@
 export type Intent =
-  | "GENERAL"
   | "CATEGORIAS"
   | "REGLAMENTO"
+  | "GENERAL"
   | "RESULTADOS"
   | "PERFIL"
   | "UNKNOWN";
 
+// 🔹 keywords por intent
+const KEYWORDS = {
+  CATEGORIAS: [
+    "categorias",
+    "categoria",
+    "nivel",
+    "niveles",
+    "que puedo jugar",
+    "edad",
+    "+30",
+    "+40",
+    "damas",
+    "caballeros",
+    "mixto",
+  ],
+
+  REGLAMENTO: [
+    "wo",
+    "walkover",
+    "puntos",
+    "puntaje",
+    "empate",
+    "desempate",
+    "pelotas",
+    "resultado",
+    "cargar",
+    "carga",
+    "quien carga",
+    "lluvia",
+    "clima",
+    "suspension",
+    "se suspende",
+    "reprogramar",
+    "tolerancia",
+    "llegar tarde",
+    "impuntualidad",
+    "demora",
+    "lista",
+    "lista buena fe",
+    "jugadores",
+    "cuantos jugadores",
+    "capitan",
+    "responsable",
+    "playoffs",
+    "clasificar",
+    "ascenso",
+    "descenso",
+    "reglamento",
+    "regla",
+    "como funciona",
+    "que pasa si",
+    "puedo",
+    "se puede",
+    "formacion",
+    "forma",
+  ],
+
+  GENERAL: [
+    "precio",
+    "costo",
+    "inscripcion",
+    "cuanto cuesta",
+    "horario",
+    "hora",
+    "dias",
+    "cuando se juega",
+    "torneo",
+    "iml",
+    "que es iml",
+    "donde se juega",
+    "ubicacion",
+    "edad minima",
+    "clubes",
+    "equipos",
+    "cuantos son",
+    "informacion",
+  ],
+
+  RESULTADOS: ["ranking", "fixture", "tabla", "posiciones"],
+
+  PERFIL: ["sos", "quien sos", "que sos", "tu nombre", "edad tenes"],
+};
+
+// 🔹 normalizar texto
+function normalizar(texto: string) {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+}
+
+// 🔥 motor de intent
 export function detectarIntent(mensaje: string): Intent {
-  const msg = mensaje.toLowerCase();
+  const msg = normalizar(mensaje);
 
-  if (msg.includes("categorias") || msg.includes("categoria"))
-    return "CATEGORIAS";
+  const scores: Record<Intent, number> = {
+    CATEGORIAS: 0,
+    REGLAMENTO: 0,
+    GENERAL: 0,
+    RESULTADOS: 0,
+    PERFIL: 0,
+    UNKNOWN: 0,
+  };
 
+  // 🔹 sumar puntos por keywords
+  (Object.keys(KEYWORDS) as Array<keyof typeof KEYWORDS>).forEach((intent) => {
+    KEYWORDS[intent].forEach((kw) => {
+      if (msg.includes(kw)) {
+        scores[intent] += 1;
+      }
+    });
+  });
+
+  // 🔥 BOOST de intención natural (clave para reglamento)
   if (
-    msg.includes("precio") ||
-    msg.includes("horario") ||
-    msg.includes("dias") ||
-    msg.includes("torneo") ||
-    msg.includes("iml") ||
-    msg.includes("iml tenis")
-  )
-    return "GENERAL";
+    msg.includes("que pasa si") ||
+    msg.includes("puedo") ||
+    msg.includes("se puede")
+  ) {
+    scores.REGLAMENTO += 2;
+  }
 
-  if (
-    msg.includes("wo") ||
-    msg.includes("puntos") ||
-    msg.includes("reglamento")
-  )
-    return "REGLAMENTO";
-
-  if (msg.includes("ranking") || msg.includes("fixture")) return "RESULTADOS";
-
-  if (msg.includes("sos") || msg.includes("quien")) return "PERFIL";
+  // 🔥 PRIORIDAD REAL (orden importa)
+  if (scores.CATEGORIAS > 0) return "CATEGORIAS";
+  if (scores.REGLAMENTO > 0) return "REGLAMENTO";
+  if (scores.GENERAL > 0) return "GENERAL";
+  if (scores.RESULTADOS > 0) return "RESULTADOS";
+  if (scores.PERFIL > 0) return "PERFIL";
 
   return "UNKNOWN";
 }

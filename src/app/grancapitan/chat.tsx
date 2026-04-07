@@ -93,7 +93,7 @@ const ChatIML = () => {
         {/* 💡 SUGERENCIAS */}
         {!iniciado && (
           <div className="text-center fade-in">
-            <h2 className="mb-4 font-bold text-xl lg:text-2xl px-4">
+            <h2 className="mb-4 font-bold text-xl lg:text-xl px-4">
               ¿En que puedo ayudarte?
             </h2>
             <p className="mb-2 text-secondary font-semibold">
@@ -110,7 +110,7 @@ const ChatIML = () => {
                 onClick={() => enviar("¿Qué horarios se juegan?")}
                 className="hover:text-primary cursor-pointer"
               >
-                Sobre el torneo
+                El torneo
               </li>
             </ul>
           </div>
