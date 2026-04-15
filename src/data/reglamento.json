@@ -25,7 +25,7 @@
   },
   {
     "title": "Planillas",
-    "text": "La confección de la planilla estará a cargo del capitán del equipo local y deberá ser completada conjuntamente por ambos equipos antes del inicio de la serie.\nComo buena práctica, se recomienda doblar la hoja de la planilla a la mitad, de modo que en cada lado quede visible la formación de cada equipo.\nAl finalizar los encuentros, deberán registrarse los resultados correspondientes y la planilla deberá ser firmada por ambos capitanes.\nLa ausencia de la planilla o la falta de algún dato requerido podrá dar lugar a la posible nulidad de los partidos disputados en caso de presentarse un incidente entre los equipos."
+    "text": "La confección de la planilla estará a cargo del capitán del equipo local y deberá ser completada conjuntamente por ambos equipos antes del inicio de la serie.\nComo buena práctica, se recomienda doblar la hoja de la planilla a la mitad, de modo que en cada lado quede visible la formación de cada equipo.\nAl finalizar los encuentros, deberán registrarse los resultados correspondientes y la planilla deberá ser firmada por ambos capitanes.\nLa ausencia de la planilla o la falta de algún dato requerido podrá dar lugar a la posible nulidad de los partidos disputados en caso de presentarse un incidente entre los equipos que requiera el uso de la planilla."
   },
   {
     "title": "Carga de resultados",
@@ -162,10 +162,6 @@
   {
     "title": "Fases de elimanación directa",
     "text": "En estas etapas solo podrán participar aquellos jugadores que hayan disputado, al menos, una serie en instancias previas de la categoría correspondiente o de una inferior dentro del torneo en curso."
-  },
-  {
-    "title": "Mala formación",
-    "text": "En caso de incurrir en una mala conformación de las parejas de dobles, la sanción implicará la pérdida exclusiva de los parciales correspondientes a los dobles involucrados (Doble 1 y Doble 2). El partido de singles, de existir, no se verá afectado, por lo que se conservará el resultado obtenido en cancha."
   },
   {
     "title": "Mala inclusión",

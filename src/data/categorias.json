@@ -140,5 +140,14 @@
       "explicacion categorias"
     ],
     "type": "categorias"
+  },
+  {
+    "title": "Edad mínima",
+    "content": "La edad mínima para participar es de 14 años.",
+    "keywords": [
+      "edad minima para jugar",
+      "desde que edad puedo jugar",
+      "puede jugar un menor"
+    ]
   }
 ]

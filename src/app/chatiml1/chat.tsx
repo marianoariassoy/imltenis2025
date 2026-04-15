@@ -14,7 +14,6 @@ const ChatIML = () => {
   const [mensaje, setMensaje] = useState("");
   const [messages, setMessages] = useState<Message[]>([]);
   const [loading, setLoading] = useState(false);
-  const [iniciado, setIniciado] = useState(false);
   const [typingMessage, setTypingMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const bottomRef = useRef<HTMLDivElement | null>(null);
@@ -27,6 +26,20 @@ const ChatIML = () => {
     scrollToBottom();
   }, [messages, typingMessage]);
 
+  useEffect(() => {
+    const bienvenida = "¡Hola! Soy Chat IML 😄, ¿en qué puedo ayudarte?";
+
+    setTimeout(() => {
+      setIsTyping(true);
+
+      typeText(bienvenida, () => {
+        setMessages([{ role: "assistant", content: bienvenida }]);
+        setTypingMessage("");
+        setIsTyping(false);
+      });
+    }, 600); // delay inicial
+  }, []);
+
   // ✍️ animación de escritura (FIXED)
   const typeText = (text: string, callback?: () => void) => {
     let i = 0;
@@ -34,17 +47,19 @@ const ChatIML = () => {
 
     setTypingMessage("");
 
-    const interval = setInterval(() => {
-      current += text.charAt(i);
-      setTypingMessage(current);
+    const interval = setInterval(
+      () => {
+        current += text.charAt(i);
+        setTypingMessage(current);
+        i++;
 
-      i++;
-
-      if (i >= text.length) {
-        clearInterval(interval);
-        callback?.();
-      }
-    }, 12);
+        if (i >= text.length) {
+          clearInterval(interval);
+          callback?.();
+        }
+      },
+      10 + Math.random() * 20,
+    ); // velocidad variable 😏
   };
 
   const enviar = async (texto?: string) => {
@@ -52,7 +67,6 @@ const ChatIML = () => {
     if (!msg) return;
 
     setLoading(true);
-    setIniciado(true);
 
     // 👤 mensaje usuario
     setMessages((prev) => [...prev, { role: "user", content: msg }]);
@@ -90,32 +104,6 @@ const ChatIML = () => {
     <>
       {/* 💬 CHAT AREA */}
       <div className="flex flex-col gap-4 w-full">
-        {/* 💡 SUGERENCIAS */}
-        {!iniciado && (
-          <div className="text-center fade-in">
-            <h2 className="mb-4 font-bold text-xl lg:text-xl px-4">
-              ¿En que puedo ayudarte?
-            </h2>
-            <p className="mb-2 text-secondary font-semibold">
-              Podes consultarme sobre:
-            </p>
-            <ul className="text-secondary">
-              <li
-                onClick={() => enviar("¿Qué pasa si llueve?")}
-                className="hover:text-primary cursor-pointer"
-              >
-                Reglamento
-              </li>
-              <li
-                onClick={() => enviar("¿Qué horarios se juegan?")}
-                className="hover:text-primary cursor-pointer"
-              >
-                El torneo
-              </li>
-            </ul>
-          </div>
-        )}
-
         {messages.map((m, i) => (
           <div
             key={i}
@@ -168,14 +156,25 @@ const ChatIML = () => {
           />
         </div>
         <div>
-          <button
-            className="bg-white hover:bg-white/80 rounded-full text-background w-10 h-10 text-xl flex items-center justify-center duration-300"
-            onClick={() => enviar()}
-          >
-            <span className="rotate-180">
-              <ChevronDown />
-            </span>
-          </button>
+          {!loading ? (
+            <button
+              className="bg-white hover:bg-white/80 rounded-full text-background w-10 h-10 text-xl flex items-center justify-center duration-300"
+              onClick={() => enviar()}
+            >
+              <span className="rotate-180">
+                <ChevronDown />
+              </span>
+            </button>
+          ) : (
+            <button
+              className="bg-white/50 rounded-full text-background w-10 h-10 text-xl flex items-center justify-center"
+              disabled
+            >
+              <span className="rotate-180">
+                <ChevronDown />
+              </span>
+            </button>
+          )}
         </div>
       </div>
     </>

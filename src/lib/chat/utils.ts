@@ -5,10 +5,31 @@ interface Message {
   content: string;
 }
 
+type ReglamentoItem = {
+  title: string;
+  content: string;
+  keywords: string[];
+  examples?: string[];
+};
+
+export function formatearRespuesta(item: ReglamentoItem): string {
+  const cierreOpciones = [
+    "Si tenés otra duda, decime 👍",
+    "Cualquier cosa preguntame 🙌",
+    "Si querés te explico más en detalle 👌",
+    "",
+  ];
+
+  const cierre =
+    cierreOpciones[Math.floor(Math.random() * cierreOpciones.length)];
+
+  return `${item.content}\n\n${cierre}`;
+}
+
 export function normalizar(texto: string) {
   return texto
     .toLowerCase()
-    .normalize("NFD")
+    .normalize("NFD") // elimina tildes
     .replace(/[\u0300-\u036f]/g, "");
 }
 

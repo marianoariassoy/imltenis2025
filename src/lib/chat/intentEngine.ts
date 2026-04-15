@@ -1,7 +1,8 @@
+import { normalizar } from "./utils";
+
 export type Intent =
   | "CATEGORIAS"
   | "REGLAMENTO"
-  | "GENERAL"
   | "RESULTADOS"
   | "PERFIL"
   | "UNKNOWN";
@@ -61,9 +62,6 @@ const KEYWORDS = {
     "se puede",
     "formacion",
     "forma",
-  ],
-
-  GENERAL: [
     "precio",
     "costo",
     "inscripcion",
@@ -82,20 +80,14 @@ const KEYWORDS = {
     "equipos",
     "cuantos son",
     "informacion",
+    "feriados",
+    "fin de semana largo",
   ],
 
   RESULTADOS: ["ranking", "fixture", "tabla", "posiciones"],
 
   PERFIL: ["sos", "quien sos", "que sos", "tu nombre", "edad tenes"],
 };
-
-// 🔹 normalizar texto
-function normalizar(texto: string) {
-  return texto
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
-}
 
 // 🔥 motor de intent
 export function detectarIntent(mensaje: string): Intent {
@@ -104,7 +96,6 @@ export function detectarIntent(mensaje: string): Intent {
   const scores: Record<Intent, number> = {
     CATEGORIAS: 0,
     REGLAMENTO: 0,
-    GENERAL: 0,
     RESULTADOS: 0,
     PERFIL: 0,
     UNKNOWN: 0,
@@ -131,7 +122,6 @@ export function detectarIntent(mensaje: string): Intent {
   // 🔥 PRIORIDAD REAL (orden importa)
   if (scores.CATEGORIAS > 0) return "CATEGORIAS";
   if (scores.REGLAMENTO > 0) return "REGLAMENTO";
-  if (scores.GENERAL > 0) return "GENERAL";
   if (scores.RESULTADOS > 0) return "RESULTADOS";
   if (scores.PERFIL > 0) return "PERFIL";
 

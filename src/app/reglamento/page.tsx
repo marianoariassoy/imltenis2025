@@ -30,7 +30,7 @@ const page = () => {
     <section className="flex flex-col gap-y-6">
       <Title title="Reglamento Clausura 2026" emoji="🤝" description="" />
       <Filter data={reglamento} />
-      <Aviso text="Última actualización: Marzo 2026" />
+      <Aviso text="Última actualización: Abril 2026" />
     </section>
   );
 };

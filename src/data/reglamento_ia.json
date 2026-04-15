@@ -1,160 +1,335 @@
 [
   {
-    "title": "Puntuación por serie",
-    "content": "Cada partido ganado suma 1 punto. El equipo acumula tantos puntos como partidos gane dentro de la serie.",
+    "title": "Significado de IML",
+    "category": "info_general",
+    "content": "IML significa Interclubes Master League, una liga de tenis interclubes que se juega en Buenos Aires.",
     "keywords": [
-      "puntos",
-      "puntaje",
-      "como suma puntos",
-      "como se suman los puntos",
-      "tabla puntos",
-      "puntaje serie"
+      "que es iml",
+      "que significa iml",
+      "iml tenis que es",
+      "significado de iml"
+    ],
+    "examples": ["¿Qué es IML?", "¿Qué significa IML Tenis?"]
+  },
+  {
+    "title": "Creación de IML Tenis",
+    "category": "info_general",
+    "content": "IML Tenis fue creada en el año 2023 en Buenos Aires, Argentina.",
+    "keywords": [
+      "cuando se creo iml",
+      "cuando nacio iml tenis",
+      "desde cuando existe iml"
+    ],
+    "examples": ["¿Cuándo se creó IML?", "¿Desde cuándo existe la liga?"]
+  },
+  {
+    "title": "Cantidad de jugadores",
+    "category": "info_general",
+    "content": "Actualmente participan aproximadamente 3330 jugadores en la liga.",
+    "keywords": [
+      "cuantos jugadores hay",
+      "cantidad de jugadores iml",
+      "cuanta gente juega iml"
+    ],
+    "examples": [
+      "¿Cuántos jugadores participan?",
+      "¿Cuánta gente juega la liga?"
+    ]
+  },
+  {
+    "title": "Cantidad de clubes",
+    "category": "info_general",
+    "content": "Actualmente participan 62 clubes en IML Tenis.",
+    "keywords": [
+      "cuantos clubes hay",
+      "clubes participantes iml",
+      "cantidad de clubes"
+    ],
+    "examples": ["¿Cuántos clubes hay?", "¿Cuántos clubes participan?"]
+  },
+  {
+    "title": "Cantidad de equipos",
+    "category": "info_general",
+    "content": "Actualmente participan alrededor de 190 equipos.",
+    "keywords": [
+      "cuantos equipos hay",
+      "cantidad de equipos iml",
+      "equipos en la liga"
+    ],
+    "examples": [
+      "¿Cuántos equipos participan?",
+      "¿Cuántos equipos hay en total?"
+    ]
+  },
+  {
+    "title": "Duración del torneo",
+    "category": "calendario",
+    "content": "La liga se juega de marzo a diciembre, dividida en dos torneos: Apertura y Clausura.",
+    "keywords": [
+      "cuando empieza iml",
+      "cuando termina iml",
+      "cuanto dura el torneo"
+    ],
+    "examples": ["¿Cuándo empieza el torneo?", "¿Cuánto dura la liga?"]
+  },
+  {
+    "title": "Días de juego",
+    "category": "calendario",
+    "content": "Los partidos se juegan los sábados o domingos, dependiendo de la categoría.",
+    "keywords": [
+      "que dias se juega",
+      "se juega sabado o domingo",
+      "dias de partido",
+      "dias de juego"
+    ],
+    "examples": ["¿Qué días se juega?", "¿Se juega sábado o domingo?"]
+  },
+  {
+    "title": "Horarios de juego",
+    "category": "calendario",
+    "content": "Los sábados se juega entre las 13:00 y 17:00 hs, y los domingos entre las 9:00 y 17:00 hs. El equipo local define el horario dentro de esa franja.",
+    "keywords": [
+      "horario de partidos",
+      "a que hora se juega",
+      "quien define horario"
+    ],
+    "examples": ["¿En qué horario se juega?", "¿Quién define el horario?"]
+  },
+  {
+    "title": "Formato de juego",
+    "category": "reglamento",
+    "content": "Según la categoría, las series se juegan con 1 single y 2 dobles, o bien con 2 partidos de dobles.",
+    "keywords": [
+      "como se juega la serie",
+      "cuantos partidos hay",
+      "formato iml"
+    ],
+    "examples": ["¿Cómo es el formato?", "¿Cuántos partidos se juegan?"]
+  },
+  {
+    "title": "Formato de dobles",
+    "category": "reglamento",
+    "content": "De los cuatro doblistas convocados para la serie, el jugador con mejor ranking deberá ser asignado obligatoriamente al Doble 1.",
+    "keywords": [
+      "como se forma el equipo",
+      "como se arman los dobles",
+      "doble 1",
+      "doble 2",
+      "single"
+    ],
+    "examples": ["¿Cómo se juega?", "¿Cómo armo los dobles?"]
+  },
+  {
+    "title": "Sistema de sets",
+    "category": "reglamento",
+    "content": "Los partidos se juegan al mejor de 3 sets con tie-break. El tercer set es un super tie-break a 10 puntos con diferencia de dos.",
+    "keywords": [
+      "a cuantos sets se juega",
+      "hay super tie break",
+      "reglas sets tenis iml"
+    ],
+    "examples": ["¿Cómo se define el partido?", "¿Hay super tie-break?"]
+  },
+  {
+    "title": "Edad mínima",
+    "category": "reglamento",
+    "content": "La edad mínima para participar es de 14 años.",
+    "keywords": [
+      "edad minima para jugar",
+      "desde que edad puedo jugar",
+      "puede jugar un menor"
+    ],
+    "examples": ["¿Cuál es la edad mínima?", "¿Puede jugar alguien de 13?"]
+  },
+  {
+    "title": "Ubicación del torneo",
+    "category": "info_general",
+    "content": "Los partidos se disputan en clubes de Zona Norte y Zona Oeste de Buenos Aires.",
+    "keywords": ["donde se juega", "ubicacion del torneo", "zonas iml tenis"],
+    "examples": ["¿Dónde se juega?", "¿En qué zonas se juega?"]
+  },
+  {
+    "title": "Costo de inscripción",
+    "category": "costos",
+    "content": "El costo de inscripción es de $340.000 por equipo.",
+    "keywords": [
+      "cuanto cuesta inscribirse",
+      "precio equipo",
+      "costo inscripcion"
+    ],
+    "examples": ["¿Cuánto cuesta inscribirse?", "¿Cuánto paga un equipo?"]
+  },
+  {
+    "title": "Costo por partido",
+    "category": "costos",
+    "content": "El costo por partido es de $12.000 por jugador en concepto de alquiler de canchas.",
+    "keywords": [
+      "cuanto cuesta jugar",
+      "precio partido tenis",
+      "costo cancha jugador"
+    ],
+    "examples": [
+      "¿Cuánto cuesta jugar un partido?",
+      "¿Cuánto paga cada jugador?"
+    ]
+  },
+  {
+    "title": "Puntuación por serie",
+    "category": "reglamento",
+    "content": "Cada partido ganado suma 1 punto. El equipo suma tantos puntos como partidos gane en la serie.",
+    "keywords": [
+      "como se suman puntos",
+      "puntaje por serie",
+      "tabla puntos iml"
+    ],
+    "examples": [
+      "¿Cómo se suman los puntos?",
+      "¿Cuántos puntos vale cada partido?"
     ]
   },
   {
     "title": "Empate en fase regular",
+    "category": "reglamento",
     "content": "Las series pueden terminar empatadas y en ese caso cada equipo suma 1 punto.",
     "keywords": [
-      "empate",
-      "igual",
-      "empatar serie",
       "que pasa si empatan",
-      "puntos empate"
-    ]
+      "empate serie puntos",
+      "partido empatado iml"
+    ],
+    "examples": ["¿Qué pasa si empatan?", "¿Cuántos puntos da el empate?"]
   },
   {
     "title": "Sistema de desempate",
-    "content": "En caso de igualdad en la tabla, se define por: series ganadas, dobles 1 ganados, sets, games y fair play, en ese orden.",
+    "category": "reglamento",
+    "content": "En caso de empate en la tabla se define por: series ganadas, dobles 1, sets, games y fair play.",
     "keywords": [
-      "desempate",
       "como se desempata",
-      "criterios de desempate",
-      "tabla empate",
-      "orden desempate"
-    ]
+      "criterios desempate tabla",
+      "empate posiciones"
+    ],
+    "examples": ["¿Cómo se desempata?", "¿Qué se tiene en cuenta en un empate?"]
   },
   {
     "title": "Pelotas de juego",
-    "content": "El equipo local debe proveer pelotas nuevas o con poco uso. Si el equipo visitante las objeta, el local debe cambiarlas o hacerse cargo del costo.",
+    "category": "operativa",
+    "content": "El equipo local debe proveer pelotas nuevas o en buen estado. Si el visitante no está de acuerdo, deben cambiarse o asumir el costo.",
     "keywords": [
-      "pelotas",
       "quien pone pelotas",
-      "material de juego",
-      "pelotas nuevas",
+      "pelotas nuevas obligatorias",
       "pelotas quien paga"
+    ],
+    "examples": [
+      "¿Quién pone las pelotas?",
+      "¿Qué pasa si no están en condiciones?"
     ]
   },
   {
     "title": "Carga de resultados",
+    "category": "operativa",
     "content": "El capitán del equipo ganador debe cargar el resultado antes del martes a las 12 hs.",
     "keywords": [
-      "cargar resultados",
-      "quien carga resultado",
+      "quien carga resultados",
       "cuando cargar resultado",
-      "subir resultado",
-      "resultados sistema"
-    ]
+      "plazo resultados"
+    ],
+    "examples": ["¿Quién carga el resultado?", "¿Hasta cuándo hay tiempo?"]
   },
   {
     "title": "Walkover (WO)",
-    "content": "Se considera walkover cuando un equipo no se presenta o no cumple con los requisitos mínimos para disputar la serie. Puede ser total o parcial.",
+    "category": "reglamento",
+    "content": "Se considera walkover cuando un equipo no se presenta o no cumple con los requisitos mínimos.",
     "keywords": [
-      "wo",
-      "walkover",
-      "no se presenta",
-      "ausencia equipo",
-      "pierde por wo"
-    ]
+      "que es wo",
+      "walkover tenis que es",
+      "cuando se pierde por wo"
+    ],
+    "examples": ["¿Qué es WO?", "¿Cuándo se pierde por walkover?"]
   },
   {
     "title": "Aviso de ausencia",
-    "content": "Si un equipo no puede presentarse, debe avisar con al menos 24 horas de anticipación para evitar sanciones.",
+    "category": "operativa",
+    "content": "Se debe avisar con al menos 24 horas de anticipación para evitar sanciones.",
     "keywords": [
-      "avisar ausencia",
-      "no puedo jugar",
-      "cancelar partido",
-      "aviso wo",
-      "faltazo equipo"
-    ]
+      "no puedo jugar aviso",
+      "cancelar partido aviso",
+      "avisar ausencia equipo"
+    ],
+    "examples": ["¿Qué pasa si no puedo jugar?", "¿Cuándo tengo que avisar?"]
   },
   {
     "title": "Suspensión por lluvia",
-    "content": "El equipo local debe avisar al menos 2 horas antes si la serie se juega o se suspende. En caso de suspensión, se reprograma.",
+    "category": "operativa",
+    "content": "El equipo local debe avisar al menos 2 horas antes si se juega o se suspende.",
     "keywords": [
-      "lluvia",
-      "clima",
-      "suspension partido",
-      "reprogramacion",
-      "si llueve"
-    ]
+      "que pasa si llueve",
+      "suspension por clima",
+      "reprogramar partido lluvia"
+    ],
+    "examples": ["¿Qué pasa si llueve?", "¿Quién avisa la suspensión?"]
   },
   {
-    "title": "Impuntualidad",
-    "content": "Existe una tolerancia de 15 minutos. Pasado ese tiempo, el equipo o jugador ausente pierde por abandono.",
+    "title": "Llegada tarde",
+    "category": "reglamento",
+    "content": "Hay 15 minutos de tolerancia. Pasado ese tiempo se pierde por abandono.",
     "keywords": [
-      "llegar tarde",
-      "llegada tarde",
+      "cuanto se espera",
+      "tolerancia llegada tarde",
+      "que pasa si llego tarde",
       "impuntualidad",
-      "tolerancia",
-      "retraso",
-      "espera partido",
-      "demora"
+      "llegar tarde a un partido",
+      "llego tarde",
+      "llegada tarde"
+    ],
+    "examples": [
+      "¿Cuánto tiempo de tolerancia hay?",
+      "¿Qué pasa si llego tarde?",
+      "¿Cuánto tiempo de tolerancia hay?",
+      "Que pasa si llego tarde a un partido"
     ]
   },
   {
     "title": "Lista de buena fe",
-    "content": "Cada equipo debe presentar una lista de entre 8 y 20 jugadores, ordenados de mayor a menor nivel.",
+    "category": "reglamento",
+    "content": "Cada equipo debe presentar entre 8 y 20 jugadores ordenados por nivel.",
     "keywords": [
-      "lista buena fe",
-      "jugadores equipo",
-      "cuantos jugadores",
-      "armar equipo",
-      "lista jugadores",
-      "como se conforman las listas de buena fe",
-      "como se arman las listas de buena fe"
+      "cuantos jugadores equipo",
+      "lista buena fe cuantos",
+      "armar equipo jugadores"
+    ],
+    "examples": [
+      "¿Cuántos jugadores puede tener un equipo?",
+      "¿Cómo se arma la lista?"
     ]
   },
   {
     "title": "Rol del capitán",
-    "content": "El capitán es responsable de organizar el equipo, coordinar los partidos, cargar resultados y mantener la comunicación con la organización.",
+    "category": "operativa",
+    "content": "El capitán organiza el equipo, coordina partidos, carga resultados y se comunica con la organización.",
     "keywords": [
-      "capitan",
-      "responsable equipo",
+      "que hace el capitan",
       "funcion capitan",
-      "rol capitan",
-      "que hace el capitan"
-    ]
+      "responsabilidades capitan"
+    ],
+    "examples": ["¿Qué hace el capitán?", "¿Qué responsabilidades tiene?"]
   },
   {
     "title": "Playoffs",
-    "content": "Para poder disputar los playoffs, un jugador debe haber participado al menos en una serie durante la fase regular.",
+    "category": "competencia",
+    "content": "Para jugar playoffs hay que haber participado en al menos una serie de fase regular.",
     "keywords": [
-      "playoffs",
-      "clasificacion",
+      "quien puede jugar playoffs",
       "requisitos playoffs",
-      "quien puede jugar playoffs"
-    ]
+      "clasificacion jugadores"
+    ],
+    "examples": ["¿Quién puede jugar playoffs?", "¿Qué se necesita para jugar?"]
   },
   {
-    "title": "Ascensos y descensos",
-    "content": "Los equipos ascienden o descienden de categoría según su rendimiento y el criterio de la organización.",
-    "keywords": [
-      "ascenso",
-      "descenso",
-      "subir categoria",
-      "bajar categoria",
-      "cambio de categoria"
-    ]
-  },
-  {
-    "title": "Formacion equipo",
-    "content": "De los cuatro doblistas convocados para la serie, el jugador con mejor ranking deberá ser asignado obligatoriamente al Doble 1.",
-    "keywords": [
-      "formacion",
-      "mejor doblista",
-      "mejor ranking",
-      "como se forma",
-      "como se arma"
+    "title": "Feriados largos",
+    "content": "Se programarán fechas durante los fines de semana largos. La disputa de estas series será optativa, quedando a criterio de cada equipo jugar en la fecha asignada. En caso de no poder disputarla, el equipo deberá informarlo en el grupo de WhatsApp de capitanes antes del miércoles a las 17:00 hs., a fin de coordinar su reprogramación.",
+    "keywords": ["fin de semana largo", "feriados largos", "fin de largo"],
+    "examples": [
+      "¿Se juega en fin de semana largo?",
+      "¿Se juega en feriados de largo?"
     ]
   }
 ]

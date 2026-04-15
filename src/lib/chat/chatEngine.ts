@@ -1,12 +1,5 @@
 import { detectarIntent } from "./intentEngine";
-
-import {
-  buildPromptGeneral,
-  buildPromptReglamento,
-  buildPromptLibre,
-} from "./promptBuilder";
-
-import { buscarGeneral } from "@/domains/general/generalEngine";
+import { buildPromptReglamento, buildPromptLibre } from "./promptBuilder";
 import { buscarCategorias } from "@/domains/categorias/categoriasEngine";
 import { categoriasBrain } from "@/domains/categorias/categoriasBrain";
 import { buscarRegla } from "@/domains/reglamento/reglamentoEngine";
@@ -14,10 +7,35 @@ import { responderPerfil } from "@/domains/profile/profileEngine";
 
 import { limpiarRespuesta, construirHistorial } from "./utils";
 
+// ----------------------------
+// TYPES
+// ----------------------------
+
 interface Historial {
   role: "user" | "assistant";
   content: string;
 }
+
+type Regla = {
+  title: string;
+  content: string;
+};
+
+type ChatResponse = {
+  respuesta: string;
+  titulo: string;
+  tipo:
+    | "perfil"
+    | "categorias"
+    | "categorias_brain"
+    | "reglamento"
+    | "resultados"
+    | "libre";
+};
+
+// ----------------------------
+// HELPERS
+// ----------------------------
 
 // 🔧 Evita respuestas cortadas
 function asegurarRespuestaCompleta(texto: string) {
@@ -34,7 +52,11 @@ function asegurarRespuestaCompleta(texto: string) {
 }
 
 // 🔌 llamada a IA
-async function llamarIA(prompt: string, temperature = 0.2, maxTokens = 200) {
+async function llamarIA(
+  prompt: string,
+  temperature = 0.2,
+  maxTokens = 200,
+): Promise<string> {
   const res = await fetch("http://127.0.0.1:11434/api/generate", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -49,17 +71,23 @@ async function llamarIA(prompt: string, temperature = 0.2, maxTokens = 200) {
     }),
   });
 
-  const data = await res.json();
+  const data: { response?: string } = await res.json();
+
   return data.response || "";
 }
 
-export async function chatEngine(mensaje: string, historial: Historial[] = []) {
-  console.log("PREGUNTA:", mensaje);
+// ----------------------------
+// MAIN ENGINE
+// ----------------------------
 
-  const historialCorto = historial.slice(-6);
+export async function chatEngine(
+  mensaje: string,
+  historial: Historial[] = [],
+): Promise<ChatResponse> {
+  const historialCorto = historial.slice(-3);
   const historialTexto = construirHistorial(historialCorto);
-
   const intent = detectarIntent(mensaje);
+
   console.log("INTENT:", intent);
 
   // ----------------------------
@@ -78,7 +106,7 @@ export async function chatEngine(mensaje: string, historial: Historial[] = []) {
   }
 
   // ----------------------------
-  // 🧠 2. CATEGORIAS (BRAIN primero)
+  // 🧠 2. CATEGORIAS
   // ----------------------------
   if (intent === "CATEGORIAS") {
     const brain = categoriasBrain(mensaje);
@@ -91,13 +119,16 @@ export async function chatEngine(mensaje: string, historial: Historial[] = []) {
       };
     }
 
-    // fallback a listado general
     const categorias = buscarCategorias(mensaje);
 
     if (categorias) {
       const contexto = `${categorias.titulo}\n${categorias.contenido}`;
 
-      const prompt = buildPromptGeneral(mensaje, historialTexto, contexto);
+      console.log("HISTORIAL:", historialTexto);
+      console.log("CONTEXTO:", contexto);
+      console.log("PREGUNTA:", mensaje);
+
+      const prompt = buildPromptReglamento(mensaje, historialTexto, contexto);
 
       const raw = await llamarIA(prompt, 0.2, 180);
 
@@ -112,53 +143,40 @@ export async function chatEngine(mensaje: string, historial: Historial[] = []) {
   }
 
   // ----------------------------
-  // 🟢 3. INFO GENERAL
-  // ----------------------------
-  if (intent === "GENERAL") {
-    const info = buscarGeneral(mensaje);
-
-    if (info) {
-      const contexto = `${info.title}\n${info.content}`;
-
-      const prompt = buildPromptGeneral(mensaje, historialTexto, contexto);
-
-      const raw = await llamarIA(prompt, 0.3, 180);
-
-      return {
-        respuesta: asegurarRespuestaCompleta(
-          limpiarRespuesta(raw || info.content),
-        ),
-        titulo: info.title,
-        tipo: "general",
-      };
-    }
-  }
-
-  // ----------------------------
-  // 🔵 4. REGLAMENTO
+  // 🔵 3. REGLAMENTO
   // ----------------------------
   if (intent === "REGLAMENTO") {
-    const regla = buscarRegla(mensaje);
+    const regla: Regla | null = buscarRegla(mensaje);
 
     if (regla) {
       const contexto = `${regla.title}\n${regla.content}`;
-
       const prompt = buildPromptReglamento(mensaje, historialTexto, contexto);
-
       const raw = await llamarIA(prompt, 0.2, 120);
+
+      console.log("HISTORIAL:", historialTexto);
+      console.log("CONTEXTO:", contexto);
+      console.log("PREGUNTA:", mensaje);
 
       return {
         respuesta: asegurarRespuestaCompleta(
           limpiarRespuesta(raw || regla.content),
         ),
-        titulo: regla.title,
+        titulo: `🎾 ${regla.title}`, // 👈 mejor UX
         tipo: "reglamento",
       };
     }
+
+    // fallback
+    return {
+      respuesta:
+        "No encontré una regla específica 🤔. ¿Podés darme más detalles?",
+      titulo: "Reglamento",
+      tipo: "reglamento",
+    };
   }
 
   // ----------------------------
-  // 🟣 5. RESULTADOS (FUTURO)
+  // 🟣 4. RESULTADOS
   // ----------------------------
   if (intent === "RESULTADOS") {
     return {
@@ -169,7 +187,7 @@ export async function chatEngine(mensaje: string, historial: Historial[] = []) {
   }
 
   // ----------------------------
-  // 🟣 6. IA LIBRE
+  // 🟣 5. IA LIBRE
   // ----------------------------
   const prompt = buildPromptLibre(mensaje, historialTexto);
 
@@ -179,7 +197,7 @@ export async function chatEngine(mensaje: string, historial: Historial[] = []) {
     respuesta: asegurarRespuestaCompleta(
       limpiarRespuesta(
         raw ||
-          "Soy El Gran Capitán 🤖, el asistente con inteligencia artificial de IML Tenis. Estoy para ayudarte con el torneo, el reglamento y lo que necesites.",
+          "Soy Chat IML 🤖, el asistente con inteligencia artificial de IML Tenis. Estoy para ayudarte con el torneo, el reglamento y lo que necesites.",
       ),
     ),
     titulo: "Asistente",
