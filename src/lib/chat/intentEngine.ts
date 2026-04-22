@@ -3,11 +3,14 @@ import { normalizar } from "./utils";
 export type Intent =
   | "CATEGORIAS"
   | "REGLAMENTO"
-  | "RESULTADOS"
+  | "DATOS_TORNEO"
   | "PERFIL"
   | "UNKNOWN";
 
-// 🔹 keywords por intent
+// ----------------------------
+// KEYWORDS
+// ----------------------------
+
 const KEYWORDS = {
   CATEGORIAS: [
     "categorias",
@@ -26,30 +29,19 @@ const KEYWORDS = {
   REGLAMENTO: [
     "wo",
     "walkover",
-    "puntos",
-    "puntaje",
     "empate",
     "desempate",
     "pelotas",
-    "resultado",
-    "cargar",
-    "carga",
+    "cargar resultado",
     "quien carga",
     "lluvia",
-    "clima",
     "suspension",
-    "se suspende",
     "reprogramar",
     "tolerancia",
     "llegar tarde",
-    "impuntualidad",
-    "demora",
-    "lista",
     "lista buena fe",
-    "jugadores",
     "cuantos jugadores",
     "capitan",
-    "responsable",
     "playoffs",
     "clasificar",
     "ascenso",
@@ -60,48 +52,51 @@ const KEYWORDS = {
     "que pasa si",
     "puedo",
     "se puede",
-    "formacion",
-    "forma",
     "precio",
-    "costo",
     "inscripcion",
     "cuanto cuesta",
-    "horario",
-    "hora",
-    "dias",
-    "cuando se juega",
-    "torneo",
-    "iml",
-    "que es iml",
-    "donde se juega",
-    "ubicacion",
     "edad minima",
-    "clubes",
-    "equipos",
-    "cuantos son",
-    "informacion",
-    "feriados",
-    "fin de semana largo",
   ],
 
-  RESULTADOS: ["ranking", "fixture", "tabla", "posiciones"],
+  DATOS_TORNEO: [
+    "fixture",
+    "partido",
+    "partidos",
+    "resultado",
+    "resultados",
+    "tabla",
+    "posiciones",
+    "puntos",
+    "cuando juega",
+    "proximo partido",
+    "contra quien juega",
+    "como salio",
+    "como salió",
+    "ultimo partido",
+    "último partido",
+    "ranking",
+    "fair play",
+  ],
 
   PERFIL: ["sos", "quien sos", "que sos", "tu nombre", "edad tenes"],
 };
 
-// 🔥 motor de intent
+// ----------------------------
+// MOTOR
+// ----------------------------
+
 export function detectarIntent(mensaje: string): Intent {
   const msg = normalizar(mensaje);
 
   const scores: Record<Intent, number> = {
     CATEGORIAS: 0,
     REGLAMENTO: 0,
-    RESULTADOS: 0,
+    DATOS_TORNEO: 0,
     PERFIL: 0,
     UNKNOWN: 0,
   };
 
-  // 🔹 sumar puntos por keywords
+  // sumar coincidencias
   (Object.keys(KEYWORDS) as Array<keyof typeof KEYWORDS>).forEach((intent) => {
     KEYWORDS[intent].forEach((kw) => {
       if (msg.includes(kw)) {
@@ -110,7 +105,7 @@ export function detectarIntent(mensaje: string): Intent {
     });
   });
 
-  // 🔥 BOOST de intención natural (clave para reglamento)
+  // boost natural reglamento
   if (
     msg.includes("que pasa si") ||
     msg.includes("puedo") ||
@@ -119,10 +114,19 @@ export function detectarIntent(mensaje: string): Intent {
     scores.REGLAMENTO += 2;
   }
 
-  // 🔥 PRIORIDAD REAL (orden importa)
+  // boost consultas deportivas
+  if (
+    msg.includes("cuando juega") ||
+    msg.includes("como salio") ||
+    msg.includes("tabla")
+  ) {
+    scores.DATOS_TORNEO += 2;
+  }
+
+  // prioridad
   if (scores.CATEGORIAS > 0) return "CATEGORIAS";
   if (scores.REGLAMENTO > 0) return "REGLAMENTO";
-  if (scores.RESULTADOS > 0) return "RESULTADOS";
+  if (scores.DATOS_TORNEO > 0) return "DATOS_TORNEO";
   if (scores.PERFIL > 0) return "PERFIL";
 
   return "UNKNOWN";

@@ -73,10 +73,7 @@ const page = async () => {
       <div className="flex flex-col gap-y-4 justify-center">
         <Title title="Ranking de Clubes 2026" emoji="🏆" />
       </div>
-      <Info
-        text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026."
-        color="primary"
-      />
+
       <div className="overflow-x-auto">
         <table className="table w-full">
           <thead>
@@ -117,6 +114,11 @@ const page = async () => {
         </table>
       </div>
       <Labels labels={labels} />
+
+      <Info
+        text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026."
+        color="primary"
+      />
 
       <div className="p-6 rounded-2xl bg-black/10">
         <h2 className="font-bold text-primary text-center mb-4">

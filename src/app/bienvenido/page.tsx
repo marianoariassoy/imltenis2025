@@ -93,8 +93,8 @@ const Page = () => {
           description="¡Tu registro fue realizado con éxito!"
         />
         <p>
-          Ya podes contactarte con tu capitán para pueda agregarte a su lista de
-          buena fe 🚀
+          Ya podes contactarte con tu capitán para que pueda agregarte a su
+          lista de buena fe 🚀
         </p>
       </div>
     );
@@ -105,7 +105,7 @@ const Page = () => {
         <Title
           title="¡Bienvenido!"
           emoji="🚀"
-          description="Completá el formulario con tus datos y se parte de del interclubes."
+          description="Completá el formulario con tus datos y se parte del interclubes."
         />
 
         <div className="w-full m-auto">

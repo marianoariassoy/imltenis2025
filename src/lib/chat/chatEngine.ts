@@ -1,9 +1,11 @@
 import { detectarIntent } from "./intentEngine";
 import { buildPromptReglamento, buildPromptLibre } from "./promptBuilder";
+
 import { buscarCategorias } from "@/domains/categorias/categoriasEngine";
 import { categoriasBrain } from "@/domains/categorias/categoriasBrain";
 import { buscarRegla } from "@/domains/reglamento/reglamentoEngine";
 import { responderPerfil } from "@/domains/profile/profileEngine";
+import { resolverConsultaTorneo } from "@/domains/torneo/torneoEngine";
 
 import { limpiarRespuesta, construirHistorial } from "./utils";
 
@@ -29,6 +31,7 @@ type ChatResponse = {
     | "categorias"
     | "categorias_brain"
     | "reglamento"
+    | "torneo"
     | "resultados"
     | "libre";
 };
@@ -37,7 +40,6 @@ type ChatResponse = {
 // HELPERS
 // ----------------------------
 
-// 🔧 Evita respuestas cortadas
 function asegurarRespuestaCompleta(texto: string) {
   if (!texto) return texto;
 
@@ -51,7 +53,6 @@ function asegurarRespuestaCompleta(texto: string) {
   return limpio;
 }
 
-// 🔌 llamada a IA
 async function llamarIA(
   prompt: string,
   temperature = 0.2,
@@ -59,7 +60,9 @@ async function llamarIA(
 ): Promise<string> {
   const res = await fetch("http://127.0.0.1:11434/api/generate", {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: {
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({
       model: "mistral",
       prompt,
@@ -91,7 +94,7 @@ export async function chatEngine(
   console.log("INTENT:", intent);
 
   // ----------------------------
-  // 🧍 1. PERFIL
+  // 1. PERFIL
   // ----------------------------
   if (intent === "PERFIL") {
     const perfil = responderPerfil(mensaje);
@@ -106,7 +109,7 @@ export async function chatEngine(
   }
 
   // ----------------------------
-  // 🧠 2. CATEGORIAS
+  // 2. CATEGORIAS
   // ----------------------------
   if (intent === "CATEGORIAS") {
     const brain = categoriasBrain(mensaje);
@@ -124,10 +127,6 @@ export async function chatEngine(
     if (categorias) {
       const contexto = `${categorias.titulo}\n${categorias.contenido}`;
 
-      console.log("HISTORIAL:", historialTexto);
-      console.log("CONTEXTO:", contexto);
-      console.log("PREGUNTA:", mensaje);
-
       const prompt = buildPromptReglamento(mensaje, historialTexto, contexto);
 
       const raw = await llamarIA(prompt, 0.2, 180);
@@ -143,51 +142,74 @@ export async function chatEngine(
   }
 
   // ----------------------------
-  // 🔵 3. REGLAMENTO
+  // 3. REGLAMENTO
   // ----------------------------
   if (intent === "REGLAMENTO") {
     const regla: Regla | null = buscarRegla(mensaje);
 
     if (regla) {
       const contexto = `${regla.title}\n${regla.content}`;
-      const prompt = buildPromptReglamento(mensaje, historialTexto, contexto);
-      const raw = await llamarIA(prompt, 0.2, 120);
 
-      console.log("HISTORIAL:", historialTexto);
-      console.log("CONTEXTO:", contexto);
-      console.log("PREGUNTA:", mensaje);
+      const prompt = buildPromptReglamento(mensaje, historialTexto, contexto);
+
+      const raw = await llamarIA(prompt, 0.2, 120);
 
       return {
         respuesta: asegurarRespuestaCompleta(
           limpiarRespuesta(raw || regla.content),
         ),
-        titulo: `🎾 ${regla.title}`, // 👈 mejor UX
+        titulo: `🎾 ${regla.title}`,
         tipo: "reglamento",
       };
     }
 
-    // fallback
     return {
       respuesta:
-        "No encontré una regla específica 🤔. ¿Podés darme más detalles?",
+        "No encontré una regla específica 🤔. ¿Podés darme un poco más de detalle?",
       titulo: "Reglamento",
       tipo: "reglamento",
     };
   }
 
   // ----------------------------
-  // 🟣 4. RESULTADOS
+  // 4. DATOS DEL TORNEO
   // ----------------------------
-  if (intent === "RESULTADOS") {
+  if (intent === "DATOS_TORNEO") {
+    const datos = await resolverConsultaTorneo(mensaje);
+
+    if (datos) {
+      const prompt = `
+Sos Chat IML.
+
+Respondé de forma breve, clara y natural usando solamente estos datos.
+
+Datos:
+${JSON.stringify(datos)}
+
+Pregunta:
+${mensaje}
+
+Respuesta:
+`;
+
+      const raw = await llamarIA(prompt, 0.2, 120);
+
+      return {
+        respuesta: asegurarRespuestaCompleta(limpiarRespuesta(raw)),
+        titulo: "Torneo",
+        tipo: "torneo",
+      };
+    }
+
     return {
-      respuesta: "Todavía no tengo resultados cargados 😄, pero falta poco.",
-      titulo: "Resultados",
-      tipo: "resultados",
+      respuesta: "No pude encontrar esa información del torneo por ahora.",
+      titulo: "Torneo",
+      tipo: "torneo",
     };
   }
 
   // ----------------------------
-  // 🟣 5. IA LIBRE
+  // 5. IA LIBRE
   // ----------------------------
   const prompt = buildPromptLibre(mensaje, historialTexto);
 
@@ -197,7 +219,7 @@ export async function chatEngine(
     respuesta: asegurarRespuestaCompleta(
       limpiarRespuesta(
         raw ||
-          "Soy Chat IML 🤖, el asistente con inteligencia artificial de IML Tenis. Estoy para ayudarte con el torneo, el reglamento y lo que necesites.",
+          "Soy Chat IML 🤖, el asistente virtual del torneo. Estoy para ayudarte con lo que necesites.",
       ),
     ),
     titulo: "Asistente",
