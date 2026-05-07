@@ -55,3 +55,7 @@ body {
   outline: none;
   box-shadow: none;
 }
+
+.text-sm {
+  font-size: 0.9rem;
+}
