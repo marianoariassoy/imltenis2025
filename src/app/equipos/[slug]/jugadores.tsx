@@ -23,10 +23,7 @@ const Jugadores = async ({
       name: "Jugador",
       value: "",
     },
-    {
-      name: "Edad",
-      value: "",
-    },
+
     {
       name: "PJ",
       value: "Parciales jugados",
@@ -42,6 +39,10 @@ const Jugadores = async ({
     {
       name: "Dif.",
       value: "Diferencia de puntos",
+    },
+    {
+      name: "Edad",
+      value: "",
     },
     {
       name: " ",
@@ -94,12 +95,17 @@ const Jugadores = async ({
                     link={`/jugadores/${item.slug}`}
                   />
                 </td>
-                <td>{item.age > 1 ? item.age : null}</td>
-
                 <td>{item.series_total}</td>
                 <td>{item.series_won}</td>
                 <td>{item.series_lost}</td>
-                <td>{item.series_dif}</td>
+                <td>
+                  <span className="text-secondary">{item.series_dif}</span>
+                </td>
+                <td width={40}>
+                  <span className="text-secondary">
+                    {item.age > 1 ? item.age : null}
+                  </span>
+                </td>
                 <td className="w-40">
                   <Barra end={(item.series_won / item.series_total) * 100} />
                 </td>
