@@ -11,10 +11,12 @@ const Tabla = async ({
   group,
   type,
   labels,
+  twoMatches,
 }: {
   group: Group;
   type: number;
   labels: Labels[];
+  twoMatches: boolean;
 }) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/${
@@ -54,48 +56,56 @@ const Tabla = async ({
                 >
                   {item.match_won}
                 </td>
-                {labels.length > 10 && <td>{item.series_won}</td>}
+                {!twoMatches && <td>{item.series_won}</td>}
                 <td>{item.d1_won}</td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
                 <td>{item.fairplay}</td>
-                <td>{item.series_total}</td>
                 <td>
-                  {item.series_total > 0
-                    ? (
-                        (Number(item.match_won) /
-                          (Number(item.series_total) *
-                            (labels.length > 9 ? 3 : 2))) *
-                        100
-                      ).toFixed(0)
-                    : 0}
+                  <span className="text-secondary">{item.series_total}</span>
                 </td>
-                <td>{item.wo}</td>
                 <td>
-                  <div className="flex gap-x-2">
-                    {item.series.map((item, index) => (
-                      <span key={index}>
-                        {item ? (
-                          <span className="text-primary">
-                            <Bull />
-                          </span>
-                        ) : (
-                          <span className="text-white/30 dark:text-black/30">
-                            <Bull />
-                          </span>
-                        )}
-                      </span>
-                    ))}
-                    {Array(5 - item.series.length)
-                      .fill(0)
-                      .map((_, index) => (
+                  <span className="text-secondary">
+                    {item.series_total > 0
+                      ? (
+                          (Number(item.match_won) /
+                            (Number(item.series_total) *
+                              (labels.length > 9 ? 3 : 2))) *
+                          100
+                        ).toFixed(0)
+                      : 0}
+                  </span>
+                </td>
+                <td>
+                  <span className="text-secondary">{item.wo}</span>
+                </td>
+                <td>
+                  {!twoMatches && (
+                    <div className="flex gap-x-2">
+                      {item.series.map((item, index) => (
                         <span key={index}>
-                          <span className="text-white/10 dark:text-black/10">
-                            <Bull />
-                          </span>
+                          {item ? (
+                            <span className="text-primary">
+                              <Bull />
+                            </span>
+                          ) : (
+                            <span className="text-white/30 dark:text-black/30">
+                              <Bull />
+                            </span>
+                          )}
                         </span>
                       ))}
-                  </div>
+                      {Array(5 - item.series.length)
+                        .fill(0)
+                        .map((_, index) => (
+                          <span key={index}>
+                            <span className="text-white/10 dark:text-black/10">
+                              <Bull />
+                            </span>
+                          </span>
+                        ))}
+                    </div>
+                  )}
                 </td>
               </tr>
             ))}

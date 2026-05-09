@@ -61,7 +61,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Suspense fallback={<Loader />}>
         <Groups
           id_tournament={data.id}
-          mixto={+data.mode === 3 ? true : false}
+          twoMatches={+data.mode === 3 ? true : false}
         />
       </Suspense>
 

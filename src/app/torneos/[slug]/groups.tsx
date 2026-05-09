@@ -8,10 +8,10 @@ import Fixture from "./fixture-group";
 
 const groups = async ({
   id_tournament,
-  mixto,
+  twoMatches,
 }: {
   id_tournament: string;
-  mixto: boolean;
+  twoMatches: boolean;
 }) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${id_tournament}/groups`,
@@ -66,7 +66,7 @@ const groups = async ({
     },
   ];
 
-  const labelsMxto = [
+  const labels_2 = [
     {
       name: "Equipo",
       value: "",
@@ -103,10 +103,6 @@ const groups = async ({
       name: "WO",
       value: "Walkovers (serie)",
     },
-    {
-      name: "Ult. 5 series",
-      value: "",
-    },
   ];
 
   return (
@@ -119,8 +115,9 @@ const groups = async ({
           <Suspense fallback={<Loader />}>
             <Table
               group={item}
-              labels={mixto ? labelsMxto : labels}
+              labels={twoMatches ? labels_2 : labels}
               type={+item.type}
+              twoMatches={twoMatches}
             />
           </Suspense>
 
@@ -128,7 +125,7 @@ const groups = async ({
         </div>
       ))}
 
-      <Labels labels={labels} />
+      <Labels labels={twoMatches ? labels_2 : labels} />
 
       {data[0].tournament_description && (
         <Info text={data[0].tournament_description} />
