@@ -142,8 +142,18 @@ export const categories = [
     id: 4,
   },
   {
+    name: "Caballeros Cuarta +40",
+    slug: "caballeros-cuarta-40-apertura-2026",
+    id: 4,
+  },
+  {
     name: "Caballeros Quinta Libre",
     slug: "caballeros-quinta-libre-apertura-2026",
+    id: 5,
+  },
+  {
+    name: "Caballeros Quinta +40",
+    slug: "caballeros-quinta-40-apertura-2026",
     id: 5,
   },
   {
