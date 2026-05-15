@@ -4,8 +4,6 @@ import Fixture from "./fixtures";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Image from "next/image";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Instagram, Info } from "@/lib/icons";
 
 export async function generateMetadata({
@@ -86,17 +84,19 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
             <Info />
-            Info sede
+            Info club
           </Link>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={`${data.ig}`}
-            className="flex gap-x-2 font-medium items-center text-primary hover:underline"
-          >
-            <Instagram />
-            Cuenta oficial
-          </a>
+          {data.ig ? (
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={`${data.ig}`}
+              className="flex gap-x-2 font-medium items-center text-primary hover:underline"
+            >
+              <Instagram />
+              Cuenta oficial
+            </a>
+          ) : null}
         </div>
       </header>
 
