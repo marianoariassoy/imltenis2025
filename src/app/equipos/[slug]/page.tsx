@@ -6,6 +6,7 @@ import Loader from "@/components/Loader";
 import Image from "next/image";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Instagram, Info } from "@/lib/icons";
 
 export async function generateMetadata({
   params,
@@ -84,9 +85,18 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             href={`/clubes/${data.club_slug}`}
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
-            <FontAwesomeIcon icon={faCircleInfo} size="lg" width={20} />
-            Info de la sede
+            <Info />
+            Info sede
           </Link>
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={`${data.ig}`}
+            className="flex gap-x-2 font-medium items-center text-primary hover:underline"
+          >
+            <Instagram />
+            Cuenta oficial
+          </a>
         </div>
       </header>
 

@@ -71,7 +71,7 @@ const Jugadores = async ({
       </div>
       {withoutImage && (
         <Aviso
-          text="Enviar las fotos de perfil de los jugadores que aún faltan a hola@imltenis.com.ar"
+          text="Enviar fotos de perfil faltantes a hola@imltenis.com.ar"
           type="atention"
         />
       )}

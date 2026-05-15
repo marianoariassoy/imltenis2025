@@ -1,8 +1,4 @@
-import {
-  faCircleExclamation,
-  faCircleInfo,
-} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Alert, Info } from "@/lib/icons";
 
 const Aviso = ({
   text,
@@ -13,13 +9,7 @@ const Aviso = ({
 }) => {
   return (
     <div className="flex gap-x-[0.4rem] items-center mx-auto text-primary">
-      <div>
-        {type === "atention" ? (
-          <FontAwesomeIcon icon={faCircleExclamation} size="lg" width={20} />
-        ) : (
-          <FontAwesomeIcon icon={faCircleInfo} size="lg" width={20} />
-        )}
-      </div>
+      <div>{type === "atention" ? <Alert /> : <Info />}</div>
       <span className="leading-snug text-secondary">{text}</span>
     </div>
   );
