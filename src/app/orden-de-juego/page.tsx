@@ -52,9 +52,13 @@ const page = async () => {
               <tr key={item.id}>
                 <td>
                   {item.top ? <span className="mr-1 text-xl">⭐️</span> : null}
-                  <span>{item.date}</span>
+                  <span className="text-primary">{item.date}</span>
                 </td>
-                <td>{item.hour ? <span>{item.hour}</span> : "-"}</td>
+                <td>
+                  <span className="text-primary">
+                    {item.hour ? <span>{item.hour}</span> : "-"}
+                  </span>
+                </td>
                 <td>
                   <Item
                     link={`/equipos/${item.home_id}`}
