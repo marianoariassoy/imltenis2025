@@ -1,8 +1,7 @@
 import Title from "@/components/Title";
-import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import Info from "@/components/Info";
-import Barra from "@/components/Barra";
+import Card from "./card";
 
 export const metadata = {
   title: "Ranking de Clubes",
@@ -69,50 +68,20 @@ const page = async () => {
   ];
 
   return (
-    <section className="flex flex-col gap-y-6">
-      <div className="flex flex-col gap-y-4 justify-center">
-        <Title title="Ranking de Clubes 2026" emoji="🏆" />
-      </div>
+    <section className="flex flex-col gap-y-8">
+      <Title title="Ranking de Clubes 2026" emoji="🏆" />
 
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              {labels.map((item, index) => (
-                <th key={index}>{item.name}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data
-              // .filter((item) => +item.matches_won > 0)
-              .map((item, index) => (
-                <tr key={index}>
-                  <td>
-                    <Item
-                      num={index + 1}
-                      image={item.image}
-                      title={item.name}
-                      link={`/clubes/${item.club_slug}`}
-                      active={index < 4 ? true : false}
-                    />
-                  </td>
-                  <td
-                    className={`font-bold ${index < 4 ? "text-primary" : ""}`}
-                  >
-                    {item.matches_won}
-                  </td>
-                  <td>{item.series_won}</td>
-                  <td>{item.series_total}</td>
-                  <td>
-                    <Barra
-                      end={(+item.matches_won / (+item.series_total * 3)) * 100}
-                    />
-                  </td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+      <div className="grid grid-cols-1 lg:grid-cols-1 gap-4">
+        {data
+          // .filter((item) => +item.matches_won > 0)
+          .map((item, index) => (
+            <Card
+              key={index}
+              item={item}
+              index={index}
+              active={index < 4 ? true : false}
+            />
+          ))}
       </div>
       <Labels labels={labels} />
 

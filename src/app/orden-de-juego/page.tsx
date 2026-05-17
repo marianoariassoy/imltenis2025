@@ -1,6 +1,6 @@
 import Title from "@/components/Title";
 import Link from "next/link";
-import Item from "@/components/ItemSmall";
+import Item from "@/components/ItemMedium";
 import { Serie } from "@/types/";
 
 export const metadata = {
