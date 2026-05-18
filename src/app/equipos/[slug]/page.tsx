@@ -5,6 +5,7 @@ import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Image from "next/image";
 import { Instagram, Info } from "@/lib/icons";
+import { Container } from "@/components/Container";
 
 export async function generateMetadata({
   params,
@@ -54,7 +55,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <header className="items-center flex flex-col gap-y-2">
         <Link href={`/clubes/${data.club_slug}`}>
           <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
@@ -107,7 +108,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Suspense fallback={<Loader />}>
         <Fixture id={data.id} />
       </Suspense>
-    </section>
+    </Container>
   );
 };
 

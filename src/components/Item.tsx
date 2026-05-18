@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { obtenerAbreviado } from "@/lib/abbreviations";
 
 interface Item {
   num?: number;
@@ -11,32 +12,32 @@ interface Item {
 
 const TitleRow = ({ num, image, title, link, active }: Item) => {
   return (
-    <div className="flex items-center gap-x-2">
+    <div className="flex items-center gap-x-3">
       {num && (
-        <div className={`font-bold mr-2 ${active ? "text-primary" : null}`}>
+        <div className={`font-bold lg:mr-1 ${active ? "text-primary" : null}`}>
           {num}
         </div>
       )}
 
-      <div className="w-16 h-16 rounded-full overflow-hidden bg-white/10">
+      <div className="w-14 h-14 rounded-full overflow-hidden bg-white/10">
         {image ? (
           <Link href={link}>
             <Image
               src={image}
               alt={title}
-              width={64}
-              height={64}
+              width={56}
+              height={56}
               className="w-full h-full object-cover hover:opacity-70 transition-opacity"
             />
           </Link>
         ) : null}
       </div>
-
       <Link
         href={link}
-        className="hover:text-primary text-nowrap font-medium pr-3"
+        className="hover:text-primary text-nowrap font-bold pr-4"
       >
-        {title}
+        <span className="hidden md:block">{title}</span>
+        <span className="block md:hidden">{obtenerAbreviado(title)}</span>
       </Link>
     </div>
   );

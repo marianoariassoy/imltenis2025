@@ -5,7 +5,7 @@ const footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col px-4 py-2 pb-6 mt-8 z-30 text-secondary text-sm">
+    <footer className="flex flex-col px-4 py-8 text-secondary">
       <div className="text-center flex flex-col">
         <span className="font-bold">Interclubes IML Tenis</span>
         <div className="flex items-center flex-wrap justify-center gap-x-1 ">

@@ -2,6 +2,7 @@ import Title from "@/components/Title";
 import Link from "next/link";
 import Item from "@/components/ItemMedium";
 import { Serie } from "@/types/";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Orden de juego",
@@ -27,7 +28,7 @@ const page = async () => {
     );
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <Title
         title={`Orden de juego`}
         description={
@@ -91,7 +92,7 @@ const page = async () => {
         <span className="mr-1 text-xl">⭐️</span>
         Serie a otorgarse el premio Jugador Destacado Yuka de la fecha.
       </div> */}
-    </section>
+    </Container>
   );
 };
 

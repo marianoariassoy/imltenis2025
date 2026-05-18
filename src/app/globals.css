@@ -6,7 +6,7 @@
   --primary: #fe514e;
   --foreground: #e4e3e3;
   --secondary: #999999;
-  --background: #242424;
+  --background: #222222;
 }
 
 @theme {
@@ -23,8 +23,6 @@ body {
   font-weight: 500;
   font-size: 0.9rem;
   padding-right: 1rem;
-  padding-bottom: 1rem;
-  text-transform: uppercase;
 }
 
 .table tr td {
@@ -60,14 +58,4 @@ body {
 
 .text-sm {
   font-size: 0.9rem;
-}
-
-.table-2 thead tr th {
-  color: var(--secondary);
-  font-weight: 600;
-  font-size: 1.2rem;
-}
-
-.table-2 tbody tr td {
-  font-size: 1.2rem;
 }

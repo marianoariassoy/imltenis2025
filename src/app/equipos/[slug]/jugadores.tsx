@@ -55,7 +55,7 @@ const Jugadores = async ({
   return (
     <section className="flex flex-col gap-y-4">
       <div className="text-center">
-        <h1 className="text-primary text-base font-semibold">
+        <h1 className="text-primary font-semibold text-lg">
           🔥 Lista de buena fe
         </h1>
         <div className="flex items-center justify-center gap-x-1">
@@ -71,7 +71,7 @@ const Jugadores = async ({
       </div>
       {withoutImage && (
         <Aviso
-          text="Enviar fotos de perfil faltantes a hola@imltenis.com.ar"
+          text="Por favor enviar fotos de perfil faltantes a hola@imltenis.com.ar"
           type="atention"
         />
       )}

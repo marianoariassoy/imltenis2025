@@ -1,6 +1,7 @@
 import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Ranking de Campeones",
@@ -62,7 +63,7 @@ const page = async () => {
   ];
 
   return (
-    <section className="flex flex-col gap-y-8">
+    <Container>
       <Title title="Ranking de Campeones" emoji="👑" />
       <div className="overflow-x-auto">
         <table className="table w-full mb-2">
@@ -98,7 +99,7 @@ const page = async () => {
       </div>
 
       <Labels labels={labels} />
-    </section>
+    </Container>
   );
 };
 

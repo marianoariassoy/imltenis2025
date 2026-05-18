@@ -14,7 +14,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section>
+    <section className="h-screen w-full">
       <div className="absolute top-1/2 left-1/2 fade-in-slow text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30 opacity-0">
         <h1
           className="text-[3.2rem] md:text-[5.5rem] font-black text-primary leading-none tracking-tight flex flex-col lg:hover:brightness-125 transition-all cursor-pointer"
@@ -25,12 +25,15 @@ export default function Home() {
           <span>Apertura</span>
           <span>Yuka 2026</span>
         </h1>
-        {/* <Link href="/nosotros" className="font-medium mt-4 hover:underline">
-          Ver información →
-        </Link> */}
+        <button
+          className="font-medium mt-4 hover:underline"
+          onClick={() => setOpen(!open)}
+        >
+          Ver categorías →
+        </button>
       </div>
-      <div className="fade-in fixed h-screen w-screen left-0 top-0 -z-10 bg-black/60 blur-sm">
-        <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-black/40 via-black/0 to-black/40 z-20"></div>
+      <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 bg-black/60 overflow-hidden">
+        <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-black/30 to-black/20 z-20"></div>
         <video
           ref={videoRef}
           autoPlay
@@ -38,7 +41,7 @@ export default function Home() {
           muted
           playsInline
           preload="auto"
-          className="opacity-60 h-screen w-screen object-cover saturate-[.9]"
+          className="opacity-60 blur-sm h-screen blur-xs w-screen object-cover saturate-[.9]"
         >
           <source src="/videos/video.webm" type="video/webm" />
           <source src="/videos/video.mp4" type="video/mp4" />

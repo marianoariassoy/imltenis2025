@@ -4,6 +4,7 @@ import reglamentoData from "@/data/reglamento.json";
 import type { ReglamentoItem } from "@/types";
 const reglamento = reglamentoData as ReglamentoItem[];
 import Aviso from "@/components/Aviso";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Reglamento IML Tenis",
@@ -27,11 +28,11 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <Title title="Reglamento Clausura 2026" emoji="🤝" description="" />
       <Filter data={reglamento} />
       <Aviso text="Última actualización: Abril 2026" />
-    </section>
+    </Container>
   );
 };
 

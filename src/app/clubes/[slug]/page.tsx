@@ -5,6 +5,7 @@ import Loader from "@/components/Loader";
 import Estadisticas from "./estadisticas";
 import Image from "next/image";
 import Fixture from "./fixture";
+import { Container } from "@/components/Container";
 
 export async function generateMetadata({
   params,
@@ -54,7 +55,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <header className="items-center flex flex-col gap-y-2">
         <div className="w-24 h-24 rounded-full overflow-hidden">
           <Image
@@ -165,7 +166,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Suspense fallback={<Loader />}>
         <Equipos id={data.id} />
       </Suspense>
-    </section>
+    </Container>
   );
 };
 

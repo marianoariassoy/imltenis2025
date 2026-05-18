@@ -4,6 +4,7 @@ import Groups from "./groups";
 import Fixture from "./fixture";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
+import { Container } from "@/components/Container";
 
 export async function generateMetadata({
   params,
@@ -53,7 +54,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <Title title={data.name + " " + data.season} />
 
       {data.team_champion_id && <Campeon data={data} />}
@@ -68,7 +69,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Suspense fallback={<Loader />}>
         <Fixture title={true} id_tournament={data.id} />
       </Suspense>
-    </section>
+    </Container>
   );
 };
 

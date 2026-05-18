@@ -2,6 +2,7 @@ import Title from "@/components/Title";
 import Link from "next/link";
 import Item from "@/components/ItemTeam";
 import Juegos from "./juegos";
+import { Container } from "@/components/Container";
 
 export async function generateMetadata({
   params,
@@ -51,7 +52,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <header className="flex flex-col items-center">
         <Title title={`${data.date} ${data.hour}`} />
         <Link
@@ -82,7 +83,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       </div>
 
       <Juegos id={id} />
-    </section>
+    </Container>
   );
 };
 

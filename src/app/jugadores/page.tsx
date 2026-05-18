@@ -1,5 +1,6 @@
 import Title from "@/components/Title";
 import Filter from "./Filter";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Jugadores",
@@ -12,10 +13,12 @@ const Page = async () => {
   const data = await response.json();
 
   return (
-    <section className="flex flex-col gap-y-6 max-w-md mx-auto">
-      <Title title="Jugadores" emoji="🧑👩" />
-      <Filter data={data} />
-    </section>
+    <Container>
+      <div className="w-full max-w-xl mx-auto flex flex-col gap-y-8">
+        <Title title="Jugadores" emoji="🧑👩" />
+        <Filter data={data} />
+      </div>
+    </Container>
   );
 };
 

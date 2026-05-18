@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Bull } from "@/lib/icons";
 import ItemSmall from "@/components/ItemSmall";
-import Item from "@/components/Item";
+import Item from "@/components/ItemMedium";
 import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
@@ -13,7 +13,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
       {title && (
         <div className="flex flex-col items-center justify-center">
           <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic mb-2">
-            Fixture
+            Calendario
           </h1>
           <h2 className="text-secondary">
             {dataFiltered.length} series disputadas de {data.length} (
@@ -70,7 +70,6 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                         link={`/equipos/${item.home_slug}`}
                         title={item.home_name}
                         image={item.home_image}
-                        active={false}
                       />
                     )}
                   </td>
@@ -106,7 +105,6 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                         link={`/equipos/${item.away_slug}`}
                         title={item.away_name}
                         image={item.away_image}
-                        active={false}
                       />
                     )}
                   </td>

@@ -4,6 +4,7 @@ import Loader from "@/components/Loader";
 import Table from "./table";
 import Filter from "./filter";
 import Aviso from "@/components/Aviso";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Ranking de Jugadores Mito Gafas",
@@ -33,7 +34,7 @@ const page = async ({
   const { category_slug } = await params;
 
   return (
-    <section className="flex flex-col gap-y-4">
+    <Container>
       <Title
         title="Ranking de Jugadores"
         emoji="😎"
@@ -51,7 +52,7 @@ const page = async ({
         type="atention"
         text="Los datos se actualizan los días martes de cada semana"
       />
-    </section>
+    </Container>
   );
 };
 

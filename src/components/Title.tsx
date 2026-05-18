@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const Header = ({ title, subtitle, description, emoji }: HeaderProps) => {
   return (
-    <header className="flex flex-col items-center justify-center text-center px-12 mb-2">
+    <header className="flex flex-col items-center justify-center text-center px-12">
       {emoji && <div className="text-2xl">{emoji}</div>}
       <div className="text-primary">
         <h1 className="font-bold leading-7 text-[1.3rem] tracking-tight">

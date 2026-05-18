@@ -10,6 +10,7 @@ import Button from "@/components/Button";
 import Loader from "@/components/Loader";
 import Error from "./Error";
 import Aviso from "@/components/Aviso";
+import { Container } from "@/components/Container";
 
 interface User {
   name: string;
@@ -100,7 +101,7 @@ const Page = () => {
     );
 
   return (
-    <section>
+    <Container>
       <div className="flex flex-col gap-y-6 max-w-md m-auto lg:max-w-none">
         <Title
           title="¡Bienvenido!"
@@ -237,7 +238,7 @@ const Page = () => {
       </div>
 
       <Toaster />
-    </section>
+    </Container>
   );
 };
 

@@ -1,5 +1,6 @@
 import Title from "@/components/Title";
 import Image from "next/image";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Nosotros",
@@ -7,7 +8,7 @@ export const metadata = {
 
 const page = () => {
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <Title title="¡Hola!" emoji="👋" />
 
       <div className="flex flex-col gap-y-6 max-w-3xl mx-auto">
@@ -76,7 +77,7 @@ const page = () => {
           historia.
         </p>
       </div>
-    </section>
+    </Container>
   );
 };
 

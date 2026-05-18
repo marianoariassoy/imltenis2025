@@ -3,6 +3,7 @@ import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import Info from "@/components/Info";
 import Barra from "@/components/Barra";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Ranking de Clubes",
@@ -69,7 +70,7 @@ const page = async () => {
   ];
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <div className="flex flex-col gap-y-4 justify-center">
         <Title title="Ranking de Clubes 2026" emoji="🏆" />
       </div>
@@ -140,7 +141,7 @@ const page = async () => {
           </div>
         </div>
       </div>
-    </section>
+    </Container>
   );
 };
 

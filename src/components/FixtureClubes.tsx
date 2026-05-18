@@ -54,10 +54,12 @@ const FixtureMain = ({
                           <Bull />
                         </span>
                       )}
-                      <span>{item.date}</span>
+                      <span className="text-primary">{item.date}</span>
                     </div>
                   </td>
-                  <td>{item.hour}</td>
+                  <td>
+                    <span className="text-primary">{item.hour}</span>
+                  </td>
                   <td>
                     {title ? (
                       <ItemSmall

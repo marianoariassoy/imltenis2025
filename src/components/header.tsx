@@ -80,7 +80,7 @@ const Header = () => {
 
       <button
         onClick={scrollToTop}
-        className={`fixed bottom-6 right-4 z-50 bg-primary text-background p-3 rounded-full w-10 h-10 flex items-center justify-center shadow-lg transition-all duration-300 ${
+        className={`fixed bottom-6 right-4 z-50 bg-primary text-background p-3 rounded-full w-12 h-12 hover:scale-105 flex items-center justify-center shadow-lg transition-all duration-300 ${
           showTopButton
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4 pointer-events-none"

@@ -1,6 +1,7 @@
 import Title from "@/components/Title";
 import Link from "next/link";
-import { Tournament } from "../../types";
+import { Tournament } from "@/types";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Torneos anteriores",
@@ -16,7 +17,7 @@ const page = async () => {
   const data = (await response.json()) as Tournament[];
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <Container>
       <Title title="Torneos Anteriores" emoji="👴" description="2023-2025" />
 
       <div className="flex flex-col text-center items-center font-medium">
@@ -33,7 +34,7 @@ const page = async () => {
               </Link>
             ))}
       </div>
-    </section>
+    </Container>
   );
 };
 
