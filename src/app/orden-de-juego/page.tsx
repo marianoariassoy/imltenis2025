@@ -41,8 +41,7 @@ const page = async () => {
         <table className="table w-full mb-3">
           <thead>
             <tr>
-              <th scope="col">Fecha</th>
-              <th scope="col">Hora</th>
+              <th scope="col">Fecha y Hora</th>
               <th scope="col">Local</th>
               <th scope="col">Visitante</th>
               <th scope="col">Categoría</th>
@@ -52,13 +51,11 @@ const page = async () => {
             {data.map((item) => (
               <tr key={item.id}>
                 <td>
-                  {item.top ? <span className="mr-1 text-xl">⭐️</span> : null}
-                  <span className="text-primary">{item.date}</span>
-                </td>
-                <td>
-                  <span className="text-primary">
-                    {item.hour ? <span>{item.hour}</span> : "-"}
-                  </span>
+                  <div className="text-primary flex gap-x-2">
+                    {item.top ? <span className="text-xl">⭐️</span> : null}
+                    <span>{item.date}</span>
+                    <span>{item.hour ? <span>{item.hour}</span> : "-"}</span>
+                  </div>
                 </td>
                 <td>
                   <Item

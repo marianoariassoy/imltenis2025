@@ -1,4 +1,5 @@
 import Title from "@/components/Title";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Terminos y Condiciones IML Tenis",
@@ -112,7 +113,7 @@ export const termsAndConditions = [
 
 const page = () => {
   return (
-    <section className="flex flex-col gap-y-8">
+    <Container>
       <Title title="Terminos y Condiciones" emoji="🤝" description="" />
       <div className="flex flex-col gap-y-4 text-sm">
         {termsAndConditions.map((item, index) => (
@@ -128,7 +129,7 @@ const page = () => {
           </article>
         ))}
       </div>
-    </section>
+    </Container>
   );
 };
 

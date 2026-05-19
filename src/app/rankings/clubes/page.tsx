@@ -2,7 +2,6 @@ import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import Info from "@/components/Info";
-import Barra from "@/components/Barra";
 import { Container } from "@/components/Container";
 
 export const metadata = {
@@ -63,10 +62,6 @@ const page = async () => {
       name: "SJ",
       value: "Series jugadas",
     },
-    {
-      name: "",
-      value: "",
-    },
   ];
 
   return (
@@ -105,11 +100,6 @@ const page = async () => {
                   </td>
                   <td>{item.series_won}</td>
                   <td>{item.series_total}</td>
-                  <td>
-                    <Barra
-                      end={(+item.matches_won / (+item.series_total * 3)) * 100}
-                    />
-                  </td>
                 </tr>
               ))}
           </tbody>
