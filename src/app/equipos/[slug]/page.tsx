@@ -56,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <Container>
-      <header className="items-center flex flex-col gap-y-2">
+      <header className="items-center flex flex-col">
         <Link href={`/clubes/${data.club_slug}`}>
           <div className="w-24 h-24 rounded-full overflow-hidden shadow-lg">
             <Image

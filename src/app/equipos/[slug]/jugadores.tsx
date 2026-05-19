@@ -53,12 +53,12 @@ const Jugadores = async ({
   const withoutImage = data.some((item) => item.image === null);
 
   return (
-    <section className="flex flex-col gap-y-4">
+    <section className="flex flex-col gap-y-4 -mt-4">
       <div className="text-center">
         <h1 className="text-primary font-semibold text-lg">
           🔥 Lista de buena fe
         </h1>
-        <div className="flex items-center justify-center gap-x-1">
+        <div className="flex items-center justify-center gap-x-2">
           <h2 className="font-medium text-secondary">
             {captain_name} (Capitán)
           </h2>
