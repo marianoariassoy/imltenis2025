@@ -1,6 +1,6 @@
 import Title from "@/components/Title";
 import Link from "next/link";
-import Item from "@/components/ItemMedium";
+import Item from "@/components/ItemSmall";
 import { Serie } from "@/types/";
 import { Container } from "@/components/Container";
 

@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { useMenu } from "@/context/menu-context";
-// import Link from "next/link";
 
 export default function Home() {
   const { open, setOpen } = useMenu();
@@ -32,8 +31,9 @@ export default function Home() {
           Ver categorías →
         </button>
       </div>
+
       <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 bg-black/60 overflow-hidden">
-        <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-black/30 to-black/20 z-20"></div>
+        <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-black/20 to-black/10 z-20"></div>
         <video
           ref={videoRef}
           autoPlay
@@ -41,7 +41,7 @@ export default function Home() {
           muted
           playsInline
           preload="auto"
-          className="opacity-60 blur-sm h-screen blur-xs w-screen object-cover saturate-[.9]"
+          className="opacity-60 blur-sm h-screen blur-xs w-screen object-cover saturate-[.8]"
         >
           <source src="/videos/video.webm" type="video/webm" />
           <source src="/videos/video.mp4" type="video/mp4" />

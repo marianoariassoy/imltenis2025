@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import Item from "@/components/ItemSmall";
+import Item from "@/components/ItemMedium";
 import { Player } from "@/types";
 
 const Filter = ({ data }: { data: Player[] }) => {
@@ -17,7 +17,7 @@ const Filter = ({ data }: { data: Player[] }) => {
 
   const filteredData = filter
     ? data.filter((item) =>
-        removeAccents(item.name).includes(removeAccents(filter))
+        removeAccents(item.name).includes(removeAccents(filter)),
       )
     : [];
 

@@ -2,9 +2,10 @@ export function obtenerAbreviado(nombre: string, maxLetras = 3) {
   if (!nombre) return "";
 
   if (nombre === "Ecotenis") return "ECO";
-  if (nombre === "AFAR") return "AFAR";
+  // if (nombre === "AFAR") return "AFAR";
   if (nombre.includes("El Retiro")) return "RTZ";
   if (nombre.includes("SAG")) return "SAG";
+  if (nombre.includes("CACY")) return "CYP";
 
   const palabras = nombre.trim().split(/\s+/);
 
