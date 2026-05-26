@@ -1,4 +1,4 @@
-import Item from "@/components/ItemMedium";
+import Item from "@/components/ItemPlayer";
 import { Player } from "@/types";
 import Labels from "@/components/Labels";
 import Barra from "@/components/Barra";
