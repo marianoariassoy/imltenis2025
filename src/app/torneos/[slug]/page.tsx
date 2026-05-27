@@ -6,16 +6,40 @@ import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import { Container } from "@/components/Container";
 
+async function fetchTournament(slug: string) {
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${slug}`,
+    {
+      headers: {
+        Accept: "application/json",
+        "User-Agent": "Mozilla/5.0",
+      },
+      cache: "no-store",
+    },
+  );
+
+  if (!response.ok) {
+    const text = await response.text();
+
+    console.log("API ERROR:");
+    console.log("STATUS:", response.status);
+    console.log("BODY:", text);
+
+    return null;
+  }
+
+  return response.json();
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${slug}`,
-  );
-  const data = await response.json();
+
+  const data = await fetchTournament(slug);
+
   if (!data) return null;
 
   return {
@@ -39,18 +63,11 @@ export async function generateMetadata({
   };
 }
 
-async function getServerSideProps(slug: string) {
-  const response = await fetch(
-    `${process.env.NEXT_PUBLIC_API_URL}/tournaments/${slug}`,
-  );
-  const data = await response.json();
-  if (!data) return null;
-  return data;
-}
-
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
-  const data = await getServerSideProps(slug);
+
+  const data = await fetchTournament(slug);
+
   if (!data) return null;
 
   return (
@@ -60,10 +77,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       {data.team_champion_id && <Campeon data={data} />}
 
       <Suspense fallback={<Loader />}>
-        <Groups
-          id_tournament={data.id}
-          twoMatches={+data.mode === 3 ? true : false}
-        />
+        <Groups id_tournament={data.id} twoMatches={+data.mode === 3} />
       </Suspense>
 
       <Suspense fallback={<Loader />}>
