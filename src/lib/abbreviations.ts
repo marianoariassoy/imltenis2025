@@ -7,6 +7,8 @@ export function obtenerAbreviado(nombre: string, maxLetras = 3) {
   if (nombre.includes("SAG")) return "SAG";
   if (nombre.includes("CACY")) return "CYP";
   if (nombre.includes("Italiano")) return "ITC";
+  if (nombre.includes("ITC")) return "ITC";
+  if (nombre.includes("LBN")) return "LBN";
 
   const palabras = nombre.trim().split(/\s+/);
 

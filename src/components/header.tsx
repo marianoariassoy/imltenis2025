@@ -30,7 +30,7 @@ const Header = () => {
       setScrolled((prev) => (prev === next ? prev : next));
 
       // Botón scroll top (aparece después de 1 viewport aprox)
-      const trigger = window.innerHeight * 0.5;
+      const trigger = window.innerHeight;
       setShowTopButton(scrollY > trigger);
     };
 
@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 z-50 from-[#262626] via-[#262626]/70 to-transparent transition-all ${isHome ? "" : "bg-gradient-to-b"} py-4`}
+        className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 z-50 from-[#242525] via-[#242525]/70 to-transparent transition-all ${isHome ? "" : "bg-gradient-to-b"} py-4`}
       >
         <div className="flex-1 z-40">
           <HamburgerButton />
@@ -78,18 +78,22 @@ const Header = () => {
       </header>
       <Nav />
 
-      <button
-        onClick={scrollToTop}
-        className={`fixed bottom-6 right-4 z-50 bg-primary text-background p-3 rounded-full w-12 h-12 hover:scale-105 flex items-center justify-center shadow-lg transition-all duration-300 ${
+      <div
+        className={`fixed bottom-0 left-0 z-40 flex justify-end w-full p-4 from-[#242525] via-[#242525]/70 to-transparent transition-all bg-gradient-to-t duration-300 ${
           showTopButton
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4 pointer-events-none"
         }`}
       >
-        <span className="rotate-180 text-xl">
-          <ChevronDown />
-        </span>
-      </button>
+        <button
+          onClick={scrollToTop}
+          className="bg-primary text-background p-3 rounded-full w-12 h-12 hover:scale-105 flex items-center justify-center shadow-lg transition-all duration-300"
+        >
+          <span className="rotate-180 text-xl">
+            <ChevronDown />
+          </span>
+        </button>
+      </div>
     </>
   );
 };
