@@ -2,7 +2,7 @@ import { WhatsApp } from "@/lib/icons";
 
 const Whatsapp = () => {
   return (
-    <div className="fixed bottom-8 left-4 z-30">
+    <div className="fixed bottom-8 left-4 z-40">
       <a
         href="http://wa.me/5491130171475"
         target="_blank"
