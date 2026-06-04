@@ -132,17 +132,14 @@ CUIL: 27050108347 <br/><br/>
   return (
     <Container>
       <div className="flex flex-col gap-y-4">
-        <div className="aspect-[4/5] lg:aspect-video overflow-hidden rounded-2xl">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="object-cover object-bottom lg:object-center w-full h-full saturate-[.7]"
-          >
-            <source src="/videos/presenta.mp4" type="video/mp4" />
-          </video>
+        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
+          <Image
+            src="/images/2026.png"
+            className="w-full h-full object-cover object-center"
+            width={1200}
+            height={1200}
+            alt="Portada"
+          />
         </div>
         <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
           Viví uno de los{" "}
@@ -177,14 +174,17 @@ CUIL: 27050108347 <br/><br/>
           <strong>ranking anual de clubes</strong>.
         </div>
 
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
-          <Image
-            src="/images/2026.png"
-            className="w-full h-full object-cover object-center"
-            width={1200}
-            height={1200}
-            alt="Portada"
-          />
+        <div className="aspect-[4/5] lg:aspect-video overflow-hidden rounded-2xl">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="object-cover object-bottom lg:object-center w-full h-full saturate-[.7]"
+          >
+            <source src="/videos/presenta.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
 
