@@ -2,18 +2,19 @@ import { WhatsApp } from "@/lib/icons";
 import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
 import Image from "next/image";
+import { Container } from "@/components/Container";
 
 export const metadata = {
-  title: "Presentación Torneo Apertura 2026",
+  title: "Presentación Torneo Clausura 2026",
   description:
-    "Presentación Torneo Apertura 2026 de la liga de clubes IML Tenis",
+    "Presentación Torneo Clausura 2026 de la liga de clubes IML Tenis",
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: "https://imltenis.com.ar/presentacion",
-    title: "Presentación Torneo Apertura 2026",
+    title: "Presentación Torneo Clausura 2026",
     description:
-      "Presentación Torneo Apertura 2026 de la liga de clubes IML Tenis",
+      "Presentación Torneo Clausura 2026 de la liga de clubes IML Tenis",
     images: [
       {
         url: "https://imltenis.com.ar/assets/imltenis.jpg",
@@ -35,8 +36,8 @@ Además, el equipo deberá disponer de 3 canchas de tenis de la misma superficie
     },
     {
       title: "📅 Fechas",
-      text: `Inicio del torneo: <strong>Sábado 21 de Marzo.</strong><br />
-Cierre de Inscripción: <strong>7 de Marzo.</strong>`,
+      text: `Inicio del torneo: <strong>15 y 16 de Agosto.</strong><br />
+Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
     },
     {
       title: "🔥 ¿Cómo es el formato de juego y del torneo?",
@@ -72,9 +73,7 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
 
       <strong>Mixtos sábados de 13 a 17 hs.:</strong><br/>
       Mixto Libre (Caballeros y Damas nivel libre) <br/> 
-      Mixto A (Caballeros hasta Tercera / Damas hasta Intermedia) <br/>
-      Mixto B (Caballeros hasta Cuarta / Damas hasta Tercera)<br/>
-      Mixto C (Caballeros hasta Quinta / Damas hasta Cuarta)
+      Mixto B/C (Caballeros hasta Cuarta / Damas hasta Tercera) (2 Copas) 
       `,
     },
     {
@@ -103,18 +102,18 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
     },
     {
       title: "🎾 Pelotas",
-      text: `Las pelotas serán responsabilidad del <strong>equipo local</strong>, deben ser nuevas o con un solo uso reciente, puediendo ser sueltas o de tubo presurizado.`,
+      text: `Las pelotas serán responsabilidad del <strong>equipo local</strong>, deben ser nuevas, puediendo ser sueltas o de tubo presurizado.`,
     },
     {
       title:
         "💵 ¿Cuál es el valor y como abonar la inscripción por cada equipo?",
       text: `
-      <strong>Durante Enero $280.000.- </strong><br/>
-      <strong>Durante Febero $310.000.- </strong><br/> 
-      <strong>Durante Marzo $340.000.- </strong><br/><br/>
+      Durante Junio <strong>$320.000.- </strong><br/>
+      Durante Julio <strong>$360.000.- </strong><br/> 
+      Durante Agosto <strong>$400.000.- </strong><br/><br/>
       Podes realizar una transferencia del valor de la inscripción a la siguiente cuenta: <br/>
       Alias: imltenis.pagos <br/>
-Titular: Irma Petrona Arias <br/>
+Titular: Irma Arias <br/>
 CTA: CA $ 19426210999068 <br/>
 CBU: 0110621930062109990683 <br/>
 CUIL: 27050108347 <br/><br/>
@@ -122,7 +121,7 @@ CUIL: 27050108347 <br/><br/>
     },
     {
       title: "🙌🏻 ¿Cuál es el valor a abonar cada partido?",
-      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será de $10 mil pesos (el costo puede variar).`,
+      text: `El costo a abonar cada jugador en conceptos de alquiler de canchas al club local será de $12 mil pesos (el costo puede variar).`,
     },
     {
       title: "😎 ¿Cómo llevo adelante la inscripción?",
@@ -130,28 +129,46 @@ CUIL: 27050108347 <br/><br/>
     },
   ];
   return (
-    <section className="flex flex-col gap-y-4 max-w-3xl mx-auto">
+    <Container>
       <div className="flex flex-col gap-y-4">
         <div className="text-center flex flex-col items-center">
           <div className="text-2xl text-center">🏆</div>
           <h1 className="font-spartan font-extrabold text-primary text-2xl">
-            Torneo Apertura 2026
+            Torneo Clausura 2026
           </h1>
         </div>
 
-        <div className="[&>span]:font-semibold [&>span]:text-primary mb-2">
-          Viví uno de los interclubes de tenis amateur más importantes de la
-          zona, con más de <span>200 equipos y 16 categorías</span> que abarcan
-          distintos niveles de juego en damas, caballeros y mixtos. Compartí una
-          experiencia única junto a tu grupo de amigos: representá a tu club o
-          barrio, jugá en tus propias canchas y descubrí nuevas sedes y rivales
-          cada semana. <br />
-          <br />
+        <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
+          Viví uno de los{" "}
+          <strong>
+            interclubes de tenis amateur más importantes de la zona
+          </strong>
+          , con más de <strong>200 equipos</strong> y{" "}
+          <strong>16 categorías</strong> que abarcan distintos niveles de juego
+          en damas, caballeros y mixtos.
+          <br /> <br />
+          Compartí una experiencia única junto a tu grupo de amigos:{" "}
+          <strong>representá a tu club o barrio</strong>, jugá en tus propias
+          canchas y descubrí nuevas sedes y rivales cada semana.
+          <br /> <br />
           Todos los{" "}
-          <span>
-            resultados, estadísticas y rankings grupales e individuales{" "}
-          </span>
-          se actualizan online para que sigas el torneo en tiempo real.
+          <strong>
+            resultados, tablas de posiciones, estadísticas y rankings
+          </strong>{" "}
+          se actualizan online y de forma permanente, brindando una experiencia{" "}
+          <strong>transparente, moderna y accesible</strong> para todos los
+          participantes. Seguí el rendimiento de tu equipo, consultá
+          estadísticas individuales y grupales, compará rendimientos y accedé a
+          toda la información del torneo en cualquier momento y desde cualquier
+          dispositivo.
+          <br /> <br />
+          Recibí{" "}
+          <strong>premios, reconocimientos y beneficios exclusivos</strong>.
+          Podés ser elegido como <strong>Jugador Destacado de la Fecha</strong>,
+          liderar el <strong>ranking individual</strong> y acceder a importantes
+          premios al final de la temporada. Además, cada punto que sumes impulsa
+          a tu equipo y a tu club a escalar posiciones en el{" "}
+          <strong>ranking anual de clubes</strong>.
         </div>
 
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
@@ -165,20 +182,32 @@ CUIL: 27050108347 <br/><br/>
         </div>
       </div>
 
-      <div className="[&>span]:font-semibold [&>span]:text-primary">
-        Recibí premios, reconocimientos y mucho más. Podés ser elegido como{" "}
-        <span>Jugador Destacado de la Fecha</span>, liderar el ranking
-        individual y acceder a importantes premios al final de la temporada.
-        Además, cada punto que sumes impulsa a tu equipo y a tu club a escalar
-        posiciones en el <span>ranking anual de clubes</span>.
-        <br />
-        <br />Y eso no es todo… Celebramos lo mejor de nuestra comunidad con
-        propuestas especiales como <span>La Batalla de Clubes</span>, la
-        elección de los mejores capitanes y los esperados{" "}
-        <span>IML Awards</span>.
-        <br />
-        La temporada culmina con una gran final junto a todas las categorías, en
-        un evento de cierre con premiación, sorteos y muchas sorpresas más.
+      <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
+        También premiamos los valores que hacen grande a nuestra comunidad. En
+        cada jornada, los equipos podrán sumar <strong>puntos Fair Play</strong>
+        , otorgados por sus rivales y por los terceros tiempos compartidos. Al
+        finalizar la temporada, el equipo con mejor desempeño en Fair Play
+        recibirá beneficios exclusivos para futuras competencias, mientras que
+        su capitán será reconocido como <strong>Capitán Destacado</strong> por
+        su compromiso con el respeto, la deportividad y el compañerismo.
+        <br /> <br />Y eso no es todo. Celebramos lo mejor de nuestra comunidad
+        con propuestas especiales como <strong>La Batalla de Clubes</strong>, la
+        elección de los <strong>Mejores Capitanes</strong>, competencias online,
+        desafíos especiales y los esperados <strong>IML Awards</strong>.
+        <br /> <br />
+        <strong>
+          Más que un torneo, vivimos una temporada completa de competencia,
+          amistad y comunidad.
+        </strong>{" "}
+        Cada fecha suma nuevas historias, desafíos y reconocimientos que hacen
+        que la experiencia vaya mucho más allá de los resultados dentro de la
+        cancha.
+        <br /> <br />
+        La temporada culmina con una{" "}
+        <strong>gran final junto a todas las categorías</strong>, en un evento
+        de cierre con <strong>premiación, sorteos y muchas sorpresas</strong>,
+        celebrando a quienes formaron parte de una experiencia única durante
+        todo el año.
       </div>
 
       {data.map((item, index) => (
@@ -209,7 +238,7 @@ CUIL: 27050108347 <br/><br/>
       </div>
 
       <Whatsapp />
-    </section>
+    </Container>
   );
 };
 

@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { useMenu } from "@/context/menu-context";
 // import HomeClubes from "@/components/HomeClubes";
+import Notice from "@/components/Notice";
 
 export default function Home() {
   const { open, setOpen } = useMenu();
@@ -16,6 +17,8 @@ export default function Home() {
   return (
     <>
       <section className="h-screen w-full">
+        <Notice />
+
         <div className="absolute top-1/2 left-1/2 fade-in-slow text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30 opacity-0">
           <h1
             className="text-[3.2rem] md:text-[5.5rem] font-black text-primary leading-none tracking-tight flex flex-col lg:hover:brightness-125 transition-all cursor-pointer"
