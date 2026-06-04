@@ -1,4 +1,3 @@
-import { WhatsApp } from "@/lib/icons";
 import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
 import Image from "next/image";
@@ -125,19 +124,26 @@ CUIL: 27050108347 <br/><br/>
     },
     {
       title: "😎 ¿Cómo llevo adelante la inscripción?",
-      text: `Cada equipo deberá tener un capitán responsable, quien será el encargado de realizar la inscripción y de cargar la lista de buena fe de su equipo hasta la fecha indicada. `,
+      text: `Cada equipo deberá tener un capitán responsable, quien será el encargado de realizar la inscripción y de cargar la lista de buena fe de su equipo hasta la fecha indicada. 
+      
+      `,
     },
   ];
   return (
     <Container>
       <div className="flex flex-col gap-y-4">
-        <div className="text-center flex flex-col items-center">
-          <div className="text-2xl text-center">🏆</div>
-          <h1 className="font-spartan font-extrabold text-primary text-2xl">
-            Torneo Clausura 2026
-          </h1>
+        <div className="aspect-[4/5] lg:aspect-video overflow-hidden rounded-2xl">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="object-cover object-bottom lg:object-center w-full h-full saturate-[.7]"
+          >
+            <source src="/videos/presenta.mp4" type="video/mp4" />
+          </video>
         </div>
-
         <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
           Viví uno de los{" "}
           <strong>
@@ -191,17 +197,8 @@ CUIL: 27050108347 <br/><br/>
         su capitán será reconocido como <strong>Capitán Destacado</strong> por
         su compromiso con el respeto, la deportividad y el compañerismo.
         <br /> <br />Y eso no es todo. Celebramos lo mejor de nuestra comunidad
-        con propuestas especiales como <strong>La Batalla de Clubes</strong>, la
-        elección de los <strong>Mejores Capitanes</strong>, competencias online,
-        desafíos especiales y los esperados <strong>IML Awards</strong>.
-        <br /> <br />
-        <strong>
-          Más que un torneo, vivimos una temporada completa de competencia,
-          amistad y comunidad.
-        </strong>{" "}
-        Cada fecha suma nuevas historias, desafíos y reconocimientos que hacen
-        que la experiencia vaya mucho más allá de los resultados dentro de la
-        cancha.
+        con propuestas especiales como <strong>La Batalla de Clubes</strong>, y
+        los esperados <strong>IML Awards</strong>.
         <br /> <br />
         La temporada culmina con una{" "}
         <strong>gran final junto a todas las categorías</strong>, en un evento
@@ -213,29 +210,6 @@ CUIL: 27050108347 <br/><br/>
       {data.map((item, index) => (
         <Item key={index} title={item.title} text={item.text} />
       ))}
-
-      <div className="font-medium">
-        <a
-          href="https://wa.me/5491130171475"
-          className="hover:underline flex items-center gap-x-1 flex-wrap text-primary"
-          target="_blank"
-        >
-          <span>Contactate por</span>
-          <span className="flex items-center gap-x-1">
-            <WhatsApp /> WhatsApp haciendo click acá
-          </span>
-        </a>
-      </div>
-
-      <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
-        <Image
-          src="/images/2.png"
-          className="w-full h-full object-cover object-center"
-          width={1200}
-          height={1200}
-          alt="Portada 2"
-        />
-      </div>
 
       <Whatsapp />
     </Container>
