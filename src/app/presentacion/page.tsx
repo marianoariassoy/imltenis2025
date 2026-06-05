@@ -132,7 +132,7 @@ CUIL: 27050108347 <br/><br/>
   return (
     <Container>
       <div className="flex flex-col gap-y-4">
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
+        <div className="aspect-[4/5] lg:aspect-video overflow-hidden rounded-2xl">
           <Image
             src="/images/2026.png"
             className="w-full h-full object-cover object-center"
@@ -142,17 +142,15 @@ CUIL: 27050108347 <br/><br/>
           />
         </div>
         <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
-          Viví uno de los{" "}
-          <strong>
-            interclubes de tenis amateur más importantes de la zona
-          </strong>
-          , con más de <strong>200 equipos</strong> y{" "}
+          <strong> IML Tenis </strong>es uno de los interclubes de tenis amateur
+          más importantes de la zona, con más de <strong>200 equipos</strong> y{" "}
           <strong>16 categorías</strong> que abarcan distintos niveles de juego
           en damas, caballeros y mixtos.
           <br /> <br />
-          Compartí una experiencia única junto a tu grupo de amigos:{" "}
-          <strong>representá a tu club o barrio</strong>, jugá en tus propias
-          canchas y descubrí nuevas sedes y rivales cada semana.
+          En esta competencia vas a compartir una experiencia única junto a tu
+          grupo de amigos: <strong>representando a tu club o barrio</strong>,
+          jugando en tus propias canchas y descrubriendo nuevas sedes y rivales
+          cada semana.
           <br /> <br />
           Todos los{" "}
           <strong>
@@ -165,7 +163,7 @@ CUIL: 27050108347 <br/><br/>
           toda la información del torneo en cualquier momento y desde cualquier
           dispositivo.
           <br /> <br />
-          Recibí{" "}
+          Vas a poder recibir{" "}
           <strong>premios, reconocimientos y beneficios exclusivos</strong>.
           Podés ser elegido como <strong>Jugador Destacado de la Fecha</strong>,
           liderar el <strong>ranking individual</strong> y acceder a importantes

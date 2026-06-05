@@ -2,12 +2,12 @@ import { WhatsApp } from "@/lib/icons";
 
 const Whatsapp = () => {
   return (
-    <div className="fixed bottom-8 left-4 z-40">
+    <div className="fixed bottom-6 right-4 z-40">
       <a
         href="http://wa.me/5491130171475"
         target="_blank"
         rel="noreferrer"
-        className="w-14 h-14 bg-primary text-white rounded-full p-2 flex items-center justify-center hover:scale-105 hover:text-white text-xl shadow-md transition-transform duration-300"
+        className="w-16 h-16 bg-primary text-white rounded-full p-2 flex items-center justify-center hover:scale-105 hover:text-white text-xl shadow-lg transition-transform duration-300"
       >
         <WhatsApp />
       </a>
