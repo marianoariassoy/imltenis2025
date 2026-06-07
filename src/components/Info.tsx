@@ -1,7 +1,6 @@
 "use client";
 import { useState } from "react";
-import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Info } from "@/lib/icons";
 
 const InfoShow = ({
   text,
@@ -17,9 +16,7 @@ const InfoShow = ({
       className={`flex gap-x-1 p-2 lg:p-4 border-2 rounded-xl cursor-pointer ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
       onClick={() => setShow(!show)}
     >
-      <span className="text-base">
-        <FontAwesomeIcon icon={faCircleInfo} size="lg" width={20} />
-      </span>
+      <Info />
       <span
         className={`leading-tight transition-all ${
           show
