@@ -34,7 +34,7 @@ const TitleRow = ({ num, image, title, link, active }: Item) => {
       </div>
       <Link
         href={link}
-        className="hover:text-primary text-nowrap font-bold pr-4"
+        className="hover:text-primary text-nowrap font-semibold pr-4"
       >
         <span className="hidden md:block">{title}</span>
         <span className="block md:hidden">{obtenerAbreviado(title)}</span>

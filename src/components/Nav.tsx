@@ -27,7 +27,7 @@ const Menu = () => {
           {tournaments.map((item, index) => (
             <li key={index}>
               <button
-                className="text-primary italic font-black text-xl hover:underline "
+                className="text-primary italic font-bold text-xl hover:underline cursor-pointer"
                 onClick={() =>
                   setCategory(category === item.name ? "" : item.name)
                 }

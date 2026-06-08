@@ -69,7 +69,7 @@ const Header = () => {
             href="https://www.instagram.com/imltenis/"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-primary text-base"
+            className="hover:text-primary text-base transition-all duration-300"
             aria-label="Instagram"
           >
             <Instagram />

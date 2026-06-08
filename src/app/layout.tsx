@@ -1,19 +1,16 @@
 import type { Metadata } from "next";
-import { Montserrat, Geist } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import { MenuProvider } from "@/context/menu-context";
-import { cn } from "@/lib/utils";
-import { DotPattern } from "@/components/ui/dot-pattern";
-
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 const montserrat = Montserrat({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "900"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap",
+  style: ["normal", "italic"],
   variable: "--font-montserrat",
 });
 
@@ -54,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className={montserrat.variable}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -62,7 +59,6 @@ export default function RootLayout({
       </head>
       <body
         className={`bg-background text-foreground min-h-screen flex flex-col`}
-        style={{ fontFamily: montserrat.style.fontFamily }}
       >
         <MenuProvider>
           <Header />
@@ -70,14 +66,6 @@ export default function RootLayout({
           <Footer />
         </MenuProvider>
         <AnalyticsProvider />
-        {/* <div className="absolute flex h-125 w-full flex-col items-center justify-center overflow-hidden -z-10">
-          <DotPattern
-            glow={true}
-            className={cn(
-              "mask-[radial-gradient(300px_circle_at_center,white,transparent)]",
-            )}
-          />
-        </div> */}
       </body>
     </html>
   );

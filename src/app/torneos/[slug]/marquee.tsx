@@ -7,7 +7,11 @@ const marquee = async ({ id_tournament }: { id_tournament: string }) => {
   const data = await response.json();
   if (!data) return null;
 
-  return <Marquee className="text-secondary -mt-8 -mb-4">{data.text}</Marquee>;
+  return (
+    <Marquee className="text-secondary font-medium -mt-8 -mb-4">
+      {data.text}
+    </Marquee>
+  );
 };
 
 export default marquee;
