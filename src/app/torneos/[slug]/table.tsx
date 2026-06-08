@@ -89,7 +89,7 @@ const Tabla = async ({
                               <Bull />
                             </span>
                           ) : (
-                            <span className="text-white/30 dark:text-black/30">
+                            <span className="text-white/30">
                               <Bull />
                             </span>
                           )}

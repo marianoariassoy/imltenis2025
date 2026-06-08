@@ -10,7 +10,7 @@ interface Props {
 
 const TornamentsChampion = ({ data }: { data: Props }) => {
   return (
-    <div className="flex flex-col gap-y-2 items-center text-center">
+    <div className="flex flex-col gap-y-4 items-center text-center -mt-2 -mb-2">
       <Confetti />
       <Link href={`/equipos/${data.team_champion_id}`}>
         <div className="w-20 h-20 lg:w-24 lg:h-24 overflow-hidden rounded-full hover:opacity-70 transition-opacity">
@@ -23,12 +23,10 @@ const TornamentsChampion = ({ data }: { data: Props }) => {
           />
         </div>
       </Link>
-
-      <h1 className="font-semibold leading-5">
-        Campeón
-        <br />
-        {data.team_champion} ⭐
-      </h1>
+      <div>
+        <h1 className="font-semibold leading-5">{data.team_champion} ⭐</h1>
+        <h2 className="text-secondary">Campeón del torneo</h2>
+      </div>
     </div>
   );
 };

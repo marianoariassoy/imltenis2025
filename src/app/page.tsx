@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { useMenu } from "@/context/menu-context";
 // import HomeClubes from "@/components/HomeClubes";
 import Notice from "@/components/Notice";
+import { AuroraText } from "@/components/ui/aurora-text";
 
 export default function Home() {
   const { open, setOpen } = useMenu();
@@ -19,25 +20,25 @@ export default function Home() {
       <section className="h-screen w-full">
         <Notice />
 
-        <div className="absolute top-1/2 left-1/2 fade-in-slow text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30 opacity-0">
+        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30 ">
           <h1
-            className="text-[3.2rem] md:text-[5.5rem] font-black text-primary leading-none tracking-tight flex flex-col lg:hover:brightness-125 transition-all cursor-pointer"
+            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
             onClick={() => setOpen(!open)}
           >
-            <span>Torneo</span>
-            <span>Interclubes</span>
-            <span>Apertura</span>
-            <span>Yuka 2026</span>
+            <AuroraText colors={["#9b37ff", "#fe514e", "#fe514e"]}>
+              Torneo <br /> Interclubes <br /> Apertura <br /> 2026
+            </AuroraText>
           </h1>
+
           <button
-            className="font-medium mt-4 hover:underline"
+            className="font-medium mt-4 hover:underline text-secondary cursor-pointer"
             onClick={() => setOpen(!open)}
           >
             Ver categorías →
           </button>
         </div>
 
-        <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 bg-black/60 overflow-hidden">
+        <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 bg-black/80 overflow-hidden">
           <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-black/20 to-black/10 z-20"></div>
           <video
             ref={videoRef}
@@ -46,7 +47,7 @@ export default function Home() {
             muted
             playsInline
             preload="auto"
-            className="opacity-60 blur-sm h-screen blur-xs w-screen object-cover saturate-[.8]"
+            className="opacity-60 blur-sm h-screen blur-xs w-screen object-cover saturate-[.7]"
           >
             <source src="/videos/video.webm" type="video/webm" />
             <source src="/videos/video.mp4" type="video/mp4" />

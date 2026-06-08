@@ -24,13 +24,13 @@ const Filter = ({ category_slug }: { category_slug: string }) => {
   return (
     <div
       ref={ref}
-      className={`relative transition-all w-full mx-auto flex justify-center font-medium text-secondary mb-4 ${open ? "max-w-full" : "max-w-md"}`}
+      className={`relative transition-all w-full mx-auto flex justify-center font-medium text-secondary mb-4 -mt-4 ${open ? "max-w-full" : "max-w-md"}`}
     >
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between gap-2 px-4 py-3 border rounded-lg border-primary text-primary transition w-full "
+        className="flex items-center justify-between gap-2 px-2 py-3 lg:p-4 border-2 rounded-lg border-primary text-primary transition w-full"
       >
-        <span className="text-secondary text-sm">
+        <span className="text-primary text-sm">
           {active?.name ?? "Seleccionar categoría"}
         </span>
         <span
@@ -41,7 +41,7 @@ const Filter = ({ category_slug }: { category_slug: string }) => {
       </button>
 
       {open && (
-        <div className="absolute z-20 px-4 py-2 w-full rounded-lg bg-background border border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-3 text-sm">
+        <div className="absolute z-20 px-2 py-3 lg:p-4 w-full rounded-lg bg-background border-2 border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-3 text-sm">
           {categories.map((item) => {
             const isActive = category_slug === item.slug;
 
@@ -50,7 +50,7 @@ const Filter = ({ category_slug }: { category_slug: string }) => {
                 key={item.slug}
                 href={`/rankings/jugadores/${item.slug}`}
                 onClick={() => setOpen(false)}
-                className={`block py-1 transition  hover:text-primary ${
+                className={`block pb-2 transition  hover:text-primary ${
                   isActive ? "text-primary" : ""
                 }`}
               >

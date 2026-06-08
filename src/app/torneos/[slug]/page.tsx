@@ -5,6 +5,7 @@ import Fixture from "./fixture";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import { Container } from "@/components/Container";
+import Marquee from "./marquee";
 
 async function fetchTournament(slug: string) {
   const response = await fetch(
@@ -37,9 +38,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-
   const data = await fetchTournament(slug);
-
   if (!data) return null;
 
   return {
@@ -65,14 +64,14 @@ export async function generateMetadata({
 
 const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const { slug } = await params;
-
   const data = await fetchTournament(slug);
-
   if (!data) return null;
 
   return (
     <Container>
-      <Title title={data.name + " " + data.season} />
+      <Title title={data.name} subtitle={data.season} />
+
+      <Marquee id_tournament={data.id} />
 
       {data.team_champion_id && <Campeon data={data} />}
 

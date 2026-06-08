@@ -3,9 +3,9 @@ import Singles from "./singles";
 import Doubles from "./dobles";
 import Equipos from "./equipos";
 import Aviso from "@/components/Aviso";
-import Image from "next/image";
 import { Verified } from "@/lib/icons";
 import { Container } from "@/components/Container";
+import Foto from "./foto";
 
 export async function generateMetadata({
   params,
@@ -57,19 +57,8 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <Container>
       <header className="items-center flex flex-col gap-y-2">
-        <div className="w-24 h-24 rounded-full overflow-hidden bg-white/10 dark:bg-black/10 flex items-center justify-center">
-          {data.image ? (
-            <Image
-              src={data.image}
-              alt={data.name}
-              width={96}
-              height={96}
-              className="object-cover h-full w-full"
-            />
-          ) : (
-            <span className="text-2xl">🙈</span>
-          )}
-        </div>
+        <Foto src={data.image} alt={data.name} />
+
         <div className="text-center">
           <div className="flex items-center justify-center gap-x-2">
             <h1 className="font-semibold text-primary text-base">

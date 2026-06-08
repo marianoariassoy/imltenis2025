@@ -106,10 +106,14 @@ const groups = async ({
   ];
 
   return (
-    <section className="flex flex-col gap-y-4">
+    <section className="flex flex-col gap-y-8">
+      {data[0].tournament_description && (
+        <Info text={data[0].tournament_description} />
+      )}
+
       {data.map((item) => (
         <div key={item.id} className="flex flex-col gap-y-8">
-          <h1 className="font-extrabold text-center text-primary text-[1.2rem] lg:text-xl italic">
+          <h1 className="font-extrabold text-center text-primary text-[1.3rem] lg:text-xl italic">
             {item.name}
           </h1>
           <Suspense fallback={<Loader />}>
@@ -126,10 +130,6 @@ const groups = async ({
       ))}
 
       <Labels labels={twoMatches ? labels_2 : labels} />
-
-      {data[0].tournament_description && (
-        <Info text={data[0].tournament_description} />
-      )}
     </section>
   );
 };

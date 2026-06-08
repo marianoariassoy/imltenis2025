@@ -48,13 +48,13 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 z-50 from-[#242525] via-[#242525]/70 to-transparent transition-all ${isHome ? "" : "bg-gradient-to-b"} py-4`}
+        className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 z-50 from-background via-background/70 to-transparent transition-all ${isHome ? "" : "bg-linear-to-b"} py-4`}
       >
         <div className="flex-1 z-40">
           <HamburgerButton />
         </div>
         <div
-          className={`text-primary flex justify-center transition-all z-50 ${scrolled ? "text-[0.7rem]" : ""} ${isHome ? "text-[#e4e3e3]" : ""}`}
+          className={`text-primary flex justify-center transition-all z-50 ${scrolled ? "text-[0.7rem]" : ""}`}
         >
           <Link
             href="/"
@@ -79,7 +79,7 @@ const Header = () => {
       <Nav />
 
       <div
-        className={`fixed bottom-0 left-0 z-40 flex justify-end w-full px-4 py-8 from-[#242525] via-[#242525]/70 to-transparent transition-all bg-gradient-to-t duration-300 ${
+        className={`fixed bottom-0 left-0 z-40 flex justify-end w-full px-4 py-8 from-background via-background/70 to-transparent transition-all bg-linear-to-t duration-300 ${
           showTopButton
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4 pointer-events-none"
@@ -87,7 +87,7 @@ const Header = () => {
       >
         <button
           onClick={scrollToTop}
-          className="bg-primary text-background p-3 rounded-full w-12 h-12 hover:scale-105 flex items-center justify-center shadow-lg transition-all duration-300"
+          className="bg-primary text-background p-3 rounded-full w-12 h-12 hover:scale-105 flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer"
         >
           <span className="rotate-180 text-xl">
             <ChevronDown />
