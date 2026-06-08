@@ -20,7 +20,7 @@ export default function Home() {
       <section className="h-screen w-full">
         <Notice />
 
-        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30 ">
+        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30">
           <h1
             className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
             onClick={() => setOpen(!open)}
