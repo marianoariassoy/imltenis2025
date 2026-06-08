@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link";
 import { Bull } from "@/lib/icons";
 import ItemSmall from "@/components/ItemSmall";
@@ -5,28 +7,48 @@ import Item from "@/components/ItemMedium";
 import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
-  if (!data) return null;
+  const options = ["Todo", "Jugados", "Sin jugar"];
+  const [filter, setFilter] = useState("Todo");
 
-  const dataFiltered = data.filter((item) => item.winner === true);
+  const dataFiltered = data.filter((item) => {
+    if (filter === "Jugados") return item.winner;
+    if (filter === "Sin jugar") return !item.winner;
+    return true;
+  });
+
+  if (!data) return null;
+  const played = data.filter((item) => item.winner === true);
+
   return (
-    <section className="flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-8">
       {title && (
         <div className="flex flex-col items-center justify-center">
           <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic">
             Calendario
           </h1>
-          <h2 className="text-secondary">
-            {dataFiltered.length} series disputadas de {data.length} (
-            {Math.round((dataFiltered.length / data.length) * 100)}%)
+          <h2 className="text-secondary mb-2">
+            {played.length} series disputadas de {data.length} (
+            {Math.round((played.length / data.length) * 100)}%)
           </h2>
+          <div className="flex gap-x-2 text-sm">
+            {options.map((item) => (
+              <button
+                key={item}
+                className={`border rounded-lg px-3 py-1 hover:border-primary hover:text-primary cursor-pointer ${filter === item ? "border-primary text-primary" : "border-secondary text-secondary"}`}
+                onClick={() => setFilter(item)}
+              >
+                {item}
+              </button>
+            ))}
+          </div>
         </div>
       )}
-      {data.length === 0 && (
-        <div className="text-center text-secondary">
+      {dataFiltered.length === 0 && (
+        <div className="text-center text-primary">
           No hay series a disputar 😢
         </div>
       )}
-      {data.length > 0 && (
+      {dataFiltered.length > 0 && (
         <div className="overflow-x-auto whitespace-nowrap">
           <table className="table w-full table-auto mb-2">
             {data.length > 0 && (
@@ -42,7 +64,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
               </thead>
             )}
             <tbody>
-              {data.map((item) => (
+              {dataFiltered.map((item) => (
                 <tr
                   key={item.id}
                   className={
