@@ -5,6 +5,7 @@ import { Bull } from "@/lib/icons";
 import ItemSmall from "@/components/ItemSmall";
 import Item from "@/components/ItemMedium";
 import { Serie } from "@/types";
+import Title from "@/components/Title2";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   const options = ["Todo", "Jugados", "Sin jugar"];
@@ -23,10 +24,9 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
     <section className="flex flex-col gap-y-6">
       {title && (
         <div className="flex flex-col items-center justify-center">
-          <h1 className="font-bold text-primary text-center text-lg italic mb-2 lg:mb-6">
-            Calendario
-          </h1>
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full">
+          <Title title="Calendario" />
+
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full mt-4">
             <div className="flex items-center gap-x-2">
               <span className="text-secondary">
                 <Bull />
@@ -40,7 +40,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
               {options.map((item) => (
                 <button
                   key={item}
-                  className={`rounded-lg px-3 py-1 hover:bg-primary hover:text-white cursor-pointer ${filter === item ? "bg-primary text-white" : "bg-white/10 text-secondary"}`}
+                  className={`rounded-xl px-4 py-1 hover:bg-primary hover:text-white/80 hover:border-primary cursor-pointer font-medium border ${filter === item ? "bg-primary text-white/80 border-primary" : "text-secondary"}`}
                   onClick={() => setFilter(item)}
                 >
                   {item}

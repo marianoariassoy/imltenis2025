@@ -5,6 +5,7 @@ import Loader from "@/components/Loader";
 import Labels from "@/components/Labels";
 import Info from "@/components/Info";
 import Fixture from "./fixture-group";
+import Title from "@/components/Title2";
 
 const groups = async ({
   id_tournament,
@@ -113,9 +114,8 @@ const groups = async ({
 
       {data.map((item) => (
         <div key={item.id} className="flex flex-col gap-y-6">
-          <h1 className="font-bold text-center text-primary text-lg italic">
-            {item.name}
-          </h1>
+          <Title title={item.name} />
+
           <Suspense fallback={<Loader />}>
             <Table
               group={item}

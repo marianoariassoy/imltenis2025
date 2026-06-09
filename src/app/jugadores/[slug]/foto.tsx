@@ -7,7 +7,7 @@ const Foto = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <>
       <div
-        className={`fixed z-30 top-0 left-0 w-screen h-screen ${open ? "" : "hidden"}`}
+        className={`fixed z-60 top-0 left-0 w-screen h-screen bg-background/50 ${open ? "" : "hidden"}`}
         onClick={() => setOpen(!open)}
       >
         <div
