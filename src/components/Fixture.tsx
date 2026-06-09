@@ -8,7 +8,7 @@ import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   const options = ["Todas", "Jugadas", "Sin jugar"];
-  const [filter, setFilter] = useState("Todo");
+  const [filter, setFilter] = useState("Todas");
 
   const dataFiltered = data.filter((item) => {
     if (filter === "Jugadas") return item.winner;
@@ -27,14 +27,14 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
             Calendario
           </h1>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full">
-            <div className="flex items-center gap-x-2 text-secondary">
+            <div className="flex items-center gap-x-2 text-secondary lg:text-foreground">
               <Bull />
               <p>
                 {played.length} series disputadas de {data.length} (
                 {Math.round((played.length / data.length) * 100)}%)
               </p>
             </div>
-            <div className="flex gap-x-2 text-sm">
+            <div className="flex gap-x-2 text-sm lg:text-base">
               {options.map((item) => (
                 <button
                   key={item}
