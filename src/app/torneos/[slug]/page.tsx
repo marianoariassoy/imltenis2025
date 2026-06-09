@@ -75,6 +75,14 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
       {data.team_champion_id && <Campeon data={data} />}
 
+      {/* <div className="rounded-xl overflow-hidden h-14">
+        <img
+          src="/assets/separador.png"
+          alt=""
+          className="w-full h-full object-cover"
+        />
+      </div> */}
+
       <Suspense fallback={<Loader />}>
         <Groups id_tournament={data.id} twoMatches={+data.mode === 3} />
       </Suspense>

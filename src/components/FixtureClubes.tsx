@@ -16,7 +16,7 @@ const FixtureMain = ({
   return (
     <section className="flex flex-col gap-y-4">
       {title && (
-        <h1 className="font-bold text-primary text-center text-lg">
+        <h1 className="font-bold text-primary text-center">
           Próximas series ({data.length})
         </h1>
       )}
