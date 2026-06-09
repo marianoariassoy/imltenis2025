@@ -20,13 +20,13 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   const played = data.filter((item) => item.winner === true);
 
   return (
-    <section className="flex flex-col gap-y-8">
+    <section className="flex flex-col gap-y-6">
       {title && (
         <div className="flex flex-col items-center justify-center">
           <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic">
             Calendario
           </h1>
-          <h2 className="text-secondary mb-2">
+          <h2 className="text-secondary mb-4">
             {played.length} series disputadas de {data.length} (
             {Math.round((played.length / data.length) * 100)}%)
           </h2>

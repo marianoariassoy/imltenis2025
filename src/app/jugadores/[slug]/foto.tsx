@@ -7,20 +7,24 @@ const Foto = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <>
       <div
-        className={`absolute w-52 h-52 shadow-xl rounded-full overflow-hidden bg-white/10 -translate-y-4 ${open ? "" : "hidden"}`}
+        className={`fixed z-30 top-0 left-0 w-screen bg-black/10  backdrop-blur h-screen ${open ? "" : "hidden"}`}
         onClick={() => setOpen(!open)}
       >
-        {src ? (
-          <Image
-            src={src}
-            alt={alt}
-            width={208}
-            height={208}
-            className="object-cover h-full w-full cursor-pointer"
-          />
-        ) : (
-          <span className="text-2xl">🙈</span>
-        )}
+        <div
+          className={`absolute top-30 left-1/2 w-52 h-52 shadow-xl rounded-full overflow-hidden bg-white/10 -translate-y-4 -translate-x-1/2`}
+        >
+          {src ? (
+            <Image
+              src={src}
+              alt={alt}
+              width={208}
+              height={208}
+              className="object-cover h-full w-full cursor-pointer"
+            />
+          ) : (
+            <span className="text-2xl">🙈</span>
+          )}
+        </div>
       </div>
 
       <div className="w-24 h-24 rounded-full overflow-hidden bg-white/10 flex items-center justify-center">

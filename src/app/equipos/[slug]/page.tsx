@@ -56,10 +56,10 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
   return (
     <Container>
-      <header className="items-center flex flex-col gap-2">
+      <header className="items-center flex flex-col">
         <Link
           href={`/clubes/${data.club_slug}`}
-          className="w-24 h-24 rounded-full overflow-hidden shadow-lg"
+          className="w-24 h-24 rounded-full overflow-hidden shadow-lg mb-2"
         >
           <Image
             src={data.image}
@@ -70,7 +70,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           />
         </Link>
         <div className="text-center">
-          <h1 className="font-bold text-xl tracking-tight text-primary">
+          <h1 className="font-bold text-lg tracking-tight text-primary">
             {data.name}
           </h1>
           <Link
@@ -86,7 +86,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             className="flex gap-x-1 font-medium items-center text-primary hover:underline"
           >
             <Info />
-            Info club
+            Info del club
           </Link>
           {data.ig ? (
             <a

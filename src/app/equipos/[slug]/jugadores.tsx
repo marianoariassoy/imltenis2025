@@ -59,7 +59,7 @@ const Jugadores = async ({
           🔥 Lista de buena fe
         </h1>
         <div className="flex items-center justify-center gap-x-2">
-          <h2 className="font-medium text-secondary">
+          <h2 className="font-medium text-secondary text-base">
             {captain_name} (Capitán)
           </h2>
           {!withoutImage && (
