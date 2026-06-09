@@ -35,7 +35,7 @@ export default function Home() {
           </h1>
 
           <button
-            className="font-medium mt-4 hover:underline text-secondary cursor-pointer"
+            className="font-medium mt-4 hover:underline text-secondary cursor-pointer hidden md:block"
             onClick={() => setOpen(!open)}
           >
             Ver categorías →

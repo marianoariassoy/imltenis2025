@@ -23,7 +23,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
     <section className="flex flex-col gap-y-6">
       {title && (
         <div className="flex flex-col items-center justify-center">
-          <h1 className="font-bold text-primary text-center text-lg lg:text-xl italic mb-2 lg:mb-6">
+          <h1 className="font-bold text-primary text-center text-base lg:text-lg italic mb-2 lg:mb-6">
             Calendario
           </h1>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full">
@@ -40,7 +40,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
               {options.map((item) => (
                 <button
                   key={item}
-                  className={`rounded-lg px-3 py-1 hover:bg-primary hover:text-background cursor-pointer ${filter === item ? "bg-primary text-background" : "bg-white/10 text-secondary"}`}
+                  className={`rounded-lg px-3 py-1 hover:bg-primary hover:text-white cursor-pointer ${filter === item ? "bg-primary text-white" : "bg-white/10 text-secondary"}`}
                   onClick={() => setFilter(item)}
                 >
                   {item}
