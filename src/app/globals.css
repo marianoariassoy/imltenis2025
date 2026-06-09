@@ -37,6 +37,9 @@ body {
   transform: scale(0.6);
   animation: animate-in 0.3s ease-in-out forwards 0.3s;
 }
+.delay-100 {
+  animation-delay: 0.2s;
+}
 
 @keyframes animate-in {
   0% {

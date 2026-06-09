@@ -4,6 +4,7 @@ import { useMenu } from "@/context/menu-context";
 // import HomeClubes from "@/components/HomeClubes";
 import Notice from "@/components/Notice";
 import { AuroraText } from "@/components/ui/aurora-text";
+import { Veinteventiseis } from "@/lib/icons";
 
 export default function Home() {
   const { open, setOpen } = useMenu();
@@ -20,13 +21,16 @@ export default function Home() {
       <section className="h-screen w-full">
         <Notice />
 
-        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20">
+        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20 opacity-0 fade-in delay-100">
           <h1
-            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
+            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer "
             onClick={() => setOpen(!open)}
           >
             <AuroraText colors={["#9b37ff", "#fe514e", "#fe514e"]}>
-              Torneo <br /> Interclubes <br /> Apertura <br /> 2026
+              Torneo <br /> Interclubes <br /> Apertura <br />
+              <div className="text-primary mt-2 mb-2 w-full flex justify-center">
+                <Veinteventiseis />
+              </div>
             </AuroraText>
           </h1>
 

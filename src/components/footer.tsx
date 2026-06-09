@@ -16,11 +16,11 @@ const Footer = () => {
 
   return (
     <footer
-      className={`flex z-30 w-full flex-col px-4 py-8 text-secondary ${home ? "absolute bottom-0" : ""}`}
+      className={`flex z-30 w-full flex-col px-4 py-8  text-secondary ${home ? "absolute bottom-0" : ""}`}
       id="footer"
     >
       <div className="text-center flex flex-col">
-        <span className="font-bold">Interclubes IML Tenis</span>
+        <span className="font-semibold">Interclubes IML Tenis</span>
         <div className="flex items-center flex-wrap justify-center gap-x-1 ">
           <a
             href="https://wa.me/5491130171475"
@@ -43,7 +43,7 @@ const Footer = () => {
             Terminos y Condiciones
           </Link>
         </div>
-        <div>
+        <div className="font-medium">
           <span>Hecho con ❤︎ en {year}</span>
         </div>
       </div>
