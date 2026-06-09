@@ -3,7 +3,7 @@ import { SpinningText } from "@/components/ui/spinning-text";
 
 const Notice = () => {
   return (
-    <div className="absolute left-8 top-32 lg:left-20 z-30">
+    <div className="absolute left-8 top-32 lg:left-20 z-30  animate-in">
       <Link
         href="/presentacion"
         className="w-34 h-34 border-2 border-foreground text-foreground flex flex-col items-center justify-center rounded-full text-center font-medium text-sm hover:scale-105 transition-all"

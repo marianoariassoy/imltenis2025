@@ -7,11 +7,11 @@ import Item from "@/components/ItemMedium";
 import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
-  const options = ["Todas", "Jugadas", "Sin jugar"];
-  const [filter, setFilter] = useState("Todas");
+  const options = ["Todo", "Jugados", "Sin jugar"];
+  const [filter, setFilter] = useState("Todo");
 
   const dataFiltered = data.filter((item) => {
-    if (filter === "Jugadas") return item.winner;
+    if (filter === "Jugados") return item.winner;
     if (filter === "Sin jugar") return !item.winner;
     return true;
   });
@@ -23,13 +23,15 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
     <section className="flex flex-col gap-y-6">
       {title && (
         <div className="flex flex-col items-center justify-center">
-          <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic mb-2 lg:mb-4">
+          <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic mb-2 lg:mb-6">
             Calendario
           </h1>
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full">
-            <div className="flex items-center gap-x-2 text-secondary lg:text-foreground">
-              <Bull />
-              <p>
+            <div className="flex items-center gap-x-2">
+              <span className="text-secondary">
+                <Bull />
+              </span>
+              <p className="text-secondary">
                 {played.length} series disputadas de {data.length} (
                 {Math.round((played.length / data.length) * 100)}%)
               </p>
@@ -38,7 +40,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
               {options.map((item) => (
                 <button
                   key={item}
-                  className={`border rounded-lg px-3 py-1 hover:border-primary hover:text-primary cursor-pointer ${filter === item ? "border-primary text-primary" : "border-secondary text-secondary"}`}
+                  className={`rounded-lg px-3 py-1 hover:bg-primary hover:text-background cursor-pointer ${filter === item ? "bg-primary text-background" : "bg-white/10 text-secondary"}`}
                   onClick={() => setFilter(item)}
                 >
                   {item}

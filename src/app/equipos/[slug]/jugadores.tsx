@@ -55,18 +55,18 @@ const Jugadores = async ({
   return (
     <section className="flex flex-col gap-y-4 -mt-4">
       <div className="text-center">
-        <h1 className="text-primary font-semibold text-lg">
-          🔥 Lista de buena fe
+        <h1 className="text-primary font-semibold text-lg flex items-center gap-x-2 justify-center">
+          <span>Lista de buena fe</span>
+          {!withoutImage && (
+            <span className="text-primary text-base">
+              <Verified />
+            </span>
+          )}
         </h1>
         <div className="flex items-center justify-center gap-x-2">
           <h2 className="font-medium text-secondary text-base">
             {captain_name} (Capitán)
           </h2>
-          {!withoutImage && (
-            <span className="text-primary">
-              <Verified />
-            </span>
-          )}
         </div>
       </div>
       {withoutImage && (

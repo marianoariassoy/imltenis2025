@@ -34,14 +34,18 @@ body {
 }
 .animate-in {
   opacity: 0;
-  transform: scale(0.5);
+  transform: scale(0.6);
   animation: animate-in 0.3s ease-in-out forwards 0.3s;
 }
 
 @keyframes animate-in {
   0% {
     opacity: 0;
-    transform: scale(0.5);
+    transform: scale(0.6);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.1);
   }
   100% {
     opacity: 1;

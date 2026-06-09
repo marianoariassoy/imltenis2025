@@ -106,14 +106,14 @@ const groups = async ({
   ];
 
   return (
-    <section className="flex flex-col gap-y-8">
+    <section className="flex flex-col gap-y-4">
       {data[0].tournament_description && (
         <Info text={data[0].tournament_description} />
       )}
 
       {data.map((item) => (
         <div key={item.id} className="flex flex-col gap-y-6">
-          <h1 className="font-extrabold text-center text-primary text-lg lg:text-xl italic">
+          <h1 className="font-bold text-center text-primary text-lg lg:text-xl italic">
             {item.name}
           </h1>
           <Suspense fallback={<Loader />}>

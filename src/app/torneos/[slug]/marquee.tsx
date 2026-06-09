@@ -8,7 +8,7 @@ const marquee = async ({ id_tournament }: { id_tournament: string }) => {
   if (!data) return null;
 
   return (
-    <Marquee className="text-secondary font-medium -mt-8 -mb-4">
+    <Marquee className="text-secondary font-medium -mt-4 -mb-2">
       {data.text}
     </Marquee>
   );

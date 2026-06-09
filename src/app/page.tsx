@@ -22,7 +22,7 @@ export default function Home() {
 
         <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20">
           <h1
-            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer animate-in"
+            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
             onClick={() => setOpen(!open)}
           >
             <AuroraText colors={["#9b37ff", "#fe514e", "#fe514e"]}>

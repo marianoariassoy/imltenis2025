@@ -57,17 +57,17 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <Container>
       <header className="items-center flex flex-col gap-y-2">
-        <div className="w-24 h-24 rounded-full overflow-hidden">
+        <div className="w-20 h-20 rounded-full overflow-hidden">
           <Image
             src={data.image}
             alt={data.name}
-            width={96}
-            height={96}
+            width={80}
+            height={80}
             className="object-cover h-full w-full"
           />
         </div>
         <div className="text-center">
-          <h1 className="font-bold text-xl text-primary tracking-tight">
+          <h1 className="font-bold text-lg text-primary tracking-tight">
             {data.name}
           </h1>
           <span className="text-center font-medium">{data.location}</span>

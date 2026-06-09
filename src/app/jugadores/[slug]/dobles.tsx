@@ -35,14 +35,14 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
     ];
 
     return (
-      <section className="flex flex-col gap-y-6">
+      <section className="flex flex-col gap-y-4">
         <div className="flex flex-col justify-center items-center gap-x-1">
           <h1 className="font-semibold text-primary text-base">
             Dobles jugados ({data.length})
           </h1>
         </div>
         <div className="overflow-x-auto whitespace-nowrap">
-          <table className="table w-full mb-3">
+          <table className="table w-full">
             <thead>
               <tr>
                 {labels.map((label, index) => (
@@ -109,6 +109,20 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
               ))}
             </tbody>
           </table>
+        </div>
+        <div className="flex items-center gap-4 justify-center mb-4">
+          <div className="flex items-center gap-2">
+            <span className="text-primary">
+              <Bull />
+            </span>
+            <span className="text-secondary">Ganados</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <span className="text-secondary">
+              <Bull />
+            </span>
+            <span className="text-secondary">Perdidos</span>
+          </div>
         </div>
       </section>
     );

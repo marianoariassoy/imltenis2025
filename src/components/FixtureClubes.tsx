@@ -14,7 +14,7 @@ const FixtureMain = ({
   club_id: string;
 }) => {
   return (
-    <section className="flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-4">
       {title && (
         <h1 className="font-bold text-primary text-center text-lg">
           Próximas series ({data.length})
@@ -54,11 +54,15 @@ const FixtureMain = ({
                           <Bull />
                         </span>
                       )}
-                      <span className="text-primary">{item.date}</span>
+                      <span className="text-secondary font-medium">
+                        {item.date}
+                      </span>
                     </div>
                   </td>
                   <td>
-                    <span className="text-primary">{item.hour}</span>
+                    <span className="text-primary font-medium">
+                      {item.hour}
+                    </span>
                   </td>
                   <td>
                     {title ? (
@@ -95,7 +99,7 @@ const FixtureMain = ({
                   <td>
                     <Link
                       href={`/torneos/${item.tournament_slug}`}
-                      className="hover:underline text-primary"
+                      className="hover:underline text-primary font-medium"
                     >
                       {item.tournament_name}
                     </Link>
@@ -112,6 +116,20 @@ const FixtureMain = ({
               ))}
             </tbody>
           </table>
+          <div className="flex items-center gap-4 justify-center mt-4">
+            <div className="flex items-center gap-2">
+              <span className="text-primary">
+                <Bull />
+              </span>
+              <span className="text-secondary">Locales</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-secondary">
+                <Bull />
+              </span>
+              <span className="text-secondary">Visitantes</span>
+            </div>
+          </div>
         </div>
       )}
     </section>
