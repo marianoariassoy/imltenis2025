@@ -20,9 +20,9 @@ export default function Home() {
       <section className="h-screen w-full">
         <Notice />
 
-        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-30">
+        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20">
           <h1
-            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
+            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer animate-in"
             onClick={() => setOpen(!open)}
           >
             <AuroraText colors={["#9b37ff", "#fe514e", "#fe514e"]}>
@@ -38,8 +38,8 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 bg-black/80 overflow-hidden">
-          <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-b from-black/20 to-black/10 z-20"></div>
+        <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden blur-sm">
+          <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/20 to-black/40 z-20"></div>
           <video
             ref={videoRef}
             autoPlay
@@ -47,7 +47,7 @@ export default function Home() {
             muted
             playsInline
             preload="auto"
-            className="opacity-60 blur-sm h-screen blur-xs w-screen object-cover saturate-[.7]"
+            className="opacity-60  h-screen w-screen object-cover saturate-[.7]"
           >
             <source src="/videos/video.webm" type="video/webm" />
             <source src="/videos/video.mp4" type="video/mp4" />

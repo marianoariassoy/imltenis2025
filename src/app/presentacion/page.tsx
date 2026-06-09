@@ -131,7 +131,7 @@ CUIL: 27050108347 <br/><br/>
   ];
   return (
     <Container>
-      <div className="flex flex-col gap-y-4">
+      <div className="flex flex-col gap-y-4 mt-4">
         <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
           <Image
             src="/images/2026.png"

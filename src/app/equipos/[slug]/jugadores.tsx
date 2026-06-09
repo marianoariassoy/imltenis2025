@@ -88,7 +88,9 @@ const Jugadores = async ({
             {data.map((item, index) => (
               <tr key={item.id}>
                 <td className="flex gap-x-2 items-center">
-                  <span className="font-medium">{index + 1}</span>
+                  <span className="font-medium text-secondary">
+                    {index + 1}
+                  </span>
                   <Item
                     image={item.image}
                     title={item.name}

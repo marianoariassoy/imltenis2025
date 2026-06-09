@@ -79,7 +79,7 @@ const Header = () => {
       <Nav />
 
       <div
-        className={`fixed bottom-0 left-0 z-40 flex justify-end w-full px-4 py-8 from-background via-background/70 to-transparent transition-all bg-linear-to-t duration-300 ${
+        className={`fixed bottom-0 left-0 z-30 flex justify-end w-full px-4 py-8 from-background via-background/70 to-transparent transition-all bg-linear-to-t duration-300 ${
           showTopButton
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-4 pointer-events-none"

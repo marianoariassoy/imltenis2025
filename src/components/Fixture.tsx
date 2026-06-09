@@ -7,11 +7,11 @@ import Item from "@/components/ItemMedium";
 import { Serie } from "@/types";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
-  const options = ["Todo", "Jugados", "Sin jugar"];
+  const options = ["Todas", "Jugadas", "Sin jugar"];
   const [filter, setFilter] = useState("Todo");
 
   const dataFiltered = data.filter((item) => {
-    if (filter === "Jugados") return item.winner;
+    if (filter === "Jugadas") return item.winner;
     if (filter === "Sin jugar") return !item.winner;
     return true;
   });
@@ -23,23 +23,28 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
     <section className="flex flex-col gap-y-6">
       {title && (
         <div className="flex flex-col items-center justify-center">
-          <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic">
+          <h1 className="font-extrabold text-primary text-center text-lg lg:text-xl italic mb-2 lg:mb-4">
             Calendario
           </h1>
-          <h2 className="text-secondary mb-4">
-            {played.length} series disputadas de {data.length} (
-            {Math.round((played.length / data.length) * 100)}%)
-          </h2>
-          <div className="flex gap-x-2 text-sm">
-            {options.map((item) => (
-              <button
-                key={item}
-                className={`border rounded-lg px-3 py-1 hover:border-primary hover:text-primary cursor-pointer ${filter === item ? "border-primary text-primary" : "border-secondary text-secondary"}`}
-                onClick={() => setFilter(item)}
-              >
-                {item}
-              </button>
-            ))}
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full">
+            <div className="flex items-center gap-x-2 text-secondary">
+              <Bull />
+              <p>
+                {played.length} series disputadas de {data.length} (
+                {Math.round((played.length / data.length) * 100)}%)
+              </p>
+            </div>
+            <div className="flex gap-x-2 text-sm">
+              {options.map((item) => (
+                <button
+                  key={item}
+                  className={`border rounded-lg px-3 py-1 hover:border-primary hover:text-primary cursor-pointer ${filter === item ? "border-primary text-primary" : "border-secondary text-secondary"}`}
+                  onClick={() => setFilter(item)}
+                >
+                  {item}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       )}

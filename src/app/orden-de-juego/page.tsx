@@ -51,10 +51,16 @@ const page = async () => {
             {data.map((item) => (
               <tr key={item.id}>
                 <td>
-                  <div className="text-primary flex gap-x-2">
+                  <div className="text-secondary font-medium flex gap-x-2">
                     {item.top ? <span className="text-xl">⭐️</span> : null}
                     <span>{item.date}</span>
-                    <span>{item.hour ? <span>{item.hour}</span> : "-"}</span>
+                    <span>
+                      {item.hour ? (
+                        <span className="text-primary">{item.hour}</span>
+                      ) : (
+                        "-"
+                      )}
+                    </span>
                   </div>
                 </td>
                 <td>
@@ -74,7 +80,7 @@ const page = async () => {
                 <td>
                   <Link
                     href={`/torneos/${item.tournament_id}`}
-                    className="hover:underline text-primary"
+                    className="hover:text-primary font-medium text-secondary"
                   >
                     {item.tournament_name}
                   </Link>

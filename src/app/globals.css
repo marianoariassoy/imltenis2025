@@ -30,7 +30,23 @@ body {
 }
 
 .fade-in {
-  animation: fade-in 0.3s ease-in-out forwards;
+  animation: fade-in 0.4s ease-in-out forwards;
+}
+.animate-in {
+  opacity: 0;
+  transform: scale(0.5);
+  animation: animate-in 0.3s ease-in-out forwards 0.3s;
+}
+
+@keyframes animate-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes fade-in {

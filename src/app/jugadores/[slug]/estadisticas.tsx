@@ -23,7 +23,7 @@ const estadisticas = async ({ id }: { id: string }) => {
   const percent = calcularPorcentaje(data.matches_won, data.matches_total);
 
   return (
-    <div className="w-full p-6 rounded-2xl mb-2 bg-black/15 shadow-md">
+    <div className="w-full p-6 rounded-2xl mb-2 bg-black/15">
       <div className="w-full grid grid-cols-2 items-center gap-y-2 gap-x-4">
         <div>
           <div>Partidos jugados</div>

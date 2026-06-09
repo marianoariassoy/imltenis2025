@@ -7,11 +7,11 @@ const Foto = ({ src, alt }: { src: string; alt: string }) => {
   return (
     <>
       <div
-        className={`fixed z-30 top-0 left-0 w-screen bg-black/10  backdrop-blur h-screen ${open ? "" : "hidden"}`}
+        className={`fixed z-30 top-0 left-0 w-screen h-screen ${open ? "" : "hidden"}`}
         onClick={() => setOpen(!open)}
       >
         <div
-          className={`absolute top-30 left-1/2 w-52 h-52 shadow-xl rounded-full overflow-hidden bg-white/10 -translate-y-4 -translate-x-1/2`}
+          className={`absolute top-30 left-1/2 w-52 h-52 shadow-md rounded-full overflow-hidden -translate-y-4 -translate-x-1/2`}
         >
           {src ? (
             <Image
