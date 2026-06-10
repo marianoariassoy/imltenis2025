@@ -24,7 +24,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
     <section className="flex flex-col gap-y-6">
       {title && (
         <div className="flex flex-col items-center justify-center">
-          <Title title="Calendario" />
+          <Title title="Calendario" winners={0} />
 
           <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full mt-4">
             <div className="flex items-center gap-x-2">
