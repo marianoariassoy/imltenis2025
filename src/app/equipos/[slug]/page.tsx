@@ -95,7 +95,9 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               href={`${data.ig}`}
               className="flex gap-x-2 font-medium items-center text-primary hover:underline"
             >
-              <Instagram />
+              <span className="text-[0.85rem]">
+                <Instagram />
+              </span>
               Cuenta oficial
             </a>
           ) : null}

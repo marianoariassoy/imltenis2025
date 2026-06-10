@@ -55,7 +55,7 @@ const Jugadores = async ({
   return (
     <section className="flex flex-col gap-y-4 -mt-4">
       <div className="text-center">
-        <h1 className="text-primary font-semibold text-lg flex items-center gap-x-2 justify-center">
+        <h1 className="text-primary font-semibold flex items-center gap-x-1 justify-center">
           <span>Lista de buena fe</span>
           {!withoutImage && (
             <span className="text-primary text-base">

@@ -59,7 +59,7 @@ const Header = () => {
           <Link
             href="/"
             aria-label="Logo"
-            className="lg:hover:brightness-125 transition-all"
+            className="lg:hover:scale-105 transition-all"
           >
             <Logo />
           </Link>
