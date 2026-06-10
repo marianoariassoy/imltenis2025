@@ -12,7 +12,7 @@ const InfoShow = ({
   const [show, setShow] = useState(false);
   return (
     <div
-      className={`flex justify-between items-start gap-x-1 px-2 py-3 lg:p-4 border-2 rounded-xl cursor-pointer ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
+      className={`flex justify-between items-start gap-x-1 px-2 py-3 lg:p-4 border-2 rounded-xl cursor-pointer mb-1 ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
       onClick={() => setShow(!show)}
     >
       <span>

@@ -81,7 +81,7 @@ const Tabla = async ({
                 </td>
                 <td>
                   {!twoMatches && (
-                    <div className="flex gap-x-2">
+                    <div className="flex gap-x-[0.35rem]">
                       {item.series.map((item, index) => (
                         <span key={index}>
                           {item ? (
