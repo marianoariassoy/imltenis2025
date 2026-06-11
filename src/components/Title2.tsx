@@ -8,7 +8,13 @@ const Title2 = ({ title, winners }: { title: string; winners: number }) => {
       </h1>
       <div className="flex items-center gap-x-[0.35rem] text-base">
         {Array.from({ length: winners }).map((_, index) => (
-          <span key={index} className="text-primary">
+          <span
+            key={index}
+            className="text-primary opacity-full"
+            style={{
+              animationDelay: `${index * 100}ms`,
+            }}
+          >
             <Bull />
           </span>
         ))}

@@ -26,7 +26,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
         <div className="flex flex-col items-center justify-center">
           <Title title="Calendario" winners={0} />
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full mt-4">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full mt-4 lg:mt-8">
             <div className="flex items-center gap-x-2">
               <span className="text-secondary">
                 <Bull />
