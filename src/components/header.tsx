@@ -30,7 +30,7 @@ const Header = () => {
       setScrolled((prev) => (prev === next ? prev : next));
 
       // Botón scroll top (aparece después de 1 viewport aprox)
-      const trigger = window.innerHeight;
+      const trigger = window.innerHeight / 2;
       setShowTopButton(scrollY > trigger);
     };
 
