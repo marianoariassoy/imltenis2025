@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Single } from "@/types";
 import { Bull } from "@/lib/icons";
+import LabelsBulls from "@/components/LabelsBulls";
 
-const JugadoresSingles = async ({ id }: { id: string }) => {
+const Singles = async ({ id }: { id: string }) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/players/${id}/singles`,
   );
@@ -94,22 +95,10 @@ const JugadoresSingles = async ({ id }: { id: string }) => {
           </tbody>
         </table>
       </div>
-      <div className="flex items-center gap-4 justify-center mb-4">
-        <div className="flex items-center gap-2">
-          <span className="text-primary">
-            <Bull />
-          </span>
-          <span className="text-secondary">Ganados</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-secondary">
-            <Bull />
-          </span>
-          <span className="text-secondary">Perdidos</span>
-        </div>
-      </div>
+
+      <LabelsBulls label1="Ganados" label2="Perdidos" />
     </section>
   );
 };
 
-export default JugadoresSingles;
+export default Singles;

@@ -10,7 +10,7 @@ const GoToTop = ({
   return (
     <>
       <div
-        className={`fixed bottom-0 left-0 z-20 flex justify-end w-full px-4 py-8 from-background via-background/70 to-transparent transition-all bg-linear-to-t duration-300 ${
+        className={`fixed bottom-0 left-0 z-20 flex justify-end w-full px-4 py-8 from-background via-background/70 to-transparent transition-all bg-linear-to-t ${
           showTopButton ? "fade-in" : "opacity-0"
         }`}
       ></div>

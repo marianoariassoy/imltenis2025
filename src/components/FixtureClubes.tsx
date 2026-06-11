@@ -3,6 +3,7 @@ import { Bull } from "@/lib/icons";
 import ItemSmall from "@/components/ItemSmall";
 import Item from "@/components/Item";
 import { Serie } from "@/types";
+import LabelsBulls from "@/components/LabelsBulls";
 
 const FixtureMain = ({
   data,
@@ -116,20 +117,8 @@ const FixtureMain = ({
               ))}
             </tbody>
           </table>
-          <div className="flex items-center gap-4 justify-center mt-4">
-            <div className="flex items-center gap-2">
-              <span className="text-primary">
-                <Bull />
-              </span>
-              <span className="text-secondary">Locales</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="text-secondary">
-                <Bull />
-              </span>
-              <span className="text-secondary">Visitantes</span>
-            </div>
-          </div>
+
+          <LabelsBulls label1="Visitantes" label2="Locales" />
         </div>
       )}
     </section>

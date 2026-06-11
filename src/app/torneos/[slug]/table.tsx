@@ -1,6 +1,7 @@
 import Item from "@/components/Item";
 import { Bull } from "@/lib/icons";
 import { Group, Table } from "@/types";
+import LabelsBulls from "@/components/LabelsBulls";
 
 interface Labels {
   name: string;
@@ -112,6 +113,8 @@ const Tabla = async ({
           </tbody>
         </table>
       </div>
+
+      <LabelsBulls label1="Series Ganadas" label2="Series Perdidas" />
     </section>
   );
 };

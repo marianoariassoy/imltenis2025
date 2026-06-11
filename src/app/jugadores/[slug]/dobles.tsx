@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { Double } from "@/types";
+import LabelsBulls from "@/components/LabelsBulls";
 import { Bull } from "@/lib/icons";
 
-const JugadoresDobles = async ({ id }: { id: string }) => {
+const Dobles = async ({ id }: { id: string }) => {
   try {
     const response = await fetch(
       `${process.env.NEXT_PUBLIC_API_URL}/players/${id}/doubles`,
@@ -110,20 +111,8 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
             </tbody>
           </table>
         </div>
-        <div className="flex items-center gap-4 justify-center mb-4">
-          <div className="flex items-center gap-2">
-            <span className="text-primary">
-              <Bull />
-            </span>
-            <span className="text-secondary">Ganados</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-secondary">
-              <Bull />
-            </span>
-            <span className="text-secondary">Perdidos</span>
-          </div>
-        </div>
+
+        <LabelsBulls label1="Ganados" label2="Perdidos" />
       </section>
     );
   } catch (error) {
@@ -132,4 +121,4 @@ const JugadoresDobles = async ({ id }: { id: string }) => {
   }
 };
 
-export default JugadoresDobles;
+export default Dobles;
