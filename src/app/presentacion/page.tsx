@@ -111,11 +111,13 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       Durante Julio <strong>$360.000.- </strong><br/> 
       Durante Agosto <strong>$400.000.- </strong><br/><br/>
       Podes realizar una transferencia del valor de la inscripción a la siguiente cuenta: <br/>
-      Alias: imltenis.pagos <br/>
-Titular: Irma Arias <br/>
-CTA: CA $ 19426210999068 <br/>
-CBU: 0110621930062109990683 <br/>
-CUIL: 27050108347 <br/><br/>
+      Alias: IML.TENIS <br/>
+Banco Supervielle <br/>
+Daiana Elizabeth Soto <br/>
+CTA: CA ARS 257-3229751-4 <br/>
+CBU: 0270257720032297510041 <br/>
+CUIT/CUIL: 27397070811 <br/><br/>
+
       Enviar comprobante al área administrativa +54 9 11 3017-1475 `,
     },
     {
@@ -129,6 +131,7 @@ CUIL: 27050108347 <br/><br/>
       `,
     },
   ];
+
   return (
     <Container>
       <div className="flex flex-col gap-y-4 mt-4">

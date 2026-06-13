@@ -8,7 +8,7 @@ const LabelsBulls = ({
   label2: string;
 }) => {
   return (
-    <div className="flex items-center gap-2 justify-center mb-2">
+    <div className="flex items-center gap-2 justify-center">
       <div className="flex items-center gap-2">
         <span className="text-primary">
           <Bull />
