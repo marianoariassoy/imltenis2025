@@ -53,7 +53,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
 
   return (
     <Container>
-      <header className="flex flex-col items-center">
+      <header className="flex flex-col gap-y-2 items-center">
         <Title title={`${data.date} ${data.hour}`} />
         <Link
           href={`/torneos/${data.tournament_slug}`}

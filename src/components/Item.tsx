@@ -21,7 +21,7 @@ const TitleRow = ({ num, image, title, link, active }: Item) => {
         </div>
       )}
 
-      <div className="w-[3.7rem] h-[3.7rem] rounded-full overflow-hidden bg-white/10">
+      <div className="w-14 h-14 lg:w-[3.7rem] lg:h-[3.7rem] rounded-full overflow-hidden bg-white/10">
         {image ? (
           <Link href={link}>
             <Image
