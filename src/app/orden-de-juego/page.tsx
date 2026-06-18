@@ -32,7 +32,7 @@ const page = async () => {
       <Title
         title={`Orden de juego`}
         description={
-          data.length + " series a disputar / " + data.length * 3 + " partidos"
+          data.length + " series a disputar — " + data.length * 3 + " partidos"
         }
         emoji="📅"
       />
@@ -53,14 +53,8 @@ const page = async () => {
                 <td>
                   <div className="text-secondary font-medium flex gap-x-2">
                     {item.top ? <span className="text-xl">⭐️</span> : null}
-                    <span>{item.date}</span>
-                    <span>
-                      {item.hour ? (
-                        <span className="text-primary">{item.hour}</span>
-                      ) : (
-                        "-"
-                      )}
-                    </span>
+                    <span className="text-primary">{item.date}</span>
+                    <span>{item.hour ? <span>{item.hour}</span> : "—"}</span>
                   </div>
                 </td>
                 <td>

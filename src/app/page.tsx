@@ -43,7 +43,7 @@ export default function Home() {
         </div>
 
         <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden blur-sm">
-          <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/25 to-black/45 z-20"></div>
+          <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/50 z-20"></div>
           <video
             ref={videoRef}
             autoPlay
@@ -51,7 +51,7 @@ export default function Home() {
             muted
             playsInline
             preload="auto"
-            className="opacity-70 h-screen w-screen object-cover saturate-[.7]"
+            className="opacity-80 h-screen w-screen object-cover saturate-[.7]"
           >
             <source src="/videos/video.webm" type="video/webm" />
             <source src="/videos/video.mp4" type="video/mp4" />

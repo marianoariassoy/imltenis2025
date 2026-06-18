@@ -71,7 +71,6 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
           subtitle="Local"
         />
         <div className="flex w-16 items-center justify-center font-bold text-3xl pt-8 text-primary">
-          {/* <span>{data.score}</span> */}
           {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>}
         </div>
         <Item
