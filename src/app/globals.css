@@ -132,3 +132,16 @@ body {
     }
   }
 }
+
+.shape {
+  fill: white;
+  opacity: 0.03;
+}
+
+.shape1 {
+  filter: blur(20px);
+}
+
+.shape2 {
+  filter: blur(20px);
+}
