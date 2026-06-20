@@ -4,7 +4,6 @@ import { useMenu } from "@/context/menu-context";
 import Notice from "@/components/Notice";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
-import WhatsApp from "@/components/WhatsApp";
 
 export default function Home() {
   const { open, setOpen } = useMenu();
@@ -58,8 +57,6 @@ export default function Home() {
           </video>
         </div>
       </section>
-
-      <WhatsApp />
     </>
   );
 }
