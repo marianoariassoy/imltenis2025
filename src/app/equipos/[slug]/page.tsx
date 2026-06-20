@@ -59,13 +59,13 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <header className="items-center flex flex-col mb-4">
         <Link
           href={`/clubes/${data.club_slug}`}
-          className="w-20 h-20 rounded-full overflow-hidden shadow-lg mb-2"
+          className="w-24 h-24 rounded-full overflow-hidden shadow-lg mb-2"
         >
           <Image
             src={data.image}
             alt={data.name}
-            width={80}
-            height={80}
+            width={96}
+            height={96}
             className="object-cover h-full w-full hover:opacity-80 transition-opacity"
           />
         </Link>

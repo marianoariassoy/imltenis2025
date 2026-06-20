@@ -164,15 +164,15 @@ export const categories = [
 ];
 
 export const menu = [
+  { name: "Orden de juego", url: "/orden-de-juego" },
   {
     name: "Ranking de Jugadores",
     url: "/rankings/jugadores/damas-intermedia-30-apertura-2026",
   },
   { name: "Ranking de Clubes", url: "/rankings/clubes" },
   { name: "Ranking de Campeones", url: "/rankings/campeones" },
-  { name: "Orden de juego", url: "/orden-de-juego" },
-  { name: "Jugadores", url: "/jugadores" },
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },
+  { name: "Jugadores", url: "/jugadores" },
 ];
 
 export const extra = [
