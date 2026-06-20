@@ -16,10 +16,13 @@ const Menu = () => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-screen h-screen bg-background/75 backdrop-blur z-40 text-base flex items-center transition-all duration-300 justify-center text-center ease-in-out ${open ? "translate-y-0" : "-translate-y-full"}`}
+      className={`fixed top-0 left-0 w-screen h-screen bg-background/90 backdrop-blur z-40 flex  transition-all duration-300 justify-center ease-in-out ${open ? "translate-y-0" : "-translate-y-full"}`}
       onClick={() => setOpen(false)}
     >
-      <nav onClick={handleNavClick}>
+      <div
+        className="flex flex-col gap-y-2 gap-x-12 text-center md:hidden mt-30"
+        onClick={handleNavClick}
+      >
         <ul className="font-medium">
           {tournaments.map((item, index) => (
             <li key={index}>
@@ -53,7 +56,7 @@ const Menu = () => {
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col font-medium mt-2">
+        <ul className="flex flex-col font-medium">
           {menu.map((item, index) => (
             <li key={index + 20}>
               <Link
@@ -70,7 +73,7 @@ const Menu = () => {
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col font-medium mt-2">
+        <ul className="flex flex-col font-medium">
           {extra.map((item, index) => (
             <li key={index + 20}>
               <Link
@@ -87,7 +90,66 @@ const Menu = () => {
             </li>
           ))}
         </ul>
-      </nav>
+      </div>
+
+      <div className="gap-x-20 justify-start gap-y-4 hidden md:flex max-w-6xl mx-auto flex-wrap px-8 mt-40">
+        {tournaments.map((item, index) => (
+          <ul key={index}>
+            <h2 className="text-primary italic font-extrabold text-xl mb-2">
+              {item.name}
+            </h2>
+            {item.categories.map((item, index) => (
+              <li key={index}>
+                <Link
+                  href={item.url}
+                  className={`${
+                    pathname === item.url
+                      ? "text-primary"
+                      : "hover:text-primary"
+                  }`}
+                  onClick={() => setOpen(false)}
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        ))}
+        <ul className="flex flex-col font-medium">
+          {menu.map((item, index) => (
+            <li key={index + 20}>
+              <Link
+                href={item.url}
+                className={
+                  pathname === item.url
+                    ? "text-primary"
+                    : "hover:text-primary text-secondary"
+                }
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <ul className="flex flex-col font-medium">
+          {extra.map((item, index) => (
+            <li key={index + 20}>
+              <Link
+                href={item.url}
+                className={
+                  pathname === item.url
+                    ? "text-primary"
+                    : "hover:text-primary text-secondary"
+                }
+                onClick={() => setOpen(false)}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
