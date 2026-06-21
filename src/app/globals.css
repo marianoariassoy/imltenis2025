@@ -8,12 +8,13 @@
   --color-secondary: #999999;
   --color-tertiary: #9b37ff;
   --color-foreground: #e4e3e3;
-  --color-background: #1f1f1f;
+  --color-background: #222222;
 }
 
 body {
   font-family: var(--font-montserrat);
   background-color: var(--color-background);
+  /* color: #222222 */
 }
 
 .table thead tr th {

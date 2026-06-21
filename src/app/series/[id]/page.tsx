@@ -63,14 +63,14 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
         </Link>
       </header>
 
-      <div className="flex justify-center items-start gap-x-4 text-center max-w-xs mx-auto">
+      <div className="flex justify-center items-start gap-x-4 text-center max-w-xl mx-auto">
         <Item
           link={`/equipos/${data.home_slug}`}
           title={data.home_name}
           image={data.home_image}
           subtitle="Local"
         />
-        <div className="flex w-16 items-center justify-center font-bold text-3xl pt-8 text-primary">
+        <div className="flex w-16 items-center justify-center font-bold text-4xl pt-8 text-primary">
           {data.winner > 0 ? <span>{data.score}</span> : <div>⚡️</div>}
         </div>
         <Item
