@@ -22,7 +22,7 @@ const table = async ({
           .filter((item) => item.type === 2)
           .map((item) => (
             <div className="flex flex-col gap-y-3" key={item.id}>
-              <h1 className="font-semibold text-base text-primary text-center">
+              <h1 className="font-bold text-lg text-primary text-center">
                 {item.title}
               </h1>
               <Fixture group_id={item.id} type={item.type} />
@@ -35,7 +35,7 @@ const table = async ({
           .filter((item) => item.type === 1)
           .map((item, index) => (
             <div key={index} className="flex flex-col gap-y-6">
-              <h1 className="font-semibold text-primary text-center text-base">
+              <h1 className="font-bold text-lg text-primary text-center text-base">
                 {item.title}
               </h1>
               <Table group={item} />

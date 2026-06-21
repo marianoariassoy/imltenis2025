@@ -43,8 +43,8 @@ const tabla = async ({ group }: { group: Group }) => {
       value: "Diferencia de games",
     },
     {
-      name: "EJ",
-      value: "Encuentros jugados",
+      name: "PJ",
+      value: "Partidos jugados",
     },
   ];
 

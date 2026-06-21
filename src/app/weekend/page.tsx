@@ -1,5 +1,6 @@
 import Title from "@/components/Title";
 import Link from "next/link";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "IML Weekend",
@@ -22,24 +23,24 @@ const page = async () => {
   const data = (await response.json()) as Props[];
 
   return (
-    <section className="flex flex-col gap-y-6">
-      <Title title="IML Weekend" emoji="😎" />
+    <Container>
+      <Title title="IML Weekend" />
 
-      <div className="flex flex-col gap-y-3 items-center text-sm">
+      <div className="flex flex-col gap-y-3 items-center mt-8">
         {data.map((item) => (
           <Link
             href={`/weekend/${item.id}`}
-            className="hover:underline flex flex-col items-center"
+            className="hover:text-primary flex flex-col items-center"
             key={item.id}
           >
-            <span className="text-primary font-semibold">{item.title}</span>
+            <span className="text-primary font-bold">{item.title}</span>
             <span>
               {item.date} {item.hour}
             </span>
           </Link>
         ))}
       </div>
-    </section>
+    </Container>
   );
 };
 

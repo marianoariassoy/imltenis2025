@@ -178,8 +178,8 @@ export const menu = [
 export const extra = [
   { name: "Reglamento", url: "/reglamento" },
   { name: "Capitanes", url: "https://capitanes.imltenis.com.ar/" },
-  // { name: "IML Weekend", url: "/weekend" },
   { name: "Registro de jugadores", url: "/bienvenido" },
-  // { name: "Tienda", url: "/soon" },
   { name: "Nosotros", url: "/nosotros" },
+  { name: "IML Weekend", url: "/weekend" },
+  { name: "Tienda", url: "/soon" },
 ];

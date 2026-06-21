@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Campeon from "./campeon";
 import Torneo from "./torneo";
+import { Container } from "@/components/Container";
 
 export async function generateMetadata({
   params,
@@ -55,7 +56,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
   if (!data) return null;
 
   return (
-    <section className="flex flex-col gap-y-4">
+    <Container>
       <Title title={data.title} description={`${data.date} ${data.hour}`} />
 
       {data.champion ? (
@@ -67,7 +68,7 @@ const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
       <Suspense fallback={<Loader />}>
         <Torneo id_tournament={id} description={data.description} />
       </Suspense>
-    </section>
+    </Container>
   );
 };
 

@@ -86,7 +86,7 @@ const page = async () => {
                     image={item.image}
                     title={item.name}
                     link={`/clubes/${item.club_slug}`}
-                    active={false}
+                    active={index === 0 ? true : false}
                   />
                 </td>
                 <td className="font-bold">{item.gold}</td>

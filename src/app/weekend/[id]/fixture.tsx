@@ -38,17 +38,14 @@ const fixture = async ({
   return (
     <section className="fade-in flex flex-col gap-y-6">
       {type !== 2 && (
-        <h1 className="font-semibold text-primary text-center text-base">
+        <h1 className="font-semibold text-primary text-center text-lg">
           Orden de juego
         </h1>
       )}
 
       <div className="w-full overflow-x-auto mt-3 flex flex-col mb-3 gap-y-3">
         {data.map((item) => (
-          <div
-            key={item.id}
-            className="flex justify-between items-start text-sm"
-          >
+          <div key={item.id} className="flex justify-between items-start">
             <div
               className={`flex-1 flex gap-x-3 ${
                 item.winner === item.partner1_id ? "text-primary" : ""
