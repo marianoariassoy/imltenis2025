@@ -59,6 +59,7 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       Quinta Libre (1 single, 2 dobles) <br/> <br/> 
     
       <strong>Caballeros sábados de 13 a 17 hs.:</strong><br/>
+      Tercera +40 (2 dobles) (Nueva)<br/>
       Cuarta +40 (2 dobles)<br/>
       Quinta +40 (2 dobles)<br/><br/> 
       
@@ -72,7 +73,8 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
 
       <strong>Mixtos sábados de 13 a 17 hs.:</strong><br/>
       Mixto Libre (Caballeros y Damas nivel libre) <br/> 
-      Mixto B/C (Caballeros hasta Cuarta / Damas hasta Tercera) (2 Copas) 
+      Mixto B (Caballeros hasta Cuarta / Damas hasta Tercera) <br/> 
+      Mixto C (Caballeros hasta Quinta / Damas hasta Cuarta) 
       `,
     },
     {

@@ -37,7 +37,7 @@ const page = async () => {
         emoji="📅"
       />
 
-      <div className="overflow-x-auto whitespace-nowrap">
+      <div className="overflow-x-auto whitespace-nowrap mt-4">
         <table className="table w-full mb-3">
           <thead>
             <tr>
@@ -59,21 +59,21 @@ const page = async () => {
                 </td>
                 <td>
                   <Item
-                    link={`/equipos/${item.home_id}`}
+                    link={`/equipos/${item.home_slug}`}
                     title={item.home_name}
                     image={item.home_image}
                   />
                 </td>
                 <td>
                   <Item
-                    link={`/equipos/${item.away_id}`}
+                    link={`/equipos/${item.away_slug}`}
                     title={item.away_name}
                     image={item.away_image}
                   />
                 </td>
                 <td>
                   <Link
-                    href={`/torneos/${item.tournament_id}`}
+                    href={`/torneos/${item.tournament_slug}`}
                     className="hover:text-primary font-medium text-secondary"
                   >
                     {item.tournament_name}
