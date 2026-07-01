@@ -10,7 +10,7 @@ const nav = [
   {
     title: "Clubes campeones",
     description: "Ranking de copas y finales disputadas por clubes.",
-    url: "/rankings/clubes",
+    url: "/rankings/campeones",
   },
   {
     title: "Jugadores destacados",
