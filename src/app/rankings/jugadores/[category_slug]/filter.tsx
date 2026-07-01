@@ -28,7 +28,7 @@ const Filter = ({ category_slug }: { category_slug: string }) => {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between gap-2 px-2 py-3 lg:p-4 border-2 rounded-lg border-primary text-primary transition w-full cursor-pointer"
+        className="flex items-center justify-between gap-2 px-2 py-3 lg:px-4 border-2 rounded-lg border-primary text-primary transition w-full cursor-pointer"
       >
         <span className="text-primary text-sm">
           {active?.name ?? "Seleccionar categoría"}
@@ -41,7 +41,7 @@ const Filter = ({ category_slug }: { category_slug: string }) => {
       </button>
 
       {open && (
-        <div className="absolute z-20 px-2 py-3 lg:p-4 w-full rounded-lg bg-background border-2 border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-3 text-sm">
+        <div className="absolute z-20 px-2 py-3 lg:px-4 w-full rounded-lg bg-background border-2 border-primary shadow-xl overflow-hidden grid grid-cols-1 md:grid-cols-3 text-sm">
           {categories.map((item) => {
             const isActive = category_slug === item.slug;
 
