@@ -12,7 +12,7 @@ const TitleRow = ({ image, title, link }: Item) => {
     <div className="flex items-center gap-x-3">
       <div className="w-12 h-12 rounded-full overflow-hidden bg-white/20 shadow-md">
         {image ? (
-          <Link href={link}>
+          <Link href={link} className="shrink-0">
             <Image
               src={image}
               alt={title}
@@ -23,7 +23,10 @@ const TitleRow = ({ image, title, link }: Item) => {
           </Link>
         ) : null}
       </div>
-      <Link href={link} className="hover:text-primary pr-4 font-semibold">
+      <Link
+        href={link}
+        className="hover:text-primary pr-4 font-semibold whitespace-nowrap"
+      >
         {title}
       </Link>
     </div>

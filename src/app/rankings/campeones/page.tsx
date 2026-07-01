@@ -4,14 +4,14 @@ import Labels from "@/components/Labels";
 import { Container } from "@/components/Container";
 
 export const metadata = {
-  title: "Ranking de Campeones",
-  description: "Ranking de campeones de la liga de clubes IML Tenis",
+  title: "Clubes Campeones",
+  description: "Clubes campeones de la liga de clubes IML Tenis",
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: "https://imltenis.com.ar/rankings/campeones",
-    title: "Ranking de Campeones",
-    description: "Ranking de campeones de la liga de clubes IML Tenis",
+    title: "Clubes Campeones",
+    description: "Clubes campeones de la liga de clubes IML Tenis",
     images: [
       {
         url: "https://imltenis.com.ar/assets/imltenis.jpg",
@@ -64,7 +64,7 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Ranking de Campeones" emoji="👑" />
+      <Title title="Clubes Campeones" emoji="👑" description="2023 - 2026" />
       <div className="overflow-x-auto">
         <table className="table w-full mb-2">
           <thead>

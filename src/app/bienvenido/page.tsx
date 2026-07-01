@@ -11,6 +11,12 @@ import Loader from "@/components/Loader";
 import Error from "./Error";
 import Aviso from "@/components/Aviso";
 import { Container } from "@/components/Container";
+import { ChevronDown } from "@/lib/icons";
+
+interface Category {
+  id: number;
+  name: string;
+}
 
 interface User {
   name: string;
@@ -20,6 +26,7 @@ interface User {
   email: string;
   dni: string;
   birthday: string;
+  category?: number;
 }
 
 const Page = () => {
@@ -27,6 +34,24 @@ const Page = () => {
   const [error, setError] = useState("");
   const [image, setImage] = useState<File | null>(null);
   const [sended, setSended] = useState(false);
+  const [categories, setCategories] = useState<Category[]>([]);
+
+  useEffect(() => {
+    const getCategories = async () => {
+      try {
+        const response = await axios.get(
+          "https://api.imltenis.com.ar/categories",
+        );
+
+        setCategories(response.data);
+      } catch (error) {
+        console.error(error);
+        toast.error("No se pudieron cargar las categorías");
+      }
+    };
+
+    getCategories();
+  }, []);
 
   const {
     register,
@@ -87,17 +112,17 @@ const Page = () => {
 
   if (sended)
     return (
-      <div className="flex flex-col gap-y-8 text-center">
+      <Container>
         <Title
           title="¡Vamos!"
           emoji="💪🏻"
           description="¡Tu registro fue realizado con éxito!"
         />
-        <p>
+        <p className="text-center">
           Ya podes contactarte con tu capitán para que pueda agregarte a su
-          lista de buena fe 🚀
+          lista de buena fe.
         </p>
-      </div>
+      </Container>
     );
 
   return (
@@ -201,6 +226,36 @@ const Page = () => {
                 </div>
                 <Error error={errors.birthday} />
               </div>
+              <div className="form-control">
+                <label className="mb-2 block">
+                  <span className="text-primary font-medium">Categoría</span>
+                </label>
+
+                <div className="relative h-12 mb-2">
+                  <select
+                    className="w-full h-full border-primary border bg-transparent px-4 focus:outline-none focus:ring-0 rounded-lg appearance-none text-foreground"
+                    {...register("category", {
+                      required: errorMessage,
+                      valueAsNumber: true,
+                    })}
+                  >
+                    <option value="">Seleccionar categoría</option>
+
+                    {categories.map((category) => (
+                      <option key={category.id} value={category.id}>
+                        {category.name}
+                      </option>
+                    ))}
+                  </select>
+
+                  <div className="absolute right-2 top-1/2 -translate-y-1/2 text-primary">
+                    <ChevronDown />
+                  </div>
+                </div>
+
+                <Error error={errors.category} />
+              </div>
+
               <div className="form-control">
                 <label className="mb-2 block">
                   <span className="text-primary font-medium">

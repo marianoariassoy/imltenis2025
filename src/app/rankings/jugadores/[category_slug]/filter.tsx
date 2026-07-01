@@ -28,7 +28,7 @@ const Filter = ({ category_slug }: { category_slug: string }) => {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center justify-between gap-2 px-2 py-3 lg:p-4 border-2 rounded-lg border-primary text-primary transition w-full"
+        className="flex items-center justify-between gap-2 px-2 py-3 lg:p-4 border-2 rounded-lg border-primary text-primary transition w-full cursor-pointer"
       >
         <span className="text-primary text-sm">
           {active?.name ?? "Seleccionar categoría"}
