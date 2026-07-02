@@ -2,8 +2,9 @@
 import { useEffect, useRef } from "react";
 import { useMenu } from "@/context/menu-context";
 import Notice from "@/components/Notice";
-// import { AuroraText } from "@/components/ui/aurora-text";
+import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
+import Whatsapp from "@/components/WhatsApp";
 
 export default function Home() {
   const { open, setOpen } = useMenu();
@@ -17,18 +18,21 @@ export default function Home() {
 
   return (
     <>
+      <Whatsapp />
       <section className="h-screen w-full">
         <Notice />
 
         <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20 opacity-0 fade-in delay-100">
           <h1
-            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer text-primary"
+            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
             onClick={() => setOpen(!open)}
           >
-            Torneo <br /> Interclubes <br /> Apertura <br />
-            <div className="text-primary mt-2 mb-2 w-full flex justify-center">
-              <Veinteventiseis />
-            </div>
+            <AuroraText colors={["#9b37ff", "#fe514e", "#fe514e"]}>
+              Torneo <br /> Interclubes <br /> Apertura <br />
+              <div className="text-primary mt-2 mb-2 w-full flex justify-center">
+                <Veinteventiseis />
+              </div>
+            </AuroraText>
           </h1>
 
           <button

@@ -62,7 +62,7 @@ const page = async () => {
             <article className="flex items-center gap-x-3" key={index}>
               <div className="w-12 h-12 rounded-full overflow-hidden bg-white/20 shadow-md shrink-0">
                 {item.image ? (
-                  <Link href={`/teams/${item.slug}`}>
+                  <Link href={`/equipos/${item.slug}`}>
                     <Image
                       src={item.image}
                       alt={item.name}

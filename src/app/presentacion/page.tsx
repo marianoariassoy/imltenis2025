@@ -48,7 +48,7 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
     },
     {
       title: "🚀 ¿En qué categorías puedo inscribirme?",
-      text: `<strong>Damas sábados de 13 a 17 hs.:</strong><br/>
+      text: `👉🏻 <strong>Zona Norte/Oeste:</strong><br/> <br/>  <strong>Damas sábados de 13 a 17 hs.:</strong><br/>
       Intermedia +30 (2 dobles)<br/>
       Tercera +40 (2 dobles)<br/>
       Cuarta +40 (2 dobles)<br/><br/>
@@ -74,7 +74,13 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       <strong>Mixtos sábados de 13 a 17 hs.:</strong><br/>
       Mixto Libre (Caballeros y Damas nivel libre) <br/> 
       Mixto B (Caballeros hasta Cuarta / Damas hasta Tercera) <br/> 
-      Mixto C (Caballeros hasta Quinta / Damas hasta Cuarta) 
+      Mixto C (Caballeros hasta Quinta / Damas hasta Cuarta) <br/> <br/> 
+
+        👉🏻 <strong>Zona Sur:</strong><br/> <br/> 
+           <strong>Damas domingos y sábados de 13 a 17hs.:</strong>  <br/> 
+      Tercera/Cuarta +30 (2 dobles)  <br/> <br/> 
+                 <strong>Caballeros domingos y sábados de 13 a 17hs.:</strong>  <br/> 
+      Tercera/Cuarta +30 (2 dobles)  <br/> 
       `,
     },
     {
@@ -90,11 +96,12 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
     {
       title: "🌍 ¿Dónde se juega?",
       text: `Cada equipo <strong>representa a un club o barrio</strong> que jugará de local reservando o alquilando cancha según corresponda.<br/>
-      Zonas de juego: <strong>Zona Norte y Zona Oeste de Buenos Aires.</strong>`,
+      Zonas de juego: <strong>Zona Norte, Zona Oeste y Zona Sur (zona exclusiva) de Buenos Aires.</strong>`,
     },
     {
       title: "🕛 ¿Qué día y horario se juega por categoría?",
       text: `Las categorías de los domingos de <strong>9 a 17 hs.</strong><br/>Las categorías de los sábados de <strong>13 a 17 hs.</strong> <br/> 
+      Categorías de Sábados y Domingos de 13 a 17 hs. <br/> 
       Cada equipo puede elegir el horario cuando sea local dentro de esas franjas.`,
     },
     {
@@ -149,7 +156,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
         <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
           <strong> IML Tenis </strong>es uno de los interclubes de tenis amateur
           más importantes de la zona, con más de <strong>200 equipos</strong> y{" "}
-          <strong>16 categorías</strong> que abarcan distintos niveles de juego
+          <strong>20 categorías</strong> que abarcan distintos niveles de juego
           en damas, caballeros y mixtos.
           <br /> <br />
           En esta competencia vas a compartir una experiencia única junto a tu

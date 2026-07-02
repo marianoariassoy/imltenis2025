@@ -48,7 +48,7 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 z-50 from-background via-background/70 to-transparent transition-all ${isHome ? "" : "bg-linear-to-b"} py-4`}
+        className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 md:px-12 z-50 from-background via-background/70 to-transparent transition-all ${isHome ? "" : "bg-linear-to-b"} py-4`}
       >
         <div className="flex-1 z-40">
           <HamburgerButton />
