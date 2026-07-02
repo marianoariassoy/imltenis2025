@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import { useMenu } from "@/context/menu-context";
 import Notice from "@/components/Notice";
-import { AuroraText } from "@/components/ui/aurora-text";
+// import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
 
 export default function Home() {
