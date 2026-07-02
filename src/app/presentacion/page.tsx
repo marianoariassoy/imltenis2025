@@ -77,10 +77,11 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
       Mixto C (Caballeros hasta Quinta / Damas hasta Cuarta) <br/> <br/> 
 
         👉🏻 <strong>Zona Sur:</strong><br/> <br/> 
-           <strong>Damas domingos y sábados de 13 a 17hs.:</strong>  <br/> 
+           <strong>Damas domingos o sábados de 13 a 17hs.:</strong>  <br/> 
       Tercera/Cuarta +30 (2 dobles)  <br/> <br/> 
-                 <strong>Caballeros domingos y sábados de 13 a 17hs.:</strong>  <br/> 
+                 <strong>Caballeros domingos o sábados de 13 a 17hs.:</strong>  <br/> 
       Tercera/Cuarta +30 (2 dobles)  <br/> 
+      Mixto Libre (sábados o domingos de 13 a 17 hs.):
       `,
     },
     {
