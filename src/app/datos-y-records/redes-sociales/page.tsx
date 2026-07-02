@@ -2,6 +2,7 @@ import Title from "@/components/Title";
 import { Container } from "@/components/Container";
 import Image from "next/image";
 import Link from "next/link";
+import { Instagram } from "@/lib/icons";
 
 export const metadata = {
   title: "Cuentas oficiales de equipos",
@@ -38,23 +39,25 @@ const page = async () => {
   const data = (await response.json()) as data[];
   if (!data) return;
 
-  const labels = [
-    {
-      name: "Nombre",
-      value: "Nombre del equipo",
-    },
-    {
-      name: "Cuenta",
-      value: "Cuenta oficial",
-    },
-  ];
+  function getInstagramUsername(url: string): string | null {
+    const match = url.match(
+      /^https?:\/\/(?:www\.)?instagram\.com\/([a-zA-Z0-9._]+)\/?(?:\?.*)?$/,
+    );
+
+    return match ? match[1] : null;
+  }
 
   return (
     <Container>
-      <Title title="Cuentas oficiales" emoji="🌎" />
+      <div className="flex flex-col gap-y-2 items-center">
+        <span className="text-primary">
+          <Instagram />
+        </span>
+        <Title title="Cuentas oficiales" />
+      </div>
 
-      <div className="overflow-x-auto">
-        <div className="flex flex-col gap-y-6 max-w-2xl mx-auto">
+      <div className="overflow-x-auto mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {data.map((item, index) => (
             <article className="flex items-center gap-x-3" key={index}>
               <div className="w-12 h-12 rounded-full overflow-hidden bg-white/20 shadow-md shrink-0">
@@ -79,7 +82,7 @@ const page = async () => {
                 <span className="font-semibold whitespace-nowrap">
                   {item.name}
                 </span>
-                <span>{item.ig}</span>
+                <span>@{getInstagramUsername(item.ig)}</span>
               </a>
             </article>
           ))}
