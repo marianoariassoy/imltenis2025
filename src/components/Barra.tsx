@@ -9,7 +9,7 @@ const CountBar = ({ end, className }: { end: number; className?: string }) => {
   }, [end]);
 
   return (
-    <div className={`w-24 bg-white/10 h-1 overflow-hidden ${className}`}>
+    <div className={`w-1/2 bg-white/10 h-1 overflow-hidden ${className}`}>
       <span
         className="bg-primary h-full block transition-all duration-1000 ease-out"
         style={{ width: `${progress}%` }}

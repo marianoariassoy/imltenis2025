@@ -80,7 +80,7 @@ Todos los resultados y el reglamento general pueden consultarse en este sitio we
            <strong>Damas domingos o sábados de 13 a 17hs.:</strong>  <br/> 
       Tercera/Cuarta +30 (2 dobles)  <br/> <br/> 
                  <strong>Caballeros domingos o sábados de 13 a 17hs.:</strong>  <br/> 
-      Tercera/Cuarta +30 (2 dobles)  <br/> 
+      Tercera/Cuarta +30 (2 dobles)  <br/> <br/> 
       Mixto Libre (sábados o domingos de 13 a 17 hs.):
       `,
     },

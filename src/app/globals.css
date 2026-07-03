@@ -6,7 +6,7 @@
   --font-sans: var(--font-montserrat);
   --color-primary: #fe514e;
   --color-secondary: #999999;
-  --color-tertiary: #9b37ff;
+  --color-tertiary: #7d37ff;
   --color-foreground: #e4e3e3;
   --color-background: #222222;
 }
@@ -14,7 +14,6 @@
 body {
   font-family: var(--font-montserrat);
   background-color: var(--color-background);
-  /* color: #222222 */
 }
 
 .table thead tr th {
@@ -31,7 +30,7 @@ body {
 }
 
 .fade-in {
-  animation: fade-in 0.4s ease-in-out forwards;
+  animation: fade-in 0.3s ease-in-out forwards;
 }
 .animate-in {
   opacity: 0;
@@ -63,6 +62,9 @@ body {
 }
 
 @keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }

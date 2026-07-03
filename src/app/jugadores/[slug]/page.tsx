@@ -83,7 +83,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           type="atention"
         />
       )}
-      <Estadisticas id={data.id} />
+      <Estadisticas id={data.id} category_name={data.category_name} />
       <Singles id={data.id} />
       <Doubles id={data.id} />
       <Equipos id={data.id} />
