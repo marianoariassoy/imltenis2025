@@ -56,8 +56,8 @@ const page = async () => {
         <Title title="Cuentas oficiales" />
       </div>
 
-      <div className="overflow-x-auto mt-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="w-full md:w-auto mx-auto mt-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-6">
           {data.map((item, index) => (
             <article className="flex items-center gap-x-3" key={index}>
               <div className="w-12 h-12 rounded-full overflow-hidden bg-white/20 shadow-md shrink-0">
