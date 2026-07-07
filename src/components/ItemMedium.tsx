@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { obtenerAbreviado } from "@/lib/abbreviations";
 
 interface Item {
   image: string;
@@ -25,8 +24,7 @@ const TitleRow = ({ image, title, link }: Item) => {
         ) : null}
       </div>
       <Link href={link} className="hover:text-primary pr-4 font-semibold">
-        <span className="hidden md:block">{title}</span>
-        <span className="block md:hidden">{obtenerAbreviado(title)}</span>
+        <span>{title}</span>
       </Link>
     </div>
   );

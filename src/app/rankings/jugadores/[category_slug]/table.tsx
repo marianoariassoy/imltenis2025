@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Item from "@/components/ItemMedium";
+import Item from "@/components/ItemPlayer";
 import Labels from "@/components/Labels";
 import { categories } from "@/lib/data";
 import Messages from "@/components/Messages";

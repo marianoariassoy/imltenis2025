@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { obtenerPrimerNombreYApellido } from "@/lib/abbreviations";
 
 interface Item {
   image: string;
@@ -27,7 +28,7 @@ const TitleRow = ({ image, title, link }: Item) => {
         href={link}
         className="hover:text-primary pr-4 font-semibold whitespace-nowrap"
       >
-        {title}
+        {obtenerPrimerNombreYApellido(title)}
       </Link>
     </div>
   );
