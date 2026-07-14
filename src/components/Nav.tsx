@@ -8,7 +8,7 @@ import { useMenu } from "@/context/menu-context";
 const Menu = () => {
   const { open, setOpen } = useMenu();
   const pathname = usePathname();
-  const [category, setCategory] = useState("Damas");
+  const [category, setCategory] = useState("");
 
   const handleNavClick = (e: React.MouseEvent) => {
     e.stopPropagation();

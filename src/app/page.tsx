@@ -1,13 +1,15 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { useMenu } from "@/context/menu-context";
+// import { useMenu } from "@/context/menu-context";
 import Notice from "@/components/Notice";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
+import Link from "next/link";
+import Countdown from "@/components/Countdown";
 
 export default function Home() {
-  const { open, setOpen } = useMenu();
+  // const { open, setOpen } = useMenu();
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -19,32 +21,37 @@ export default function Home() {
   return (
     <>
       <Whatsapp />
+      <Link
+        href="/chatiml"
+        className="fixed bottom-40 md:bottom-30 right-4 md:right-12 text-foreground bg-background/80 w-16 h-16 rounded-full 
+        text-3xl transition-all flex items-center justify-center  hover:scale-105"
+      >
+        🤖
+      </Link>
       <section className="h-screen w-full">
         <Notice />
 
-        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20 opacity-0 fade-in delay-100">
-          <h1
+        <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20 opacity-0 fade-in delay-100 items-center">
+          <Link
+            href="/presentacion"
             className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
-            onClick={() => setOpen(!open)}
+            // onClick={() => setOpen(!open)}
           >
             <AuroraText colors={["#7d37ff", "#fe514e", "#fe514e"]}>
-              Torneo <br /> Interclubes <br /> Apertura <br />
+              Torneo <br /> Interclubes <br /> Clausura <br />
               <div className="text-primary mt-2 mb-2 w-full flex justify-center">
                 <Veinteventiseis />
               </div>
             </AuroraText>
-          </h1>
+          </Link>
 
-          <button
-            className="font-medium mt-4 hover:underline text-secondary cursor-pointer "
-            onClick={() => setOpen(!open)}
-          >
-            Ver categorías →
-          </button>
+          <div className="mt-4">
+            <Countdown targetDate="2026-08-15T09:00:00" />
+          </div>
         </div>
 
         <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden blur-sm">
-          <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/50 z-20"></div>
+          <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-20"></div>
           <video
             ref={videoRef}
             autoPlay

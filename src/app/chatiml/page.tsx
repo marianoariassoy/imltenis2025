@@ -1,5 +1,6 @@
 import Title from "@/components/Title";
 import Chat from "./chat";
+import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Chat IML",
@@ -8,14 +9,19 @@ export const metadata = {
 
 export default function ChatIMLContent() {
   return (
-    <div className="flex flex-col gap-y-10 lg:gap-y-20 relative">
+    <Container>
       <Title
         title="Chat IML"
-        // emoji="🤖"
+        emoji="🤖"
         description="Impulsado por inteligencia artificial v1.0"
       />
-
-      <Chat />
-    </div>
+      <div className="w-full max-w-3xl mx-auto mt-8">
+        <Chat />
+      </div>
+      <div className="text-center text-sm text-secondary md:px-14">
+        Las respuestas de este chat son orientativas y pueden contener errores.
+        Ante cualquier duda, consultá con un miembro de la organización.
+      </div>
+    </Container>
   );
 }

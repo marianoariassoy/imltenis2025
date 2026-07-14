@@ -170,7 +170,6 @@ export const menu = [
     url: "/rankings/jugadores/damas-intermedia-30-apertura-2026",
   },
   { name: "Ranking de Clubes", url: "/rankings/clubes" },
-  // { name: "Ranking de Campeones", url: "/rankings/campeones" },
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },
   { name: "Jugadores", url: "/jugadores" },
   { name: "Capitanes", url: "https://capitanes.imltenis.com.ar/" },
@@ -180,8 +179,8 @@ export const extra = [
   { name: "Reglamento", url: "/reglamento" },
   { name: "Datos y Records", url: "/datos-y-records" },
   { name: "Registro de jugadores", url: "/bienvenido" },
-
   { name: "Nosotros", url: "/nosotros" },
   { name: "IML Weekend", url: "/weekend" },
   { name: "Tienda", url: "/soon" },
+  { name: "Chat IML", url: "/chatiml" },
 ];

@@ -27,7 +27,8 @@ const ChatIML = () => {
   }, [messages, typingMessage]);
 
   useEffect(() => {
-    const bienvenida = "¡Hola! Soy Chat IML 😄, ¿en qué puedo ayudarte?";
+    const bienvenida =
+      "¡Hola! Soy Chat IML 😄, podes consultarme sobre el torneo o sobre el reglamento 😎.";
 
     setTimeout(() => {
       setIsTyping(true);
@@ -107,7 +108,7 @@ const ChatIML = () => {
         {messages.map((m, i) => (
           <div
             key={i}
-            className={`max-w-[80%] px-5 py-3 rounded-2xl whitespace-pre-wrap text-sm lg:text-base ${
+            className={`max-w-[80%] px-4 py-3 rounded-2xl whitespace-pre-wrap  ${
               m.role === "user"
                 ? "ml-auto bg-primary text-white"
                 : "mr-auto bg-white/10 text-white"
@@ -119,7 +120,7 @@ const ChatIML = () => {
 
         {/* ✍️ typing en vivo */}
         {isTyping && typingMessage && (
-          <div className="max-w-[80%] mr-auto bg-white/10 px-5 py-3 rounded-2xl text-white text-sm lg:text-base">
+          <div className="max-w-[80%] mr-auto bg-white/10 px-4 py-3 rounded-2xl text-white  ">
             {typingMessage}
             <span className="animate-pulse">▍</span>
           </div>
@@ -136,7 +137,7 @@ const ChatIML = () => {
       </div>
 
       {/* 💬 INPUT */}
-      <div className="sticky bottom-16 w-full h-16 bg-[#333333] rounded-full shadow-lg flex items-center px-3 gap-2">
+      <div className="sticky bottom-16 w-full h-16 bg-[#333333] rounded-full shadow-lg flex items-center px-3 gap-2 mt-8">
         <div>
           <FrasesPlus />
         </div>
@@ -158,7 +159,7 @@ const ChatIML = () => {
         <div>
           {!loading ? (
             <button
-              className="bg-white hover:bg-white/80 rounded-full text-background w-10 h-10 text-xl flex items-center justify-center duration-300"
+              className="bg-white hover:bg-white/80 rounded-full text-background w-10 h-10 text-xl flex items-center justify-center duration-300 cursor-pointer"
               onClick={() => enviar()}
             >
               <span className="rotate-180">

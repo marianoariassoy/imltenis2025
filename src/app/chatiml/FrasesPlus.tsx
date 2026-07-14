@@ -24,7 +24,7 @@ const FrasesPlys = () => {
 
           setTimeout(() => setShowBubble(false), 3500);
         }}
-        className=" text-white text-3xl font-light h-12 w-12 rounded-full flex justify-center items-center hover:bg-white/10"
+        className=" text-white text-3xl font-light h-12 w-12 rounded-full flex justify-center items-center hover:bg-white/10 cursor-pointer"
       >
         +
       </button>
