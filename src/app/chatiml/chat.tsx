@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import Loader from "@/components/Loader";
+import Loader from "@/components/Loader2";
 import FrasesPlus from "./FrasesPlus";
 import { ChevronDown } from "@/lib/icons";
 

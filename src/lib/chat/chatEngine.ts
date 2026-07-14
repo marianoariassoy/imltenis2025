@@ -91,7 +91,7 @@ export async function chatEngine(
   const historialTexto = construirHistorial(historialCorto);
   const intent = detectarIntent(mensaje);
 
-  console.log("INTENT:", intent);
+  // console.log("INTENT:", intent);
 
   // ----------------------------
   // 1. PERFIL

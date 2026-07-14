@@ -126,7 +126,8 @@ export function detectarIntent(mensaje: string): Intent {
   // prioridad
   if (scores.CATEGORIAS > 0) return "CATEGORIAS";
   if (scores.REGLAMENTO > 0) return "REGLAMENTO";
-  if (scores.DATOS_TORNEO > 0) return "DATOS_TORNEO";
+  if (scores.DATOS_TORNEO > 0) return "REGLAMENTO";
+  // if (scores.DATOS_TORNEO > 0) return "DATOS_TORNEO";
   if (scores.PERFIL > 0) return "PERFIL";
 
   return "UNKNOWN";
