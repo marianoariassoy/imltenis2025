@@ -85,7 +85,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         />
       )}
       {data.description && (
-        <div className="text-center bg-white/5 p-3 rounded-xl whitespace-break-spaces text-secondary text-sm flex flex-col items-center justify-center">
+        <div className="text-center bg-white/5 p-3 rounded-xl whitespace-break-spaces text-secondary flex flex-col items-center justify-center">
           <span className="text-primary text-lg">
             <Star />
           </span>
