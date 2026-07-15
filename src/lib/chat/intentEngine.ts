@@ -1,11 +1,6 @@
 import { normalizar } from "./utils";
 
-export type Intent =
-  | "CATEGORIAS"
-  | "REGLAMENTO"
-  | "DATOS_TORNEO"
-  | "PERFIL"
-  | "UNKNOWN";
+export type Intent = "CATEGORIAS" | "REGLAMENTO" | "PERFIL" | "UNKNOWN";
 
 // ----------------------------
 // KEYWORDS
@@ -58,26 +53,6 @@ const KEYWORDS = {
     "edad minima",
   ],
 
-  DATOS_TORNEO: [
-    "fixture",
-    "partido",
-    "partidos",
-    "resultado",
-    "resultados",
-    "tabla",
-    "posiciones",
-    "puntos",
-    "cuando juega",
-    "proximo partido",
-    "contra quien juega",
-    "como salio",
-    "como salió",
-    "ultimo partido",
-    "último partido",
-    "ranking",
-    "fair play",
-  ],
-
   PERFIL: ["sos", "quien sos", "que sos", "tu nombre", "edad tenes"],
 };
 
@@ -91,7 +66,6 @@ export function detectarIntent(mensaje: string): Intent {
   const scores: Record<Intent, number> = {
     CATEGORIAS: 0,
     REGLAMENTO: 0,
-    DATOS_TORNEO: 0,
     PERFIL: 0,
     UNKNOWN: 0,
   };
@@ -114,20 +88,9 @@ export function detectarIntent(mensaje: string): Intent {
     scores.REGLAMENTO += 2;
   }
 
-  // boost consultas deportivas
-  if (
-    msg.includes("cuando juega") ||
-    msg.includes("como salio") ||
-    msg.includes("tabla")
-  ) {
-    scores.DATOS_TORNEO += 2;
-  }
-
   // prioridad
   if (scores.CATEGORIAS > 0) return "CATEGORIAS";
   if (scores.REGLAMENTO > 0) return "REGLAMENTO";
-  if (scores.DATOS_TORNEO > 0) return "REGLAMENTO";
-  // if (scores.DATOS_TORNEO > 0) return "DATOS_TORNEO";
   if (scores.PERFIL > 0) return "PERFIL";
 
   return "UNKNOWN";

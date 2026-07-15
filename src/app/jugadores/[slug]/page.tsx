@@ -83,6 +83,11 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           type="atention"
         />
       )}
+      {data.description && (
+        <div className="text-center bg-white/5 p-2 rounded-xl text-secondary">
+          ⭐️ {data.description}
+        </div>
+      )}
       <Estadisticas id={data.id} category_name={data.category_name} />
       <Singles id={data.id} />
       <Doubles id={data.id} />

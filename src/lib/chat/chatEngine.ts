@@ -1,11 +1,9 @@
 import { detectarIntent } from "./intentEngine";
 import { buildPromptReglamento, buildPromptLibre } from "./promptBuilder";
-
 import { buscarCategorias } from "@/domains/categorias/categoriasEngine";
 import { categoriasBrain } from "@/domains/categorias/categoriasBrain";
 import { buscarRegla } from "@/domains/reglamento/reglamentoEngine";
 import { responderPerfil } from "@/domains/profile/profileEngine";
-import { resolverConsultaTorneo } from "@/domains/torneo/torneoEngine";
 
 import { limpiarRespuesta, construirHistorial } from "./utils";
 
@@ -26,14 +24,7 @@ type Regla = {
 type ChatResponse = {
   respuesta: string;
   titulo: string;
-  tipo:
-    | "perfil"
-    | "categorias"
-    | "categorias_brain"
-    | "reglamento"
-    | "torneo"
-    | "resultados"
-    | "libre";
+  tipo: "perfil" | "categorias" | "categorias_brain" | "reglamento" | "libre";
 };
 
 // ----------------------------
@@ -56,7 +47,7 @@ function asegurarRespuestaCompleta(texto: string) {
 async function llamarIA(
   prompt: string,
   temperature = 0.2,
-  maxTokens = 80,
+  maxTokens = 120,
 ): Promise<string> {
   const res = await fetch("http://localhost:11434/api/generate", {
     method: "POST",
@@ -91,7 +82,7 @@ export async function chatEngine(
   const historialTexto = construirHistorial(historialCorto);
   const intent = detectarIntent(mensaje);
 
-  // console.log("INTENT:", intent);
+  console.log("INTENT:", intent);
 
   // ----------------------------
   // 1. PERFIL
@@ -168,43 +159,6 @@ export async function chatEngine(
         "No encontré una regla específica 🤔. ¿Podés darme un poco más de detalle?",
       titulo: "Reglamento",
       tipo: "reglamento",
-    };
-  }
-
-  // ----------------------------
-  // 4. DATOS DEL TORNEO
-  // ----------------------------
-  if (intent === "DATOS_TORNEO") {
-    const datos = await resolverConsultaTorneo(mensaje);
-
-    if (datos) {
-      const prompt = `
-Sos Chat IML.
-
-Respondé de forma breve, clara y natural usando solamente estos datos.
-
-Datos:
-${JSON.stringify(datos)}
-
-Pregunta:
-${mensaje}
-
-Respuesta:
-`;
-
-      const raw = await llamarIA(prompt, 0.2, 120);
-
-      return {
-        respuesta: asegurarRespuestaCompleta(limpiarRespuesta(raw)),
-        titulo: "Torneo",
-        tipo: "torneo",
-      };
-    }
-
-    return {
-      respuesta: "No pude encontrar esa información del torneo por ahora.",
-      titulo: "Torneo",
-      tipo: "torneo",
     };
   }
 
