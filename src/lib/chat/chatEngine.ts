@@ -58,7 +58,7 @@ async function llamarIA(
   temperature = 0.2,
   maxTokens = 200,
 ): Promise<string> {
-  const res = await fetch("http://127.0.0.1:11434/api/generate", {
+  const res = await fetch("http://localhost:11434/api/generate", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
