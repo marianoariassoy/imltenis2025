@@ -56,7 +56,7 @@ function asegurarRespuestaCompleta(texto: string) {
 async function llamarIA(
   prompt: string,
   temperature = 0.2,
-  maxTokens = 200,
+  maxTokens = 80,
 ): Promise<string> {
   const res = await fetch("http://localhost:11434/api/generate", {
     method: "POST",
