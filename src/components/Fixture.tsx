@@ -61,11 +61,10 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
             {data.length > 0 && (
               <thead>
                 <tr>
-                  <th>Fecha</th>
-                  <th>Hora</th>
-                  <th>Local</th>
+                  <th>Fecha / Hora</th>
+                  <th>Equipo Local</th>
                   <th>Score</th>
-                  <th>Visitante</th>
+                  <th>Equipo Visitante</th>
                   <th>Serie</th>
                 </tr>
               </thead>
@@ -80,13 +79,18 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                       : ""
                   }
                 >
-                  <td className="w-[5%]">
+                  <td className="w-[10%]">
                     <div className="flex gap-x-2 items-center">
                       {item.winner || item.status === 2 ? <Bull /> : null}
                       <span className="font-semibold">{item.date}</span>
+                      {item.hour && (
+                        <div>
+                          {item.hour}{" "}
+                          <span className="hidden md:inline">hs.</span>
+                        </div>
+                      )}
                     </div>
                   </td>
-                  <td className="w-[5%]">{item.hour}</td>
                   <td className="w-[34%]">
                     {title ? (
                       <ItemSmall

@@ -6,6 +6,7 @@ import Aviso from "@/components/Aviso";
 import { Verified } from "@/lib/icons";
 import { Container } from "@/components/Container";
 import Foto from "./foto";
+import { Star } from "@/lib/icons";
 
 export async function generateMetadata({
   params,
@@ -84,8 +85,11 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
         />
       )}
       {data.description && (
-        <div className="text-center bg-white/5 p-2 rounded-xl text-secondary">
-          ⭐️ {data.description}
+        <div className="text-center bg-white/5 p-3 rounded-xl whitespace-break-spaces text-secondary text-sm flex flex-col items-center justify-center">
+          <span className="text-primary text-lg">
+            <Star />
+          </span>
+          {data.description}
         </div>
       )}
       <Estadisticas id={data.id} category_name={data.category_name} />
