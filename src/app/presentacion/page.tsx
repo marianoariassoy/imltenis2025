@@ -1,31 +1,20 @@
+"use client";
+import { useEffect, useRef } from "react";
 import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
 import Image from "next/image";
 import { Container } from "@/components/Container";
-
-export const metadata = {
-  title: "Presentación Torneo Clausura 2026",
-  description:
-    "Presentación Torneo Clausura 2026 de la liga de clubes IML Tenis",
-  openGraph: {
-    type: "website",
-    locale: "es_AR",
-    url: "https://imltenis.com.ar/presentacion",
-    title: "Presentación Torneo Clausura 2026",
-    description:
-      "Presentación Torneo Clausura 2026 de la liga de clubes IML Tenis",
-    images: [
-      {
-        url: "https://imltenis.com.ar/assets/imltenis.jpg",
-        width: 500,
-        height: 500,
-        alt: "IML Tenis",
-      },
-    ],
-  },
-};
+import ButtonIA from "@/components/ButtonIA";
 
 const Presentacion = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.7;
+    }
+  }, []);
+
   const data = [
     {
       title: "🤔 ¿Qué necesito para realizar la inscripción?",
@@ -145,15 +134,20 @@ CUIT/CUIL: 27397070811 <br/><br/>
   return (
     <Container>
       <div className="flex flex-col gap-y-4 mt-4">
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
-          <Image
-            src="/images/2026.png"
-            className="w-full h-full object-cover object-center"
-            width={1200}
-            height={1200}
-            alt="Portada"
-          />
+        <div className="aspect-4/5 lg:aspect-video overflow-hidden rounded-2xl">
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            className="object-cover object-center w-full h-full"
+          >
+            <source src="/videos/video-presentation.mp4" type="video/mp4" />
+          </video>
         </div>
+
         <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
           <strong> IML Tenis </strong>es uno de los interclubes de tenis amateur
           más importantes de la zona, con más de <strong>200 equipos</strong> y{" "}
@@ -185,17 +179,14 @@ CUIT/CUIL: 27397070811 <br/><br/>
           <strong>ranking anual de clubes</strong>.
         </div>
 
-        <div className="aspect-4/5 lg:aspect-video overflow-hidden rounded-2xl">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="object-cover object-bottom lg:object-center w-full h-full saturate-[.7]"
-          >
-            <source src="/videos/presenta.mp4" type="video/mp4" />
-          </video>
+        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
+          <Image
+            src="/images/2026.png"
+            className="w-full h-full object-cover object-center"
+            width={1200}
+            height={1200}
+            alt="Portada"
+          />
         </div>
       </div>
 
@@ -223,6 +214,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
       ))}
 
       <Whatsapp />
+      <ButtonIA />
     </Container>
   );
 };

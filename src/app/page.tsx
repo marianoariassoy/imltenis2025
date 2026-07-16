@@ -7,6 +7,7 @@ import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
 import Link from "next/link";
 import Countdown from "@/components/Countdown";
+import ButtonIA from "@/components/ButtonIA";
 
 export default function Home() {
   // const { open, setOpen } = useMenu();
@@ -21,15 +22,10 @@ export default function Home() {
   return (
     <>
       <Whatsapp />
-      <Link
-        href="/chatiml"
-        className="fixed bottom-40 md:bottom-30 right-4 md:right-12 text-foreground bg-background/80 w-16 h-16 rounded-full 
-        text-3xl transition-all flex items-center justify-center  hover:scale-105"
-      >
-        🤖
-      </Link>
+
       <section className="h-screen w-full">
         <Notice />
+        <ButtonIA />
 
         <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20 opacity-0 fade-in delay-100 items-center">
           <Link
@@ -59,7 +55,7 @@ export default function Home() {
             muted
             playsInline
             preload="auto"
-            className="opacity-80 h-screen w-screen object-cover saturate-[.7]"
+            className="opacity-80 h-screen w-screen object-cover saturate-[.8]"
           >
             <source src="/videos/video.webm" type="video/webm" />
             <source src="/videos/video.mp4" type="video/mp4" />
