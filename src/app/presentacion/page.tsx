@@ -145,8 +145,8 @@ CUIT/CUIL: 27397070811 <br/><br/>
             className="object-cover object-center w-full h-full"
             poster="/videos/video-presentation.webp"
           >
-            <source src="/videos/video-presentation.webm" type="video/webm" />
             <source src="/videos/video-presentation.mp4" type="video/mp4" />
+            <source src="/videos/video-presentation.webm" type="video/webm" />
           </video>
         </div>
 
