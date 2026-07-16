@@ -13,7 +13,7 @@ export default function ChatIMLContent() {
       <Title
         title="Chat IML"
         emoji="🤖"
-        description="Impulsado por inteligencia artificial v0.1"
+        description="Impulsado por IA · Versión Beta (todavia esta aprendiendo)"
       />
       <div className="w-full max-w-3xl mx-auto mt-8">
         <Chat />
