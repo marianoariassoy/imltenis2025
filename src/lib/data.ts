@@ -178,8 +178,8 @@ export const menu = [
 export const extra = [
   { name: "Reglamento", url: "/reglamento" },
   { name: "Datos y Records", url: "/datos-y-records" },
-  { name: "Registro de jugadores", url: "/bienvenido" },
   { name: "Nosotros", url: "/nosotros" },
+  { name: "Registro de jugadores", url: "/bienvenido" },
   { name: "IML Weekend", url: "/weekend" },
   { name: "Tienda", url: "/soon" },
   { name: "Chat IML", url: "/chatiml" },

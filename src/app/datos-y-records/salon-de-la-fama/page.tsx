@@ -60,11 +60,7 @@ const page = async () => {
 
   return (
     <Container>
-      <Title
-        title="Jugadores destacados"
-        emoji="😎"
-        description="2023 - 2026"
-      />
+      <Title title="Salón de la Fama" emoji="😎" description="2023 - 2026" />
 
       <div className="overflow-x-auto">
         <table className="table w-full">
@@ -103,7 +99,7 @@ const page = async () => {
         </table>
       </div>
       <Labels labels={labels} />
-      <Info text="Solo se muestra jugadores con foto de perfil" />
+      <Info text="Solo se muestra jugadores con foto de perfil y al menos un partido jugado" />
     </Container>
   );
 };

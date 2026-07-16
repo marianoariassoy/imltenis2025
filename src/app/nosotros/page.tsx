@@ -1,15 +1,28 @@
+"use client";
+import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import Title from "@/components/Title";
 
-export const metadata = {
-  title: "Nosotros",
-};
+const Nosotros = () => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
-const page = () => {
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 0.7;
+    }
+  }, []);
+
   return (
     <Container>
-      <Title title="¡Hola!" emoji="👋" />
+      <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl mt-4">
+        <Image
+          src="/images/2026.png"
+          className="w-full h-full object-cover object-center"
+          width={1200}
+          height={1200}
+          alt="Portada"
+        />
+      </div>
 
       <div className="flex flex-col gap-y-4">
         <p>
@@ -44,52 +57,72 @@ const page = () => {
             la pasión, el respeto y la pertenencia.
           </span>
         </p>
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
-          <Image
-            src="/images/2026.png"
-            className="w-full h-full object-cover object-center"
-            width={1200}
-            height={1200}
-            alt="Portada"
-          />
-        </div>
+      </div>
+
+      <div className="aspect-4/5 lg:aspect-video overflow-hidden rounded-2xl">
+        <video
+          ref={videoRef}
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="object-cover object-center w-full h-full"
+          poster="/videos/video-poster.jpg"
+        >
+          <source src="/videos/video-presentation.mp4" type="video/mp4" />
+          <source src="/videos/video-presentation.webm" type="video/webm" />
+        </video>
+      </div>
+
+      <div className="flex flex-col gap-y-4">
         <p>
-          Desde su nacimiento, en 2023 IML Tenis ha experimentado un crecimiento
-          sostenido, consolidándose rápidamente como una de las competencias
-          interclubes más convocantes del tenis amateur.
+          <span className="text-primary">IML Tenis </span>es uno de los
+          interclubes de tenis amateur más importantes de la zona, con más de{" "}
+          <span className="text-primary">200 equipos</span> y{" "}
+          <span className="text-primary">20 categorías</span> que abarcan
+          distintos niveles de juego en damas, caballeros y mixtos.
         </p>
         <p>
-          Actualmente, IML Tenis reúne:{" "}
-          <span className="text-primary">
-            Casi 200 equipos en competencia, más de 60 clubes participantes y
-            más de 3000 jugadores activos.
-          </span>
+          En esta competencia vas a compartir una experiencia única junto a tu
+          grupo de amigos:{" "}
+          <span className="text-primary">representando a tu club o barrio</span>
+          , jugando en tus propias canchas y descrubriendo nuevas sedes y
+          rivales cada semana.
         </p>
         <p>
-          La liga se desarrolla principalmente en la{" "}
+          Todos los{" "}
           <span className="text-primary">
-            zona norte y oeste del Gran Buenos Aires
+            resultados, tablas de posiciones, estadísticas y rankings
           </span>{" "}
-          , integrando clubes, barrios privados, countries y complejos
-          deportivos que comparten la pasión por el tenis y el espíritu de
-          equipo.
+          se actualizan online y de forma permanente, brindando una experiencia{" "}
+          <span className="text-primary">
+            transparente, moderna y accesible
+          </span>{" "}
+          para todos los participantes. Seguí el rendimiento de tu equipo,
+          consultá estadísticas individuales y grupales, compará rendimientos y
+          accedé a toda la información del torneo en cualquier momento y desde
+          cualquier dispositivo.
+        </p>
+        <p>
+          Vas a poder recibir{" "}
+          <span className="text-primary">
+            premios, reconocimientos y beneficios exclusivos
+          </span>
+          . Podés ser elegido como{" "}
+          <span className="text-primary">Jugador Destacado de la Fecha</span>,
+          liderar el <span className="text-primary">ranking individual</span> y
+          acceder a importantes premios al final de la temporada. Además, cada
+          punto que sumes impulsa a tu equipo y a tu club a escalar posiciones
+          en el <span>ranking anual de clubes</span>.
         </p>
         <p className="text-primary font-semibold">
           IML Tenis, donde el tenis se vive, se comparte y se convierte en
           historia.
         </p>
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
-          <Image
-            src="/images/2.png"
-            className="w-full h-full object-cover object-center"
-            width={1200}
-            height={1200}
-            alt="Portada 2"
-          />
-        </div>
       </div>
     </Container>
   );
 };
 
-export default page;
+export default Nosotros;

@@ -13,9 +13,9 @@ const nav = [
     url: "/rankings/campeones",
   },
   {
-    title: "Jugadores destacados",
+    title: "Salón de la Fama",
     description: "Ranking de jugadores con más partidos jugados.",
-    url: "/datos-y-records/jugadores",
+    url: "/datos-y-records/salon-de-la-fama",
   },
   {
     title: "Cuentas oficiales",
