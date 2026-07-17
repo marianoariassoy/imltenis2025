@@ -1,7 +1,12 @@
 import Marquee from "@/components/Marquee";
 
 const MarqueeComponent = async () => {
-  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/stadistics`);
+  const response = await fetch(
+    process.env.NEXT_PUBLIC_API_URL + "/stadistics",
+    {
+      cache: "no-store",
+    },
+  );
   const data = await response.json();
   if (!data) return null;
 
