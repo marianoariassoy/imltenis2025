@@ -1,17 +1,17 @@
-import { Marquee } from "@/components/ui/marquee";
+import Marquee from "@/components/Marquee";
 
-const marquee = async ({ id_tournament }: { id_tournament: string }) => {
+const MarqueeComponent = async ({
+  id_tournament,
+}: {
+  id_tournament: string;
+}) => {
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/tournament/${id_tournament}/info`,
   );
   const data = await response.json();
   if (!data) return null;
 
-  return (
-    <Marquee className="text-secondary font-medium -mt-4 -mb-2">
-      {data.text}
-    </Marquee>
-  );
+  return <Marquee text={data.text} />;
 };
 
-export default marquee;
+export default MarqueeComponent;

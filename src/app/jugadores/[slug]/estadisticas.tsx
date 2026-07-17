@@ -1,4 +1,4 @@
-import Count from "./count";
+import Count from "@/components/Count";
 import Barra from "@/components/Barra";
 
 const estadisticas = async ({

@@ -1,20 +1,12 @@
-"use client";
-import { useEffect, useRef } from "react";
 import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import ButtonIA from "@/components/ButtonIA";
+import Video from "../nosotros/video";
+import Marquee from "../nosotros/marquee";
 
 const Presentacion = () => {
-  const videoRef = useRef<HTMLVideoElement | null>(null);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.playbackRate = 0.7;
-    }
-  }, []);
-
   const data = [
     {
       title: "🤔 ¿Qué necesito para realizar la inscripción?",
@@ -133,22 +125,10 @@ CUIT/CUIL: 27397070811 <br/><br/>
 
   return (
     <Container>
-      <div className="flex flex-col gap-y-4 mt-4">
-        <div className="aspect-4/5 lg:aspect-video overflow-hidden rounded-2xl">
-          <video
-            ref={videoRef}
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="auto"
-            className="object-cover object-center w-full h-full"
-            poster="/videos/video-poster.jpg"
-          >
-            <source src="/videos/video-presentation.mp4" type="video/mp4" />
-            <source src="/videos/video-presentation.webm" type="video/webm" />
-          </video>
-        </div>
+      <Marquee />
+
+      <div className="flex flex-col gap-y-4">
+        <Video />
 
         <div className="[&>strong]:text-primary [&>strong]:font-medium mb-2">
           <strong> IML Tenis </strong>es uno de los interclubes de tenis amateur
@@ -181,7 +161,7 @@ CUIT/CUIL: 27397070811 <br/><br/>
           <strong>ranking anual de clubes</strong>.
         </div>
 
-        <div className="aspect-square lg:aspect-video overflow-hidden rounded-2xl">
+        <div className="aspect-4/5 lg:aspect-video overflow-hidden rounded-2xl">
           <Image
             src="/images/2026.png"
             className="w-full h-full object-cover object-center"

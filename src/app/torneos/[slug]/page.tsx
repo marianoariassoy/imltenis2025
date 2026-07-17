@@ -70,7 +70,6 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   return (
     <Container>
       <Title title={data.name} subtitle={data.season} />
-
       <Marquee id_tournament={data.id} />
 
       {data.team_champion_id && <Campeon data={data} />}

@@ -22,6 +22,11 @@ const nav = [
     description: "Redes sociales oficiales de equipos.",
     url: "/datos-y-records/redes-sociales",
   },
+  {
+    title: "Estadísticas",
+    description: "Estadísticas de la liga de clubes IML Tenis.",
+    url: "/datos-y-records/estadisticas",
+  },
 ];
 
 const page = () => {
