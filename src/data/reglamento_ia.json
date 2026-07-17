@@ -25,7 +25,7 @@
   {
     "title": "Cantidad de jugadores",
     "category": "info_general",
-    "content": "Actualmente participan aproximadamente 3330 jugadores en la liga.",
+    "content": "Actualmente participan aproximadamente 4000 jugadores en la liga.",
     "keywords": [
       "cuantos jugadores hay",
       "cantidad de jugadores iml",
@@ -35,6 +35,24 @@
       "¿Cuántos jugadores participan?",
       "¿Cuánta gente juega la liga?"
     ]
+  },
+  {
+    "title": "Próximo torneo Clausura 2026",
+    "category": "info_general",
+    "content": "Comienza el 15 de Agosto",
+    "keywords": [
+      "comienzo del torneo",
+      "arranque del torneo",
+      "cierre de inscripciones"
+    ],
+    "examples": ["¿Cuando comienza el torneo?"]
+  },
+  {
+    "title": "Cierre de inscripciones",
+    "category": "info_general",
+    "content": "1 de Agosto",
+    "keywords": ["cierre de inscripciones", "inscripciones"],
+    "examples": ["¿Cuando cierran las inscripcioenes?"]
   },
   {
     "title": "Cantidad de clubes",

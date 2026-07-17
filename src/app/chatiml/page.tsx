@@ -1,6 +1,7 @@
 import Title from "@/components/Title";
 import Chat from "./chat";
 import { Container } from "@/components/Container";
+import { Robot } from "@/lib/icons";
 
 export const metadata = {
   title: "Chat IML",
@@ -10,9 +11,11 @@ export const metadata = {
 export default function ChatIMLContent() {
   return (
     <Container>
+      <div className="text-primary text-3xl text-center flex items-center w-full justify-center -mb-3">
+        <Robot />
+      </div>
       <Title
         title="Chat IML"
-        emoji="🤖"
         description="Impulsado por IA · Versión Beta (todavia esta aprendiendo)"
       />
       <div className="w-full max-w-3xl mx-auto mt-8">

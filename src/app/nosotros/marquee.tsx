@@ -27,10 +27,6 @@ const MarqueeComponent = async () => {
     data.players +
     " - Partidos: " +
     data.matches +
-    " - Jugadores: " +
-    data.players +
-    " - Partidos:" +
-    data.matches +
     " - Seguidores: " +
     data.followers +
     " -";
