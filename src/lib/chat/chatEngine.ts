@@ -1,9 +1,13 @@
+import { openai } from "@/lib/openai/client";
+
 import { detectarIntent } from "./intentEngine";
 import { buildPromptReglamento, buildPromptLibre } from "./promptBuilder";
+
 import { buscarCategorias } from "@/domains/categorias/categoriasEngine";
-import { categoriasBrain } from "@/domains/categorias/categoriasBrain";
 import { buscarRegla } from "@/domains/reglamento/reglamentoEngine";
-import { responderPerfil } from "@/domains/profile/profileEngine";
+import { buscarTorneo } from "@/domains/torneo/torneoEngine";
+import { buscarInscripcion } from "@/domains/inscripciones/inscripcionesEngine";
+import { buscarFAQ } from "@/domains/faq/faqEngine";
 
 import { limpiarRespuesta, construirHistorial } from "./utils";
 
@@ -16,15 +20,18 @@ interface Historial {
   content: string;
 }
 
-type Regla = {
-  title: string;
-  content: string;
-};
-
 type ChatResponse = {
   respuesta: string;
   titulo: string;
-  tipo: "perfil" | "categorias" | "categorias_brain" | "reglamento" | "libre";
+  tipo:
+    | "perfil"
+    | "torneo"
+    | "inscripciones"
+    | "categorias"
+    | "categorias_brain"
+    | "reglamento"
+    | "faq"
+    | "libre";
 };
 
 // ----------------------------
@@ -44,30 +51,43 @@ function asegurarRespuestaCompleta(texto: string) {
   return limpio;
 }
 
-async function llamarIA(
-  prompt: string,
-  temperature = 0.2,
-  maxTokens = 120,
-): Promise<string> {
-  const res = await fetch("http://localhost:11434/api/generate", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model: "mistral",
-      prompt,
-      stream: false,
-      options: {
-        temperature,
-        num_predict: maxTokens,
+async function llamarIA(prompt: string, temperature = 0.2, maxTokens = 120) {
+  const response = await openai.chat.completions.create({
+    model: "gpt-4.1-mini",
+    temperature,
+    max_tokens: maxTokens,
+    messages: [
+      {
+        role: "user",
+        content: prompt,
       },
-    }),
+    ],
   });
 
-  const data: { response?: string } = await res.json();
+  return response.choices[0]?.message?.content || "";
+}
 
-  return data.response || "";
+// ----------------------------
+// RESPUESTA CON CONTEXTO
+// ----------------------------
+
+async function responderConContexto(
+  mensaje: string,
+  historial: string,
+  item: any,
+  tipo: ChatResponse["tipo"],
+) {
+  const contexto = `${item.title}\n${item.content}`;
+
+  const prompt = buildPromptReglamento(mensaje, historial, contexto);
+
+  const raw = await llamarIA(prompt, 0.2, 180);
+
+  return {
+    respuesta: asegurarRespuestaCompleta(limpiarRespuesta(raw || item.content)),
+    titulo: item.title,
+    tipo,
+  };
 }
 
 // ----------------------------
@@ -80,78 +100,56 @@ export async function chatEngine(
 ): Promise<ChatResponse> {
   const historialCorto = historial.slice(-3);
   const historialTexto = construirHistorial(historialCorto);
+
   const intent = detectarIntent(mensaje);
 
   console.log("INTENT:", intent);
 
-  // ----------------------------
-  // 1. PERFIL
-  // ----------------------------
-  if (intent === "PERFIL") {
-    const perfil = responderPerfil(mensaje);
+  // TORNEO
+  if (intent === "TORNEO") {
+    const torneo = buscarTorneo(mensaje);
 
-    if (perfil) {
-      return {
-        respuesta: perfil,
-        titulo: "Sobre mí",
-        tipo: "perfil",
-      };
+    if (torneo) {
+      return responderConContexto(mensaje, historialTexto, torneo, "torneo");
     }
   }
 
-  // ----------------------------
-  // 2. CATEGORIAS
-  // ----------------------------
-  if (intent === "CATEGORIAS") {
-    const brain = categoriasBrain(mensaje);
+  // INSCRIPCIONES
+  if (intent === "INSCRIPCIONES") {
+    const inscripcion = buscarInscripcion(mensaje);
 
-    if (brain) {
-      return {
-        respuesta: brain.contenido,
-        titulo: brain.titulo,
-        tipo: "categorias_brain",
-      };
+    if (inscripcion) {
+      return responderConContexto(
+        mensaje,
+        historialTexto,
+        inscripcion,
+        "inscripciones",
+      );
     }
+  }
 
+  // CATEGORIAS
+
+  if (intent === "CATEGORIAS") {
     const categorias = buscarCategorias(mensaje);
 
     if (categorias) {
-      const contexto = `${categorias.titulo}\n${categorias.contenido}`;
-
-      const prompt = buildPromptReglamento(mensaje, historialTexto, contexto);
-
-      const raw = await llamarIA(prompt, 0.2, 180);
-
-      return {
-        respuesta: asegurarRespuestaCompleta(
-          limpiarRespuesta(raw || categorias.contenido),
-        ),
-        titulo: categorias.titulo,
-        tipo: "categorias",
-      };
+      return responderConContexto(
+        mensaje,
+        historialTexto,
+        categorias,
+        "categorias",
+      );
     }
   }
 
-  // ----------------------------
-  // 3. REGLAMENTO
-  // ----------------------------
+  // REGLAMENTO
+
   if (intent === "REGLAMENTO") {
-    const regla: Regla | null = buscarRegla(mensaje);
+    const regla = buscarRegla(mensaje);
 
     if (regla) {
-      const contexto = `${regla.title}\n${regla.content}`;
-
-      const prompt = buildPromptReglamento(mensaje, historialTexto, contexto);
-
-      const raw = await llamarIA(prompt, 0.2, 120);
-
-      return {
-        respuesta: asegurarRespuestaCompleta(
-          limpiarRespuesta(raw || regla.content),
-        ),
-        titulo: `🎾 ${regla.title}`,
-        tipo: "reglamento",
-      };
+      return responderConContexto(mensaje, historialTexto, regla, "reglamento");
     }
 
     return {
@@ -162,9 +160,18 @@ export async function chatEngine(
     };
   }
 
-  // ----------------------------
-  // 5. IA LIBRE
-  // ----------------------------
+  // FAQ
+
+  if (intent === "FAQ") {
+    const faq = buscarFAQ(mensaje);
+
+    if (faq) {
+      return responderConContexto(mensaje, historialTexto, faq, "faq");
+    }
+  }
+
+  // LIBRE
+
   const prompt = buildPromptLibre(mensaje, historialTexto);
 
   const raw = await llamarIA(prompt, 0.5, 180);
@@ -172,10 +179,10 @@ export async function chatEngine(
   return {
     respuesta: asegurarRespuestaCompleta(
       limpiarRespuesta(
-        raw ||
-          "Soy Chat IML 🤖, el asistente virtual del torneo. Estoy para ayudarte con lo que necesites.",
+        raw || "Soy Chat IML 🤖, el asistente virtual del torneo.",
       ),
     ),
+
     titulo: "Asistente",
     tipo: "libre",
   };

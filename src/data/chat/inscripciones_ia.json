@@ -1,0 +1,93 @@
+[
+  {
+    "id": "proximo_torneo",
+    "title": "Próximo torneo Clausura 2026",
+    "content": "El próximo torneo será el Clausura 2026 y comenzará el 15 de agosto de 2026.",
+    "keywords": [
+      "comienzo del torneo",
+      "inicio del torneo",
+      "arranque del torneo",
+      "proximo torneo",
+      "cuando empieza",
+      "fecha de inicio",
+      "cuando arranca"
+    ],
+    "examples": [
+      "¿Cuándo comienza el torneo?",
+      "¿Cuándo empieza el Clausura 2026?",
+      "¿Cuál es la fecha de inicio?"
+    ]
+  },
+  {
+    "id": "cierre_inscripciones",
+    "title": "Cierre de inscripciones",
+    "content": "Las inscripciones para el Torneo Clausura 2026 cierran el 1 de agosto de 2026.",
+    "keywords": [
+      "cierre de inscripciones",
+      "hasta cuando me puedo inscribir",
+      "cuando cierran las inscripciones",
+      "fecha limite",
+      "inscripciones"
+    ],
+    "examples": [
+      "¿Cuándo cierran las inscripciones?",
+      "¿Hasta cuándo puedo inscribirme?",
+      "¿Cuál es la fecha límite?"
+    ]
+  },
+  {
+    "id": "costo_inscripcion",
+    "title": "Costo de inscripción",
+    "content": "El costo de inscripción es de $340.000 por equipo.",
+    "keywords": [
+      "cuanto cuesta inscribirse",
+      "precio de inscripcion",
+      "costo de inscripcion",
+      "precio equipo",
+      "valor de la inscripcion",
+      "cuanto sale anotar un equipo"
+    ],
+    "examples": [
+      "¿Cuánto cuesta inscribirse?",
+      "¿Cuánto paga un equipo?",
+      "¿Cuál es el costo de inscripción?"
+    ]
+  },
+  {
+    "id": "costo_partido",
+    "title": "Costo por partido",
+    "content": "El costo por partido es de $12.000 por jugador en concepto de alquiler de canchas.",
+    "keywords": [
+      "cuanto cuesta jugar",
+      "precio por partido",
+      "costo cancha",
+      "alquiler de cancha",
+      "cuanto paga cada jugador",
+      "valor por fecha"
+    ],
+    "examples": [
+      "¿Cuánto cuesta jugar un partido?",
+      "¿Cuánto paga cada jugador?",
+      "¿Cuánto cuesta cada fecha?"
+    ]
+  },
+  {
+    "id": "lista_buena_fe",
+    "title": "Lista de buena fe",
+    "content": "Cada equipo debe presentar una lista de buena fe integrada por un mínimo de 8 y un máximo de 20 jugadores, ordenados según su nivel de juego.",
+    "keywords": [
+      "lista de buena fe",
+      "cuantos jugadores",
+      "cantidad de jugadores",
+      "armar equipo",
+      "inscribir jugadores",
+      "maximo de jugadores",
+      "minimo de jugadores"
+    ],
+    "examples": [
+      "¿Cuántos jugadores puede tener un equipo?",
+      "¿Cómo se arma la lista de buena fe?",
+      "¿Cuántos jugadores puedo inscribir?"
+    ]
+  }
+]

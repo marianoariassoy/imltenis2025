@@ -86,7 +86,11 @@ const ChatIML = () => {
     });
 
     const data = await res.json();
-    const reply = data.respuesta;
+
+    console.log("Respuesta API:", data);
+
+    const reply =
+      data.respuesta || "No pude generar una respuesta en este momento 🤔";
 
     // ✍️ activar typing
     setIsTyping(true);

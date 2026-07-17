@@ -14,10 +14,7 @@ export default function ChatIMLContent() {
       <div className="text-primary text-3xl text-center flex items-center w-full justify-center -mb-3">
         <Robot />
       </div>
-      <Title
-        title="Chat IML"
-        description="Impulsado por IA · Versión Beta (todavia esta aprendiendo)"
-      />
+      <Title title="Chat IML" description="Impulsado por IA · Versión Beta" />
       <div className="w-full max-w-3xl mx-auto mt-8">
         <Chat />
       </div>

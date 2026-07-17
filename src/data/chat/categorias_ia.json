@@ -1,0 +1,165 @@
+[
+  {
+    "id": "categorias_torneo",
+    "title": "Categorías del torneo",
+    "content": "IML Tenis cuenta con 18 categorías divididas por sexo, edad y nivel de juego. Las categorías se organizan en damas, caballeros y mixto, con divisiones libres, +30 y +40.",
+    "keywords": [
+      "categorias",
+      "niveles",
+      "divisiones",
+      "que categorias hay",
+      "categorias iml",
+      "niveles del torneo",
+      "como se dividen las categorias"
+    ],
+    "examples": [
+      "¿Qué categorías hay?",
+      "¿Cuántas categorías tiene IML?",
+      "¿Cómo se dividen las categorías?"
+    ]
+  },
+
+  {
+    "id": "damas_intermedia_plus30",
+    "title": "Damas Intermedia +30",
+    "content": "Damas Intermedia +30 se juega los sábados de 13:00 a 17:00 hs con formato de dobles.",
+    "keywords": [
+      "damas intermedia",
+      "damas +30",
+      "intermedia +30",
+      "categorias damas"
+    ],
+    "examples": [
+      "¿Existe Damas Intermedia +30?",
+      "¿Cuándo juega Damas Intermedia?"
+    ]
+  },
+
+  {
+    "id": "damas_tercera_libre",
+    "title": "Damas Tercera Libre",
+    "content": "Damas Tercera Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["damas tercera", "tercera libre damas", "damas libre"],
+    "examples": ["¿Existe tercera libre damas?", "¿Cuándo juega Damas Tercera?"]
+  },
+
+  {
+    "id": "damas_tercera_plus40",
+    "title": "Damas Tercera +40",
+    "content": "Damas Tercera +40 se juega los sábados de 13:00 a 17:00 hs con formato de dobles.",
+    "keywords": ["damas tercera +40", "tercera +40 damas", "damas mayores"],
+    "examples": ["¿Existe Damas Tercera +40?"]
+  },
+
+  {
+    "id": "damas_cuarta_libre",
+    "title": "Damas Cuarta Libre",
+    "content": "Damas Cuarta Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["damas cuarta", "cuarta libre damas"],
+    "examples": ["¿Existe cuarta libre damas?"]
+  },
+
+  {
+    "id": "damas_cuarta_plus40",
+    "title": "Damas Cuarta +40",
+    "content": "Damas Cuarta +40 se juega los sábados de 13:00 a 17:00 hs con formato de dobles.",
+    "keywords": ["damas cuarta +40", "cuarta +40 damas"],
+    "examples": ["¿Existe cuarta +40 damas?"]
+  },
+
+  {
+    "id": "damas_quinta_libre",
+    "title": "Damas Quinta Libre",
+    "content": "Damas Quinta Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["damas quinta", "quinta libre damas"],
+    "examples": ["¿Existe quinta damas?"]
+  },
+
+  {
+    "id": "caballeros_primera_libre",
+    "title": "Caballeros Primera Libre",
+    "content": "Caballeros Primera Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["caballeros primera", "primera libre caballeros"],
+    "examples": ["¿Existe primera caballeros?"]
+  },
+
+  {
+    "id": "caballeros_intermedia_libre",
+    "title": "Caballeros Intermedia Libre",
+    "content": "Caballeros Intermedia Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["caballeros intermedia", "intermedia caballeros"],
+    "examples": ["¿Existe intermedia caballeros?"]
+  },
+
+  {
+    "id": "caballeros_segunda_libre",
+    "title": "Caballeros Segunda Libre",
+    "content": "Caballeros Segunda Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["caballeros segunda", "segunda libre caballeros"],
+    "examples": ["¿Existe segunda caballeros?"]
+  },
+
+  {
+    "id": "caballeros_segunda_plus40",
+    "title": "Caballeros Segunda +40",
+    "content": "Caballeros Segunda +40 se juega los sábados de 13:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["caballeros segunda +40", "segunda +40"],
+    "examples": ["¿Existe segunda +40 caballeros?"]
+  },
+
+  {
+    "id": "caballeros_cuarta_libre",
+    "title": "Caballeros Cuarta Libre",
+    "content": "Caballeros Cuarta Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["caballeros cuarta", "cuarta libre caballeros"],
+    "examples": ["¿Existe cuarta caballeros?"]
+  },
+
+  {
+    "id": "caballeros_cuarta_plus40",
+    "title": "Caballeros Cuarta +40",
+    "content": "Caballeros Cuarta +40 se juega los sábados de 13:00 a 17:00 hs con formato de dobles.",
+    "keywords": ["caballeros cuarta +40", "cuarta +40"],
+    "examples": ["¿Existe cuarta +40 caballeros?"]
+  },
+
+  {
+    "id": "caballeros_quinta_libre",
+    "title": "Caballeros Quinta Libre",
+    "content": "Caballeros Quinta Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["caballeros quinta", "quinta libre caballeros"],
+    "examples": ["¿Existe quinta caballeros?"]
+  },
+
+  {
+    "id": "caballeros_quinta_plus40",
+    "title": "Caballeros Quinta +40",
+    "content": "Caballeros Quinta +40 se juega los sábados de 13:00 a 17:00 hs con formato de dobles.",
+    "keywords": ["caballeros quinta +40", "quinta +40"],
+    "examples": ["¿Existe quinta +40 caballeros?"]
+  },
+
+  {
+    "id": "caballeros_sexta_libre",
+    "title": "Caballeros Sexta Libre",
+    "content": "Caballeros Sexta Libre se juega los domingos de 09:00 a 17:00 hs con formato de single y dobles.",
+    "keywords": ["caballeros sexta", "sexta libre caballeros"],
+    "examples": ["¿Existe sexta caballeros?"]
+  },
+
+  {
+    "id": "mixto_libre",
+    "title": "Mixto Libre",
+    "content": "Mixto Libre se juega los sábados de 13:00 a 17:00 hs con formato de dobles.",
+    "keywords": ["mixto libre", "categoria mixto", "mixto"],
+    "examples": ["¿Hay categoría mixto?"]
+  },
+
+  {
+    "id": "mixto_bc",
+    "title": "Mixto B/C",
+    "content": "Mixto B/C se juega los sábados de 13:00 a 17:00 hs con formato de dobles.",
+    "keywords": ["mixto bc", "mixto b", "mixto c"],
+    "examples": ["¿Existe mixto B/C?"]
+  }
+]

@@ -1,0 +1,311 @@
+[
+  {
+    "id": "descripcion_torneo",
+    "title": "Presentación de IML Tenis",
+    "content": "IML Tenis es una liga de tenis interclubes amateur de Buenos Aires que reúne equipos de distintos clubes y niveles de juego, con categorías de damas, caballeros y mixtos.",
+    "keywords": [
+      "que es iml",
+      "presentacion iml",
+      "descripcion torneo",
+      "liga amateur tenis",
+      "interclubes tenis"
+    ],
+    "examples": [
+      "Contame qué es IML",
+      "¿Cómo es el torneo?",
+      "¿Qué tipo de competencia es?"
+    ]
+  },
+  {
+    "id": "experiencia_iml",
+    "title": "Experiencia IML",
+    "content": "IML Tenis busca generar una experiencia deportiva y social, donde los jugadores representan a su club o barrio, comparten la competencia con amigos, juegan en distintas sedes y conocen nuevos rivales durante la temporada.",
+    "keywords": [
+      "experiencia iml",
+      "como es jugar iml",
+      "porque jugar iml",
+      "competencia entre amigos",
+      "liga entre amigos",
+      "representar club"
+    ],
+    "examples": [
+      "¿Cómo es jugar IML?",
+      "¿Qué tiene de especial el torneo?",
+      "¿Por qué jugar IML?"
+    ]
+  },
+  {
+    "id": "plataforma_online",
+    "title": "Información online del torneo",
+    "content": "IML Tenis cuenta con una plataforma online donde los participantes pueden consultar resultados, tablas de posiciones, estadísticas, rankings individuales y grupales actualizados permanentemente.",
+    "keywords": [
+      "resultados online",
+      "tabla posiciones",
+      "estadisticas",
+      "ranking",
+      "ver resultados",
+      "pagina del torneo",
+      "informacion online"
+    ],
+    "examples": [
+      "¿Dónde veo los resultados?",
+      "¿Hay tabla de posiciones?",
+      "¿Puedo ver mis estadísticas?"
+    ]
+  },
+  {
+    "id": "premios_reconocimientos",
+    "title": "Premios y reconocimientos",
+    "content": "Durante la temporada los jugadores y equipos pueden recibir premios y reconocimientos por su desempeño, incluyendo distinciones como Jugador Destacado de la Fecha y premios al finalizar el torneo.",
+    "keywords": [
+      "premios",
+      "reconocimientos",
+      "jugador destacado",
+      "premio jugador",
+      "beneficios",
+      "distinciones"
+    ],
+    "examples": [
+      "¿Qué premios hay?",
+      "¿Cómo se elige el jugador destacado?",
+      "¿Hay premios al final del torneo?"
+    ]
+  },
+  {
+    "id": "ranking_clubes",
+    "title": "Ranking anual de clubes",
+    "content": "Cada resultado obtenido por los equipos contribuye al ranking anual de clubes de IML Tenis, permitiendo comparar el rendimiento global de las instituciones participantes.",
+    "keywords": [
+      "ranking clubes",
+      "tabla clubes",
+      "mejor club",
+      "puntaje club",
+      "ranking anual"
+    ],
+    "examples": [
+      "¿Cómo funciona el ranking de clubes?",
+      "¿Cuál es el mejor club?",
+      "¿Los clubes suman puntos?"
+    ]
+  },
+  {
+    "id": "fair_play_valores",
+    "title": "Fair Play en IML Tenis",
+    "content": "IML Tenis promueve el respeto, la competencia sana y el comportamiento deportivo dentro y fuera de la cancha, considerando el Fair Play como uno de los valores principales del torneo.",
+    "keywords": [
+      "fair play",
+      "juego limpio",
+      "respeto",
+      "conducta deportiva",
+      "valores iml"
+    ],
+    "examples": [
+      "¿Qué importancia tiene el Fair Play?",
+      "¿Qué es el Fair Play en IML?"
+    ]
+  },
+  {
+    "id": "significado_iml",
+    "title": "Significado de IML",
+    "content": "IML significa Interclubes Master League, una liga de tenis interclubes que se juega en Buenos Aires, Argentina.",
+    "keywords": [
+      "que es iml",
+      "que significa iml",
+      "iml tenis que es",
+      "significado de iml",
+      "liga iml"
+    ],
+    "examples": [
+      "¿Qué es IML?",
+      "¿Qué significa IML Tenis?",
+      "¿Qué es la liga IML?"
+    ]
+  },
+  {
+    "id": "creacion_iml",
+    "title": "Creación de IML Tenis",
+    "content": "IML Tenis fue creada en el año 2023 en Buenos Aires, Argentina, con el objetivo de organizar una liga interclubes de tenis.",
+    "keywords": [
+      "cuando se creo iml",
+      "cuando nació iml tenis",
+      "desde cuando existe iml",
+      "historia iml"
+    ],
+    "examples": ["¿Cuándo se creó IML?", "¿Desde cuándo existe la liga?"]
+  },
+  {
+    "id": "cantidad_jugadores",
+    "title": "Cantidad de jugadores",
+    "content": "Actualmente participan aproximadamente 4000 jugadores en IML Tenis.",
+    "keywords": [
+      "cuantos jugadores hay",
+      "cantidad jugadores iml",
+      "cuanta gente juega iml",
+      "jugadores de la liga"
+    ],
+    "examples": [
+      "¿Cuántos jugadores participan?",
+      "¿Cuánta gente juega la liga?"
+    ]
+  },
+  {
+    "id": "cantidad_clubes",
+    "title": "Cantidad de clubes",
+    "content": "Actualmente participan 62 clubes en IML Tenis.",
+    "keywords": [
+      "cuantos clubes hay",
+      "clubes participantes",
+      "cantidad de clubes",
+      "clubes iml"
+    ],
+    "examples": [
+      "¿Cuántos clubes participan?",
+      "¿Cuántos clubes hay en la liga?"
+    ]
+  },
+  {
+    "id": "cantidad_equipos",
+    "title": "Cantidad de equipos",
+    "content": "Actualmente participan alrededor de 190 equipos en IML Tenis.",
+    "keywords": [
+      "cuantos equipos hay",
+      "cantidad equipos iml",
+      "equipos participantes",
+      "equipos de la liga"
+    ],
+    "examples": [
+      "¿Cuántos equipos participan?",
+      "¿Cuántos equipos hay en total?"
+    ]
+  },
+  {
+    "id": "duracion_torneo",
+    "title": "Duración del torneo",
+    "content": "La liga se desarrolla de marzo a diciembre y está dividida en dos torneos: Apertura y Clausura.",
+    "keywords": [
+      "cuanto dura el torneo",
+      "cuando empieza iml",
+      "cuando termina iml",
+      "duracion liga"
+    ],
+    "examples": ["¿Cuánto dura la liga?", "¿Cuándo empieza y termina?"]
+  },
+  {
+    "id": "dias_juego",
+    "title": "Días de juego",
+    "content": "Los partidos se juegan los sábados o domingos, dependiendo de la categoría y la programación correspondiente.",
+    "keywords": [
+      "que dias se juega",
+      "se juega sabado o domingo",
+      "dias de partido",
+      "dias de juego"
+    ],
+    "examples": ["¿Qué días se juega?", "¿Se juega sábado o domingo?"]
+  },
+  {
+    "id": "horarios_juego",
+    "title": "Horarios de juego",
+    "content": "Los sábados se juega entre las 13:00 y 17:00 hs, y los domingos entre las 9:00 y 17:00 hs. El equipo local define el horario dentro de esa franja.",
+    "keywords": [
+      "horario partidos",
+      "a que hora se juega",
+      "cuando se juega",
+      "quien define horario"
+    ],
+    "examples": ["¿En qué horario se juega?", "¿Quién define el horario?"]
+  },
+  {
+    "id": "ubicacion_torneo",
+    "title": "Ubicación del torneo",
+    "content": "Los partidos se disputan en clubes de Zona Norte y Zona Oeste de Buenos Aires.",
+    "keywords": [
+      "donde se juega",
+      "ubicacion torneo",
+      "zonas iml tenis",
+      "zona norte",
+      "zona oeste"
+    ],
+    "examples": ["¿Dónde se juega?", "¿En qué zonas se juega?"]
+  },
+  {
+    "id": "formato_juego",
+    "title": "Formato de juego",
+    "content": "Según la categoría, las series pueden disputarse con 1 partido de single y 2 partidos de dobles, o con 2 partidos de dobles.",
+    "keywords": [
+      "como se juega la serie",
+      "cuantos partidos hay",
+      "formato iml",
+      "modalidad de juego"
+    ],
+    "examples": ["¿Cómo es el formato?", "¿Cuántos partidos se juegan?"]
+  },
+  {
+    "id": "formato_dobles",
+    "title": "Formato de dobles",
+    "content": "De los cuatro doblistas convocados para una serie, el jugador con mejor ranking debe ser asignado obligatoriamente al Doble 1.",
+    "keywords": [
+      "como se arman los dobles",
+      "doble 1",
+      "doble 2",
+      "armado de parejas",
+      "ranking dobles"
+    ],
+    "examples": ["¿Cómo armo los dobles?", "¿Quién juega el Doble 1?"]
+  },
+  {
+    "id": "sistema_sets",
+    "title": "Sistema de sets",
+    "content": "Los partidos se juegan al mejor de 3 sets con tie-break. El tercer set se define mediante un super tie-break a 10 puntos con diferencia de dos.",
+    "keywords": [
+      "a cuantos sets se juega",
+      "super tie break",
+      "reglas sets",
+      "como se define partido"
+    ],
+    "examples": ["¿Hay super tie-break?", "¿Cómo se define el partido?"]
+  },
+  {
+    "id": "puntuacion_serie",
+    "title": "Puntuación por serie",
+    "content": "Cada partido ganado suma 1 punto. El equipo obtiene tantos puntos como partidos gane dentro de la serie.",
+    "keywords": ["como se suman puntos", "puntaje serie", "tabla puntos iml"],
+    "examples": [
+      "¿Cómo se suman los puntos?",
+      "¿Cuántos puntos vale cada partido?"
+    ]
+  },
+  {
+    "id": "empate_fase_regular",
+    "title": "Empate en fase regular",
+    "content": "Las series pueden finalizar empatadas. En ese caso, cada equipo suma 1 punto.",
+    "keywords": ["que pasa si empatan", "empate serie", "partido empatado"],
+    "examples": ["¿Qué pasa si empatan?"]
+  },
+  {
+    "id": "desempate_tabla",
+    "title": "Sistema de desempate",
+    "content": "En caso de empate en la tabla de posiciones, los criterios de desempate son: series ganadas, dobles 1, sets, games y fair play.",
+    "keywords": [
+      "como se desempata",
+      "criterios desempate",
+      "empate posiciones",
+      "tabla igualada"
+    ],
+    "examples": [
+      "¿Cómo se desempata?",
+      "¿Qué pasa si dos equipos terminan iguales?"
+    ]
+  },
+  {
+    "id": "playoffs",
+    "title": "Playoffs",
+    "content": "Para participar en playoffs, los jugadores deben haber participado en al menos una serie de fase regular.",
+    "keywords": [
+      "quien juega playoffs",
+      "requisitos playoffs",
+      "clasificacion playoffs",
+      "fase final"
+    ],
+    "examples": ["¿Quién puede jugar playoffs?", "¿Qué se necesita para jugar?"]
+  }
+]

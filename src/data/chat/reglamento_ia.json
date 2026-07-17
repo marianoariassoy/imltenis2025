@@ -1,0 +1,152 @@
+[
+  {
+    "id": "pelotas_juego",
+    "title": "Pelotas de juego",
+    "content": "El equipo local debe proveer pelotas nuevas para disputar la serie. Si el equipo visitante considera que las pelotas no están en condiciones, deberán reemplazarse o acordar la forma de resolverlo.",
+    "keywords": [
+      "quien pone las pelotas",
+      "pelotas del partido",
+      "pelotas nuevas",
+      "pelotas en buen estado",
+      "quien paga las pelotas",
+      "hay que llevar pelotas"
+    ],
+    "examples": [
+      "¿Quién pone las pelotas?",
+      "¿Las pelotas tienen que ser nuevas?",
+      "¿Qué pasa si las pelotas no están en condiciones?"
+    ]
+  },
+  {
+    "id": "carga_resultados",
+    "title": "Carga de resultados",
+    "content": "El capitán del equipo ganador debe cargar el resultado de la serie antes del martes a las 12:00 hs.",
+    "keywords": [
+      "quien carga resultados",
+      "subir resultado",
+      "cargar partido",
+      "cuando cargar resultado",
+      "plazo para cargar resultado",
+      "resultado de la fecha"
+    ],
+    "examples": [
+      "¿Quién carga el resultado?",
+      "¿Hasta cuándo hay tiempo para cargarlo?",
+      "¿Dónde se informa el resultado?"
+    ]
+  },
+  {
+    "id": "walkover",
+    "title": "Walkover (WO)",
+    "content": "Se considera walkover (WO) cuando un equipo no se presenta a disputar una serie o no cumple con los requisitos mínimos establecidos para jugar.",
+    "keywords": [
+      "que es wo",
+      "walkover",
+      "perder por wo",
+      "no presentarse",
+      "no vamos al partido",
+      "falta el equipo",
+      "equipo ausente"
+    ],
+    "examples": [
+      "¿Qué es un WO?",
+      "¿Cuándo se pierde por walkover?",
+      "¿Qué pasa si no nos presentamos?"
+    ]
+  },
+  {
+    "id": "aviso_ausencia",
+    "title": "Aviso de ausencia",
+    "content": "Si un equipo no puede disputar una serie debe avisar con al menos 24 horas de anticipación para evitar sanciones y permitir la coordinación correspondiente.",
+    "keywords": [
+      "no puedo jugar",
+      "no podemos ir",
+      "cancelar partido",
+      "avisar que no jugamos",
+      "ausencia equipo",
+      "faltar a un partido"
+    ],
+    "examples": [
+      "¿Qué pasa si no puedo jugar?",
+      "¿Con cuánto tiempo tengo que avisar?",
+      "¿Cómo aviso que no podemos ir?"
+    ]
+  },
+  {
+    "id": "suspension_lluvia",
+    "title": "Suspensión por lluvia",
+    "content": "En caso de lluvia, el equipo local debe informar al menos 2 horas antes si la serie se disputa o queda suspendida.",
+    "keywords": [
+      "que pasa si llueve",
+      "lluvia",
+      "suspender partido",
+      "suspension por clima",
+      "reprogramar por lluvia",
+      "se juega con lluvia"
+    ],
+    "examples": [
+      "¿Qué pasa si llueve?",
+      "¿Quién decide si se suspende?",
+      "¿Cuándo se avisa la suspensión?"
+    ]
+  },
+  {
+    "id": "llegada_tarde",
+    "title": "Llegada tarde",
+    "content": "Los jugadores cuentan con 15 minutos de tolerancia para presentarse. Pasado ese tiempo, el partido podrá darse por perdido por abandono.",
+    "keywords": [
+      "cuanto tiempo se espera",
+      "tolerancia",
+      "llegar tarde",
+      "llegada tarde",
+      "impuntualidad",
+      "demora jugador",
+      "retraso"
+    ],
+    "examples": [
+      "¿Cuánto tiempo de tolerancia hay?",
+      "¿Qué pasa si llego tarde?",
+      "¿Cuánto se espera al rival?"
+    ]
+  },
+  {
+    "id": "rol_capitan",
+    "title": "Rol del capitán",
+    "content": "El capitán es responsable de organizar el equipo, coordinar las series, comunicarse con la organización y realizar las gestiones necesarias como la carga de resultados.",
+    "keywords": [
+      "que hace el capitan",
+      "funcion del capitan",
+      "responsabilidades del capitan",
+      "obligaciones capitan",
+      "capitan equipo"
+    ],
+    "examples": [
+      "¿Qué hace el capitán?",
+      "¿Qué responsabilidades tiene el capitán?",
+      "¿Qué debe hacer el capitán?"
+    ]
+  },
+  {
+    "id": "feriados_largos",
+    "title": "Feriados largos",
+    "content": "Durante los fines de semana largos podrán programarse fechas del torneo. La disputa de estas series será optativa para los equipos. Si un equipo no puede jugar, deberá informarlo en el grupo de WhatsApp de capitanes antes del miércoles a las 17:00 hs. para coordinar su reprogramación.",
+    "keywords": [
+      "fin de semana largo",
+      "feriado largo",
+      "feriados",
+      "se juega feriado",
+      "fecha feriado",
+      "partido feriado"
+    ],
+    "examples": [
+      "¿Se juega en fin de semana largo?",
+      "¿Qué pasa si no puedo jugar un feriado?",
+      "¿Hay fecha durante los feriados?"
+    ]
+  },
+  {
+    "id": "fair_play_reglamento",
+    "title": "Sistema Fair Play",
+    "content": "El sistema Fair Play permite evaluar el comportamiento deportivo de los equipos durante el torneo."
+  }
+]

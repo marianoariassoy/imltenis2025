@@ -1,0 +1,65 @@
+[
+  {
+    "id": "como_inscribirse",
+    "title": "Cómo inscribirse",
+    "content": "Para inscribirse al torneo, el capitán del equipo debe comunicarse con la organización y completar el proceso de inscripción correspondiente.",
+    "keywords": [
+      "como inscribo equipo",
+      "quiero anotarme",
+      "como participar",
+      "como entrar al torneo",
+      "quiero jugar iml"
+    ],
+    "examples": [
+      "¿Cómo hago para inscribir un equipo?",
+      "Quiero participar, ¿qué tengo que hacer?"
+    ]
+  },
+  {
+    "id": "armar_equipo",
+    "title": "Armar un equipo",
+    "content": "Cada equipo debe contar con una lista de jugadores y cumplir los requisitos establecidos para la categoría correspondiente.",
+    "keywords": [
+      "armar equipo",
+      "crear equipo",
+      "formar equipo",
+      "sumar jugadores"
+    ],
+    "examples": ["¿Cómo armo un equipo?", "¿Puedo crear un equipo nuevo?"]
+  },
+  {
+    "id": "buscar_club",
+    "title": "Buscar club participante",
+    "content": "IML Tenis se disputa en clubes de Zona Norte y Zona Oeste de Buenos Aires.",
+    "keywords": [
+      "clubes",
+      "que clubes participan",
+      "buscar club",
+      "donde jugar"
+    ],
+    "examples": ["¿Qué clubes participan?", "¿Hay un club cerca de mi zona?"]
+  },
+  {
+    "id": "contacto_organizacion",
+    "title": "Contacto con organización",
+    "content": "Para consultas específicas del torneo, los capitanes deben comunicarse con la organización de IML Tenis.",
+    "keywords": [
+      "contacto",
+      "telefono",
+      "whatsapp",
+      "hablar con organizacion",
+      "consultar"
+    ],
+    "examples": [
+      "¿Cómo contacto a la organización?",
+      "Necesito hablar con alguien"
+    ]
+  },
+  {
+    "id": "que_es_capitan",
+    "title": "Capitán de equipo",
+    "content": "El capitán es la persona encargada de organizar el equipo, coordinar las series y comunicarse con la organización.",
+    "keywords": ["que hace un capitan", "capitan equipo", "responsable equipo"],
+    "examples": ["¿Qué hace el capitán?", "¿Quién puede ser capitán?"]
+  }
+]

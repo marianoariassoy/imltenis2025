@@ -1,15 +1,53 @@
 import { normalizar } from "./utils";
 
-export type Intent = "CATEGORIAS" | "REGLAMENTO" | "PERFIL" | "UNKNOWN";
+export type Intent =
+  | "TORNEO"
+  | "INSCRIPCIONES"
+  | "CATEGORIAS"
+  | "REGLAMENTO"
+  | "FAQ"
+  | "LIBRE";
 
 // ----------------------------
 // KEYWORDS
 // ----------------------------
 
 const KEYWORDS = {
+  TORNEO: [
+    "iml",
+    "torneo",
+    "liga",
+    "interclubes",
+    "clubes",
+    "equipos",
+    "jugadores",
+    "historia",
+    "cuando se creo",
+    "que es iml",
+    "presentacion",
+    "zonas",
+    "donde se juega",
+    "cuando empieza",
+    "cuando termina",
+  ],
+
+  INSCRIPCIONES: [
+    "inscripcion",
+    "inscribirse",
+    "anotar equipo",
+    "participar",
+    "costo",
+    "precio",
+    "valor",
+    "cuanto sale",
+    "cuanto cuesta",
+    "fecha limite",
+    "cierre inscripciones",
+  ],
+
   CATEGORIAS: [
-    "categorias",
     "categoria",
+    "categorias",
     "nivel",
     "niveles",
     "que puedo jugar",
@@ -27,33 +65,25 @@ const KEYWORDS = {
     "empate",
     "desempate",
     "pelotas",
+    "resultado",
     "cargar resultado",
-    "quien carga",
     "lluvia",
     "suspension",
     "reprogramar",
     "tolerancia",
     "llegar tarde",
     "lista buena fe",
-    "cuantos jugadores",
     "capitan",
     "playoffs",
     "clasificar",
-    "ascenso",
-    "descenso",
     "reglamento",
     "regla",
     "como funciona",
     "que pasa si",
-    "puedo",
     "se puede",
-    "precio",
-    "inscripcion",
-    "cuanto cuesta",
-    "edad minima",
   ],
 
-  PERFIL: ["sos", "quien sos", "que sos", "tu nombre", "edad tenes"],
+  FAQ: ["contacto", "whatsapp", "ayuda", "coordinador", "consulta"],
 };
 
 // ----------------------------
@@ -64,34 +94,35 @@ export function detectarIntent(mensaje: string): Intent {
   const msg = normalizar(mensaje);
 
   const scores: Record<Intent, number> = {
+    TORNEO: 0,
+    INSCRIPCIONES: 0,
     CATEGORIAS: 0,
     REGLAMENTO: 0,
-    PERFIL: 0,
-    UNKNOWN: 0,
+    FAQ: 0,
+    LIBRE: 0,
   };
 
-  // sumar coincidencias
-  (Object.keys(KEYWORDS) as Array<keyof typeof KEYWORDS>).forEach((intent) => {
-    KEYWORDS[intent].forEach((kw) => {
-      if (msg.includes(kw)) {
-        scores[intent] += 1;
+  for (const intent of Object.keys(KEYWORDS) as Array<keyof typeof KEYWORDS>) {
+    KEYWORDS[intent].forEach((keyword) => {
+      if (msg.includes(normalizar(keyword))) {
+        scores[intent]++;
       }
     });
-  });
-
-  // boost natural reglamento
-  if (
-    msg.includes("que pasa si") ||
-    msg.includes("puedo") ||
-    msg.includes("se puede")
-  ) {
-    scores.REGLAMENTO += 2;
   }
 
-  // prioridad
-  if (scores.CATEGORIAS > 0) return "CATEGORIAS";
-  if (scores.REGLAMENTO > 0) return "REGLAMENTO";
-  if (scores.PERFIL > 0) return "PERFIL";
+  // ----------------------------
+  // Prioridades
+  // ----------------------------
 
-  return "UNKNOWN";
+  if (scores.INSCRIPCIONES > 0) return "INSCRIPCIONES";
+
+  if (scores.CATEGORIAS > 0) return "CATEGORIAS";
+
+  if (scores.REGLAMENTO > 0) return "REGLAMENTO";
+
+  if (scores.TORNEO > 0) return "TORNEO";
+
+  if (scores.FAQ > 0) return "FAQ";
+
+  return "LIBRE";
 }
