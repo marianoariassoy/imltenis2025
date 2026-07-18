@@ -4,10 +4,10 @@ import { detectarIntent } from "./intentEngine";
 import { buildPromptContexto, buildPromptLibre } from "./promptBuilder";
 
 import { buscarCategorias } from "@/domains/categorias/categoriasEngine";
-import { buscarRegla } from "@/domains/reglamento/reglamentoEngine";
+import { buscarReglamento } from "@/domains/reglamento/reglamentoEngine";
 import { buscarTorneo } from "@/domains/torneo/torneoEngine";
-import { buscarInscripcion } from "@/domains/inscripciones/inscripcionesEngine";
-import { buscarFAQ } from "@/domains/faq/faqEngine";
+import { buscarInscripciones } from "@/domains/inscripciones/inscripcionesEngine";
+import { buscarFaq } from "@/domains/faq/faqEngine";
 
 import { limpiarRespuesta, construirHistorial } from "./utils";
 
@@ -52,8 +52,10 @@ function asegurarRespuestaCompleta(texto: string) {
 async function llamarIA(prompt: string, temperature = 0.2, maxTokens = 120) {
   const response = await openai.chat.completions.create({
     model: "gpt-4o-mini",
+
     temperature,
     max_tokens: maxTokens,
+
     messages: [
       {
         role: "user",
@@ -101,7 +103,9 @@ async function responderConContexto(
 
   return {
     respuesta: asegurarRespuestaCompleta(limpiarRespuesta(raw || item.content)),
+
     titulo: item.title,
+
     tipo,
   };
 }
@@ -115,6 +119,7 @@ export async function chatEngine(
   historial: Historial[] = [],
 ): Promise<ChatResponse> {
   const historialCorto = historial.slice(-3);
+
   const historialTexto = construirHistorial(historialCorto);
 
   const intent = detectarIntent(mensaje);
@@ -124,84 +129,51 @@ export async function chatEngine(
   console.log("MENSAJE:", mensaje);
   console.log("==============================");
 
-  // TORNEO
-  if (intent === "TORNEO") {
-    const torneo = buscarTorneo(mensaje);
+  let item = null;
+  let tipo: ChatResponse["tipo"] = "libre";
 
-    console.log("RESULTADO buscarTorneo:");
-    console.dir(torneo, { depth: null });
+  switch (intent) {
+    case "TORNEO":
+      item = buscarTorneo(mensaje);
+      tipo = "torneo";
 
-    if (torneo) {
-      return responderConContexto(mensaje, historialTexto, torneo, "torneo");
-    }
+      break;
+
+    case "INSCRIPCIONES":
+      item = buscarInscripciones(mensaje);
+      tipo = "inscripciones";
+
+      break;
+
+    case "CATEGORIAS":
+      item = buscarCategorias(mensaje);
+      tipo = "categorias";
+
+      break;
+
+    case "REGLAMENTO":
+      item = buscarReglamento(mensaje);
+      tipo = "reglamento";
+
+      break;
+
+    case "FAQ":
+      item = buscarFaq(mensaje);
+      tipo = "faq";
+
+      break;
   }
 
-  // INSCRIPCIONES
-  if (intent === "INSCRIPCIONES") {
-    const inscripcion = buscarInscripcion(mensaje);
+  console.log("RESULTADO ENGINE:");
+  console.dir(item, { depth: null });
 
-    console.log("RESULTADO buscarInscripcion:");
-    console.dir(inscripcion, { depth: null });
-
-    if (inscripcion) {
-      return responderConContexto(
-        mensaje,
-        historialTexto,
-        inscripcion,
-        "inscripciones",
-      );
-    }
+  if (item) {
+    return responderConContexto(mensaje, historialTexto, item, tipo);
   }
 
-  // CATEGORIAS
-  if (intent === "CATEGORIAS") {
-    const categorias = buscarCategorias(mensaje);
-
-    console.log("RESULTADO buscarCategorias:");
-    console.dir(categorias, { depth: null });
-
-    if (categorias) {
-      return responderConContexto(
-        mensaje,
-        historialTexto,
-        categorias,
-        "categorias",
-      );
-    }
-  }
-
-  // REGLAMENTO
-  if (intent === "REGLAMENTO") {
-    const regla = buscarRegla(mensaje);
-
-    console.log("RESULTADO buscarRegla:");
-    console.dir(regla, { depth: null });
-
-    if (regla) {
-      return responderConContexto(mensaje, historialTexto, regla, "reglamento");
-    }
-
-    return {
-      respuesta:
-        "No encontré una regla específica 🤔. ¿Podés darme un poco más de detalle?",
-      titulo: "Reglamento",
-      tipo: "reglamento",
-    };
-  }
-
-  // FAQ
-  if (intent === "FAQ") {
-    const faq = buscarFAQ(mensaje);
-
-    console.log("RESULTADO buscarFAQ:");
-    console.dir(faq, { depth: null });
-
-    if (faq) {
-      return responderConContexto(mensaje, historialTexto, faq, "faq");
-    }
-  }
-
+  // ----------------------------
   // LIBRE
+  // ----------------------------
 
   console.log("SIN CONTEXTO - IA LIBRE");
 
@@ -221,7 +193,9 @@ export async function chatEngine(
         raw || "Soy Chat IML 🤖, el asistente virtual del torneo.",
       ),
     ),
+
     titulo: "Asistente",
+
     tipo: "libre",
   };
 }

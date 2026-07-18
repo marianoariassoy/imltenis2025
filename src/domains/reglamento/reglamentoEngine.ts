@@ -3,6 +3,16 @@ import { buscarEnFuente, KnowledgeItem } from "@/lib/chat/jsonSearchEngine";
 
 const reglamento = data as KnowledgeItem[];
 
-export function buscarRegla(mensaje: string) {
-  return buscarEnFuente(mensaje, reglamento);
+export function buscarReglamento(mensaje: string): KnowledgeItem | null {
+  const resultado = buscarEnFuente(mensaje, reglamento);
+
+  console.log("\n========== REGLAMENTO ENGINE ==========");
+  console.log("Mensaje:", mensaje);
+
+  console.log("Resultado:");
+  console.dir(resultado, { depth: null });
+
+  console.log("=======================================\n");
+
+  return resultado?.item ?? null;
 }

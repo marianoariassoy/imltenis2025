@@ -1,6 +1,11 @@
 import { checkRateLimit } from "@/lib/chat/rateLimiter";
 import { detectarIntent } from "@/lib/chat/intentEngine";
 import { buscarTorneo } from "@/domains/torneo/torneoEngine";
+import { buscarCategorias } from "@/domains/categorias/categoriasEngine";
+import { buscarReglamento } from "@/domains/reglamento/reglamentoEngine";
+import { buscarInscripciones } from "@/domains/inscripciones/inscripcionesEngine";
+import { buscarFaq } from "@/domains/faq/faqEngine";
+
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -37,16 +42,51 @@ export async function POST(req: Request) {
     console.log("INTENT DETECTADO EN ROUTE:", intent);
 
     // ----------------------------
-    // TORNEO ENGINE
+    // KNOWLEDGE ENGINES
     // ----------------------------
 
     let contexto = null;
 
-    if (intent === "TORNEO") {
-      contexto = buscarTorneo(mensaje);
+    switch (intent) {
+      case "TORNEO":
+        contexto = buscarTorneo(mensaje);
 
-      console.log("CONTEXTO TORNEO:");
-      console.dir(contexto, { depth: null });
+        console.log("CONTEXTO TORNEO:");
+        console.dir(contexto, { depth: null });
+
+        break;
+
+      case "CATEGORIAS":
+        contexto = buscarCategorias(mensaje);
+
+        console.log("CONTEXTO CATEGORIAS:");
+        console.dir(contexto, { depth: null });
+
+        break;
+
+      case "REGLAMENTO":
+        contexto = buscarReglamento(mensaje);
+
+        console.log("CONTEXTO REGLAMENTO:");
+        console.dir(contexto, { depth: null });
+
+        break;
+
+      case "INSCRIPCIONES":
+        contexto = buscarInscripciones(mensaje);
+
+        console.log("CONTEXTO INSCRIPCIONES:");
+        console.dir(contexto, { depth: null });
+
+        break;
+
+      case "FAQ":
+        contexto = buscarFaq(mensaje);
+
+        console.log("CONTEXTO FAQ:");
+        console.dir(contexto, { depth: null });
+
+        break;
     }
 
     // ----------------------------
@@ -89,13 +129,18 @@ Tu función es ayudar a jugadores y visitantes con consultas sobre:
 - sedes
 - reglamento
 - costos
+- preguntas frecuentes
+
 
 Respondé siempre en español rioplatense, con un tono amable y cercano.
 
+
 IMPORTANTE:
+
 Toda información sobre días, horarios, costos, categorías, sedes y reglamentos debe salir únicamente de la información proporcionada por IML Tenis.
 
 No completes datos faltantes con suposiciones.
+
 Si no existe la información disponible, indicá que no tenés ese dato y sugerí consultar con la organización.
 
 No inventes fechas, horarios, precios ni condiciones del torneo.
