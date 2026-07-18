@@ -1,5 +1,29 @@
 [
   {
+    "id": "fechas_importantes",
+    "title": "Fechas importantes del torneo",
+    "content": "El torneo IML Tenis inicia el día 15 de agosto de 2026. El cierre de inscripciones es el día 1 de agosto de 2026. Las listas de buena fe deben ser cargadas antes del cierre establecido por la organización.",
+    "keywords": [
+      "fecha inicio",
+      "cuando empieza",
+      "inicio torneo",
+      "cierre inscripcion",
+      "cerrar inscripcion",
+      "fecha limite",
+      "lista buena fe",
+      "cargar lista",
+      "presentar jugadores"
+    ],
+    "examples": [
+      "cuando empieza el torneo",
+      "que dia arranca iml",
+      "hasta cuando puedo inscribir mi equipo",
+      "cuando cierro la lista de buena fe",
+      "hasta cuando puedo cargar jugadores",
+      "cual es la fecha limite de inscripcion"
+    ]
+  },
+  {
     "id": "descripcion_torneo",
     "title": "Presentación de IML Tenis",
     "content": "IML Tenis es una liga de tenis interclubes amateur de Buenos Aires que reúne equipos de distintos clubes y niveles de juego, con categorías de damas, caballeros y mixtos.",
