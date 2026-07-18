@@ -174,6 +174,7 @@ const ChatIML = () => {
           <input
             value={mensaje}
             onChange={(e) => setMensaje(e.target.value)}
+            maxLength={1000}
             placeholder="Preguntá algo"
             className="w-full bg-transparent border-none focus:outline-none focus:ring-0 placeholder:text-secondary resize-none"
             onKeyDown={(e) => {
