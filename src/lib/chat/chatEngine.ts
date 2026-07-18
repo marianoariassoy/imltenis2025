@@ -53,7 +53,7 @@ function asegurarRespuestaCompleta(texto: string) {
 
 async function llamarIA(prompt: string, temperature = 0.2, maxTokens = 120) {
   const response = await openai.chat.completions.create({
-    model: "gpt-4.1-mini",
+    model: process.env.OPENAI_MODEL || "gpt-4o-mini",
     temperature,
     max_tokens: maxTokens,
     messages: [

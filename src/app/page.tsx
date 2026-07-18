@@ -8,6 +8,7 @@ import Whatsapp from "@/components/WhatsApp";
 import Link from "next/link";
 import Countdown from "@/components/Countdown";
 import ButtonIA from "@/components/ButtonIA";
+import AIIntroBubble from "@/components/AIIntroBubble";
 
 export default function Home() {
   // const { open, setOpen } = useMenu();
@@ -25,7 +26,7 @@ export default function Home() {
 
       <section className="h-screen w-full">
         <Notice />
-        <ButtonIA />
+        <AIIntroBubble />
 
         <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20 opacity-0 fade-in delay-100 items-center">
           <Link

@@ -1,5 +1,4 @@
 "use client";
-
 import { useState, useRef, useEffect } from "react";
 import Loader from "@/components/Loader2";
 import FrasesPlus from "./FrasesPlus";
@@ -28,7 +27,7 @@ const ChatIML = () => {
 
   useEffect(() => {
     const bienvenida =
-      "¡Hola! Soy Chat IML 😄, podes consultarme sobre el torneo o sobre el reglamento 😎.";
+      "¡Hola! Soy Chat IML 🤖, podes consultarme sobre el torneo, inscripciones y el reglamento.";
 
     setTimeout(() => {
       setIsTyping(true);
@@ -90,7 +89,7 @@ const ChatIML = () => {
     console.log("Respuesta API:", data);
 
     const reply =
-      data.respuesta || "No pude generar una respuesta en este momento 🤔";
+      data.respuesta || "No pude generar una respuesta en este momento 😔";
 
     // ✍️ activar typing
     setIsTyping(true);

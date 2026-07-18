@@ -69,7 +69,7 @@ export default function Countdown({
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="flex items-center justify-center w-10 text-3xl font-bold text-secondary">
+      <div className="flex items-center justify-center w-10 text-3xl font-bold text-primary">
         {value.toString().padStart(2, "0")}
       </div>
 
