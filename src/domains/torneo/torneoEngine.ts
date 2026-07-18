@@ -1,6 +1,18 @@
 import data from "@/data/chat/torneo_ia.json";
-import { buscarEnFuente } from "@/lib/chat/jsonSearchEngine";
+import { buscarEnFuente, KnowledgeItem } from "@/lib/chat/jsonSearchEngine";
 
-export function buscarTorneo(mensaje: string) {
-  return buscarEnFuente(mensaje, data);
+const torneo = data as KnowledgeItem[];
+
+export function buscarTorneo(mensaje: string): KnowledgeItem | null {
+  const resultado = buscarEnFuente(mensaje, torneo);
+
+  console.log("\n========== TORNEO ENGINE ==========");
+  console.log("Mensaje:", mensaje);
+
+  console.log("Resultado:");
+  console.dir(resultado, { depth: null });
+
+  console.log("===================================\n");
+
+  return resultado?.item ?? null;
 }

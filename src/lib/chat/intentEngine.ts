@@ -27,8 +27,17 @@ const KEYWORDS = {
     "presentacion",
     "zonas",
     "donde se juega",
+
+    // Fechas torneo
     "cuando empieza",
+    "cuando comienza",
+    "cuando arranca",
+    "inicio torneo",
+    "fecha inicio",
+    "primera fecha",
     "cuando termina",
+    "fin torneo",
+    "fecha finalizacion",
   ],
 
   INSCRIPCIONES: [
@@ -43,6 +52,7 @@ const KEYWORDS = {
     "cuanto cuesta",
     "fecha limite",
     "cierre inscripciones",
+    "cerrar inscripcion",
   ],
 
   CATEGORIAS: [
@@ -111,18 +121,44 @@ export function detectarIntent(mensaje: string): Intent {
   }
 
   // ----------------------------
+  // DEBUG
+  // ----------------------------
+
+  console.log("\n========== INTENT ENGINE ==========");
+  console.log("Mensaje:", msg);
+  console.log("Scores:", scores);
+  console.log("===================================\n");
+
+  // ----------------------------
   // Prioridades
   // ----------------------------
 
-  if (scores.INSCRIPCIONES > 0) return "INSCRIPCIONES";
+  if (scores.TORNEO > 0) {
+    console.log("Intent elegido: TORNEO");
+    return "TORNEO";
+  }
 
-  if (scores.CATEGORIAS > 0) return "CATEGORIAS";
+  if (scores.INSCRIPCIONES > 0) {
+    console.log("Intent elegido: INSCRIPCIONES");
+    return "INSCRIPCIONES";
+  }
 
-  if (scores.REGLAMENTO > 0) return "REGLAMENTO";
+  if (scores.CATEGORIAS > 0) {
+    console.log("Intent elegido: CATEGORIAS");
+    return "CATEGORIAS";
+  }
 
-  if (scores.TORNEO > 0) return "TORNEO";
+  if (scores.REGLAMENTO > 0) {
+    console.log("Intent elegido: REGLAMENTO");
+    return "REGLAMENTO";
+  }
 
-  if (scores.FAQ > 0) return "FAQ";
+  if (scores.FAQ > 0) {
+    console.log("Intent elegido: FAQ");
+    return "FAQ";
+  }
+
+  console.log("Intent elegido: LIBRE");
 
   return "LIBRE";
 }

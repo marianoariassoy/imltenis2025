@@ -1,4 +1,6 @@
 import { checkRateLimit } from "@/lib/chat/rateLimiter";
+import { detectarIntent } from "@/lib/chat/intentEngine";
+import { buscarTorneo } from "@/domains/torneo/torneoEngine";
 import OpenAI from "openai";
 
 const openai = new OpenAI({
@@ -26,6 +28,50 @@ export async function POST(req: Request) {
 
     const { mensaje, historial } = body;
 
+    // ----------------------------
+    // INTENT ENGINE
+    // ----------------------------
+
+    const intent = detectarIntent(mensaje);
+
+    console.log("INTENT DETECTADO EN ROUTE:", intent);
+
+    // ----------------------------
+    // TORNEO ENGINE
+    // ----------------------------
+
+    let contexto = null;
+
+    if (intent === "TORNEO") {
+      contexto = buscarTorneo(mensaje);
+
+      console.log("CONTEXTO TORNEO:");
+      console.dir(contexto, { depth: null });
+    }
+
+    // ----------------------------
+    // CONTEXTO PARA OPENAI
+    // ----------------------------
+
+    const contextoOficial = contexto
+      ? `
+INFORMACIÓN OFICIAL ENCONTRADA:
+
+Título:
+${contexto.title}
+
+Contenido:
+${contexto.content}
+
+Utilizá esta información para responder la consulta del usuario.
+No agregues datos que no estén incluidos aquí.
+`
+      : "";
+
+    // ----------------------------
+    // OPENAI
+    // ----------------------------
+
     const completion = await openai.chat.completions.create({
       model: "gpt-4.1-mini",
 
@@ -48,10 +94,15 @@ Respondé siempre en español rioplatense, con un tono amable y cercano.
 
 IMPORTANTE:
 Toda información sobre días, horarios, costos, categorías, sedes y reglamentos debe salir únicamente de la información proporcionada por IML Tenis.
+
 No completes datos faltantes con suposiciones.
 Si no existe la información disponible, indicá que no tenés ese dato y sugerí consultar con la organización.
 
 No inventes fechas, horarios, precios ni condiciones del torneo.
+
+
+${contextoOficial}
+
 `,
         },
 

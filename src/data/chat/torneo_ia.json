@@ -1,26 +1,43 @@
 [
   {
-    "id": "fechas_importantes",
-    "title": "Fechas importantes del torneo",
-    "content": "El torneo IML Tenis inicia el día 15 de agosto de 2026. El cierre de inscripciones es el día 1 de agosto de 2026. Las listas de buena fe deben ser cargadas antes del cierre establecido por la organización.",
+    "id": "fechas_torneo",
+    "title": "Fecha de inicio del torneo",
+    "content": "El torneo IML Tenis comienza el día 15 de agosto de 2026.",
     "keywords": [
-      "fecha inicio",
-      "cuando empieza",
       "inicio torneo",
+      "cuando empieza",
+      "fecha inicio",
+      "arranca torneo",
+      "comienzo torneo",
+      "primer fecha"
+    ],
+    "examples": [
+      "cuando empieza el torneo",
+      "que dia arranca iml tenis",
+      "cuando es la primera fecha",
+      "cuando comienza el campeonato"
+    ]
+  },
+  {
+    "id": "fechas_inscripcion",
+    "title": "Cierre de inscripciones y carga de listas de buena fe",
+    "content": "El cierre de inscripciones del torneo IML Tenis es el día 1 de agosto de 2026. Las listas de buena fe deben ser cargadas antes del inicio del torneo, respetando los plazos establecidos por la organización.",
+    "keywords": [
       "cierre inscripcion",
       "cerrar inscripcion",
       "fecha limite",
       "lista buena fe",
       "cargar lista",
-      "presentar jugadores"
+      "cargar jugadores",
+      "presentar jugadores",
+      "inscribir equipo"
     ],
     "examples": [
-      "cuando empieza el torneo",
-      "que dia arranca iml",
       "hasta cuando puedo inscribir mi equipo",
-      "cuando cierro la lista de buena fe",
-      "hasta cuando puedo cargar jugadores",
-      "cual es la fecha limite de inscripcion"
+      "cuando cierran las inscripciones",
+      "cuando tengo que cargar la lista de buena fe",
+      "hasta cuando puedo agregar jugadores",
+      "cuando presento los jugadores"
     ]
   },
   {
@@ -331,5 +348,31 @@
       "fase final"
     ],
     "examples": ["¿Quién puede jugar playoffs?", "¿Qué se necesita para jugar?"]
+  },
+  {
+    "id": "fair_play",
+    "title": "Puntos Fair Play",
+    "content": "Los Puntos Fair Play se asignan en cada fecha a través de las encuestas realizadas por los equipos participantes. Cada equipo podrá sumar puntos por el reconocimiento del rival y/o por la organización de un tercer tiempo. Al finalizar el torneo, el equipo que haya acumulado la mayor cantidad de Puntos Fair Play será reconocido por su compromiso con los valores de respeto, compañerismo y camaradería. Su capitán recibirá un diploma como Capitán Destacado, y el equipo obtendrá un descuento en la inscripción al próximo torneo.",
+    "keywords": [
+      "fair play",
+      "puntos fair play",
+      "premio fair play",
+      "capitan destacado",
+      "capitán destacado",
+      "tercer tiempo",
+      "encuestas",
+      "reconocimiento rival",
+      "descuento próximo torneo",
+      "premios torneo"
+    ],
+    "examples": [
+      "como funcionan los puntos fair play",
+      "que son los puntos fair play",
+      "como se asigna el fair play",
+      "quien gana el premio fair play",
+      "hay premio para el equipo mas deportivo",
+      "que recibe el capitan destacado",
+      "como se obtiene el descuento del proximo torneo"
+    ]
   }
 ]
