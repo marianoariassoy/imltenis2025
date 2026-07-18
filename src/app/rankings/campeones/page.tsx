@@ -64,7 +64,7 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Clubes Campeones" description="2023 - 2026" />
+      <Title title="Clubes Campeones" description="Desde 2023" />
       <div className="overflow-x-auto">
         <table className="table w-full mb-2">
           <thead>

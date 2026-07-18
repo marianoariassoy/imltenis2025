@@ -9,12 +9,17 @@ export const metadata = {
 const nav = [
   {
     title: "Clubes campeones",
-    description: "Ranking hisotórico de clubes campeones.",
+    description: "Ranking histórico de clubes.",
     url: "/rankings/campeones",
   },
   {
-    title: "Salón de la Fama",
-    description: "Ranking de jugadores con más partidos.",
+    title: "Equipos campeones",
+    description: "Listado de equipos campeones.",
+    url: "/datos-y-records/equipos-campeones",
+  },
+  {
+    title: "Salón de la fama",
+    description: "Jugadores con más partidos.",
     url: "/datos-y-records/salon-de-la-fama",
   },
   {
@@ -24,7 +29,7 @@ const nav = [
   },
   {
     title: "Estadísticas",
-    description: "Estadísticas de la liga de clubes IML Tenis.",
+    description: "Estadísticas de del torneo.",
     url: "/datos-y-records/estadisticas",
   },
 ];
@@ -32,9 +37,12 @@ const nav = [
 const page = () => {
   return (
     <Container>
-      <Title title="Datos y Records" />
+      <Title
+        title="Datos y Records"
+        description="Información que no sabias que necesitabas"
+      />
 
-      <div className="flex flex-col gap-y-4 items-center mt-4 text-center">
+      <div className="flex flex-col gap-y-4 items-center text-center">
         {nav.map((item, index) => (
           <Link
             key={index}

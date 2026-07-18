@@ -10,21 +10,24 @@ interface Item {
 const TitleRow = ({ image, title, link }: Item) => {
   return (
     <div className="flex items-center gap-x-2">
-      <div className="w-10 h-10 rounded-full overflow-hidden bg-white/10  shadow-md">
+      <div className="w-11 h-11 rounded-full overflow-hidden bg-white/10  shadow-md">
         {image ? (
           <Link href={link}>
             <Image
               src={image}
               alt={title}
-              width={48}
-              height={48}
+              width={44}
+              height={44}
               className="object-cover h-full w-full hover:opacity-70 transition-opacity"
             />
           </Link>
         ) : null}
       </div>
-      <Link href={link} className="hover:text-primary pr-4 font-semibold">
-        <span>{title}</span>
+      <Link
+        href={link}
+        className="hover:text-primary pr-4 font-semibold  text-nowrap"
+      >
+        {title}
       </Link>
     </div>
   );

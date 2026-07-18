@@ -60,7 +60,7 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Salón de la Fama" emoji="😎" description="2023 - 2026" />
+      <Title title="Salón de la Fama" emoji="😎" description="Desde 2023" />
 
       <div className="overflow-x-auto">
         <table className="table w-full">
