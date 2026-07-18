@@ -8,8 +8,15 @@ export type KnowledgeItem = {
   examples?: string[];
 };
 
+function obtenerPalabras(texto: string) {
+  return texto.split(" ").filter((p) => p.length > 3);
+}
+
 function incluyePalabras(msg: string, texto: string) {
-  const palabras = texto.split(" ");
+  const palabras = obtenerPalabras(texto);
+
+  if (palabras.length === 0) return 0;
+
   let matches = 0;
 
   for (const palabra of palabras) {
@@ -24,7 +31,7 @@ function incluyePalabras(msg: string, texto: string) {
 export function buscarEnFuente(
   mensaje: string,
   fuente: KnowledgeItem[],
-): KnowledgeItem | null {
+): { item: KnowledgeItem; score: number } | null {
   const msg = normalizar(mensaje);
 
   let mejorMatch: KnowledgeItem | null = null;
@@ -33,19 +40,30 @@ export function buscarEnFuente(
   for (const item of fuente) {
     let score = 0;
 
-    // título
+    // =========================
+    // TÍTULO
+    // =========================
+
     const titulo = normalizar(item.title);
 
     if (msg.includes(titulo)) {
-      score += 20;
+      score += 25;
+    } else {
+      const ratio = incluyePalabras(msg, titulo);
+
+      score += ratio * 10;
     }
 
-    // keywords
+    // =========================
+    // KEYWORDS
+    // =========================
+
     for (const keyword of item.keywords) {
       const key = normalizar(keyword);
 
+      // coincidencia exacta
       if (msg.includes(key)) {
-        score += key.length * 2;
+        score += key.length * 3;
       } else {
         const ratio = incluyePalabras(msg, key);
 
@@ -53,17 +71,20 @@ export function buscarEnFuente(
       }
     }
 
-    // ejemplos
+    // =========================
+    // EJEMPLOS
+    // =========================
+
     if (item.examples) {
       for (const example of item.examples) {
         const ex = normalizar(example);
 
         if (msg.includes(ex)) {
-          score += ex.length;
+          score += ex.length * 2;
         } else {
           const ratio = incluyePalabras(msg, ex);
 
-          score += ratio * (ex.length * 0.5);
+          score += ratio * ex.length;
         }
       }
     }
@@ -74,10 +95,14 @@ export function buscarEnFuente(
     }
   }
 
-  // mínimo de coincidencia
-  if (mejorScore < 10) {
+  // mínimo de confianza
+
+  if (!mejorMatch || mejorScore < 15) {
     return null;
   }
 
-  return mejorMatch;
+  return {
+    item: mejorMatch,
+    score: mejorScore,
+  };
 }

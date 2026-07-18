@@ -23,10 +23,10 @@ const MarqueeComponent = async () => {
     data.clubes +
     " - Series: " +
     data.series +
-    " - Jugadores: " +
-    data.players +
     " - Partidos: " +
     data.matches +
+    " - Jugadores: " +
+    data.players +
     " - Seguidores: " +
     data.followers +
     " -";

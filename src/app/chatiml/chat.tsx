@@ -68,40 +68,65 @@ const ChatIML = () => {
 
     setLoading(true);
 
-    // 👤 mensaje usuario
     setMessages((prev) => [...prev, { role: "user", content: msg }]);
 
     setMensaje("");
 
-    const res = await fetch("/api/chat", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        mensaje: msg,
-        historial: messages,
-      }),
-    });
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          mensaje: msg,
+          historial: messages,
+        }),
+      });
 
-    const data = await res.json();
+      console.log("STATUS API:", res.status);
 
-    console.log("Respuesta API:", data);
+      const data = await res.json();
 
-    const reply =
-      data.respuesta || "No pude generar una respuesta en este momento 😔";
+      console.log("RESPUESTA COMPLETA API:", data);
 
-    // ✍️ activar typing
-    setIsTyping(true);
+      if (!res.ok) {
+        throw new Error(data.error || `Error HTTP ${res.status}`);
+      }
 
-    typeText(reply, () => {
-      setMessages((prev) => [...prev, { role: "assistant", content: reply }]);
+      const reply =
+        data.respuesta || "No recibí una respuesta válida del servidor.";
 
-      setTypingMessage("");
-      setIsTyping(false);
-    });
+      setIsTyping(true);
 
-    setLoading(false);
+      typeText(reply, () => {
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: "assistant",
+            content: reply,
+          },
+        ]);
+
+        setTypingMessage("");
+        setIsTyping(false);
+      });
+    } catch (error) {
+      console.error("ERROR CHAT:", error);
+
+      const errorMessage =
+        error instanceof Error ? error.message : "Error desconocido";
+
+      setMessages((prev) => [
+        ...prev,
+        {
+          role: "assistant",
+          content: `⚠️ Error del sistema:\n${errorMessage}`,
+        },
+      ]);
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (

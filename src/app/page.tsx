@@ -33,7 +33,7 @@ export default function Home() {
             className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
             // onClick={() => setOpen(!open)}
           >
-            <AuroraText colors={["#7d37ff", "#fe514e", "#fe514e"]}>
+            <AuroraText colors={["#7d37ff", "#fe514e"]}>
               Torneo <br /> Interclubes <br /> Clausura <br />
               <div className="text-primary mt-2 mb-2 w-full flex justify-center">
                 <Veinteventiseis />

@@ -1,7 +1,7 @@
 import { openai } from "@/lib/openai/client";
 
 import { detectarIntent } from "./intentEngine";
-import { buildPromptReglamento, buildPromptLibre } from "./promptBuilder";
+import { buildPromptContexto, buildPromptLibre } from "./promptBuilder";
 
 import { buscarCategorias } from "@/domains/categorias/categoriasEngine";
 import { buscarRegla } from "@/domains/reglamento/reglamentoEngine";
@@ -24,11 +24,9 @@ type ChatResponse = {
   respuesta: string;
   titulo: string;
   tipo:
-    | "perfil"
     | "torneo"
     | "inscripciones"
     | "categorias"
-    | "categorias_brain"
     | "reglamento"
     | "faq"
     | "libre";
@@ -53,7 +51,7 @@ function asegurarRespuestaCompleta(texto: string) {
 
 async function llamarIA(prompt: string, temperature = 0.2, maxTokens = 120) {
   const response = await openai.chat.completions.create({
-    model: process.env.OPENAI_MODEL || "gpt-4o-mini",
+    model: "gpt-4o-mini",
     temperature,
     max_tokens: maxTokens,
     messages: [
@@ -79,9 +77,27 @@ async function responderConContexto(
 ) {
   const contexto = `${item.title}\n${item.content}`;
 
-  const prompt = buildPromptReglamento(mensaje, historial, contexto);
+  console.log("\n====================================");
+  console.log("TIPO:", tipo);
+  console.log("MENSAJE:", mensaje);
+
+  console.log("\nITEM ENCONTRADO:");
+  console.dir(item, { depth: null });
+
+  console.log("\nCONTEXTO:");
+  console.log(contexto);
+
+  const prompt = buildPromptContexto(mensaje, historial, contexto);
+
+  console.log("\nPROMPT:");
+  console.log(prompt);
 
   const raw = await llamarIA(prompt, 0.2, 180);
+
+  console.log("\nRESPUESTA GPT:");
+  console.log(raw);
+
+  console.log("====================================\n");
 
   return {
     respuesta: asegurarRespuestaCompleta(limpiarRespuesta(raw || item.content)),
@@ -103,11 +119,17 @@ export async function chatEngine(
 
   const intent = detectarIntent(mensaje);
 
+  console.log("\n==============================");
   console.log("INTENT:", intent);
+  console.log("MENSAJE:", mensaje);
+  console.log("==============================");
 
   // TORNEO
   if (intent === "TORNEO") {
     const torneo = buscarTorneo(mensaje);
+
+    console.log("RESULTADO buscarTorneo:");
+    console.dir(torneo, { depth: null });
 
     if (torneo) {
       return responderConContexto(mensaje, historialTexto, torneo, "torneo");
@@ -117,6 +139,9 @@ export async function chatEngine(
   // INSCRIPCIONES
   if (intent === "INSCRIPCIONES") {
     const inscripcion = buscarInscripcion(mensaje);
+
+    console.log("RESULTADO buscarInscripcion:");
+    console.dir(inscripcion, { depth: null });
 
     if (inscripcion) {
       return responderConContexto(
@@ -129,9 +154,11 @@ export async function chatEngine(
   }
 
   // CATEGORIAS
-
   if (intent === "CATEGORIAS") {
     const categorias = buscarCategorias(mensaje);
+
+    console.log("RESULTADO buscarCategorias:");
+    console.dir(categorias, { depth: null });
 
     if (categorias) {
       return responderConContexto(
@@ -144,9 +171,11 @@ export async function chatEngine(
   }
 
   // REGLAMENTO
-
   if (intent === "REGLAMENTO") {
     const regla = buscarRegla(mensaje);
+
+    console.log("RESULTADO buscarRegla:");
+    console.dir(regla, { depth: null });
 
     if (regla) {
       return responderConContexto(mensaje, historialTexto, regla, "reglamento");
@@ -161,9 +190,11 @@ export async function chatEngine(
   }
 
   // FAQ
-
   if (intent === "FAQ") {
     const faq = buscarFAQ(mensaje);
+
+    console.log("RESULTADO buscarFAQ:");
+    console.dir(faq, { depth: null });
 
     if (faq) {
       return responderConContexto(mensaje, historialTexto, faq, "faq");
@@ -172,9 +203,17 @@ export async function chatEngine(
 
   // LIBRE
 
+  console.log("SIN CONTEXTO - IA LIBRE");
+
   const prompt = buildPromptLibre(mensaje, historialTexto);
 
+  console.log("\nPROMPT LIBRE:");
+  console.log(prompt);
+
   const raw = await llamarIA(prompt, 0.5, 180);
+
+  console.log("\nRESPUESTA GPT:");
+  console.log(raw);
 
   return {
     respuesta: asegurarRespuestaCompleta(
@@ -182,7 +221,6 @@ export async function chatEngine(
         raw || "Soy Chat IML 🤖, el asistente virtual del torneo.",
       ),
     ),
-
     titulo: "Asistente",
     tipo: "libre",
   };

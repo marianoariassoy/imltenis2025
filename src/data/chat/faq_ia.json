@@ -61,5 +61,30 @@
     "content": "El capitán es la persona encargada de organizar el equipo, coordinar las series y comunicarse con la organización.",
     "keywords": ["que hace un capitan", "capitan equipo", "responsable equipo"],
     "examples": ["¿Qué hace el capitán?", "¿Quién puede ser capitán?"]
+  },
+  {
+    "id": "horarios_juego",
+    "pregunta": "¿Qué días se juega IML Tenis?",
+    "respuesta": "IML Tenis se juega los fines de semana. Los sábados se disputan las categorías +30 y +40 de 13:00 a 17:00 hs. Los domingos se disputan las categorías Libres de 9:00 a 17:00 hs."
+  },
+  {
+    "id": "contacto",
+    "title": "Contacto IML Tenis",
+    "content": "Para consultas sobre inscripciones, torneo y organización podés comunicarte con IML Tenis por WhatsApp al +54 9 11 3017-1475 o por Instagram @imltenis.",
+    "keywords": [
+      "contacto",
+      "telefono",
+      "whatsapp",
+      "instagram",
+      "comunicarse",
+      "consultar",
+      "hablar"
+    ],
+    "examples": [
+      "como contacto a iml",
+      "pasame el whatsapp",
+      "donde puedo consultar",
+      "necesito hablar con la organización"
+    ]
   }
 ]
