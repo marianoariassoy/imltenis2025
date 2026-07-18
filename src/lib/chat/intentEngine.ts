@@ -27,6 +27,7 @@ const KEYWORDS = {
     "presentacion",
     "zonas",
     "donde se juega",
+    "fair play",
 
     // Fechas torneo
     "cuando empieza",
