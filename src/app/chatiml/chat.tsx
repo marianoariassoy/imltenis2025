@@ -27,7 +27,7 @@ const ChatIML = () => {
 
   useEffect(() => {
     const bienvenida =
-      "¡Hola! Soy Chat IML 🤖, podes consultarme sobre el torneo, inscripciones y el reglamento.";
+      "¡Hola! Soy Chat IML 🤖. Estoy para ayudarte con consultas sobre el torneo, inscripciones, categorías y reglamento.";
 
     setTimeout(() => {
       setIsTyping(true);
