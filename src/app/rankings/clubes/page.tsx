@@ -66,9 +66,7 @@ const page = async () => {
 
   return (
     <Container>
-      <div className="flex flex-col gap-y-4 justify-center">
-        <Title title="Ranking de Clubes 2026" emoji="🏆" />
-      </div>
+      <Title title="Ranking de Clubes" description="Temporada 2026" />
 
       <Info
         text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026."

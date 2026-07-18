@@ -18,9 +18,9 @@ const Estadisticas = async () => {
 
   return (
     <Container>
-      <Title title="Estadísticas" description="2023 - 2026" emoji="🚀" />
+      <Title title="Estadísticas" description="Desde 2023" />
 
-      <div className="w-full p-6 rounded-xl bg-black/15">
+      <div className="w-full p-6 rounded-xl bg-black/15 mt-4">
         <div className="w-full grid grid-cols-2 items-start gap-y-2 gap-x-4">
           <div>
             <div>Temporadas</div>

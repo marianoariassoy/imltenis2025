@@ -29,7 +29,7 @@ export const metadata = {
 const page = () => {
   return (
     <Container>
-      <Title title="Reglamento Clausura 2026" emoji="🤝" description="" />
+      <Title title="Reglamento" description="Torneo Clausura 2026" />
       <Filter data={reglamento} />
       <Aviso text="Última actualización: Abril 2026" />
     </Container>

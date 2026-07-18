@@ -9,12 +9,12 @@ export const metadata = {
 const nav = [
   {
     title: "Clubes campeones",
-    description: "Ranking de copas y finales disputadas por clubes.",
+    description: "Ranking hisotórico de clubes campeones.",
     url: "/rankings/campeones",
   },
   {
     title: "Salón de la Fama",
-    description: "Ranking de jugadores con más partidos jugados.",
+    description: "Ranking de jugadores con más partidos.",
     url: "/datos-y-records/salon-de-la-fama",
   },
   {

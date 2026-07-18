@@ -11,10 +11,11 @@ export const metadata = {
 export default function ChatIMLContent() {
   return (
     <Container>
-      <div className="text-primary text-3xl text-center flex items-center w-full justify-center -mb-3">
-        <Robot />
-      </div>
-      <Title title="Chat IML" description="Impulsado por IA · Versión Beta" />
+      <Title
+        title="Chat IML"
+        icon={<Robot />}
+        description="Impulsado por IA · Versión Beta"
+      />
       <div className="w-full max-w-3xl mx-auto mt-8">
         <Chat />
       </div>

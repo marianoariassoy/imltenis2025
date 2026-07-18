@@ -18,12 +18,12 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Torneos Anteriores" emoji="👴" description="2023-2025" />
+      <Title title="Torneos Anteriores" description="Desde 2023" />
 
       <div className="flex flex-col text-center items-center font-medium">
         {data &&
           data
-            .filter((item) => item.season !== 7)
+            .filter((item) => item.season !== 8)
             .map((item) => (
               <Link
                 key={item.id}

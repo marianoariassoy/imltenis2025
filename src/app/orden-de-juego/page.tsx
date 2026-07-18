@@ -3,6 +3,7 @@ import Link from "next/link";
 import Item from "@/components/ItemSmall";
 import { Serie } from "@/types/";
 import { Container } from "@/components/Container";
+import { Calendar } from "@/lib/icons";
 
 export const metadata = {
   title: "Orden de juego",
@@ -22,7 +23,7 @@ const page = async () => {
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full fade-in flex flex-col items-center justify-center">
         <h1 className="text-3xl mb-1">🙈</h1>
         <span className="text-primary text-center font-semibold">
-          Por ahora no hay nada por jugar.
+          Por ahora no no se juega nada.
         </span>
       </div>
     );
@@ -34,7 +35,7 @@ const page = async () => {
         description={
           data.length + " series a disputar — " + data.length * 3 + " partidos"
         }
-        emoji="📅"
+        icon={<Calendar />}
       />
 
       <div className="overflow-x-auto whitespace-nowrap mt-4">

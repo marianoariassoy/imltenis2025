@@ -35,11 +35,7 @@ const page = async ({
 
   return (
     <Container>
-      <Title
-        title="Ranking de Jugadores"
-        emoji="😎"
-        description="Mito Gafas Top 50"
-      />
+      <Title title="Ranking de Jugadores" description="Mito Gafas Top 50" />
       <Filter category_slug={category_slug} />
       <Suspense fallback={<Loader />}>
         <Table category_slug={category_slug} />
