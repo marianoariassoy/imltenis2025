@@ -2,7 +2,7 @@ import Item from "./Item";
 import Whatsapp from "@/components/WhatsApp";
 import Image from "next/image";
 import { Container } from "@/components/Container";
-import ButtonIA from "@/components/ButtonIA";
+import ButtonIA from "@/components/AIIntroBubble";
 import Video from "../nosotros/video";
 import Marquee from "../nosotros/marquee";
 

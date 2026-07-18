@@ -7,7 +7,6 @@ import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
 import Link from "next/link";
 import Countdown from "@/components/Countdown";
-import ButtonIA from "@/components/ButtonIA";
 import AIIntroBubble from "@/components/AIIntroBubble";
 
 export default function Home() {
