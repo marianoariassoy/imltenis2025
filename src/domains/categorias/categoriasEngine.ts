@@ -76,5 +76,5 @@ export function buscarCategorias(mensaje: string): KnowledgeItem | null {
 
   console.log("=======================================\n");
 
-  return resultado;
+  return resultado?.item ?? null;
 }
