@@ -76,6 +76,7 @@ const KEYWORDS = {
     "empate",
     "desempate",
     "pelotas",
+    "pelotitas",
     "resultado",
     "cargar resultado",
     "lluvia",

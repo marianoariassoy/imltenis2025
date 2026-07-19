@@ -9,7 +9,8 @@
       "pelotas nuevas",
       "pelotas en buen estado",
       "quien paga las pelotas",
-      "hay que llevar pelotas"
+      "hay que llevar pelotas",
+      "que pelotitas se usan"
     ],
     "examples": [
       "¿Quién pone las pelotas?",
@@ -162,6 +163,48 @@
       "¿Cómo se suman los puntos Fair Play?",
       "¿Qué gana el equipo Fair Play?",
       "¿Qué es el tercer tiempo?"
+    ]
+  },
+  {
+    "id": "dobles_invertidos",
+    "title": "Dobles invertidos",
+    "content": "En caso de disputarse una serie con los dobles invertidos (Doble 1 vs. Doble 2 de ambos equipos), prevalecerá la designación de cancha consignada en la planilla oficial, siempre que esta haya sido completada y firmada por ambos capitanes antes del inicio de los partidos. Si no existiera dicha indicación previa, ambos partidos de dobles deberán repetirse durante la misma fase del torneo, manteniendo idéntica formación en cada pareja y en la misma sede. En caso de no cumplirse esta condición, los resultados de ambos partidos quedarán anulados.",
+    "keywords": [
+      "dobles invertidos",
+      "doble 1 vs doble 2",
+      "doble 2 vs doble 1",
+      "orden de los dobles",
+      "cancha de dobles",
+      "planilla oficial",
+      "partidos invertidos",
+      "resultado dobles invertidos"
+    ],
+    "examples": [
+      "¿Qué pasa si se juegan los dobles invertidos?",
+      "¿Cómo se resuelve un doble 1 contra doble 2?",
+      "¿Qué pasa si se equivocan los dobles?",
+      "¿Se pueden invertir los partidos de dobles?"
+    ]
+  },
+  {
+    "id": "planillas_oficiales",
+    "title": "Planillas oficiales",
+    "content": "La planilla debe ser confeccionada por el capitán del equipo local y completada junto con el equipo visitante antes del inicio de la serie. Al finalizar los partidos, debe registrar los resultados y ser firmada por ambos capitanes. La planilla será el respaldo principal ante reclamos o situaciones reglamentarias.",
+    "keywords": [
+      "planilla",
+      "planilla oficial",
+      "completar planilla",
+      "firmar planilla",
+      "resultado en planilla",
+      "reclamo",
+      "incidencia",
+      "capitan local"
+    ],
+    "examples": [
+      "¿Quién hace la planilla?",
+      "¿Cuándo se completa la planilla?",
+      "¿La planilla es obligatoria?",
+      "¿Qué pasa si hay un reclamo?"
     ]
   }
 ]

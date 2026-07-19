@@ -89,5 +89,26 @@
       "¿Cómo se arma la lista de buena fe?",
       "¿Cuántos jugadores puedo inscribir?"
     ]
+  },
+  {
+    "id": "clubes_dos_canchas",
+    "title": "Clubes con dos canchas",
+    "content": "Sí, los clubes que cuentan con únicamente dos canchas pueden participar del torneo IML Tenis. Es posible organizar las series utilizando ambas canchas, coordinando los horarios de juego según el formato de la categoría correspondiente.",
+    "keywords": [
+      "club con dos canchas",
+      "2 canchas",
+      "dos canchas",
+      "club chico",
+      "cantidad de canchas",
+      "se puede jugar con dos canchas",
+      "cuantas canchas necesito",
+      "club con pocas canchas"
+    ],
+    "examples": [
+      "¿Un club con dos canchas puede participar?",
+      "¿Se aceptan clubes con solo dos canchas?",
+      "¿Cuántas canchas necesita un club para jugar IML?",
+      "Mi club tiene dos canchas, ¿podemos inscribirnos?"
+    ]
   }
 ]
