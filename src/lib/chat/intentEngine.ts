@@ -92,6 +92,8 @@ const KEYWORDS = {
     "como funciona",
     "que pasa si",
     "se puede",
+    "demora",
+    "retraso",
   ],
 
   FAQ: ["contacto", "whatsapp", "ayuda", "coordinador", "consulta"],

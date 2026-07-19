@@ -58,7 +58,7 @@ export function buscarEnFuente(
     // KEYWORDS
     // =========================
 
-    for (const keyword of item.keywords) {
+    for (const keyword of item.keywords ?? []) {
       const key = normalizar(keyword);
 
       // coincidencia exacta
@@ -76,7 +76,7 @@ export function buscarEnFuente(
     // =========================
 
     if (item.examples) {
-      for (const example of item.examples) {
+      for (const example of item.examples ?? []) {
         const ex = normalizar(example);
 
         if (msg.includes(ex)) {
@@ -89,6 +89,8 @@ export function buscarEnFuente(
       }
     }
 
+    console.log(item.title, "->", score);
+
     if (score > mejorScore) {
       mejorScore = score;
       mejorMatch = item;
@@ -97,9 +99,12 @@ export function buscarEnFuente(
 
   // mínimo de confianza
 
-  if (!mejorMatch || mejorScore < 15) {
+  if (!mejorMatch || mejorScore < 10) {
+    console.log("Sin coincidencias suficientes. Mejor score:", mejorScore);
     return null;
   }
+
+  console.log(`Mejor coincidencia: ${mejorMatch.title} (score: ${mejorScore})`);
 
   return {
     item: mejorMatch,

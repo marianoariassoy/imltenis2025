@@ -16,6 +16,7 @@ const ChatIML = () => {
   const [typingMessage, setTypingMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
   const bottomRef = useRef<HTMLDivElement | null>(null);
+  const MAX_CHARS = 500;
 
   const scrollToBottom = () => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -174,7 +175,7 @@ const ChatIML = () => {
           <input
             value={mensaje}
             onChange={(e) => setMensaje(e.target.value)}
-            maxLength={1000}
+            maxLength={MAX_CHARS}
             placeholder="Preguntá algo"
             className="w-full bg-transparent border-none focus:outline-none focus:ring-0 placeholder:text-secondary resize-none"
             onKeyDown={(e) => {
