@@ -128,21 +128,27 @@
     ]
   },
   {
-    "id": "feriados_largos",
-    "title": "Feriados largos",
-    "content": "Durante los fines de semana largos podrán programarse fechas del torneo. La disputa de estas series será optativa para los equipos. Si un equipo no puede jugar, deberá informarlo en el grupo de WhatsApp de capitanes antes del miércoles a las 17:00 hs. para coordinar su reprogramación.",
+    "id": "fin_de_semanas_largos",
+    "title": "Fin de semanas largos",
+    "content": "Durante los fines de semana largos se programarán series de manera habitual. La disputa de estas fechas será optativa, quedando a criterio de cada equipo jugar en la fecha asignada. En caso de no poder disputar la serie, el equipo deberá comunicarlo en el grupo de WhatsApp de capitanes antes del miércoles a las 17:00 hs., para coordinar su reprogramación. Cada equipo podrá solicitar la reprogramación de una serie correspondiente a un fin de semana largo una (1) sola vez durante el torneo.",
     "keywords": [
       "fin de semana largo",
       "feriado largo",
       "feriados",
       "se juega feriado",
       "fecha feriado",
-      "partido feriado"
+      "partido feriado",
+      "reprogramar serie",
+      "reprogramar partido",
+      "pedir reprogramación",
+      "reprogramación",
+      "cancelar serie"
     ],
     "examples": [
       "¿Se juega en fin de semana largo?",
       "¿Qué pasa si no puedo jugar un feriado?",
-      "¿Hay fecha durante los feriados?"
+      "¿Hay fecha durante los feriados?",
+      "¿Puedo pedir la reprogramación de una serie en fin de semana largo?"
     ]
   },
   {
