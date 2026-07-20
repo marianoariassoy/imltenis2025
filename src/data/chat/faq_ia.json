@@ -86,12 +86,5 @@
       "donde puedo consultar",
       "necesito hablar con la organización"
     ]
-  },
-  {
-    "id": "imlweekend",
-    "title": "IML Weekend",
-    "content": "IML Weekend es el formato de torneos en el día de IML Tenis. Una modalidad muy divertida, ideal para hacer nuevos amigos y conocer a otros jugadores.",
-    "keywords": ["americanos", "weekend", "iml weekend", "torneos", "eventos"],
-    "examples": ["que es iml weekend", "cuando se juega iml weekend"]
   }
 ]

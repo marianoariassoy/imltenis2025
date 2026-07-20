@@ -95,6 +95,8 @@ const KEYWORDS = {
     "se puede",
     "demora",
     "retraso",
+    "fin de semana largo",
+    "feriados",
   ],
 
   FAQ: ["contacto", "whatsapp", "ayuda", "coordinador", "consulta"],

@@ -193,7 +193,7 @@
   {
     "id": "cantidad_clubes",
     "title": "Cantidad de clubes",
-    "content": "Actualmente participan 62 clubes en IML Tenis.",
+    "content": "Actualmente participan más de 70 clubes en IML Tenis.",
     "keywords": [
       "cuantos clubes hay",
       "clubes participantes",
@@ -208,7 +208,7 @@
   {
     "id": "cantidad_equipos",
     "title": "Cantidad de equipos",
-    "content": "Actualmente participan alrededor de 190 equipos en IML Tenis.",
+    "content": "Actualmente participan alrededor de 200 equipos en IML Tenis.",
     "keywords": [
       "cuantos equipos hay",
       "cantidad equipos iml",
@@ -375,6 +375,48 @@
       "que recibe el capitan destacado",
       "como se obtiene el descuento del proximo torneo",
       "como se suman puntos fair play?"
+    ]
+  },
+  {
+    "id": "edad_participacion",
+    "title": "Edad mínima para participar",
+    "content": "La edad mínima para participar en las categorías Libres es de 14 años. En las categorías +30 y +40, los jugadores deberán cumplir con la edad indicada por la categoría correspondiente.",
+    "keywords": [
+      "edad mínima",
+      "edad para jugar",
+      "cuántos años hay que tener",
+      "desde qué edad",
+      "puede jugar un menor",
+      "edad para participar",
+      "14 años",
+      "categorías +30",
+      "categorías +40"
+    ],
+    "examples": [
+      "¿Cuál es la edad mínima para jugar?",
+      "¿Puede jugar un chico de 14 años?",
+      "¿Desde qué edad se puede participar?",
+      "¿Qué edad hay que tener para jugar en IML Tenis?",
+      "¿Cómo funciona la edad en las categorías +30 y +40?"
+    ]
+  },
+  {
+    "id": "iml_weekend",
+    "title": "IML Weekend",
+    "content": "IML Weekend es una modalidad especial de IML Tenis que se disputa en una única jornada. Se trata de un torneo independiente del campeonato por equipos tradicional, pensado para disfrutar una jornada completa de tenis con un formato dinámico y competitivo. La organización informa las fechas y el formato de cada edición antes de su realización.",
+    "keywords": [
+      "iml weekend",
+      "weekend",
+      "torneo weekend",
+      "que es iml weekend",
+      "como funciona iml weekend",
+      "modalidad weekend"
+    ],
+    "examples": [
+      "¿Qué es IML Weekend?",
+      "¿Cómo funciona IML Weekend?",
+      "¿Cuándo se juega IML Weekend?",
+      "¿IML Weekend es otro torneo?"
     ]
   }
 ]
