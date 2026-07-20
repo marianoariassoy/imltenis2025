@@ -16,7 +16,7 @@ const Page = async () => {
   return (
     <Container>
       <div className="w-full max-w-md mx-auto flex flex-col gap-y-8">
-        <Title title="Jugadores" icon={<Search />} />
+        <Title title="Jugadores" emoji="🙋🏻" />
         <Filter data={data} />
       </div>
     </Container>

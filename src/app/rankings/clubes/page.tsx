@@ -3,6 +3,7 @@ import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import Info from "@/components/Info";
 import { Container } from "@/components/Container";
+import Marquee from "@/components/Marquee";
 
 export const metadata = {
   title: "Ranking de Clubes",
@@ -68,10 +69,7 @@ const page = async () => {
     <Container>
       <Title title="Ranking de Clubes" description="Temporada 2026" />
 
-      <Info
-        text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026."
-        color="primary"
-      />
+      <Marquee text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
 
       <div className="overflow-x-auto">
         <table className="table w-full">
