@@ -28,6 +28,8 @@ const KEYWORDS = {
     "zonas",
     "donde se juega",
     "fair play",
+    "iml weekend",
+    "weekend",
 
     // Fechas torneo
     "cuando empieza",
@@ -99,7 +101,31 @@ const KEYWORDS = {
     "feriados",
   ],
 
-  FAQ: ["contacto", "whatsapp", "ayuda", "coordinador", "consulta"],
+  FAQ: [
+    "contacto",
+    "whatsapp",
+    "ayuda",
+    "coordinador",
+    "consulta",
+
+    // Comparaciones
+    "comparacion",
+    "comparar",
+    "comparativa",
+    "mejor",
+    "peor",
+    "diferencia",
+    "diferencias",
+    "ventajas",
+    "conviene",
+    "elegir",
+
+    // Competencia
+    "citenis",
+    "intercountries",
+    "otro torneo",
+    "otros torneos",
+  ],
 };
 
 // ----------------------------

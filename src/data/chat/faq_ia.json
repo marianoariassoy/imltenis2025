@@ -86,5 +86,26 @@
       "donde puedo consultar",
       "necesito hablar con la organización"
     ]
+  },
+  {
+    "id": "comparacion_con_otros_torneos",
+    "title": "Comparación con otros torneos",
+    "content": "Cada torneo tiene su propia propuesta y sus fortalezas. En IML Tenis buscamos diferenciarnos por la organización, la comunicación constante, el desarrollo de una amplia variedad de categorías, la experiencia de los jugadores, el sistema Fair Play, los premios, los beneficios para los equipos y la mejora continua del torneo. La elección dependerá de las preferencias y necesidades de cada club y de sus jugadores.",
+    "keywords": [
+      "iml es mejor",
+      "es mejor que",
+      "comparar torneos",
+      "citenis",
+      "otro torneo",
+      "mejor torneo",
+      "por que elegir iml",
+      "conviene iml"
+    ],
+    "examples": [
+      "¿IML es mejor que Citenis?",
+      "¿Qué diferencia hay entre IML y otros torneos?",
+      "¿Por qué debería jugar IML?",
+      "¿Qué ventajas tiene IML?"
+    ]
   }
 ]
