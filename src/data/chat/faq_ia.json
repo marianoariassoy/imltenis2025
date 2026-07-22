@@ -64,8 +64,22 @@
   },
   {
     "id": "horarios_juego",
-    "pregunta": "¿Qué días se juega IML Tenis?",
-    "respuesta": "IML Tenis se juega los fines de semana. Los sábados se disputan las categorías +30 y +40 de 13:00 a 17:00 hs. Los domingos se disputan las categorías Libres de 9:00 a 17:00 hs."
+    "title": "Horarios de juego",
+    "content": "IML Tenis se juega los fines de semana. Los sábados se disputan las categorías +30 y +40 de 13:00 a 17:00 hs. Los domingos se disputan las categorías Libres de 9:00 a 17:00 hs.",
+    "keywords": [
+      "que dias se juega",
+      "horarios",
+      "cuando se juega",
+      "dias de juego",
+      "horarios torneo",
+      "sabados",
+      "domingos"
+    ],
+    "examples": [
+      "¿Qué días se juega IML Tenis?",
+      "¿Cuándo se juega el torneo?",
+      "¿Qué horarios tienen las categorías?"
+    ]
   },
   {
     "id": "contacto",

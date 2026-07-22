@@ -3,10 +3,12 @@ interface Message {
   content: string;
 }
 
-export function normalizar(texto: string) {
+export function normalizar(texto?: string) {
+  if (!texto) return "";
+
   return texto
     .toLowerCase()
-    .normalize("NFD") // elimina tildes
+    .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "");
 }
 
