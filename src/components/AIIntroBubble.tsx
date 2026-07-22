@@ -22,7 +22,7 @@ export default function AIIntroBubble() {
   }, []);
 
   return (
-    <div className="fixed bottom-40 md:bottom-32 right-4 flex items-center gap-2 z-50">
+    <div className="fixed bottom-40 md:bottom-32 right-4 flex items-center gap-2 z-30">
       <div
         className={`
           transition-all duration-700 
