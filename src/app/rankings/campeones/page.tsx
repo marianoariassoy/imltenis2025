@@ -64,41 +64,42 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Clubes Campeones" description="Desde 2023" />
-      <div className="overflow-x-auto">
-        <table className="table w-full mb-2">
-          <thead>
-            <tr>
-              {labels.map((item, index) => (
-                <th key={index}>{item.name}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item, index) => (
-              <tr
-                key={index}
-                className={`${index === 0 ? "text-primary" : ""}`}
-              >
-                <td className="w-4/5">
-                  <Item
-                    num={index + 1}
-                    image={item.image}
-                    title={item.name}
-                    link={`/clubes/${item.club_slug}`}
-                    active={index === 0 ? true : false}
-                  />
-                </td>
-                <td className="font-bold">{item.gold}</td>
-                <td>{item.silver}</td>
-                <td>{item.finals}</td>
+      <div className="w-full max-w-2xl mx-auto flex flex-col gap-4">
+        <Title title="Clubes Campeones" description="Desde 2023" />
+        <div className="overflow-x-auto">
+          <table className="table w-full mb-2">
+            <thead>
+              <tr>
+                {labels.map((item, index) => (
+                  <th key={index}>{item.name}</th>
+                ))}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {data.map((item, index) => (
+                <tr
+                  key={index}
+                  className={`${index === 0 ? "text-primary" : ""}`}
+                >
+                  <td className="w-full">
+                    <Item
+                      num={index + 1}
+                      image={item.image}
+                      title={item.name}
+                      link={`/clubes/${item.club_slug}`}
+                      active={index === 0 ? true : false}
+                    />
+                  </td>
+                  <td className="font-bold">{item.gold}</td>
+                  <td>{item.silver}</td>
+                  <td>{item.finals}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <Labels labels={labels} />
       </div>
-
-      <Labels labels={labels} />
     </Container>
   );
 };

@@ -25,7 +25,7 @@ const TitleRow = ({ image, title, link }: Item) => {
       </div>
       <Link
         href={link}
-        className="hover:text-primary pr-4 font-semibold  text-nowrap"
+        className="hover:text-primary font-semibold text-nowrap"
       >
         {title}
       </Link>

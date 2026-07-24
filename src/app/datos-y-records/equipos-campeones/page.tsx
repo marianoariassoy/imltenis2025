@@ -48,12 +48,12 @@ const page = async () => {
       <Title
         title={`Equipos campeones`}
         description={`${data.length} equipos`}
-        icon={<Star />}
+        emoji="🏆"
       />
 
-      <div className="overflow-x-auto flex flex-col md:items-center gap-y-4">
+      <div className="overflow-x-auto flex flex-col items-start gap-y-4 max-w-3xl mx-auto">
         {data.map((item, index) => (
-          <div key={index} className="flex items-center">
+          <div key={index} className="flex items-center gap-1">
             <Item
               image={item.team_image}
               title={item.team_name}
@@ -61,7 +61,7 @@ const page = async () => {
             />
             <Link
               href={`/torneos/${item.tournament_slug}`}
-              className="text-secondary hover:text-primary text-nowrap     -ml-2"
+              className="text-secondary font-medium hover:text-primary text-nowrap"
             >
               {item.tournament_name} {item.season_name}
             </Link>

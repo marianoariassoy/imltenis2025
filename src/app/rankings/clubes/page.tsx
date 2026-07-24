@@ -1,7 +1,6 @@
 import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
-import Info from "@/components/Info";
 import { Container } from "@/components/Container";
 import Marquee from "@/components/Marquee";
 
@@ -67,63 +66,65 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Ranking de Clubes" description="Temporada 2026" />
+      <div className="w-full max-w-2xl mx-auto flex flex-col gap-4">
+        <Title title="Ranking de Clubes" description="Temporada 2026" />
 
-      <Marquee text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
+        <Marquee text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
 
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              {labels.map((item, index) => (
-                <th key={index}>{item.name}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data
-              // .filter((item) => +item.matches_won > 0)
-              .map((item, index) => (
-                <tr key={index}>
-                  <td>
-                    <Item
-                      num={index + 1}
-                      image={item.image}
-                      title={item.name}
-                      link={`/clubes/${item.club_slug}`}
-                      active={index < 4 ? true : false}
-                    />
-                  </td>
-                  <td
-                    className={`font-bold ${index < 4 ? "text-primary" : ""}`}
-                  >
-                    {item.matches_won}
-                  </td>
-                  <td>{item.series_won}</td>
-                  <td>{item.series_total}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
-      </div>
-      <Labels labels={labels} />
+        <div className="overflow-x-auto">
+          <table className="table w-full">
+            <thead>
+              <tr>
+                {labels.map((item, index) => (
+                  <th key={index}>{item.name}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {data
+                .filter((item) => +item.matches_won > 0)
+                .map((item, index) => (
+                  <tr key={index}>
+                    <td className="w-full">
+                      <Item
+                        num={index + 1}
+                        image={item.image}
+                        title={item.name}
+                        link={`/clubes/${item.club_slug}`}
+                        active={index < 4 ? true : false}
+                      />
+                    </td>
+                    <td
+                      className={`font-bold ${index < 4 ? "text-primary" : ""}`}
+                    >
+                      {item.matches_won}
+                    </td>
+                    <td>{item.series_won}</td>
+                    <td>{item.series_total}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+        <Labels labels={labels} />
 
-      <div className="p-6 rounded-2xl bg-black/10">
-        <h2 className="font-bold text-primary text-center mb-4">
-          Campeones Interclubes
-        </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-center">
-          <div>
-            <h2 className="font-bold text-primary">2025</h2>
-            <span className="font-semibold">⭐️ Caza y Pesca</span>
-          </div>
-          <div>
-            <h2 className="font-bold text-primary">2024</h2>
-            <span className="font-semibold">⭐️ SAG</span>
-          </div>
-          <div>
-            <h2 className="font-bold text-primary">2023</h2>
-            <span className="font-semibold">⭐️ San Miguel</span>
+        <div className="p-6 rounded-2xl bg-black/10">
+          <h2 className="font-bold text-primary text-center mb-4">
+            Campeones Interclubes
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 text-center">
+            <div>
+              <h2 className="font-bold text-primary">2025</h2>
+              <span className="font-semibold">⭐️ Caza y Pesca</span>
+            </div>
+            <div>
+              <h2 className="font-bold text-primary">2024</h2>
+              <span className="font-semibold">⭐️ SAG</span>
+            </div>
+            <div>
+              <h2 className="font-bold text-primary">2023</h2>
+              <span className="font-semibold">⭐️ San Miguel</span>
+            </div>
           </div>
         </div>
       </div>

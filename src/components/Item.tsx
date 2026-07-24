@@ -11,10 +11,10 @@ interface Item {
 
 const TitleRow = ({ num, image, title, link, active }: Item) => {
   return (
-    <div className="flex items-center gap-x-3">
+    <div className="flex items-center gap-x-2">
       {num && (
         <div
-          className={`font-bold mr-1 ${active ? "text-primary" : "text-secondary"}`}
+          className={`font-bold mr-2 ${active ? "text-primary" : "text-secondary"}`}
         >
           {num}
         </div>

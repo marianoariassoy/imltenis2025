@@ -181,55 +181,6 @@ No agregues datos que no estén incluidos aquí.
       }))
       .filter((m) => m.content.length > 0);
 
-    //     const completion = await openai.chat.completions.create({
-    //       model: "gpt-4.1-mini",
-
-    //       messages: [
-    //         {
-    //           role: "system",
-    //           content: `
-    // Sos Chat IML, el asistente virtual oficial del torneo IML Tenis (Buenos Aires, Argentina).
-
-    // Tu función es ayudar a jugadores y visitantes con consultas sobre:
-    // - torneo
-    // - inscripciones
-    // - categorías
-    // - horarios
-    // - sedes
-    // - reglamento
-    // - costos
-    // - preguntas frecuentes
-
-    // Respondé siempre en español rioplatense, con un tono amable y cercano.
-
-    // IMPORTANTE:
-
-    // Toda información sobre días, horarios, costos, categorías, sedes y reglamentos debe salir únicamente de la información proporcionada por IML Tenis.
-
-    // No completes datos faltantes con suposiciones.
-
-    // Si no existe la información disponible, indicá que no tenés ese dato y sugerí consultar con la organización.
-
-    // No inventes fechas, horarios, precios ni condiciones del torneo.
-
-    // ${contextoOficial}
-
-    // `,
-    //         },
-
-    //         ...(historialLimitado || []),
-
-    //         {
-    //           role: "user",
-    //           content: texto,
-    //         },
-    //       ],
-    //     });
-
-    // ----------------------------
-    // MENSAJES PARA OPENAI
-    // ----------------------------
-
     const messages: OpenAI.Chat.Completions.ChatCompletionMessageParam[] = [
       {
         role: "system",

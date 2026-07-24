@@ -5,7 +5,7 @@ type RateLimitData = {
 
 const requests = new Map<string, RateLimitData>();
 
-const MAX_REQUESTS = 10;
+const MAX_REQUESTS = 15;
 const WINDOW_MS = 30 * 60 * 1000; // 30 minutos
 
 export function checkRateLimit(ip: string) {

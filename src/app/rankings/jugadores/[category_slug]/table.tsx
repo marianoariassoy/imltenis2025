@@ -83,8 +83,8 @@ const table = async ({ category_slug }: { category_slug: string }) => {
                 key={item.id}
                 className={`${index === 0 ? "text-primary" : ""}`}
               >
-                <td className="flex gap-x-3 items-center">
-                  <span className="font-medium">{index + 1}</span>
+                <td className="flex gap-x-4 items-center">
+                  <span className="font-bold">{index + 1}</span>
                   <Item
                     image={item.player_image}
                     title={item.player_name}

@@ -60,46 +60,48 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Salón de la Fama" emoji="😎" description="Desde 2023" />
+      <div className="w-full max-w-2xl mx-auto flex flex-col gap-4">
+        <Title title="Salón de la Fama" emoji="😎" description="Desde 2023" />
 
-      <div className="overflow-x-auto">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              {labels.map((item, index) => (
-                <th key={index}>{item.name}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data
-              .filter((item) => item.image !== null)
-              .map((item, index) => (
-                <tr
-                  key={index}
-                  className={`${index === 0 ? "text-primary" : ""}`}
-                >
-                  <td className="flex gap-x-3 items-center">
-                    <span className="font-medium">{index + 1}</span>
-                    <Item
-                      image={item.image}
-                      title={item.name}
-                      link={`/jugadores/${item.slug}`}
-                    />
-                  </td>
-                  <td
-                    className={`font-bold ${index < 1 ? "text-primary" : ""}`}
+        <div className="overflow-x-auto">
+          <table className="table w-full">
+            <thead>
+              <tr>
+                {labels.map((item, index) => (
+                  <th key={index}>{item.name}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {data
+                .filter((item) => item.image !== null)
+                .map((item, index) => (
+                  <tr
+                    key={index}
+                    className={`${index === 0 ? "text-primary" : ""}`}
                   >
-                    {item.matches}
-                  </td>
-                  <td>{item.teams}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+                    <td className="flex gap-x-4 items-center w-full">
+                      <span className="font-bold">{index + 1}</span>
+                      <Item
+                        image={item.image}
+                        title={item.name}
+                        link={`/jugadores/${item.slug}`}
+                      />
+                    </td>
+                    <td
+                      className={`font-bold ${index < 1 ? "text-primary" : ""}`}
+                    >
+                      {item.matches}
+                    </td>
+                    <td>{item.teams}</td>
+                  </tr>
+                ))}
+            </tbody>
+          </table>
+        </div>
+        <Labels labels={labels} />
+        <Info text="Solo se muestra jugadores con foto de perfil y al menos un partido jugado" />
       </div>
-      <Labels labels={labels} />
-      <Info text="Solo se muestra jugadores con foto de perfil y al menos un partido jugado" />
     </Container>
   );
 };
