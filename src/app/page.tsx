@@ -84,7 +84,7 @@ export default function Home() {
             </AuroraText>
           </Link>
         </div>
-        <div className="absolute w-full bottom-4 px-4">
+        <div className="absolute w-full bottom-10 px-4">
           <Countdown dates={dates} />
         </div>
       </section>
