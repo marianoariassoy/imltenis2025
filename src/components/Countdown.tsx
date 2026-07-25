@@ -1,9 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { Marquee } from "@/components/ui/marquee";
+
+type TournamentDate = {
+  title: string;
+  date: Date | string;
+};
 
 type CountdownProps = {
-  targetDate: Date | string;
+  dates: TournamentDate[];
   onComplete?: () => void;
   className?: string;
 };
@@ -38,41 +44,74 @@ function calculateTimeLeft(targetDate: Date): TimeLeft {
   };
 }
 
+function getNextDate(dates: TournamentDate[]): TournamentDate | null {
+  const now = Date.now();
+
+  return (
+    dates
+      .map((item) => ({
+        ...item,
+        date: typeof item.date === "string" ? new Date(item.date) : item.date,
+      }))
+      .sort((a, b) => a.date.getTime() - b.date.getTime())
+      .find((item) => item.date.getTime() > now) ?? null
+  );
+}
+
 export default function Countdown({
-  targetDate,
+  dates,
   onComplete,
   className = "",
 }: CountdownProps) {
-  const target =
-    typeof targetDate === "string" ? new Date(targetDate) : targetDate;
+  const [current, setCurrent] = useState<TournamentDate | null>(null);
+  const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
-  const [timeLeft, setTimeLeft] = useState(() => calculateTimeLeft(target));
+  const sortedDates = useMemo(
+    () =>
+      dates
+        .map((item) => ({
+          ...item,
+          date: typeof item.date === "string" ? new Date(item.date) : item.date,
+        }))
+        .sort((a, b) => a.date.getTime() - b.date.getTime()),
+    [dates],
+  );
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      const newTime = calculateTimeLeft(target);
+    const update = () => {
+      const next = getNextDate(sortedDates);
 
-      setTimeLeft(newTime);
-
-      if (newTime.total <= 0) {
-        clearInterval(interval);
+      if (!next) {
+        setCurrent(null);
+        setTimeLeft(null);
         onComplete?.();
+        return;
       }
-    }, 1000);
+
+      setCurrent(next);
+      setTimeLeft(calculateTimeLeft(next.date as Date));
+    };
+
+    update();
+
+    const interval = setInterval(update, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate]);
+  }, [sortedDates, onComplete]);
 
-  if (timeLeft.total <= 0) {
-    return <div className="text-center text-2xl font-bold">¡Comenzó!</div>;
+  if (!current || !timeLeft) {
+    return (
+      <div className="text-center text-2xl font-bold">
+        No hay próximas fechas
+      </div>
+    );
   }
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="flex items-center justify-center w-10 text-3xl font-bold text-primary">
+      <div className="flex items-center justify-center w-10 md:w-12 text-3xl md:text-3xl font-semibold text-primary">
         {value.toString().padStart(2, "0")}
       </div>
-
       <span className="text-sm font-medium uppercase tracking-wide text-secondary">
         {label}
       </span>
@@ -80,11 +119,22 @@ export default function Countdown({
   );
 
   return (
-    <div className={`flex flex-wrap justify-center gap-4 ${className}`}>
-      <Item value={timeLeft.days} label="D" />
-      <Item value={timeLeft.hours} label="H" />
-      <Item value={timeLeft.minutes} label="M" />
-      <Item value={timeLeft.seconds} label="S" />
+    <div className="w-full max-w-86 md:max-w-130 mx-auto px-4">
+      <Marquee className="text-lg font-semibold text-secondary">
+        Próxima fecha: {current.title} —{" "}
+        {current.date.toLocaleString("es-AR", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}{" "}
+        —
+      </Marquee>
+      <div className="flex flex-wrap justify-center gap-4">
+        <Item value={timeLeft.days} label="D" />
+        <Item value={timeLeft.hours} label="H" />
+        <Item value={timeLeft.minutes} label="M" />
+        <Item value={timeLeft.seconds} label="S" />
+      </div>
     </div>
   );
 }

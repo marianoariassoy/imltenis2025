@@ -3,6 +3,7 @@ import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import { Container } from "@/components/Container";
 import Marquee from "@/components/Marquee";
+import Error from "@/components/Error";
 
 export const metadata = {
   title: "Ranking de Clubes",
@@ -36,14 +37,18 @@ interface data {
 }
 
 const page = async () => {
+  let data: data[];
+
   const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes",
+    `${process.env.NEXT_PUBLIC_API_URL}/rankings/clubes`,
     {
       cache: "no-store",
     },
   );
-  const data = (await response.json()) as data[];
-  if (!data) return;
+
+  data = await response.json();
+
+  if (!data) return null;
 
   const labels = [
     {
@@ -66,10 +71,12 @@ const page = async () => {
 
   return (
     <Container>
-      <div className="w-full max-w-2xl mx-auto flex flex-col gap-4">
+      <div className="w-full max-w-3xl mx-auto flex flex-col gap-4">
         <Title title="Ranking de Clubes" description="Temporada 2026" />
 
-        <Marquee text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
+        <div className="px-4 py-2 rounded-lg border border-secondary">
+          <Marquee text="Los cuatro (4) clubes mejor ubicados competirán en las finales de interclubes al cierre de la temporada 2026." />
+        </div>
 
         <div className="overflow-x-auto">
           <table className="table w-full">
@@ -85,7 +92,7 @@ const page = async () => {
                 .filter((item) => +item.matches_won > 0)
                 .map((item, index) => (
                   <tr key={index}>
-                    <td className="w-full">
+                    <td>
                       <Item
                         num={index + 1}
                         image={item.image}

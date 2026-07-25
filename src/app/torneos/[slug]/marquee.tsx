@@ -11,7 +11,11 @@ const MarqueeComponent = async ({
   const data = await response.json();
   if (!data) return null;
 
-  return <Marquee text={data.text} />;
+  return (
+    <div className="-mt-4 -mb-2">
+      <Marquee text={data.text} />
+    </div>
+  );
 };
 
 export default MarqueeComponent;

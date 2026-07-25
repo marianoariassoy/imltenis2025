@@ -19,6 +19,65 @@ export default function Home() {
     }
   }, []);
 
+  const dates = [
+    {
+      title: "Fecha 1 ",
+      date: "2026-08-15T13:00:00",
+    },
+    {
+      title: "Fecha 2",
+      date: "2026-08-22T13:00:00",
+    },
+    {
+      title: "Fecha 3",
+      date: "2026-08-29T13:00:00",
+    },
+    {
+      title: "Fecha 4",
+      date: "2026-09-05T13:00:00",
+    },
+    {
+      title: "Fecha 5",
+      date: "2026-09-12T13:00:00",
+    },
+    {
+      title: "Fecha 6",
+      date: "2026-09-19T13:00:00",
+    },
+    {
+      title: "Fecha 7",
+      date: "2026-09-26T13:00:00",
+    },
+    {
+      title: "Fecha 8",
+      date: "2026-10-03T13:00:00",
+    },
+    {
+      title: "Fecha 9",
+      date: "2026-10-10T13:00:00",
+    },
+    {
+      title: "Fecha 10",
+      date: "2026-10-17T13:00:00",
+    },
+    {
+      title: "Fecha 11",
+      date: "2026-10-24T13:00:00",
+    },
+    {
+      title: "Fecha 12",
+      date: "2026-10-31T13:00:00",
+    },
+    {
+      title: "Fecha 13",
+      date: "2026-11-07T13:00:00",
+    },
+    {
+      title: "Fecha 14",
+      date: "2026-11-14T13:00:00",
+    },
+  ];
+
   return (
     <>
       <Whatsapp />
@@ -30,7 +89,7 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 text-center flex flex-col -translate-x-1/2 -translate-y-1/2 px-4 z-20 opacity-0 fade-in delay-100 items-center">
           <Link
             href="/presentacion"
-            className="text-[3.2rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
+            className="text-[3.4rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
             // onClick={() => setOpen(!open)}
           >
             <AuroraText colors={["#7d37ff", "#fe514e"]}>
@@ -41,9 +100,7 @@ export default function Home() {
             </AuroraText>
           </Link>
 
-          <div className="mt-4">
-            <Countdown targetDate="2026-08-15T09:00:00" />
-          </div>
+          <Countdown dates={dates} />
         </div>
 
         <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden blur-sm">

@@ -31,7 +31,11 @@ const MarqueeComponent = async () => {
     data.followers +
     " -";
 
-  return <Marquee text={text} />;
+  return (
+    <div className="-mt-4 -mb-2">
+      <Marquee text={text} />
+    </div>
+  );
 };
 
 export default MarqueeComponent;
