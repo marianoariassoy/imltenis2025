@@ -203,7 +203,7 @@ export const Veinteventiseis = () => {
   return (
     <svg
       viewBox="0 0 1039 389"
-      height="1em"
+      height="0.9em"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
     >
