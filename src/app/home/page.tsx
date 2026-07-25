@@ -3,10 +3,10 @@ import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
 import Link from "next/link";
-import Countdown from "./home/Countdown";
+import Countdown from "./Countdown";
 import AIIntroBubble from "@/components/AIIntroBubble";
-// import Clubes from "./home/Clubes";
-import Video from "./home/Video";
+import Clubes from "./Clubes";
+import Video from "./Video";
 
 export default function Home() {
   const dates = [
@@ -84,14 +84,14 @@ export default function Home() {
             </AuroraText>
           </Link>
         </div>
-        <div className="absolute w-full bottom-4 px-4">
+        <div className="absolute w-full bottom-6 px-4">
           <Countdown dates={dates} />
         </div>
       </section>
 
-      {/* <section>
+      <section>
         <Clubes />
-      </section> */}
+      </section>
 
       <AIIntroBubble />
       <Whatsapp />

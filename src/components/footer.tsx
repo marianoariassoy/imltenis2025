@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`flex z-30 w-full flex-col p-4 text-secondary ${home ? "absolute bottom-0" : "mt-8"}`}
+      className="flex z-30 w-full mt-8 flex-col p-4 text-secondary"
       id="footer"
     >
       <div className="text-center flex flex-col">

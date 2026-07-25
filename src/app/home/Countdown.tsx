@@ -115,17 +115,32 @@ export default function Countdown({
   );
 
   return (
-    <div className="w-full px-4 md:px-16 fade-in">
-      <Marquee className="text-lg font-medium text-secondary">
-        Próxima fecha — {current.title} —{" "}
-        {current.date.toLocaleString("es-AR", {
-          weekday: "long",
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        })}{" "}
-        —
-      </Marquee>
+    <div className="w-full px-4 md:px-16 fade-in text-center">
+      <h2 className="font-medium text-lg mb-1 text-secondary">
+        <span className="hidden md:block">
+          {(() => {
+            const date = current.date.toLocaleString("es-AR", {
+              weekday: "long",
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            });
+            return date.charAt(0).toUpperCase() + date.slice(1);
+          })()}{" "}
+          — {""} {current.title}
+        </span>
+        <span className="md:hidden">
+          {(() => {
+            const date = current.date.toLocaleString("es-AR", {
+              weekday: "long",
+              month: "long",
+              day: "numeric",
+            });
+            return date.charAt(0).toUpperCase() + date.slice(1);
+          })()}{" "}
+          — {""} {current.title}
+        </span>
+      </h2>
       <div className="flex flex-wrap justify-center gap-4">
         <Item value={timeLeft.days} label="D" />
         <Item value={timeLeft.hours} label="H" />
