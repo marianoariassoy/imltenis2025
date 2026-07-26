@@ -66,7 +66,7 @@ export const tournaments = [
     ],
   },
   {
-    name: "Mixto",
+    name: "Mixtos",
     categories: [
       {
         name: "Mixto Libre ",

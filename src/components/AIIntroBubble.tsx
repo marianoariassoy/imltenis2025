@@ -22,7 +22,7 @@ export default function AIIntroBubble() {
   }, []);
 
   return (
-    <div className="fixed bottom-50 md:bottom-26 right-4 flex items-center gap-2 z-30">
+    <div className="fixed bottom-26 md:bottom-28 right-4 flex items-center gap-2 z-30">
       <div
         className={`
           transition-all duration-700 
@@ -42,19 +42,14 @@ export default function AIIntroBubble() {
         "
         >
           <span>
-            <b>Consulta con nuestra IA </b>
+            <b>Consulta con nuestra IA 🤖</b>
           </span>
-          <span>Estamos para ayudarte 🤖</span>
         </div>
       </div>
 
       <Link
         href="/chatiml"
-        className="
-        shrink-0
-          relative
-         w-15 
-         h-15
+        className="shrink-0 relative  w-13 h-13 md:w-15 md:h-15
           rounded-full
           bg-background/80
           flex
