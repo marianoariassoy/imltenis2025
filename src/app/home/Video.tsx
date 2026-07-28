@@ -11,7 +11,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="fade-in absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden blur-sm">
+    <div className="fade-in absolute h-screen w-full left-0 top-0 -z-10 overflow-hidden blur-sm">
       <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-20"></div>
       <video
         ref={videoRef}

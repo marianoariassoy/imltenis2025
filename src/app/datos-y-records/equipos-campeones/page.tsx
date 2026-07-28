@@ -48,7 +48,6 @@ const page = async () => {
       <Title
         title={`Equipos campeones`}
         description={`${data.length} equipos`}
-        emoji="🏆"
       />
 
       <div className="overflow-x-auto flex flex-col items-start gap-y-4 max-w-3xl mx-auto">

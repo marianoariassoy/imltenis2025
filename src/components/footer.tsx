@@ -1,24 +1,12 @@
 "use client";
-import { useState, useEffect } from "react";
 import { WhatsApp } from "@/lib/icons";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const Footer = () => {
-  const pathname = usePathname();
-  const [home, setHome] = useState(false);
-
-  useEffect(() => {
-    setHome(pathname === "/");
-  }, [pathname]);
-
   const year = new Date().getFullYear();
 
   return (
-    <footer
-      className="flex z-30 w-full mt-8 flex-col p-4 text-secondary"
-      id="footer"
-    >
+    <footer className="flex flex-col p-4 text-secondary mt-8 ">
       <div className="text-center flex flex-col">
         <span className="font-semibold">Interclubes IML Tenis</span>
         <div className="flex items-center flex-wrap justify-center gap-x-1 ">

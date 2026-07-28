@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
-import { MenuProvider } from "@/context/menu-context";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -57,14 +56,12 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="theme-color" content="#222222" />
       </head>
-      <body className="bg-background text-foreground min-h-screen flex flex-col ">
-        <MenuProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </MenuProvider>
+      <body className="bg-background text-foreground min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
         <AnalyticsProvider />
-        <div className="fixed bottom-0 left-0 w-full h-full -z-20">
+        <div className="fixed bottom-0 left-0 w-screen h-full -z-20">
           <svg
             className="hidden md:block"
             viewBox="0 0 1920 1080"

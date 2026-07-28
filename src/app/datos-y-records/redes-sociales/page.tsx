@@ -49,14 +49,14 @@ const page = async () => {
 
   return (
     <Container>
-      <div className="flex flex-col gap-y-2 items-center">
+      <div className="flex flex-col gap-y-2 items-center ">
         <span className="text-primary">
           <Instagram />
         </span>
         <Title title="Cuentas oficiales" />
       </div>
 
-      <div className="w-full md:w-auto mx-auto mt-4">
+      <div className="w-full md:w-auto mx-auto mt-6">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-6">
           {data.map((item, index) => (
             <article className="flex items-center gap-x-3" key={index}>

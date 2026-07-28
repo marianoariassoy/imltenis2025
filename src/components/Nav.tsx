@@ -3,10 +3,14 @@ import { useState } from "react";
 import { tournaments, menu, extra } from "@/lib/data";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useMenu } from "@/context/menu-context";
 
-const Menu = () => {
-  const { open, setOpen } = useMenu();
+const Menu = ({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const pathname = usePathname();
   const [category, setCategory] = useState("");
 

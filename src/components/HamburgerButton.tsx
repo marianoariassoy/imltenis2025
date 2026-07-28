@@ -1,8 +1,10 @@
-import { useMenu } from "@/context/menu-context";
-
-export default function HamburgerButton() {
-  const { open, setOpen } = useMenu();
-
+export default function HamburgerButton({
+  open,
+  setOpen,
+}: {
+  open: boolean;
+  setOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
     <button
       onClick={() => setOpen(!open)}

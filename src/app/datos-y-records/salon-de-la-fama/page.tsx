@@ -1,5 +1,5 @@
 import Title from "@/components/Title";
-import Item from "@/components/ItemPlayer";
+import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import Info from "@/components/Aviso";
 import { Container } from "@/components/Container";
@@ -45,7 +45,7 @@ const page = async () => {
 
   const labels = [
     {
-      name: "Nombre",
+      name: "Jugador",
       value: "",
     },
     {
@@ -60,48 +60,47 @@ const page = async () => {
 
   return (
     <Container>
-      <div className="w-full max-w-2xl mx-auto flex flex-col gap-4">
-        <Title title="Salón de la Fama" emoji="😎" description="Desde 2023" />
+      <Title title="Salón de la Fama" emoji="😎" />
 
-        <div className="overflow-x-auto">
-          <table className="table w-full">
-            <thead>
-              <tr>
-                {labels.map((item, index) => (
-                  <th key={index}>{item.name}</th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {data
-                .filter((item) => item.image !== null)
-                .map((item, index) => (
-                  <tr
-                    key={index}
-                    className={`${index === 0 ? "text-primary" : ""}`}
+      <div className="overflow-x-auto mt-2">
+        <table className="table w-full">
+          <thead>
+            <tr>
+              {labels.map((item, index) => (
+                <th key={index}>{item.name}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {data
+              .filter((item) => item.image !== null)
+              .map((item, index) => (
+                <tr
+                  key={index}
+                  className={`${index === 0 ? "text-primary" : ""}`}
+                >
+                  <td className="flex gap-x-4 items-center w-full">
+                    <span className="font-bold">{index + 1}</span>
+                    <Item
+                      image={item.image}
+                      title={item.name}
+                      link={`/jugadores/${item.slug}`}
+                      active={index === 0 ? true : false}
+                    />
+                  </td>
+                  <td
+                    className={`font-bold ${index < 1 ? "text-primary" : ""}`}
                   >
-                    <td className="flex gap-x-4 items-center w-full">
-                      <span className="font-bold">{index + 1}</span>
-                      <Item
-                        image={item.image}
-                        title={item.name}
-                        link={`/jugadores/${item.slug}`}
-                      />
-                    </td>
-                    <td
-                      className={`font-bold ${index < 1 ? "text-primary" : ""}`}
-                    >
-                      {item.matches}
-                    </td>
-                    <td>{item.teams}</td>
-                  </tr>
-                ))}
-            </tbody>
-          </table>
-        </div>
-        <Labels labels={labels} />
-        <Info text="Solo se muestra jugadores con foto de perfil y al menos un partido jugado" />
+                    {item.matches}
+                  </td>
+                  <td>{item.teams}</td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
       </div>
+      <Labels labels={labels} />
+      <Info text="Solo se muestra jugadores con foto de perfil y al menos un partido jugado" />
     </Container>
   );
 };

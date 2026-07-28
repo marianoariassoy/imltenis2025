@@ -12,6 +12,7 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isHome, setIsHome] = useState(true);
   const [showTopButton, setShowTopButton] = useState(false);
+  const [penMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
     if (pathname === "/") {
@@ -51,7 +52,7 @@ const Header = () => {
         className={`fixed top-0 flex w-full items-center text-secondary gap-x-4 px-4 z-50 from-background via-background/70 to-transparent transition-all bg-linear-to-b py-4`}
       >
         <div className="flex-1 z-40">
-          <HamburgerButton />
+          <HamburgerButton open={penMenu} setOpen={setOpenMenu} />
         </div>
         <div
           className={`text-primary flex justify-center transition-all z-50 ${scrolled ? "text-[0.7rem]" : ""}`}
@@ -76,7 +77,7 @@ const Header = () => {
           </a>
         </div>
       </header>
-      <Nav />
+      <Nav open={penMenu} setOpen={setOpenMenu} />
 
       <GoToTop showTopButton={showTopButton} scrollToTop={scrollToTop} />
     </>
