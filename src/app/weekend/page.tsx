@@ -26,7 +26,7 @@ const page = async () => {
     <Container>
       <Title title="IML Weekend" />
 
-      <div className="flex flex-col gap-y-3 items-center mt-8">
+      <div className="flex flex-col gap-y-3 items-center mt-4">
         {data.map((item) => (
           <Link
             href={`/weekend/${item.id}`}

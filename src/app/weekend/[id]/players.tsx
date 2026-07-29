@@ -38,7 +38,7 @@ const Item = ({ item }: { item: Props }) => {
         </Link>
       </article>
       <article className="flex items-center gap-x-2">
-        <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10 dark:bg-black/10">
+        <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10">
           {item.player2_image ? (
             <Link
               href={`/jugadores/${item.player2_id}`}

@@ -46,11 +46,15 @@ const tabla = async ({ group }: { group: Group }) => {
       name: "PJ",
       value: "Partidos jugados",
     },
+    {
+      name: "PR",
+      value: "Promedio (porcentaje)",
+    },
   ];
 
   return (
     <section className="flex flex-col gap-y-3">
-      <div className="overflow-x-auto text-sm whitespace-nowrap">
+      <div className="overflow-x-auto whitespace-nowrap">
         <table className="table w-full mb-3">
           <thead>
             <tr>
@@ -65,8 +69,8 @@ const tabla = async ({ group }: { group: Group }) => {
                 key={item.id}
                 className={`${index < group.winners ? "text-primary" : ""}`}
               >
-                <td className="flex gap-x-3 items-center">
-                  <span className="font-medium"> {index + 1}.</span>
+                <td className="flex gap-x-4 items-center">
+                  <span className="font-bold"> {index + 1}</span>
                   <Players item={item} />
                 </td>
                 <td>
@@ -74,7 +78,14 @@ const tabla = async ({ group }: { group: Group }) => {
                 </td>
                 <td>{item.sets}</td>
                 <td>{item.games}</td>
-                <td>{item.matches}</td>
+                <td>
+                  <span className="text-secondary">{item.matches}</span>
+                </td>
+                <td>
+                  <span className="text-secondary">
+                    {((item.matches_won / item.matches) * 100).toFixed(0)}
+                  </span>
+                </td>
               </tr>
             ))}
           </tbody>

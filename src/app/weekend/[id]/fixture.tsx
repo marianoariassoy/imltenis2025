@@ -36,14 +36,12 @@ const fixture = async ({
   if (!data) return null;
 
   return (
-    <section className="fade-in flex flex-col gap-y-6">
+    <section className="fade-in flex flex-col gap-y-4">
       {type !== 2 && (
-        <h1 className="font-semibold text-primary text-center text-lg">
-          Orden de juego
-        </h1>
+        <h1 className="font-bold text-primary text-center">Orden de juego</h1>
       )}
 
-      <div className="w-full overflow-x-auto mt-3 flex flex-col mb-3 gap-y-3">
+      <div className="w-full overflow-x-auto my-2 flex flex-col gap-y-2">
         {data.map((item) => (
           <div key={item.id} className="flex justify-between items-start">
             <div
