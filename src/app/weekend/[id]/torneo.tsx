@@ -21,7 +21,7 @@ const table = async ({
         {data
           .filter((item) => item.type === 2)
           .map((item) => (
-            <div className="flex flex-col gap-y-2" key={item.id}>
+            <div className="flex flex-col gap-y-2 md:gap-y-4" key={item.id}>
               <h1 className="font-bold text-primary text-center">
                 {item.title}
               </h1>
@@ -34,7 +34,7 @@ const table = async ({
         {data
           .filter((item) => item.type === 1)
           .map((item, index) => (
-            <div key={index} className="flex flex-col gap-y-4 mb-4">
+            <div key={index} className="flex flex-col gap-y-2 md:gap-y-4 ">
               <h1 className="font-bold text-primary text-center">
                 {item.title}
               </h1>
