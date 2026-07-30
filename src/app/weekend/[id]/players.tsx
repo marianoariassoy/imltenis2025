@@ -4,6 +4,8 @@ import Image from "next/image";
 interface Props {
   player1_id: string;
   player2_id: string;
+  player1_slug: string;
+  player2_slug: string;
   player1_name: string;
   player2_name: string;
   player1_image: string;
@@ -17,7 +19,7 @@ const Item = ({ item }: { item: Props }) => {
         <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10">
           {item.player1_image ? (
             <Link
-              href={`/jugadores/${item.player1_id}`}
+              href={`/jugadores/${item.player1_slug}`}
               className="hover:opacity-70"
             >
               <Image
@@ -31,7 +33,7 @@ const Item = ({ item }: { item: Props }) => {
           ) : null}
         </div>
         <Link
-          href={`/jugadores/${item.player1_id}`}
+          href={`/jugadores/${item.player1_slug}`}
           className="hover:text-primary font-medium"
         >
           {item.player1_name}
@@ -41,7 +43,7 @@ const Item = ({ item }: { item: Props }) => {
         <div className="w-12 h-12 rounded-full overflow-hidden bg-white/10">
           {item.player2_image ? (
             <Link
-              href={`/jugadores/${item.player2_id}`}
+              href={`/jugadores/${item.player2_slug}`}
               className=" hover:opacity-70"
             >
               <Image
@@ -55,7 +57,7 @@ const Item = ({ item }: { item: Props }) => {
           ) : null}
         </div>
         <Link
-          href={`/jugadores/${item.player2_id}`}
+          href={`/jugadores/${item.player2_slug}`}
           className="hover:text-primary font-medium"
         >
           {item.player2_name}

@@ -11,7 +11,9 @@ interface Props {
   games: number;
   matches: number;
   player1_id: string;
+  player1_slug: string;
   player2_id: string;
+  player2_slug: string;
   player1_name: string;
   player2_name: string;
   player1_image: string;
@@ -83,7 +85,9 @@ const tabla = async ({ group }: { group: Group }) => {
                 </td>
                 <td>
                   <span className="text-secondary">
-                    {((item.matches_won / item.matches) * 100).toFixed(0)}
+                    {item.matches > 0
+                      ? ((item.matches_won / item.matches) * 100).toFixed(0)
+                      : 0}
                   </span>
                 </td>
               </tr>

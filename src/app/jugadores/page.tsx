@@ -1,7 +1,6 @@
 import Title from "@/components/Title";
 import Filter from "./Filter";
 import { Container } from "@/components/Container";
-import { Search } from "@/lib/icons";
 
 export const metadata = {
   title: "Jugadores",
@@ -15,7 +14,7 @@ const Page = async () => {
 
   return (
     <Container>
-      <div className="w-full max-w-md mx-auto flex flex-col gap-y-8">
+      <div className="w-full max-w-md mx-auto flex flex-col gap-y-6">
         <Title title="Jugadores" emoji="🙋🏻" />
         <Filter data={data} />
       </div>

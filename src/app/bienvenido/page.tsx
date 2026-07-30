@@ -15,7 +15,6 @@ const Page = () => {
         emoji="🚀"
         description="Completá el formulario con tus datos y se parte del interclubes."
       />
-
       <Form />
     </Container>
   );
