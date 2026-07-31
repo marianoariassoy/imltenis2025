@@ -34,7 +34,7 @@ const tabla = async ({ group }: { group: Group }) => {
     },
     {
       name: "Pts.",
-      value: "Encuenstros ganados",
+      value: "Partidos ganados",
     },
     {
       name: "DS",

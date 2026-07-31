@@ -4,6 +4,8 @@ import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "IML Weekend",
+  description:
+    "IML Weekend es una modalidad especial de IML Tenis que se disputa en una única jornada. Se trata de un torneo independiente del campeonato por equipos tradicional, pensado para disfrutar una jornada completa de tenis con un formato dinámico y competitivo. ",
 };
 
 interface Props {
