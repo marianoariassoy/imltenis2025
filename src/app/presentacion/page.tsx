@@ -16,8 +16,8 @@ Además, el equipo deberá disponer de 3 canchas de tenis de la misma superficie
     },
     {
       title: "📅 Fechas",
-      text: `Inicio del torneo: <strong>15 y 16 de Agosto.</strong><br />
-Cierre de Inscripción: <strong>1 de Agosto.</strong>`,
+      text: `Inicio del torneo: <strong>22 y 23 de Agosto.</strong><br />
+Cierre de Inscripción: <strong>8 de Agosto.</strong>`,
     },
     {
       title: "🔥 ¿Cómo es el formato de juego y del torneo?",

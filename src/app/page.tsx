@@ -11,59 +11,55 @@ import Video from "./home/Video";
 export default function Home() {
   const dates = [
     {
-      title: "Fecha 1 ",
-      date: "2026-08-15T13:00:00",
-    },
-    {
-      title: "Fecha 2",
+      title: "Fecha 1",
       date: "2026-08-22T13:00:00",
     },
     {
-      title: "Fecha 3",
+      title: "Fecha 2",
       date: "2026-08-29T13:00:00",
     },
     {
-      title: "Fecha 4",
+      title: "Fecha 3",
       date: "2026-09-05T13:00:00",
     },
     {
-      title: "Fecha 5",
+      title: "Fecha 4",
       date: "2026-09-12T13:00:00",
     },
     {
-      title: "Fecha 6",
+      title: "Fecha 5",
       date: "2026-09-19T13:00:00",
     },
     {
-      title: "Fecha 7",
+      title: "Fecha 6",
       date: "2026-09-26T13:00:00",
     },
     {
-      title: "Fecha 8",
+      title: "Fecha 7",
       date: "2026-10-03T13:00:00",
     },
     {
-      title: "Fecha 9",
+      title: "Fecha 8",
       date: "2026-10-10T13:00:00",
     },
     {
-      title: "Fecha 10",
+      title: "Fecha 9",
       date: "2026-10-17T13:00:00",
     },
     {
-      title: "Fecha 11",
+      title: "Fecha 10",
       date: "2026-10-24T13:00:00",
     },
     {
-      title: "Fecha 12",
+      title: "Fecha 11",
       date: "2026-10-31T13:00:00",
     },
     {
-      title: "Fecha 13",
+      title: "Fecha 12",
       date: "2026-11-07T13:00:00",
     },
     {
-      title: "Fecha 14",
+      title: "Fecha 13",
       date: "2026-11-14T13:00:00",
     },
   ];
