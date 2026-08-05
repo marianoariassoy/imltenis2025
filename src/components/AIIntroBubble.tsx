@@ -41,9 +41,7 @@ export default function AIIntroBubble() {
           text-sm
         "
         >
-          <span>
-            <b>Consulta con nuestra IA 🤖</b>
-          </span>
+          <span className="text-medium">Consulta con nuestra IA 🤖</span>
         </div>
       </div>
 

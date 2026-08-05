@@ -179,9 +179,6 @@
       "dobles invertidos",
       "doble 1 vs doble 2",
       "doble 2 vs doble 1",
-      "orden de los dobles",
-      "cancha de dobles",
-      "planilla oficial",
       "partidos invertidos",
       "resultado dobles invertidos"
     ],
@@ -211,6 +208,32 @@
       "¿Cuándo se completa la planilla?",
       "¿La planilla es obligatoria?",
       "¿Qué pasa si hay un reclamo?"
+    ]
+  },
+  {
+    "id": "formacion_dobles",
+    "title": "Formación de los dobles",
+    "content": "Al conformar los dobles de una serie, el jugador con mejor ranking entre los cuatro convocados debe integrar obligatoriamente el Doble 1. Los demás jugadores pueden distribuirse libremente para completar las parejas, siempre respetando esta condición.",
+    "keywords": [
+      "formacion",
+      "formacion dobles",
+      "dobles",
+      "doble 1",
+      "doble 2",
+      "parejas",
+      "ranking",
+      "mejor ranking",
+      "mejor jugador",
+      "armar dobles",
+      "como formar los dobles",
+      "orden de los dobles"
+    ],
+    "examples": [
+      "¿Cómo se forman los dobles?",
+      "¿El mejor jugador puede jugar el Doble 2?",
+      "¿Quién debe jugar el Doble 1?",
+      "¿Cómo se arman las parejas?",
+      "¿Hay un orden para los dobles?"
     ]
   }
 ]

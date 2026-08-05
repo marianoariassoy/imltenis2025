@@ -30,6 +30,7 @@ const KEYWORDS = {
     "fair play",
     "iml weekend",
     "weekend",
+    "modalidad",
 
     // Fechas torneo
     "cuando empieza",
@@ -99,6 +100,8 @@ const KEYWORDS = {
     "retraso",
     "fin de semana largo",
     "feriados",
+    "armado de dobles",
+    "como van los dobles",
   ],
 
   FAQ: [
