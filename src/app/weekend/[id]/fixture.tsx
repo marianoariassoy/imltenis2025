@@ -41,7 +41,7 @@ const fixture = async ({
         <h1 className="font-bold text-primary text-center">Orden de juego</h1>
       )}
 
-      <div className="w-full overflow-x-auto my-2 flex flex-col gap-y-2">
+      <div className="w-full overflow-x-auto my-2 flex flex-col gap-y-2 whitespace-nowrap">
         {data.map((item) => (
           <div key={item.id} className="flex justify-between items-start">
             <div
