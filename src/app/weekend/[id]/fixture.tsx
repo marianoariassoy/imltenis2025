@@ -10,6 +10,10 @@ interface Props {
   player2_name: string;
   player3_name: string;
   player4_name: string;
+  player1_slug: string;
+  player2_slug: string;
+  player3_slug: string;
+  player4_slug: string;
   winner: string;
   set1home: string;
   set1away: string;
@@ -52,8 +56,8 @@ const fixture = async ({
               {item.num ? <span className="font-medium">{item.num}.</span> : ""}
 
               <Item
-                player1_id={item.player1_id}
-                player2_id={item.player2_id}
+                player1_slug={item.player1_slug}
+                player2_slug={item.player2_slug}
                 player1_name={item.player1_name}
                 player2_name={item.player2_name}
               />
@@ -75,8 +79,8 @@ const fixture = async ({
               }`}
             >
               <Item
-                player1_id={item.player3_id}
-                player2_id={item.player4_id}
+                player1_slug={item.player3_slug}
+                player2_slug={item.player4_slug}
                 player1_name={item.player3_name}
                 player2_name={item.player4_name}
               />
