@@ -8,13 +8,13 @@ import { Container } from "@/components/Container";
 
 export const metadata = {
   title: "Reglamento IML Tenis",
-  description: "Reglamento IML Tenis Clausura 2025",
+  description: "Reglamento IML Tenis",
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: "https://imltenis.com.ar/rankings/campeones",
     title: "Reglamento IML Tenis",
-    description: "Reglamento IML Tenis Clausura 2025",
+    description: "Reglamento del torneo interclubes IML Tenis",
     images: [
       {
         url: "https://imltenis.com.ar/assets/imltenis.jpg",
@@ -31,7 +31,7 @@ const page = () => {
     <Container>
       <Title title="Reglamento" description="Torneo Clausura 2026" />
       <Filter data={reglamento} />
-      <Aviso text="Última actualización: Abril 2026" />
+      <Aviso text="Última actualización: Agosto 2026" />
     </Container>
   );
 };
