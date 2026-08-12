@@ -100,7 +100,7 @@ const Tabla = async ({
                         .fill(0)
                         .map((_, index) => (
                           <span key={index}>
-                            <span className="text-white/10 dark:text-black/10">
+                            <span className="text-white/10">
                               <Bull />
                             </span>
                           </span>
@@ -114,7 +114,9 @@ const Tabla = async ({
         </table>
       </div>
 
-      <LabelsBulls label1="Series Ganadas" label2="Series Perdidas" />
+      {!twoMatches && (
+        <LabelsBulls label1="Series Ganadas" label2="Series Perdidas" />
+      )}
     </section>
   );
 };
