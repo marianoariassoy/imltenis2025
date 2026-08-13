@@ -37,12 +37,9 @@ const nav = [
 const page = () => {
   return (
     <Container>
-      <Title
-        title="Datos y Records"
-        description="Información que no sabias que necesitabas"
-      />
+      <Title title="Datos y Records" />
 
-      <div className="flex flex-col gap-y-4 items-center text-center">
+      <div className="flex flex-col gap-y-4 items-center text-center mt-4">
         {nav.map((item, index) => (
           <Link
             key={index}

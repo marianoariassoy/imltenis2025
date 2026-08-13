@@ -83,12 +83,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                     <div className="flex gap-x-2 items-center">
                       {item.winner || item.status === 2 ? <Bull /> : null}
                       <span className="font-semibold">{item.date}</span>
-                      {item.hour && (
-                        <div>
-                          {item.hour}{" "}
-                          <span className="hidden md:inline">hs.</span>
-                        </div>
-                      )}
+                      {item.hour} {item.hour != "-" && <span>hs.</span>}
                     </div>
                   </td>
                   <td className="w-[34%]">
