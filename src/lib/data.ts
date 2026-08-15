@@ -4,7 +4,7 @@ export const tournaments = [
     categories: [
       {
         name: "Intermedia +30",
-        url: "/torneos/damas-intermedia-30-apertura-2026",
+        url: "/torneos/damas-intermedia-30-clausura-2026",
       },
       {
         name: "Tercera Libre",
@@ -12,7 +12,7 @@ export const tournaments = [
       },
       {
         name: "Tercera +40",
-        url: "/torneos/damas-tercera-40-apertura-2026",
+        url: "/torneos/damas-tercera-40-clausura-2026",
       },
       {
         name: "Cuarta Libre",
@@ -20,7 +20,7 @@ export const tournaments = [
       },
       {
         name: "Cuarta +40",
-        url: "/torneos/damas-cuarta-40-apertura-2026",
+        url: "/torneos/damas-cuarta-40-clausura-2026",
       },
       {
         name: "Quinta Libre",
@@ -40,8 +40,12 @@ export const tournaments = [
         url: "/torneos/caballeros-intermedia-libre-apertura-2026",
       },
       {
-        name: "Tercera Libre",
+        name: "Segunda Libre",
         url: "/torneos/caballeros-tercera-libre-apertura-2026",
+      },
+      {
+        name: "Segunda +40",
+        url: "/torneos/caballeros-segunda-40-clausura-2026",
       },
       {
         name: "Cuarta Libre",
@@ -49,15 +53,11 @@ export const tournaments = [
       },
       {
         name: "Cuarta +40 ",
-        url: "/torneos/caballeros-cuarta-40-apertura-2026",
+        url: "/torneos/caballeros-cuarta-40-clausura-2026",
       },
       {
         name: "Quinta Libre",
         url: "/torneos/caballeros-quinta-libre-apertura-2026",
-      },
-      {
-        name: "Quinta +40 ",
-        url: "/torneos/caballeros-quinta-40-apertura-2026",
       },
       {
         name: "Sexta Libre",
@@ -70,11 +70,11 @@ export const tournaments = [
     categories: [
       {
         name: "Mixto Libre ",
-        url: "/torneos/mixto-libre-apertura-2026",
+        url: "/torneos/mixto-libre-clausura-2026",
       },
       {
         name: "Mixto B/C",
-        url: "/torneos/mixto-bc-apertura-2026",
+        url: "/torneos/mixto-bc-clausura-2026",
       },
     ],
   },

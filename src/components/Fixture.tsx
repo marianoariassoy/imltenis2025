@@ -6,13 +6,14 @@ import ItemSmall from "@/components/ItemSmall";
 import Item from "@/components/ItemMedium";
 import { Serie } from "@/types";
 import Title from "@/components/Title2";
+import Barra from "@/components/Barra";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
-  const options = ["Todo", "Jugados", "Sin jugar"];
-  const [filter, setFilter] = useState("Todo");
+  const options = ["Todas", "Jugadas", "Sin jugar"];
+  const [filter, setFilter] = useState("Todas");
 
   const dataFiltered = data.filter((item) => {
-    if (filter === "Jugados") return item.winner;
+    if (filter === "Jugadas") return item.winner;
     if (filter === "Sin jugar") return !item.winner;
     return true;
   });
@@ -26,21 +27,18 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
         <div className="flex flex-col items-center justify-center">
           <Title title="Calendario" winners={0} />
 
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-4 w-full mt-4 lg:mt-8">
-            <div className="flex items-center gap-x-2">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center  gap-4 w-full mt-4 lg:mt-8">
+            <div className="flex items-center justify-center md:justify-start gap-x-2">
               <span className="text-secondary">
-                <Bull />
+                {played.length} series jugadas de {data.length}
               </span>
-              <p className="text-secondary">
-                {played.length} series disputadas de {data.length} (
-                {Math.round((played.length / data.length) * 100)}%)
-              </p>
+              <Barra end={Math.round((played.length / data.length) * 100)} />
             </div>
-            <div className="flex gap-x-2 text-sm lg:text-base">
+            <div className="flex gap-x-2 text-sm md:text-base md:justify-end justify-center">
               {options.map((item) => (
                 <button
                   key={item}
-                  className={`rounded-xl px-4 py-1 hover:bg-primary hover:text-white/80 hover:border-primary cursor-pointer font-medium border ${filter === item ? "bg-primary text-white/80 border-primary" : "text-secondary"}`}
+                  className={`rounded-md px-4 py-1 hover:bg-primary hover:text-white/80 text-sm hover:border-primary cursor-pointer font-medium border ${filter === item ? "bg-primary text-white/80 border-primary" : "text-secondary"}`}
                   onClick={() => setFilter(item)}
                 >
                   {item}
@@ -51,8 +49,8 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
         </div>
       )}
       {dataFiltered.length === 0 && (
-        <div className="text-center text-primary">
-          No hay series a disputar 😢
+        <div className="text-center font-medium text-primary">
+          No hay series 🫤
         </div>
       )}
       {dataFiltered.length > 0 && (

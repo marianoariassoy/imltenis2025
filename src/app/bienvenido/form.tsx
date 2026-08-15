@@ -238,10 +238,8 @@ const Form = () => {
                   <ChevronDown />
                 </div>
               </div>
-
               <Error error={errors.category} />
             </div>
-
             <div className="form-control">
               <label className="mb-2 block">
                 <span className="text-primary font-medium">
