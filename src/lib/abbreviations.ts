@@ -24,10 +24,25 @@ export function obtenerAbreviado(nombre: string, maxLetras = 3) {
 }
 
 export function obtenerPrimerNombreYApellido(nombreCompleto: string): string {
-  const partes = nombreCompleto.trim().split(/\s+/);
+  const emojiRegex =
+    /(\p{Extended_Pictographic}(?:\uFE0F|\u200D\p{Extended_Pictographic})*|\p{Regional_Indicator}{2})/gu;
 
-  if (partes.length === 0) return "";
-  if (partes.length === 1) return partes[0];
+  // Separar el texto en tokens: palabras, espacios y emojis
+  const tokens = nombreCompleto.trim().split(/(\s+)/);
+
+  // Obtener solamente las palabras, ignorando emojis
+  const palabras = tokens.filter(
+    (token) => token.trim() !== "" && !emojiRegex.test(token),
+  );
+
+  // Resetear lastIndex porque la regex tiene flag "g"
+  emojiRegex.lastIndex = 0;
+
+  if (palabras.length === 0) return nombreCompleto.trim();
+
+  if (palabras.length === 1) {
+    return nombreCompleto.trim();
+  }
 
   const particulas = new Set([
     "de",
@@ -51,23 +66,27 @@ export function obtenerPrimerNombreYApellido(nombreCompleto: string): string {
     "saint",
   ]);
 
-  let apellido = [partes[partes.length - 1]];
-  let i = partes.length - 2;
+  let apellido = [palabras[palabras.length - 1]];
+  let i = palabras.length - 2;
 
   while (i >= 1) {
-    const actual = partes[i].toLowerCase();
+    const actual = palabras[i].toLowerCase();
 
-    // Verifica si junto con la palabra anterior forma una partícula compuesta
-    if (i > 1 && particulas.has(`${partes[i - 1].toLowerCase()} ${actual}`)) {
-      apellido.unshift(partes[i - 1], partes[i]);
+    if (i > 1 && particulas.has(`${palabras[i - 1].toLowerCase()} ${actual}`)) {
+      apellido.unshift(palabras[i - 1], palabras[i]);
       i -= 2;
     } else if (particulas.has(actual)) {
-      apellido.unshift(partes[i]);
+      apellido.unshift(palabras[i]);
       i--;
     } else {
       break;
     }
   }
 
-  return `${partes[0]} ${apellido.join(" ")}`;
+  const resultado = `${palabras[0]} ${apellido.join(" ")}`;
+
+  // Recuperar los emojis originales y agregarlos al final
+  const emojis = nombreCompleto.match(emojiRegex)?.join("") ?? "";
+
+  return emojis ? `${resultado} ${emojis}` : resultado;
 }

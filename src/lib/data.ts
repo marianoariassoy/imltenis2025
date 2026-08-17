@@ -8,7 +8,7 @@ export const tournaments = [
       },
       {
         name: "Tercera Libre",
-        url: "/torneos/damas-tercera-libre-apertura-2026",
+        url: "/torneos/damas-tercera-libre-clausura-2026",
       },
       {
         name: "Tercera +40",
@@ -16,7 +16,7 @@ export const tournaments = [
       },
       {
         name: "Cuarta Libre",
-        url: "/torneos/damas-cuarta-libre-apertura-2026",
+        url: "/torneos/damas-cuarta-libre-clausura-2026",
       },
       {
         name: "Cuarta +40",
@@ -24,7 +24,7 @@ export const tournaments = [
       },
       {
         name: "Quinta Libre",
-        url: "/torneos/damas-quinta-libre-apertura-2026",
+        url: "/torneos/damas-quinta-libre-clausura-2026",
       },
     ],
   },
@@ -33,15 +33,15 @@ export const tournaments = [
     categories: [
       {
         name: "Primera Libre",
-        url: "/torneos/caballeros-primera-libre-apertura-2026",
+        url: "/torneos/caballeros-primera-libre-clausura-2026",
       },
       {
         name: "Intermedia Libre",
-        url: "/torneos/caballeros-intermedia-libre-apertura-2026",
+        url: "/torneos/caballeros-intermedia-libre-clausura-2026",
       },
       {
         name: "Segunda Libre",
-        url: "/torneos/caballeros-tercera-libre-apertura-2026",
+        url: "/torneos/caballeros-tercera-libre-clausura-2026",
       },
       {
         name: "Segunda +40",
@@ -49,7 +49,7 @@ export const tournaments = [
       },
       {
         name: "Cuarta Libre",
-        url: "/torneos/caballeros-cuarta-libre-apertura-2026",
+        url: "/torneos/caballeros-cuarta-libre-clausura-2026",
       },
       {
         name: "Cuarta +40 ",
@@ -57,11 +57,11 @@ export const tournaments = [
       },
       {
         name: "Quinta Libre",
-        url: "/torneos/caballeros-quinta-libre-apertura-2026",
+        url: "/torneos/caballeros-quinta-libre-clausura-2026",
       },
       {
         name: "Sexta Libre",
-        url: "/torneos/caballeros-sexta-libre-apertura-2026",
+        url: "/torneos/caballeros-sexta-libre-clausura-2026",
       },
     ],
   },
@@ -80,94 +80,94 @@ export const tournaments = [
   },
 ];
 
-export const categories = [
-  {
-    name: "Damas Intermedia +30",
-    slug: "damas-intermedia-30-apertura-2026",
-    id: 6,
-  },
-  {
-    name: "Damas Tercera Libre",
-    slug: "damas-tercera-libre-apertura-2026",
-    id: 6,
-  },
-  {
-    name: "Damas Tercera +40",
-    slug: "damas-tercera-40-apertura-2026",
-    id: 6,
-  },
-  {
-    name: "Damas Cuarta Libre",
-    slug: "damas-cuarta-libre-apertura-2026",
-    id: 8,
-  },
-  {
-    name: "Damas Cuarta +40",
-    slug: "damas-cuarta-40-apertura-2026",
-    id: 6,
-  },
-  {
-    name: "Damas Quinta Libre",
-    slug: "damas-quinta-libre-apertura-2026",
-    id: 14,
-  },
-  {
-    name: "Mixto Libre",
-    slug: "mixto-libre-apertura-2026",
-    id: 12,
-  },
-  {
-    name: "Mixto B/C",
-    slug: "mixto-bc-apertura-2026",
-    id: 12,
-  },
-  {
-    name: "Caballeros Primera Libre",
-    slug: "caballeros-primera-libre-apertura-2026",
-    id: 1,
-  },
-  {
-    name: "Caballeros Intermedia Libre",
-    slug: "caballeros-intermedia-libre-apertura-2026",
-    id: 2,
-  },
-  {
-    name: "Caballeros Tercera Libre",
-    slug: "caballeros-tercera-libre-apertura-2026",
-    id: 3,
-  },
-  {
-    name: "Caballeros Cuarta Libre",
-    slug: "caballeros-cuarta-libre-apertura-2026",
-    id: 4,
-  },
-  {
-    name: "Caballeros Cuarta +40",
-    slug: "caballeros-cuarta-40-apertura-2026",
-    id: 4,
-  },
-  {
-    name: "Caballeros Quinta Libre",
-    slug: "caballeros-quinta-libre-apertura-2026",
-    id: 5,
-  },
-  {
-    name: "Caballeros Quinta +40",
-    slug: "caballeros-quinta-40-apertura-2026",
-    id: 5,
-  },
-  {
-    name: "Caballeros Sexta Libre",
-    slug: "caballeros-sexta-libre-apertura-2026",
-    id: 11,
-  },
-];
+// export const categories = [
+//   {
+//     name: "Damas Intermedia +30",
+//     slug: "damas-intermedia-30-apertura-2026",
+//     id: 6,
+//   },
+//   {
+//     name: "Damas Tercera Libre",
+//     slug: "damas-tercera-libre-apertura-2026",
+//     id: 6,
+//   },
+//   {
+//     name: "Damas Tercera +40",
+//     slug: "damas-tercera-40-apertura-2026",
+//     id: 6,
+//   },
+//   {
+//     name: "Damas Cuarta Libre",
+//     slug: "damas-cuarta-libre-apertura-2026",
+//     id: 8,
+//   },
+//   {
+//     name: "Damas Cuarta +40",
+//     slug: "damas-cuarta-40-apertura-2026",
+//     id: 6,
+//   },
+//   {
+//     name: "Damas Quinta Libre",
+//     slug: "damas-quinta-libre-apertura-2026",
+//     id: 14,
+//   },
+//   {
+//     name: "Mixto Libre",
+//     slug: "mixto-libre-apertura-2026",
+//     id: 12,
+//   },
+//   {
+//     name: "Mixto B/C",
+//     slug: "mixto-bc-apertura-2026",
+//     id: 12,
+//   },
+//   {
+//     name: "Caballeros Primera Libre",
+//     slug: "caballeros-primera-libre-apertura-2026",
+//     id: 1,
+//   },
+//   {
+//     name: "Caballeros Intermedia Libre",
+//     slug: "caballeros-intermedia-libre-apertura-2026",
+//     id: 2,
+//   },
+//   {
+//     name: "Caballeros Tercera Libre",
+//     slug: "caballeros-tercera-libre-apertura-2026",
+//     id: 3,
+//   },
+//   {
+//     name: "Caballeros Cuarta Libre",
+//     slug: "caballeros-cuarta-libre-apertura-2026",
+//     id: 4,
+//   },
+//   {
+//     name: "Caballeros Cuarta +40",
+//     slug: "caballeros-cuarta-40-apertura-2026",
+//     id: 4,
+//   },
+//   {
+//     name: "Caballeros Quinta Libre",
+//     slug: "caballeros-quinta-libre-apertura-2026",
+//     id: 5,
+//   },
+//   {
+//     name: "Caballeros Quinta +40",
+//     slug: "caballeros-quinta-40-apertura-2026",
+//     id: 5,
+//   },
+//   {
+//     name: "Caballeros Sexta Libre",
+//     slug: "caballeros-sexta-libre-apertura-2026",
+//     id: 11,
+//   },
+// ];
 
 export const menu = [
   { name: "Orden de juego", url: "/orden-de-juego" },
   {
     name: "Ranking de Jugadores",
-    url: "/rankings/jugadores/damas-intermedia-30-apertura-2026",
+    url: "/rankings/jugadores/damas-intermedia-30-clausura-2026",
   },
   { name: "Ranking de Clubes", url: "/rankings/clubes" },
   { name: "Torneos Anteriores", url: "/torneos-anteriores" },

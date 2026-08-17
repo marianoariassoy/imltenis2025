@@ -12,7 +12,7 @@ const InfoShow = ({
   const [show, setShow] = useState(false);
   return (
     <div
-      className={`flex justify-between items-start gap-x-1 px-2 py-3 lg:p-4 border-2 rounded-xl cursor-pointer mb-1 ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
+      className={`flex justify-between items-start gap-x-1 px-2 py-3 lg:px-3 border rounded-xl cursor-pointer mb-1 ${color === "secondary" ? "text-secondary border-secondary" : "text-primary border-primary"}`}
       onClick={() => setShow(!show)}
     >
       <span>
@@ -28,7 +28,7 @@ const InfoShow = ({
         {text}
       </span>
       <span
-        className={`text-lg transition-transform ${show ? "rotate-180" : ""}`}
+        className={`text-lg hover:text-secondary transition-transform ${show ? "rotate-180" : ""}`}
       >
         <ChevronDown />
       </span>

@@ -9,12 +9,11 @@ import Title from "@/components/Title2";
 import Barra from "@/components/Barra";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
-  const options = ["Todas", "Jugadas", "Sin jugar"];
-  const [filter, setFilter] = useState("Todas");
+  const [filter, setFilter] = useState("todas");
 
   const dataFiltered = data.filter((item) => {
-    if (filter === "Jugadas") return item.winner;
-    if (filter === "Sin jugar") return !item.winner;
+    if (filter === "jugadas") return item.winner;
+    if (filter === "sin jugar") return !item.winner;
     return true;
   });
 
@@ -22,12 +21,12 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   const played = data.filter((item) => item.winner === true);
 
   return (
-    <section className="flex flex-col gap-y-6">
+    <section className="flex flex-col gap-y-4">
       {title && (
         <div className="flex flex-col items-center justify-center">
           <Title title="Calendario" winners={0} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center  gap-4 w-full mt-4 lg:mt-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 items-center  gap-4 w-full mt-3 lg:mt-8">
             <div className="flex items-center justify-center md:justify-start gap-x-2">
               <span className="text-secondary">
                 {played.length} series jugadas de {data.length}
@@ -35,15 +34,24 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
               <Barra end={Math.round((played.length / data.length) * 100)} />
             </div>
             <div className="flex gap-x-2 text-sm md:text-base md:justify-end justify-center">
-              {options.map((item) => (
-                <button
-                  key={item}
-                  className={`rounded-md px-4 py-1 hover:bg-primary hover:text-white/80 text-sm hover:border-primary cursor-pointer font-medium border ${filter === item ? "bg-primary text-white/80 border-primary" : "text-secondary"}`}
-                  onClick={() => setFilter(item)}
-                >
-                  {item}
-                </button>
-              ))}
+              <button
+                className={`hover:text-white/80 text-lg cursor-pointer ${filter === "todas" ? "text-primary" : "text-white/30"}`}
+                onClick={() => setFilter("todas")}
+              >
+                <Bull />
+              </button>
+              <button
+                className={`hover:text-white/80 text-lg cursor-pointer ${filter === "sin jugar" ? "text-primary " : "text-white/30"}`}
+                onClick={() => setFilter("sin jugar")}
+              >
+                <Bull />
+              </button>
+              <button
+                className={`hover:text-white/80 text-lg cursor-pointer ${filter === "jugadas" ? "text-primary" : "text-white/30"}`}
+                onClick={() => setFilter("jugadas")}
+              >
+                <Bull />
+              </button>
             </div>
           </div>
         </div>
@@ -81,7 +89,10 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
                     <div className="flex gap-x-2 items-center">
                       {item.winner || item.status === 2 ? <Bull /> : null}
                       <span className="font-semibold">{item.date}</span>
-                      {item.hour} {item.hour != "-" && <span>hs.</span>}
+                      <span>
+                        {item.hour}
+                        {item.hour != "-" && <span>hs.</span>}
+                      </span>
                     </div>
                   </td>
                   <td className="w-[34%]">

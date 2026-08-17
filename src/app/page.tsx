@@ -2,7 +2,6 @@
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
-import Link from "next/link";
 import Countdown from "./home/Countdown";
 import AIIntroBubble from "@/components/AIIntroBubble";
 // import Clubes from "./home/Clubes";
@@ -68,17 +67,14 @@ export default function Home() {
     <>
       <section className="h-screen w-1/2">
         <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-center flex flex-col opacity-0 fade-in delay-100 items-center">
-          <Link
-            href="/presentacion"
-            className="text-[3.4rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
-          >
+          <div className="text-[3.4rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer">
             <AuroraText colors={["#7d37ff", "#fe514e", "#fe514e"]}>
               Torneo <br /> Interclubes <br /> Clausura <br />
               <div className="text-primary mt-2 mb-2 w-full flex justify-center">
                 <Veinteventiseis />
               </div>
             </AuroraText>
-          </Link>
+          </div>
         </div>
         <div className="absolute w-full bottom-10 px-4">
           <Countdown dates={dates} />

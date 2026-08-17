@@ -84,15 +84,18 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           type="atention"
         />
       )}
+
+      <Estadisticas id={data.id} category_name={data.category_name} />
+
       {data.description && (
-        <div className="text-center bg-white/5 p-3 rounded-xl whitespace-break-spaces text-secondary flex flex-col items-center justify-center">
-          <span className="text-primary text-lg">
+        <div className="text-center border border-primary p-3 rounded-xl whitespace-break-spaces justify-center mb-2 text-primary flex items-center font-medium">
+          <span className="text-lg">
             <Star />
           </span>
           {data.description}
         </div>
       )}
-      <Estadisticas id={data.id} category_name={data.category_name} />
+
       <Singles id={data.id} />
       <Doubles id={data.id} />
       <Equipos id={data.id} />

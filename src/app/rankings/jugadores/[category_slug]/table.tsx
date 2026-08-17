@@ -1,10 +1,10 @@
 import Link from "next/link";
 import Item from "@/components/ItemPlayer";
 import Labels from "@/components/Labels";
-import { categories } from "@/lib/data";
+import { tournaments } from "@/lib/data";
 import Messages from "@/components/Messages";
 
-interface data {
+interface Data {
   id: string;
   player_id: string;
   player_slug: string;
@@ -20,14 +20,16 @@ interface data {
   category: string;
 }
 
-const table = async ({ category_slug }: { category_slug: string }) => {
+const Table = async ({ category_slug }: { category_slug: string }) => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/players",
     {
       cache: "no-store",
     },
   );
-  const data = (await response.json()) as data[];
+
+  const data = (await response.json()) as Data[];
+
   if (!data) return null;
 
   const labels = [
@@ -39,7 +41,6 @@ const table = async ({ category_slug }: { category_slug: string }) => {
       name: "Equipo",
       value: "",
     },
-
     {
       name: "Pts.",
       value: "Puntos",
@@ -58,13 +59,22 @@ const table = async ({ category_slug }: { category_slug: string }) => {
     },
   ];
 
-  const category = categories.filter((item) => item.slug === category_slug);
-  const dataFiltered = data.filter(
-    (item) => item.category === category[0].slug,
-  );
+  // Buscamos la categoría dentro de todos los torneos
+  const category = tournaments
+    .flatMap((tournament) => tournament.categories)
+    .find((item) => item.url.replace("/torneos/", "") === category_slug);
 
-  if (dataFiltered.length === 0)
+  // Si la categoría no existe
+  if (!category) {
     return <Messages text="No hay datos disponibles" />;
+  }
+
+  // Filtramos los jugadores por el slug de la categoría
+  const dataFiltered = data.filter((item) => item.category === category_slug);
+
+  if (dataFiltered.length === 0) {
+    return <Messages text="No hay datos disponibles" />;
+  }
 
   return (
     <>
@@ -77,6 +87,7 @@ const table = async ({ category_slug }: { category_slug: string }) => {
               ))}
             </tr>
           </thead>
+
           <tbody>
             {dataFiltered.slice(0, 50).map((item, index) => (
               <tr
@@ -85,12 +96,14 @@ const table = async ({ category_slug }: { category_slug: string }) => {
               >
                 <td className="flex gap-x-4 items-center">
                   <span className="font-bold">{index + 1}</span>
+
                   <Item
                     image={item.player_image}
                     title={item.player_name}
                     link={`/jugadores/${item.player_slug}`}
                   />
                 </td>
+
                 <td>
                   <Link
                     href={`/equipos/${item.team_slug}`}
@@ -99,7 +112,9 @@ const table = async ({ category_slug }: { category_slug: string }) => {
                     {item.team_name}
                   </Link>
                 </td>
+
                 <td className="font-bold">{item.matches_won}</td>
+
                 <td>{item.ds}</td>
                 <td>{item.dg}</td>
                 <td>{item.matches}</td>
@@ -114,4 +129,4 @@ const table = async ({ category_slug }: { category_slug: string }) => {
   );
 };
 
-export default table;
+export default Table;

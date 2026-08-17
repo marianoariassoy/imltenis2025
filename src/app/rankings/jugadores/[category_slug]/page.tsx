@@ -1,10 +1,10 @@
 import Title from "@/components/Title";
-import { Suspense } from "react";
-import Loader from "@/components/Loader";
-import Table from "./table";
 import Filter from "./filter";
 import Aviso from "@/components/Aviso";
 import { Container } from "@/components/Container";
+import Loader from "@/components/Loader2";
+import Table from "./table";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Ranking de Jugadores Mito Gafas",
@@ -26,7 +26,7 @@ export const metadata = {
   },
 };
 
-const page = async ({
+const Page = async ({
   params,
 }: {
   params: Promise<{ category_slug: string }>;
@@ -36,20 +36,20 @@ const page = async ({
   return (
     <Container>
       <Title title="Ranking de Jugadores" description="Mito Gafas Top 50" />
+
       <Filter category_slug={category_slug} />
+
       <Suspense fallback={<Loader />}>
         <Table category_slug={category_slug} />
       </Suspense>
+
       <Aviso
         type="info"
-        text="Al final del torneo el ganador o la ganadora de cada categoría recibirá un obsequio, gentileza de Mito Gafas."
-      />
-      <Aviso
-        type="atention"
-        text="Los datos se actualizan los días martes de cada semana."
+        text="Al finalizar el torneo, el ganador o la ganadora de cada categoría recibirá un obsequio especial, gentileza de Mito Gafas.
+"
       />
     </Container>
   );
 };
 
-export default page;
+export default Page;
