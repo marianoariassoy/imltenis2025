@@ -133,13 +133,12 @@
   },
   {
     "title": "Suplentes naturales",
-    "text": "Cualquier jugador de nivel inferior puede jugar en un nivel inmediatamente superior para un equipo perteneciente al mismo club del jugador. Si dicho jugador gana un partido en un nivel superior y vuelve a ser convocado en ese nivel, no podrá participar más en el nivel inferior."
+    "text": "Cualquier jugador de nivel inferior puede jugar en un nivel  superior para un equipo perteneciente al mismo club del jugador, siempre que el equipo de nivel superior no tenga completa su lista de buena fe (máximo 20 jugadores). Si dicho jugador gana un partido en un nivel superior y vuelve a ser convocado en ese nivel, no podrá participar más en el nivel inferior.\n\nSe podrá contar con hasta 5 suplenntes naturales por equipo."
   },
   {
     "title": "Dos o más equipos por división",
     "text": "Cuando un club tenga dos o más equipos en la misma categoría, éstos se considerarán como equipos distintos, los jugadores de estos equipos no podrán jugar en ningún otro equipo de la misma categoría a la que pertenezcan."
   },
-
   {
     "title": "Ascenso de equipos",
     "text": "El sistema de ascenso será personalizado para cada categoría, adaptándose a la cantidad de equipos y al formato de competencia específico. Este enfoque garantiza una experiencia de torneo más justa y equitativa, reflejando las necesidades únicas de cada categoría y promoviendo un ambiente competitivo saludable para todos.\n\nLos equipos ascendidos se requerirá la participación de todos los jugadores que hayan aportado al menos tres (3) puntos, para el resto de los jugadores, el ascenso será optativo."
@@ -176,6 +175,10 @@
   {
     "title": "Compatibilidad de categorías en categorias mixtas",
     "text": "Mixto Libre: Podrá participar cualquier categoría\nMixto B/C: Damas hasta Tercera Libre y +40, Caballeros hasta Cuarta Libre y +40 (excepto jugadores ascendidos desde Cuarta +40 a Tercera +40)"
+  },
+  {
+    "title": "Compatibilidad entre categorías libres y por edad",
+    "text": "Un jugador podrá integrar equipos de categorías Libres y por edad únicamente cuando ambas categorías correspondan a la misma nomenclatura. Por ejemplo, un jugador inscripto en Cuarta Libre podrá integrar, asimismo, un equipo de Cuarta +40.\n\nSe establecen como excepciones las siguientes situaciones: Caballeros: los jugadores de Sexta Libre podrán integrar equipos de Quinta +40.\nDamas: las jugadoras de Quinta Libre podrán integrar equipos de Cuarta +40."
   },
   {
     "title": "Penalizaciones",
