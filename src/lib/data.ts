@@ -41,7 +41,7 @@ export const tournaments = [
       },
       {
         name: "Segunda Libre",
-        url: "/torneos/caballeros-tercera-libre-clausura-2026",
+        url: "/torneos/caballeros-segunda-libre-clausura-2026",
       },
       {
         name: "Segunda +40",
