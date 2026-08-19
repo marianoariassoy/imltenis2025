@@ -3,7 +3,6 @@ import Link from "next/link";
 import Item from "@/components/ItemSmall";
 import { Serie } from "@/types/";
 import { Container } from "@/components/Container";
-import { Calendar } from "@/lib/icons";
 
 export const metadata = {
   title: "Orden de juego",
@@ -23,7 +22,7 @@ const page = async () => {
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full fade-in flex flex-col items-center justify-center">
         <h1 className="text-3xl mb-1">🙈</h1>
         <span className="text-primary text-center font-semibold">
-          Por ahora no no se juega nada.
+          Por ahora no se juega nada.
         </span>
       </div>
     );
@@ -32,19 +31,17 @@ const page = async () => {
     <Container>
       <Title
         title={`Orden de juego`}
-        description={
-          data.length + " series a disputar — " + data.length * 3 + " partidos"
-        }
-        icon={<Calendar />}
+        description={data.length + " series — " + data.length * 3 + " partidos"}
+        emoji="🗓️"
       />
 
       <div className="overflow-x-auto whitespace-nowrap mt-4">
         <table className="table w-full mb-3">
           <thead>
             <tr>
-              <th scope="col">Fecha y Hora</th>
-              <th scope="col">Local</th>
-              <th scope="col">Visitante</th>
+              <th scope="col">Fecha y hora</th>
+              <th scope="col">Equipo local</th>
+              <th scope="col">Equipo visitante</th>
               <th scope="col">Categoría</th>
             </tr>
           </thead>

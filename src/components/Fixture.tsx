@@ -6,18 +6,21 @@ import ItemSmall from "@/components/ItemSmall";
 import Item from "@/components/ItemMedium";
 import { Serie } from "@/types";
 import Title from "@/components/Title2";
-import Barra from "@/components/Barra";
+import FixtureFilter from "@/components/FixtureFilter";
 
 const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
-  const [filter, setFilter] = useState("todas");
+  const [filter, setFilter] = useState<"todas" | "jugadas" | "sin jugar">(
+    "todas",
+  );
+
+  if (!data) return null;
 
   const dataFiltered = data.filter((item) => {
-    if (filter === "jugadas") return item.winner;
+    if (filter === "jugadas") return item.winner === true;
     if (filter === "sin jugar") return !item.winner;
     return true;
   });
 
-  if (!data) return null;
   const played = data.filter((item) => item.winner === true);
 
   return (
@@ -26,39 +29,19 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
         <div className="flex flex-col items-center justify-center">
           <Title title="Calendario" winners={0} />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 items-center  gap-4 w-full mt-3 lg:mt-8">
-            <div className="flex items-center justify-center md:justify-start gap-x-2">
-              <span className="text-secondary">
-                {played.length} series jugadas de {data.length}
-              </span>
-              <Barra end={Math.round((played.length / data.length) * 100)} />
-            </div>
-            <div className="flex gap-x-2 text-sm md:text-base md:justify-end justify-center">
-              <button
-                className={`hover:text-white/80 text-lg cursor-pointer ${filter === "todas" ? "text-primary" : "text-white/30"}`}
-                onClick={() => setFilter("todas")}
-              >
-                <Bull />
-              </button>
-              <button
-                className={`hover:text-white/80 text-lg cursor-pointer ${filter === "sin jugar" ? "text-primary " : "text-white/30"}`}
-                onClick={() => setFilter("sin jugar")}
-              >
-                <Bull />
-              </button>
-              <button
-                className={`hover:text-white/80 text-lg cursor-pointer ${filter === "jugadas" ? "text-primary" : "text-white/30"}`}
-                onClick={() => setFilter("jugadas")}
-              >
-                <Bull />
-              </button>
-            </div>
-          </div>
+          <FixtureFilter
+            seriesPlayed={played.length}
+            totalSeries={data.length}
+            setFilter={setFilter}
+            filter={filter}
+          />
         </div>
       )}
       {dataFiltered.length === 0 && (
-        <div className="text-center font-medium text-primary">
-          No hay series 🫤
+        <div className="text-center font-medium text-primary mt-4">
+          {filter === "sin jugar"
+            ? "No hay series por jugar 🫤"
+            : "No hay series jugadas 🫤"}
         </div>
       )}
       {dataFiltered.length > 0 && (
@@ -67,10 +50,10 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
             {data.length > 0 && (
               <thead>
                 <tr>
-                  <th>Fecha / Hora</th>
-                  <th>Equipo Local</th>
+                  <th>Fecha y hora</th>
+                  <th>Equipo local</th>
                   <th>Score</th>
-                  <th>Equipo Visitante</th>
+                  <th>Equipo visitante</th>
                   <th>Serie</th>
                 </tr>
               </thead>
