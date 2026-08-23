@@ -34,8 +34,8 @@ const FixtureMain = ({
                 <tr>
                   <th>Fecha</th>
                   <th>Hora</th>
-                  <th>Local</th>
-                  <th>Visitante</th>
+                  <th>Equipo local</th>
+                  <th>Equipo visitante</th>
                   <th>Torneo</th>
                   <th>Serie</th>
                 </tr>
@@ -118,7 +118,7 @@ const FixtureMain = ({
             </tbody>
           </table>
 
-          <LabelsBulls label1="Visitantes" label2="Locales" />
+          <LabelsBulls label1="Visitante" label2="Local" />
         </div>
       )}
     </section>

@@ -10,7 +10,7 @@ const CountBar = ({ end, className }: { end: number; className?: string }) => {
 
   return (
     <div
-      className={`w-full max-w-28 bg-white/10 h-1 overflow-hidden ${className}`}
+      className={`w-full max-w-28 bg-white/10 h-0.75 overflow-hidden ${className}`}
     >
       <span
         className="bg-primary h-full block transition-all duration-1000 ease-out"

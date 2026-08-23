@@ -75,7 +75,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
         {data.googlemaps && (
           <div
-            className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-70 [&>iframe]:rounded-xl"
+            className="py-3 w-full [&>iframe]:w-full [&>iframe]:h-80 [&>iframe]:rounded-xl"
             dangerouslySetInnerHTML={{ __html: data.googlemaps }}
           />
         )}

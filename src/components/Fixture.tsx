@@ -27,7 +27,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
     <section className="flex flex-col gap-y-4">
       {title && (
         <div className="flex flex-col items-center justify-center">
-          <Title title="Calendario" winners={0} />
+          <Title title={"Calendario (" + data.length + ")"} winners={0} />
 
           <FixtureFilter
             seriesPlayed={played.length}

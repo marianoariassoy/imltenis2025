@@ -18,8 +18,8 @@ const video = () => {
         muted
         playsInline
         preload="auto"
-        className="object-cover object-center w-full h-full"
-        poster="/videos/video-poster.jpg"
+        className="object-cover object-center w-full h-full saturate-80 brightness-80"
+        poster="/images/2026.png"
       >
         <source src="/videos/video-presentation.mp4" type="video/mp4" />
         <source src="/videos/video-presentation.webm" type="video/webm" />

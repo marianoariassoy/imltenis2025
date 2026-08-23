@@ -14,8 +14,6 @@ const estadisticas = async ({
   const data = await response.json();
   if (!data) return null;
 
-  if (data.matches_total === 0) return null;
-
   const calcularPorcentaje = (
     partidosGanados: number,
     partidosJugados: number,
