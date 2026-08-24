@@ -12,7 +12,8 @@ export const metadata = {
     locale: "es_AR",
     url: "https://imltenis.com.ar/datos-y-records/jugadores",
     title: "Ranking de partidos jugados",
-    description: "Ranking de partidos jugados de la liga de clubes IML Tenis",
+    description:
+      "En este ranking podrás conocer a los jugadores con mayor cantidad de partidos disputados a lo largo de su participación en el torneo, destacando su trayectoria, compromiso y presencia dentro de la competencia.",
     images: [
       {
         url: "https://imltenis.com.ar/assets/imltenis.jpg",
@@ -60,7 +61,11 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title="Salón de la Fama" emoji="😎" />
+      <Title
+        title="Salón de la Fama"
+        emoji="😎"
+        description="En este ranking podrás conocer a los jugadores con mayor cantidad de partidos disputados a lo largo de su participación en el torneo, destacando su trayectoria, compromiso y presencia dentro de la competencia."
+      />
 
       <div className="overflow-x-auto mt-2">
         <table className="table w-full">

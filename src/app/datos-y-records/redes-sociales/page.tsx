@@ -1,7 +1,6 @@
 import Title from "@/components/Title";
 import { Container } from "@/components/Container";
 import Image from "next/image";
-import Link from "next/link";
 import { Instagram } from "@/lib/icons";
 
 export const metadata = {
@@ -24,7 +23,7 @@ export const metadata = {
   },
 };
 
-interface data {
+interface Data {
   id: number;
   name: string;
   image: string;
@@ -32,12 +31,14 @@ interface data {
   ig: string;
 }
 
-const page = async () => {
+const Page = async () => {
   const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/teams/ig", {
     cache: "no-store",
   });
-  const data = (await response.json()) as data[];
-  if (!data) return;
+
+  const data = (await response.json()) as Data[];
+
+  if (!data) return null;
 
   function getInstagramUsername(url: string): string | null {
     const match = url.match(
@@ -49,40 +50,49 @@ const page = async () => {
 
   return (
     <Container>
-      <div className="flex flex-col gap-y-2 items-center ">
+      <div className="flex flex-col gap-y-2 items-center">
         <span className="text-primary">
           <Instagram />
         </span>
-        <Title title="Cuentas oficiales" />
+
+        <Title
+          title="Cuentas oficiales"
+          description="El tenis también se vive fuera de la cancha. En esta sección reunimos las cuentas oficiales de Instagram de los equipos que participan de IML Tenis, para que puedas conocerlos, seguir sus novedades y acompañar cada fecha del torneo."
+        />
       </div>
 
-      <div className="w-full md:w-auto mx-auto mt-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-6">
-          {data.map((item, index) => (
-            <article className="flex items-center gap-x-3" key={index}>
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-white/20 shadow-md shrink-0">
+      <div className="w-full mt-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5">
+          {data.map((item) => (
+            <article
+              className="flex items-center gap-x-2 min-w-0"
+              key={item.id}
+            >
+              <div className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shadow-md shrink-0">
                 {item.image ? (
-                  <Link href={`/equipos/${item.slug}`}>
+                  <a href={item.ig} target="_blank" rel="noreferrer">
                     <Image
                       src={item.image}
                       alt={item.name}
-                      width={48}
-                      height={48}
+                      width={56}
+                      height={56}
                       className="object-cover h-full w-full hover:opacity-70 transition-opacity"
                     />
-                  </Link>
+                  </a>
                 ) : null}
               </div>
+
               <a
                 href={item.ig}
                 target="_blank"
                 rel="noreferrer"
-                className="hover:text-primary flex flex-col"
+                className="hover:text-primary flex flex-col leading-5 min-w-0"
               >
-                <span className="font-semibold whitespace-nowrap">
-                  {item.name}
+                <span className="font-semibold truncate">{item.name}</span>
+
+                <span className="truncate">
+                  @{getInstagramUsername(item.ig)}
                 </span>
-                <span>@{getInstagramUsername(item.ig)}</span>
               </a>
             </article>
           ))}
@@ -92,4 +102,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default Page;

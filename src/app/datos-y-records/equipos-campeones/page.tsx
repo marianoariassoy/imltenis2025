@@ -1,8 +1,7 @@
 import Title from "@/components/Title";
-import Item from "@/components/ItemMedium";
+import Item from "@/components/Item";
 import { Container } from "@/components/Container";
 import Link from "next/link";
-import { Star } from "@/lib/icons";
 
 export const metadata = {
   title: "Equipos campeones",
@@ -50,17 +49,18 @@ const page = async () => {
         description={`${data.length} equipos`}
       />
 
-      <div className="overflow-x-auto flex flex-col items-start gap-y-4 max-w-3xl mx-auto">
+      <div className="overflow-x-auto flex flex-col items-center gap-y-4 max-w-3xl mx-auto">
         {data.map((item, index) => (
-          <div key={index} className="flex items-center gap-1">
+          <div key={index} className="flex items-center gap-x-2">
             <Item
               image={item.team_image}
               title={item.team_name}
               link={`/equipos/${item.team_slug}`}
+              active={false}
             />
             <Link
               href={`/torneos/${item.tournament_slug}`}
-              className="text-secondary font-medium hover:text-primary text-nowrap"
+              className="font-medium text-base hover:text-primary text-nowrap"
             >
               {item.tournament_name} {item.season_name}
             </Link>
