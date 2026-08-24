@@ -64,6 +64,7 @@ export function obtenerPrimerNombreYApellido(nombreCompleto: string): string {
     "du",
     "st",
     "saint",
+    "san",
   ]);
 
   let apellido = [palabras[palabras.length - 1]];
