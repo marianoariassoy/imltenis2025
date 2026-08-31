@@ -26,6 +26,9 @@ const FixtureMain = ({
           No hay series a disputar 😢
         </div>
       )}
+
+      <LabelsBulls label1="Local" label2="Visitante" />
+
       {data.length > 0 && (
         <div className="overflow-x-auto whitespace-nowrap">
           <table className="table w-full table-auto mb-2">
@@ -117,8 +120,6 @@ const FixtureMain = ({
               ))}
             </tbody>
           </table>
-
-          <LabelsBulls label1="Visitante" label2="Local" />
         </div>
       )}
     </section>

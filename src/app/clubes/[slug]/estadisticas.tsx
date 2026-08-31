@@ -26,7 +26,7 @@ const estadisticas = async ({ id }: { id: string }) => {
       stadistics[0].supercopa ||
       stadistics[0].finals) && (
       <div className="flex flex-col md:flex-row justify-center items-center gap-1 p-4 border-2 border-primary rounded-xl font-medium text-primary text-center">
-        <span className="text-xl">
+        <span className="text-2xl">
           <Trophy />
         </span>
         <span>
