@@ -113,10 +113,6 @@ const Tabla = async ({
           </tbody>
         </table>
       </div>
-
-      {!twoMatches && (
-        <LabelsBulls label1="Series Ganadas" label2="Series Perdidas" />
-      )}
     </section>
   );
 };

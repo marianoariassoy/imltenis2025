@@ -1,4 +1,5 @@
 import { Bull } from "@/lib/icons";
+import Barra from "./Barra";
 
 type Filter = "todas" | "sin jugar" | "jugadas";
 
@@ -24,13 +25,17 @@ const FixtureFilter = ({
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-4 w-full mt-3 lg:mt-8">
-      <div className="flex items-center justify-center md:justify-start gap-x-2">
+      <div className="flex items-center justify-center md:justify-start gap-x-2 l">
         <span className="text-secondary">
           {filter === "todas"
             ? `${seriesPlayed} de ${totalSeries} series completadas`
             : filter === "jugadas"
               ? `${seriesPlayed} series completadas`
               : `${totalSeries - seriesPlayed} series por jugar`}
+        </span>
+
+        <span className="hidden lg:block w-32">
+          <Barra end={seriesPlayed} />
         </span>
       </div>
 

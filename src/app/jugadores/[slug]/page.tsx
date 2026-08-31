@@ -88,7 +88,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
       <Estadisticas id={data.id} category_name={data.category_name} />
 
       {data.description && (
-        <div className="text-center border border-primary p-3 rounded-xl whitespace-break-spaces justify-center mb-2 text-primary flex flex-col md:flex-row items-center font-medium gap-2">
+        <div className="text-center border border-primary p-3 rounded-xl whitespace-break-spaces justify-center mb-2 text-primary flex flex-col md:flex-row items-center font-medium gap-1">
           <span className="text-xl">
             <Star />
           </span>
