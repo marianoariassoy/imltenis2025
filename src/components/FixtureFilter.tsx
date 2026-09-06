@@ -28,7 +28,7 @@ const FixtureFilter = ({
       <div className="flex items-center justify-center md:justify-start gap-x-2 l">
         <span className="text-secondary">
           {filter === "todas"
-            ? `${seriesPlayed} de ${totalSeries} series completadas`
+            ? `${seriesPlayed} de ${totalSeries} series completadas (${Math.round((seriesPlayed / totalSeries) * 100)}%)`
             : filter === "jugadas"
               ? `${seriesPlayed} series completadas`
               : `${totalSeries - seriesPlayed} series por jugar`}

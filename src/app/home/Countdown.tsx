@@ -37,19 +37,28 @@ function getCurrentOrNextDate(
   const now = new Date();
 
   if (isWeekend) {
-    // Durante el fin de semana, busca si hay un torneo agendado para hoy
-    const todayMatch = dates.find((item) => {
-      const d = item.date as Date;
-      return (
-        d.getFullYear() === now.getFullYear() &&
-        d.getMonth() === now.getMonth() &&
-        d.getDate() === now.getDate()
+    // Reseteamos las horas a las 00:00:00 para comparar solo por días de calendario
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+    const weekendMatch = dates.find((item) => {
+      const matchDate = new Date(item.date as Date);
+
+      // Inicio del torneo (00:00 del día del partido)
+      const startDate = new Date(
+        matchDate.getFullYear(),
+        matchDate.getMonth(),
+        matchDate.getDate(),
       );
+
+      // Fin del torneo (23:59:59 del día siguiente)
+      const endDate = new Date(startDate);
+      endDate.setDate(startDate.getDate() + 2); // +2 días a las 00:00 abarca todo el fin de semana
+
+      return today >= startDate && today < endDate;
     });
 
-    if (todayMatch) return todayMatch;
+    if (weekendMatch) return weekendMatch;
   }
-
   // De lunes a viernes (o si no hay fecha agendada para hoy), busca la próxima
   return (
     dates.find((item) => (item.date as Date).getTime() > now.getTime()) ?? null
@@ -159,10 +168,8 @@ export default function Countdown({
   }
 
   return (
-    <div className={`w-full px-4 md:px-16 fade-in text-center ${className}`}>
-      <h2 className="font-medium text-lg mb-1 text-secondary">
-        Jugándose la {current.title} 🔥
-      </h2>
+    <div className={`w-full fade-in text-center ${className}`}>
+      <h2 className="font-medium text-xl text-secondary">{current.title}</h2>
     </div>
   );
 }
