@@ -77,7 +77,7 @@ export default function Home() {
             className="text-[3.4rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer"
           >
             <AuroraText colors={["#7d37ff", "#fe514e", "#fe514e"]}>
-              Torneo <br /> Interclubes <br /> Clausura <br />
+              Torneo <br /> Interclubes <br /> Clausura <br /> Fecha 4
               <div className="text-primary mt-2 mb-2 w-full flex justify-center">
                 <Veinteventiseis />
               </div>

@@ -1,19 +1,12 @@
 "use client";
-
 import { useEffect, useMemo, useState } from "react";
-import { Marquee } from "@/components/ui/marquee";
 
-type TournamentDate = {
-  title: string;
-  date: Date | string;
-};
-
+type TournamentDate = { title: string; date: Date | string };
 type CountdownProps = {
   dates: TournamentDate[];
   onComplete?: () => void;
   className?: string;
 };
-
 type TimeLeft = {
   total: number;
   days: number;
@@ -24,17 +17,9 @@ type TimeLeft = {
 
 function calculateTimeLeft(targetDate: Date): TimeLeft {
   const difference = targetDate.getTime() - Date.now();
-
   if (difference <= 0) {
-    return {
-      total: 0,
-      days: 0,
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
+    return { total: 0, days: 0, hours: 0, minutes: 0, seconds: 0 };
   }
-
   return {
     total: difference,
     days: Math.floor(difference / (1000 * 60 * 60 * 24)),
@@ -44,17 +29,30 @@ function calculateTimeLeft(targetDate: Date): TimeLeft {
   };
 }
 
-function getNextDate(dates: TournamentDate[]): TournamentDate | null {
-  const now = Date.now();
+// Obtiene la fecha activa (si coincide con hoy) o la próxima fecha futura
+function getCurrentOrNextDate(
+  dates: TournamentDate[],
+  isWeekend: boolean,
+): TournamentDate | null {
+  const now = new Date();
 
+  if (isWeekend) {
+    // Durante el fin de semana, busca si hay un torneo agendado para hoy
+    const todayMatch = dates.find((item) => {
+      const d = item.date as Date;
+      return (
+        d.getFullYear() === now.getFullYear() &&
+        d.getMonth() === now.getMonth() &&
+        d.getDate() === now.getDate()
+      );
+    });
+
+    if (todayMatch) return todayMatch;
+  }
+
+  // De lunes a viernes (o si no hay fecha agendada para hoy), busca la próxima
   return (
-    dates
-      .map((item) => ({
-        ...item,
-        date: typeof item.date === "string" ? new Date(item.date) : item.date,
-      }))
-      .sort((a, b) => a.date.getTime() - b.date.getTime())
-      .find((item) => item.date.getTime() > now) ?? null
+    dates.find((item) => (item.date as Date).getTime() > now.getTime()) ?? null
   );
 }
 
@@ -65,6 +63,7 @@ export default function Countdown({
 }: CountdownProps) {
   const [current, setCurrent] = useState<TournamentDate | null>(null);
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
+  const [isWeekend, setIsWeekend] = useState<boolean>(false);
 
   const sortedDates = useMemo(
     () =>
@@ -73,33 +72,39 @@ export default function Countdown({
           ...item,
           date: typeof item.date === "string" ? new Date(item.date) : item.date,
         }))
-        .sort((a, b) => a.date.getTime() - b.date.getTime()),
+        .sort(
+          (a, b) => (a.date as Date).getTime() - (b.date as Date).getTime(),
+        ),
     [dates],
   );
 
   useEffect(() => {
     const update = () => {
-      const next = getNextDate(sortedDates);
+      const now = new Date();
+      const dayOfWeek = now.getDay();
 
-      if (!next) {
+      // 0 = Domingo, 6 = Sábado
+      const weekend = dayOfWeek === 0 || dayOfWeek === 6;
+      setIsWeekend(weekend);
+
+      const active = getCurrentOrNextDate(sortedDates, weekend);
+      if (!active) {
         setCurrent(null);
         setTimeLeft(null);
         onComplete?.();
         return;
       }
-
-      setCurrent(next);
-      setTimeLeft(calculateTimeLeft(next.date as Date));
+      setCurrent(active);
+      setTimeLeft(calculateTimeLeft(active.date as Date));
     };
 
     update();
-
     const interval = setInterval(update, 1000);
-
     return () => clearInterval(interval);
   }, [sortedDates, onComplete]);
 
-  if (!current || !timeLeft) {
+  // En fin de semana solo necesitamos 'current'
+  if (!current || (!isWeekend && !timeLeft)) {
     return null;
   }
 
@@ -114,39 +119,50 @@ export default function Countdown({
     </div>
   );
 
-  return (
-    <div className="w-full px-4 md:px-16 fade-in text-center">
-      <h2 className="font-medium text-lg mb-1 text-secondary">
-        <span className="hidden md:block">
-          {(() => {
-            const date = current.date.toLocaleString("es-AR", {
-              weekday: "long",
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            });
-            return date.charAt(0).toUpperCase() + date.slice(1);
-          })()}{" "}
-          — {""} {current.title}
-        </span>
-        <span className="md:hidden">
-          {(() => {
-            const date = current.date.toLocaleString("es-AR", {
-              weekday: "long",
-              month: "long",
-              day: "numeric",
-            });
-            return date.charAt(0).toUpperCase() + date.slice(1);
-          })()}{" "}
-          — {""} {current.title}
-        </span>
-      </h2>
-      <div className="flex flex-wrap justify-center gap-4">
-        <Item value={timeLeft.days} label="D" />
-        <Item value={timeLeft.hours} label="H" />
-        <Item value={timeLeft.minutes} label="M" />
-        <Item value={timeLeft.seconds} label="S" />
+  if (!isWeekend && timeLeft) {
+    return (
+      <div className={`w-full px-4 md:px-16 fade-in text-center ${className}`}>
+        <h2 className="font-medium text-lg mb-1 text-secondary">
+          <span className="hidden md:block">
+            {(() => {
+              const date = (current.date as Date).toLocaleString("es-AR", {
+                weekday: "long",
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              });
+              return date.charAt(0).toUpperCase() + date.slice(1);
+            })()}{" "}
+            — {current.title}
+          </span>
+          <span className="md:hidden">
+            {(() => {
+              const date = (current.date as Date).toLocaleString("es-AR", {
+                weekday: "long",
+                month: "long",
+                day: "numeric",
+              });
+              return date.charAt(0).toUpperCase() + date.slice(1);
+            })()}{" "}
+            — {current.title}
+          </span>
+        </h2>
+
+        <div className="flex flex-wrap justify-center gap-4">
+          <Item value={timeLeft.days} label="D" />
+          <Item value={timeLeft.hours} label="H" />
+          <Item value={timeLeft.minutes} label="M" />
+          <Item value={timeLeft.seconds} label="S" />
+        </div>
       </div>
+    );
+  }
+
+  return (
+    <div className={`w-full px-4 md:px-16 fade-in text-center ${className}`}>
+      <h2 className="font-medium text-lg mb-1 text-secondary">
+        Jugándose la {current.title} 🔥
+      </h2>
     </div>
   );
 }
