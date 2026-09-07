@@ -2,10 +2,10 @@
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
-import Countdown from "./home/Countdown";
+import Countdown from "./home/countdown";
 import AIIntroBubble from "@/components/AIIntroBubble";
-// import Clubes from "./home/Clubes";
-import Video from "./home/Video";
+import Video from "./home/video";
+import Current from "./home/current";
 
 export default function Home() {
   const dates = [
@@ -63,10 +63,16 @@ export default function Home() {
     },
   ];
 
+  const isWeekend = () => {
+    const now = new Date();
+    const weekend = now.getDay() === 0 || now.getDay() === 6;
+    return weekend;
+  };
+
   return (
     <>
-      <section className="h-screen w-1/2">
-        <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-center flex flex-col opacity-0 fade-in delay-100 items-center">
+      <section className="h-screen w-full">
+        <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 px-4">
           <div className="text-[3.4rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer">
             <AuroraText colors={["#7d37ff", "#fe514e", "#fe514e"]}>
               Torneo <br /> Interclubes <br /> Clausura <br />
@@ -76,14 +82,17 @@ export default function Home() {
             </AuroraText>
           </div>
         </div>
-        <div className="absolute w-full bottom-10 px-4">
-          <Countdown dates={dates} />
-        </div>
-      </section>
 
-      {/* <section>
-        <Clubes />
-      </section> */}
+        {!isWeekend() ? (
+          <div className="absolute w-full bottom-32 md:bottom-10 px-4">
+            <Countdown dates={dates} />
+          </div>
+        ) : (
+          <div className="absolute w-full bottom-32 md:bottom-10 px-4">
+            <Current dates={dates} />
+          </div>
+        )}
+      </section>
 
       <AIIntroBubble />
       <Whatsapp />
