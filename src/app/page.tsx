@@ -1,4 +1,4 @@
-// import Notice from "@/components/Notice";
+import Notice from "@/components/Notice";
 import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
@@ -94,6 +94,7 @@ export default function Home() {
         )}
       </section>
 
+      <Notice />
       <AIIntroBubble />
       <Whatsapp />
       <Video />
