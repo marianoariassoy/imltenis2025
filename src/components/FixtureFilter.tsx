@@ -35,7 +35,7 @@ const FixtureFilter = ({
         </span>
 
         <span className="hidden lg:block w-32">
-          <Barra end={seriesPlayed} />
+          <Barra end={(seriesPlayed / totalSeries) * 100} />
         </span>
       </div>
 
