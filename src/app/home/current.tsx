@@ -75,13 +75,15 @@ const page = async ({ dates }: { dates: TournamentDate[] }) => {
     " — " +
     weekendMatch.title +
     " — " +
-    data.length +
-    " series y " +
     data.length * 3 +
-    " partidos jugandose — ";
+    " partidos en  " +
+    data.length +
+    "  series — " +
+    data.length * 10 +
+    " jugadores en la fecha — ";
 
   return (
-    <Marquee className="w-full max-w-sm md:max-w-full font-medium text-lg text-secondary">
+    <Marquee className="w-full max-w-sm md:max-w-5xl mx-auto font-medium text-lg">
       {text}
     </Marquee>
   );

@@ -99,10 +99,10 @@ export default function Countdown({
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="flex items-center justify-center w-10 md:w-12 text-2xl font-semibold text-secondary">
+      <div className="flex items-center justify-center w-10 md:w-12 text-2xl font-semibold ">
         {value.toString().padStart(2, "0")}
       </div>
-      <span className="text-sm font-medium uppercase tracking-wide text-secondary">
+      <span className="text-sm font-medium uppercase tracking-wide">
         {label}
       </span>
     </div>
@@ -110,7 +110,7 @@ export default function Countdown({
 
   return (
     <div className={`w-full px-4 md:px-16 fade-in text-center ${className}`}>
-      <h2 className="font-medium text-lg mb-1 text-secondary">
+      <h2 className="font-medium text-lg mb-1">
         <span className="hidden md:block">
           {formatDateRange(current.date as Date, true)} — {current.title}
         </span>

@@ -6,6 +6,7 @@ import Countdown from "./home/countdown";
 import AIIntroBubble from "@/components/AIIntroBubble";
 import Video from "./home/video";
 import Current from "./home/current";
+import Link from "next/link";
 
 export default function Home() {
   const dates = [
@@ -84,12 +85,22 @@ export default function Home() {
         </div>
 
         {!isWeekend() ? (
-          <div className="absolute w-full bottom-32 md:bottom-10 px-4">
-            <Countdown dates={dates} />
+          <div className="absolute w-full bottom-20 md:bottom-10 px-4">
+            <Link
+              href="/orden-de-juego"
+              className="text-secondary hover:text-foreground"
+            >
+              <Countdown dates={dates} />
+            </Link>
           </div>
         ) : (
           <div className="absolute w-full bottom-32 md:bottom-10 px-4">
-            <Current dates={dates} />
+            <Link
+              href="/orden-de-juego"
+              className="text-secondary hover:text-foreground"
+            >
+              <Current dates={dates} />
+            </Link>
           </div>
         )}
       </section>

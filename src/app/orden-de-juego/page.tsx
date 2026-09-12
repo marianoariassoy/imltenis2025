@@ -31,8 +31,14 @@ const page = async () => {
     <Container>
       <Title
         title={`Orden de juego`}
-        description={data.length + " series — " + data.length * 3 + " partidos"}
-        emoji="🗓️"
+        description={
+          data.length * 3 +
+          " partidos — " +
+          data.length +
+          " series — " +
+          data.length * 10 +
+          " jugadores"
+        }
       />
 
       <div className="overflow-x-auto whitespace-nowrap mt-4">
@@ -52,7 +58,9 @@ const page = async () => {
                   <div className="text-secondary font-medium flex gap-x-2">
                     {item.top ? <span className="text-xl">⭐️</span> : null}
                     <span className="text-primary">{item.date}</span>
-                    <span>{item.hour ? <span>{item.hour}</span> : "—"}</span>
+                    <span>
+                      {item.hour ? <span>{item.hour} hs.</span> : "—"}
+                    </span>
                   </div>
                 </td>
                 <td>
@@ -72,7 +80,7 @@ const page = async () => {
                 <td>
                   <Link
                     href={`/torneos/${item.tournament_slug}`}
-                    className="hover:text-primary font-medium text-secondary"
+                    className="text-primary font-medium hover:underline"
                   >
                     {item.tournament_name}
                   </Link>
