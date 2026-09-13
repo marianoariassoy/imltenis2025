@@ -1,5 +1,4 @@
 import Notice from "@/components/Notice";
-import { AuroraText } from "@/components/ui/aurora-text";
 import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
 import Countdown from "./home/countdown";
@@ -74,14 +73,15 @@ export default function Home() {
     <>
       <section className="h-screen w-full">
         <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 px-4">
-          <div className="text-[3.4rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer">
-            <AuroraText colors={["#7d37ff", "#fe514e", "#fe514e"]}>
-              Torneo <br /> Interclubes <br /> Clausura <br />
-              <div className="text-primary mt-2 mb-2 w-full flex justify-center">
-                <Veinteventiseis />
-              </div>
-            </AuroraText>
-          </div>
+          <Link
+            href="/orden-de-juego"
+            className="text-[3.3rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer text-primary"
+          >
+            Torneo <br /> Interclubes <br /> Clausura <br />
+            <div className="text-primary mt-2 mb-2 w-full flex justify-center">
+              <Veinteventiseis />
+            </div>
+          </Link>
         </div>
 
         {!isWeekend() ? (
@@ -94,7 +94,7 @@ export default function Home() {
             </Link>
           </div>
         ) : (
-          <div className="absolute w-full bottom-32 md:bottom-10 px-4">
+          <div className="absolute w-full bottom-20 md:bottom-10 px-4">
             <Link
               href="/orden-de-juego"
               className="text-secondary hover:text-foreground"

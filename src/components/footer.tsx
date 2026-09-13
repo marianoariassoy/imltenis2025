@@ -6,10 +6,10 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col p-4 text-secondary mt-8 ">
+    <footer className="flex flex-col px-4 text-secondary my-8">
       <div className="text-center flex flex-col">
         <span className="font-semibold">Interclubes IML Tenis</span>
-        <div className="flex items-center flex-wrap justify-center gap-x-1 ">
+        <div className="flex items-center flex-wrap justify-center gap-x-1">
           <a
             href="https://wa.me/5491130171475"
             className="hover:text-primary flex items-center gap-x-1"
