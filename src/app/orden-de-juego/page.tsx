@@ -3,6 +3,7 @@ import Link from "next/link";
 import Item from "@/components/ItemSmall";
 import { Serie } from "@/types/";
 import { Container } from "@/components/Container";
+import Marquee from "@/components/Marquee";
 
 export const metadata = {
   title: "Orden de juego",
@@ -27,27 +28,60 @@ const page = async () => {
       </div>
     );
 
+  function obtenerProximoFinDeSemana(fecha: Date = new Date()): string {
+    const dia = fecha.getDay(); // 0 = domingo, 6 = sábado
+
+    const sabado = new Date(fecha);
+
+    if (dia === 0) {
+      // Domingo: mantener el fin de semana actual
+      sabado.setDate(fecha.getDate() - 1);
+    } else if (dia === 6) {
+      // Sábado: mantener el fin de semana actual
+      sabado.setDate(fecha.getDate());
+    } else {
+      // Lunes a viernes: próximo sábado
+      sabado.setDate(fecha.getDate() + (6 - dia));
+    }
+
+    const domingo = new Date(sabado);
+    domingo.setDate(sabado.getDate() + 1);
+
+    const numeroSabado = sabado.getDate();
+    const numeroDomingo = domingo.getDate();
+
+    const mes = domingo.toLocaleDateString("es-AR", {
+      month: "long",
+    });
+
+    return `${numeroSabado} y ${numeroDomingo} de ${mes}`;
+  }
+
+  const title = "Orden de juego " + obtenerProximoFinDeSemana();
+  const description =
+    (data.length + 10) * 3 +
+    " partidos en " +
+    (data.length + 10) +
+    " series, " +
+    (data.length + 10) * 2 +
+    " equipos, con un total de " +
+    (data.length + 10) * 10 +
+    " jugadores en la fecha — ";
+
   return (
     <Container>
-      <Title
-        title={`Orden de juego`}
-        description={
-          data.length * 3 +
-          " partidos — " +
-          data.length +
-          " series — " +
-          data.length * 10 +
-          " jugadores"
-        }
-      />
+      <Title title={title} />
+      <div className="-mt-4 -mb-2">
+        <Marquee text={description} />
+      </div>
 
       <div className="overflow-x-auto whitespace-nowrap mt-4">
         <table className="table w-full mb-3">
           <thead>
             <tr>
               <th scope="col">Fecha y hora</th>
-              <th scope="col">Equipo local</th>
-              <th scope="col">Equipo visitante</th>
+              <th scope="col">Local</th>
+              <th scope="col">Visitante</th>
               <th scope="col">Categoría</th>
             </tr>
           </thead>

@@ -70,21 +70,35 @@ const page = async ({ dates }: { dates: TournamentDate[] }) => {
   const data = (await response.json()) as Serie[];
   if (!data) return null;
 
-  const text =
+  const description =
     dateText +
     " — " +
     weekendMatch.title +
     " — " +
-    data.length * 3 +
-    " partidos en  " +
-    data.length +
-    "  series — " +
-    data.length * 10 +
+    (data.length + 10) * 3 +
+    " partidos en " +
+    (data.length + 10) +
+    " series, " +
+    (data.length + 10) * 2 +
+    " equipos, con un total de " +
+    (data.length + 10) * 10 +
     " jugadores en la fecha — ";
+
+  // const text =
+  //   dateText +
+  //   " — " +
+  //   weekendMatch.title +
+  //   " — " +
+  //   (data.length + 10) * 3 +
+  //   " partidos en  " +
+  //   (data.length + 10) +
+  //   " series con un total de " +
+  //   (data.length + 10) * 10 +
+  //   " jugadores en la fecha — ";
 
   return (
     <Marquee className="w-full max-w-sm md:max-w-5xl mx-auto font-medium text-lg">
-      {text}
+      {description}
     </Marquee>
   );
 };

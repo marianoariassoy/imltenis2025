@@ -1,24 +1,21 @@
 import Image from "next/image";
 import { Container } from "@/components/Container";
 import Marquee from "./marquee";
-import Video from "./video";
 
 const Nosotros = () => {
   return (
     <Container>
       <Marquee />
 
-      <Video />
-
-      {/* <div className="aspect-4/5 lg:aspect-video overflow-hidden rounded-2xl">
+      <div className="aspect-4/5 lg:aspect-video overflow-hidden rounded-2xl">
         <Image
-          src=""
+          src="/images/2026.png"
           className="w-full h-full object-cover object-center"
           width={1200}
           height={1200}
           alt="Portada"
         />
-      </div> */}
+      </div>
 
       <div className="flex flex-col gap-y-4 mt-2">
         <p>
