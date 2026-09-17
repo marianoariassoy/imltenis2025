@@ -61,40 +61,35 @@ const Page = async () => {
         />
       </div>
 
-      <div className="w-full mt-6">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-5">
+      <div className="w-full mt-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
           {data.map((item) => (
-            <article
-              className="flex items-center gap-x-2 min-w-0"
+            <a
+              href={item.ig}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-x-4 min-w-0 p-4 bg-black/10 rounded-xl shadow hover:bg-black/20 transition-all"
               key={item.id}
             >
-              <div className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shadow-md shrink-0">
+              <div className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shrink-0">
                 {item.image ? (
-                  <a href={item.ig} target="_blank" rel="noreferrer">
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      width={56}
-                      height={56}
-                      className="object-cover h-full w-full hover:opacity-70 transition-opacity"
-                    />
-                  </a>
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={56}
+                    height={56}
+                    className="object-cover h-full w-full"
+                  />
                 ) : null}
               </div>
 
-              <a
-                href={item.ig}
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-primary flex flex-col leading-5 min-w-0"
-              >
+              <div className="flex flex-col leading-5 min-w-0">
                 <span className="font-semibold truncate">{item.name}</span>
-
                 <span className="truncate">
                   @{getInstagramUsername(item.ig)}
                 </span>
-              </a>
-            </article>
+              </div>
+            </a>
           ))}
         </div>
       </div>

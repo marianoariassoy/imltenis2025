@@ -1,7 +1,7 @@
 import Title from "@/components/Title";
-import Item from "@/components/Item";
 import { Container } from "@/components/Container";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Equipos campeones",
@@ -44,27 +44,29 @@ const page = async () => {
 
   return (
     <Container>
-      <Title
-        title={`Equipos campeones`}
-        description={`${data.length} equipos`}
-      />
+      <Title title={`Equipos campeones (${data.length})`} emoji="⭐️" />
 
-      <div className="overflow-x-auto flex flex-col items-center gap-y-4 max-w-3xl mx-auto">
+      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-4">
         {data.map((item, index) => (
-          <div key={index} className="flex items-center gap-x-2">
-            <Item
-              image={item.team_image}
-              title={item.team_name}
-              link={`/equipos/${item.team_slug}`}
-              active={false}
-            />
-            <Link
-              href={`/torneos/${item.tournament_slug}`}
-              className="font-medium text-base hover:text-primary text-nowrap"
-            >
+          <Link
+            href={`/torneos/${item.tournament_slug}`}
+            key={index}
+            className="flex items-center gap-x-4 p-4 bg-black/10 rounded-xl shadow hover:bg-black/20 transition-all"
+          >
+            <div className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shrink-0">
+              <Image
+                src={item.team_image}
+                alt={item.team_name}
+                width={56}
+                height={56}
+                className="object-cover h-full w-full"
+              />
+            </div>
+            <div className="font-medium leading-5 text-secondary">
+              <span className="text-foreground">{item.team_name}</span>{" "}
               {item.tournament_name} {item.season_name}
-            </Link>
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
     </Container>

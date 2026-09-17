@@ -70,7 +70,7 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title={title} />
+      <Title title={title} emoji="🗓️" />
       <div className="-mt-4 -mb-2">
         <Marquee text={description} />
       </div>
