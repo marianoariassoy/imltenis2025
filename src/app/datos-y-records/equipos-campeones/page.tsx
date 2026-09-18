@@ -44,9 +44,13 @@ const page = async () => {
 
   return (
     <Container>
-      <Title title={`Equipos campeones (${data.length})`} emoji="⭐️" />
+      <Title
+        title={`Equipos campeones`}
+        description={`${data.length} equipos`}
+        emoji="⭐️"
+      />
 
-      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-4">
+      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-2">
         {data.map((item, index) => (
           <Link
             href={`/torneos/${item.tournament_slug}`}

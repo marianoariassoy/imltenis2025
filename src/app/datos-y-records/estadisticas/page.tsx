@@ -23,7 +23,7 @@ const Estadisticas = async () => {
         description="Los números también cuentan nuestra historia. En esta sección reunimos las principales estadísticas de IML Tenis para conocer la dimensión y el crecimiento del torneo a lo largo de sus temporadas."
       />
 
-      <div className="w-full p-6 rounded-xl bg-black/15 mt-4">
+      <div className="w-full p-6 rounded-xl bg-black/15 mt-2">
         <div className="w-full grid grid-cols-2 items-start gap-y-2 gap-x-4">
           <div>
             <div>Temporadas</div>

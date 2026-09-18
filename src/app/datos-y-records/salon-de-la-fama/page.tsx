@@ -1,8 +1,9 @@
 import Title from "@/components/Title";
-import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import Info from "@/components/Aviso";
 import { Container } from "@/components/Container";
+import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Ranking de partidos jugados",
@@ -67,42 +68,37 @@ const page = async () => {
         description="En este ranking podrás conocer a los jugadores con mayor cantidad de partidos disputados a lo largo de su participación en el torneo, destacando su trayectoria, compromiso y presencia dentro de la competencia."
       />
 
-      <div className="overflow-x-auto mt-2">
-        <table className="table w-full">
-          <thead>
-            <tr>
-              {labels.map((item, index) => (
-                <th key={index}>{item.name}</th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {data
-              .filter((item) => item.image !== null)
-              .map((item, index) => (
-                <tr
-                  key={index}
-                  className={`${index === 0 ? "text-primary" : ""}`}
+      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-2">
+        {data
+          .filter((item) => item.image !== null)
+          .map((item, index) => (
+            <Link
+              href={`/jugadores/${item.slug}`}
+              key={index}
+              className="flex gap-2 items-center justify-between p-4 bg-black/10 rounded-xl shadow hover:bg-black/20 transition-all"
+            >
+              <div className="flex items-center gap-2">
+                <div
+                  className={`font-medium pr-2 ${index === 0 ? "text-primary" : null}`}
                 >
-                  <td className="flex gap-x-4 items-center w-full">
-                    <span className="font-bold">{index + 1}</span>
-                    <Item
-                      image={item.image}
-                      title={item.name}
-                      link={`/jugadores/${item.slug}`}
-                      active={index === 0 ? true : false}
-                    />
-                  </td>
-                  <td
-                    className={`font-bold ${index < 1 ? "text-primary" : ""}`}
-                  >
-                    {item.matches}
-                  </td>
-                  <td>{item.teams}</td>
-                </tr>
-              ))}
-          </tbody>
-        </table>
+                  {index + 1}
+                </div>
+                <div className="w-16 h-16 rounded-full overflow-hidden bg-white/20 shrink-0">
+                  <Image
+                    src={item.image}
+                    alt={item.name}
+                    width={64}
+                    height={64}
+                    className="object-cover h-full w-full"
+                  />
+                </div>
+                <div className="font-medium leading-5">{item.name}</div>
+              </div>
+              <div className=" shrink-0 text-primary font-bold text-xl">
+                {item.matches}
+              </div>
+            </Link>
+          ))}
       </div>
       <Labels labels={labels} />
       <Info text="Solo se muestra jugadores con foto de perfil y al menos un partido jugado" />

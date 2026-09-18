@@ -40,10 +40,10 @@ const page = () => {
       <Title
         title="Datos y Records"
         emoji="💪🏻"
-        description="Todos los datos que forman parte de la historia de IML Tenis, reunidos en un solo lugar. Estadísticas, marcas y récords que reflejan los grandes momentos, las grandes actuaciones y la evolución del torneo a lo largo de sus temporadas."
+        description="Todos los datos que forman parte de la historia de IML Tenis, reunidos en un solo lugar. Estadísticas, marcas y récords que reflejan los grandes momentos."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center text-center mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center text-center mt-2">
         {nav.map((item, index) => (
           <Link
             key={index}
