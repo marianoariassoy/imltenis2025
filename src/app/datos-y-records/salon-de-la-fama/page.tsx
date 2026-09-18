@@ -77,9 +77,9 @@ const page = async () => {
               key={index}
               className="flex gap-2 items-center justify-between p-4 bg-black/10 rounded-xl shadow hover:bg-black/20 transition-all"
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <div
-                  className={`font-medium pr-2 ${index === 0 ? "text-primary" : null}`}
+                  className={`font-medium ${index === 0 ? "text-primary" : null}`}
                 >
                   {index + 1}
                 </div>

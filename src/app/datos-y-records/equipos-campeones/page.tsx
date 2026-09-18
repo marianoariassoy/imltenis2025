@@ -55,7 +55,7 @@ const page = async () => {
           <Link
             href={`/torneos/${item.tournament_slug}`}
             key={index}
-            className="flex items-center gap-x-4 p-4 bg-black/10 rounded-xl shadow hover:bg-black/20 transition-all"
+            className="flex items-center gap-3 p-4 bg-black/10 rounded-xl shadow hover:bg-black/20 transition-all"
           >
             <div className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shrink-0">
               <Image
