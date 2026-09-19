@@ -75,7 +75,7 @@ const page = async () => {
         <Marquee text={description} />
       </div>
 
-      <div className="overflow-x-auto whitespace-nowrap mt-4">
+      <div className="overflow-x-auto whitespace-nowrap mt-2">
         <table className="table w-full mb-3">
           <thead>
             <tr>
@@ -124,11 +124,6 @@ const page = async () => {
           </tbody>
         </table>
       </div>
-
-      {/* <div className="text-secondary text-center text-sm font-medium">
-        <span className="mr-1 text-xl">⭐️</span>
-        Serie a otorgarse el premio Jugador Destacado Yuka de la fecha.
-      </div> */}
     </Container>
   );
 };

@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({ title, subtitle, description, emoji, icon }: HeaderProps) => {
   return (
-    <header className="flex flex-col gap-1 items-center justify-center text-center px-4">
+    <header className="flex flex-col gap-1 md:gap-2 items-center justify-center text-center px-4">
       {icon && <div className="text-3xl text-primary">{icon}</div>}
       {emoji && <div className="text-2xl">{emoji}</div>}
       <div className="text-primary">
@@ -18,7 +18,7 @@ const Header = ({ title, subtitle, description, emoji, icon }: HeaderProps) => {
         )}
       </div>
       {description && (
-        <div className="font-medium text-secondary md:mt-2">{description}</div>
+        <div className="font-medium text-secondary">{description}</div>
       )}
     </header>
   );

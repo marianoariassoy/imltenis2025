@@ -4,7 +4,7 @@ import Whatsapp from "@/components/WhatsApp";
 import Countdown from "./home/countdown";
 import AIIntroBubble from "@/components/AIIntroBubble";
 import Video from "./home/video";
-import Current from "./home/current";
+import Ordendejuego from "./home/ordendejuego";
 import Link from "next/link";
 
 export default function Home() {
@@ -65,9 +65,41 @@ export default function Home() {
 
   const isWeekend = () => {
     const now = new Date();
-    const weekend = now.getDay() === 0 || now.getDay() === 6;
-    return weekend;
+    return now.getDay() === 0 || now.getDay() === 6;
   };
+
+  const getRelevantDate = () => {
+    const now = new Date();
+
+    // Domingo pertenece a la fecha del sábado anterior
+    const reference = new Date(now);
+
+    if (reference.getDay() === 0) {
+      reference.setDate(reference.getDate() - 1);
+    }
+
+    return (
+      dates
+        .slice()
+        .reverse()
+        .find((item) => {
+          const date = new Date(item.date);
+
+          // La fecha corresponde desde el lunes anterior
+          // hasta el domingo de esa semana
+          const monday = new Date(date);
+          monday.setDate(date.getDate() - 5);
+          monday.setHours(0, 0, 0, 0);
+
+          const nextMonday = new Date(monday);
+          nextMonday.setDate(monday.getDate() + 7);
+
+          return reference >= monday && reference < nextMonday;
+        }) ?? dates[0]
+    );
+  };
+
+  const relevantDate = getRelevantDate();
 
   return (
     <>
@@ -84,25 +116,13 @@ export default function Home() {
           </Link>
         </div>
 
-        {!isWeekend() ? (
-          <div className="absolute w-full bottom-20 md:bottom-10 px-4">
-            <Link
-              href="/orden-de-juego"
-              className="text-secondary hover:text-foreground"
-            >
-              <Countdown dates={dates} />
-            </Link>
-          </div>
-        ) : (
-          <div className="absolute w-full bottom-20 md:bottom-10 px-4">
-            <Link
-              href="/orden-de-juego"
-              className="text-secondary hover:text-foreground"
-            >
-              <Current dates={dates} />
-            </Link>
-          </div>
-        )}
+        <div className="absolute w-full bottom-8 px-4">
+          {!isWeekend() ? (
+            <Countdown date={relevantDate} />
+          ) : (
+            <Ordendejuego date={relevantDate} />
+          )}
+        </div>
       </section>
 
       <Notice />
