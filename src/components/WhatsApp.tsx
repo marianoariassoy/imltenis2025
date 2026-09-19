@@ -7,8 +7,8 @@ const Whatsapp = () => {
         href="http://wa.me/5491130171475"
         target="_blank"
         rel="noreferrer"
-        className="w-13 h-13 md:w-14 md:h-14 rounded-full 
-        text-xl transition-all flex items-center justify-center  hover:scale-105 text-white bg-primary"
+        className="w-13 h-13 rounded-full 
+        text-xl transition-all items-center justify-center  hover:scale-105 text-white bg-primary hidden md:flex"
       >
         <WhatsApp />
       </a>
