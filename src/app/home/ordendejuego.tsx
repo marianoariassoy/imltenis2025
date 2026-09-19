@@ -50,8 +50,10 @@ const page = async ({ date }: { date: TournamentDate }) => {
               className="flex items-center gap-2 px-4 py-2 bg-black/20 rounded-xl shadow hover:bg-black/35 transition-all text-sm"
             >
               <div className="text-secondary font-medium flex gap-x-1">
-                <span className="text-primary">{item.date}</span>
-                <span>{item.hour ? <span>{item.hour} hs.</span> : "—"}</span>
+                {/* <span >{item.date}</span> */}
+                <span className="text-primary">
+                  {item.hour ? <span>{item.hour} hs.</span> : "—"}
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Item title={item.home_name} image={item.home_image} />
