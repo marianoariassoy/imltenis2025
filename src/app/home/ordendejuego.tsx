@@ -26,17 +26,17 @@ const page = async ({ date }: { date: TournamentDate }) => {
     month: "long",
   });
 
-  // const today = new Date().getDate();
+  const today = new Date().getDate();
 
-  // const filteredData = data.filter((item) => {
-  //   const itemDay = parseInt(item.date.split(".")[0], 10);
-  //   return itemDay === today;
-  // });
+  const filteredData = data.filter((item) => {
+    const itemDay = parseInt(item.date.split(".")[0], 10);
+    return itemDay === today;
+  });
 
   // const duration = 500 * (data.length / 93);
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div>
       <div className="mb-2 text-center px-4 text-secondary">
         <Link href="/orden-de-juego" className="font-medium hover:text-primary">
           {date.title} — {day} y {nextDay.getDate()} de {month}
@@ -45,7 +45,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
 
       <Marquee pauseOnHover={true} className={`[--duration:500s]`}>
         <div className="flex items-center gap-1">
-          {data.map((item) => (
+          {filteredData.map((item) => (
             <Link
               href={`/series/${item.id}`}
               key={item.id}
@@ -62,7 +62,11 @@ const page = async ({ date }: { date: TournamentDate }) => {
               </div>
               <div className="flex items-center gap-2">
                 <Item title={item.home_name} image={item.home_image} />
-                {item.score ? <span>{item.score}</span> : <div>⚡️</div>}
+                {item.score ? (
+                  <span className="font-medium">{item.score}</span>
+                ) : (
+                  <div>⚡️</div>
+                )}
                 <Item title={item.away_name} image={item.away_image} />
               </div>
 

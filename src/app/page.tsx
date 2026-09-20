@@ -3,7 +3,6 @@ import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
 import Countdown from "./home/countdown";
 import AIIntroBubble from "@/components/AIIntroBubble";
-import Video from "./home/video";
 import Ordendejuego from "./home/ordendejuego";
 import Link from "next/link";
 
@@ -103,8 +102,8 @@ export default function Home() {
 
   return (
     <>
-      <section className="h-screen w-full">
-        <div className="absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-1/2 text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 px-4">
+      <section className="h-screen w-screen">
+        <div className="absolute w-screen top-1/2 -translate-y-1/2 text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 px-4 overflow-hidden mt-10">
           <Link
             href="/orden-de-juego"
             className="text-[3.3rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer text-primary"
@@ -114,21 +113,30 @@ export default function Home() {
               <Veinteventiseis />
             </div>
           </Link>
-        </div>
-
-        <div className="absolute w-full bottom-8 px-4">
-          {!isWeekend() ? (
-            <Countdown date={relevantDate} />
-          ) : (
-            <Ordendejuego date={relevantDate} />
-          )}
+          <div className="px-4 mt-2 md:mt-4">
+            {!isWeekend() ? (
+              <Countdown date={relevantDate} />
+            ) : (
+              <Ordendejuego date={relevantDate} />
+            )}
+          </div>
         </div>
       </section>
 
       <Notice />
       <AIIntroBubble />
       <Whatsapp />
-      <Video />
+
+      <div className="absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden blur-sm">
+        <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-10"></div>
+
+        <div className="absolute w-full h-20 bottom-0 left-0 bg-linear-to-b from-background/0 to-background z-10"></div>
+        <img
+          src="/images/bg-home.webp"
+          alt="IML Tenis"
+          className="w-full h-full object-center object-cover opacity-80 saturate-[.8]"
+        />
+      </div>
     </>
   );
 }
