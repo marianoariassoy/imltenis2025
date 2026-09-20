@@ -50,7 +50,7 @@ const ReviewCard = ({
   );
 };
 
-const asyncMarqueeDemo = async () => {
+const Clubes = async () => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes",
     {
@@ -79,4 +79,4 @@ const asyncMarqueeDemo = async () => {
   );
 };
 
-export default asyncMarqueeDemo;
+export default Clubes;
