@@ -6,7 +6,7 @@ import AIIntroBubble from "@/components/AIIntroBubble";
 import Ordendejuego from "./home/ordendejuego";
 import Link from "next/link";
 import Clubes from "./home/clubes";
-import Jugadores from "./home/jugadores";
+// import Jugadores from "./home/jugadores";
 
 export default function Home() {
   const dates = [
