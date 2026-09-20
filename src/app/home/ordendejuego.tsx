@@ -33,7 +33,8 @@ const page = async ({ date }: { date: TournamentDate }) => {
   //   return itemDay === today;
   // });
 
-  const duration = 500 * (data.length / 93);
+  // const duration = 500 * (data.length / 93);
+  const duration = 500;
 
   return (
     <div className="max-w-4xl mx-auto">
