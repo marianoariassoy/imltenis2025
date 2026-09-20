@@ -6,6 +6,7 @@ import AIIntroBubble from "@/components/AIIntroBubble";
 import Ordendejuego from "./home/ordendejuego";
 import Link from "next/link";
 import Clubes from "./home/clubes";
+
 // import Jugadores from "./home/jugadores";
 
 export default function Home() {
@@ -104,7 +105,7 @@ export default function Home() {
 
   return (
     <section className="flex flex-col gap-y-4">
-      <div className="relative pt-[25vh] pb-[20vh]">
+      <div className="relative pt-[25vh] pb-[14vh]">
         <div className="w-full text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 overflow-hidden">
           <Link
             href="/orden-de-juego"
@@ -127,7 +128,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-2 px-4 w-full max-w-6xl mx-auto">
+      <div className="flex flex-col gap-4 px-4 w-full max-w-6xl mx-auto">
         {!isWeekend() ? (
           <Countdown date={relevantDate} />
         ) : (
