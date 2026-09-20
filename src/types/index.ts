@@ -30,6 +30,7 @@ export interface Serie {
   tournament_slug: string;
   club_home: number;
   club_away: number;
+  score: string;
 }
 
 export interface Juego {

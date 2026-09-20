@@ -81,6 +81,7 @@ const page = async () => {
             <tr>
               <th scope="col">Fecha y hora</th>
               <th scope="col">Local</th>
+              <th scope="col">Score</th>
               <th scope="col">Visitante</th>
               <th scope="col">Categoría</th>
             </tr>
@@ -104,6 +105,19 @@ const page = async () => {
                     image={item.home_image}
                   />
                 </td>
+                <td>
+                  {item.score ? (
+                    <Link
+                      className="hover:text-primary"
+                      href={`/series/${item.id}`}
+                    >
+                      {item.score}
+                    </Link>
+                  ) : (
+                    <div>⚡️</div>
+                  )}
+                </td>
+
                 <td>
                   <Item
                     link={`/equipos/${item.away_slug}`}
