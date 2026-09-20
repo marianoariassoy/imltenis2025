@@ -10,9 +10,9 @@ interface Item {
 
 const TeamItem = ({ link, title, subtitle, image }: Item) => {
   return (
-    <div className="flex flex-col gap-y-4 items-center w-32">
+    <div className="flex flex-col gap-2 items-center w-32">
       <Link href={link} className="hover:opacity-70 transition-opacity">
-        <div className="w-20 h-20 rounded-full overflow-hidden">
+        <div className="w-18 h-18 md:w-20 md:h-20 rounded-full overflow-hidden">
           <Image
             src={image}
             width="80"
@@ -25,7 +25,7 @@ const TeamItem = ({ link, title, subtitle, image }: Item) => {
       <div className="px-3 flex flex-col">
         <Link
           href={link}
-          className="hover:underline text-primary font-semibold"
+          className="hover:underline text-primary font-semibold leading-5"
         >
           {title}
         </Link>
