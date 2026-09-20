@@ -34,7 +34,6 @@ const page = async ({ date }: { date: TournamentDate }) => {
   // });
 
   // const duration = 500 * (data.length / 93);
-  const duration = 500;
 
   return (
     <div className="max-w-4xl mx-auto">
@@ -44,7 +43,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
         </Link>
       </div>
 
-      <Marquee pauseOnHover={true} className={`[--duration:${duration}s] `}>
+      <Marquee pauseOnHover={true} className={`[--duration:500s]`}>
         <div className="flex items-center gap-1">
           {data.map((item) => (
             <Link
