@@ -45,8 +45,7 @@ const Page = async ({
 
       <Aviso
         type="info"
-        text="Al finalizar el torneo, el ganador o la ganadora de cada categoría recibirá un obsequio especial, gentileza de Mito Gafas.
-"
+        text="Al finalizar el torneo, el ganador o la ganadora de cada categoría recibirá un obsequio especial, gentileza de Mito Gafas."
       />
     </Container>
   );

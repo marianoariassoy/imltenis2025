@@ -36,8 +36,8 @@ const page = async ({ date }: { date: TournamentDate }) => {
   // const duration = 500 * (data.length / 93);
 
   return (
-    <div>
-      <div className="mb-2 text-center px-4 text-secondary">
+    <div className="flex flex-col gap-2">
+      <div className="text-center text-secondary">
         <Link href="/orden-de-juego" className="font-medium hover:text-primary">
           {date.title} — {day} y {nextDay.getDate()} de {month}
         </Link>
@@ -49,7 +49,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
             <Link
               href={`/series/${item.id}`}
               key={item.id}
-              className="flex items-center gap-2 px-4 py-2 bg-black/20 rounded-xl shadow hover:bg-black/35 transition-all text-sm"
+              className="flex items-center gap-2 px-4 py-2 bg-black/20 rounded-xl  hover:bg-black/35 transition-all text-sm"
             >
               <div className="text-secondary font-medium flex gap-x-1">
                 <span>{item.date}</span>
@@ -69,7 +69,6 @@ const page = async ({ date }: { date: TournamentDate }) => {
                 )}
                 <Item title={item.away_name} image={item.away_image} />
               </div>
-
               <div className="font-medium text-secondary">
                 {item.tournament_name}
               </div>

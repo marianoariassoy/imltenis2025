@@ -1,5 +1,4 @@
-import { Marquee } from "@/components/ui/marquee";
-import { obtenerAbreviado } from "@/lib/abbreviations";
+import Link from "next/link";
 
 interface data {
   id: string;
@@ -17,24 +16,34 @@ const ReviewCard = ({
   image,
   name,
   num,
+  club_slug,
 }: {
   image: string;
   name: string;
   num: number;
+  club_slug: string;
 }) => {
   return (
-    <article className=" h-full cursor-pointer px-2">
+    <article className="h-full shrink-0">
       <div className="flex flex-row items-center gap-2">
-        <div className="font-bold">{num}.</div>
         <div className="flex items-center gap-2">
-          <img
-            className="rounded-full"
-            width="42"
-            height="42"
-            alt=""
-            src={image}
-          />
-          <div className="font-semibold">{obtenerAbreviado(name)}</div>
+          <div
+            className={`font-bold mr-1 text-sm ${num < 5 ? "text-primary" : null}`}
+          >
+            {num}
+          </div>
+          <Link
+            href={`/clubes/${club_slug}`}
+            className="hover:opacity-80 transition-opacity"
+          >
+            <img
+              className="rounded-full w-12 h-12"
+              width="56"
+              height="56"
+              alt={name}
+              src={image}
+            />
+          </Link>
         </div>
       </div>
     </article>
@@ -52,16 +61,20 @@ const asyncMarqueeDemo = async () => {
   if (!data) return;
 
   return (
-    <div className="relative flex w-full flex-col items-center justify-center overflow-hidden mt-8">
-      <h1 className="mb-2 font-semibold text-secondary">Ranking de clubes</h1>
-      <Marquee pauseOnHover className="[--duration:200s]">
-        {data.slice(0, 20).map((item, index) => (
-          <ReviewCard key={item.id} {...item} num={index + 1} />
-        ))}
-      </Marquee>
-
-      <div className="from-background pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-linear-to-r"></div>
-      <div className="from-background pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l"></div>
+    <div className="flex flex-col gap-4">
+      <Link
+        href="/rankings/clubes"
+        className="font-medium hover:text-primary text-secondary text-center"
+      >
+        Ranking de Clubes (Top 10)
+      </Link>
+      <div className="overflow-x-auto mx-auto">
+        <div className="w-full flex gap-4 pb-4">
+          {data.slice(0, 10).map((item, index) => (
+            <ReviewCard key={index} {...item} num={index + 1} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

@@ -5,6 +5,8 @@ import Countdown from "./home/countdown";
 import AIIntroBubble from "@/components/AIIntroBubble";
 import Ordendejuego from "./home/ordendejuego";
 import Link from "next/link";
+import Clubes from "./home/clubes";
+import Jugadores from "./home/jugadores";
 
 export default function Home() {
   const dates = [
@@ -101,42 +103,43 @@ export default function Home() {
   const relevantDate = getRelevantDate();
 
   return (
-    <>
-      <section className="h-screen w-screen">
-        <div className="absolute w-screen top-1/2 -translate-y-1/2 text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 px-4 overflow-hidden mt-10">
+    <section className="flex flex-col gap-y-4">
+      <div className="relative pt-[25vh] pb-[20vh]">
+        <div className="w-full text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 overflow-hidden">
           <Link
             href="/orden-de-juego"
             className="text-[3.3rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer text-primary"
           >
             Torneo <br /> Interclubes <br /> Clausura <br />
-            <div className="text-primary mt-2 mb-2 w-full flex justify-center">
+            <div className="mt-2 flex justify-center">
               <Veinteventiseis />
             </div>
           </Link>
-          <div className="px-4 mt-2 md:mt-4">
-            {!isWeekend() ? (
-              <Countdown date={relevantDate} />
-            ) : (
-              <Ordendejuego date={relevantDate} />
-            )}
+          <div className="absolute h-full w-full left-0 top-0 -z-10 overflow-hidden">
+            <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-10"></div>
+            <div className="absolute w-full h-20 bottom-0 left-0 bg-linear-to-b from-background/0 to-background z-10"></div>
+            <img
+              src="/images/bg-home.webp"
+              alt="IML Tenis"
+              className="w-full h-full object-center object-cover opacity-80 saturate-[.8] blur-sm"
+            />
           </div>
         </div>
-      </section>
+      </div>
+
+      <div className="flex flex-col gap-2 px-4 w-full max-w-6xl mx-auto">
+        {!isWeekend() ? (
+          <Countdown date={relevantDate} />
+        ) : (
+          <Ordendejuego date={relevantDate} />
+        )}
+        {/* <Jugadores /> */}
+        <Clubes />
+      </div>
 
       <Notice />
       <AIIntroBubble />
       <Whatsapp />
-
-      <div className="absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden blur-sm">
-        <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-10"></div>
-
-        <div className="absolute w-full h-20 bottom-0 left-0 bg-linear-to-b from-background/0 to-background z-10"></div>
-        <img
-          src="/images/bg-home.webp"
-          alt="IML Tenis"
-          className="w-full h-full object-center object-cover opacity-80 saturate-[.8]"
-        />
-      </div>
-    </>
+    </section>
   );
 }

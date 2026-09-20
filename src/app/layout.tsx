@@ -61,7 +61,7 @@ export default function RootLayout({
         <main className="flex-1">{children}</main>
         <Footer />
         <AnalyticsProvider />
-        <div className="fixed bottom-0 left-0 w-screen h-full -z-20">
+        <div className="fixed bottom-0 left-0 w-screen h-full -z-20 hidden">
           <svg
             className="hidden md:block"
             viewBox="0 0 1920 1080"
