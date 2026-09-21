@@ -100,7 +100,7 @@ export default function Countdown({
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
-      <div className="flex items-center justify-center w-10 md:w-12 text-2xl font-semibold">
+      <div className="flex items-center justify-center w-10 md:w-12 text-2xl md:text-3xl font-semibold">
         {value.toString().padStart(2, "0")}
       </div>
 
@@ -112,7 +112,7 @@ export default function Countdown({
 
   return (
     <div
-      className={`w-full px-4 mb-4 text-secondary fade-in text-center ${className}`}
+      className={`w-full px-4 mb-12 text-secondary fade-in text-center ${className}`}
     >
       <h2 className="font-medium text-lg mb-1">
         <span className="hidden md:block">

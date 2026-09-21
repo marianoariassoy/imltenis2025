@@ -28,7 +28,7 @@ const Jugadores = async () => {
         href="/rankings/jugadores/damas-intermedia-30-clausura-2026"
         className="font-medium text-secondary text-center hover:text-primary"
       >
-        Ranking de Jugadores
+        Ranking de jugadores
       </Link>
       <Marquee pauseOnHover={true} className="[--duration:50s]">
         <div className="w-full flex gap-x-4 pb-4">

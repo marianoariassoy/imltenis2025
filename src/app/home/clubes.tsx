@@ -66,7 +66,7 @@ const Clubes = async () => {
         href="/rankings/clubes"
         className="font-medium hover:text-primary text-secondary text-center"
       >
-        Ranking de Clubes (Top 10)
+        Ranking de clubes (Top 10)
       </Link>
       <div className="w-full overflow-x-auto mx-auto">
         <div className="w-full flex md:justify-center gap-x-4 md:gap-x-6 pb-4">
