@@ -1,6 +1,7 @@
 import { Marquee } from "@/components/ui/marquee";
-import Item from "@/components/ItemExtraSmall";
+import Image from "next/image";
 import Link from "next/link";
+import { obtenerPrimerNombreYApellido } from "@/lib/abbreviations";
 
 interface Data {
   id: string;
@@ -9,6 +10,7 @@ interface Data {
   player_name: string;
   matches_won: string;
   category: string;
+  category_slug: string;
 }
 
 const Jugadores = async () => {
@@ -21,27 +23,43 @@ const Jugadores = async () => {
   const data = (await response.json()) as Data[];
   if (!data) return null;
   return (
-    <div className="flex flex-col gap-2">
+    <div className="w-full flex flex-col gap-y-3">
       <Link
         href="/rankings/jugadores/damas-intermedia-30-clausura-2026"
         className="font-medium text-secondary text-center hover:text-primary"
       >
         Ranking de Jugadores
       </Link>
-      <Marquee pauseOnHover={true} className={`[--duration:100s]`}>
-        <div className="flex items-center gap-1">
-          {data.slice(0, 10).map((item) => (
-            <Link
-              href={`/jugadores/${item.player_slug}`}
-              key={item.id}
-              className="flex items-center gap-1 px-4 py-2 bg-black/20 rounded-xl  hover:bg-black/35 transition-all text-sm"
-            >
-              <Item title={item.player_name} image={item.player_image} />
-              <div className="font-medium text-secondary">
-                {item.player_name}
+      <Marquee pauseOnHover={true} className="[--duration:50s]">
+        <div className="w-full flex gap-x-4 pb-4">
+          {data.map((item) => (
+            <article key={item.id} className="flex items-center gap-2 shrink-0">
+              <Link
+                href={`/jugadores/${item.player_slug}`}
+                className="w-11 h-11 rounded-full overflow-hidden bg-white/10 shrink-0 hover:opacity-80 transition-all"
+              >
+                {item.player_image && (
+                  <Image
+                    src={item.player_image}
+                    alt={item.player_name}
+                    width={56}
+                    height={56}
+                    className="object-cover h-full w-full"
+                  />
+                )}
+              </Link>
+              <div className="flex flex-col font-medium text-secondary text-sm">
+                <span className="font-medium leading-4">
+                  {obtenerPrimerNombreYApellido(item.player_name)}
+                </span>
+                <Link
+                  href={`/rankings/jugadores/${item.category_slug}`}
+                  className="text-primary leading-4 hover:underline"
+                >
+                  {item.category}
+                </Link>
               </div>
-              <div className="font-medium text-primary">{item.category}</div>
-            </Link>
+            </article>
           ))}
         </div>
       </Marquee>

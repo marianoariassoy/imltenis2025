@@ -6,8 +6,7 @@ import AIIntroBubble from "@/components/AIIntroBubble";
 import Ordendejuego from "./home/ordendejuego";
 import Link from "next/link";
 import Clubes from "./home/clubes";
-
-// import Jugadores from "./home/jugadores";
+import Jugadores from "./home/jugadores";
 
 export default function Home() {
   const dates = [
@@ -105,7 +104,7 @@ export default function Home() {
 
   return (
     <section className="flex flex-col gap-y-4">
-      <div className="relative pt-[25vh] pb-[14vh]">
+      <div className="relative pt-[32vh] pb-[18vh] md:pt-[25vh] md:pb-[10vh]">
         <div className="w-full text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 overflow-hidden">
           <Link
             href="/orden-de-juego"
@@ -116,31 +115,32 @@ export default function Home() {
               <Veinteventiseis />
             </div>
           </Link>
-          <div className="absolute h-full w-full left-0 top-0 -z-10 overflow-hidden">
-            <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-10"></div>
-            <div className="absolute w-full h-20 bottom-0 left-0 bg-linear-to-b from-background/0 to-background z-10"></div>
-            <img
-              src="/images/bg-home.webp"
-              alt="IML Tenis"
-              className="w-full h-full object-center object-cover opacity-80 saturate-[.8] blur-sm"
-            />
-          </div>
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 px-4 w-full max-w-6xl mx-auto">
+      <div className="flex flex-col gap-y-4 px-4 w-full max-w-5xl mx-auto">
         {!isWeekend() ? (
           <Countdown date={relevantDate} />
         ) : (
           <Ordendejuego date={relevantDate} />
         )}
-        {/* <Jugadores /> */}
         <Clubes />
+        <Jugadores />
       </div>
 
       <Notice />
       <AIIntroBubble />
       <Whatsapp />
+
+      <div className="absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden">
+        <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-10"></div>
+        <div className="absolute w-full h-20 bottom-0 left-0 bg-linear-to-b from-background/0 to-background z-10"></div>
+        <img
+          src="/images/bg-home.webp"
+          alt="IML Tenis"
+          className="w-full h-full object-center object-cover opacity-80 saturate-[.8] blur-sm"
+        />
+      </div>
     </section>
   );
 }

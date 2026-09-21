@@ -70,10 +70,10 @@ export default function Countdown({
 }: CountdownProps) {
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(null);
 
-  const targetDate =
-    typeof date.date === "string" ? new Date(date.date) : date.date;
-
   useEffect(() => {
+    const targetDate =
+      typeof date.date === "string" ? new Date(date.date) : date.date;
+
     const update = () => {
       const remaining = calculateTimeLeft(targetDate);
 
@@ -89,11 +89,14 @@ export default function Countdown({
     const interval = setInterval(update, 1000);
 
     return () => clearInterval(interval);
-  }, [targetDate, onComplete]);
+  }, [date.date, onComplete]);
 
   if (!timeLeft) {
     return null;
   }
+
+  const targetDate =
+    typeof date.date === "string" ? new Date(date.date) : date.date;
 
   const Item = ({ value, label }: { value: number; label: string }) => (
     <div className="flex flex-col items-center">
@@ -108,7 +111,9 @@ export default function Countdown({
   );
 
   return (
-    <div className={`w-full px-4 md:px-16 fade-in text-center ${className}`}>
+    <div
+      className={`w-full px-4 mb-4 text-secondary fade-in text-center ${className}`}
+    >
       <h2 className="font-medium text-lg mb-1">
         <span className="hidden md:block">
           {formatDateRange(targetDate, true)} — {date.title}
