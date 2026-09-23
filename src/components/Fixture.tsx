@@ -24,7 +24,7 @@ const FixtureMain = ({ data, title }: { data: Serie[]; title: boolean }) => {
   const played = data.filter((item) => item.winner === true);
 
   return (
-    <section className="flex flex-col gap-y-4">
+    <section className="flex flex-col gap-y-4 w-full max-w-4xl mx-auto mt-3">
       {title && (
         <div className="flex flex-col items-center justify-center">
           <Title title={"Calendario"} winners={0} />

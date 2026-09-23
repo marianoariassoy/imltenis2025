@@ -53,21 +53,21 @@ const Jugadores = async ({
   const withoutImage = data.some((item) => item.image === null);
 
   return (
-    <section className="flex flex-col gap-y-4 -mt-4">
-      <div className="text-center">
-        <h1 className="text-primary font-semibold flex items-center gap-x-1 justify-center">
-          <span>Lista de buena fe</span>
+    <section className="flex flex-col gap-y-4 -mt-4 w-full max-w-4xl mx-auto">
+      <div className="flex flex-col items-center justify-center">
+        <div className="flex items-center gap-x-2">
+          <span className="text-primary font-semibold flex items-center gap-x-1 justify-center">
+            Lista de buena fe
+          </span>
           {!withoutImage && (
             <span className="text-primary text-base">
               <Verified />
             </span>
           )}
-        </h1>
-        <div className="flex items-center justify-center gap-x-2">
-          <h2 className="font-medium text-secondary text-base">
-            {captain_name} (Capitán)
-          </h2>
         </div>
+        <span className="font-medium text-secondary text-base">
+          {captain_name} (Capitán)
+        </span>
       </div>
       {withoutImage && (
         <Aviso

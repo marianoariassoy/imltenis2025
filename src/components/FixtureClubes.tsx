@@ -15,7 +15,7 @@ const FixtureMain = ({
   club_id: string;
 }) => {
   return (
-    <section className="flex flex-col gap-y-4">
+    <section className="flex flex-col gap-y-4 w-full max-w-4xl mx-auto">
       {title && (
         <h1 className="font-bold text-primary text-center">
           Próximas series ({data.length})
@@ -40,7 +40,6 @@ const FixtureMain = ({
                   <th>Equipo local</th>
                   <th>Equipo visitante</th>
                   <th>Torneo</th>
-                  <th>Serie</th>
                 </tr>
               </thead>
             )}
@@ -106,14 +105,6 @@ const FixtureMain = ({
                       className="hover:underline text-primary font-medium"
                     >
                       {item.tournament_name}
-                    </Link>
-                  </td>
-                  <td>
-                    <Link
-                      href={`/series/${item.id}`}
-                      className="hover:text-primary text-secondary"
-                    >
-                      #{item.id}
                     </Link>
                   </td>
                 </tr>

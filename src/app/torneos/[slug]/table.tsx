@@ -28,7 +28,7 @@ const Tabla = async ({
   if (!data) return null;
 
   return (
-    <section className="flex flex-col gap-y-3">
+    <section className="flex flex-col gap-y-3 w-full max-w-4xl mx-auto">
       <div className="overflow-x-auto whitespace-nowrap">
         <table className="w-full table table-auto">
           <thead>
@@ -77,9 +77,7 @@ const Tabla = async ({
                       : 0}
                   </span>
                 </td>
-                <td>
-                  <span className="text-secondary">{item.wo}</span>
-                </td>
+
                 <td>
                   {!twoMatches && (
                     <div className="flex gap-x-[0.35rem]">

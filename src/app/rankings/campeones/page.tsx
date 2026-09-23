@@ -65,7 +65,7 @@ const page = async () => {
   return (
     <Container>
       <Title title="Clubes Campeones" description="Desde 2023" emoji="🏆" />
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto w-full max-w-4xl mx-auto">
         <table className="table w-full mb-2">
           <thead>
             <tr>

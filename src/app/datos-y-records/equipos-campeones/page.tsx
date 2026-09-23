@@ -50,7 +50,7 @@ const page = async () => {
         emoji="⭐️"
       />
 
-      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-2">
+      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-2 w-full max-w-4xl mx-auto">
         {data.map((item, index) => (
           <Link
             href={`/torneos/${item.tournament_slug}`}

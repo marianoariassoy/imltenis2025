@@ -80,7 +80,7 @@ const Page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             {data.tournament_name}
           </Link>
         </div>
-        <div className="flex justify-center gap-x-4 items-center">
+        <div className="flex justify-center gap-x-4 items-center mt-1">
           <Link
             href={`/clubes/${data.club_slug}`}
             className="flex gap-x-1 items-center text-primary hover:underline"

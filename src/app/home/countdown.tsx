@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 type TournamentDate = {
   title: string;
@@ -111,8 +112,9 @@ export default function Countdown({
   );
 
   return (
-    <div
-      className={`w-full px-4 mb-12 text-secondary fade-in text-center ${className}`}
+    <Link
+      href="/orden-de-juego"
+      className={`w-full px-4 mb-12 text-secondary hover:text-primary fade-in text-center ${className}`}
     >
       <h2 className="font-medium text-lg mb-1">
         <span className="hidden md:block">
@@ -130,6 +132,6 @@ export default function Countdown({
         <Item value={timeLeft.minutes} label="M" />
         <Item value={timeLeft.seconds} label="S" />
       </div>
-    </div>
+    </Link>
   );
 }

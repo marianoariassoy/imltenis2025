@@ -30,8 +30,7 @@ const Footer = () => {
           <Link href="/terminos-y-condiciones" className="hover:text-primary">
             Terminos y Condiciones
           </Link>
-        </div>
-        <div className="font-medium">
+          <span>—</span>
           <span>Hecho con ❤︎ en {year}</span>
         </div>
       </div>

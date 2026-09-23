@@ -71,7 +71,7 @@ const page = async () => {
   return (
     <Container>
       <Title title={title} emoji="🗓️" />
-      <div className="-mt-4 -mb-2">
+      <div className="w-full -mt-4">
         <Marquee text={description} />
       </div>
 

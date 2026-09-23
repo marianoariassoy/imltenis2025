@@ -57,10 +57,7 @@ const groups = async ({
       name: "PR",
       value: "Promedio (porcentaje)",
     },
-    {
-      name: "WO",
-      value: "Walkovers (serie)",
-    },
+
     {
       name: "Ult. 5 series",
       value: "",
@@ -99,10 +96,6 @@ const groups = async ({
     {
       name: "PR",
       value: "Promedio (porcentaje)",
-    },
-    {
-      name: "WO",
-      value: "Walkovers (serie)",
     },
   ];
 

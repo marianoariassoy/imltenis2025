@@ -50,7 +50,7 @@ const Page = async () => {
 
   return (
     <Container>
-      <div className="flex flex-col gap-y-2 items-center">
+      <div className="flex flex-col gap-y-2 items-center w-full max-w-4xl mx-auto">
         <span className="text-primary">
           <Instagram />
         </span>
@@ -61,7 +61,7 @@ const Page = async () => {
         />
       </div>
 
-      <div className="w-full mt-2">
+      <div className="w-full mt-2 max-w-4xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2">
           {data.map((item) => (
             <a

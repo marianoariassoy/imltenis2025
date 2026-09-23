@@ -61,7 +61,7 @@ const Clubes = async () => {
   if (!data) return;
 
   return (
-    <div className="flex flex-col gap-y-4">
+    <div className="flex flex-col gap-y-5">
       <Link
         href="/rankings/clubes"
         className="font-medium hover:text-primary text-secondary text-center"

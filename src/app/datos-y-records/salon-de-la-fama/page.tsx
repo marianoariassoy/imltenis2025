@@ -68,7 +68,7 @@ const page = async () => {
         description="En este ranking podrás conocer a los jugadores con mayor cantidad de partidos disputados a lo largo de su participación en el torneo, destacando su trayectoria, compromiso y presencia dentro de la competencia."
       />
 
-      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-2">
+      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-2 w-full max-w-4xl mx-auto">
         {data
           .filter((item) => item.image !== null)
           .map((item, index) => (
@@ -83,7 +83,7 @@ const page = async () => {
                 >
                   {index + 1}
                 </div>
-                <div className="w-16 h-16 rounded-full overflow-hidden bg-white/20 shrink-0">
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shrink-0">
                   <Image
                     src={item.image}
                     alt={item.name}

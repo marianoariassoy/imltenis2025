@@ -22,12 +22,18 @@ body {
   font-weight: 500;
   font-size: 0.9rem;
   padding-right: 1rem;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0;
 }
 
 .table tr td {
-  padding-top: 0.75rem;
+  padding-top: 0.7rem;
   padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .table-main tr td {
+    padding-right: 1rem;
+  }
 }
 
 .fade-in {
@@ -135,17 +141,4 @@ body {
       transform: translateY(calc(-100% - var(--gap)));
     }
   }
-}
-
-.shape {
-  fill: white;
-  opacity: 0.025;
-}
-
-.shape1 {
-  filter: blur(20px);
-}
-
-.shape2 {
-  filter: blur(20px);
 }

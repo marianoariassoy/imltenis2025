@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Notice from "@/components/Notice";
 import { Veinteventiseis } from "@/lib/icons";
 import Whatsapp from "@/components/WhatsApp";
@@ -7,6 +8,7 @@ import Ordendejuego from "./home/ordendejuego";
 import Link from "next/link";
 import Clubes from "./home/clubes";
 import Jugadores from "./home/jugadores";
+import Loader from "@/components/Loader";
 
 export default function Home() {
   const dates = [
@@ -120,12 +122,20 @@ export default function Home() {
 
       <div className="flex flex-col gap-y-4 px-4 w-full max-w-5xl mx-auto">
         {!isWeekend() ? (
-          <Countdown date={relevantDate} />
+          <Suspense fallback={<Loader />}>
+            <Countdown date={relevantDate} />
+          </Suspense>
         ) : (
-          <Ordendejuego date={relevantDate} />
+          <Suspense fallback={<Loader />}>
+            <Ordendejuego date={relevantDate} />
+          </Suspense>
         )}
-        <Clubes />
-        <Jugadores />
+        <Suspense fallback={<Loader />}>
+          <Clubes />
+        </Suspense>
+        <Suspense fallback={<Loader />}>
+          <Jugadores />
+        </Suspense>
       </div>
 
       <Notice />
