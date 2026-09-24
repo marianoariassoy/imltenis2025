@@ -122,9 +122,7 @@ export default function Home() {
 
       <div className="flex flex-col gap-y-4 px-4 w-full max-w-5xl mx-auto">
         {!isWeekend() ? (
-          <Suspense fallback={<Loader />}>
-            <Countdown date={relevantDate} />
-          </Suspense>
+          <Countdown date={relevantDate} />
         ) : (
           <Suspense fallback={<Loader />}>
             <Ordendejuego date={relevantDate} />

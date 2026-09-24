@@ -24,7 +24,7 @@ const Table = async ({ category_slug }: { category_slug: string }) => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/players",
     {
-      cache: "no-store",
+      next: { revalidate: 600 },
     },
   );
 

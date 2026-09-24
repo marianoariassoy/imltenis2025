@@ -17,7 +17,7 @@ const Jugadores = async () => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/players-top",
     {
-      cache: "no-store",
+      next: { revalidate: 600 },
     },
   );
   const data = (await response.json()) as Data[];

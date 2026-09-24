@@ -38,7 +38,7 @@ const page = async () => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/champions",
     {
-      cache: "no-store",
+      next: { revalidate: 600 },
     },
   );
   const data = (await response.json()) as data[];
