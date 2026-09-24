@@ -13,9 +13,6 @@ export const metadata = {
 const page = async () => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
-    {
-      next: { revalidate: 600 },
-    },
   );
   const data = (await response.json()) as Serie[];
   if (!data)
