@@ -2,7 +2,6 @@ import Title from "@/components/Title";
 import Item from "@/components/Item";
 import Labels from "@/components/Labels";
 import { Container } from "@/components/Container";
-import Marquee from "@/components/Marquee";
 import Info from "@/components/Info";
 
 export const metadata = {

@@ -16,9 +16,6 @@ const page = async () => {
   try {
     const response = await fetch(
       process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
-      {
-        next: { revalidate: 600 },
-      },
     );
 
     if (!response.ok) {
