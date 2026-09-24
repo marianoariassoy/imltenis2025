@@ -40,6 +40,9 @@ const page = async () => {
 
   const response = await fetch(
     `${process.env.NEXT_PUBLIC_API_URL}/rankings/clubes`,
+    {
+      cache: "no-store",
+    },
   );
 
   data = await response.json();
