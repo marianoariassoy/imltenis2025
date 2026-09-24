@@ -11,14 +11,36 @@ export const metadata = {
 };
 
 const page = async () => {
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
-    {
-      next: { revalidate: 600 },
-    },
-  );
-  const data = (await response.json()) as Serie[];
-  if (!data)
+  let data: Serie[] = [];
+
+  try {
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
+      {
+        next: { revalidate: 600 },
+      },
+    );
+
+    if (!response.ok) {
+      console.error(
+        "Error series/upcoming:",
+        response.status,
+        response.statusText,
+      );
+    } else {
+      const contentType = response.headers.get("content-type");
+
+      if (!contentType?.includes("application/json")) {
+        console.error("series/upcoming no devolvió JSON:", contentType);
+      } else {
+        data = (await response.json()) as Serie[];
+      }
+    }
+  } catch (error) {
+    console.error("Error obteniendo series/upcoming:", error);
+  }
+
+  if (!data.length) {
     return (
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full fade-in flex flex-col items-center justify-center">
         <h1 className="text-3xl mb-1">🙈</h1>
@@ -27,6 +49,7 @@ const page = async () => {
         </span>
       </div>
     );
+  }
 
   function obtenerProximoFinDeSemana(fecha: Date = new Date()): string {
     const dia = fecha.getDay(); // 0 = domingo, 6 = sábado
@@ -58,6 +81,7 @@ const page = async () => {
   }
 
   const title = "Orden de juego " + obtenerProximoFinDeSemana();
+
   const description =
     (data.length + 10) * 3 +
     " partidos en " +
@@ -71,6 +95,7 @@ const page = async () => {
   return (
     <Container>
       <Title title={title} emoji="🗓️" />
+
       <div className="w-full -mt-4">
         <Marquee text={description} />
       </div>
@@ -86,18 +111,22 @@ const page = async () => {
               <th scope="col">Categoría</th>
             </tr>
           </thead>
+
           <tbody>
             {data.map((item) => (
               <tr key={item.id}>
                 <td>
                   <div className="text-secondary font-medium flex gap-x-2">
                     {item.top ? <span className="text-xl">⭐️</span> : null}
+
                     <span className="text-primary">{item.date}</span>
+
                     <span>
                       {item.hour ? <span>{item.hour} hs.</span> : "—"}
                     </span>
                   </div>
                 </td>
+
                 <td>
                   <Item
                     link={`/equipos/${item.home_slug}`}
@@ -105,6 +134,7 @@ const page = async () => {
                     image={item.home_image}
                   />
                 </td>
+
                 <td>
                   {item.score ? (
                     <Link
@@ -125,6 +155,7 @@ const page = async () => {
                     image={item.away_image}
                   />
                 </td>
+
                 <td>
                   <Link
                     href={`/torneos/${item.tournament_slug}`}
