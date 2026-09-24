@@ -9,19 +9,47 @@ interface TournamentDate {
 }
 
 const page = async ({ date }: { date: TournamentDate }) => {
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
-    {
-      next: { revalidate: 600 },
-    },
-  );
-  const data = (await response.json()) as Serie[];
-  if (!data) return null;
+  let data: Serie[] = [];
+
+  try {
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
+      {
+        next: { revalidate: 600 },
+      },
+    );
+
+    if (!response.ok) {
+      console.error(
+        "Error series/upcoming Home:",
+        response.status,
+        response.statusText,
+      );
+      return null;
+    }
+
+    const contentType = response.headers.get("content-type");
+
+    if (!contentType?.includes("application/json")) {
+      console.error("series/upcoming Home no devolvió JSON:", contentType);
+      return null;
+    }
+
+    data = (await response.json()) as Serie[];
+  } catch (error) {
+    console.error("Error obteniendo series/upcoming Home:", error);
+    return null;
+  }
+
+  if (!data.length) return null;
 
   const tournamentDate = new Date(date.date);
+
   const day = tournamentDate.getDate();
+
   const nextDay = new Date(tournamentDate);
   nextDay.setDate(nextDay.getDate() + 1);
+
   const month = tournamentDate.toLocaleString("es-AR", {
     month: "long",
   });
@@ -33,8 +61,6 @@ const page = async ({ date }: { date: TournamentDate }) => {
     return itemDay === today;
   });
 
-  // const duration = 500 * (data.length / 93);
-
   return (
     <div className="flex flex-col gap-2 mb-6">
       <div className="text-center text-secondary">
@@ -43,7 +69,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
         </Link>
       </div>
 
-      <Marquee pauseOnHover={true} className={`[--duration:500s]`}>
+      <Marquee pauseOnHover={true} className="[--duration:500s]">
         <div className="flex items-center gap-1">
           {filteredData.map((item) => (
             <Link
@@ -53,6 +79,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
             >
               <div className="text-secondary font-medium flex gap-x-1">
                 <span>{item.date}</span>
+
                 {!item.score &&
                   (item.hour ? (
                     <span className="text-primary">{item.hour} hs.</span>
@@ -60,15 +87,19 @@ const page = async ({ date }: { date: TournamentDate }) => {
                     "—"
                   ))}
               </div>
+
               <div className="flex items-center gap-2">
                 <Item title={item.home_name} image={item.home_image} />
+
                 {item.score ? (
                   <span className="font-medium">{item.score}</span>
                 ) : (
                   <div>⚡️</div>
                 )}
+
                 <Item title={item.away_name} image={item.away_image} />
               </div>
+
               <div className="font-medium text-secondary">
                 {item.tournament_name}
               </div>

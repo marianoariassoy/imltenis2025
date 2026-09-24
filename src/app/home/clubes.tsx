@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface data {
+interface Data {
   id: string;
   image: string;
   name: string;
@@ -28,10 +28,13 @@ const ReviewCard = ({
       <div className="flex flex-row items-center gap-4">
         <div className="flex items-center gap-2">
           <div
-            className={`font-bold mr-1 text-sm ${num < 5 ? "text-primary" : null}`}
+            className={`font-bold mr-1 text-sm ${
+              num < 5 ? "text-primary" : ""
+            }`}
           >
             {num}
           </div>
+
           <Link
             href={`/clubes/${club_slug}`}
             className="hover:opacity-80 transition-opacity"
@@ -51,14 +54,42 @@ const ReviewCard = ({
 };
 
 const Clubes = async () => {
-  const response = await fetch(
-    process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes",
-    {
-      next: { revalidate: 600 },
-    },
-  );
-  const data = (await response.json()) as data[];
-  if (!data) return;
+  let data: Data[] = [];
+
+  try {
+    const response = await fetch(
+      process.env.NEXT_PUBLIC_API_URL + "/rankings/clubes",
+      {
+        next: { revalidate: 300 },
+      },
+    );
+
+    if (!response.ok) {
+      console.error(
+        "Error rankings/clubes:",
+        response.status,
+        response.statusText,
+      );
+
+      return null;
+    }
+
+    const contentType = response.headers.get("content-type");
+
+    if (!contentType?.includes("application/json")) {
+      console.error("rankings/clubes no devolvió JSON:", contentType);
+
+      return null;
+    }
+
+    data = (await response.json()) as Data[];
+  } catch (error) {
+    console.error("Error obteniendo rankings/clubes:", error);
+
+    return null;
+  }
+
+  if (!data.length) return null;
 
   return (
     <div className="flex flex-col gap-y-5">
@@ -68,10 +99,11 @@ const Clubes = async () => {
       >
         Ranking de clubes (Top 10)
       </Link>
+
       <div className="w-full overflow-x-auto mx-auto">
         <div className="w-full flex md:justify-center gap-x-4 md:gap-x-6 pb-4">
           {data.slice(0, 10).map((item, index) => (
-            <ReviewCard key={index} {...item} num={index + 1} />
+            <ReviewCard key={item.id} {...item} num={index + 1} />
           ))}
         </div>
       </div>
