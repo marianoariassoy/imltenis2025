@@ -23,9 +23,6 @@ interface Data {
 const Table = async ({ category_slug }: { category_slug: string }) => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/players",
-    {
-      next: { revalidate: 600 },
-    },
   );
 
   const data = (await response.json()) as Data[];

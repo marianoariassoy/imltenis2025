@@ -37,9 +37,6 @@ interface data {
 const page = async () => {
   const response = await fetch(
     process.env.NEXT_PUBLIC_API_URL + "/rankings/champions",
-    {
-      next: { revalidate: 600 },
-    },
   );
   const data = (await response.json()) as data[];
 
