@@ -53,7 +53,7 @@ const Jugadores = async () => {
         Ranking de jugadores
       </Link>
 
-      <Marquee pauseOnHover={true} className="[--duration:50s]">
+      <Marquee pauseOnHover={true} className="[--duration:100s]">
         <div className="w-full flex gap-x-4 pb-4">
           {data.map((item) => (
             <article key={item.id} className="flex items-center gap-2 shrink-0">
