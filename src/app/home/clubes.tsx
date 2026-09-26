@@ -103,7 +103,7 @@ const Clubes = async () => {
       <div className="w-full overflow-x-auto mx-auto">
         <div className="w-full flex md:justify-center gap-x-4 md:gap-x-6 pb-4">
           {data.slice(0, 10).map((item, index) => (
-            <ReviewCard key={item.id} {...item} num={index + 1} />
+            <ReviewCard key={index} {...item} num={index + 1} />
           ))}
         </div>
       </div>
