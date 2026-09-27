@@ -69,7 +69,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
         </Link>
       </div>
 
-      <Marquee pauseOnHover={true} className="[--duration:200s]">
+      <Marquee pauseOnHover={true} className="[--duration:400s]">
         <div className="flex items-center gap-1">
           {filteredData.map((item) => (
             <Link
