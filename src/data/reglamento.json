@@ -60,6 +60,10 @@
     "text": "El equipo local deberá avisar como mínimo dos horas antes del horario del partido al chat de capitanes de WhatsApp que sus canchas están en condiciones para jugar. Pasado este límite, el equipo visitante no está en la obligación de aceptar ir a jugar.\nLa reprogramación se pasará para el final del torneo, salvo que los equipos involucrados acuerden y decidan jugar antes, informando previamente a esta organización."
   },
   {
+    "title": "Interrupción por lluvia",
+    "text": "En caso de lluvia o cuando las condiciones climáticas afecten el estado de las canchas, si uno de los equipos considera que no existen condiciones adecuadas o seguras para iniciar o continuar los partidos, deberá acreditar dicha situación mediante un video que permita verificar objetivamente el estado de la cancha y la imposibilidad o riesgo de continuar con el juego.\nNo será necesario presentar dicha prueba cuando ambos capitanes estén de acuerdo en que las condiciones no permiten iniciar o continuar los partidos.\nCuando no exista acuerdo entre los capitanes, corresponderá al equipo que solicite la suspensión acreditar el impedimento mediante la prueba mencionada. En caso de no hacerlo, los partidos deberán iniciarse o continuar disputándose.\nLa negativa a jugar o continuar jugando sin acuerdo entre ambos capitanes y sin presentar pruebas suficientes que acrediten el impedimento será considerada abandono por parte del equipo que se niegue a jugar, aplicándose las consecuencias reglamentarias correspondientes."
+  },
+  {
     "title": "Reinicio de serie reprogramada",
     "text": "Al reprogramarse una serie que no ha comenzado, por razones climáticas, y/o algún otro motivo, esta se considerará como una serie nueva en todos los aspectos. Esto incluye la anulación de cualquier configuración previa, tales como formaciones de equipos, selección de jugadores, y el orden de los partidos."
   },
@@ -93,7 +97,7 @@
   },
   {
     "title": "Fechas en fines de semana largos",
-    "text": "Durante los fines de semana largos se programarán series de manera habitual. La disputa de estas fechas será optativa, quedando a criterio de cada equipo jugar en la fecha asignada.\n\nEn caso de no poder disputar la serie, el equipo deberá comunicarlo en el grupo de WhatsApp de capitanes antes del miércoles a las 17:00 hs., para coordinar su reprogramación.\n\nCada equipo podrá solicitar la reprogramación de una serie correspondiente a un fin de semana largo una (1) sola vez durante el torneo."
+    "text": "Durante los fines de semana largos se programarán series de manera habitual. La disputa de estas fechas será optativa, quedando a criterio de cada equipo jugar en la fecha asignada.\n\nEn caso de no poder disputar la serie, el equipo deberá comunicarlo en el grupo de WhatsApp de capitanes antes del miércoles a las 17:00 hs., para coordinar su reprogramación."
   },
   {
     "title": "Alquiler de canchas",
