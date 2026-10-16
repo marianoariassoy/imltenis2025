@@ -4,6 +4,7 @@ import Info from "@/components/Aviso";
 import { Container } from "@/components/Container";
 import Link from "next/link";
 import Image from "next/image";
+import DownloadDiploma from "@/components/DownloadDiploma";
 
 export const metadata = {
   title: "Ranking de partidos jugados",
@@ -72,10 +73,9 @@ const page = async () => {
         {data
           .filter((item) => item.image !== null)
           .map((item, index) => (
-            <Link
-              href={`/jugadores/${item.slug}`}
+            <div
               key={index}
-              className="flex gap-2 items-center justify-between p-4 bg-black/10 rounded-xl shadow hover:bg-black/20 transition-all"
+              className="flex gap-2 items-center justify-between p-4 bg-black/10 rounded-xl shadow"
             >
               <div className="flex items-center gap-3">
                 <div
@@ -83,7 +83,10 @@ const page = async () => {
                 >
                   {index + 1}
                 </div>
-                <div className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shrink-0">
+                <Link
+                  href={`/jugadores/${item.slug}`}
+                  className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shrink-0 hover:opacity-80 transition-all"
+                >
                   <Image
                     src={item.image}
                     alt={item.name}
@@ -91,13 +94,18 @@ const page = async () => {
                     height={64}
                     className="object-cover h-full w-full"
                   />
+                </Link>
+                <div className="font-medium leading-5 flex flex-col">
+                  {item.name}
+                  {item.matches >= 50 && (
+                    <DownloadDiploma playerName={item.name} />
+                  )}
                 </div>
-                <div className="font-medium leading-5">{item.name}</div>
               </div>
               <div className=" shrink-0 text-primary font-bold text-xl">
                 {item.matches}
               </div>
-            </Link>
+            </div>
           ))}
       </div>
       <Labels labels={labels} />
