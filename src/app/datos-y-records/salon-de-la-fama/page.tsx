@@ -2,9 +2,7 @@ import Title from "@/components/Title";
 import Labels from "@/components/Labels";
 import Info from "@/components/Aviso";
 import { Container } from "@/components/Container";
-import Link from "next/link";
-import Image from "next/image";
-import DownloadDiploma from "@/components/DownloadDiploma";
+import PlayerFilter from "./PlayerFilter";
 
 export const metadata = {
   title: "Ranking de partidos jugados",
@@ -61,6 +59,14 @@ const page = async () => {
     },
   ];
 
+  // Asignamos el puesto real del ranking (rank) antes del filtro interactivo
+  const validDataWithRank = data
+    .filter((item) => item.image !== null)
+    .map((item, index) => ({
+      ...item,
+      rank: index + 1, // Guarda la posición original del ranking (1, 2, 3...)
+    }));
+
   return (
     <Container>
       <Title
@@ -69,45 +75,8 @@ const page = async () => {
         description="En este ranking podrás conocer a los jugadores con mayor cantidad de partidos disputados a lo largo de su participación en el torneo, destacando su trayectoria, compromiso y presencia dentro de la competencia."
       />
 
-      <div className="items-center grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-2 mt-2 w-full max-w-4xl mx-auto">
-        {data
-          .filter((item) => item.image !== null)
-          .map((item, index) => (
-            <div
-              key={index}
-              className="flex gap-2 items-center justify-between p-4 bg-black/10 rounded-xl shadow"
-            >
-              <div className="flex items-center gap-3">
-                <div
-                  className={`font-medium ${index === 0 ? "text-primary" : null}`}
-                >
-                  {index + 1}
-                </div>
-                <Link
-                  href={`/jugadores/${item.slug}`}
-                  className="w-14 h-14 rounded-full overflow-hidden bg-white/20 shrink-0 hover:opacity-80 transition-all"
-                >
-                  <Image
-                    src={item.image}
-                    alt={item.name}
-                    width={64}
-                    height={64}
-                    className="object-cover h-full w-full"
-                  />
-                </Link>
-                <div className="font-medium leading-5 flex flex-col">
-                  {item.name}
-                  {item.matches >= 50 && (
-                    <DownloadDiploma playerName={item.name} />
-                  )}
-                </div>
-              </div>
-              <div className=" shrink-0 text-primary font-bold text-xl">
-                {item.matches}
-              </div>
-            </div>
-          ))}
-      </div>
+      <PlayerFilter initialData={validDataWithRank} />
+
       <Labels labels={labels} />
       <Info text="Solo se muestra jugadores con foto de perfil y al menos un partido jugado" />
     </Container>
