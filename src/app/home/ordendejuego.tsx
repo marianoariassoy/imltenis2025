@@ -15,7 +15,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
     const response = await fetch(
       process.env.NEXT_PUBLIC_API_URL + "/series/upcoming",
       {
-        next: { revalidate: 600 },
+        cache: "no-store",
       },
     );
 
