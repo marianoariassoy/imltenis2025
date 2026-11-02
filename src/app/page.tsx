@@ -64,6 +64,10 @@ export default function Home() {
       title: "Fecha 13",
       date: "2026-11-14T13:00:00",
     },
+    {
+      title: "Fecha 14",
+      date: "2026-11-21T13:00:00",
+    },
   ];
 
   const isWeekend = () => {
@@ -105,9 +109,9 @@ export default function Home() {
   const relevantDate = getRelevantDate();
 
   return (
-    <section className="flex flex-col gap-y-4">
-      <div className="relative pt-[32vh] pb-[18vh] md:pt-[25vh] md:pb-[10vh]">
-        <div className="w-full text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 overflow-hidden">
+    <section className="flex-col gap-y-4">
+      <div className="pt-[32vh] pb-[18vh] md:pt-[25vh] md:pb-[10vh] ">
+        <div className="text-center flex flex-col opacity-0 fade-in delay-100 items-center justify-center gap-2 overflow-hidden">
           <Link
             href="/orden-de-juego"
             className="text-[3.3rem] md:text-[5.5rem] font-black leading-none tracking-tight flex flex-col transition-all cursor-pointer text-primary"
@@ -120,7 +124,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-y-4 px-4 w-full max-w-5xl mx-auto">
+      <div className="w-full flex flex-col gap-y-4 px-4 max-w-5xl mx-auto">
         {!isWeekend() ? (
           <Countdown date={relevantDate} />
         ) : (
@@ -140,7 +144,7 @@ export default function Home() {
       <AIIntroBubble />
       <Whatsapp />
 
-      <div className="absolute h-screen w-screen left-0 top-0 -z-10 overflow-hidden">
+      <div className="absolute h-screen w-full left-0 top-0 -z-10 overflow-hidden">
         <div className="absolute w-full h-full top-0 left-0 bg-linear-to-b from-black/35 to-black/45 z-10"></div>
         <div className="absolute w-full h-20 bottom-0 left-0 bg-linear-to-b from-background/0 to-background z-10"></div>
         <img
