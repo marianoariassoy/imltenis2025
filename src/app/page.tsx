@@ -10,6 +10,8 @@ import Clubes from "./home/clubes";
 import Jugadores from "./home/jugadores";
 import Loader from "@/components/Loader";
 
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   const dates = [
     {
