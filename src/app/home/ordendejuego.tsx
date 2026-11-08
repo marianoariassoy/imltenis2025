@@ -62,7 +62,7 @@ const page = async ({ date }: { date: TournamentDate }) => {
   });
 
   const itemCount = filteredData.length;
-  const duration = Math.max(15, Math.round(itemCount * (30 / 7)));
+  const duration = Math.max(15, Math.round(itemCount * (50 / 7)));
 
   return (
     <div className="flex flex-col gap-2 mb-6">
@@ -72,7 +72,10 @@ const page = async ({ date }: { date: TournamentDate }) => {
         </Link>
       </div>
 
-      <Marquee pauseOnHover={true} className={`[--duration:${duration}s]`}>
+      <Marquee
+        pauseOnHover={true}
+        style={{ "--duration": `${duration}s` } as React.CSSProperties}
+      >
         <div className="flex items-center gap-1">
           {filteredData.map((item) => (
             <Link
