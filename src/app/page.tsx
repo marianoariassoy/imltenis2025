@@ -70,6 +70,18 @@ export default function Home() {
       title: "Fecha 14",
       date: "2026-11-21T13:00:00",
     },
+    {
+      title: "Fecha 15",
+      date: "2026-11-28T13:00:00",
+    },
+    {
+      title: "Fecha 16",
+      date: "2026-12-5T13:00:00",
+    },
+    {
+      title: "Super Finales",
+      date: "2026-12-12T13:00:00",
+    },
   ];
 
   const isWeekend = () => {
